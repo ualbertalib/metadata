@@ -48,25 +48,19 @@
         according to templates. Otherwise: copy XML structure, then call template to create new
         DCQ datastream based on last DC datastream -->    
     <xsl:template match="foxml:digitalObject">
-            <xsl:choose>
-                <xsl:when test="foxml:datastream[@ID='DCQ']">
-                    <xsl:copy>
-                        <xsl:apply-templates select="@*|node()"/>
-                    </xsl:copy>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:copy>
-                        <xsl:apply-templates select="@*|node()"/>
-                        <xsl:call-template name="newDCQ"/>
-                    </xsl:copy>                                                                
-                </xsl:otherwise>
-            </xsl:choose>
+        <xsl:copy>
+            <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
+            <xsl:apply-templates select="@*|node()"/>
+            <xsl:if test="not(foxml:datastream[@ID='DCQ'])">
+                <xsl:call-template name="newDCQ"/>
+            </xsl:if>
+        </xsl:copy>
     </xsl:template>
     
     
     <!-- Keep only last DCQ datastream -->
     <xsl:template match="foxml:datastream[@ID='DCQ']">
-        <xsl:copy>
+        <xsl:copy copy-namespaces="no">
             <xsl:apply-templates select="@*"/>
             <xsl:value-of select="$newline"/>
             <xsl:apply-templates select="foxml:datastreamVersion[last()]"/>
@@ -117,15 +111,15 @@
     </xsl:template>
     
     
-    <!-- Update namespaces, attributes and apply templates (DC datastream unchanged) -->    
+    <!-- Update namespaces, attributes and apply templates (dc: unchanged) -->    
     <xsl:template match="//oai_dc:dc">
         <xsl:copy copy-namespaces="no">
             <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
             <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
             <xsl:namespace name="oai_dc">http://www.openarchives.org/OAI/2.0/oai_dc/</xsl:namespace>
-            <xsl:namespace name="ualterms">http://terms.library/ualberta.ca</xsl:namespace>
+            <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
             <xsl:attribute name="xsi:schemaLocation">http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd</xsl:attribute>
-            <xsl:apply-templates select="@*|node()" mode="noChange"/>
+            <xsl:apply-templates select="node()" mode="noChange"/>
         </xsl:copy>
     </xsl:template>
     
@@ -155,7 +149,7 @@
     <!-- Last DC or DCQ datastream: strip @Size, strip @xsi:type with dctermsURI or anyURI values -->
     <!-- ambiguous rule match -->
     <xsl:template match="foxml:datastream[@ID='DCQ' or @ID='DC']/foxml:datastreamVersion[last()]/@SIZE|foxml:datastream[@ID='DCQ' or @ID='DC']/foxml:datastreamVersion[last()]/@xsi:type[.='dcterms:URI' or .='anyURI']"/>
-    <!-- DCQ dc: strip @dc and @xsi:schemaLocation (formerly used for thesis) -->
+    <xsl:template match="//dc/@dc"/>
     <xsl:template match="//dc/@dc|//dc/@xsi:schemaLocation"/>
 
     
