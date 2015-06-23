@@ -394,6 +394,14 @@
     </xsl:template>
     
     
+    <!-- Fix datastream ID mismatch in original FOXML -->
+    <xsl:template match="//foxml:datastream[@ID='DCQ']//foxml:datastreamVersion/@ID[contains(.,'DC.')]">
+        <xsl:attribute name="ID">
+            <xsl:value-of select="concat('DCQ', substring-after( ., 'DC'))"/>
+        </xsl:attribute>
+    </xsl:template>
+    
+    
     <!--<xsl:template match="//@*[. = 'eraterms:local']">
         <xsl:attribute name="{name()}">
             <xsl:text>ualterms:local</xsl:text>
