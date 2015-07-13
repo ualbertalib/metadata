@@ -7,7 +7,7 @@
     xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:ualterms="http://terms.library/ualberta.ca"
+    xmlns:ualterms="http://terms.library.ualberta.ca"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:eraterms="http://era.library.ualberta.ca/eraterms"
     xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/"
@@ -28,13 +28,9 @@
         </xd:desc>
     </xd:doc> 
     
-    <xsl:output method="xml" encoding="UTF-8"/>
-    <!--<xsl:preserve-space elements="*"/>-->
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="dcterms:* dc:*"/>
     
-    <xsl:variable name="newline">
-        <xsl:text>&#xa;</xsl:text>
-    </xsl:variable>
     
     <xsl:template match="@*|node()">
         <xsl:copy>
@@ -62,40 +58,35 @@
     <xsl:template match="foxml:datastream[@ID='DCQ']">
         <xsl:copy copy-namespaces="no">
             <xsl:apply-templates select="@*"/>
-            <xsl:value-of select="$newline"/>
             <xsl:apply-templates select="foxml:datastreamVersion[last()]"/>
-            <xsl:value-of select="$newline"/>
         </xsl:copy>
     </xsl:template>
     
     
     <!-- New DCQ datastream based on last DC datastream: created with xsl instructions to control
-        namespace decl. -->
+        namespace declarations -->
     <xsl:template name="newDCQ">
         <xsl:element name="foxml:datastream" inherit-namespaces="no">
             <xsl:attribute name="CONTROL_GROUP">X</xsl:attribute>
             <xsl:attribute name="ID">DCQ</xsl:attribute>
             <xsl:attribute name="STATE">A</xsl:attribute>
             <xsl:attribute name="VERSIONABLE">true</xsl:attribute>
-            <xsl:value-of select="$newline"/>
             <xsl:element name="foxml:datastreamVersion" inherit-namespaces="no">
                 <xsl:attribute name="ID">DCQ.0</xsl:attribute>
                 <xsl:attribute name="LABEL">Item Metadata</xsl:attribute>
                 <xsl:attribute name="MIMETYPE">text/xml</xsl:attribute>
-                <xsl:value-of select="$newline"/>
                 <xsl:element name="foxml:xmlContent">
-                    <xsl:value-of select="$newline"/>
                     <xsl:element name="dc">
                         <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
                         <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-                        <xsl:namespace name="ualterms">http://terms.library/ualberta.ca</xsl:namespace>
+                        <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
                         <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
                         <xsl:apply-templates
                             select="//foxml:datastream[@ID='DC']/foxml:datastreamVersion[last()]//oai_dc:dc/node()"/>
-                    </xsl:element><xsl:value-of select="$newline"/>
-                </xsl:element><xsl:value-of select="$newline"/>
-            </xsl:element><xsl:value-of select="$newline"/>
-        </xsl:element><xsl:value-of select="$newline"/>
+                    </xsl:element>
+                </xsl:element>
+            </xsl:element>
+        </xsl:element>
     </xsl:template>
     
     
@@ -104,7 +95,7 @@
         <xsl:copy copy-namespaces="no">
             <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
             <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-            <xsl:namespace name="ualterms">http://terms.library/ualberta.ca</xsl:namespace>
+            <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
             <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
@@ -147,10 +138,9 @@
     
     <!-- Strip attributes -->
     <!-- Last DC or DCQ datastream: strip @Size, strip @xsi:type with dctermsURI or anyURI values -->
-    <!-- ambiguous rule match -->
     <xsl:template match="foxml:datastream[@ID='DCQ' or @ID='DC']/foxml:datastreamVersion[last()]/@SIZE|foxml:datastream[@ID='DCQ' or @ID='DC']/foxml:datastreamVersion[last()]/@xsi:type[.='dcterms:URI' or .='anyURI']"/>
     <xsl:template match="//dc/@dc"/>
-    <xsl:template match="//dc/@dc|//dc/@xsi:schemaLocation"/>
+    <xsl:template match="//dc/@xsi:schemaLocation"/>
 
     
     <!-- Move dates from coverage and spatial into dcterms:temporal and locations to dcterms:spatial -->
@@ -216,6 +206,23 @@
             <xsl:apply-templates select="@*"/>
             <xsl:value-of select="normalize-space()"/>
         </xsl:element>
+    </xsl:template>
+    
+    
+    <!-- Split *:rights into dcterms:rights or dcterms:license -->
+    <xsl:template match="//*:rights" priority="6">
+        <xsl:choose>
+            <xsl:when test="contains(.,'http:')">
+                <xsl:element name="dcterms:license">
+                    <xsl:apply-templates select="@* | node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:element name="dcterms:rights">
+                    <xsl:apply-templates select="@* | node()"/>
+                </xsl:element>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     
