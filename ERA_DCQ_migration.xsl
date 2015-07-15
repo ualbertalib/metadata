@@ -54,12 +54,25 @@
     </xsl:template>
     
     
-    <!-- Keep only last DCQ datastream -->
+    <!-- Keep only last DCQ datastreamVersion / fix double-nested DCQ datastreams-->
     <xsl:template match="foxml:datastream[@ID='DCQ']">
-        <xsl:copy copy-namespaces="no">
-            <xsl:apply-templates select="@*"/>
-            <xsl:apply-templates select="foxml:datastreamVersion[last()]"/>
-        </xsl:copy>
+        <xsl:choose>
+            <xsl:when test=".//foxml:xmlContent//foxml:xmlContent">
+                <xsl:copy copy-namespaces="no">
+                    <xsl:apply-templates select="@*"/>
+                    <xsl:copy copy-namespaces="no" select="foxml:datastreamVersion[last()]">
+                        <xsl:apply-templates select="@*"/>
+                        <xsl:apply-templates select="//foxml:xmlContent//foxml:xmlContent"/>
+                    </xsl:copy>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy copy-namespaces="no">
+                    <xsl:apply-templates select="@*"/>
+                    <xsl:apply-templates select="foxml:datastreamVersion[last()]"/>
+                </xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     
