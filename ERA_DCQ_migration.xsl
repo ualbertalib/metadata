@@ -213,6 +213,20 @@
     </xsl:template>
     
     
+    <xsl:template match="//*:creator" priority="6">
+        <xsl:element name="dcterms:creator">
+            <xsl:choose>
+                <xsl:when test="text()[contains(.,'UofA Anthro')]">
+                    <xsl:text>University of Alberta Department of Anthropology</xsl:text>
+                </xsl:when>    
+                <xsl:otherwise>
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:element>
+    </xsl:template>
+    
+    
     <!-- Move date into dcterms:created -->
     <xsl:template match="//dc:date|//dcterms:date" priority="6">
         <xsl:element name="dcterms:created" inherit-namespaces="no">
@@ -236,6 +250,15 @@
                 </xsl:element>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    
+    <!-- *:relation changed to *:source -->
+    <!-- special case: turn on only for Halpern -->
+    <xsl:template match="//*:relation" priority="6">
+        <xsl:element name="dcterms:source">
+            <xsl:apply-templates select="@* | node()"/>  
+        </xsl:element>
     </xsl:template>
     
     
@@ -306,11 +329,11 @@
                 <xsl:when test="matches(.,'report')">
                     <xsl:text>Report</xsl:text>
                 </xsl:when>
-    <!-- Comment out this section when updating object type for images -->
+    <!-- special case: comment out this section when updating object type for images -->
                 <!--<xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
                     <xsl:text>Research Material</xsl:text>
                 </xsl:when>-->
-    <!-- Use when updating object type for images -->
+    <!-- special case: use when updating object type for images -->
                 <xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
                     <xsl:text>Image</xsl:text>
                 </xsl:when>
@@ -375,13 +398,22 @@
                     <xsl:apply-templates select="@*|node()"/>
                 </xsl:element>
             </xsl:when>
+            <!-- extract date from Dept of Anthro ids (file names)-->
+            <xsl:when test="text()[matches(.,'^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.tif')]">
+                <xsl:element name="dcterms:created">
+                    <xsl:value-of select="replace(., '([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.tif', '$1')"/>
+                </xsl:element>
+            </xsl:when>
+            <!-- other Dept of Antro ids -->
+            <xsl:when test="text()[matches(.,'^\d{3}-\d{3}-\d{3}.*\.tif')]"/>
+            <!-- Halpern ids -->
+            <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4}|halpern:nna)')]"/>
             <!--<xsl:when test="text()[contains(.,'proquest')]">
                 <xsl:element name="ualterms:proquest">
                     <xsl:call-template name="anyURI"/>
                     <xsl:apply-templates select="@*|node()"/>     
                 </xsl:element>
             </xsl:when>-->
-            <!-- mpo: to do: add option for halpern ids -->
             <xsl:otherwise>
                 <xsl:element name="dcterms:identifier">
                     <xsl:apply-templates select="@*|node()"/>
