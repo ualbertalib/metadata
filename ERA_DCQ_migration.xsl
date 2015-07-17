@@ -183,7 +183,7 @@
                     <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
             </xsl:when>
-            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]ar|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
+            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
                 <xsl:element name="dcterms:temporal">
                     <xsl:apply-templates select="@*"/>
                     <xsl:value-of select="normalize-space()"/>
@@ -399,15 +399,15 @@
                 </xsl:element>
             </xsl:when>
             <!-- extract date from Dept of Anthro ids (file names)-->
-            <xsl:when test="text()[matches(.,'^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.tif')]">
+            <xsl:when test="text()[matches(.,'^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.[Tt][Ii][Ff]')]">
                 <xsl:element name="dcterms:created">
-                    <xsl:value-of select="replace(., '([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.tif', '$1')"/>
+                    <xsl:value-of select="replace(., '^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.[Tt][Ii][Ff]', '$1')"/>
                 </xsl:element>
             </xsl:when>
-            <!-- other Dept of Antro ids -->
-            <xsl:when test="text()[matches(.,'^\d{3}-\d{3}-\d{3}.*\.tif')]"/>
+            <!-- other Dept of Anthro ids -->
+            <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])|(?:proquest:1969\.055\.001_d_\.[Tt][Ii][Ff])')]"/>
             <!-- Halpern ids -->
-            <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4}|halpern:nna)')]"/>
+            <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4})|(?:halpern:nna)||(?:\d{3}_\d)|(?:[A-za-z]_\d{3}.?)')]"/>
             <!--<xsl:when test="text()[contains(.,'proquest')]">
                 <xsl:element name="ualterms:proquest">
                     <xsl:call-template name="anyURI"/>
