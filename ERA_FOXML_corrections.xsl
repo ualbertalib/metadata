@@ -26,7 +26,7 @@
     
     
     <!-- Add missing namespace declaration in original FOXML-->    
-    <xsl:template match="foxml:digitalObject">
+    <xsl:template match="foxml:datastream[@ID='DCQ']">
         <xsl:copy>
             <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
             <xsl:apply-templates select="@*|node()"/>
@@ -54,6 +54,7 @@
             <xsl:value-of select="concat('DCQ', substring-after( ., 'DC'))"/>
         </xsl:attribute>
     </xsl:template>
+    
     
     
 </xsl:stylesheet>
