@@ -11,6 +11,9 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:eraterms="http://era.library.ualberta.ca/eraterms"
     xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/"
+    xmlns:vivo="http://vivoweb.org/ontology/core"
+    xmlns:marcrel="http://id.loc.gov/vocabulary/relators"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
     exclude-result-prefixes="xs xd"
     version="3.0">
     
@@ -76,6 +79,18 @@
     </xsl:template>
     
     
+    <!-- Namespaces -->
+    <xsl:template name="namespaces">
+        <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
+        <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
+        <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
+        <xsl:namespace name="vivo">http://vivoweb.org/ontology/core</xsl:namespace>
+        <xsl:namespace name="marcrel">http://id.loc.gov/vocabulary/relators</xsl:namespace>
+        <xsl:namespace name="bibo">http://purl.org/ontology/bibo/</xsl:namespace>
+        <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+    </xsl:template>
+    
+    
     <!-- New DCQ datastream based on last DC datastream: created with xsl instructions to control
         namespace declarations -->
     <xsl:template name="newDCQ">
@@ -90,10 +105,7 @@
                 <xsl:attribute name="MIMETYPE">text/xml</xsl:attribute>
                 <xsl:element name="foxml:xmlContent">
                     <xsl:element name="dc">
-                        <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
-                        <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-                        <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
-                        <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+                        <xsl:call-template name="namespaces"/>
                         <xsl:apply-templates
                             select="//foxml:datastream[@ID='DC']/foxml:datastreamVersion[last()]//oai_dc:dc/node()"/>
                     </xsl:element>
@@ -106,10 +118,7 @@
     <!-- Update namespaces and apply templates -->
     <xsl:template match="//dc">
         <xsl:copy copy-namespaces="no">
-            <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
-            <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-            <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
-            <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+            <xsl:call-template name="namespaces"/>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
@@ -254,8 +263,8 @@
     
     
     <!-- *:relation changed to *:source -->
-    <!-- special case: turn on only for Halpern -->
-    <xsl:template match="//*:relation" priority="6">
+    <!-- special case: only for Halpern Image Archive community -->
+    <xsl:template match="//*:relation[//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//*:isMemberOf[@rdf:resource='info:fedora/uuid:fabad4e3-0f6e-4368-bb80-0a110d72c0e9']]" priority="6">
         <xsl:element name="dcterms:source">
             <xsl:apply-templates select="@* | node()"/>  
         </xsl:element>
@@ -329,13 +338,15 @@
                 <xsl:when test="matches(.,'report')">
                     <xsl:text>Report</xsl:text>
                 </xsl:when>
-    <!-- special case: comment out this section when updating object type for images -->
-                <!--<xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
-                    <xsl:text>Research Material</xsl:text>
-                </xsl:when>-->
-    <!-- special case: use when updating object type for images -->
                 <xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
-                    <xsl:text>Image</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="//*:datastream[@ID[matches(.,'^DS\d*')]]/*:datastreamVersion[last()][@MIMETYPE[contains(.,'image')]]">
+                            <xsl:text>Image</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>Research Material</xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:when>
                 <xsl:when test="matches(.,'thesis')">
                     <xsl:text>Thesis</xsl:text>
@@ -404,8 +415,13 @@
                     <xsl:value-of select="replace(., '^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.[Tt][Ii][Ff]', '$1')"/>
                 </xsl:element>
             </xsl:when>
+            <xsl:when test="text()[matches(.,'proquest:1969\.055\.001_d_\.[Tt][Ii][Ff]')]">
+                <xsl:element name="dcterms:created">
+                    <xsl:value-of select="replace(., 'proquest:1969\.055\.001_d_\.[Tt][Ii][Ff]', '1969')"/>
+                </xsl:element>
+            </xsl:when>
             <!-- other Dept of Anthro ids -->
-            <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])|(?:proquest:1969\.055\.001_d_\.[Tt][Ii][Ff])')]"/>
+            <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])')]"/>
             <!-- Halpern ids -->
             <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4})|(?:halpern:nna)||(?:\d{3}_\d)|(?:[A-za-z]_\d{3}.?)')]"/>
             <!--<xsl:when test="text()[contains(.,'proquest')]">
@@ -423,13 +439,68 @@
     </xsl:template>
     
     
-    <!-- eraterms:trid number identifier ualterms:trid-->    
-    <xsl:template match="//*:dc/*[local-name()='trid']" priority="6">
-        <xsl:element name="ualterms:trid">
-            <xsl:call-template name="string"/>
-            <xsl:apply-templates select="@*|node()"/>
-        </xsl:element>
+    
+    <!-- Theses -->
+    <xsl:template match="//*[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
+        <xsl:choose>
+            <xsl:when test="thesis:contributor[@role='advisor']">
+                <xsl:element name="marcrel:ths">
+                    <xsl:apply-templates select="node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="thesis:contributor[@role='committeemember']">
+                <xsl:element name="ualterms:thesiscommitteemember">
+                    <xsl:apply-templates select="node()"/>
+                </xsl:element>
+            </xsl:when>
+            <!-- mpo: add template rule for contributor without role attribute or without role att value -->
+            <xsl:when test="thesis:discipline">
+                <xsl:element name="vivo:AcademicDepartment">
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="thesis:grantor">
+                <xsl:element name="marcrel:dgg">
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="thesis:level">
+                <xsl:element name="ualterms:thesislevel">
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="thesis:name">
+                <xsl:element name="bibo:ThesisDegree">
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
+    
+    
+    
+    <!-- eraterms -->
+    <xsl:template match="*[namespace-uri()='http://era.library.ualberta.ca/eraterms']" priority="6">
+        <xsl:choose>
+            <xsl:when test="eraterms:graduationdate">
+                <xsl:element name="ualterms:graduationdate">
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="eraterms:specialization">
+                <xsl:element name="ualterms:specialization">
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="eraterms:trid">
+                <xsl:element name="ualterms:trid">
+                    <xsl:call-template name="string"/>
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:element>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     
     
     <!-- Fix typo in original FOXML -->
@@ -438,6 +509,7 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
+    
     
     
     <!-- Fix datastream ID mismatch in original FOXML -->
