@@ -192,7 +192,7 @@
                     <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
             </xsl:when>
-            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
+            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Cc]ontemporary|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
                 <xsl:element name="dcterms:temporal">
                     <xsl:apply-templates select="@*"/>
                     <xsl:value-of select="normalize-space()"/>
@@ -441,64 +441,74 @@
     
     
     <!-- Theses -->
-    <xsl:template match="//*[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
+    <!-- mpo: add template rule for contributor without role attribute or without role att value (?) -->
+    <xsl:template match="*:contributor[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
         <xsl:choose>
-            <xsl:when test="thesis:contributor[@role='advisor']">
+            <xsl:when test="@role='advisor'">
                 <xsl:element name="marcrel:ths">
-                    <xsl:apply-templates select="node()"/>
-                </xsl:element>
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>  
             </xsl:when>
-            <xsl:when test="thesis:contributor[@role='committeemember']">
+            <xsl:when test="@role='committeemember'">
                 <xsl:element name="ualterms:thesiscommitteemember">
-                    <xsl:apply-templates select="node()"/>
-                </xsl:element>
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>  
             </xsl:when>
-            <!-- mpo: add template rule for contributor without role attribute or without role att value -->
-            <xsl:when test="thesis:discipline">
-                <xsl:element name="vivo:AcademicDepartment">
-                    <xsl:apply-templates select="@*|node()"/>
+            <xsl:otherwise>
+                <xsl:element name="dcterms:contributor">
+                    <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
-            </xsl:when>
-            <xsl:when test="thesis:grantor">
-                <xsl:element name="marcrel:dgg">
-                    <xsl:apply-templates select="@*|node()"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:when test="thesis:level">
-                <xsl:element name="ualterms:thesislevel">
-                    <xsl:apply-templates select="@*|node()"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:when test="thesis:name">
-                <xsl:element name="bibo:ThesisDegree">
-                    <xsl:apply-templates select="@*|node()"/>
-                </xsl:element>
-            </xsl:when>
+            </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    
+    <xsl:template match="*:degree[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
+        <xsl:if test="*:discipline">
+            <xsl:element name="vivo:AcademicDepartment">
+                <xsl:value-of select="*:discipline"/>
+            </xsl:element>
+         </xsl:if>
+        <xsl:if test="*:grantor">
+            <xsl:element name="marcrel:dgg">
+                <xsl:value-of select="*:grantor"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="*:level">
+            <xsl:element name="ualterms:thesislevel">
+                <xsl:value-of select="*:level"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="*:name">
+            <xsl:element name="bibo:ThesisDegree">
+                <xsl:value-of select="*:name"/>
+            </xsl:element>
+        </xsl:if>
     </xsl:template>
     
     
     
     <!-- eraterms -->
     <xsl:template match="*[namespace-uri()='http://era.library.ualberta.ca/eraterms']" priority="6">
-        <xsl:choose>
-            <xsl:when test="eraterms:graduationdate">
-                <xsl:element name="ualterms:graduationdate">
-                    <xsl:apply-templates select="@*|node()"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:when test="eraterms:specialization">
-                <xsl:element name="ualterms:specialization">
-                    <xsl:value-of select="normalize-space()"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:when test="eraterms:trid">
-                <xsl:element name="ualterms:trid">
-                    <xsl:call-template name="string"/>
-                    <xsl:apply-templates select="@*|node()"/>
-                </xsl:element>
-            </xsl:when>
-        </xsl:choose>
+        <xsl:if test="local-name()='graduationdate'">
+            <xsl:element name="ualterms:graduationdate">
+                <xsl:attribute name="xsi:type">
+                    <xsl:text>gYearMonth</xsl:text>
+                </xsl:attribute>
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="local-name()='specialization'">
+            <xsl:element name="ualterms:specialization">
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="local-name()='trid'">
+            <xsl:element name="ualterms:trid">
+                <xsl:call-template name="string"/>
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
     </xsl:template>
     
     
