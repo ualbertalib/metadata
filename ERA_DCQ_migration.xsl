@@ -32,7 +32,7 @@
     </xd:doc> 
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-    <xsl:strip-space elements="dcterms:* dc:*"/>
+    <xsl:strip-space elements="dc dcterms:* dc:*"/>
     
     
     <xsl:template match="@*|node()">
@@ -212,6 +212,7 @@
                     <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
             </xsl:when>-->
+            <xsl:when test="not(text())"/>
             <xsl:otherwise>
                 <xsl:element name="dcterms:coverage">
                     <xsl:apply-templates select="@*"/>
@@ -462,28 +463,27 @@
         </xsl:choose>
     </xsl:template>
     
-    
     <xsl:template match="*:degree[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
-        <xsl:if test="*:discipline">
+        <xsl:for-each select="*:discipline">
             <xsl:element name="vivo:AcademicDepartment">
-                <xsl:value-of select="*:discipline"/>
+                <xsl:value-of select="replace(.,'Dept.','Department')"/>
             </xsl:element>
-         </xsl:if>
-        <xsl:if test="*:grantor">
+         </xsl:for-each>
+        <xsl:for-each select="*:grantor">
             <xsl:element name="marcrel:dgg">
-                <xsl:value-of select="*:grantor"/>
+                <xsl:value-of select="normalize-space()"/>
             </xsl:element>
-        </xsl:if>
-        <xsl:if test="*:level">
+        </xsl:for-each>
+        <xsl:for-each select="*:level">
             <xsl:element name="ualterms:thesislevel">
-                <xsl:value-of select="*:level"/>
+                <xsl:value-of select="normalize-space()"/>
             </xsl:element>
-        </xsl:if>
-        <xsl:if test="*:name">
+        </xsl:for-each>
+        <xsl:for-each select="*:name">
             <xsl:element name="bibo:ThesisDegree">
-                <xsl:value-of select="*:name"/>
+                <xsl:value-of select="normalize-space()"/>
             </xsl:element>
-        </xsl:if>
+        </xsl:for-each>
     </xsl:template>
     
     
