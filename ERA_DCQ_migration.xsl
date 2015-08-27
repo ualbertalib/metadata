@@ -33,7 +33,7 @@
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="dc dcterms:* dc:*"/>
-    
+
     
     <xsl:template match="@*|node()">
         <xsl:copy>
@@ -53,6 +53,20 @@
             <xsl:if test="not(foxml:datastream[@ID='DCQ'])">
                 <xsl:call-template name="newDCQ"/>
             </xsl:if>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    <xsl:template match="foxml:objectProperties/foxml:property[@NAME='info:fedora/fedora-system:def/model#ownerId']/@VALUE">
+        <xsl:attribute name="VALUE">
+            <xsl:value-of select="replace(.,'\s','_')"/>
+        </xsl:attribute>
+    </xsl:template>
+    
+    
+    <xsl:template match="//foxml:datastream[@ID='RELS-EXT']/foxml:datastreamVersion//*:RDF[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:Description[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:submitterId[namespace-uri()='http://era.library.ualberta.ca/schema/definitions.xsd#']">
+        <xsl:copy>
+            <xsl:value-of select="replace(.,'\s','_')"/>
         </xsl:copy>
     </xsl:template>
     
