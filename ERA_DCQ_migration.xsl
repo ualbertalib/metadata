@@ -57,6 +57,7 @@
     </xsl:template>
     
     
+    <!-- Replace spaces in ownerId -->
     <xsl:template match="foxml:objectProperties/foxml:property[@NAME='info:fedora/fedora-system:def/model#ownerId']/@VALUE">
         <xsl:attribute name="VALUE">
             <xsl:value-of select="replace(.,'\s','_')"/>
@@ -64,9 +65,23 @@
     </xsl:template>
     
     
+    <!-- Replace spaces in submitterId -->
     <xsl:template match="//foxml:datastream[@ID='RELS-EXT']/foxml:datastreamVersion//*:RDF[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:Description[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:submitterId[namespace-uri()='http://era.library.ualberta.ca/schema/definitions.xsd#']">
         <xsl:copy>
             <xsl:value-of select="replace(.,'\s','_')"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    <!-- Declare CCID access restriction if absent and item is part of restricted UAL Licensed Resources community (items protected at the application level in old ERA) -->
+    <xsl:template match="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOf[@*:resource='info:fedora/uuid:11274e20-0426-4e80-84f4-bef79dbd6633']]">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+            <xsl:if test="not(*:isPartOf[@*:resource='info:fedora/ir:CCID_AUTH'])">
+                <xsl:element name="isPartOf" namespace="info:fedora/fedora-system:def/relations-external#">
+                    <xsl:attribute name="rdf:resource">info:fedora/ir:CCID_AUTH</xsl:attribute>
+                </xsl:element>
+            </xsl:if>
         </xsl:copy>
     </xsl:template>
     
