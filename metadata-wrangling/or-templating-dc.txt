@@ -1,0 +1,27 @@
+
+
+<dc xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:ualterms="http://terms.library.ualberta.ca"
+    xmlns:vivo="http://vivoweb.org/ontology/core"
+    xmlns:marcrel="http://id.loc.gov/vocabulary/relators"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+{{forEach(cells["marcrel:dis"].value.split(" // "), v, "      <marcrel:dis>" + v + "</marcrel:dis>\n")}}
+{{forEach(cells["dcterms:title"].value.split(" // "), v, "      <dcterms:title>" + v + "</dcterms:title>\n")}}
+{{forEach(cells["dcterms:alternative"].value.split(" // "), v, "      <dcterms:alternative>" + v + "</dcterms:alternative>\n")}}
+{{forEach(cells["dcterms:subject"].value.split(" // "), v, "      <dcterms:subject>" + v + "</dcterms:subject>\n")}}
+{{forEach(cells["dcterms:spatial"].value.split(" // "), v, "      <dcterms:spatial>" + v + "</dcterms:spatial>\n")}}
+{{forEach(cells["dcterms:temporal"].value.split(" // "), v, "      <dcterms:temporal>" + v + "</dcterms:temporal>\n")}}
+{{forEach(cells["dcterms:abstract"].value.split(" // "), v, "      <dcterms:abstract>" + v + "</dcterms:abstract>\n")}}
+{{forEach(cells["ualterms:graduationdate"].value.split(" // "), v, "      <ualterms:graduationdate>" + v + "</ualterms:graduationdate>\n")}}
+{{forEach(cells["dcterms:dateAccepted"].value.split(" // "), v, "      <dcterms:dateAccepted>" + v + "</dcterms:dateAccepted>\n")}}
+{{forEach(cells["dcterms:type"].value.split(" // "), v, "      <dcterms:type>" + v + "</dcterms:type>\n")}}
+{{forEach(cells["dcterms:rights"].value.split(" // "), v, "      <dcterms:rights>" + v + "</dcterms:rights>\n")}}
+{{forEach(cells["bibo:ThesisDegree"].value.split(" // "), v, "      <bibo:ThesisDegree>" + v + "</bibo:ThesisDegree>\n")}}
+{{forEach(cells["ualterms:thesislevel"].value.split(" // "), v, "      <ualterms:thesislevel>" + v + "</ualterms:thesislevel>\n")}}
+{{forEach(cells["vivo:AcademicDepartment"].value.split(" // "), v, "      <vivo:AcademicDepartment>" + v + "</vivo:AcademicDepartment>\n")}}
+{{forEach(cells["dcterms:language"].value.split(" // "), v, "      <dcterms:language>" + v + "</dcterms:language>\n")}}
+{{forEach(cells["ualterms:fedora3uuid"].value.split(" // "), v, "      <ualterms:fedora3uuid>" + v + "</ualterms:fedora3uuid>\n")}}
+{{forEach(cells["ualterms:unicorn"].value.split(" // "), v, "      <ualterms:unicorn>" + v + "</ualterms:unicorn>\n")}}
+{{forEach(cells["marcrel:dgg"].value.split(" // "), v, "      <marcrel:dgg>" + v + "</marcrel:dgg>\n")}}
+</dc>
