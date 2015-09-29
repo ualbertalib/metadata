@@ -31,6 +31,9 @@
         </xd:desc>
     </xd:doc> 
     
+    
+    <xsl:import href="newDCQ.xsl"/>
+    
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="dc dcterms:* dc:*"/>
 
