@@ -64,16 +64,8 @@
                     <xsl:variable name="filename" select="concat('/I:/Hydra_DAMS/ERA/ERA_migration/FOXML_transformed/PSL/psl_15/new_data/',replace(//ualterms:fedora3uuid,':','_'),'.xml')"/>
                     <xsl:copy select="document($filename)/dc">
                         <xsl:apply-templates/>
-                        <xsl:choose>
-                            <xsl:when test="foxml:datastream[@ID='DCQ']">
-                                <xsl:copy-of select="foxml:datastream[@ID='DCQ']/datastreamVersion[last()]//ualterms:fedora3handle"/>
-                                <xsl:copy-of select="foxml:datastream[@ID='DCQ']/datastreamVersion[last()]//ualterms:proquest"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:copy-of select="foxml:datastream[@ID='DC']/datastreamVersion[last()]//ualterms:fedora3handle"/>
-                                <xsl:copy-of select="foxml:datastream[@ID='DC']/datastreamVersion[last()]//ualterms:proquest"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
+                        <xsl:copy-of select="datastreamVersion[last()]//ualterms:fedora3handle"/>
+                        <xsl:copy-of select="datastreamVersion[last()]//ualterms:proquest"/>
                     </xsl:copy>
                 </xsl:element>
             </xsl:element>
