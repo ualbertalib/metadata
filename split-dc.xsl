@@ -16,7 +16,7 @@
     
     <xsl:template match="theses">
         <xsl:for-each select="dc">
-            <xsl:result-document method="xml" href="file:/I:/Hydra_DAMS/ERA/ERA_migration/FOXML_transformed/PSL/psl_15/new_data/{replace(ualterms:fedora3uuid,':','_')}.xml">
+            <xsl:result-document method="xml" href="file:/C:/Users/mparedes/Documents/metadata-transforms/metadata-wrangling/theses_to_2009-split/{replace(ualterms:fedora3uuid,':','_')}.xml">
                 <xsl:copy-of select="."/>
             </xsl:result-document>
         </xsl:for-each>

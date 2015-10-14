@@ -18,13 +18,13 @@
     
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Sep 28, 2015</xd:p>
-            <xd:p><xd:b>Author:</xd:b> mparedes</xd:p>
+            <xd:p>Sep 28, 2015</xd:p>
+            <xd:p>mparedes</xd:p>
         </xd:desc>
     </xd:doc>
     
-    <xsl:import href="newDCQ.xsl"/>
-    <xsl:output method="xml" encoding="UTF-8"/>
+    
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
     <xsl:template match="node()|@*">
         <xsl:copy>
@@ -44,8 +44,10 @@
     </xsl:template>
     
     
-    <xsl:template match="foxml:datastream[@ID='DCQ']">
-        <xsl:call-template name="newDCQ-theses"/>
+    <xsl:template match="foxml:datastream[@ID='DCQ']//foxml:xmlContent">
+        <xsl:copy>
+            <xsl:call-template name="newdc"/>
+        </xsl:copy>
     </xsl:template>
     
     
@@ -61,17 +63,24 @@
                 <xsl:attribute name="LABEL">Item Metadata</xsl:attribute>
                 <xsl:attribute name="MIMETYPE">text/xml</xsl:attribute>
                 <xsl:element name="foxml:xmlContent">
-                    <xsl:variable name="filename" select="concat('/I:/Hydra_DAMS/ERA/ERA_migration/FOXML_transformed/PSL/psl_15/new_data/',replace(//ualterms:fedora3uuid,':','_'),'.xml')"/>
-                    <xsl:copy select="document($filename)/dc">
-                        <xsl:apply-templates/>
-                        <xsl:copy-of select="datastreamVersion[last()]//ualterms:fedora3handle"/>
-                        <xsl:copy-of select="datastreamVersion[last()]//ualterms:proquest"/>
-                    </xsl:copy>
+                    <xsl:call-template name="newdc"/>
                 </xsl:element>
             </xsl:element>
         </xsl:element>
     </xsl:template>
     
+    
+    <xsl:template name="newdc">
+    	<xsl:variable name="filename" select="concat('/I:/Hydra_DAMS/ERA/ERA_migration/FOXML_transformed/PSL/psl_15/new_data/',replace(//ualterms:fedora3uuid,':','_'),'.xml')"/>
+        <xsl:variable name="fedora3handle" as="node()" select="//foxml:datastream[@ID='DCQ']/foxml:datastreamVersion[last()]//*[namespace-uri()='http://terms.library.ualberta.ca' and local-name()='fedora3handle']"/>
+        <xsl:variable name="proquest" select="//foxml:datastream[@ID='DCQ']/foxml:datastreamVersion[last()]//*[namespace-uri()='http://terms.library.ualberta.ca' and local-name()='proquest']"/>
+        <xsl:copy select="document($filename)/dc">
+            <xsl:apply-templates/>
+            <!--<xsl:call-template name="identifiers"/>-->
+            <xsl:copy-of select="$fedora3handle" copy-namespaces="no"/>
+            <xsl:copy-of select="$proquest" copy-namespaces="no"/>
+        </xsl:copy>
+    </xsl:template>
     
     
 </xsl:stylesheet>
