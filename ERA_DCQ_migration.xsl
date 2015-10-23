@@ -11,6 +11,9 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:eraterms="http://era.library.ualberta.ca/eraterms"
     xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/"
+    xmlns:vivo="http://vivoweb.org/ontology/core"
+    xmlns:marcrel="http://id.loc.gov/vocabulary/relators"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
     exclude-result-prefixes="xs xd"
     version="3.0">
     
@@ -28,9 +31,10 @@
         </xd:desc>
     </xd:doc> 
     
-    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-    <xsl:strip-space elements="dcterms:* dc:*"/>
     
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+    <xsl:strip-space elements="dc dcterms:* dc:*"/>
+
     
     <xsl:template match="@*|node()">
         <xsl:copy>
@@ -49,6 +53,35 @@
             <xsl:apply-templates select="@*|node()"/>
             <xsl:if test="not(foxml:datastream[@ID='DCQ'])">
                 <xsl:call-template name="newDCQ"/>
+            </xsl:if>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    <!-- Replace spaces in ownerId -->
+    <xsl:template match="foxml:objectProperties/foxml:property[@NAME='info:fedora/fedora-system:def/model#ownerId']/@VALUE">
+        <xsl:attribute name="VALUE">
+            <xsl:value-of select="replace(.,'\s','_')"/>
+        </xsl:attribute>
+    </xsl:template>
+    
+    
+    <!-- Replace spaces in submitterId -->
+    <xsl:template match="//foxml:datastream[@ID='RELS-EXT']/foxml:datastreamVersion//*:RDF[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:Description[namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*:submitterId[namespace-uri()='http://era.library.ualberta.ca/schema/definitions.xsd#']">
+        <xsl:copy>
+            <xsl:value-of select="replace(.,'\s','_')"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    <!-- Declare CCID access restriction if absent and item is part of restricted UAL Licensed Resources community (items protected at the application level in old ERA) -->
+    <xsl:template match="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOf[@*:resource='info:fedora/uuid:11274e20-0426-4e80-84f4-bef79dbd6633']]">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+            <xsl:if test="not(*:isPartOf[@*:resource='info:fedora/ir:CCID_AUTH'])">
+                <xsl:element name="isPartOf" namespace="info:fedora/fedora-system:def/relations-external#">
+                    <xsl:attribute name="rdf:resource">info:fedora/ir:CCID_AUTH</xsl:attribute>
+                </xsl:element>
             </xsl:if>
         </xsl:copy>
     </xsl:template>
@@ -76,6 +109,18 @@
     </xsl:template>
     
     
+    <!-- Namespaces -->
+    <xsl:template name="namespaces">
+        <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
+        <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
+        <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
+        <xsl:namespace name="vivo">http://vivoweb.org/ontology/core</xsl:namespace>
+        <xsl:namespace name="marcrel">http://id.loc.gov/vocabulary/relators</xsl:namespace>
+        <xsl:namespace name="bibo">http://purl.org/ontology/bibo/</xsl:namespace>
+        <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+    </xsl:template>
+    
+    
     <!-- New DCQ datastream based on last DC datastream: created with xsl instructions to control
         namespace declarations -->
     <xsl:template name="newDCQ">
@@ -90,10 +135,7 @@
                 <xsl:attribute name="MIMETYPE">text/xml</xsl:attribute>
                 <xsl:element name="foxml:xmlContent">
                     <xsl:element name="dc">
-                        <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
-                        <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-                        <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
-                        <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+                        <xsl:call-template name="namespaces"/>
                         <xsl:apply-templates
                             select="//foxml:datastream[@ID='DC']/foxml:datastreamVersion[last()]//oai_dc:dc/node()"/>
                     </xsl:element>
@@ -106,10 +148,7 @@
     <!-- Update namespaces and apply templates -->
     <xsl:template match="//dc">
         <xsl:copy copy-namespaces="no">
-            <xsl:namespace name="dcterms">http://purl.org/dc/terms/</xsl:namespace>
-            <xsl:namespace name="dc">http://purl.org/dc/elements/1.1/</xsl:namespace>
-            <xsl:namespace name="ualterms">http://terms.library.ualberta.ca</xsl:namespace>
-            <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
+            <xsl:call-template name="namespaces"/>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
@@ -183,7 +222,7 @@
                     <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
             </xsl:when>
-            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
+            <xsl:when test="matches(.,'\w+\s*(?:[Aa]ge|[Cc]entury|[Cc]ontemporary|[Pp]eriod|[Yy]ear|[Mm]onth|[Dd]ay|[Ww]inter|[Ss]pring|[Ss]ummer|[Ff]all|[Au]tumn|[Jj]anuary|[Ff]ebruary|[Mm]arch|[Aa]pril|[Mm]ay|[Jj]une|[Jj]uly|[Aa]ugust|[Ss]eptember|[Oo]ctober|[Nn]ovember|[Dd]ecember)')">
                 <xsl:element name="dcterms:temporal">
                     <xsl:apply-templates select="@*"/>
                     <xsl:value-of select="normalize-space()"/>
@@ -203,6 +242,7 @@
                     <xsl:value-of select="normalize-space()"/>
                 </xsl:element>
             </xsl:when>-->
+            <xsl:when test="not(text())"/>
             <xsl:otherwise>
                 <xsl:element name="dcterms:coverage">
                     <xsl:apply-templates select="@*"/>
@@ -254,8 +294,8 @@
     
     
     <!-- *:relation changed to *:source -->
-    <!-- special case: turn on only for Halpern -->
-    <xsl:template match="//*:relation" priority="6">
+    <!-- special case: only for Halpern Image Archive community -->
+    <xsl:template match="//*:relation[//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//*:isMemberOf[@rdf:resource='info:fedora/uuid:fabad4e3-0f6e-4368-bb80-0a110d72c0e9']]" priority="6">
         <xsl:element name="dcterms:source">
             <xsl:apply-templates select="@* | node()"/>  
         </xsl:element>
@@ -329,13 +369,15 @@
                 <xsl:when test="matches(.,'report')">
                     <xsl:text>Report</xsl:text>
                 </xsl:when>
-    <!-- special case: comment out this section when updating object type for images -->
-                <!--<xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
-                    <xsl:text>Research Material</xsl:text>
-                </xsl:when>-->
-    <!-- special case: use when updating object type for images -->
                 <xsl:when test="matches(.,'[Rr]esearch\s?[Mm]aterial')">
-                    <xsl:text>Image</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="//*:datastream[@ID[matches(.,'^DS\d*')]]/*:datastreamVersion[last()][@MIMETYPE[contains(.,'image')]]">
+                            <xsl:text>Image</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>Research Material</xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:when>
                 <xsl:when test="matches(.,'thesis')">
                     <xsl:text>Thesis</xsl:text>
@@ -404,16 +446,21 @@
                     <xsl:value-of select="replace(., '^([12][09]\d{2})[\.-]\d{3}[\.-]\d{3}.*\.[Tt][Ii][Ff]', '$1')"/>
                 </xsl:element>
             </xsl:when>
+            <xsl:when test="text()[matches(.,'proquest:1969\.055\.001_d_\.[Tt][Ii][Ff]')]">
+                <xsl:element name="dcterms:created">
+                    <xsl:value-of select="replace(., 'proquest:1969\.055\.001_d_\.[Tt][Ii][Ff]', '1969')"/>
+                </xsl:element>
+            </xsl:when>
             <!-- other Dept of Anthro ids -->
-            <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])|(?:proquest:1969\.055\.001_d_\.[Tt][Ii][Ff])')]"/>
+            <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])')]"/>
             <!-- Halpern ids -->
             <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4})|(?:halpern:nna)||(?:\d{3}_\d)|(?:[A-za-z]_\d{3}.?)')]"/>
-            <!--<xsl:when test="text()[contains(.,'proquest')]">
+            <xsl:when test="text()[contains(.,'proquest')]">
                 <xsl:element name="ualterms:proquest">
                     <xsl:call-template name="anyURI"/>
                     <xsl:apply-templates select="@*|node()"/>     
                 </xsl:element>
-            </xsl:when>-->
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="dcterms:identifier">
                     <xsl:apply-templates select="@*|node()"/>
@@ -423,13 +470,77 @@
     </xsl:template>
     
     
-    <!-- eraterms:trid number identifier ualterms:trid-->    
-    <xsl:template match="//*:dc/*[local-name()='trid']" priority="6">
-        <xsl:element name="ualterms:trid">
-            <xsl:call-template name="string"/>
-            <xsl:apply-templates select="@*|node()"/>
-        </xsl:element>
+    
+    <!-- Theses -->
+    <!-- mpo: add template rule for contributor without role attribute or without role att value (?) -->
+    <xsl:template match="*:contributor[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
+        <xsl:choose>
+            <xsl:when test="@role='advisor'">
+                <xsl:element name="marcrel:ths">
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>  
+            </xsl:when>
+            <xsl:when test="@role='committeemember'">
+                <xsl:element name="ualterms:thesiscommitteemember">
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>  
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:element name="dcterms:contributor">
+                    <xsl:value-of select="normalize-space()"/>
+                </xsl:element>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="*:degree[namespace-uri()='http://www.ndltd.org/standards/metadata/etdms/1.0/']" priority="6">
+        <xsl:for-each select="*:discipline">
+            <xsl:element name="vivo:AcademicDepartment">
+                <xsl:value-of select="replace(.,'Dept.','Department')"/>
+            </xsl:element>
+         </xsl:for-each>
+        <xsl:for-each select="*:grantor">
+            <xsl:element name="marcrel:dgg">
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:for-each>
+        <xsl:for-each select="*:level">
+            <xsl:element name="ualterms:thesislevel">
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:for-each>
+        <xsl:for-each select="*:name">
+            <xsl:element name="bibo:ThesisDegree">
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    
+    
+    <!-- eraterms -->
+    <xsl:template match="*[namespace-uri()='http://era.library.ualberta.ca/eraterms']" priority="6">
+        <xsl:if test="local-name()='graduationdate'">
+            <xsl:element name="ualterms:graduationdate">
+                <xsl:attribute name="xsi:type">
+                    <xsl:text>gYearMonth</xsl:text>
+                </xsl:attribute>
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="local-name()='specialization'">
+            <xsl:element name="ualterms:specialization">
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="local-name()='trid'">
+            <xsl:element name="ualterms:trid">
+                <xsl:call-template name="string"/>
+                <xsl:value-of select="normalize-space()"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
     
     
     <!-- Fix typo in original FOXML -->
@@ -438,6 +549,7 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
+    
     
     
     <!-- Fix datastream ID mismatch in original FOXML -->

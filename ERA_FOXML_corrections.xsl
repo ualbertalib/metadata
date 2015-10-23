@@ -55,6 +55,7 @@
         </xsl:attribute>
     </xsl:template>
     
-    
+    <!-- Delete identifier elements (without namespace prefix) in DCQ -->
+    <xsl:template match="//foxml:datastream[@ID='DCQ']/foxml:datastreamVersion[last()]/identifier[not(node())]"/>
     
 </xsl:stylesheet>
