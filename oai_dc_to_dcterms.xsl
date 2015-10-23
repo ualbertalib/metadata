@@ -12,15 +12,16 @@
                 >http://purl.org/dc/terms/</xsl:namespace>
             <xsl:namespace name="georss">http://www.georss.org/georss/</xsl:namespace>
             <xsl:apply-templates/>
-            <xsl:call-template name="rights"/>
+            <xsl:call-template name="description"/>
             <xsl:call-template name="type"/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="dc:*">
+        <!-- This test excludes elements that are processed through named templates or omitted. -->
         <xsl:choose>
-            <!-- This test excludes dc:rights from processing so element instances are only processed once through the 'rights' template. -->
-            <xsl:when test="name() = 'dc:rights'">                
-            </xsl:when>
+            <xsl:when test="name() = 'dc:rights'"/>
+            <xsl:when test="name() = 'dc:description'"/>
+            <xsl:when test="name() = 'dc:type'"/>
             <xsl:otherwise>
                 <xsl:element name="dcterms:{local-name()}">
                     <xsl:apply-templates select="@* | node()"/>
@@ -31,24 +32,6 @@
     <xsl:template match="dc:date">
         <xsl:element name="dcterms:created">
             <xsl:apply-templates select="@* | node()"/>
-        </xsl:element>
-    </xsl:template>
-<!-- Instances of dc:description that contain a formatted citation for the resource are excluded from the output. -->
-<!-- Other instances of dc:description are drawn from the 'Abstract' field in Dataverse and so are mapped to dcterms:abstract. -->    
-    <xsl:template match="dc:description">
-        <xsl:choose>
-            <xsl:when test="starts-with(., 'Citation')"/>
-            <xsl:otherwise>
-                <xsl:element name="dcterms:abstract">
-                    <xsl:apply-templates select="@* | node()"/>
-                </xsl:element>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    <!-- value in dc:type comes from a free text field describing the kind of data, so it is mapped to an instance of the description field. -->
-    <xsl:template match="dc:type">
-        <xsl:element name="dcterms:description">
-            <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
     <!-- Several Dataverse fields are mapped to coverage. This template processes the ones selected for output. All others are excluded. -->
@@ -70,48 +53,57 @@
                 </xsl:element>
             </xsl:when>
             <xsl:when test="starts-with(., 'Geographic Bounding')">
-                <xsl:analyze-string select="substring-before(substring-after(normalize-space(.), 'Geographic Bounding: '), ' South Latitude')" regex="^(\-?\d{{0,3}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,)(\-?\d{{0,3}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,\s)(\-?\d{{0,2}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,\s)(\-?\d{{0,2}}\.\d*?)$">
-                        <xsl:matching-substring>
-                            <xsl:element name="georss:box">
-                                <!-- South Latitude -->
-                                <xsl:value-of select="regex-group(7)"/>
-                                <xsl:text> </xsl:text>
-                                <!-- West Longitude -->
-                                <xsl:value-of select="regex-group(3)"/>
-                                <xsl:text> </xsl:text>
-                                <!-- North Latitude -->
-                                <xsl:value-of select="regex-group(5)"/>
-                                <xsl:text> </xsl:text>
-                                <!-- East Longitude -->
-                                <xsl:value-of select="regex-group(1)"/>
-                            </xsl:element>                                
-                        </xsl:matching-substring>
-                        <xsl:non-matching-substring>
-                            <xsl:element name="dcterms:spatial">
-                                <xsl:value-of select="."/>                                                            
-                            </xsl:element>
-                        </xsl:non-matching-substring>
-                    </xsl:analyze-string>
+                <xsl:analyze-string
+                    select="substring-before(substring-after(normalize-space(.), 'Geographic Bounding: '), ' South Latitude')"
+                    regex="^(\-?\d{{0,3}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,)(\-?\d{{0,3}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,\s)(\-?\d{{0,2}}\.\d*?)(\s[A-Za-z]+\s[A-Za-z]+,\s)(\-?\d{{0,2}}\.\d*?)$">
+                    <xsl:matching-substring>
+                        <xsl:element name="georss:box">
+                            <!-- South Latitude -->
+                            <xsl:value-of select="regex-group(7)"/>
+                            <xsl:text> </xsl:text>
+                            <!-- West Longitude -->
+                            <xsl:value-of select="regex-group(3)"/>
+                            <xsl:text> </xsl:text>
+                            <!-- North Latitude -->
+                            <xsl:value-of select="regex-group(5)"/>
+                            <xsl:text> </xsl:text>
+                            <!-- East Longitude -->
+                            <xsl:value-of select="regex-group(1)"/>
+                        </xsl:element>
+                    </xsl:matching-substring>
+                    <xsl:non-matching-substring>
+                        <xsl:element name="dcterms:spatial">
+                            <xsl:value-of select="."/>
+                        </xsl:element>
+                    </xsl:non-matching-substring>
+                </xsl:analyze-string>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    <!-- Dataverse maps several rights and access fields to dc:rights. In order to conform to the HydraNorth model, these statements are concatenated into a single instance of the dcterms:rights field, separated by ' / '. -->
-    <xsl:template name="rights">
-        <xsl:if test="dc:rights">
-        <xsl:element name="dcterms:rights">
-            <xsl:for-each select="dc:rights">
-                <xsl:value-of select="."/>
-                <xsl:choose>
-                    <xsl:when test="position() = last()"/>
-                    <xsl:otherwise>
-                        <xsl:text> / </xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:for-each>
-        </xsl:element>            
-        </xsl:if>
+    <!-- Each Dataverse record includes an instance of dc:description that contains a formatted citation for the resource, and which is excluded from the output. -->
+    <!-- The value of dc:type comes from a free text field that describes the kind of data. -->
+    <xsl:template match="dc:type" mode="description">                
+        <xsl:text>Kind of data: </xsl:text>
+        <xsl:value-of select="."/>
     </xsl:template>
-    <!-- All resources from Dataverse are assigned the controlled type value of Dataset -->
+    <xsl:template match="dc:description[starts-with(., 'Citation')]" mode="description"/>
+    <xsl:template match="dc:description" mode="description">
+        <xsl:apply-templates select="@* | node()"/>
+    </xsl:template>
+    <xsl:template name="description">
+        <xsl:element name="dcterms:description">
+            <xsl:text>This item is a resource in the University of Alberta Libraries' Dataverse Network. Access this item in Dataverse by clicking on the DOI link.</xsl:text>
+            <xsl:if test="dc:type or dc:description[2]">
+                <xsl:text> | </xsl:text>
+            </xsl:if>
+            <xsl:apply-templates select="dc:type" mode="description"/>
+            <xsl:if test="dc:type and dc:description[2]">
+                <xsl:text> | </xsl:text>
+            </xsl:if>
+            <xsl:apply-templates select="dc:description" mode="description"/>
+        </xsl:element>
+    </xsl:template>
+    <!-- All resources from Dataverse are assigned the controlled value 'Dataset'-->
     <xsl:template name="type">
         <xsl:element name="dcterms:type" inherit-namespaces="no">Dataset</xsl:element>
     </xsl:template>
