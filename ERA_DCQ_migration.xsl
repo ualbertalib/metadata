@@ -434,7 +434,7 @@
                     <xsl:apply-templates select="@*|node()"/>
                 </xsl:element>
             </xsl:when>
-            <xsl:when test="text()[matches(.,'^\d*$')]">
+            <xsl:when test="text()[matches(.,'(^\d*$)|(unicorn:)')]">
                 <xsl:element name="ualterms:unicorn">
                     <xsl:call-template name="string"/>
                     <xsl:apply-templates select="@*|node()"/>
@@ -455,7 +455,7 @@
             <xsl:when test="text()[matches(.,'(?:^\d{3}[-_]\d{3}-\d{3}.*\.[Tt][Ii][Ff])')]"/>
             <!-- Halpern ids -->
             <xsl:when test="text()[matches(.,'^(?:(?:A|\d{2,3})_.{2,4})|(?:halpern:nna)||(?:\d{3}_\d)|(?:[A-za-z]_\d{3}.?)')]"/>
-            <xsl:when test="text()[contains(.,'proquest')]">
+            <xsl:when test="text()[matches(.,'proquest')]">
                 <xsl:element name="ualterms:proquest">
                     <xsl:call-template name="anyURI"/>
                     <xsl:apply-templates select="@*|node()"/>     
