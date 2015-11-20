@@ -254,16 +254,25 @@
     
     
     <xsl:template match="//*:creator" priority="6">
-        <xsl:element name="dcterms:creator">
-            <xsl:choose>
-                <xsl:when test="text()[contains(.,'UofA Anthro')]">
-                    <xsl:text>University of Alberta Department of Anthropology</xsl:text>
-                </xsl:when>    
-                <xsl:otherwise>
+        <xsl:choose>
+            <xsl:when test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource='info:fedora/uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269']]">
+                <xsl:element name="marcrel:dis">
                     <xsl:value-of select="normalize-space()"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:element>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:element name="dcterms:creator">
+                    <xsl:choose>
+                        <xsl:when test="text()[contains(.,'UofA Anthro')]">
+                            <xsl:text>University of Alberta Department of Anthropology</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:element>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     
