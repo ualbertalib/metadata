@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:OAI-PMH xmlns="http://purl.org/dc/elements/1.1/"
+    xmlns:ns2="http://www.openarchives.org/OAI/2.0/"
+    xmlns:ns3="http://www.openarchives.org/OAI/2.0/oai_dc/">
+    <ns2:responseDate>2015-12-01T14:16:17.819-07:00</ns2:responseDate>
+    <ns2:request verb="ListRecords" metadataPrefix="oai_dc"/>
+    <ns2:ListRecords>
+        <ns2:record>
+            <ns2:header>
+                <ns2:identifier>http://localhost:8080/fedora/rest/obj1-with-oai-set</ns2:identifier>
+                <ns2:datestamp>2015-11-30T23:27:24Z</ns2:datestamp>
+                <ns2:setSpec>oai-test-set-1</ns2:setSpec>
+            </ns2:header>
+            <ns2:metadata>
+                <ns3:dc>
+                    <publisher>University of Calgary; Department of Art and Design, Department of
+                        Literature</publisher>
+                    <description>Consumer Product</description>
+                </ns3:dc>
+            </ns2:metadata>
+        </ns2:record>
+        <ns2:record>
+            <ns2:header>
+                <ns2:identifier>http://localhost:8080/fedora/rest/obj2-with-oai-set</ns2:identifier>
+                <ns2:datestamp>2015-11-30T23:21:36Z</ns2:datestamp>
+                <ns2:setSpec>oai-test-set-1</ns2:setSpec>
+            </ns2:header>
+            <ns2:metadata>
+                <ns3:dc>
+                    <type>Report</type>
+                    <creator>Piyapong</creator>
+                    <creator>Marc Rel Disc</creator>
+                    <publisher>University of Calgary.</publisher>
+                    <title>Object2 with OAI</title>
+                    <title>Object2 title</title>
+                </ns3:dc>
+            </ns2:metadata>
+        </ns2:record>
+    </ns2:ListRecords>
+</ns2:OAI-PMH>
