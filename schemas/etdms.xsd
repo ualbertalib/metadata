@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:ETD_MS="http://www.ndltd.org/standards/metadata/etdms/1.0/"
+    xmlns:oai_etdms="http://terms.library.ualberta.ca/oai_etdms/"
+    targetNamespace="http://www.ndltd.org/standards/metadata/etdms/1.0/"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+<import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.ndltd.org/standards/metadata/etdms/1-0/xml.xsd"/>
+
+    <annotation>
+       <documentation>
+
+          XML Schema for the Electronic Theses and Dissertations
+            Metadata Set (ETD-MS)
+
+          Standard Version 1.00, 2001-08-02
+            http://www.ndltd.org/standards/metadata/
+          Schema Version 1.0, 2001-08-03
+
+          Robert France, Hussein Suleman
+          Digital Library Research Laboratory, Virginia Tech
+          {france,hussein}@vt.edu
+
+          Note: This schema includes many elements from Dublin Core (DC)
+          (http://purl.org/dc) and conforms to the DC semantics as far
+          as possible.
+
+          History:
+            2001-08-03 change from uriReference to anyURI
+            2001-08-02 release: v1.00
+
+       </documentation>
+    </annotation>
+
+    <complexType name="freeTextType">
+      <annotation>
+        <documentation>
+          When a free text field is translated by someone other than the
+          author, that person's name should appear as the value to the
+          translated attribute.
+        </documentation>
+      </annotation>
+      <simpleContent>
+        <extension base="string">
+          <attribute name="translated" type="string"/>
+          <attributeGroup ref="xml:specialAttrs"/>
+        </extension>
+      </simpleContent>
+    </complexType>
+
+    <complexType name="controlledTextType">
+      <annotation>
+        <documentation>
+          When the content of a field is controlled, as in subject or date
+          fields, the controlling scheme should be annotated with either or
+          both the name of the scheme and/or a URI describing the controlled
+          object within the context of the scheme.
+        </documentation>
+      </annotation>
+      <simpleContent>
+        <extension base="string">
+          <attribute name="scheme" type="string"/>
+          <attribute name="resource" type="anyURI"/>
+          <attributeGroup ref="xml:specialAttrs"/>
+        </extension>
+      </simpleContent>
+    </complexType>
+
+    <complexType name="authorityType">
+      <annotation>
+        <documentation>
+          Each reference to an individual or institution in any field
+          should contain a string representing the name of the individual
+          or institution as it appears in the work.
+          Where possible, the reference should also contain a URI which
+          points to an authoritative record for that individual or institution.
+        </documentation>
+      </annotation>
+      <simpleContent>
+        <extension base="string">
+          <attribute name="resource" type="anyURI"/>
+        </extension>
+      </simpleContent>
+    </complexType>
+
+    <simpleType name="descriptionRoleType">
+      <annotation>
+        <documentation>
+          Optional attributes to qualify the meaning of the description tag.
+          "note" indicates additional information regarding the thesis or
+          dissertation. Example: acceptance note of the department.
+          "release" indicates a description of the version of the work.
+          Should only be used for errata, etc..
+        </documentation>
+      </annotation>
+      <restriction base="string">
+        <enumeration value="note"/>
+        <enumeration value="release"/>
+      </restriction>
+    </simpleType>
+
+    <simpleType name="dateType">
+      <annotation>
+        <documentation>
+          As defined in ISO 8601 and the profile recommended for 
+          implementing ISO 8601 dates in Dublin Core.
+        </documentation>
+      </annotation>
+      <restriction base="string">
+        <pattern value="[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?"/>
+      </restriction>
+    </simpleType>
+
+    <element name="thesis">
+       <complexType>
+         <sequence>
+
+           <element name="title" type="ETD_MS:freeTextType" minOccurs="1" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 A name given to the resource. In the case of theses and
+                 dissertations, this is the title of the work as it appears on the
+                 title page or equivalent. 
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="alternativeTitle" type="ETD_MS:freeTextType" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 Alternative title of the thesis or dissertation. 
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="creator" type="ETD_MS:authorityType" minOccurs="1" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 An entity primarily responsible for making the content of the
+                 resource.
+                 In the case of theses or dissertations, this field is appropriate
+                 for the author(s) of the work. Like other names and institutions,
+                 this field should be entered in free text form as it appears on
+                 the title page or equivalent, with a link to to an authority
+                 record if available. 
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="subject" type="ETD_MS:controlledTextType" minOccurs="1" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 The topic of the content of the resource. In the case of theses
+                 and dissertations, keywords or subjects listed on the title page
+                 can be entered as free text. The "scheme" qualifier should be used
+                 to indicate a controlled vocabulary.
+               </documentation>
+             </annotation>
+           </element>
+    
+           <element name="description" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 An account of the content of the resource. In the case
+                 of theses and disserations, this is the full text of the
+                 abstract unless otherwise qualified.
+               </documentation>
+             </annotation>
+             <complexType>
+               <simpleContent>
+                 <extension base="ETD_MS:freeTextType">
+                   <attribute name="role" type="ETD_MS:descriptionRoleType"/>
+                 </extension>
+               </simpleContent>
+             </complexType>
+           </element>
+
+           <element name="publisher" type="ETD_MS:authorityType" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 An entity responsible for making the resource available.  This is
+                 typically the group most directly responsible for digitizing
+                 and/or archiving the work. The publisher may or may not be exactly
+                 the same as thesis.degree.grantor. Like other institutional names,
+                 this field should be entered in free text form as it appears on the
+                 title page or equivalent, with a link to to an authority record
+                 where available. 
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="contributor" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 An entity responsible for making contributions to the content of
+                 the resource. Typical use would be for co-authors of parts of the
+                 work as well as advisors or committee members. Co-authors of the
+                 entire work would be more appropriate for the creator field.
+               </documentation>
+             </annotation>
+             <complexType>
+               <simpleContent>
+                 <extension base="ETD_MS:freeTextType">
+                   <attribute name="role" type="string"/>
+                   <attribute name="resource" type="anyURI"/>
+                 </extension>
+               </simpleContent>
+             </complexType>
+           </element>
+
+           <element name="date" type="ETD_MS:dateType" minOccurs="1" maxOccurs="1">
+             <annotation>
+               <documentation>
+                 A date associated with an event in the life cycle of the resource.
+                 In the case of theses and dissertations, this should be the date
+                 that appears on the title page or equivalent of the work. Should be
+                 recorded as defined in ISO 8601 and the profile recommended for
+                 implementing ISO 8601 dates in Dublin Core.
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="type" type="ETD_MS:freeTextType" minOccurs="1" maxOccurs="unbounded">  
+             <annotation>
+               <documentation>
+                 The nature or genre of the content of the resource. This field is
+                 used to distinguish the resource from works in other genres and to identify the
+                 types of content included in the resource. The string "Electronic Thesis
+                 or Dissertation" is recommended as one of the repeatable values for
+                 this element. In addition, specify types of content using the standard
+                 vocabulary found at:
+                 http://dublincore.org/documents/dcmi-type-vocabulary/. Degree and
+                 Education Level are now handled by the thesis.degree field.
+               </documentation>
+             </annotation>
+           </element>
+  
+           <element name="format" type="ETD_MS:freeTextType" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 The physical or digital manifestation of the resource. In the case of an
+                 electronic thesis or dissertation, this should contain a list of the
+                 electronic format(s) in which the work is stored and/or delivered.
+                 Use the standard MIME type whenever possible (for a list of
+                 "registered" MIME types, visit
+                 ftp://ftp.isi.edu/in-notes/iana/assignments/media-types/media-types).
+                 List as "unknown" if no format information is available, omit if the
+                 work is not available in electronic form.
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="identifier" type="string" minOccurs="1" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 An unambiguous reference to the resource within a given context.
+                 This can and should be used to provide a URI where the work
+                 can be viewed or downloaded. Persistent URNs such as PURLs
+                 (http://purl.org/) or Handles (http://handle.net/) are
+                 recommended.
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="language" type="string" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 A language of the intellectual content of the resource. This should
+                 be the primary language the work is recorded in. Portions of the
+                 larger work that appear in other languages should use the lang
+                 qualifier. See Global Qualifiers. Language names themselves
+                 should be recorded using ISO 639-2 (or RFC 1766). If the
+                 language is not specified, it is assumed to be English (en).
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="coverage" type="ETD_MS:controlledTextType" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 The extent or scope of the content of the resource. Should be used
+                 for time periods or spatial regions.
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="rights" type="ETD_MS:freeTextType" minOccurs="0" maxOccurs="unbounded">
+             <annotation>
+               <documentation>
+                 Information about rights held in and over the resource. Typically,
+                 this describes the conditions under which the work may be
+                 distributed, reproduced, etc., how these conditions may change over
+                 time, and whom to contact regarding the copyright of the work. 
+               </documentation>
+             </annotation>
+           </element>
+
+           <element name="degree" minOccurs="0" maxOccurs="1">
+             <annotation>
+               <documentation>
+                 The degree associated with the work.
+               </documentation>
+             </annotation>
+             <complexType>
+               <sequence>
+
+                 <element name="name" type="ETD_MS:freeTextType" minOccurs="0" maxOccurs="unbounded">  
+                   <annotation>
+                     <documentation>
+                       Name of the degree associated with the work as it appears within
+                       the work (example: Masters in Operations Research).
+                     </documentation>
+                   </annotation>
+                 </element>
+  
+                 <element name="level" type="string" minOccurs="0" maxOccurs="unbounded">  
+                   <annotation>
+                     <documentation>
+                       Level of education associated with the document. Example:
+                       bachelors, masters, doctoral, postdoctoral, other.
+                     </documentation>
+                   </annotation>
+                 </element>
+  
+                 <element name="discipline" type="ETD_MS:freeTextType" minOccurs="0" maxOccurs="unbounded">  
+                   <annotation>
+                     <documentation>
+                       Area of study of the intellectual content of the document. Usually
+                       this will be a department name. 
+                     </documentation>
+                   </annotation>
+                 </element>
+  
+                 <element name="grantor" type="ETD_MS:authorityType" minOccurs="0" maxOccurs="unbounded">  
+                   <annotation>
+                     <documentation>
+                       Institution granting the degree associated with the work. Like other
+                       institution names, this field should be entered in free text form
+                       as it appears on the title page or equivalent, with a link to an
+                       authority record where available.  
+                     </documentation>
+                   </annotation>
+                 </element>
+
+               </sequence>
+             </complexType>
+           </element>
+
+         </sequence>
+       </complexType>
+    </element>
+
+</schema>
+
+

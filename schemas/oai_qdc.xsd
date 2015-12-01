@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:oai_qdc="http://terms.library.ualberta.ca/oai_qdc/"
+    targetNamespace="http://terms.library.ualberta.ca/oai_qdc/" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">This is an application schema that associates ETDMS OAI-PMH
+            responses and University of Alberta Libraries' oai_etdms namespace. Based on work by
+            Matthew Mascord and the British Library. Changed targetNamespace, schemaLocation, and
+            added namespace declaration for oai_qdc. Original documentation retained below.
+            Contact: sharon.farnel@ualberta.ca or paredeso@ualberta.ca
+        </xs:documentation>
+        <xs:documentation xml:lang="en"> Qualified Dublin Core (DCQ) application schema Created to
+            permit DCQ in OAI-PMH responses Based almost entirely upon Matthew Mascord's work at
+            http://epubs.cclrc.ac.uk/xsd/qdc.xsd - just changed the targetNamespace and updated the
+            schemaLocation of the include. Original documentation retained in the other
+            xs:documentation element. </xs:documentation>
+        <xs:documentation xml:lang="en"> A Qualified DC application XML Schema Created 2004-06-09
+            Matthew Mascord (M.Mascord@rl.ac.uk) This schema includes the container element for a
+            Qualified DC application. In doing so it assigns that container element to the
+            targetNamespace of this schema. </xs:documentation>
+    </xs:annotation>
+    
+    <xs:include schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/qualifieddc.xsd"/>
+    
+</xs:schema>
