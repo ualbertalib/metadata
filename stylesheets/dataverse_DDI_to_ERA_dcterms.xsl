@@ -20,9 +20,6 @@
                     <xsl:text> : </xsl:text>
                 <xsl:value-of select="normalize-space(stdyDscr/citation/titlStmt/subTitl)"/>
                 </xsl:if>
-                <xsl:text> [Version </xsl:text>
-                <xsl:value-of select="docDscr/citation/verStmt/version[@type='RELEASED']"/>
-                <xsl:text>]</xsl:text>                
             </xsl:element>
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of select="docDscr/citation/titlStmt/IDNo"/>
@@ -72,7 +69,7 @@
                             <xsl:value-of select="stdyDscr/stdyInfo/sumDscr/timePrd[@event='start']"/>                        
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:text>[start undetermined]</xsl:text>
+                            <xsl:text>[date undetermined]</xsl:text>
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:text> - </xsl:text>
@@ -81,7 +78,7 @@
                             <xsl:value-of select="stdyDscr/stdyInfo/sumDscr/timePrd[@event='end']"/>                        
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:text>[end undetermined]</xsl:text>
+                            <xsl:text>[date undetermined]</xsl:text>
                         </xsl:otherwise>
                     </xsl:choose>                    
                 </xsl:element>
