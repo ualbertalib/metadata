@@ -20,7 +20,7 @@
 
     <xsl:template match="//mods:recordContentSource"/>
     <xsl:template match="//mods:location//mods:physicalLocation"/>
-    <xsl:template match="//mods:note/@type[matches(.,'price|imgprobs|notable')]"/>
+    <xsl:template match="//mods:note[@type[matches(.,'price|imgprobs|notable')]]"/>
     <xsl:template match="//mods:subject[not(child::*[not(self::mods:geographic)])]"/>
     <xsl:template match="//mods:subject//mods:geographic"/>
     
