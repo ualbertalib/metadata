@@ -27,6 +27,24 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="dc/*:language" priority="2">
+        <xsl:copy-of select="."/>
+    </xsl:template>
+    
+    <xsl:template match="dc/*:type" priority="2">
+        <xsl:copy-of select="."/>
+    </xsl:template>
+    
+    <!-- change dates
+        createdDate - //foxml:property[@NAME="info:fedora/fedora-system:def/model#createdDate"]/@VALUE
+        lastModifiedDate - //foxml:property[@NAME="info:fedora/fedora-system:def/model#lastModifiedDate"]/@VALUE
+        embargoedDate -//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//*:embargoedDate
+         -->
+    <!-- change state - //foxml:property[@NAME="info:fedora/fedora-system:def/model#state"]/@VALUE -->
+    <!-- change PID and references -->
+    
+    
+    
     
     
 </xsl:stylesheet>
