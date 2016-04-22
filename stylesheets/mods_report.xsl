@@ -76,7 +76,7 @@
     
     <xsl:template name="occurrence">
         <xsl:variable name="namesake">
-            <xsl:value-of select="local-name(.)"/>
+            <xsl:value-of select="self::local-name(.)"/>
         </xsl:variable>
         <xsl:value-of select="count(preceding-sibling::*[last() and local-name()=$namesake])+1"/>
     </xsl:template>    
