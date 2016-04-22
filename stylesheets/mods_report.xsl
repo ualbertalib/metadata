@@ -38,9 +38,9 @@
             <xsl:value-of select="concat('/',name(.))"/>
         </xsl:for-each>
         <xsl:text>/@</xsl:text>
-        <xsl:value-of select="text()[normalize-space()]"/>
+        <xsl:value-of select="local-name(.)"/>
         <xsl:text>&#09;</xsl:text>
-        <!--<xsl:value-of select="."/>-->
+        <xsl:value-of select="."/>
         <xsl:text>&#09;</xsl:text>
         <xsl:call-template name="source"/>
         <xsl:text>&#09;</xsl:text>
@@ -78,7 +78,7 @@
         <xsl:variable name="namesake">
             <xsl:value-of select="local-name(.)"/>
         </xsl:variable>
-        <xsl:value-of select="count(preceding-sibling::*[last() and local-name()=$namesake])+1"/>
+        <xsl:value-of select="count(preceding-sibling::*[last() and local-name()=$namesake])+1+count(following-sibling::*[last() and local-name()=$namesake])"/>
     </xsl:template>    
     
     <!-- add total count? -->
