@@ -199,7 +199,6 @@ def create_triples():
                     performer = URIRef("http://library.ualberta.ca/con_hall/Performer/%s" % (record['PerformerNum']) )
                     performance = URIRef("http://library.ualberta.ca/con_hall/Performance/%s" % (record['PerformanceNum']) )
                     performanceRole = URIRef( "http://library.ualberta.ca/con_hall/Role/%s" % (cell_value) )
-                    g.add( (performanceRole, RDFS.label, Literal(str(record['PerformanceLabel']))) )
                     # if the performer role is conductor, this is typed
                     if cell_value == 'conductor':
                         g.add( (performance, mo.conductor, performanceRole) )
