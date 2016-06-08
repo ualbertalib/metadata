@@ -1,3 +1,5 @@
+#!usr/bin/python3
+
 """ 
 a legacy database of "convocation hall" music recordings metadata was converted from MSAccess to a single csv.
 data was normalized (open refine) and reconciled using the musicbrainz vocabulary (see import function).
@@ -12,9 +14,8 @@ from rdflib.namespace import FOAF, RDFS, RDF, DCTERMS
 import re
 from time import sleep
 
-
 def main():
-    import_from_music_ontology()    
+    # import_from_music_ontology()
     create_triples()
 
 
@@ -48,7 +49,6 @@ def import_from_music_ontology():
 
 
 def create_triples():
-    
     """
     generates an in-memory rdf graph of triples describing 
     the University of Alberta Convocation hall recordings
@@ -175,9 +175,13 @@ def create_triples():
                             g.add( (performer, mo.instrument, performanceRole) )
     
     # generates the xml-rdf serialization and exports to file
-    g.serialize(file='con-hall.rdf', format='pretty-xml')
-   
+    g.serialize(destination='con_hall.rdf', format='pretty-xml')
+    # appends the generic namespaces with specifics
+    with open('con_hall.rdf', 'r') as f:
+        ch = f.read()
+        ch = ch.replace('ns1','mo').replace('ns2','dcterms').replace('ns3','foaf')
+    with open('con_hall.rdf', 'w') as f:
+        f.write(ch)
 
-if __name__ is "__main__":
+if __name__ == '__main__':
     main()
-
