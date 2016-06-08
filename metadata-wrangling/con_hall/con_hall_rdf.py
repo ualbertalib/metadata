@@ -13,7 +13,6 @@ from rdflib import URIRef, Namespace, Graph, URIRef, Literal
 from rdflib.namespace import FOAF, RDFS, RDF, DCTERMS
 import re
 from time import sleep
-import os
 
 def main():
     # import_from_music_ontology()    
