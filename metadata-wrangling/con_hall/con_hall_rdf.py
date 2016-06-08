@@ -97,8 +97,6 @@ def create_triples():
                         g.add( (composer, RDF.type, mo.MusicArtist) )
                         # give the resource a FOAF name (a string literal)
                         g.add( (composer, FOAF.name, Literal(str(record['ComposerName']))) )
-                        # composition is created by composer
-                        g.add( (composition, DCTERMS.creator, composer) )
 
                     if (entity == 'ComposerNum') & (cell_value != ''):
                         # create a composer resource
@@ -109,8 +107,6 @@ def create_triples():
                         g.add( (composer, RDF.type, mo.MusicArtist) )
                         # give the resource a FOAF name (a string literal)
                         g.add( (composer, FOAF.name, Literal(str(record['ComposerName']))) )
-                        # composition is created by composer
-                        g.add( (composition, DCTERMS.creator, composer) )
                                      
                     # recital (i.e. recording) resource and properties
                     if entity == 'RecitalNum':
@@ -134,12 +130,6 @@ def create_triples():
                         recording = URIRef("http://library.ualberta.ca/con_hall/Recording/%s" % (record['RecitalNum']) )
                         performer = URIRef("http://library.ualberta.ca/con_hall/Performer/%s" % (record['PerformerNum']) )
                         g.add( (performance, RDF.type, mo.Performance) )
-                        # performance performs composition
-                        g.add( (performance, mo.performance_of, composition ) )
-                        # performance is a part of a recording
-                        g.add( (performance, DCTERMS.isPartOf, recording) )
-                        # performance has performer
-                        g.add( (performer, DCTERMS.isPartOf, performance) )
 
                     # performer role (linked data instance)
                     if (entity == 'InstrumentURL')  & (cell_value != ''):
@@ -148,11 +138,6 @@ def create_triples():
                         performanceRole = URIRef( str(record[entity]) )
                         g.add( (performanceRole, RDF.type, mo.Instrument) )
                         g.add( (performanceRole, RDFS.label, Literal(str(record['PerformanceLabel']))) )
-                        # performer role is attributed both to the performance and to the performer
-                        # the role the performer played in a given performance needs to be inferred
-                        # a performer's role can potentially be ambiguous
-                        g.add( (performance, mo.instrument, performanceRole))
-                        g.add( (performer, mo.instrument, performanceRole))
 
                     # performer role (literal instance)
                     if (entity == 'PerformanceRole') & (cell_value != ''):
@@ -162,14 +147,67 @@ def create_triples():
                         performance = URIRef("http://library.ualberta.ca/con_hall/Performance/%s" % (record['PerformanceNum']) )
                         performanceRole = URIRef( "http://library.ualberta.ca/con_hall/Role/%s" % (cell_value) )
                         g.add( (performanceRole, RDFS.label, Literal(str(record['PerformanceLabel']))) )
-                        # if the performer role is conductor, this is typed
-                        if cell_value == 'conductor':
-                            g.add( (performance, mo.conductor, performanceRole) )
-                            g.add( (performer, mo.conductor, performanceRole) )
-                        else:
+                        if cell_value != 'conductor':
                             g.add( (performanceRole, RDF.type, mo.Instrument) )
-                            g.add( (performance, mo.instrument, performanceRole) )
-                            g.add( (performer, mo.instrument, performanceRole) )
+                      
+
+    # process one line of the combined csv at a time
+    # process one to many relationships
+    with open('music.csv') as music_file:
+        records = csv.DictReader(music_file)
+        for record in records:
+            # process each entity in the entity list
+            for entity in record.keys():
+                cell_value = record[entity]
+                if (entity == 'ComposerURL') & (cell_value != ''):
+                    composer = URIRef( cell_value )
+                    composition = URIRef( "http://library.ualberta.ca/con_hall/Composition/%s" % (record['CompositionNum']) )
+                    # composition is created by composer
+                    g.add( (composition, DCTERMS.creator, composer) )
+
+                if (entity == 'ComposerNum') & (cell_value != ''):
+                    composer = URIRef( 'http://library.ualberta.ca/con_hall/Composer/%s' % (cell_value) )
+                    composition = URIRef( "http://library.ualberta.ca/con_hall/Composition/%s" % (record['CompositionNum']) )
+                    # composition is created by composer
+                    g.add( (composition, DCTERMS.creator, composer) )
+
+                if entity == 'PerformanceNum':
+                    performance = URIRef( "http://library.ualberta.ca/con_hall/Performance/%s" % (cell_value) )
+                    composition = URIRef("http://library.ualberta.ca/con_hall/Composition/%s" % (record['CompositionNum']) )
+                    recording = URIRef("http://library.ualberta.ca/con_hall/Recording/%s" % (record['RecitalNum']) )
+                    performer = URIRef("http://library.ualberta.ca/con_hall/Performer/%s" % (record['PerformerNum']) )
+                    g.add( (performance, mo.performance_of, composition ) )
+                    # performance is a part of a recording
+                    g.add( (performance, DCTERMS.isPartOf, recording) )
+                    # performance has performer
+                    g.add( (performer, DCTERMS.isPartOf, performance) )
+
+                # performer role (linked data instance)
+                if (entity == 'InstrumentURL')  & (cell_value != ''):
+                    performer = URIRef("http://library.ualberta.ca/con_hall/Performer/%s" % (record['PerformerNum']) )
+                    performance = URIRef("http://library.ualberta.ca/con_hall/Performance/%s" % (record['PerformanceNum']) )
+                    performanceRole = URIRef( str(record[entity]) )
+                    # performer role is attributed both to the performance and to the performer
+                    # the role the performer played in a given performance needs to be inferred
+                    # a performer's role can potentially be ambiguous
+                    g.add( (performance, mo.instrument, performanceRole))
+                    g.add( (performer, mo.instrument, performanceRole))
+
+                # performer role (literal instance)
+                if (entity == 'PerformanceRole') & (cell_value != ''):
+                    cell_value = cell_value.replace(' ','_')
+                    cell_value = cell_value.replace(',','')
+                    performer = URIRef("http://library.ualberta.ca/con_hall/Performer/%s" % (record['PerformerNum']) )
+                    performance = URIRef("http://library.ualberta.ca/con_hall/Performance/%s" % (record['PerformanceNum']) )
+                    performanceRole = URIRef( "http://library.ualberta.ca/con_hall/Role/%s" % (cell_value) )
+                    g.add( (performanceRole, RDFS.label, Literal(str(record['PerformanceLabel']))) )
+                    # if the performer role is conductor, this is typed
+                    if cell_value == 'conductor':
+                        g.add( (performance, mo.conductor, performanceRole) )
+                        g.add( (performer, mo.conductor, performanceRole) )
+                    else:
+                    	g.add( (performance, mo.instrument, performanceRole))
+                    	g.add( (performer, mo.instrument, performanceRole))
     
     # generates the xml-rdf serialization and exports to file
     g.serialize(destination='con_hall.rdf', format='pretty-xml')
