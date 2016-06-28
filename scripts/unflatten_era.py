@@ -25,7 +25,7 @@ for obj in arr:
 	value = obj['value']
 	
 
-# this is the most difficult of the program
+# this was the most difficult part of the program (to me!)
 # if there is no 'pid' in 'intermediate' then create a dictionary with key 'collection' containing the value of variable 'collection' 
 # if there is no 'pid' value as key in 'intermediate' set it to a dictionary with keys' pid' and collection' and values array with single values of variables 'pid' and 'collection'
 	if not pid in intermediate:
