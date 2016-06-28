@@ -325,7 +325,6 @@
                 </xsl:element>
             </xsl:when>
             <xsl:when test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource[matches(.,'(?:uuid:d7cceac1-cdb6-4f6c-8f99-e46cd28c292b|uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269)')]]]">
-                <xsl:text>rightspresent</xsl:text>
                 <xsl:call-template name="rights">                    
                     <xsl:with-param name="dateSub">
                         <xsl:value-of select="replace(substring(../*:datesubmitted,1,10),'-','')"/>
