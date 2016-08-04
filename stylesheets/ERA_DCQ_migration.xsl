@@ -154,14 +154,14 @@
     
     
     <!-- Update namespaces, apply templates, when thesis add rights statement -->
-    <xsl:template match="//dc">        
+    <xsl:template match="//dc[last()]">        
         <xsl:copy copy-namespaces="no">
             <xsl:call-template name="namespaces"/>
             <xsl:apply-templates select="@*|node()"/>
             <xsl:if test="not(*:rights)">
                 <xsl:call-template name="rights">
                     <xsl:with-param name="dateSub">
-                        <xsl:value-of select="replace(substring(./*:datesubmitted,1,10),'-','')"/>
+                        <xsl:value-of select="replace(substring(./*[local-name()[matches(.,'date[sS]ubmitted')]],1,10),'-','')"/>
                     </xsl:with-param>
                 </xsl:call-template>
             </xsl:if>
@@ -327,7 +327,7 @@
             <xsl:when test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource[matches(.,'(?:uuid:d7cceac1-cdb6-4f6c-8f99-e46cd28c292b|uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269)')]]]">
                 <xsl:call-template name="rights">                    
                     <xsl:with-param name="dateSub">
-                        <xsl:value-of select="replace(substring(../*:datesubmitted,1,10),'-','')"/>
+                        <xsl:value-of select="replace(substring(../*[local-name()[matches(.,'date[sS]ubmitted')]],1,10),'-','')"/>
                     </xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
@@ -346,7 +346,7 @@
         <xsl:if test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource[matches(.,'(?:uuid:d7cceac1-cdb6-4f6c-8f99-e46cd28c292b|uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269)')]]]">
             <xsl:element name="dcterms:rights">
                 <xsl:choose>
-                    <xsl:when test="$dateSub &lt; 20160301">
+                    <xsl:when test="../*[local-name()[matches(.,'date[sS]ubmitted')]] and $dateSub &lt; 20160301">
                         <xsl:text>This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law.</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
@@ -587,7 +587,7 @@
         <xsl:element name="dcterms:dateAccepted">
             <xsl:value-of select="normalize-space()"/>
         </xsl:element>
-        <xsl:if test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource[matches(.,'(?:uuid:d7cceac1-cdb6-4f6c-8f99-e46cd28c292b|uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269)')]]] and not(./*:graduationdate)">            
+        <xsl:if test="//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//rdf:Description[*:isMemberOfCollection[@*:resource[matches(.,'(?:uuid:d7cceac1-cdb6-4f6c-8f99-e46cd28c292b|uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269)')]]] and not(//*:graduationdate)">        
             <xsl:element name="ualdate:graduationdate">
                 <xsl:value-of select="normalize-space()"/>
             </xsl:element>
