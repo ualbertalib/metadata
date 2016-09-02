@@ -10,11 +10,11 @@
     
     <xsl:template match="*">        
         <xsl:for-each select="collection('/home/mparedes/main-metadata.git/metadata-wrangling/alberta_government_publications/marc_xml_ia/?select=*;recurse=yes')/*">
-            <xsl:value-of select="marc:controlfield[@tag='001']"/>        
+            <xsl:value-of select="normalize-space(//*:controlfield[@tag='001'])"/>        
             <xsl:text>&#09;</xsl:text>
             <xsl:call-template name="catkey"/>        
             <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="normalize-space(marc:datafield[@tag='245'])"/>        
+            <xsl:value-of select="normalize-space(//*:datafield[@tag='245'])"/>        
             <xsl:text>&#09;</xsl:text>
             <xsl:call-template name="subjects"/>        
             <xsl:text>&#xa;</xsl:text>
@@ -23,8 +23,8 @@
     
     
     <xsl:template name="subjects">
-        <xsl:for-each select="marc:datafield[@tag[matches(.,'6\d\d')]]">
-            <xsl:for-each select="marc:subfield">
+        <xsl:for-each select="//*:datafield[@tag[matches(.,'6\d\d')]]">
+            <xsl:for-each select="*:subfield">
                 <xsl:value-of select="concat('--',normalize-space())"/>
             </xsl:for-each>
             <xsl:text>;</xsl:text>
@@ -33,8 +33,8 @@
  
     
     <xsl:template name="catkey">
-        <xsl:variable name="filename" select="concat('/home/mparedes/main-metadata.git/metadata-wrangling/alberta_government_publications/marc_xml_ual/',//marc:controlfield[@tag='001'],'_marc.xml')"/>
-        <xsl:value-of select="document($filename)//marc:controlfield[@tag='001']"/>
+        <xsl:variable name="filename" select="concat('/home/mparedes/main-metadata.git/metadata-wrangling/alberta_government_publications/marc_xml_ual/',//*:controlfield[@tag='001'][1],'_marc.xml')"/>
+        <xsl:value-of select="normalize-space(document($filename)//*:controlfield[@tag='001'])"/>
     </xsl:template>
     
     
