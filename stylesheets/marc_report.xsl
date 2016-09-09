@@ -9,7 +9,7 @@
     <xsl:strip-space elements="yes"/>
     
     <xsl:template match="*">        
-        <xsl:for-each select="collection('/home/mparedes/main-metadata.git/metadata-wrangling/alberta_government_publications/marc_xml_ia/?select=*;recurse=yes')/*">
+        <xsl:for-each select="collection('/home/mparedes/main-metadata.git/metadata-wrangling/cihm/marc_xml_ia/?select=*;recurse=no')/*">
             <xsl:value-of select="normalize-space(//*:controlfield[@tag='001'])"/>        
             <xsl:text>&#09;</xsl:text>
             <xsl:call-template name="catkey"/>        
@@ -33,7 +33,7 @@
  
     
     <xsl:template name="catkey">
-        <xsl:variable name="filename" select="concat('/home/mparedes/main-metadata.git/metadata-wrangling/alberta_government_publications/marc_xml_ual/',//*:controlfield[@tag='001'][1],'_marc.xml')"/>
+        <xsl:variable name="filename" select="concat('/home/mparedes/main-metadata.git/metadata-wrangling/cihm/marc_xml_ual/',//*:controlfield[@tag='001'][1],'_marc.xml')"/>
         <xsl:value-of select="normalize-space(document($filename)//*:controlfield[@tag='001'])"/>
     </xsl:template>
     
