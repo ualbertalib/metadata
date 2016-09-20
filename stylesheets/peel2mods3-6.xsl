@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
-     xmlns:mods="http://www.loc.gov/mods/v3"> 
+     xmlns:mods="http://www.loc.gov/mods/v3"
+     xmlns:peel="http://peel.library.ualberta.ca/mods-extensions"> 
     
     <xsl:output media-type="xml" indent="yes"/>
     <xsl:strip-space elements="*"/>
       
      <!-- Identity transform --> 
      <xsl:template match="@* | node()"> 
-         <xsl:copy> 
+         <xsl:copy copy-namespaces="no"> 
              <xsl:apply-templates select="@* | node()"/> 
          </xsl:copy> 
      </xsl:template> 
@@ -88,9 +89,50 @@
    </xsl:template>
     
     
-   <!-- Empty elements -->
+   <!-- Remove -->
     
     <xsl:template match="*[not(@*|*|comment()|processing-instruction()) and normalize-space()='']"/>
-    <xsl:template match="*:part/*:detail[normalize-space()='']"/>
+    <xsl:template match="//*:part/*:detail[normalize-space()='']"/>
+    <xsl:template match="//*[@peel:qualifier]">
+        <xsl:element name="{local-name()}" namespace="http://www.loc.gov/mods/v3">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+    
+    <!-- Ordering -->
+    
+    <xsl:template match="//*:place/@*:qualifier"/>
+    <xsl:template match="//*:place[@*:qualifier]/*:placeTerm">
+        <xsl:copy copy-namespaces="no">
+            <xsl:attribute name="script">
+                <xsl:value-of select="../../*:place/@*:qualifier"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    <xsl:template match="//*:location/*:url/@access[matches(.,'\d')]">
+        <xsl:attribute name="access">
+            <xsl:value-of select="replace(.,'([a-z\s]+)\d+','$1')"/>
+        </xsl:attribute>
+        <xsl:attribute name="displayLabel">
+            <xsl:value-of select="replace(.,'[a-z\s]+(\d+)','$1')"/>
+        </xsl:attribute>
+    </xsl:template>
+    
+    
+<!-- @ID
+1139 Q (1 title) (relateditem.\d*, t\d*)
+142 PCX (\d*)
+858 PC (\d*, verso, PC013011, PC014592, PC014593, PC014594)
+2641 P (t\d*, relateditem.\d*, host)
+12726 N (t\d* and relateditem.\d*)
+ -->
+    <xsl:template match="//*:relatedItem/@ID[matches(.,'^\d+$')]">
+        <xsl:attribute name="ID">
+            <xsl:value-of select="concat('t',.)"/>
+        </xsl:attribute>
+    </xsl:template>
     
  </xsl:stylesheet>
