@@ -1,41 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:marcrel="http://id.loc.gov/vocabulary/relators"
-    xmlns:marc="http://www.loc.gov/MARC21/slim"
-    version="3.0">
-    
-    <xsl:output method="text" encoding="UTF-8" indent="no"/>
-    <xsl:strip-space elements="yes"/>
-    
-    <xsl:template match="*">        
-        <xsl:for-each select="collection('/home/mparedes/main-metadata.git/metadata-wrangling/cihm/marc_xml_ia/?select=*;recurse=yes')/*">
-            <xsl:value-of select="marc:controlfield[@tag='001']"/>        
-            <xsl:text>&#09;</xsl:text>
-            <xsl:call-template name="catkey"/>        
-            <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="normalize-space(marc:datafield[@tag='245'])"/>        
-            <xsl:text>&#09;</xsl:text>
-            <xsl:call-template name="subjects"/>        
-            <xsl:text>&#xa;</xsl:text>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-    <xsl:template name="subjects">
-        <xsl:for-each select="marc:datafield[@tag[matches(.,'6\d\d')]]">
-            <xsl:for-each select="marc:subfield">
-                <xsl:value-of select="concat('--',normalize-space())"/>
-            </xsl:for-each>
-            <xsl:text>;</xsl:text>
-        </xsl:for-each>
-    </xsl:template>
- 
-    
-    <xsl:template name="catkey">
-        <xsl:variable name="filename" select="concat('/home/mparedes/main-metadata.git/metadata-wrangling/cihm/marc_xml_ual/',//marc:controlfield[@tag='001'],'_marc.xml')"/>
-        <xsl:value-of select="document($filename)//marc:controlfield[@tag='001']"/>
-    </xsl:template>
-    
-    
-</xsl:stylesheet>
+https://archive.org/download/cihm_02790/cihm_02790_archive_marc.xml
+https://archive.org/download/cihm_04127/cihm_04127_archive_marc.xml
+https://archive.org/download/cihm_06762/cihm_06762_archive_marc.xml
+https://archive.org/download/cihm_13827/cihm_13827_archive_marc.xml
+https://archive.org/download/cihm_32855/cihm_32855_archive_marc.xml
+https://archive.org/download/cihm_34503/cihm_34503_archive_marc.xml
+https://archive.org/download/cihm_55097/cihm_55097_archive_marc.xml
+https://archive.org/download/cihm_55816/cihm_55816_archive_marc.xml
+https://archive.org/download/cihm_57447/cihm_57447_archive_marc.xml
+https://archive.org/download/cihm_75861/cihm_75861_archive_marc.xml
+
+https://archive.org/download/cihm_33337/cihm_33337_archive_marc.xml
+https://archive.org/download/cihm_71339/cihm_71339_archive_marc.xml
+https://archive.org/download/cihm_23923/cihm_23923_archive_marc.xml
+https://archive.org/download/cihm_06364/cihm_06364_archive_marc.xml
+https://archive.org/download/cihm_10883/cihm_10883_archive_marc.xml
+https://archive.org/download/cihm_06644/cihm_06644_archive_marc.xml
+
+
+https://archive.org/download/cihm_06563/cihm_06563_marc.xml
+https://archive.org/download/cihm_10035/cihm_10035_marc.xml
+https://archive.org/download/cihm_29051/cihm_29051_marc.xml
+
+https://archive.org/download/cihm_29051/cihm_82067_marc.xml
+

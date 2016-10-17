@@ -88,20 +88,31 @@
        <xsl:apply-templates select="./node()|./@*"></xsl:apply-templates>
    </xsl:template>
     
+    <xsl:template match="//*:mods/*:url">
+        <xsl:element name="location" namespace="http://www.loc.gov/mods/v3">
+            <xsl:element name="{local-name()}" namespace="http://www.loc.gov/mods/v3">
+                <xsl:apply-templates select="@* | node()"/>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+    
     
    <!-- Remove -->
     
-    <xsl:template match="*[not(@*|*|comment()|processing-instruction()) and normalize-space()='']"/>
+    <xsl:template match="//*[not(@*|*|comment()|processing-instruction()) and normalize-space()='']"/>
+    
     <xsl:template match="//*:part/*:detail[normalize-space()='']"/>
+    
+    <!-- Remove extensions namespace -->
     <xsl:template match="//*[@peel:qualifier]">
         <xsl:element name="{local-name()}" namespace="http://www.loc.gov/mods/v3">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
     
-    <!-- Ordering -->
+    <!-- Relocate peel attributes -->
+    <xsl:template match="//*:place/@peel:qualifier"/>
     
-    <xsl:template match="//*:place/@*:qualifier"/>
     <xsl:template match="//*:place[@*:qualifier]/*:placeTerm">
         <xsl:copy copy-namespaces="no">
             <xsl:attribute name="script">
@@ -111,7 +122,11 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="//*:publisher/@peel:qualifier">
+        <xsl:attribute name="supplied">yes</xsl:attribute>
+    </xsl:template>
     
+     <!-- Ordering -->   
     <xsl:template match="//*:location/*:url/@access[matches(.,'\d')]">
         <xsl:attribute name="access">
             <xsl:value-of select="replace(.,'([a-z\s]+)\d+','$1')"/>
@@ -121,7 +136,7 @@
         </xsl:attribute>
     </xsl:template>
     
-    
+
 <!-- @ID
 1139 Q (1 title) (relateditem.\d*, t\d*)
 142 PCX (\d*)
@@ -131,7 +146,7 @@
  -->
     <xsl:template match="//*:relatedItem/@ID[matches(.,'^\d+$')]">
         <xsl:attribute name="ID">
-            <xsl:value-of select="concat('t',.)"/>
+            <xsl:value-of select="concat('p',.)"/>
         </xsl:attribute>
     </xsl:template>
     
