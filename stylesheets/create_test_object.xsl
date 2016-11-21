@@ -39,12 +39,12 @@
         createdDate - //foxml:property[@NAME="info:fedora/fedora-system:def/model#createdDate"]/@VALUE
         lastModifiedDate - //foxml:property[@NAME="info:fedora/fedora-system:def/model#lastModifiedDate"]/@VALUE
         embargoedDate -//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//*:embargoedDate
+        workflowDate -//*:datastream[@ID='RELS-EXT']/*:datastreamVersion[last()]//*:workflowDate
+        audit dates - audit:date
+        all datastream created dates with sequential dates - //datastreamVersion/@CREATED
          -->
-    <!-- change state - //foxml:property[@NAME="info:fedora/fedora-system:def/model#state"]/@VALUE -->
+    <!-- change state to test visibility - //foxml:property[@NAME="info:fedora/fedora-system:def/model#state"]/@VALUE -->
     <!-- change PID and references -->
-    
-    
-    
-    
+    <!-- change collection memberships -->
     
 </xsl:stylesheet>

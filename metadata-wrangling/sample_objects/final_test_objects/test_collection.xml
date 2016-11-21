@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:dcterms="http://purl.org/dc/terms/"
+                     VERSION="1.1"
+                     PID="uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269"
+                     xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+    <foxml:objectProperties>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#label"
+                      VALUE="Theses and Dissertations Spring 2009 to present"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="admin"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#createdDate"
+                      VALUE="1888-11-11T00:00:00.000Z"/>
+        <foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate"
+                      VALUE="2000-01-01T00:00:00.000Z"/>
+    </foxml:objectProperties>    
+    <foxml:datastream ID="AUDIT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+        <foxml:datastreamVersion ID="AUDIT.0"
+                               LABEL="Audit Trail for this object"
+                               CREATED="1888-11-11T00:00:00.000Z"
+                               MIMETYPE="text/xml"
+                               FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit">
+            <foxml:xmlContent>
+                <audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+                    <audit:record ID="AUDREC1">
+                        <audit:process type="Fedora API-M"/>
+                        <audit:action>ingest</audit:action>
+                        <audit:componentID/>
+                        <audit:responsibility>fedoraAdmin</audit:responsibility>
+                        <audit:date>1888-11-11T00:00:00.000Z</audit:date>
+                        <audit:justification>ERA: Action[/action/submit] Username[sfarnel] WorkflowState[Submit] - Submit</audit:justification>
+                    </audit:record>
+                    <audit:record ID="AUDREC4">
+                        <audit:process type="Fedora API-M"/>
+                        <audit:action>modifyDatastreamByValue</audit:action>
+                        <audit:componentID>RELS-EXT</audit:componentID>
+                        <audit:responsibility>fedoraAdmin</audit:responsibility>
+                        <audit:date>2000-01-01T00:00:00.000Z</audit:date>
+                        <audit:justification>fix setSpec</audit:justification>
+                    </audit:record>
+                </audit:auditTrail>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="DC.0"
+                               LABEL="Dublin Core Record for this object"
+                               CREATED="1888-11-11T00:00:00.000Z"
+                               MIMETYPE="text/xml"
+                               FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                               SIZE="442">
+            <foxml:xmlContent>
+                <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                       xmlns:dc="http://purl.org/dc/elements/1.1/"
+                       xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                    <dc:title>Thesis and Dissertations</dc:title>
+                    <dc:identifier>uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269</dc:identifier>
+                </oai_dc:dc>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+        <foxml:datastreamVersion ID="DC.11"
+                               LABEL="Theses and Dissertations Spring 2009 to present"
+                               CREATED="2000-01-01T00:00:00.000Z"
+                               MIMETYPE="text/xml"
+                               FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <foxml:xmlContent>
+                <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                       xmlns:dc="http://purl.org/dc/elements/1.1/"
+                       xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                    <dc:identifier>uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269</dc:identifier>
+                    <dc:identifier>http://hdl.handle.net/10402/era.14214</dc:identifier>
+                    <dc:title>Theses and Dissertations Spring 2009 to present</dc:title>
+                    <dc:creator>Administrator admin</dc:creator>
+                    <dc:description>This collection contains theses and dissertations of graduate
+                        students of the University of Alberta submitted since Spring 2009. Documents
+                        are added to this collection through the review process required for
+                        convocation for current students.</dc:description>
+                </oai_dc:dc>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+    <foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="RELS-EXT.0"
+                               LABEL="Object Relationships"
+                               CREATED="1888-11-11T00:00:00.000Z"
+                               MIMETYPE="text/xml"
+                               SIZE="244">
+            <foxml:xmlContent>
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:rel="info:fedora/fedora-system:def/relations-external#">
+                    <rdf:Description rdf:about="info:fedora/uuid:testobject005"/>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>        
+        <foxml:datastreamVersion ID="RELS-EXT.3"
+                               LABEL="Object Relationships"
+                               CREATED="2000-01-01T00:00:00.000Z"
+                               MIMETYPE="text/xml"
+                               SIZE="1227">
+            <foxml:xmlContent>
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:Description rdf:about="info:fedora/uuid:testobject005">
+                        <isMemberOf xmlns="info:fedora/fedora-system:def/relations-external#"
+                              rdf:resource="info:fedora/uuid:39331f1f-769d-4c2a-a103-416c285d01fc"/>
+                        <hasModel xmlns="info:fedora/fedora-system:def/model#"
+                            rdf:resource="info:fedora/ir:COLLECTION"/>
+                        <formName xmlns="http://era.library.ualberta.ca/schema/definitions.xsd#">thesis</formName>
+                        <isPartOf xmlns="info:fedora/fedora-system:def/relations-external#"
+                            rdf:resource="info:fedora/ir:MANUAL_APPROVAL"/>
+                        <proquestUpload xmlns="http://era.library.ualberta.ca/schema/definitions.xsd#">true</proquestUpload>
+                        <setSpec xmlns="http://www.openarchives.org/OAI/2.0/">uuid:7af76c0f-61d6-4ebc-a2aa-79c125480269</setSpec>
+                        <setName xmlns="http://www.openarchives.org/OAI/2.0/">Theses and Dissertations Spring 2009 to present</setName>
+                    </rdf:Description>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+   <foxml:datastream CONTROL_GROUP="X" ID="DCQ" STATE="A" VERSIONABLE="true">
+      <foxml:datastreamVersion ID="DCQ.0" LABEL="Item Metadata" MIMETYPE="text/xml">
+         <foxml:xmlContent>
+            <dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:ualdate="http://terms.library.ualberta.ca/date/"
+                xmlns:ualid="http://terms.library.ualberta.ca/id/"
+                xmlns:ualrole="http://terms.library.ualberta.ca/role/"
+                xmlns:ualthesis="http://terms.library.ualberta.ca/thesis/"
+                xmlns:vivo="http://vivoweb.org/ontology/core#"
+                xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
+                xmlns:bibo="http://purl.org/ontology/bibo/">
+                    <ualid:fedora3uuid xsi:type="string">fedora3uuid1</ualid:fedora3uuid>
+                    <ualid:fedora3handle xsi:type="anyURI">fedora3handle1</ualid:fedora3handle>
+                    <dcterms:title>title1</dcterms:title>
+                    <dcterms:creator>creator1</dcterms:creator>
+                    <dcterms:creator>creator2</dcterms:creator>
+                    <dcterms:creator>creator3</dcterms:creator>
+                    <dcterms:description>description1</dcterms:description>
+                </dc>
+         </foxml:xmlContent>
+      </foxml:datastreamVersion>
+   </foxml:datastream>
+</foxml:digitalObject>
