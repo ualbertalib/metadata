@@ -1,0 +1,38 @@
+<div style="margin-left:20px; margin-right:20px; text-align:center; font: bold 9pt Arial, Helvetica, sans-serif;">Unable to get reply from Open Library to request: /query.json?type=/type/edition&ocaid=cihm_75347</div>
+      </div><!--/.container-->
+    </div><!--/#wrap-->
+    
+    <!-- Timing ...
+     rendered on: ia600308.us.archive.org
+ seconds diff sec         message   stack(file:line:function)
+=========================================================
+  0.0000   0.0000   petabox start   var/cache/petabox/petabox/www/datanode/fetchmarc.php:1:require
+                                             |common/ia:55:require_once
+                                             |setup.php:314:log
+  0.1294   0.1294        bug dump   var/cache/petabox/petabox/www/datanode/fetchmarc.php:88:OLquery
+                                             |common/SetupMetaXML.inc:324:OpenLibraryAPI
+                                             |SetupMetaXML.inc:334:fatal
+                                             |setup.php:80:footer
+                                             |setup.php:152:footer
+                                             |Nav.inc:1624:dump
+                                             |Bug.inc:120:log
+    -->
+    <script type="text/javascript">
+if (window.archive_analytics) {
+  var vs = window.archive_analytics.get_data_packets();
+  for (var i in vs) {
+    vs[i]['cache_bust']=Math.random();
+    vs[i]['server_ms']=129;
+    vs[i]['server_name']="ia600308.us.archive.org";
+    vs[i]['service']='ao_2';
+      }
+
+  if ($(".more_search").size()>0) {
+    window.archive_analytics.send_scroll_fetch_base_event();
+  }
+}
+</script>
+      </div>
+  </body>
+</html>
+    
