@@ -9,7 +9,7 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <xsl:text>Field/subfield&#09;Indicators&#09;Content&#09;Full marc&#09;Resource URL&#09;Bib level&#09;Content type&#09;Occurrence&#xa;</xsl:text>
+        <xsl:text>Field/subfield&#09;Indicators&#09;Content&#09;Full marc&#09;Resource URL&#09;Type of record&#09;Bib level&#09;Content type&#xa;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
 
@@ -30,11 +30,6 @@
                     <xsl:value-of select="concat(../@tag,'$',./@code)"/>                    
                 </xsl:when>
             </xsl:choose>
-            <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="replace(concat(../@ind1,../@ind2),'\s','-')"/>
-            <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="./text()[normalize-space()]"/>
-            <xsl:text>&#09;</xsl:text>
             <xsl:call-template name="context"/>
         </xsl:for-each>
     </xsl:template>
@@ -45,6 +40,7 @@
         <xsl:variable name="id">
             <xsl:value-of select="ancestor-or-self::*:record/*:controlfield[@tag='001']"/>
         </xsl:variable>
+        
         <xsl:variable name="typerec">
             <xsl:value-of select="substring(ancestor-or-self::*:record/*:leader,6,1)"/>
         </xsl:variable>
@@ -59,6 +55,12 @@
                 <xsl:value-of select="concat(ancestor-or-self::*:datafield/@tag,'$',ancestor-or-self::*:subfield/@code)"/>
             </xsl:if>
         </xsl:variable>-->
+        
+        <xsl:text>&#09;</xsl:text>
+        <xsl:value-of select="replace(concat(../@ind1,../@ind2),'\s','-')"/>
+        <xsl:text>&#09;</xsl:text>
+        <xsl:value-of select="./text()[normalize-space()]"/>
+        <xsl:text>&#09;</xsl:text>
         
         <!-- Link to full marc record -->
         <xsl:value-of select="concat('https://archive.org/download/',$id,'/',$id,'_marc.xml')"/>
@@ -81,11 +83,11 @@
         
         <!-- Content type -->
         <xsl:value-of select="//*:datafield[@tag='336']/*:subfield[@code='a']"/>
-        <xsl:text>&#09;</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
         
         <!-- Ocurrence -->
         <!--<xsl:value-of select="count(preceding-sibling::*[last() and local-name()=$namesake])+1+count(following-sibling::*[last() and local-name()=$namesake])"/>-->        
-        <xsl:text>&#xa;</xsl:text>
+        <!--<xsl:text>&#xa;</xsl:text>-->
     </xsl:template>
     
     
