@@ -9,15 +9,13 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <xsl:text>Field/subfield&#09;Indicators&#09;Content&#09;Full marc&#09;Resource URL&#09;Type of record&#09;Bib level&#09;Content type&#xa;</xsl:text>
+        <xsl:text>Field/subfield&#09;Indicators&#09;Content&#09;Full marc&#09;Resource URL&#09;ID&#09;Collection&#09;Type of record&#09;Bib level&#09;Content type&#xa;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:variable name="docs"
-        select="collection('../metadata-wrangling/internet_archive_coll?select=*archive_marc.xml;recurse=yes')"/>
+    <xsl:variable name="docs"     select="collection('../metadata-wrangling/test/albertagovernmentpublications/marc?select=*marc.xml;recurse=yes')"/>
 
-
-    <xsl:template match="*">
+     <xsl:template match="*">
         <xsl:for-each select="$docs//*:leader | $docs//*:controlfield | $docs//*:subfield">
             <xsl:choose>
                 <xsl:when test="self::*:leader">
@@ -40,12 +38,20 @@
         <xsl:variable name="id">
             <xsl:value-of select="ancestor-or-self::*:record/*:controlfield[@tag='001']"/>
         </xsl:variable>
-        
         <xsl:variable name="typerec">
             <xsl:value-of select="substring(ancestor-or-self::*:record/*:leader,6,1)"/>
         </xsl:variable>
         <xsl:variable name="biblevel">
             <xsl:value-of select="substring(ancestor-or-self::*:record/*:leader,7,1)"/>
+        </xsl:variable>
+        <xsl:variable name="file_id">
+            <xsl:value-of select="subsequence(reverse(tokenize(base-uri(),'/')), 1, 1)"/>
+        </xsl:variable>
+        <xsl:variable name="file_ia_name">
+            <xsl:value-of select="replace($file_id, '_marc.xml', '')"/>
+        </xsl:variable>
+        <xsl:variable name="Coll">
+            <xsl:value-of select="subsequence(reverse(tokenize(base-uri(),'/')), 3, 1)"/>
         </xsl:variable>
         <!--<xsl:variable name="namesake">
             <xsl:if test="ancestor-or-self::*:controlfield">
@@ -63,11 +69,20 @@
         <xsl:text>&#09;</xsl:text>
         
         <!-- Link to full marc record -->
-        <xsl:value-of select="concat('https://archive.org/download/',$id,'/',$id,'_marc.xml')"/>
+        <xsl:value-of select="concat('https://archive.org/download/',$file_ia_name,'/',$file_id)"/>
         <xsl:text>&#09;</xsl:text>
         
         <!-- Link to IA landing page -->
-        <xsl:value-of select="ancestor-or-self::*:record/*:datafield[@tag='856' and @ind2='1']/*:subfield[@code='u']"/>
+       <!-- <xsl:value-of select="ancestor-or-self::*:record/*:datafield[@tag='856' and @ind2='1']/*:subfield[@code='u']"/> -->
+        <xsl:value-of select="concat('https://archive.org/details/',$file_ia_name)"/>
+        <xsl:text>&#09;</xsl:text>
+        
+        <!-- IA Identifier -->
+        <xsl:value-of select="$file_ia_name"/>
+        <xsl:text>&#09;</xsl:text>
+        
+        <!-- UAL collection: use this variable to populate only if you have the same depth of hierarchy for a collections in the file inventory; if not upload your file inventory to OpenRefine and use grel:cross() -->
+        <xsl:value-of select="$Coll"/>
         <xsl:text>&#09;</xsl:text>
         
         <!-- Link to Open Library -->
