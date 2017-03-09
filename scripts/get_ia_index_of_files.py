@@ -34,7 +34,7 @@ with open('ualbertawiedrick_temp.json', 'r') as file_new:
 		itemid = lines
 		itemid = itemid.strip()
 		item = internetarchive.get_item(itemid)
-		marc = item.get_file(itemid + '_files.xml')
+		marc = item.get_file(itemid + '_marc.xml')
 		marc.download()
 		print "Downloading " + itemid + " ..."
 		time.sleep(0)
