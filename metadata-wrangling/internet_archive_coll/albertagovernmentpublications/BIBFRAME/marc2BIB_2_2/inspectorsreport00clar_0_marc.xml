@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/3126059#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>3126059</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-07-15</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEED</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3126059#Agent100-8">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Clark, Robert C.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Clark, Robert C.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aClark, Robert C.</bflc:name00MarcKey>
+                  <rdfs:label>Clark, Robert C.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aInspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark.</bflc:title40MarcKey>
+            <rdfs:label>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark.</rdfs:label>
+            <bflc:titleSortKey>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark.</bflc:titleSortKey>
+            <bf:mainTitle>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election // Robert C. Clark</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Work rdf:about="http://example.org/3126059#Work610-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#NameTitle"/>
+            <madsrdf:authoritativeLabel>Alberta. Local Authorities Election Act.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/3126059#Agent610-21">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                        <bflc:name10MatchKey>Alberta.</bflc:name10MatchKey>
+                        <bflc:name10MarcKey>61010$aAlberta.$tLocal Authorities Election Act.</bflc:name10MarcKey>
+                        <rdfs:label>Alberta.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Local Authorities Election Act.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title10MatchKey>Local Authorities Election Act.</bflc:title10MatchKey>
+                  <bflc:title10MarcKey>61010$aAlberta.$tLocal Authorities Election Act.</bflc:title10MarcKey>
+                  <rdfs:label>Local Authorities Election Act.</rdfs:label>
+                  <bflc:titleSortKey>Local Authorities Election Act.</bflc:titleSortKey>
+                  <bf:mainTitle>Local Authorities Election Act</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3126059#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Local elections--Alberta--Calgary.</rdfs:label>
+            <madsrdf:authoritativeLabel>Local elections--Alberta--Calgary.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Local elections</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Calgary</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3126059#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Election law--Alberta--Calgary.</rdfs:label>
+            <madsrdf:authoritativeLabel>Election law--Alberta--Calgary.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Election law</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Calgary</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3126059#Agent710-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Municipal Affairs.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Municipal Affairs.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Municipal Affairs.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/3126059#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/3126059#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2005</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/  "/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn464056930</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election 2005</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election 2005</rdfs:label>
+            <bflc:titleSortKey>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election 2005</bflc:titleSortKey>
+            <bf:mainTitle>Inspector's report on the October 18, 2004 City of Calgary Ward 10 election 2005</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Robert C. Clark</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>Local Authorities Election Act</rdfs:label>
+            <bflc:titleSortKey>Local Authorities Election Act</bflc:titleSortKey>
+            <bf:mainTitle>Local Authorities Election Act</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>S.l.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:date>2005</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[S.l. : 2005.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>63 leaves</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Submitted to Hon. Rob Renner, Mimister of Municipal Affairs.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"June 22, 2005".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/3126059#Work"/>
+   </bf:Instance>
+</rdf:RDF>

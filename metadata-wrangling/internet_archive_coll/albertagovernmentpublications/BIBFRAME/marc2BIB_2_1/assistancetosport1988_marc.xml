@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/613220#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>613220</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1989-04-13</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>354.71230085/8</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <rdfs:label>Profile and application for financial assistance to sport associations.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Profile and application for financial assistance to sport associations.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aProfile and application for financial assistance to sport associations.</bflc:title40MarcKey>
+            <rdfs:label>Profile and application for financial assistance to sport associations.</rdfs:label>
+            <bflc:titleSortKey>Profile and application for financial assistance to sport associations.</bflc:titleSortKey>
+            <bf:mainTitle>Profile and application for financial assistance to sport associations</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/613220#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sports and state--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sports and state--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sports and state</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/613220#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sports--Alberta--Finance--Forms--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sports--Alberta--Finance--Forms--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sports</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Finance</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Forms</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/613220#Agent710-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Recreation Development Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bRecreation Development Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Recreation Development Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/613220#Agent710-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Sport Council.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71020$aAlberta Sport Council.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Sport Council.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/613220#Agent710-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Recreation and Parks.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Recreation and Parks.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Recreation and Parks.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/613220#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/613220#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1979/9999</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 87080545</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0833-5508</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm16386377</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"/>
+            <bf:source>
+               <bf:Source>
+                  <rdf:value>issnkey</rdf:value>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>Profile appl. financ. assist. sport. assoc.</rdfs:label>
+            <bflc:titleSortKey>Profile appl. financ. assist. sport. assoc.</bflc:titleSortKey>
+            <bf:mainTitle>Profile appl. financ. assist. sport. assoc.</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>Profile and application for financial assistance to sport associations</rdfs:label>
+            <bflc:titleSortKey>Profile and application for financial assistance to sport associations</bflc:titleSortKey>
+            <bf:mainTitle>Profile and application for financial assistance to sport associations</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Profile and application for financial assistance to sport associations 1988</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Profile and application for financial assistance to sport associations 1988</rdfs:label>
+            <bflc:titleSortKey>Profile and application for financial assistance to sport associations 1988</bflc:titleSortKey>
+            <bf:mainTitle>Profile and application for financial assistance to sport associations 1988</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Recreation and Parks</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1979?]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Recreation and Parks, [1979?]-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>forms</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>30 cm.</bf:dimensions>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: 1985.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Co-published by: Alberta Sport Council.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Prepared by Recreation Development Division.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/613220#Work"/>
+   </bf:Instance>
+</rdf:RDF>

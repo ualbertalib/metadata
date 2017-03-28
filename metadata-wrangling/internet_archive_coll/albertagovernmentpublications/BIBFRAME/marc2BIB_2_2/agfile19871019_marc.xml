@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6502832#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6502832</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-05-08T  :  :  </bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1986-10-23</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>S135</bf:classificationPortion>
+            <bf:itemPortion>.A34</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Ag file./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Ag file./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAg file./</bflc:title40MarcKey>
+            <rdfs:label>Ag file./</rdfs:label>
+            <bflc:titleSortKey>Ag file./</bflc:titleSortKey>
+            <bf:mainTitle>Ag file</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6502832#Agent610-21">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Alberta Agriculture.--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Alberta Agriculture.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bAlberta Agriculture.$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Alberta Agriculture.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6502832#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Agriculture--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Agriculture--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Agriculture</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6502832#Agent700-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Elzinga, Peter.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>70012$aElzinga, Peter.</bflc:name00MarcKey>
+                  <rdfs:label>Elzinga, Peter.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6502832#Agent710-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Agriculture.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Agriculture.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Agriculture.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:continues>
+         <bf:Work rdf:about="http://example.org/6502832#Work780-25">
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/6502832#Instance780-25">
+                  <bf:provisionActivityStatement>[Edmonton : Alberta Agriculture 198-]-</bf:provisionActivityStatement>
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Agriculture is my business.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/6502832#Work780-25"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continues>
+      <bf:hasInstance rdf:resource="http://example.org/6502832#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6502832#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">198X/1988</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>completely irregular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn871699107</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Ag file</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Ag file</rdfs:label>
+            <bflc:titleSortKey>Ag file</bflc:titleSortKey>
+            <bf:mainTitle>Ag file</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Ag.File</rdfs:label>
+            <bflc:titleSortKey>Ag.File</bflc:titleSortKey>
+            <bf:mainTitle>Ag.File</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>AgFile</rdfs:label>
+            <bflc:titleSortKey>AgFile</bflc:titleSortKey>
+            <bf:mainTitle>AgFile</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Ministry of Agriculture</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>198-]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton : Ministry of Agriculture, 198-]-</bf:provisionActivityStatement>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Irregular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Ceased in 1988?</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Contains material prepared specially and exclusively for Alberta weekly newspapers"--caption.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: Article for release Aug. 11, 1986.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6502832#Work"/>
+   </bf:Instance>
+</rdf:RDF>

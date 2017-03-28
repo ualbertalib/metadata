@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/2726157#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>2726157</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1994-07-28</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEEN</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TD 195 E25*</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Integrated resource management newsletter.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Integrated resource management newsletter.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aIntegrated resource management newsletter.</bflc:title40MarcKey>
+            <rdfs:label>Integrated resource management newsletter.</rdfs:label>
+            <bflc:titleSortKey>Integrated resource management newsletter.</bflc:titleSortKey>
+            <bf:mainTitle>Integrated resource management newsletter</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2726157#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Natural resources--Alberta--Management--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Natural resources--Alberta--Management--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Natural resources</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Management</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2726157#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sustainable development--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sustainable development--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sustainable development</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2726157#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Regional planning--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Regional planning--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Regional planning</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2726157#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Conservation of natural resources--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Conservation of natural resources--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Conservation of natural resources</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2726157#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Agriculture, Food, and Rural Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Agriculture, Food, and Rural Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Agriculture, Food, and Rural Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2726157#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Resource Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Resource Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Resource Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2726157#Agent710-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Economic Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Economic Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Economic Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2726157#Agent710-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Environment.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Environment.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Environment.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/2726157#Work785-30">
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/2726157#Instance785-30">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>IRM connections.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/2726157#Work785-30"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/2726157#Work830-31">
+            <rdfs:label>Publication (Alberta. Alberta Environment) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Environment) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Environment) ;$vno. I/871.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Environment) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Environment) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Environment)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. I/871</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/2726157#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/2726157#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2001/2001</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn463806081</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Integrated resource management newsletter 2001</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Integrated resource management newsletter 2001</rdfs:label>
+            <bflc:titleSortKey>Integrated resource management newsletter 2001</bflc:titleSortKey>
+            <bf:mainTitle>Integrated resource management newsletter 2001</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>IRM newsletter</rdfs:label>
+            <bflc:titleSortKey>IRM newsletter</bflc:titleSortKey>
+            <bf:mainTitle>IRM newsletter</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>S.l.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environment</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2001</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[S.l. : Alberta Environment, 2001]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Pub. No.</bf:seriesStatement>
+      <bf:seriesEnumeration>I/871</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Supplied title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"While IRM applies across all of government, it primarily involves the following four departments: Alberta Agriculture, Food and Rural Development; Alberta Resource Development; Alberta Economic Development; Alberta Environment" -- p.1 of vol.1, issue 1.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/2726157#Work"/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/649680#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>649680</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1989-11-07</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>m.c.</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/lc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/sta">
+            <rdfs:label>statistics</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>LA418.A4</bf:classificationPortion>
+            <bf:itemPortion>A43a</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>370/.97123</bf:classificationPortion>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/649680#Agent110-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Education.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bAlberta Education.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Alberta Education.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Alberta Education.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Annual review // Alberta Education.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Annual review // Alberta Education.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAnnual review // Alberta Education.</bflc:title40MarcKey>
+            <rdfs:label>Annual review // Alberta Education.</rdfs:label>
+            <bflc:titleSortKey>Annual review // Alberta Education.</bflc:titleSortKey>
+            <bf:mainTitle>Annual review // Alberta Education</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/649680#Agent610-33">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Alberta Education--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Alberta Education</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bAlberta Education$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Alberta Education</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/649680#Topic650-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Education--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Education--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/649680#Topic650-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Education--Alberta--Statistics--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Education--Alberta--Statistics--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Statistics</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:continues>
+         <bf:Work rdf:about="http://example.org/649680#Work780-36">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Dept. of Education.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/649680#Instance780-36">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>The ... annual report of the Alberta Department of Education</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0319-0628</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/649680#Work780-36"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continues>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/649680#Work785-37">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Alberta Education.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/649680#Instance785-37">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>The ... annual report</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0319-0609</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/649680#Work785-37"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasInstance rdf:resource="http://example.org/649680#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/649680#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1973/1973</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   74647096 //r83</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0319-0617</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm01795659</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>Annual review - Alberta Education</rdfs:label>
+            <bflc:titleSortKey>Annual review - Alberta Education</bflc:titleSortKey>
+            <bf:mainTitle>Annual review - Alberta Education</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Annual review / Alberta Education 1973</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Annual review / Alberta Education 1973</rdfs:label>
+            <bflc:titleSortKey>Annual review / Alberta Education 1973</bflc:titleSortKey>
+            <bf:mainTitle>Annual review / Alberta Education 1973</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Education</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Annual review for Alberta Education</rdfs:label>
+            <bflc:titleSortKey>Annual review for Alberta Education</bflc:titleSortKey>
+            <bf:mainTitle>Annual review for Alberta Education</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>The 1973 annual review of the Department of Education</rdfs:label>
+            <bflc:titleSortKey>The 1973 annual review of the Department of Education</bflc:titleSortKey>
+            <bf:mainTitle>The 1973 annual review of the Department of Education</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>The sixty-eighth annual report</rdfs:label>
+            <bflc:titleSortKey>The sixty-eighth annual report</bflc:titleSortKey>
+            <bf:mainTitle>The sixty-eighth annual report</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Government of Alberta</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1974</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : [Government of Alberta], 1974.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Some copies published without photographs but include "Letter of Transmission" and are titled "The sixty-eight annual report"; copies titled "Annual review" include photographs but no "Letter of Transmission".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Reporting period: July 1, 1972-June 30, 1973.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Accompanied by supplement.</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:instanceOf rdf:resource="http://example.org/649680#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/649680#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>LA418.A4 A43a</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/649680#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

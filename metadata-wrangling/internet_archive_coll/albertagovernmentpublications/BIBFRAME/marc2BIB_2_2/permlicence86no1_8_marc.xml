@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6372511#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6372511</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-08-14T  :  :  </bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1984-05-31</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>354.71230082/32</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6372511#Agent110-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Energy Resources Conservation Board.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>11010$aAlberta.$bEnergy Resources Conservation Board.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Energy Resources Conservation Board.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Energy Resources Conservation Board.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Permit and licence no./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Permit and licence no./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aPermit and licence no./</bflc:title40MarcKey>
+            <rdfs:label>Permit and licence no./</rdfs:label>
+            <bflc:titleSortKey>Permit and licence no./</bflc:titleSortKey>
+            <bf:mainTitle>Permit and licence no</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6372511#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Electric power distribution--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Electric power distribution--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Electric power distribution</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/6372511#Work787-25">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Energy Resources Conservation Board.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/6372511#Instance787-25">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Stipulation no. ... pursuant to permit and licence</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0842-7437</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/6372511#Work787-25"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/6372511#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6372511#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">197X/19XX</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>completely irregular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 84080795</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value> 840807953</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Library and Archives Canada</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm10789909</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Permit and licence no 1986</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Permit and licence no 1986</rdfs:label>
+            <bflc:titleSortKey>Permit and licence no 1986</bflc:titleSortKey>
+            <bf:mainTitle>Permit and licence no 1986</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Calgary</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Province of Alberta, Energy Resources Conservation Board</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>197-?]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Calgary] : Province of Alberta, Energy Resources Conservation Board, [197-?]-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>maps</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: AP 80-60 (Jan. 12, 1981).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued under the Hydro and Electric Energy Act.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Numbering starts at 1 for each year; number is preceeded by a two-letter code representing the name of the licencee.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6372511#Work"/>
+   </bf:Instance>
+</rdf:RDF>

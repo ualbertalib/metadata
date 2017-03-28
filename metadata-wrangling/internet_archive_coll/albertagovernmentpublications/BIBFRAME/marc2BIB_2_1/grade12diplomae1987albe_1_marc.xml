@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1761209#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1761209</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-07-30T15:27:03</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-07-30</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>LB 3054</bf:classificationPortion>
+            <bf:itemPortion>C22 A3 gr.12 E54 G74B</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>428</bf:classificationPortion>
+            <bf:edition>12</bf:edition>
+            <bf:edition>abridged</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <rdfs:label>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice).</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice).</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aGrade 12 diploma examination.$pEnglish 33.$nPart B,$pReading (Multiple choice).</bflc:title40MarcKey>
+            <rdfs:label>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice).</rdfs:label>
+            <bflc:titleSortKey>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice).</bflc:titleSortKey>
+            <bf:mainTitle>Grade 12 diploma examination</bf:mainTitle>
+            <bf:partNumber>Part B</bf:partNumber>
+            <bf:partName>English 33</bf:partName>
+            <bf:partName>Reading (Multiple choice)</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1761209#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>English language--Alberta--Examinations, questions, etc.--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>English language--Alberta--Examinations, questions, etc.--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>English language</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Examinations, questions, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1761209#Topic650-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>English literature--Alberta--Examinations, questions, etc.--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>English literature--Alberta--Examinations, questions, etc.--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>English literature</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Examinations, questions, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1761209#Topic650-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Twelfth grade (Education)--Alberta--Examinations--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Twelfth grade (Education)--Alberta--Examinations--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Twelfth grade (Education)</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Examinations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1761209#Topic650-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Examinations--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Examinations--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Examinations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1761209#Agent710-37">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Education.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Education.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Education.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1761209#Agent710-38">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Student Evaluation and Records.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bStudent Evaluation and Records.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Student Evaluation and Records.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1761209#Agent710-39">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Student Evaluation Branch.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bStudent Evaluation Branch.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Student Evaluation Branch.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/1761209#Work785-40">
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/1761209#Instance785-40">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>English language arts 30-2. Part B, Reading. Grade 12 diploma examination.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/1761209#Work785-40"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasInstance rdf:resource="http://example.org/1761209#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1761209#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1984/200X</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/san">
+            <rdfs:label>semiannual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 92081729</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1193-0101</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm26290548</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"/>
+            <bf:source>
+               <bf:Source>
+                  <rdf:value>issnkey</rdf:value>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>Grade 12 diploma exam., Engl. 33 Part B Read. Mult. choice</rdfs:label>
+            <bflc:titleSortKey>Grade 12 diploma exam., Engl. 33 Part B Read. Mult. choice</bflc:titleSortKey>
+            <bf:mainTitle>Grade 12 diploma exam., Engl. 33 Part B Read. Mult. choice</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>Grade 12 diploma examination. English 33, Part B, Reading (Multiple Choice)</rdfs:label>
+            <bflc:titleSortKey>Grade 12 diploma examination. English 33, Part B, Reading (Multiple Choice)</bflc:titleSortKey>
+            <bf:mainTitle>Grade 12 diploma examination. English 33, Part B, Reading (Multiple Choice)</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice) 1987 English 33. Part B, Reading (Multiple choice).</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice) 1987 English 33. Part B, Reading (Multiple choice).</rdfs:label>
+            <bflc:titleSortKey>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice) 1987 English 33. Part B, Reading (Multiple choice).</bflc:titleSortKey>
+            <bf:mainTitle>Grade 12 diploma examination. English 33. Part B, Reading (Multiple choice) 1987</bf:mainTitle>
+            <bf:partNumber>Part B</bf:partNumber>
+            <bf:partName>English 33</bf:partName>
+            <bf:partName>Reading (Multiple choice)</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>English 33. Part B, Reading (Multiple choice).</rdfs:label>
+            <bflc:titleSortKey>English 33. Part B, Reading (Multiple choice).</bflc:titleSortKey>
+            <bf:mainTitle>English 33</bf:mainTitle>
+            <bf:partNumber>Part B</bf:partNumber>
+            <bf:partName>Reading (Multiple choice)</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Grade 12 diploma examination. English 33. Part B, Reading.</rdfs:label>
+            <bflc:titleSortKey>Grade 12 diploma examination. English 33. Part B, Reading.</bflc:titleSortKey>
+            <bf:mainTitle>Grade 12 diploma examination</bf:mainTitle>
+            <bf:partNumber>Part B</bf:partNumber>
+            <bf:partName>English 33</bf:partName>
+            <bf:partName>Reading</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>English 33. Part B, Reading, Grade 12 diploma examination.</rdfs:label>
+            <bflc:titleSortKey>English 33. Part B, Reading, Grade 12 diploma examination.</bflc:titleSortKey>
+            <bf:mainTitle>English 33</bf:mainTitle>
+            <bf:partNumber>Part B</bf:partNumber>
+            <bf:partName>Reading, Grade 12 diploma examination</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Education</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1984]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Education, [1984]-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Semiannual.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:firstIssue>Jan. 1984</bf:firstIssue>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Ceased in 2002 or 2003.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from cover.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Each issue consists of a Questions booklet and a Readings booklet.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued by: Student Evaluation and Records Branch, Jan. 1990-June 1990; Student Evaluation Branch, Jan. 1991-</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1761209#Work"/>
+   </bf:Instance>
+</rdf:RDF>

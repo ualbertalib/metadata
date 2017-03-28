@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/000009316590#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>7</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>000009316590</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-08-09T14:27:42</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-01-16</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>354.71230086/3</bf:classificationPortion>
+            <bf:edition>20</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/000009316590#Agent110-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Recreation and Parks.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bAlberta Recreation and Parks.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Alberta Recreation and Parks.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Alberta Recreation and Parks.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Rap :/ a newsletter for employees of Alberta Recreation and Parks.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Rap :/ a newsletter for employees of Alberta Recreation and Parks.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aRap :/ a newsletter for employees of Alberta Recreation and Parks.</bflc:title40MarcKey>
+            <rdfs:label>Rap :/ a newsletter for employees of Alberta Recreation and Parks.</rdfs:label>
+            <bflc:titleSortKey>Rap :/ a newsletter for employees of Alberta Recreation and Parks.</bflc:titleSortKey>
+            <bf:mainTitle>Rap :/ a newsletter for employees of Alberta Recreation and Parks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance rdf:resource="http://example.org/000009316590#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/000009316590#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986/1992</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/grt">
+            <rdfs:label>quarterly</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 90081233 </rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value> 900812338  </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Library and Archives Canada</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0846-7528</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm21417268 </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm21417268 </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm21417268 </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm21417268 </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"/>
+            <bf:source>
+               <bf:Source>
+                  <rdf:value>issnkey</rdf:value>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>RAP. Alta. Recreat. Parks</rdfs:label>
+            <bflc:titleSortKey>RAP. Alta. Recreat. Parks</bflc:titleSortKey>
+            <bf:mainTitle>RAP. Alta. Recreat. Parks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>RAP. Alberta Recreation and Parks</rdfs:label>
+            <bflc:titleSortKey>RAP. Alberta Recreation and Parks</bflc:titleSortKey>
+            <bf:mainTitle>RAP. Alberta Recreation and Parks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Rap : a newsletter for employees of Alberta Recreation and Parks 1986 a newsletter for employees of Alberta Recreation and Parks.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Rap : a newsletter for employees of Alberta Recreation and Parks 1986 a newsletter for employees of Alberta Recreation and Parks.</rdfs:label>
+            <bflc:titleSortKey>Rap : a newsletter for employees of Alberta Recreation and Parks 1986 a newsletter for employees of Alberta Recreation and Parks.</bflc:titleSortKey>
+            <bf:mainTitle>Rap : a newsletter for employees of Alberta Recreation and Parks 1986</bf:mainTitle>
+            <bf:subtitle>a newsletter for employees of Alberta Recreation and Parks</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Alberta Recreation and Parks</rdfs:label>
+            <bflc:titleSortKey>Alberta Recreation and Parks</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Recreation and Parks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Recreation and Parks</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986?-1992?</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Recreation and Parks, [1986?-1992?]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Quarterly</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Began with 1986 issue?; ceased with Mar. 1992 issue?</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from caption.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: Issue #12 (Dec. 1989).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/000009316590#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/000009316590#Item852-29">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/CaOONL"/>
+            </bf:heldBy>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>ILL: no</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/000009316590#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

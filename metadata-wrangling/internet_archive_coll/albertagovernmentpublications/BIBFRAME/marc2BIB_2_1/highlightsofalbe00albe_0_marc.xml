@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/5333021#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>5333021</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-05-19</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEE</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/sta">
+            <rdfs:label>statistics</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>HF1414</bf:classificationPortion>
+            <bf:itemPortion>H537 2010</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Highlights of the Alberta Competitiveness Council's report on competitiveness :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aHighlights of the Alberta Competitiveness Council's report on competitiveness :$bAlberta 2010.</bflc:title40MarcKey>
+            <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness :</rdfs:label>
+            <bflc:titleSortKey>Highlights of the Alberta Competitiveness Council's report on competitiveness :</bflc:titleSortKey>
+            <bf:mainTitle>Highlights of the Alberta Competitiveness Council's report on competitiveness</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/5333021#Instance530-18">
+            <bf:instanceOf rdf:resource="http://example.org/5333021#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Highlights of the Alberta Competitiveness Council's report on competitiveness :</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aHighlights of the Alberta Competitiveness Council's report on competitiveness :$bAlberta 2010.</bflc:title40MarcKey>
+                  <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness :</rdfs:label>
+                  <bflc:titleSortKey>Highlights of the Alberta Competitiveness Council's report on competitiveness :</bflc:titleSortKey>
+                  <bf:mainTitle>Highlights of the Alberta Competitiveness Council's report on competitiveness</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/5333021#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available online</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/5333021#Topic650-20">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Competition--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Competition--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Competition</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/5333021#Topic650-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Competition, International.</rdfs:label>
+            <madsrdf:authoritativeLabel>Competition, International.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/5333021#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Economic indicators--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Economic indicators--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Economic indicators</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/5333021#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Labor productivity--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Labor productivity--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Labor productivity</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/5333021#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Industrial productivity--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Industrial productivity--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Industrial productivity</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/5333021#Topic651-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Alberta--Economic history--Statistics.</rdfs:label>
+            <madsrdf:authoritativeLabel>Alberta--Economic history--Statistics.</madsrdf:authoritativeLabel>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Economic history</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Statistics</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>cash</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/5333021#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Finance and Enterprise.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Finance and Enterprise.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Finance and Enterprise.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/5333021#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Competitiveness Council.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Competitiveness Council.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Competitiveness Council.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/5333021#Instance856-28">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010 Alberta 2010.</rdfs:label>
+                  <bflc:titleSortKey>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010 Alberta 2010.</bflc:titleSortKey>
+                  <bf:mainTitle>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010</bf:mainTitle>
+                  <bf:subtitle>Alberta 2010</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/5333021#Item856-28">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.finance.alberta.ca/economic-development/competitiveness/2010-Report-on-Competitiveness-Highlights.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/5333021#Instance856-28"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/5333021#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/5333021#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/5333021#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2010</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/chr">
+            <rdfs:label>charts</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>9780-778558996</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn726601540</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010 Alberta 2010.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010 Alberta 2010.</rdfs:label>
+            <bflc:titleSortKey>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010 Alberta 2010.</bflc:titleSortKey>
+            <bf:mainTitle>Highlights of the Alberta Competitiveness Council's report on competitiveness : Alberta 2010 2010</bf:mainTitle>
+            <bf:subtitle>Alberta 2010</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, AB</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Finance and Enterprise</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2010</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton, AB : Alberta Finance and Enterprise, 2010.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>11 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/5333021#Instance530-18"/>
+      <bf:instanceOf rdf:resource="http://example.org/5333021#Work"/>
+   </bf:Instance>
+</rdf:RDF>

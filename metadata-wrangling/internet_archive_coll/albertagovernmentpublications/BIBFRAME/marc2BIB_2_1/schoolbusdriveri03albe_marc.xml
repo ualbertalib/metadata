@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/826981#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>826981</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-07-30</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <rdfs:label>School bus driver improvement program.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>School bus driver improvement program.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aSchool bus driver improvement program.</bflc:title40MarcKey>
+            <rdfs:label>School bus driver improvement program.</rdfs:label>
+            <bflc:titleSortKey>School bus driver improvement program.</bflc:titleSortKey>
+            <bf:mainTitle>School bus driver improvement program</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/826981#Topic650-19">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Bus driving--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Bus driving--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Bus driving</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/826981#Agent710-20">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Solicitor General.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Solicitor General.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Solicitor General.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-21">
+            <rdfs:label>School bus inspection and maintenance.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>School bus inspection and maintenance.</rdfs:label>
+                  <bflc:titleSortKey>School bus inspection and maintenance.</bflc:titleSortKey>
+                  <bf:mainTitle>School bus inspection and maintenance</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-22">
+            <rdfs:label>Bus operation manoeuvres.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Bus operation manoeuvres.</rdfs:label>
+                  <bflc:titleSortKey>Bus operation manoeuvres.</bflc:titleSortKey>
+                  <bf:mainTitle>Bus operation manoeuvres</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-23">
+            <rdfs:label>Loading, unloading and on-bus procedure.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Loading, unloading and on-bus procedure.</rdfs:label>
+                  <bflc:titleSortKey>Loading, unloading and on-bus procedure.</bflc:titleSortKey>
+                  <bf:mainTitle>Loading, unloading and on-bus procedure</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-24">
+            <rdfs:label>Defensive driving.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Defensive driving.</rdfs:label>
+                  <bflc:titleSortKey>Defensive driving.</bflc:titleSortKey>
+                  <bf:mainTitle>Defensive driving</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-25">
+            <rdfs:label>Emergency and collision procedures.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Emergency and collision procedures.</rdfs:label>
+                  <bflc:titleSortKey>Emergency and collision procedures.</bflc:titleSortKey>
+                  <bf:mainTitle>Emergency and collision procedures</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/826981#Work740-26">
+            <rdfs:label>Transporting disabled and medically fragile passengers.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Transporting disabled and medically fragile passengers.</rdfs:label>
+                  <bflc:titleSortKey>Transporting disabled and medically fragile passengers.</bflc:titleSortKey>
+                  <bf:mainTitle>Transporting disabled and medically fragile passengers</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/826981#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/826981#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1992</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm26803854</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>School bus driver improvement program 1992</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>School bus driver improvement program 1992</rdfs:label>
+            <bflc:titleSortKey>School bus driver improvement program 1992</bflc:titleSortKey>
+            <bf:mainTitle>School bus driver improvement program 1992</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Solicitor General</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1992</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta.] : Alberta Solicitor General, [1992]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>6 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>ser.1. School bus inspection and maintenance -- ser.2. Bus operation manoeuvres -- ser.3. Loading, unloading and on-bus procedure -- ser.4. Defensive driving -- ser.5. Emergency and collision procedures -- ser.6. Transporting disabled and medically fragile passengers.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/826981#Work"/>
+   </bf:Instance>
+</rdf:RDF>

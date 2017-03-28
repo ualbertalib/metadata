@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/992663#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>992663</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-03-11</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AVC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TD 196 A25</bf:classificationPortion>
+            <bf:itemPortion>A243</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/992663#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Torn, M. S.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Torn, M. S.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aTorn, M. S.</bflc:name00MarcKey>
+                  <rdfs:label>Torn, M. S.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>The effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>The effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aThe effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn.</bflc:title40MarcKey>
+            <rdfs:label>The effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn.</rdfs:label>
+            <bflc:titleSortKey>The effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn.</bflc:titleSortKey>
+            <bf:mainTitle>The effects of acidic deposition on Alberta agriculture :/ a review /M. S. Torn, J. E. Degrange, and J. H. Shinn</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/992663#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Acid deposition--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Acid deposition--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Acid deposition</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/992663#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Agriculture--Alberta--Effect of acid deposition on.</rdfs:label>
+            <madsrdf:authoritativeLabel>Agriculture--Alberta--Effect of acid deposition on.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Agriculture</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Effect of acid deposition on</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/992663#Agent700-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Degrange, J. E.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aDegrange, J. E.</bflc:name00MarcKey>
+                  <rdfs:label>Degrange, J. E.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/992663#Agent700-33">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Shinn, J. H.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aShinn, J. H.</bflc:name00MarcKey>
+                  <rdfs:label>Shinn, J. H.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/992663#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Government/Industry Acid Deposition Research Program.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Government/Industry Acid Deposition Research Program.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Government/Industry Acid Deposition Research Program.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/992663#Work830-35">
+            <rdfs:label>Biophysical research ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Biophysical research ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aBiophysical research ;$vv. 8</bflc:title30MarcKey>
+                  <rdfs:label>Biophysical research ;</rdfs:label>
+                  <bflc:titleSortKey>Biophysical research ;</bflc:titleSortKey>
+                  <bf:mainTitle>Biophysical research</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>v. 8</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/992663#Work830-36">
+            <rdfs:label>ADRP-B (Series) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ADRP-B (Series) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aADRP-B (Series) ;$vv. 8.</bflc:title30MarcKey>
+                  <rdfs:label>ADRP-B (Series) ;</rdfs:label>
+                  <bflc:titleSortKey>ADRP-B (Series) ;</bflc:titleSortKey>
+                  <bf:mainTitle>ADRP-B (Series)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>v. 8</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/992663#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/992663#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1987</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>regular print reproduction</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Print"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0921625103</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm17782193</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>The effects of acidic deposition on Alberta agriculture : a review 1987 a review /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The effects of acidic deposition on Alberta agriculture : a review 1987 a review /</rdfs:label>
+            <bflc:titleSortKey>effects of acidic deposition on Alberta agriculture : a review 1987 a review /</bflc:titleSortKey>
+            <bf:mainTitle>The effects of acidic deposition on Alberta agriculture : a review 1987</bf:mainTitle>
+            <bf:subtitle>a review</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>M. S. Torn, J. E. Degrange, and J. H. Shinn</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Calgary, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Acid Deposition Research Program</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1987</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Calgary, Alta. : Acid Deposition Research Program, 1987.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xvi, 160 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Biophysical research</bf:seriesStatement>
+      <bf:seriesEnumeration>v. 8</bf:seriesEnumeration>
+      <bf:seriesStatement>ADRP-B</bf:seriesStatement>
+      <bf:seriesEnumeration>08/87</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Prepared for: The Kananaskis Centre for Environmental Research, The University of Calgary, Alta.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 143-160.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/992663#Work"/>
+   </bf:Instance>
+</rdf:RDF>

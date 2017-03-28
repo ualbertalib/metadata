@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/711013#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>711013</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-12-11</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/ado">
+            <rdfs:label>adolescent</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/fil">
+            <rdfs:label>filmography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>LB 3054 C2</bf:classificationPortion>
+            <bf:itemPortion>D419 1926</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Departmental examinations, 1926./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Departmental examinations, 1926./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aDepartmental examinations, 1926./</bflc:title40MarcKey>
+            <rdfs:label>Departmental examinations, 1926./</rdfs:label>
+            <bflc:titleSortKey>Departmental examinations, 1926./</bflc:titleSortKey>
+            <bf:mainTitle>Departmental examinations, 1926</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/711013#Topic650-18">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Examinations--Alberta--Questions.</rdfs:label>
+            <madsrdf:authoritativeLabel>Examinations--Alberta--Questions.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Examinations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Questions</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/711013#Agent710-19">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. High School and University Matriculation Examinations Board.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bHigh School and University Matriculation Examinations Board.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. High School and University Matriculation Examinations Board.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-20">
+            <rdfs:label>Algebra.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Algebra.</rdfs:label>
+                  <bflc:titleSortKey>Algebra.</bflc:titleSortKey>
+                  <bf:mainTitle>Algebra</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-21">
+            <rdfs:label>Geometry.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Geometry.</rdfs:label>
+                  <bflc:titleSortKey>Geometry.</bflc:titleSortKey>
+                  <bf:mainTitle>Geometry</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-22">
+            <rdfs:label>General science.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>General science.</rdfs:label>
+                  <bflc:titleSortKey>General science.</bflc:titleSortKey>
+                  <bf:mainTitle>General science</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-23">
+            <rdfs:label>Chemistry.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Chemistry.</rdfs:label>
+                  <bflc:titleSortKey>Chemistry.</bflc:titleSortKey>
+                  <bf:mainTitle>Chemistry</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-24">
+            <rdfs:label>Composition.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Composition.</rdfs:label>
+                  <bflc:titleSortKey>Composition.</bflc:titleSortKey>
+                  <bf:mainTitle>Composition</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-25">
+            <rdfs:label>Literature.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Literature.</rdfs:label>
+                  <bflc:titleSortKey>Literature.</bflc:titleSortKey>
+                  <bf:mainTitle>Literature</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-26">
+            <rdfs:label>History.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>History.</rdfs:label>
+                  <bflc:titleSortKey>History.</bflc:titleSortKey>
+                  <bf:mainTitle>History</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/711013#Work740-27">
+            <rdfs:label>French.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>French.</rdfs:label>
+                  <bflc:titleSortKey>French.</bflc:titleSortKey>
+                  <bf:mainTitle>French</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/711013#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/711013#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1926</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm65776922</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Departmental examinations, 1926 1926</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Departmental examinations, 1926 1926</rdfs:label>
+            <bflc:titleSortKey>Departmental examinations, 1926 1926</bflc:titleSortKey>
+            <bf:mainTitle>Departmental examinations, 1926 1926</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Alberta</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>High School and University Matriculation Examinations Board</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1926</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Alberta] : High School and University Matriculation Examinations Board, 1926.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>11 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>26 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>[exam.1] Algebra 1 -- [exam.2] Algebra 2 -- [exam.3] Geometry 1 -- [exam.4] General science -- [exam.5] Chemistry 1 -- [exam.6] Composition 1 -- [exam.7] Literature 1 -- [exam.8] History 1 -- [exam.9] History 4 -- [exam.10] French 1 -- [exam.11] French 3.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/711013#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/711013#Item050-7">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>LB 3054 C2 D419 1926</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/711013#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

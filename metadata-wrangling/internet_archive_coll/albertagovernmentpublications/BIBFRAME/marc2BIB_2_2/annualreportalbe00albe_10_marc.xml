@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/628780#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>628780</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-02-27T00:00:00</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1989-06-19</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/lc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/sta">
+            <rdfs:label>statistics</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>JL334.S65</bf:classificationPortion>
+            <bf:itemPortion>A4a</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>328.7123/0761</bf:classificationPortion>
+            <bf:edition>20</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/628780#Agent110-19">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Legislative Assembly Office.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bLegislative Assembly Office.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Legislative Assembly Office.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Legislative Assembly Office.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Annual report // Legislative Assembly Office.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Annual report // Legislative Assembly Office.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAnnual report // Legislative Assembly Office.</bflc:title40MarcKey>
+            <rdfs:label>Annual report // Legislative Assembly Office.</rdfs:label>
+            <bflc:titleSortKey>Annual report // Legislative Assembly Office.</bflc:titleSortKey>
+            <bf:mainTitle>Annual report // Legislative Assembly Office</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/628780#Instance530-31">
+            <bf:instanceOf rdf:resource="http://example.org/628780#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Annual report // Legislative Assembly Office.</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aAnnual report // Legislative Assembly Office.</bflc:title40MarcKey>
+                  <rdfs:label>Annual report // Legislative Assembly Office.</rdfs:label>
+                  <bflc:titleSortKey>Annual report // Legislative Assembly Office.</bflc:titleSortKey>
+                  <bf:mainTitle>Annual report // Legislative Assembly Office</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/628780#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available online</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/628780#Agent610-36">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Legislative Assembly--Speaker--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Legislative Assembly</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bLegislative Assembly$xSpeaker$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Legislative Assembly</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/628780#Agent610-37">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Legislative Assembly Office--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Legislative Assembly Office</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bLegislative Assembly Office$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Legislative Assembly Office</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/628780#Agent610-38">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Legislative Assembly--Facilities--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Legislative Assembly</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bLegislative Assembly$xFacilities$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Legislative Assembly</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/628780#Agent610-39">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Legislature Library--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Legislature Library</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bLegislature Library$xPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Legislature Library</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/628780#Agent710-40">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Commonwealth Parliamentary Association. Alberta Branch.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aCommonwealth Parliamentary Association.$bAlberta Branch.</bflc:name10MarcKey>
+                  <rdfs:label>Commonwealth Parliamentary Association. Alberta Branch.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/628780#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/628780#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1987/..</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Currently published</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   89650680 </rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 89081218</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0842-6899</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0838-5602</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>incorrect</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm19889603</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"/>
+            <bf:source>
+               <bf:Source>
+                  <rdf:value>issnkey</rdf:value>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>Annu. rep. - Alta., Legis. Assem. Off.</rdfs:label>
+            <bflc:titleSortKey>Annu. rep. - Alta., Legis. Assem. Off.</bflc:titleSortKey>
+            <bf:mainTitle>Annu. rep. - Alta., Legis. Assem. Off.</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>Annual report - Alberta. Legislative Assembly Office</rdfs:label>
+            <bflc:titleSortKey>Annual report - Alberta. Legislative Assembly Office</bflc:titleSortKey>
+            <bf:mainTitle>Annual report - Alberta. Legislative Assembly Office</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Annual report. Alberta. Legislative Assembly Office. 1994</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Annual report. Alberta. Legislative Assembly Office. 1994</rdfs:label>
+            <bflc:titleSortKey>Annual report. Alberta. Legislative Assembly Office. 1994</bflc:titleSortKey>
+            <bf:mainTitle>Annual report. Alberta. Legislative Assembly Office. 1994</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Legislative Assembly Office</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>Annual report - Legislative Assembly Office</rdfs:label>
+            <bflc:titleSortKey>Annual report - Legislative Assembly Office</bflc:titleSortKey>
+            <bf:mainTitle>Annual report - Legislative Assembly Office</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Annual report of the Commonwealth Parliamentary Association, Alberta Branch</rdfs:label>
+            <bflc:titleSortKey>Annual report of the Commonwealth Parliamentary Association, Alberta Branch</bflc:titleSortKey>
+            <bf:mainTitle>Annual report of the Commonwealth Parliamentary Association, Alberta Branch</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Annual report of the Commonwealth Parliamentary Association, Alberta Branch and Interparliamentary Relations</rdfs:label>
+            <bflc:titleSortKey>Annual report of the Commonwealth Parliamentary Association, Alberta Branch and Interparliamentary Relations</bflc:titleSortKey>
+            <bf:mainTitle>Annual report of the Commonwealth Parliamentary Association, Alberta Branch and Interparliamentary Relations</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>The Office</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1988]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : The Office, [1988]-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:firstIssue>1987</bf:firstIssue>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/628780#Instance530-31"/>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>System requirements for online access: Adobe Acrobat.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>Mode of access: Internet.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issues for 1997-2007 include annual report of the Commonwealth Parliamentary Association, Alberta Branch; issues for 2008- include annual report of the Commonwealth Parliamentary Association, Alberta Branch and Interparliamentary Relations.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/628780#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/628780#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>JL334.S65 A4a</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/628780#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/628780#Item856-41">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/annual_reports/"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>Free Access: 1998-</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/628780#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

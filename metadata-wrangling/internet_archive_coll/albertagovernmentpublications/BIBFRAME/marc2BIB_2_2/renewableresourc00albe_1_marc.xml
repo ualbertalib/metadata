@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6537551#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6537551</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-12T09:39:18</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1987-06-08</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <rdfs:label>Renewable resources newsletter./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Renewable resources newsletter./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aRenewable resources newsletter./</bflc:title40MarcKey>
+            <rdfs:label>Renewable resources newsletter./</rdfs:label>
+            <bflc:titleSortKey>Renewable resources newsletter./</bflc:titleSortKey>
+            <bf:mainTitle>Renewable resources newsletter</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6537551#Topic650-20">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Renewable natural resources--Government policy--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Renewable natural resources--Government policy--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Renewable natural resources</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Government policy</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6537551#Agent710-21">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Energy and Natural Resources.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Energy and Natural Resources.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Energy and Natural Resources.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6537551#Agent710-22">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Forestry.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Forestry.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Forestry.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6537551#Agent710-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Forestry, Lands &amp; Wildlife.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Forestry, Lands &amp; Wildlife.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Forestry, Lands &amp; Wildlife.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/6537551#Work785-24">
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value> 900819359  </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>CaOONL</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>ocm22161477 </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>ocm22161477 </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>ocm22161477 </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>ocm22161477 </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>cn 90081935</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/6537551#Instance785-24">
+                  <bf:provisionActivityStatement>[Edmonton] : Alberta Forestry, Lands and Wildlife, [1987]-</bf:provisionActivityStatement>
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Forestry, lands &amp; wildlife.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0846-6602</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/6537551#Work785-24"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasInstance rdf:resource="http://example.org/6537551#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6537551#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0831-1439</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986/1987</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <rdfs:label>Renewable resources newsletter 1987-04</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Renewable resources newsletter 1987-04</rdfs:label>
+            <bflc:titleSortKey>Renewable resources newsletter 1987-04</bflc:titleSortKey>
+            <bf:mainTitle>Renewable resources newsletter 1987-04</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Energy and Natural Resources</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986]-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton : Alberta Energy and Natural Resources, 1986]-</bf:provisionActivityStatement>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Ten issues yearly (except Jan. or Aug.)</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Began with January 1986.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>ISSN printed on issues starting with March 1986; however, 0831-1439 not registered with Library and Archives Canada nor ISSN portal.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>First issue published in January.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued by Alberta Energy and Natural Resources Jan.-Mar. 1986; Alberta Forestry, Apr. 1986-May 1986; Alberta Forestry, Lands and Wildlife, Jun. 1986-May 1987.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: Jan. 1986; title from caption.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Latest issue consulted: May 1987.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6537551#Work"/>
+   </bf:Instance>
+</rdf:RDF>

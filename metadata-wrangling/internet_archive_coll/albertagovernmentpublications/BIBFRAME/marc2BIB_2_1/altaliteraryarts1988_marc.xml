@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/581097#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>581097</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-09-12</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>354.71230085/4</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/581097#Agent110-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Foundation for the Literary Arts.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>11020$aAlberta Foundation for the Literary Arts.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta Foundation for the Literary Arts.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta Foundation for the Literary Arts.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Annual report /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Annual report /</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAnnual report /$cAlberta Foundation for the Literary Arts.</bflc:title40MarcKey>
+            <rdfs:label>Annual report /</rdfs:label>
+            <bflc:titleSortKey>Annual report /</bflc:titleSortKey>
+            <bf:mainTitle>Annual report</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>Highlights of grants (rather than prizes) distributed to various Alberta writing projects.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Merged with: Alberta Art Foundation. Annual report; and: Alberta Foundation for the Performing Arts. Annual report; to form: Alberta Foundation for the Arts. Annual report.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/581097#Agent610-35">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta Foundation for the Literary Arts--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta Foundation for the Literary Arts</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aAlberta Foundation for the Literary Arts$xPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta Foundation for the Literary Arts</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/581097#Topic650-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Literary prizes--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Literary prizes--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Literary prizes</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:mergedToForm>
+         <bf:Work rdf:about="http://example.org/581097#Work785-37">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta Art Foundation.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/581097#Instance785-37">
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0704-9056</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/581097#Work785-37"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:mergedToForm>
+      <bf:mergedToForm>
+         <bf:Work rdf:about="http://example.org/581097#Work785-38">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta Foundation for the Performing Arts.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/581097#Instance785-38">
+                  <bf:provisionActivityStatement>[Edmonton] Alberta Foundation for the Performing Arts.</bf:provisionActivityStatement>
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Annual report.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0226-0816</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/581097#Work785-38"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:mergedToForm>
+      <bf:mergedToForm>
+         <bf:Work rdf:about="http://example.org/581097#Work785-39">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta Foundation for the Arts.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value> 978015320  </rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>CaOONL</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>ocm36688929</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/581097#Instance785-39">
+                  <bf:provisionActivityStatement>[Edmonton] : The Foundation, [1992-1995]</bf:provisionActivityStatement>
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Annual report.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>1208-2961</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/581097#Work785-39"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:mergedToForm>
+      <bf:hasInstance rdf:resource="http://example.org/581097#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/581097#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985/1990</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>cn 88080307</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0836-9399</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm17366171</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"/>
+            <bf:source>
+               <bf:Source>
+                  <rdf:value>issnkey</rdf:value>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>Annu. rep. - Alta. Found. Lit. Arts</rdfs:label>
+            <bflc:titleSortKey>Annu. rep. - Alta. Found. Lit. Arts</bflc:titleSortKey>
+            <bf:mainTitle>Annu. rep. - Alta. Found. Lit. Arts</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>Annual report - Alberta Foundation for the Literary Arts</rdfs:label>
+            <bflc:titleSortKey>Annual report - Alberta Foundation for the Literary Arts</bflc:titleSortKey>
+            <bf:mainTitle>Annual report - Alberta Foundation for the Literary Arts</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>Annual report 1985</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Annual report 1985</rdfs:label>
+            <bflc:titleSortKey>Annual report 1985</bflc:titleSortKey>
+            <bf:mainTitle>Annual report 1985</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Foundation for the Literary Arts</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Calgary</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>The Foundation</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985?-1990</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Calgary : The Foundation, [1985?-1990]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>22 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Began with 1984/1985?</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:firstIssue>    </bf:firstIssue>
+      <bf:lastIssue>1989/90.</bf:lastIssue>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: 1985/1986.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from cover.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"As Chairman of The Alberta Foundation for the Literary Arts, I am pleased to submit the annual report for 1985-86, our second such report and the first one representing an entire year of operation." -- Chairman's message (Annual report, 1985/1986).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"The Alberta Foundation for the Literary Arts was created in May of 1984 ...." -- p. 2 (Annual report, 1989/1990).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Report year ends Mar. 31.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Latest issue consulted: 1989/1990.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/581097#Work"/>
+   </bf:Instance>
+</rdf:RDF>

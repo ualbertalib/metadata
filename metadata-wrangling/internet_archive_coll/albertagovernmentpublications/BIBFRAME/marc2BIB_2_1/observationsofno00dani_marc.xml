@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1748564#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1748564</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-02-27</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn"/>
+      </bf:geographicCoverage>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1748564#Agent100-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Daniels, Dorothy.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Daniels, Dorothy.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aDaniels, Dorothy.</bflc:name00MarcKey>
+                  <rdfs:label>Daniels, Dorothy.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Observations of the Northern Conference :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Observations of the Northern Conference :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aObservations of the Northern Conference :$bCircuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report /$cby Dorothy Daniels.</bflc:title40MarcKey>
+            <rdfs:label>Observations of the Northern Conference :</rdfs:label>
+            <bflc:titleSortKey>Observations of the Northern Conference :</bflc:titleSortKey>
+            <bf:mainTitle>Observations of the Northern Conference</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>Conference was held to provide a forum for a cross section of justice administrators from across Canada and Alaska to discuss the issues, problems and some of the solutions in providing rural and circuit court justice services. Publications is a summary of some of the proceedings based on the notes of one attendee.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1748564#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Indians of North America--Canada--Courts.</rdfs:label>
+            <madsrdf:authoritativeLabel>Indians of North America--Canada--Courts.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Indians of North America</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Canada</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Courts</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1748564#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Indians of North America--Legal status, laws, etc.--Canada.</rdfs:label>
+            <madsrdf:authoritativeLabel>Indians of North America--Legal status, laws, etc.--Canada.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Indians of North America</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Legal status, laws, etc</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Canada</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1748564#Agent710-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Native Peoples Programme.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bNative Peoples Programme.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Native Peoples Programme.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1748564#Agent711-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Northern Conference (1984 : Yellowknife, N.W.T.)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>7112 $aNorthern Conference$d(1984 :$cYellowknife, N.W.T.)</bflc:name11MarcKey>
+                  <rdfs:label>Northern Conference (1984 : Yellowknife, N.W.T.)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1748564#Work740-26">
+            <rdfs:label>Circuit and rural court justice in the north.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Circuit and rural court justice in the north.</rdfs:label>
+                  <bflc:titleSortKey>Circuit and rural court justice in the north.</bflc:titleSortKey>
+                  <bf:mainTitle>Circuit and rural court justice in the north</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1748564#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1748564#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1984</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm16062485</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Observations of the Northern Conference : Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report 1984 Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Observations of the Northern Conference : Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report 1984 Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report /</rdfs:label>
+            <bflc:titleSortKey>Observations of the Northern Conference : Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report 1984 Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report /</bflc:titleSortKey>
+            <bf:mainTitle>Observations of the Northern Conference : Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report 1984</bf:mainTitle>
+            <bf:subtitle>Circuit and rural court justice in the north, March 11-16, 1984, Yellowknife, Northwest Territories : A report</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Dorothy Daniels</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta, Attorney General</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1984</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta. : Alberta, Attorney General, 1984].</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>73 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>On cover: Native Peoples Programme.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1748564#Work"/>
+   </bf:Instance>
+</rdf:RDF>

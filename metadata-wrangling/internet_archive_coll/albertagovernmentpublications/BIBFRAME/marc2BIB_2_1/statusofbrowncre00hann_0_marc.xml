@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/2797540#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>2797540</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-07-23T07:56:20</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-07-21</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEEN</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>QL 696 P23*</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2797540#Agent100-19">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Hannah, Kevin C.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Hannah, Kevin C.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aHannah, Kevin C.</bflc:name00MarcKey>
+                  <rdfs:label>Hannah, Kevin C.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Status of the Brown Creeper (Certhia americana) in Alberta /</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aStatus of the Brown Creeper (Certhia americana) in Alberta /$cprepared for Alberta Sustainable Resource Development (SRD), Alberta Conservation Association (ACA) ; prepared by Kevin Hannah.</bflc:title40MarcKey>
+            <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta /</rdfs:label>
+            <bflc:titleSortKey>Status of the Brown Creeper (Certhia americana) in Alberta /</bflc:titleSortKey>
+            <bf:mainTitle>Status of the Brown Creeper (Certhia americana) in Alberta</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2797540#Instance530-33">
+            <bf:instanceOf rdf:resource="http://example.org/2797540#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Status of the Brown Creeper (Certhia americana) in Alberta /</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aStatus of the Brown Creeper (Certhia americana) in Alberta /$cprepared for Alberta Sustainable Resource Development (SRD), Alberta Conservation Association (ACA) ; prepared by Kevin Hannah.</bflc:title40MarcKey>
+                  <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta /</rdfs:label>
+                  <bflc:titleSortKey>Status of the Brown Creeper (Certhia americana) in Alberta /</bflc:titleSortKey>
+                  <bf:mainTitle>Status of the Brown Creeper (Certhia americana) in Alberta</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/2797540#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available online</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2797540#Topic650-38">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Creepers (Birds)--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Creepers (Birds)--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Creepers (Birds)</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2797540#Topic650-39">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Songbirds--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Songbirds--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Songbirds</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2797540#Topic650-40">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Passeriformes--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Passeriformes--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Passeriformes</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2797540#Topic650-41">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Bird populations--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Bird populations--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Bird populations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2797540#Agent710-42">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Fish and Wildlife Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bFish and Wildlife Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Fish and Wildlife Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2797540#Agent710-43">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Conservation Association.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Conservation Association.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Conservation Association.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2797540#Agent710-44">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Sustainable Resource Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Sustainable Resource Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Sustainable Resource Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2797540#Agent710-45">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Fisheries and Wildlife Management Division. Biodiversity and Species at Risk Section.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bFisheries and Wildlife Management Division.$bBiodiversity and Species at Risk Section.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Fisheries and Wildlife Management Division. Biodiversity and Species at Risk Section.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/2797540#Work830-46">
+            <rdfs:label>Alberta wildlife status report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Alberta wildlife status report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAlberta wildlife status report ;$vNo. 49.</bflc:title30MarcKey>
+                  <rdfs:label>Alberta wildlife status report ;</rdfs:label>
+                  <bflc:titleSortKey>Alberta wildlife status report ;</bflc:titleSortKey>
+                  <bf:mainTitle>Alberta wildlife status report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>No. 49</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/2797540#Work830-47">
+            <rdfs:label>Publication (Alberta Alberta Sustainable Resource Development) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta Alberta Sustainable Resource Development) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta Alberta Sustainable Resource Development) ;$vT/047.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta Alberta Sustainable Resource Development) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta Alberta Sustainable Resource Development) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta Alberta Sustainable Resource Development)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>T/047</bf:seriesEnumeration>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2797540#Instance856-49">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta 2003</rdfs:label>
+                  <bflc:titleSortKey>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bflc:titleSortKey>
+                  <bf:mainTitle>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/2797540#Item856-49">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://esrd.alberta.ca/fish-wildlife/species-at-risk/species-at-risk-publications-web-resources/birds/documents/SAR-StatusBrownCreeperAlberta-Jun2003.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/2797540#Instance856-49"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/2797540#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2797540#Instance856-50">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta 2003</rdfs:label>
+                  <bflc:titleSortKey>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bflc:titleSortKey>
+                  <bf:mainTitle>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/2797540#Item856-50">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2003/alsrd/141159.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/2797540#Instance856-50"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/2797540#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/2797540#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/2797540#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2003</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0778529177 (print)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0778529185 (online)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1206-4912 (print)</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1499-4682 (online)</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm53252647</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta 2003</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Status of the Brown Creeper (Certhia americana) in Alberta 2003</rdfs:label>
+            <bflc:titleSortKey>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bflc:titleSortKey>
+            <bf:mainTitle>Status of the Brown Creeper (Certhia americana) in Alberta 2003</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>prepared for Alberta Sustainable Resource Development (SRD), Alberta Conservation Association (ACA) ; prepared by Kevin Hannah</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Sustainable Resource Development</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2003</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Sustainable Resource Development, 2003.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>viii, 30, [3] p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill., maps</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Alberta wildlife status report</bf:seriesStatement>
+      <bf:seriesEnumeration>No. 49</bf:seriesEnumeration>
+      <bf:seriesStatement>Pub. No.</bf:seriesStatement>
+      <bf:seriesEnumeration>T/047</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"June 2003".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Publication No. I/T047"--T.p. verso.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Published by: Alberta Sustainable Resource Development, Fish &amp; Wildlife, Alberta Conservation Association".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"This report has been reviewed, revised, and edited prior to publication. It is as SRD/ACA working document that will be revised and updated periodicvally".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/2797540#Instance530-33"/>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>System requirements for online access: Adobe Acrobat.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>Mode of access: Internet.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued by: Fish &amp; Wildlife Division, Biodiversity and Species at Risk Section.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/2797540#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/2797540#Item856-48">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://www.ab-conservation.com/go/default/index.cfm/programs/wildlife/wildlife-projects/alberta-wildlife-status-reports-project/publications/"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>Free Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/2797540#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/4357694#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>4357694</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>LTSCA</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-05-04T13:37:47</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-26</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>HV6626.23.C2</bf:classificationPortion>
+            <bf:itemPortion>T35 2008</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Taking action on family violence and bullying :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Taking action on family violence and bullying :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aTaking action on family violence and bullying :$breport to Albertans 2008.</bflc:title40MarcKey>
+            <rdfs:label>Taking action on family violence and bullying :</rdfs:label>
+            <bflc:titleSortKey>Taking action on family violence and bullying :</bflc:titleSortKey>
+            <bf:mainTitle>Taking action on family violence and bullying</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/4357694#Instance530-23">
+            <bf:instanceOf rdf:resource="http://example.org/4357694#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Taking action on family violence and bullying :</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aTaking action on family violence and bullying :$breport to Albertans 2008.</bflc:title40MarcKey>
+                  <rdfs:label>Taking action on family violence and bullying :</rdfs:label>
+                  <bflc:titleSortKey>Taking action on family violence and bullying :</bflc:titleSortKey>
+                  <bf:mainTitle>Taking action on family violence and bullying</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/4357694#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available online</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/4357694#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Family violence--Alberta--Prevention.</rdfs:label>
+            <madsrdf:authoritativeLabel>Family violence--Alberta--Prevention.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Family violence</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Prevention</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/4357694#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Bullying--Alberta--Prevention.</rdfs:label>
+            <madsrdf:authoritativeLabel>Bullying--Alberta--Prevention.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Bullying</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Prevention</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/4357694#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/4357694#Instance856-28">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Taking action on family violence and bullying : report to Albertans 2008 2008 report to Albertans 2008.</rdfs:label>
+                  <bflc:titleSortKey>Taking action on family violence and bullying : report to Albertans 2008 2008 report to Albertans 2008.</bflc:titleSortKey>
+                  <bf:mainTitle>Taking action on family violence and bullying : report to Albertans 2008 2008</bf:mainTitle>
+                  <bf:subtitle>report to Albertans 2008</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/4357694#Item856-28">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2008/alchs/171287.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/4357694#Instance856-28"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/4357694#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/4357694#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/4357694#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2008</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn320122102</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Taking action on family violence and bullying : report to Albertans 2008 2008 report to Albertans 2008.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Taking action on family violence and bullying : report to Albertans 2008 2008 report to Albertans 2008.</rdfs:label>
+            <bflc:titleSortKey>Taking action on family violence and bullying : report to Albertans 2008 2008 report to Albertans 2008.</bflc:titleSortKey>
+            <bf:mainTitle>Taking action on family violence and bullying : report to Albertans 2008 2008</bf:mainTitle>
+            <bf:subtitle>report to Albertans 2008</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>running</bf:variantType>
+            <rdfs:label>PFVB report to Albertans</rdfs:label>
+            <bflc:titleSortKey>PFVB report to Albertans</bflc:titleSortKey>
+            <bf:mainTitle>PFVB report to Albertans</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Government of] Alberta</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2008</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : [Government of] Alberta, [2008]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>24 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>col. ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from cover.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/4357694#Instance530-23"/>
+      <bf:instanceOf rdf:resource="http://example.org/4357694#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/4357694#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HV6626.23.C2 T35 2008</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/4357694#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

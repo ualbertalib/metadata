@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/2555266#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>2555266</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-11-16</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AENR</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cnp"/>
+      </bf:geographicCoverage>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-bc"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TD 195 P4</bf:classificationPortion>
+            <bf:itemPortion>Si69 2001</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Sinton, Heather M.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Sinton, Heather M.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aSinton, Heather M.</bflc:name00MarcKey>
+                  <rdfs:label>Sinton, Heather M.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Prairie oil and gas :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Prairie oil and gas :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aPrairie oil and gas :$ba lighter footprint /$cby Heather M. Sinton.</bflc:title40MarcKey>
+            <rdfs:label>Prairie oil and gas :</rdfs:label>
+            <bflc:titleSortKey>Prairie oil and gas :</bflc:titleSortKey>
+            <bf:mainTitle>Prairie oil and gas</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2555266#Instance530-23">
+            <bf:instanceOf rdf:resource="http://example.org/2555266#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Prairie oil and gas :</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aPrairie oil and gas :$ba lighter footprint /$cby Heather M. Sinton.</bflc:title40MarcKey>
+                  <rdfs:label>Prairie oil and gas :</rdfs:label>
+                  <bflc:titleSortKey>Prairie oil and gas :</bflc:titleSortKey>
+                  <bf:mainTitle>Prairie oil and gas</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/2555266#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available on the Internet</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2555266#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Petroleum industry and trade--Environmental aspects--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Petroleum industry and trade--Environmental aspects--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Petroleum industry and trade</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2555266#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Prairie conservation--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Prairie conservation--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Prairie conservation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Environment.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Environment.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Environment.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Sustainable Resource Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Sustainable Resource Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Sustainable Resource Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Special Areas Board.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bSpecial Areas Board.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Special Areas Board.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Energy and Utilities Board.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Energy and Utilities Board.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Energy and Utilities Board.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-33">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>TransCanada Pipelines Limited.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aTransCanada Pipelines Limited.</bflc:name10MarcKey>
+                  <rdfs:label>TransCanada Pipelines Limited.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Husky Energy.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aHusky Energy.</bflc:name10MarcKey>
+                  <rdfs:label>Husky Energy.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Canadian Natural Resources Limited.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aCanadian Natural Resources Limited.</bflc:name10MarcKey>
+                  <rdfs:label>Canadian Natural Resources Limited.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2555266#Agent710-36">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Native Plant Council.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Native Plant Council.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Native Plant Council.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2555266#Instance856-37">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</rdfs:label>
+                  <bflc:titleSortKey>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</bflc:titleSortKey>
+                  <bf:mainTitle>Prairie oil and gas : a lighter footprint 2001</bf:mainTitle>
+                  <bf:subtitle>a lighter footprint</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/2555266#Item856-37">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://environment.gov.ab.ca/info/library/7150.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access Section 1</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/2555266#Instance856-37"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/2555266#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2555266#Instance856-38">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</rdfs:label>
+                  <bflc:titleSortKey>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</bflc:titleSortKey>
+                  <bf:mainTitle>Prairie oil and gas : a lighter footprint 2001</bf:mainTitle>
+                  <bf:subtitle>a lighter footprint</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/2555266#Item856-38">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/alen/2001/131762_02.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access Section 2</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/2555266#Instance856-38"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/2555266#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/2555266#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/2555266#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2001</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>077851711X</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm52991340</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</rdfs:label>
+            <bflc:titleSortKey>Prairie oil and gas : a lighter footprint 2001 a lighter footprint /</bflc:titleSortKey>
+            <bf:mainTitle>Prairie oil and gas : a lighter footprint 2001</bf:mainTitle>
+            <bf:subtitle>a lighter footprint</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Heather M. Sinton</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, AB</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environment</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c2001</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton, AB : Alberta Environment, c2001.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>67 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>col. ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>25 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"This document is meant to complement the Energy and Utilities Board publication, Petroleum Industry Activity In Native Prairie and Parkland Areas: Guidelines for Surface Disturbance."-- Acknowledgements.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 66-67.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/2555266#Instance530-23"/>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>The preparation and publication of this book was made possible by funding from Alberta Environment, Alberta Sustainable Resource Development (Public Lands), and the Special Areas Board. The following partners assisted with printing costs: TransCanada Pipelines Ltd. Husky Energy, Canadian Natural Resources Ltd., the Energy and Utilities Board and the Alberta Native Plant Council.</rdfs:label>
+            <bf:noteType>funding information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/2555266#Work"/>
+   </bf:Instance>
+</rdf:RDF>

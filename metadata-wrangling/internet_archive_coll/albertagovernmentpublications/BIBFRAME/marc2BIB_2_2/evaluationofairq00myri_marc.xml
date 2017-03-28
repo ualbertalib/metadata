@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1567416#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1567416</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19  -  -  </bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1567416#Agent100-8">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Myrick, R. H.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Myrick, R. H.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aMyrick, R. H.</bflc:name00MarcKey>
+                  <rdfs:label>Myrick, R. H.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>An evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>An evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAn evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</bflc:title40MarcKey>
+            <rdfs:label>An evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</rdfs:label>
+            <bflc:titleSortKey>An evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</bflc:titleSortKey>
+            <bf:mainTitle>An evaluation of air quality at two sites in the lower townsite of Fort McMurray :/ October 1, 1991 to June 30, 1992 /prepared by: R.H. Myrick</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1567416#Topic650-19">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Air quality--Alberta--Fort McMurray.</rdfs:label>
+            <madsrdf:authoritativeLabel>Air quality--Alberta--Fort McMurray.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Air quality</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Fort McMurray</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1567416#Topic650-20">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Air--Pollution--Alberta--Fort McMurray--Measurement.</rdfs:label>
+            <madsrdf:authoritativeLabel>Air--Pollution--Alberta--Fort McMurray--Measurement.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Air</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Pollution</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Fort McMurray</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Measurement</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1567416#Topic651-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Fort McMurray (Alta.)</rdfs:label>
+            <madsrdf:authoritativeLabel>Fort McMurray (Alta.)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1567416#Agent710-22">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Environmental Assessment Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bEnvironmental Assessment Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Environmental Assessment Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1567416#Work830-23">
+            <rdfs:label>Alberta. Department of the Environment. Environmental Assessment Division. Technical report series ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Alberta. Department of the Environment. Environmental Assessment Division. Technical report series ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAlberta. Department of the Environment. Environmental Assessment Division. Technical report series ;$vno. 92-3</bflc:title30MarcKey>
+                  <rdfs:label>Alberta. Department of the Environment. Environmental Assessment Division. Technical report series ;</rdfs:label>
+                  <bflc:titleSortKey>Alberta. Department of the Environment. Environmental Assessment Division. Technical report series ;</bflc:titleSortKey>
+                  <bf:mainTitle>Alberta. Department of the Environment. Environmental Assessment Division. Technical report series</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. 92-3</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1567416#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1567416#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1992</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm70316286</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>An evaluation of air quality at two sites in the lower townsite of Fort McMurray : October 1, 1991 to June 30, 1992 1992 October 1, 1991 to June 30, 1992 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>An evaluation of air quality at two sites in the lower townsite of Fort McMurray : October 1, 1991 to June 30, 1992 1992 October 1, 1991 to June 30, 1992 /</rdfs:label>
+            <bflc:titleSortKey>evaluation of air quality at two sites in the lower townsite of Fort McMurray : October 1, 1991 to June 30, 1992 1992 October 1, 1991 to June 30, 1992 /</bflc:titleSortKey>
+            <bf:mainTitle>An evaluation of air quality at two sites in the lower townsite of Fort McMurray : October 1, 1991 to June 30, 1992 1992</bf:mainTitle>
+            <bf:subtitle>October 1, 1991 to June 30, 1992</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>prepared by: R.H. Myrick</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Air Assessment Section, Environmental Quality Monitoring Branch, Environmental Assessment Division, Alberta Environment</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>Oct. 1992</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton, Alta. : Air Assessment Section, Environmental Quality Monitoring Branch, Environmental Assessment Division, Alberta Environment, Oct. 1992</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xii, 71 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Alberta. Dept. of the Environment. Environmental Assessment Division. Technical report series</bf:seriesStatement>
+      <bf:seriesEnumeration>no. 92-3</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 39</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1567416#Work"/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/900551#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>900551</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1987-07-16</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-sn"/>
+      </bf:geographicCoverage>
+      <bf:temporalCoverage rdf:datatype="http://id.loc.gov/datatypes/edtf">197X/198X</bf:temporalCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>GB 1230 A3</bf:classificationPortion>
+            <bf:itemPortion>C9 1986</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/900551#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Cross, P. M. (Patricia Margaret)</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Cross, P. M. (Patricia Margaret)</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aCross, P. M.$q(Patricia Margaret)</bflc:name00MarcKey>
+                  <rdfs:label>Cross, P. M. (Patricia Margaret)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aThe limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:title40MarcKey>
+            <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</rdfs:label>
+            <bflc:titleSortKey>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:titleSortKey>
+            <bf:mainTitle>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/900551#Instance530-23">
+            <bf:instanceOf rdf:resource="http://example.org/900551#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aThe limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:title40MarcKey>
+                  <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</rdfs:label>
+                  <bflc:titleSortKey>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton.</bflc:titleSortKey>
+                  <bf:mainTitle>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) // prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/900551#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available on the Internet</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Rivers--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Rivers--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Rivers</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Water chemistry.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water chemistry.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Water quality--Alberta--South Saskatchewan River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water quality--Alberta--South Saskatchewan River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Water quality</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>South Saskatchewan River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Limnology--Alberta--Bow River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Limnology--Alberta--Bow River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Limnology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Bow River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Limnology--Alberta--Oldman River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Limnology--Alberta--Oldman River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Limnology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Oldman River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Water quality--Alberta--Bow River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water quality--Alberta--Bow River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Water quality</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Bow River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Limnology--Alberta--South Saskatchewan River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Limnology--Alberta--South Saskatchewan River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Limnology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>South Saskatchewan River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/900551#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Water quality--Alberta--Oldman River.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water quality--Alberta--Oldman River.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Water quality</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Oldman River</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/900551#Topic651-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Bow River (Alta.)</rdfs:label>
+            <madsrdf:authoritativeLabel>Bow River (Alta.)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/900551#Topic651-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Oldman River (Alta.)</rdfs:label>
+            <madsrdf:authoritativeLabel>Oldman River (Alta.)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/900551#Topic651-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>South Saskatchewan River (Alta. and Sask.)</rdfs:label>
+            <madsrdf:authoritativeLabel>South Saskatchewan River (Alta. and Sask.)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/900551#Agent700-37">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Hamilton, H. R. (Henry R.), 1932-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHamilton, H. R.$q(Henry R.),$d1932-</bflc:name00MarcKey>
+                  <rdfs:label>Hamilton, H. R. (Henry R.), 1932-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/900551#Agent700-38">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Charlton, S. E. D.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aCharlton, S. E. D.</bflc:name00MarcKey>
+                  <rdfs:label>Charlton, S. E. D.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/900551#Agent710-39">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Water Quality Control Branch.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bWater Quality Control Branch.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Water Quality Control Branch.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/900551#Agent710-40">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Pollution Control Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bPollution Control Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Pollution Control Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/900551#Work830-41">
+            <rdfs:label>Sessional paper (Alberta. Legislative Assembly) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Sessional paper (Alberta. Legislative Assembly) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aSessional paper (Alberta. Legislative Assembly) ;$v501/86.</bflc:title30MarcKey>
+                  <rdfs:label>Sessional paper (Alberta. Legislative Assembly) ;</rdfs:label>
+                  <bflc:titleSortKey>Sessional paper (Alberta. Legislative Assembly) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Sessional paper (Alberta. Legislative Assembly)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>501/86</bf:seriesEnumeration>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/900551#Instance856-42">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</rdfs:label>
+                  <bflc:titleSortKey>limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bflc:titleSortKey>
+                  <bf:mainTitle>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/900551#Item856-42">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.environment.gov.ab.ca/info/library/8054.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access Part I</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/900551#Instance856-42"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/900551#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/900551#Instance856-43">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</rdfs:label>
+                  <bflc:titleSortKey>limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bflc:titleSortKey>
+                  <bf:mainTitle>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/900551#Item856-43">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.environment.gov.ab.ca/info/library/8231.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access Part II</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/900551#Instance856-43"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/900551#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/900551#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/900551#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986/9999</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm18950763</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</rdfs:label>
+            <bflc:titleSortKey>limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bflc:titleSortKey>
+            <bf:mainTitle>The limnological characteristics of the Bow, Oldman and South Saskatchewan Rivers (1979-82) 1986</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>prepared by P.M. Cross, H.R. Hamilton, S.E.D. Charlton</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environment, Environmental Protection Services, Pollution Control Division, Water Quality Control Branch</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : Alberta Environment, Environmental Protection Services, Pollution Control Division, Water Quality Control Branch, 1986-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>3 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Sessional paper (Alberta. Legislative Assembly)</bf:seriesStatement>
+      <bf:seriesEnumeration>501/86.</bf:seriesEnumeration>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Pt.1 - Nutrient and water chemistry -- Pt.1 App.B - Nutrient and water chemistry -- Pt.2 - Primary producers.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/900551#Instance530-23"/>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>System requirements for online access: Adobe Acrobat.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:instanceOf rdf:resource="http://example.org/900551#Work"/>
+   </bf:Instance>
+</rdf:RDF>

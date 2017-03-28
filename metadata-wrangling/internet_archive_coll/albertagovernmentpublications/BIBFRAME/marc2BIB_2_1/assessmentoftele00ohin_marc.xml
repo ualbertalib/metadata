@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/2363453#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>2363453</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaMWISM</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-12-17T14:53:36</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-12-16</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>R119.9</bf:classificationPortion>
+            <bf:itemPortion>.O39 1999</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Ohinmaa, Arto.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Ohinmaa, Arto.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aOhinmaa, Arto.</bflc:name00MarcKey>
+                  <rdfs:label>Ohinmaa, Arto.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>The assessment of telemedicine :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>The assessment of telemedicine :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aThe assessment of telemedicine :$bgeneral principles and a systematic review /$cArto Ohinmaa, David Hailey, Risto Roine.</bflc:title40MarcKey>
+            <rdfs:label>The assessment of telemedicine :</rdfs:label>
+            <bflc:titleSortKey>The assessment of telemedicine :</bflc:titleSortKey>
+            <bf:mainTitle>The assessment of telemedicine</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2363453#Instance530-24">
+            <bf:instanceOf rdf:resource="http://example.org/2363453#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>The assessment of telemedicine :</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aThe assessment of telemedicine :$bgeneral principles and a systematic review /$cArto Ohinmaa, David Hailey, Risto Roine.</bflc:title40MarcKey>
+                  <rdfs:label>The assessment of telemedicine :</rdfs:label>
+                  <bflc:titleSortKey>The assessment of telemedicine :</bflc:titleSortKey>
+                  <bf:mainTitle>The assessment of telemedicine</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/2363453#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available on the Internet</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2363453#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Telecommunication in medicine.</rdfs:label>
+            <madsrdf:authoritativeLabel>Telecommunication in medicine.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2363453#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Medical technology.</rdfs:label>
+            <madsrdf:authoritativeLabel>Medical technology.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent700-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Hailey, David.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHailey, David.</bflc:name00MarcKey>
+                  <rdfs:label>Hailey, David.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent700-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Roine, Risto.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aRoine, Risto.</bflc:name00MarcKey>
+                  <rdfs:label>Roine, Risto.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent710-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Heritage Foundation for Medical Research.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Heritage Foundation for Medical Research.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Heritage Foundation for Medical Research.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent710-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Terveydenhuollon menetelmien arviointiyksikkÃ¶ (Finland)</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aTerveydenhuollon menetelmien arviointiyksikkÃ¶ (Finland)</bflc:name10MarcKey>
+                  <rdfs:label>Terveydenhuollon menetelmien arviointiyksikkÃ¶ (Finland)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2363453#Agent710-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>INAHTA (Organization)</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aINAHTA (Organization)</bflc:name10MarcKey>
+                  <rdfs:label>INAHTA (Organization)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2363453#Instance856-33">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>The assessment of telemedicine : general principles and a systematic review 1999 general principles and a systematic review /</rdfs:label>
+                  <bflc:titleSortKey>assessment of telemedicine : general principles and a systematic review 1999 general principles and a systematic review /</bflc:titleSortKey>
+                  <bf:mainTitle>The assessment of telemedicine : general principles and a systematic review 1999</bf:mainTitle>
+                  <bf:subtitle>general principles and a systematic review</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/2363453#Item856-33">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.ihe.ca/publications/library/archived/the-assessment-of-telemedicine/"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/2363453#Instance856-33"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/2363453#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/2363453#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/2363453#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1999</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fi"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1896956203</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm70597398</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>The assessment of telemedicine : general principles and a systematic review 1999 general principles and a systematic review /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The assessment of telemedicine : general principles and a systematic review 1999 general principles and a systematic review /</rdfs:label>
+            <bflc:titleSortKey>assessment of telemedicine : general principles and a systematic review 1999 general principles and a systematic review /</bflc:titleSortKey>
+            <bf:mainTitle>The assessment of telemedicine : general principles and a systematic review 1999</bf:mainTitle>
+            <bf:subtitle>general principles and a systematic review</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Arto Ohinmaa, David Hailey, Risto Roine</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Helsins[sic]ki, Finland</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta., Canada</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Finnish Office for Health Care Technology Assessment</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Heritage Foundation for Medical Research</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1999</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Helsins[sic]ki, Finland : Finnish Office for Health Care Technology Assessment ; Edmonton, Alta., Canada : Alberta Heritage Foundation for Medical Research , c1999.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>iii, 55 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"August 1999."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>At head of title: INAHTA Project on Telemedicine.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references (p. 50-55).</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/2363453#Instance530-24"/>
+      <bf:instanceOf rdf:resource="http://example.org/2363453#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/2363453#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>R119.9.O39 1999</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/2363453#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

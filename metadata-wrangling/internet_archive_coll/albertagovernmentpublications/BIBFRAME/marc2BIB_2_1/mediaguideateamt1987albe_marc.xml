@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/000008255703#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>3</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>000008255703</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-08-11T  :  :  </bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-08-11</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <rdfs:label>Media guide :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Media guide :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aMedia guide :$bthe A-Team, Team Alberta :$b87 jeux Canada games, February 14-28, Cape Breton, Nova Scotia.</bflc:title40MarcKey>
+            <rdfs:label>Media guide :</rdfs:label>
+            <bflc:titleSortKey>Media guide :</bflc:titleSortKey>
+            <bf:mainTitle>Media guide</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/000008255703#Agent710-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Recreation and Parks.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Recreation and Parks.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Recreation and Parks.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/000008255703#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/000008255703#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1987</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/cn"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <rdfs:label>Media guide : the A-Team, Team Alberta : 87 jeux: Canada games: February 14-28 Cape Breton, Nova Scotia 1987 the A-Team, Team Alberta : 87 jeux Canada games, February 14-28, Cape Breton, Nova Scotia.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Media guide : the A-Team, Team Alberta : 87 jeux: Canada games: February 14-28 Cape Breton, Nova Scotia 1987 the A-Team, Team Alberta : 87 jeux Canada games, February 14-28, Cape Breton, Nova Scotia.</rdfs:label>
+            <bflc:titleSortKey>Media guide : the A-Team, Team Alberta : 87 jeux: Canada games: February 14-28 Cape Breton, Nova Scotia 1987 the A-Team, Team Alberta : 87 jeux Canada games, February 14-28, Cape Breton, Nova Scotia.</bflc:titleSortKey>
+            <bf:mainTitle>Media guide : the A-Team, Team Alberta : 87 jeux: Canada games: February 14-28 Cape Breton, Nova Scotia 1987</bf:mainTitle>
+            <bf:subtitle>the A-Team, Team Alberta</bf:subtitle>
+            <bf:subtitle>87 jeux Canada games, February 14-28, Cape Breton, Nova Scotia</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Calgary</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Recreation and Parks</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1987</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Calgary] : Alberta Recreation and Parks, 1987.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>106 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:instanceOf rdf:resource="http://example.org/000008255703#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/000008255703#Item852-12">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/CaOONL"/>
+            </bf:heldBy>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>ILL: no</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/000008255703#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

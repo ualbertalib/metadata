@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1721013#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1721013</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-03-07</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/sta">
+            <rdfs:label>statistics</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1721013#Agent110-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Treasury.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bAlberta Treasury.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Alberta Treasury.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Alberta Treasury.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Treasury annual report // Alberta Treasury.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Treasury annual report // Alberta Treasury.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aTreasury annual report // Alberta Treasury.</bflc:title40MarcKey>
+            <rdfs:label>Treasury annual report // Alberta Treasury.</rdfs:label>
+            <bflc:titleSortKey>Treasury annual report // Alberta Treasury.</bflc:titleSortKey>
+            <bf:mainTitle>Treasury annual report // Alberta Treasury</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Split into: Alberta. Alberta Finance. Ministry of Finance annual report, and: Alberta. Alberta Revenue. Alberta Revenue annual report.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1721013#Agent610-26">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Alberta Treasury--Periodicals.</madsrdf:authoritativeLabel>
+            <bflc:name10MatchKey>Alberta. Alberta Treasury</bflc:name10MatchKey>
+            <bflc:name10MarcKey>6101 $aAlberta.$bAlberta Treasury$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Alberta Treasury</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1721013#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Finance, Public--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Finance, Public--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Finance, Public</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1721013#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Revenue--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Revenue--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Revenue</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:continues>
+         <bf:Work rdf:about="http://example.org/1721013#Work780-29">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Alberta Treasury.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/1721013#Instance780-29">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Ministry overview &amp; annual report for the fiscal year ended March 31, ...</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/1721013#Work780-29"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continues>
+      <bf:splitInto>
+         <bf:Work rdf:about="http://example.org/1721013#Work785-30">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Alberta Finance.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/1721013#Instance785-30">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Ministry of Finance annual report</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/1721013#Work785-30"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:splitInto>
+      <bf:splitInto>
+         <bf:Work rdf:about="http://example.org/1721013#Work785-31">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Alberta Revenue.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/1721013#Instance785-31">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Alberta Revenue annual report</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/1721013#Work785-31"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:splitInto>
+      <bf:hasInstance rdf:resource="http://example.org/1721013#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1721013#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1995/2001</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1207-5477</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn426204644</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Treasury annual report / Alberta Treasury 1999</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Treasury annual report / Alberta Treasury 1999</rdfs:label>
+            <bflc:titleSortKey>Treasury annual report / Alberta Treasury 1999</bflc:titleSortKey>
+            <bf:mainTitle>Treasury annual report / Alberta Treasury 1999</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Treasury</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>cover</bf:variantType>
+            <rdfs:label>Treasury annual report for the fiscal year ended March 31, ...</rdfs:label>
+            <bflc:titleSortKey>Treasury annual report for the fiscal year ended March 31, ...</bflc:titleSortKey>
+            <bf:mainTitle>Treasury annual report for the fiscal year ended March 31</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Treasury</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1995-2001</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Treasury, [1995-2001]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>7 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>1995-2000/01.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>&lt;1996-97&gt;- issued in two parts: Annual report, and, Consolidated financial statements.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Report year ends Mar. 31.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1721013#Work"/>
+   </bf:Instance>
+</rdf:RDF>

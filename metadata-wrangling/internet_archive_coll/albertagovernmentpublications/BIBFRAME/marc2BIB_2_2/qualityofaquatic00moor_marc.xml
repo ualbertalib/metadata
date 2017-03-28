@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/836188#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>836188</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-10-22</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AVC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>QH 541.5 W3</bf:classificationPortion>
+            <bf:itemPortion>M823 1992</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/836188#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Moore, James W.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Moore, James W.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aMoore, James W.</bflc:name00MarcKey>
+                  <rdfs:label>Moore, James W.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Quality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay,</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Quality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay,</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aQuality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay,</bflc:title40MarcKey>
+            <rdfs:label>Quality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay,</rdfs:label>
+            <bflc:titleSortKey>Quality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay,</bflc:titleSortKey>
+            <bf:mainTitle>Quality of aquatic habitats in Alberta :/ Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /ed. by James W. Moore, Thomas A. Heming and W.C. Mackay</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/836188#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Aquatic habitats--Alberta--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Aquatic habitats--Alberta--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Aquatic habitats</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/836188#Agent700-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Heming, Thomas A.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHeming, Thomas A.</bflc:name00MarcKey>
+                  <rdfs:label>Heming, Thomas A.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/836188#Agent700-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>MacKay, W. C.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMacKay, W. C.</bflc:name00MarcKey>
+                  <rdfs:label>MacKay, W. C.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/836188#Agent710-33">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Environmental Centre.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Environmental Centre.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Environmental Centre.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/836188#Work830-34">
+            <rdfs:label>AECV92-P3</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>AECV92-P3</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAECV92-P3</bflc:title30MarcKey>
+                  <rdfs:label>AECV92-P3</rdfs:label>
+                  <bflc:titleSortKey>AECV92-P3</bflc:titleSortKey>
+                  <bf:mainTitle>AECV92-P3</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/836188#Work830-35">
+            <rdfs:label>Publication (Alberta Environmental Centre) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta Environmental Centre) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta Environmental Centre) ;$vno. AECV92-P3.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta Environmental Centre) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta Environmental Centre) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta Environmental Centre)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. AECV92-P3</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/836188#Work830-36">
+            <rdfs:label>AECV (Series)</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>AECV (Series)</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAECV (Series)$v92-P3.</bflc:title30MarcKey>
+                  <rdfs:label>AECV (Series)</rdfs:label>
+                  <bflc:titleSortKey>AECV (Series)</bflc:titleSortKey>
+                  <bf:mainTitle>AECV (Series)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>92-P3</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/836188#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/836188#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1992</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0773210601</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm33161152</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Quality of aquatic habitats in Alberta : Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 1992 Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Quality of aquatic habitats in Alberta : Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 1992 Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /</rdfs:label>
+            <bflc:titleSortKey>Quality of aquatic habitats in Alberta : Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 1992 Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 /</bflc:titleSortKey>
+            <bf:mainTitle>Quality of aquatic habitats in Alberta : Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987 1992</bf:mainTitle>
+            <bf:subtitle>Proceedings of the third annual applied aquatics studies workshop, Edmonton, Alberta, February 17-18, 1987</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>ed. by James W. Moore, Thomas A. Heming and W.C. Mackay</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Vegreville, AB</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environmental Centre</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1992</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Vegreville, AB : Alberta Environmental Centre, 1992.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v, 240</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill., maps</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>AECV92-P3</bf:seriesStatement>
+      <bf:seriesStatement>AECV92-P3.</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>p. 4-10. Aquatic plant management in irrigation systems / Burland, Robert G / Alberta. Dept. of the Environment. Pollution Control Division -- p. 11 (abstract). Aquatic macrophyte problems in Alberta / Crosby, Jan / Alberta. Dept. of the Environment. Planning Division -- p. 12 (abstract). The potential for lake rehabilitation in Alberta / Mitchell, Patricia / Alberta. Dept. of the Environment. Environmental Assessment Division -- p. 23-24. An overview of the potential sensitivity of Alberta lakes to acidic deposition / Trew, David O / Alberta. Dept. of the Environment. Pollution Control Division -- p. 208-223. Spikerush, eleocharis acicularis, as a control of aquatic plant growth in irrigation systems in Alberta / Baddaloo, Earle G / Alberta. Dept. of the Environment. Environmental Assessment Division.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/836188#Work"/>
+   </bf:Instance>
+</rdf:RDF>

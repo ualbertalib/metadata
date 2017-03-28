@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/3972512#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>3972512</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-07</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEEN</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AOAC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TD 930.2*</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Manure management record keeping regulations.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Manure management record keeping regulations.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aManure management record keeping regulations.</bflc:title40MarcKey>
+            <rdfs:label>Manure management record keeping regulations.</rdfs:label>
+            <bflc:titleSortKey>Manure management record keeping regulations.</bflc:titleSortKey>
+            <bf:mainTitle>Manure management record keeping regulations</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Work rdf:about="http://example.org/3972512#Work610-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#NameTitle"/>
+            <madsrdf:authoritativeLabel>Alberta. Agricultural Operation Practices Act.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/3972512#Agent610-27">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                        <bflc:name10MatchKey>Alberta.</bflc:name10MatchKey>
+                        <bflc:name10MarcKey>61010$aAlberta.$tAgricultural Operation Practices Act.</bflc:name10MarcKey>
+                        <rdfs:label>Alberta.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Agricultural Operation Practices Act.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title10MatchKey>Agricultural Operation Practices Act.</bflc:title10MatchKey>
+                  <bflc:title10MarcKey>61010$aAlberta.$tAgricultural Operation Practices Act.</bflc:title10MarcKey>
+                  <rdfs:label>Agricultural Operation Practices Act.</rdfs:label>
+                  <bflc:titleSortKey>Agricultural Operation Practices Act.</bflc:titleSortKey>
+                  <bf:mainTitle>Agricultural Operation Practices Act</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3972512#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Manure handling--Law and legislation--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Manure handling--Law and legislation--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Manure handling</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Law and legislation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/3972512#Work830-29">
+            <rdfs:label>Agdex ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Agdex ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAgdex ;$v096-3.</bflc:title30MarcKey>
+                  <rdfs:label>Agdex ;</rdfs:label>
+                  <bflc:titleSortKey>Agdex ;</bflc:titleSortKey>
+                  <bf:mainTitle>Agdex</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>096-3</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/3972512#Work830-30">
+            <rdfs:label>The standard : environmental standards for Alberta's livestock industry</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>The standard : environmental standards for Alberta's livestock industry</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 4$aThe standard : environmental standards for Alberta's livestock industry</bflc:title30MarcKey>
+                  <rdfs:label>The standard : environmental standards for Alberta's livestock industry</rdfs:label>
+                  <bflc:titleSortKey>standard : environmental standards for Alberta's livestock industry</bflc:titleSortKey>
+                  <bf:mainTitle>The standard : environmental standards for Alberta's livestock industry</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/3972512#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/3972512#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2007</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn166335212</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:classification>
+         <bf:Classification>
+            <rdfs:label>096-3</rdfs:label>
+         </bf:Classification>
+      </bf:classification>
+      <rdfs:label>Manure management record keeping regulations 2007</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Manure management record keeping regulations 2007</rdfs:label>
+            <bflc:titleSortKey>Manure management record keeping regulations 2007</bflc:titleSortKey>
+            <bf:mainTitle>Manure management record keeping regulations 2007</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:editionStatement>Rev</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Agriculture and Food</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2007</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta.] : Alberta Agriculture and Food, 2007</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>[4] p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>col. ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>The standard : environmental standards for Alberta's livestock industry</bf:seriesStatement>
+      <bf:seriesStatement>AGDEX</bf:seriesStatement>
+      <bf:seriesEnumeration>096-3</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Revised March 2007"</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Caption title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>On cover: NRCB Natural Resources Conservation Board.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Agdex 096-3"</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/3972512#Work"/>
+   </bf:Instance>
+</rdf:RDF>

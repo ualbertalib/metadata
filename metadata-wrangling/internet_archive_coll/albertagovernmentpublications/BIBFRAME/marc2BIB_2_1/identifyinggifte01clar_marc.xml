@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1916300#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1916300</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-05-29</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>LC 3995.4.A4</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1916300#Agent100-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Clarke, S. C. T. (Stanley Charles Tremayne), 1912-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Clarke, S. C. T. (Stanley Charles Tremayne), 1912-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aClarke, S. C. T.$q(Stanley Charles Tremayne),$d1912-</bflc:name00MarcKey>
+                  <rdfs:label>Clarke, S. C. T. (Stanley Charles Tremayne), 1912-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Identifying the gifted and providing for their education :</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Identifying the gifted and providing for their education :</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aIdentifying the gifted and providing for their education :$ban evaluation of school based procedures in the Edmonton Catholic School System /$cby S.C.T. Clarke and V.R. Nyberg.</bflc:title40MarcKey>
+            <rdfs:label>Identifying the gifted and providing for their education :</rdfs:label>
+            <bflc:titleSortKey>Identifying the gifted and providing for their education :</bflc:titleSortKey>
+            <bf:mainTitle>Identifying the gifted and providing for their education</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1916300#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Gifted children--Education--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Gifted children--Education--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Gifted children</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1916300#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Nyberg, Verner R., 1922-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aNyberg, Verner R.,$d1922-</bflc:name00MarcKey>
+                  <rdfs:label>Nyberg, Verner R., 1922-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1916300#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Education. Planning Services.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Education.$bPlanning Services.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Education. Planning Services.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1916300#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Strathcona (Alta. : County)</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aStrathcona (Alta. : County)</bflc:name10MarcKey>
+                  <rdfs:label>Strathcona (Alta. : County)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1916300#Work740-28">
+            <rdfs:label>Elementary school grades.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Elementary school grades.</rdfs:label>
+                  <bflc:titleSortKey>Elementary school grades.</bflc:titleSortKey>
+                  <bf:mainTitle>Elementary school grades</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1916300#Work740-29">
+            <rdfs:label>An evaluation of school based procedures in the Edmonton Catholic School System.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>An evaluation of school based procedures in the Edmonton Catholic School System.</rdfs:label>
+                  <bflc:titleSortKey>evaluation of school based procedures in the Edmonton Catholic School System.</bflc:titleSortKey>
+                  <bf:mainTitle>An evaluation of school based procedures in the Edmonton Catholic School System</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1916300#Work740-30">
+            <rdfs:label>Programs for gifted pupils in Edmonton Catholic elementary schools.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Programs for gifted pupils in Edmonton Catholic elementary schools.</rdfs:label>
+                  <bflc:titleSortKey>Programs for gifted pupils in Edmonton Catholic elementary schools.</bflc:titleSortKey>
+                  <bf:mainTitle>Programs for gifted pupils in Edmonton Catholic elementary schools</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1916300#Work740-31">
+            <rdfs:label>Evaluation of the honors program in a senior high school.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Evaluation of the honors program in a senior high school.</rdfs:label>
+                  <bflc:titleSortKey>Evaluation of the honors program in a senior high school.</bflc:titleSortKey>
+                  <bf:mainTitle>Evaluation of the honors program in a senior high school</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1916300#Work740-32">
+            <rdfs:label>Honors program in a senior high school.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Honors program in a senior high school.</rdfs:label>
+                  <bflc:titleSortKey>Honors program in a senior high school.</bflc:titleSortKey>
+                  <bf:mainTitle>Honors program in a senior high school</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1916300#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1916300#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1984/9999</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm13642884</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Identifying the gifted and providing for their education : an evaluation of school based procedures in the Edmonton Catholic School System 1984 an evaluation of school based procedures in the Edmonton Catholic School System /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Identifying the gifted and providing for their education : an evaluation of school based procedures in the Edmonton Catholic School System 1984 an evaluation of school based procedures in the Edmonton Catholic School System /</rdfs:label>
+            <bflc:titleSortKey>Identifying the gifted and providing for their education : an evaluation of school based procedures in the Edmonton Catholic School System 1984 an evaluation of school based procedures in the Edmonton Catholic School System /</bflc:titleSortKey>
+            <bf:mainTitle>Identifying the gifted and providing for their education : an evaluation of school based procedures in the Edmonton Catholic School System 1984</bf:mainTitle>
+            <bf:subtitle>an evaluation of school based procedures in the Edmonton Catholic School System</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by S.C.T. Clarke and V.R. Nyberg</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Planning Services Branch, Alberta Education</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1984-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta.] : Planning Services Branch, Alberta Education, 1984-.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>A.K.A. programs for gifted pupils in Edmonton Catholic Elementary schools. Alias Evaluation of programs for gifted pupils in the elementary schools of Edmonton Catholic School District.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Pt. 1 has cover title: Programs for gifted pupils in Edmonton Catholic elementary schools.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Pt. 2 has cover title: Honors program in a senior High School.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Pt. 1. Elementary school grades -- pt. 2. Evaluation of the Honors program in Archbishop MacDonald High School.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1916300#Work"/>
+   </bf:Instance>
+</rdf:RDF>

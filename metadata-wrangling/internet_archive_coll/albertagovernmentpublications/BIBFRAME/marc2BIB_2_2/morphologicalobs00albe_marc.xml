@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/560414#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>unknown</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>560414</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-04-26</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>RA 1247 H8</bf:classificationPortion>
+            <bf:itemPortion>A333 1986</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/560414#Agent110-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Environmental Centre.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1102 $aAlberta Environmental Centre.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta Environmental Centre.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta Environmental Centre.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aMorphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre.</bflc:title40MarcKey>
+            <rdfs:label>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre.</rdfs:label>
+            <bflc:titleSortKey>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre.</bflc:titleSortKey>
+            <bf:mainTitle>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide // Alberta Environmental Centre</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/560414#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hydrogen sulfide--Environmental aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hydrogen sulfide--Environmental aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hydrogen sulfide</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/560414#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Gases, Asphyxiating and poisonous--Toxicology.</rdfs:label>
+            <madsrdf:authoritativeLabel>Gases, Asphyxiating and poisonous--Toxicology.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Gases, Asphyxiating and poisonous</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Toxicology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/560414#Work830-27">
+            <rdfs:label>AECV86-S1</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>AECV86-S1</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAECV86-S1</bflc:title30MarcKey>
+                  <rdfs:label>AECV86-S1</rdfs:label>
+                  <bflc:titleSortKey>AECV86-S1</bflc:titleSortKey>
+                  <bf:mainTitle>AECV86-S1</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/560414#Work830-28">
+            <rdfs:label>Series on inhalation toxicology ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Series on inhalation toxicology ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aSeries on inhalation toxicology ;$v1.</bflc:title30MarcKey>
+                  <rdfs:label>Series on inhalation toxicology ;</rdfs:label>
+                  <bflc:titleSortKey>Series on inhalation toxicology ;</bflc:titleSortKey>
+                  <bf:mainTitle>Series on inhalation toxicology</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>1</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/560414#Work830-29">
+            <rdfs:label>AECV (Series) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>AECV (Series) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAECV (Series) ;$v86-S1.</bflc:title30MarcKey>
+                  <rdfs:label>AECV (Series) ;</rdfs:label>
+                  <bflc:titleSortKey>AECV (Series) ;</bflc:titleSortKey>
+                  <bf:mainTitle>AECV (Series)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>86-S1</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/560414#Work830-30">
+            <rdfs:label>Publication (Alberta Environmental Centre) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta Environmental Centre) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta Environmental Centre) ;$vAECV86-S1.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta Environmental Centre) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta Environmental Centre) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta Environmental Centre)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>AECV86-S1</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/560414#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/560414#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>regular print reproduction</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Print"/>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm37309857</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide 1986</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide 1986</rdfs:label>
+            <bflc:titleSortKey>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide 1986</bflc:titleSortKey>
+            <bf:mainTitle>Morphological observations in rats exposed for six hours to an atmosphere of 0, 56 or 420 mg m-3 hydrogen sulphide 1986</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Environmental Centre</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Vegreville, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environmental Centre</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Vegreville, Alta. : Alberta Environmental Centre, 1986.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v, 28 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>AECV86-S1</bf:seriesStatement>
+      <bf:seriesStatement>Series on inhalation toxicology / Alberta Environmental Centre</bf:seriesStatement>
+      <bf:seriesEnumeration>1</bf:seriesEnumeration>
+      <bf:seriesStatement>AECV</bf:seriesStatement>
+      <bf:seriesEnumeration>86-S1</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 18-20.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/560414#Work"/>
+   </bf:Instance>
+</rdf:RDF>

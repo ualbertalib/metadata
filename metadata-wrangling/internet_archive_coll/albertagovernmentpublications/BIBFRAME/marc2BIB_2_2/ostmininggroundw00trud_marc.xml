@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1560594#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1560594</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19  -  -  </bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1560594#Agent100-10">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Trudell, Mark R.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Trudell, Mark R.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aTrudell, Mark R.</bflc:name00MarcKey>
+                  <rdfs:label>Trudell, Mark R.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Post-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Post-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aPost-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</bflc:title40MarcKey>
+            <rdfs:label>Post-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</rdfs:label>
+            <bflc:titleSortKey>Post-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</bflc:titleSortKey>
+            <bf:mainTitle>Post-mining groundwater supply potential at the Highvale site :/ plains hydrology &amp; reclamation project /by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1560594#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Reclamation of land--Alberta--Highvale Region.</rdfs:label>
+            <madsrdf:authoritativeLabel>Reclamation of land--Alberta--Highvale Region.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Reclamation of land</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Highvale Region</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1560594#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Water-supply, Agricultural--Alberta--Highvale Region.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water-supply, Agricultural--Alberta--Highvale Region.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Water-supply, Agricultural</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Highvale Region</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1560594#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Strip mining--Environmental aspects--Alberta--Highvale Region.</rdfs:label>
+            <madsrdf:authoritativeLabel>Strip mining--Environmental aspects--Alberta--Highvale Region.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Strip mining</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Highvale Region</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1560594#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Groundwater--Alberta--Highvale Region.</rdfs:label>
+            <madsrdf:authoritativeLabel>Groundwater--Alberta--Highvale Region.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Groundwater</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Highvale Region</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1560594#Topic651-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Highvale Region (Alta.)</rdfs:label>
+            <madsrdf:authoritativeLabel>Highvale Region (Alta.)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1560594#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Research Council. Terrain Sciences Department.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAlberta Research Council.$bTerrain Sciences Department.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta Research Council. Terrain Sciences Department.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1560594#Agent710-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Reclamation Research Technical Advisory Committee.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bReclamation Research Technical Advisory Committee.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Reclamation Research Technical Advisory Committee.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1560594#Work740-29">
+            <rdfs:label>Plains hydrology and reclamation project.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Plains hydrology and reclamation project.</rdfs:label>
+                  <bflc:titleSortKey>Plains hydrology and reclamation project.</bflc:titleSortKey>
+                  <bf:mainTitle>Plains hydrology and reclamation project</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1560594#Work830-30">
+            <rdfs:label>Report (Alberta. Reclamation Research Technical Advisory Committee) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Report (Alberta. Reclamation Research Technical Advisory Committee) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aReport (Alberta. Reclamation Research Technical Advisory Committee) ;$vRRTAC 86-7.</bflc:title30MarcKey>
+                  <rdfs:label>Report (Alberta. Reclamation Research Technical Advisory Committee) ;</rdfs:label>
+                  <bflc:titleSortKey>Report (Alberta. Reclamation Research Technical Advisory Committee) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Report (Alberta. Reclamation Research Technical Advisory Committee)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>RRTAC 86-7</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1560594#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1560594#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm25888788</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>ost-mining groundwater supply potential at the Highvale site : plains hydrology &amp; reclamation project 1986 plains hydrology &amp; reclamation project /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>ost-mining groundwater supply potential at the Highvale site : plains hydrology &amp; reclamation project 1986 plains hydrology &amp; reclamation project /</rdfs:label>
+            <bflc:titleSortKey>ost-mining groundwater supply potential at the Highvale site : plains hydrology &amp; reclamation project 1986 plains hydrology &amp; reclamation project /</bflc:titleSortKey>
+            <bf:mainTitle>ost-mining groundwater supply potential at the Highvale site : plains hydrology &amp; reclamation project 1986</bf:mainTitle>
+            <bf:subtitle>plains hydrology &amp; reclamation project</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by M.R. Trudell, Terrain Sciences Department, Alberta Research Council</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Reclamation Research Technical Advisory Committee of the Alberta Land Conservation and Reclamation Council</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton, Alta. : Reclamation Research Technical Advisory Committee of the Alberta Land Conservation and Reclamation Council, 1986</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>viii, 25 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Report</bf:seriesStatement>
+      <bf:seriesEnumeration>RRTAC 86-7</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Prepared for Research Reclamation Technical Advisory Committee of the Alberta Land Conservation and Reclamation Council. -- One of a series of reports that present the findings of the Plains Hydrology and Reclamation Project.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 21.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1560594#Work"/>
+   </bf:Instance>
+</rdf:RDF>

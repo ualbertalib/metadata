@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/3467742#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>3467742</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-03-01</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEEN</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>KEA 421*</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Alberta Environment compliance assurance.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Alberta Environment compliance assurance.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAlberta Environment compliance assurance.</bflc:title40MarcKey>
+            <rdfs:label>Alberta Environment compliance assurance.</rdfs:label>
+            <bflc:titleSortKey>Alberta Environment compliance assurance.</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Environment compliance assurance</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3467742#Topic650-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Environmental law--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Environmental law--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental law</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3467742#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Environmental policy--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Environmental policy--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental policy</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3467742#Agent710-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Environment.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Environment.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Environment.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-24">
+            <rdfs:label>Shoreline modification : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Shoreline modification : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Shoreline modification : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Shoreline modification : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-25">
+            <rdfs:label>Environmental Protection and Enhancement Act : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Environmental Protection and Enhancement Act : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Environmental Protection and Enhancement Act : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Environmental Protection and Enhancement Act : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-26">
+            <rdfs:label>Compliance and enforcement tools : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Compliance and enforcement tools : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Compliance and enforcement tools : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Compliance and enforcement tools : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-27">
+            <rdfs:label>Compliance inspection program : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Compliance inspection program : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Compliance inspection program : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Compliance inspection program : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-28">
+            <rdfs:label>Administrative penalties : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Administrative penalties : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Administrative penalties : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Administrative penalties : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-29">
+            <rdfs:label>Alberta Water Act : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Alberta Water Act : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Alberta Water Act : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Alberta Water Act : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-30">
+            <rdfs:label>Reporting spills and releases : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Reporting spills and releases : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Reporting spills and releases : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Reporting spills and releases : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-31">
+            <rdfs:label>Burning waste : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Burning waste : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Burning waste : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Burning waste : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-32">
+            <rdfs:label>Compulsory industry monitoring : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Compulsory industry monitoring : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Compulsory industry monitoring : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Compulsory industry monitoring : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-33">
+            <rdfs:label>Storing hazardous waste and recyclables : facts at your fingertips.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Storing hazardous waste and recyclables : facts at your fingertips.</rdfs:label>
+                  <bflc:titleSortKey>Storing hazardous waste and recyclables : facts at your fingertips.</bflc:titleSortKey>
+                  <bf:mainTitle>Storing hazardous waste and recyclables : facts at your fingertips</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-34">
+            <rdfs:label>Alberta Environment compliance assurance program summary.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Alberta Environment compliance assurance program summary.</rdfs:label>
+                  <bflc:titleSortKey>Alberta Environment compliance assurance program summary.</bflc:titleSortKey>
+                  <bf:mainTitle>Alberta Environment compliance assurance program summary</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-35">
+            <rdfs:label>Call to report a spill or environmental emergency poster.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Call to report a spill or environmental emergency poster.</rdfs:label>
+                  <bflc:titleSortKey>Call to report a spill or environmental emergency poster.</bflc:titleSortKey>
+                  <bf:mainTitle>Call to report a spill or environmental emergency poster</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/3467742#Work740-36">
+            <rdfs:label>A guide to release reporting : Alberta Environmental Protection and Enhancement Act.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>A guide to release reporting : Alberta Environmental Protection and Enhancement Act.</rdfs:label>
+                  <bflc:titleSortKey>guide to release reporting : Alberta Environmental Protection and Enhancement Act.</bflc:titleSortKey>
+                  <bf:mainTitle>A guide to release reporting : Alberta Environmental Protection and Enhancement Act</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/3467742#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/3467742#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1987/2006</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn185040180</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Alberta Environment compliance assurance 1987</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Alberta Environment compliance assurance 1987</rdfs:label>
+            <bflc:titleSortKey>Alberta Environment compliance assurance 1987</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Environment compliance assurance 1987</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Environment</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1987-2006?</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton] : Alberta Environment, [1987-2006?]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>13 items in folder</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Shoreline modification: facts at your fingertips (Aug. 2004) -- Environmental Protection and Enhancement Act: facts at your fingertips (Apr. 2004) -- Compliance and enforcement tools: facts at your fingertips (Aug. 2004) -- Compliance inspection program: facts at your fingertips (Aug. 2004) -- Administrative penalties: facts at your fingertips (Aug. 2004) -- Alberta Water Act: facts at your fingertips (Aug. 2004) -- Reporting spills and releases: facts at your fingertips (Aug. 2004) -- Burning waste: facts at your fingertips (Aug. 2004) -- Compulsory industry monitoring: facts at your fingertips (Aug. 2004) -- Storing hazardous waste &amp; recyclables: facts at your fingertips (Aug. 2004) -- Call to report a spill or environmental emergency (poster) -- A guide to release reporting: Alberta Environmental Protection and Enhancement Act -- Alberta Environment compliance assurance program summary.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/3467742#Work"/>
+   </bf:Instance>
+</rdf:RDF>

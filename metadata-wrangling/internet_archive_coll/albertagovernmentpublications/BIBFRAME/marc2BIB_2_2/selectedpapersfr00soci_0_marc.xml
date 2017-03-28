@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/769272#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>769272</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1980-10-21</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>LC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>HN25</bf:classificationPortion>
+            <bf:itemPortion>.S6 1975a</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>301/.0723</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/769272#Agent111-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Social Indicators Conference (1975 : Edmonton, Alta.)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>1112 $aSocial Indicators Conference$d(1975 :$cEdmonton, Alta.)</bflc:name11MarcKey>
+                  <bflc:primaryContributorName11MatchKey>Social Indicators Conference (1975 : Edmonton, Alta.)</bflc:primaryContributorName11MatchKey>
+                  <rdfs:label>Social Indicators Conference (1975 : Edmonton, Alta.)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Selected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Selected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aSelected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</bflc:title40MarcKey>
+            <rdfs:label>Selected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</rdfs:label>
+            <bflc:titleSortKey>Selected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</bflc:titleSortKey>
+            <bf:mainTitle>Selected papers from the Social Indicators Conference, 1975 :/ selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/769272#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Social indicators--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Social indicators--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social indicators</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/769272#Agent710-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>University of Alberta. Population Research Laboratory.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aUniversity of Alberta.$bPopulation Research Laboratory.</bflc:name10MarcKey>
+                  <rdfs:label>University of Alberta. Population Research Laboratory.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/769272#Agent710-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Bureau of Statistics.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bBureau of Statistics.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Bureau of Statistics.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/769272#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/769272#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1977</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/xx"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   80502515</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>C***</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Library and Archives Canada</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm06943525</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Selected papers from the Social Indicators Conference, 1975 : selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council 1977 selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Selected papers from the Social Indicators Conference, 1975 : selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council 1977 selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</rdfs:label>
+            <bflc:titleSortKey>Selected papers from the Social Indicators Conference, 1975 : selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council 1977 selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council.</bflc:titleSortKey>
+            <bf:mainTitle>Selected papers from the Social Indicators Conference, 1975 : selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council 1977</bf:mainTitle>
+            <bf:subtitle>selected papers from the Social Indicators Conference, Edmonton, Canada, 29-31 May, 1975, organized by the Population Research Laboratory ... and the Alberta Bureau of Statistics and sponsored by the Canada Council</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>s.l.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>s.n.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1977</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[s.l. : s.n.], 1977.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>96 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographies.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/769272#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/769272#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HN25.S6 1975a</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/769272#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

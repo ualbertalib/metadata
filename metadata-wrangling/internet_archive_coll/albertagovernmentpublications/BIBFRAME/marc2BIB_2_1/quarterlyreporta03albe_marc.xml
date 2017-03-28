@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/000028696989#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>000028696989</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-10-31T13:38:58</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-03-04</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaACU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaACU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/000028696989#Agent110-7">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Treasury Branches.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bTreasury Branches.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. Treasury Branches.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. Treasury Branches.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Quarterly report /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Quarterly report /</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aQuarterly report /$cAlberta Treasury Branches.</bflc:title40MarcKey>
+            <rdfs:label>Quarterly report /</rdfs:label>
+            <bflc:titleSortKey>Quarterly report /</bflc:titleSortKey>
+            <bf:mainTitle>Quarterly report</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/000028696989#Instance530-16">
+            <bf:instanceOf rdf:resource="http://example.org/000028696989#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>Quarterly report /</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aQuarterly report /$cAlberta Treasury Branches.</bflc:title40MarcKey>
+                  <rdfs:label>Quarterly report /</rdfs:label>
+                  <bflc:titleSortKey>Quarterly report /</bflc:titleSortKey>
+                  <bf:mainTitle>Quarterly report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/000028696989#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Also available online as: Quarterly results</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Fourth quarter results included in ATB's annual report.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/000028696989#Agent610-18">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta. Treasury Branches--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Treasury Branches</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61000$aAlberta.$bTreasury Branches$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Treasury Branches</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/000028696989#Work740-19">
+            <rdfs:label>Quarterly results.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Quarterly results.</rdfs:label>
+                  <bflc:titleSortKey>Quarterly results.</bflc:titleSortKey>
+                  <bf:mainTitle>Quarterly results</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:continues>
+         <bf:Work rdf:about="http://example.org/000028696989#Work780-20">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Treasury Branches.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/000028696989#Instance780-20">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Results</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/000028696989#Work780-20"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continues>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/000028696989#Work785-21">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>ATB Financial.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/000028696989#Instance785-21">
+                  <bf:provisionActivityStatement>Edmonton : Alberta Treasury Branches, 2002-</bf:provisionActivityStatement>
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Report.</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/000028696989#Work785-21"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/000028696989#Work787-22">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. Treasury Branches.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/000028696989#Instance787-22">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Alberta Treasury Branches annual report for the year ended March 31, ...</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/000028696989#Work787-22"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/000028696989#Instance856-26">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Quarterly report / Alberta Treasury Branches 2000</rdfs:label>
+                  <bflc:titleSortKey>Quarterly report / Alberta Treasury Branches 2000</bflc:titleSortKey>
+                  <bf:mainTitle>Quarterly report / Alberta Treasury Branches 2000</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/000028696989#Item856-26">
+                  <bf:electronicLocator rdf:resource="http://www.atb.com/atb/atb_finance.html"/>
+                  <bf:itemOf rdf:resource="http://example.org/000028696989#Instance856-26"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/000028696989#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/000028696989#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/000028696989#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2000/2001</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/tty">
+            <rdfs:label>three times a year</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <rdfs:label>Quarterly report / Alberta Treasury Branches 2000</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Quarterly report / Alberta Treasury Branches 2000</rdfs:label>
+            <bflc:titleSortKey>Quarterly report / Alberta Treasury Branches 2000</bflc:titleSortKey>
+            <bf:mainTitle>Quarterly report / Alberta Treasury Branches 2000</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Treasury Branches</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Treasury Branches</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2000-2001</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : Alberta Treasury Branches, 2000-2001.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Three times per year.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:firstIssue>2nd quarter (2000)</bf:firstIssue>
+      <bf:lastIssue>3rd quarter (2001).</bf:lastIssue>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from caption.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Financial report for 1st quarter covers three months ending June 30; 2nd quarter covers six months ending Sept. 30; 3rd quarter covers nine months ending Dec. 31.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/000028696989#Instance530-16"/>
+      <bf:instanceOf rdf:resource="http://example.org/000028696989#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/000028696989#Item852-23">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/CaACU"/>
+            </bf:heldBy>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>ILL: n.s.</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/000028696989#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/000028696989#Item852-25">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/CaOONL"/>
+            </bf:heldBy>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>ILL: no</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/000028696989#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

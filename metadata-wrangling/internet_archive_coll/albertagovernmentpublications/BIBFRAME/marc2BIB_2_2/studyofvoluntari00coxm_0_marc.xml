@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1827835#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1827835</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-04-10</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1827835#Agent100-8">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Cox, Mary Jane.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Cox, Mary Jane.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aCox, Mary Jane.</bflc:name00MarcKey>
+                  <rdfs:label>Cox, Mary Jane.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>A study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>A study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aA study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel.</bflc:title40MarcKey>
+            <rdfs:label>A study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel.</rdfs:label>
+            <bflc:titleSortKey>A study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel.</bflc:titleSortKey>
+            <bf:mainTitle>A study of voluntarism in recreation :/ results from the 1981 Public opinion survey on recreation /by Mary Jane Cox, Phil Kreisel</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1827835#Topic650-18">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Volunteer workers in recreation.</rdfs:label>
+            <madsrdf:authoritativeLabel>Volunteer workers in recreation.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1827835#Topic650-19">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Volunteer workers in recreation--Canada.</rdfs:label>
+            <madsrdf:authoritativeLabel>Volunteer workers in recreation--Canada.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Volunteer workers in recreation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Canada</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1827835#Agent700-20">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Kreisel, Philip S. J. (Philip Simon John), 1956-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aKreisel, Philip S. J.$q(Philip Simon John),$d1956-</bflc:name00MarcKey>
+                  <rdfs:label>Kreisel, Philip S. J. (Philip Simon John), 1956-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1827835#Agent710-21">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Recreation Development Division. Planning Support Branch.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bRecreation Development Division.$bPlanning Support Branch.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Recreation Development Division. Planning Support Branch.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1827835#Work740-22">
+            <rdfs:label>Public opinion survey on recreation.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Public opinion survey on recreation.</rdfs:label>
+                  <bflc:titleSortKey>Public opinion survey on recreation.</bflc:titleSortKey>
+                  <bf:mainTitle>Public opinion survey on recreation</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1827835#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1827835#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1984</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm59979393</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>A study of voluntarism in recreation : results from the 1981 Public opinion survey on recreation 1984 results from the 1981 Public opinion survey on recreation /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>A study of voluntarism in recreation : results from the 1981 Public opinion survey on recreation 1984 results from the 1981 Public opinion survey on recreation /</rdfs:label>
+            <bflc:titleSortKey>study of voluntarism in recreation : results from the 1981 Public opinion survey on recreation 1984 results from the 1981 Public opinion survey on recreation /</bflc:titleSortKey>
+            <bf:mainTitle>A study of voluntarism in recreation : results from the 1981 Public opinion survey on recreation 1984</bf:mainTitle>
+            <bf:subtitle>results from the 1981 Public opinion survey on recreation</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Mary Jane Cox, Phil Kreisel</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta, Recreation and Parks</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1984</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta. : Alberta, Recreation and Parks], 1984.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>x, 156 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Prepared for Alberta Recreation and Parks, Recreation Development Division, Planning Support Branch."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1827835#Work"/>
+   </bf:Instance>
+</rdf:RDF>

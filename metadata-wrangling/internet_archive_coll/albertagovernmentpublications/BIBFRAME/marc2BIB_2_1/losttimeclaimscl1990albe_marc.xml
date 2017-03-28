@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/830402#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>830402</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-09-02</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <rdfs:label>Lost-time claims and claim rates ... summary /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Lost-time claims and claim rates ... summary /</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aLost-time claims and claim rates ... summary /$cOccupational Health and Safety Division. Alberta Community and Occupational Health.</bflc:title40MarcKey>
+            <rdfs:label>Lost-time claims and claim rates ... summary /</rdfs:label>
+            <bflc:titleSortKey>Lost-time claims and claim rates ... summary /</bflc:titleSortKey>
+            <bf:mainTitle>Lost-time claims and claim rates ... summary</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>Topics covered include injury and disease analysis, industry sectors: agriculture, mining, forestry, manufacturing and processing, construction, transportation, communication, utilities, retail, wholesale, public administration, education, health services, business, personal and professional services, occupational fatalities accepted by WCB.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/830402#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Industrial accidents--Alberta--Statistics--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Industrial accidents--Alberta--Statistics--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Industrial accidents</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Statistics</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/830402#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Workers' compensation--Alberta--Statistics--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Workers' compensation--Alberta--Statistics--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Workers' compensation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Statistics</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/830402#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Occupational Health and Safety. Research and Information Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Occupational Health and Safety.$bResearch and Information Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Occupational Health and Safety. Research and Information Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/830402#Agent710-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Occupational Health and Safety.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Occupational Health and Safety.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Occupational Health and Safety.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/830402#Agent710-36">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Labour. Information Services.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Labour.$bInformation Services.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Labour. Information Services.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/830402#Agent710-37">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Human Resources and Employment. Information Services.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Human Resources and Employment.$bInformation Services.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Human Resources and Employment. Information Services.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/830402#Agent710-38">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Human Resources and Employment.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Human Resources and Employment.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Human Resources and Employment.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:supplement>
+         <bf:Work rdf:about="http://example.org/830402#Work770-39">
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/830402#Instance770-39">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Disabling injuries and modified work claims 2005</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:instanceOf rdf:resource="http://example.org/830402#Work770-39"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:supplement>
+      <bf:continuedBy>
+         <bf:Work rdf:about="http://example.org/830402#Work785-40">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Lost-time claims, disabling injury claims and claim rates ... summary,</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/830402#Instance785-40">
+                  <bf:instanceOf rdf:resource="http://example.org/830402#Work785-40"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/830402#Work830-41">
+            <rdfs:label>Report (Alberta. Alberta Occupational Health and Safety)</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Report (Alberta. Alberta Occupational Health and Safety)</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aReport (Alberta. Alberta Occupational Health and Safety)</bflc:title30MarcKey>
+                  <rdfs:label>Report (Alberta. Alberta Occupational Health and Safety)</rdfs:label>
+                  <bflc:titleSortKey>Report (Alberta. Alberta Occupational Health and Safety)</bflc:titleSortKey>
+                  <bf:mainTitle>Report (Alberta. Alberta Occupational Health and Safety)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-42">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-42">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/1998/alhre/131512_98.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 1998</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-42"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-43">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-43">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/1999/alhre/131512_99.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 1999</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-43"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-44">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-44">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2000/alhre/131512_00.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 2000</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-44"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-45">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-45">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2001/alhre/131512_01.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 2001</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-45"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-46">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-46">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2003/alhre/131512_03.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 2003</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-46"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-47">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-47">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2004/alhre/131512_04.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 2004</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-47"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/830402#Instance856-48">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+                  <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+                  <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/830402#Item856-48">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://www.assembly.ab.ca/lao/library/egovdocs/2005/alhre/131512_05.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access: 2005</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/830402#Instance856-48"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/830402#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/830402#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1986/2005</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1193-4786</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm26969609</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Lost-time claims and claim rates ... summary 1986</rdfs:label>
+            <bflc:titleSortKey>Lost-time claims and claim rates ... summary 1986</bflc:titleSortKey>
+            <bf:mainTitle>Lost-time claims and claim rates ... summary 1986</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Occupational Health and Safety Division. Alberta Community and Occupational Health</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/ParallelTitle"/>
+            <rdfs:label>Occupational injuries and diseases in Alberta summary</rdfs:label>
+            <bflc:titleSortKey>Occupational injuries and diseases in Alberta summary</bflc:titleSortKey>
+            <bf:mainTitle>Occupational injuries and diseases in Alberta summary</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Occupational injury and disease in Alberta</rdfs:label>
+            <bflc:titleSortKey>Occupational injury and disease in Alberta</bflc:titleSortKey>
+            <bf:mainTitle>Occupational injury and disease in Alberta</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Occupational injuries and diseases in Alberta</rdfs:label>
+            <bflc:titleSortKey>Occupational injuries and diseases in Alberta</bflc:titleSortKey>
+            <bf:mainTitle>Occupational injuries and diseases in Alberta</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Community and Occupational Health</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1986-2005</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta.] : Alberta Community and Occupational Health 1986-2005.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Ceased 2005.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:seriesStatement>1990-1991: Report / Alberta Occupational Health and Safety</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: 1986.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>2005 issue has supplement: "Disabling injuries and modified work claims 2005."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>System requirements for online access: Adobe Acrobat Reader.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:systemRequirements>
+         <bf:SystemRequirements>
+            <rdfs:label>Mode of access: Internet.</rdfs:label>
+         </bf:SystemRequirements>
+      </bf:systemRequirements>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued by: Alberta Occupational Health and Safety, 1988-1992; Alberta Labour, Information Services, 1993-1997; by Alberta Human Resources and Employment, 1988-2005.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/830402#Work"/>
+   </bf:Instance>
+</rdf:RDF>

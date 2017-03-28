@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/778743#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>unknown</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>778743</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1986-08-01</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEGEO</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TN 806 .A3</bf:classificationPortion>
+            <bf:itemPortion>.Al14</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/778743#Agent110-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Alberta Office of Coal Research and Technology.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1102 $aAlberta Office of Coal Research and Technology.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta Office of Coal Research and Technology.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta Office of Coal Research and Technology.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Annual review /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Annual review /</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAnnual review /$cAlberta Office of Coal Research and Technology.</bflc:title40MarcKey>
+            <rdfs:label>Annual review /</rdfs:label>
+            <bflc:titleSortKey>Annual review /</bflc:titleSortKey>
+            <bf:mainTitle>Annual review</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/778743#Agent610-30">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Alberta Office of Coal Research and Technology--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta Office of Coal Research and Technology</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aAlberta Office of Coal Research and Technology$vPeriodicals.</bflc:name10MarcKey>
+            <rdfs:label>Alberta Office of Coal Research and Technology</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/778743#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Coal--Research--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Coal--Research--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Coal</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Research</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/778743#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Coal--Alberta--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Coal--Alberta--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Coal</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/778743#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Energy and Natural Resources.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Energy and Natural Resources.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Energy and Natural Resources.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/778743#Agent710-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Energy. Research Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Energy.$bResearch Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Energy. Research Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/778743#Agent710-36">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Scientific and Engineering Services and Research Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bScientific and Engineering Services and Research Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Scientific and Engineering Services and Research Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/778743#Agent710-37">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Energy. Research and Technology Branch.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>71010$aAlberta.$bAlberta Energy.$bResearch and Technology Branch.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Energy. Research and Technology Branch.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-38">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vI:134.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I:134</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-39">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/174.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/174</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-40">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/239.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/239</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-41">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/264.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/264</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-42">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vI/286.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/286</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-43">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/367.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/367</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-44">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/433.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/433</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/778743#Work830-45">
+            <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Publication (Alberta. Alberta Energy) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPublication (Alberta. Alberta Energy) ;$vI/479.</bflc:title30MarcKey>
+                  <rdfs:label>Publication (Alberta. Alberta Energy) ;</rdfs:label>
+                  <bflc:titleSortKey>Publication (Alberta. Alberta Energy) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Publication (Alberta. Alberta Energy)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>I/479</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/778743#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/778743#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985/1994</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>0831-4292</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm16269889</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Annual review 1985</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Annual review 1985</rdfs:label>
+            <bflc:titleSortKey>Annual review 1985</bflc:titleSortKey>
+            <bf:mainTitle>Annual review 1985</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Office of Coal Research and Technology</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Alberta Office of Coal Research and Technology annual review.</rdfs:label>
+            <bflc:titleSortKey>Alberta Office of Coal Research and Technology annual review.</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Office of Coal Research and Technology annual review</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Energy &amp; Natural Resources, Scientific and Engineering Services</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : Alberta Energy &amp; Natural Resources, Scientific and Engineering Services, 1985-</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:firstIssue>1984/85</bf:firstIssue>
+      <bf:lastIssue>1993/94</bf:lastIssue>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Ceased with 1992/1993?</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:seriesStatement>1984/85: ENR report</bf:seriesStatement>
+      <bf:seriesStatement>1985/86-    : Publication / Alberta Energy Scientific and Engineering and Research Division.</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>First report covers the 15-month period from January 20, 1984 to March 31, 1985.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Report year ends March 31.</rdfs:label>
+            <bf:noteType>issuance information</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Issued: 1985/86-1988/89 by Alberta Energy Scientific and Engineering Services and Research Division; 1989/90- by Alberta Energy Research and Technology Branch.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/778743#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/778743#Item050-11">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>TN 806 .A3.Al14</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/778743#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

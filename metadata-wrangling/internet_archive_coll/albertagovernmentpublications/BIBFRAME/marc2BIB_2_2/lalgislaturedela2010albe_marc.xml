@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/000040331238#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>7</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>000040331238</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaOOAMICUS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-04-03T13:52:35</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-08</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaOONL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/nlc"/>
+            </bf:descriptionAuthentication>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/isds/c"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>b</bf:code>
+            <rdfs:label>extended roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>JL333</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Library and Archives Canada</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>328.7123</bf:classificationPortion>
+            <bf:edition>22</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/000040331238#Agent110-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aAlberta.$bAssembleÌ&#x81;e leÌ&#x81;gislative.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aLa leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:title40MarcKey>
+            <rdfs:label>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</rdfs:label>
+            <bflc:titleSortKey>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:titleSortKey>
+            <bf:mainTitle>La leÌ&#x81;gislature de l'Alberta, guide du citoyen</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/000040331238#Instance530-21">
+            <bf:instanceOf rdf:resource="http://example.org/000040331238#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title40MatchKey>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:title40MatchKey>
+                  <bflc:title40MarcKey>24000$aLa leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:title40MarcKey>
+                  <rdfs:label>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</rdfs:label>
+                  <bflc:titleSortKey>La leÌ&#x81;gislature de l'Alberta, guide du citoyen./</bflc:titleSortKey>
+                  <bf:mainTitle>La leÌ&#x81;gislature de l'Alberta, guide du citoyen</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/000040331238#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>EÌ&#x81;galement publ. en ligne</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/000040331238#Agent610-24">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>rvm</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61016$aAlberta.$bAssembleÌ&#x81;e leÌ&#x81;gislative.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/000040331238#Agent610-25">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>Alberta. Legislative Assembly.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Alberta. Legislative Assembly.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61010$aAlberta.$bLegislative Assembly.</bflc:name10MarcKey>
+            <rdfs:label>Alberta. Legislative Assembly.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:otherEdition>
+         <bf:Work rdf:about="http://example.org/000040331238#Work775-26">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta. AssembleÌ&#x81;e leÌ&#x81;gislative.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/000040331238#Instance775-26">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Citizen's guide to the Alberta Legislature</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>1919-8434</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/000040331238#Work775-26"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:otherEdition>
+      <bf:hasInstance rdf:resource="http://example.org/000040331238#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/000040331238#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">200X/..</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Currently published</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>completely irregular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>20128001291 </rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Library and Archives Canada</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>1928-7054</rdf:value>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/KeyTitle"/>
+            <rdfs:label>La leÌ&#x81;gislature de l'Alberta, guide du citoyen</rdfs:label>
+            <bflc:titleSortKey>leÌ&#x81;gislature de l'Alberta, guide du citoyen</bflc:titleSortKey>
+            <bf:mainTitle>La leÌ&#x81;gislature de l'Alberta, guide du citoyen</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <rdfs:label>La législature de l'Alberta, guide du citoyen 2010</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>La législature de l'Alberta, guide du citoyen 2010</rdfs:label>
+            <bflc:titleSortKey>législature de l'Alberta, guide du citoyen 2010</bflc:titleSortKey>
+            <bf:mainTitle>La législature de l'Alberta, guide du citoyen 2010</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>Guide du citoyen</rdfs:label>
+            <bflc:titleSortKey>Guide du citoyen</bflc:titleSortKey>
+            <bf:mainTitle>Guide du citoyen</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>AssembleÌ&#x81;e leÌ&#x81;gislative de l'Alberta</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton : AssembleÌ&#x81;e leÌ&#x81;gislative de l'Alberta]</bf:provisionActivityStatement>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>IrreÌ&#x81;gulier</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>PremieÌ&#x80;re livr. en 200-?</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/000040331238#Instance530-21"/>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description d'apreÌ&#x80;s: 7e eÌ&#x81;d., publ. en 2010; titre pris sur la couv.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>DernieÌ&#x80;re livr. consulteÌ&#x81;e: 7e eÌ&#x81;d., publ. en 2010.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/000040331238#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/000040331238#Item852-27">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/CaOONL"/>
+            </bf:heldBy>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>PEB: non</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/000040331238#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/3992540#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>3992540</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-25</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEE</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <rdfs:label>2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$a2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office.</bflc:title40MarcKey>
+            <rdfs:label>2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office.</rdfs:label>
+            <bflc:titleSortKey>2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office.</bflc:titleSortKey>
+            <bf:mainTitle>2007 Fire Prevention Week campaign :/ October 7-13, 2007 /Alberta Emergency Management Agency, Fire Commissioner's Office</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/3992540#Instance533-23">
+            <bf:instanceOf rdf:resource="http://example.org/3992540#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</rdfs:label>
+                  <bflc:titleSortKey>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</bflc:titleSortKey>
+                  <bf:mainTitle>2007 Fire Prevention Week campaign : October 7-13, 2007 2007</bf:mainTitle>
+                  <bf:subtitle>October 7-13, 2007</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:reproductionOf rdf:resource="http://example.org/3992540#Instance"/>
+            <bf:carrier>
+               <bf:Carrier>
+                  <rdfs:label>Hard copy printed from Internet</rdfs:label>
+               </bf:Carrier>
+            </bf:carrier>
+            <bf:provisionActivity>
+               <bf:ProvisionActivity>
+                  <bf:place>
+                     <bf:Place>
+                        <rdfs:label>Edmonton, Alta</rdfs:label>
+                     </bf:Place>
+                  </bf:place>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Alberta Government Library, Capital Boulevard Site</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:date>2007</bf:date>
+               </bf:ProvisionActivity>
+            </bf:provisionActivity>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3992540#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Fire prevention--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Fire prevention--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Fire prevention</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3992540#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Fire prevention--Alberta--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Fire prevention--Alberta--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Fire prevention</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3992540#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Safety education--Alberta--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Safety education--Alberta--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Safety education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/3992540#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Fires--Alberta--Statistics.</rdfs:label>
+            <madsrdf:authoritativeLabel>Fires--Alberta--Statistics.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Fires</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Statistics</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3992540#Agent710-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Municipal Affairs and Housing.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Municipal Affairs and Housing.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Municipal Affairs and Housing.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3992540#Agent710-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Office of the Fire Commissioner.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bOffice of the Fire Commissioner.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Office of the Fire Commissioner.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3992540#Agent710-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Emergency Management Agency.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Emergency Management Agency.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Emergency Management Agency.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3992540#Agent710-33">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>ATCO Electric.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aATCO Electric.</bflc:name10MarcKey>
+                  <rdfs:label>ATCO Electric.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/3992540#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>ATCO Gas.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aATCO Gas.</bflc:name10MarcKey>
+                  <rdfs:label>ATCO Gas.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/3992540#Instance856-35">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</rdfs:label>
+                  <bflc:titleSortKey>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</bflc:titleSortKey>
+                  <bf:mainTitle>2007 Fire Prevention Week campaign : October 7-13, 2007 2007</bf:mainTitle>
+                  <bf:subtitle>October 7-13, 2007</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/3992540#Item856-35">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://municipalaffairs.gov.ab.ca/documents/FirePreventionWeek2007.pdf"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Free Access</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/3992540#Instance856-35"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/3992540#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/3992540#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/3992540#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2007</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn180754133</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</rdfs:label>
+            <bflc:titleSortKey>2007 Fire Prevention Week campaign : October 7-13, 2007 2007 October 7-13, 2007 /</bflc:titleSortKey>
+            <bf:mainTitle>2007 Fire Prevention Week campaign : October 7-13, 2007 2007</bf:mainTitle>
+            <bf:subtitle>October 7-13, 2007</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Alberta Emergency Management Agency, Fire Commissioner's Office</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>Fire Prevention Week</rdfs:label>
+            <bflc:titleSortKey>Fire Prevention Week</bflc:titleSortKey>
+            <bf:mainTitle>Fire Prevention Week</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Fire service campaign kit</rdfs:label>
+            <bflc:titleSortKey>Fire service campaign kit</bflc:titleSortKey>
+            <bf:mainTitle>Fire service campaign kit</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Municipal Affairs and Housing</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2007</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta. : Alberta Municipal Affairs and Housing], 2007.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 v. (various pagings)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>On cover: It's fire prevention week: practice your escape plan.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>[Sponsored by] ATCO Electric [and] ATCO Gas.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on 2007 edition.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:hasReproduction rdf:resource="http://example.org/3992540#Instance533-23"/>
+      <bf:instanceOf rdf:resource="http://example.org/3992540#Work"/>
+   </bf:Instance>
+</rdf:RDF>

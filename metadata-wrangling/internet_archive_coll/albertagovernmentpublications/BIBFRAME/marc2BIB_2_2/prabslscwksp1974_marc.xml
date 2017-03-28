@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/435210#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>435210</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1982-12-10</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEEN</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>S 599.1 A3</bf:classificationPortion>
+            <bf:itemPortion>A332</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/435210#Agent111-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Alberta Soil Science Workshop.</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>11120$aAlberta Soil Science Workshop.</bflc:name11MarcKey>
+                  <bflc:primaryContributorName11MatchKey>Alberta Soil Science Workshop.</bflc:primaryContributorName11MatchKey>
+                  <rdfs:label>Alberta Soil Science Workshop.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Proceedings./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Proceedings./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aProceedings./</bflc:title40MarcKey>
+            <rdfs:label>Proceedings./</rdfs:label>
+            <bflc:titleSortKey>Proceedings./</bflc:titleSortKey>
+            <bf:mainTitle>Proceedings</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-37">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soil science--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soil science--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soil science</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-38">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils--Alberta--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils--Alberta--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-39">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils--Research--Alberta--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils--Research--Alberta--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Research</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-40">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils--Nitrogen content--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils--Nitrogen content--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Nitrogen content</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-41">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Nitrogen--Fixation--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nitrogen--Fixation--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Nitrogen</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Fixation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-42">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Nitrogen fertilizers--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nitrogen fertilizers--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Nitrogen fertilizers</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-43">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soil microbiology--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soil microbiology--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soil microbiology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-44">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soil acidity--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soil acidity--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soil acidity</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-45">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soil erosion--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soil erosion--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soil erosion</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-46">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils, Salts in--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils, Salts in--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils, Salts in</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/435210#Topic650-47">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soil management--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soil management--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soil management</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/435210#Agent711-48">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Soil Science Workshop (Alberta)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>71120$aSoil Science Workshop$c(Alberta)</bflc:name11MarcKey>
+                  <rdfs:label>Soil Science Workshop (Alberta)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/435210#Agent711-49">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Western Canada Nitrogen Symposium (1976 : Calgary, Alta.)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>71120$aWestern Canada Nitrogen Symposium$d(1976 :$cCalgary, Alta.)</bflc:name11MarcKey>
+                  <rdfs:label>Western Canada Nitrogen Symposium (1976 : Calgary, Alta.)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/435210#Agent711-50">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Western Canada Phosphate Symposium (1980 : Calgary, Alta.)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>71120$aWestern Canada Phosphate Symposium$d(1980 :$cCalgary, Alta.)</bflc:name11MarcKey>
+                  <rdfs:label>Western Canada Phosphate Symposium (1980 : Calgary, Alta.)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-51">
+            <rdfs:label>Nitrogen : soils, crops and the environment.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Nitrogen : soils, crops and the environment.</rdfs:label>
+                  <bflc:titleSortKey>Nitrogen : soils, crops and the environment.</bflc:titleSortKey>
+                  <bf:mainTitle>Nitrogen : soils, crops and the environment</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-52">
+            <rdfs:label>Land use.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Land use.</rdfs:label>
+                  <bflc:titleSortKey>Land use.</bflc:titleSortKey>
+                  <bf:mainTitle>Land use</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-53">
+            <rdfs:label>Crop production potential in Alberta.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Crop production potential in Alberta.</rdfs:label>
+                  <bflc:titleSortKey>Crop production potential in Alberta.</bflc:titleSortKey>
+                  <bf:mainTitle>Crop production potential in Alberta</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-54">
+            <rdfs:label>Scientific input for soil management modelling.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Scientific input for soil management modelling.</rdfs:label>
+                  <bflc:titleSortKey>Scientific input for soil management modelling.</bflc:titleSortKey>
+                  <bf:mainTitle>Scientific input for soil management modelling</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-55">
+            <rdfs:label>Proceedings of Western Canada nitrogen symposium.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Proceedings of Western Canada nitrogen symposium.</rdfs:label>
+                  <bflc:titleSortKey>Proceedings of Western Canada nitrogen symposium.</bflc:titleSortKey>
+                  <bf:mainTitle>Proceedings of Western Canada nitrogen symposium</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-56">
+            <rdfs:label>Soil conservation reclamation &amp; research.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Soil conservation reclamation &amp; research.</rdfs:label>
+                  <bflc:titleSortKey>Soil conservation reclamation &amp; research.</bflc:titleSortKey>
+                  <bf:mainTitle>Soil conservation reclamation &amp; research</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-57">
+            <rdfs:label>Effective use of nutrient resources in crop production.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Effective use of nutrient resources in crop production.</rdfs:label>
+                  <bflc:titleSortKey>Effective use of nutrient resources in crop production.</bflc:titleSortKey>
+                  <bf:mainTitle>Effective use of nutrient resources in crop production</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-58">
+            <rdfs:label>Proceedings of the Western Canada phosphate symposium.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Proceedings of the Western Canada phosphate symposium.</rdfs:label>
+                  <bflc:titleSortKey>Proceedings of the Western Canada phosphate symposium.</bflc:titleSortKey>
+                  <bf:mainTitle>Proceedings of the Western Canada phosphate symposium</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-59">
+            <rdfs:label>Agricultural land : our disappearing heritage-a symposium.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Agricultural land : our disappearing heritage-a symposium.</rdfs:label>
+                  <bflc:titleSortKey>Agricultural land : our disappearing heritage-a symposium.</bflc:titleSortKey>
+                  <bf:mainTitle>Agricultural land : our disappearing heritage-a symposium</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-60">
+            <rdfs:label>Soil science : its role in reclamation and its practical application in assessing capability.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Soil science : its role in reclamation and its practical application in assessing capability.</rdfs:label>
+                  <bflc:titleSortKey>Soil science : its role in reclamation and its practical application in assessing capability.</bflc:titleSortKey>
+                  <bf:mainTitle>Soil science : its role in reclamation and its practical application in assessing capability</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-61">
+            <rdfs:label>Phosphorus in our environment</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Phosphorus in our environment</rdfs:label>
+                  <bflc:titleSortKey>Phosphorus in our environment</bflc:titleSortKey>
+                  <bf:mainTitle>Phosphorus in our environment</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-62">
+            <rdfs:label>Proceedings of western Canada nitrogen symposium</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Proceedings of western Canada nitrogen symposium</rdfs:label>
+                  <bflc:titleSortKey>Proceedings of western Canada nitrogen symposium</bflc:titleSortKey>
+                  <bf:mainTitle>Proceedings of western Canada nitrogen symposium</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-63">
+            <rdfs:label>Proceedings of the 18th annual Alberta Soil Science Workshop featuring a symposium on land degradation</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Proceedings of the 18th annual Alberta Soil Science Workshop featuring a symposium on land degradation</rdfs:label>
+                  <bflc:titleSortKey>Proceedings of the 18th annual Alberta Soil Science Workshop featuring a symposium on land degradation</bflc:titleSortKey>
+                  <bf:mainTitle>Proceedings of the 18th annual Alberta Soil Science Workshop featuring a symposium on land degradation</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-64">
+            <rdfs:label>Nitrogen symposium.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Nitrogen symposium.</rdfs:label>
+                  <bflc:titleSortKey>Nitrogen symposium.</bflc:titleSortKey>
+                  <bf:mainTitle>Nitrogen symposium</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-65">
+            <rdfs:label>Making the most of nitrogen.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Making the most of nitrogen.</rdfs:label>
+                  <bflc:titleSortKey>Making the most of nitrogen.</bflc:titleSortKey>
+                  <bf:mainTitle>Making the most of nitrogen</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/435210#Work740-66">
+            <rdfs:label>Soil salinity.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Soil salinity.</rdfs:label>
+                  <bflc:titleSortKey>Soil salinity.</bflc:titleSortKey>
+                  <bf:mainTitle>Soil salinity</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/435210#Work830-67">
+            <rdfs:label>Farming for the Future (Project) (Series) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Farming for the Future (Project) (Series) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aFarming for the Future (Project) (Series) ;$vno. 78-0247</bflc:title30MarcKey>
+                  <rdfs:label>Farming for the Future (Project) (Series) ;</rdfs:label>
+                  <bflc:titleSortKey>Farming for the Future (Project) (Series) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Farming for the Future (Project) (Series)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. 78-0247</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/435210#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/435210#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1962/..</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Currently published</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/ann">
+            <rdfs:label>annual</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>regular print reproduction</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn461760786</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Proceedings of the Alberta Soil Science Workshop 1974</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Proceedings of the Alberta Soil Science Workshop 1974</rdfs:label>
+            <bflc:titleSortKey>Proceedings of the Alberta Soil Science Workshop 1974</bflc:titleSortKey>
+            <bf:mainTitle>Proceedings of the Alberta Soil Science Workshop 1974</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Soil science workshop, Alberta</rdfs:label>
+            <bflc:titleSortKey>Soil science workshop, Alberta</bflc:titleSortKey>
+            <bf:mainTitle>Soil science workshop, Alberta</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Alberta soil science workshop</rdfs:label>
+            <bflc:titleSortKey>Alberta soil science workshop</bflc:titleSortKey>
+            <bf:mainTitle>Alberta soil science workshop</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Proceedings of the Alberta soil science workshop</rdfs:label>
+            <bflc:titleSortKey>Proceedings of the Alberta soil science workshop</bflc:titleSortKey>
+            <bf:mainTitle>Proceedings of the Alberta soil science workshop</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Soils workshop</rdfs:label>
+            <bflc:titleSortKey>Soils workshop</bflc:titleSortKey>
+            <bf:mainTitle>Soils workshop</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Proceedings of the ... annual Alberta soil science workshop</rdfs:label>
+            <bflc:titleSortKey>Proceedings of the ... annual Alberta soil science workshop</bflc:titleSortKey>
+            <bf:mainTitle>Proceedings of the ... annual Alberta soil science workshop</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Proceedings of the ... Alberta soil science workshop</rdfs:label>
+            <bflc:titleSortKey>Proceedings of the ... Alberta soil science workshop</bflc:titleSortKey>
+            <bf:mainTitle>Proceedings of the ... Alberta soil science workshop</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>former</bf:variantType>
+            <rdfs:label>Annual Alberta soil science workshop proceedings</rdfs:label>
+            <bflc:titleSortKey>Annual Alberta soil science workshop proceedings</bflc:titleSortKey>
+            <bf:mainTitle>Annual Alberta soil science workshop proceedings</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Agriculture</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1962-</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Edmonton, Alta. : Alberta Agriculture], 1962-</bf:provisionActivityStatement>
+      <bf:acquisitionSource>Alberta Agriculture, Food &amp; Rural Development, Agronomy Unit, 9th Fl., 6909 - 116 St., Edmonton, AB  T6H 4P2.</bf:acquisitionSource>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Annual.</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:firstIssue>1962</bf:firstIssue>
+      <bf:lastIssue>1981 ; 19th (1982)-</bf:lastIssue>
+      <bf:seriesStatement>21st 1984: Farming for the Future</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Vols. for 1971-1981 have also a distinctive title: 1971-Nitrogen : soils, crops and the environment; 1972-Land use; 1973-Crop production potential in Alberta; 1974-Scientific input for soil management modelling; 1976-Proceedings of Western Canada nitrogen symposium "hosted by" Alberta Soil Science Workshop; 1977-Soil conservation reclamation &amp; research; 1978-;1979-Effective use of nutrient resources in crop production; Proceedings of the Western Canada phosphate symposium "hosted by" Alberta Soil Science Workshop; 1981-Agricultural land : our disappearing heritage-a symposium; 2001-Phosphorus in our environment; 2004-Soil salinity.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Workshop name changed in 1968 from Soil Science Workshop (Alberta) to Alberta Soil Science Workshop.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Department name changed in 1992 to Alberta Agriculture, Food and Rural Development.</rdfs:label>
+            <bf:noteType>issuing body</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/435210#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/435210#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>S 599.1 A3 A332</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/435210#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

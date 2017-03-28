@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/792559#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>792559</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1986-07-29</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>federal or national government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-ab"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>SD146.A333</bf:classificationPortion>
+            <bf:itemPortion>A333 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Alberta Phase 3 forest inventory./</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Alberta Phase 3 forest inventory./</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aAlberta Phase 3 forest inventory./</bflc:title40MarcKey>
+            <rdfs:label>Alberta Phase 3 forest inventory./</rdfs:label>
+            <bflc:titleSortKey>Alberta Phase 3 forest inventory./</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Phase 3 forest inventory</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/792559#Topic650-50">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Forests and forestry--Alberta--Mensuration.</rdfs:label>
+            <madsrdf:authoritativeLabel>Forests and forestry--Alberta--Mensuration.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Forests and forestry</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Mensuration</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/792559#Topic650-51">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Lumber trade--Mensuration.</rdfs:label>
+            <madsrdf:authoritativeLabel>Lumber trade--Mensuration.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Lumber trade</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Mensuration</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/792559#Topic650-52">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Lumber trade--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Lumber trade--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Lumber trade</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/792559#Topic650-53">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Forest mapping--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Forest mapping--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Forest mapping</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/792559#Agent710-54">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Energy and Natural Resources. Resource Evaluation and Planning Division.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Energy and Natural Resources.$bResource Evaluation and Planning Division.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Energy and Natural Resources. Resource Evaluation and Planning Division.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/792559#Agent710-55">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Forest Service.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bForest Service.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Forest Service.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/792559#Work740-56">
+            <rdfs:label>Alberta forests-some facts.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Alberta forests-some facts.</rdfs:label>
+                  <bflc:titleSortKey>Alberta forests-some facts.</bflc:titleSortKey>
+                  <bf:mainTitle>Alberta forests-some facts</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-57">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vno. I/86.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. I/86</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-58">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 53.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 53</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-59">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 54.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 54</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-60">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 55.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 55</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-61">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 56.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 56</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-62">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 57.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 57</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-63">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 58.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 58</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-64">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 59.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 59</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-65">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 60a.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 60a</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-66">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 60b.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 60b</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-67">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 61a.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 61a</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-68">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 61b.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 61b</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-69">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 61c.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 61c</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-70">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 61d.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 61d</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-71">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86a.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86a</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-72">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86b.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86b</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-73">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86c.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86c</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-74">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86d.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86d</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-75">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86e.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86e</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-76">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86f.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86f</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-77">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86g.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86g</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-78">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86h.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86h</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-79">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86i.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86i</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-80">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86j.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86j</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-81">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 86k.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 86k</bf:seriesEnumeration>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/792559#Work830-82">
+            <rdfs:label>ENR report ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>ENR report ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aENR report ;$vDept. 87.</bflc:title30MarcKey>
+                  <rdfs:label>ENR report ;</rdfs:label>
+                  <bflc:titleSortKey>ENR report ;</bflc:titleSortKey>
+                  <bf:mainTitle>ENR report</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>Dept. 87</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/792559#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/792559#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm65842651</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Alberta Phase 3 forest inventory 1985</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Alberta Phase 3 forest inventory 1985</rdfs:label>
+            <bflc:titleSortKey>Alberta Phase 3 forest inventory 1985</bflc:titleSortKey>
+            <bf:mainTitle>Alberta Phase 3 forest inventory 1985</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Energy and Natural Resources, Alberta Forest Service, Resource Evaluation and Planning Division</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton : Alberta Energy and Natural Resources, Alberta Forest Service, Resource Evaluation and Planning Division, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>27 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 87</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86k</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86j</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86i</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86h</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86g</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86f</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86e</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86d</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86c</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86b</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 86a</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 61d</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 61c</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 61b</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 61a</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 60b</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 60a</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 59</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 58</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 57</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 56</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 55</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 54</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>Dept. 53</bf:seriesEnumeration>
+      <bf:seriesStatement>ENR report</bf:seriesStatement>
+      <bf:seriesEnumeration>no. I/86.</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>[V.1] - Overview -- [v.2] - Alberta forests - some facts -- [v.3] - Ground truthing procedures -- [v.4] - Map cover type measurement specifications -- [v.5] - Large-scale photography procedures -- [v.6] - Tree sectioning manual -- [v. 7] - Mapping specifications -- [v. 8] - Forest cover type specifications -- [v.9] - Temporary sample plot procedures -- [v.10] - Yield tables for unmanaged stands -- [v.11] - Yield tables for unmanaged stands: appendix 1.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>[V.12] Volumes and stem numbers for forest types: steps to volume table formulation -- [v.13] Volumes and stem numbers for forest types: Southern Alberta, volume sampling regions 1,2,3 and 11 -- [v.14] Volumes and stem numbers for forest types: Central Alberta, volume sampling regions 4,5, and 6 -- [v.15] Volumes and stem numbers for forest types: Northern Alberta, volume sampling regions 7,8 and 10.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>[V.16] - Single tree volume tables: method of formulation -- [v.17] -Single tree volume tables: appendix 1 -- [v.18] - Single tree volume tables: volume sampling regions 1 and 11 -- [v.19] - Single tree volume tables: ... region 2 -- [v.20] - Single tree volume tables: ... region 3 -- [v.21] - Single tree volume tables: ... region 4 -- [v.22] - Single tree volume tables: ... region 5 -- [v.23] - Single tree volume tables: ... region 6 -- [v.24] - Single tree volume tables: ... region 7 -- [v.25] - Single tree volume tables: ... region 8 -- [v.26] - Single tree volume tables: volume sampling region 10 -- [v.27] - Aerial photography specifications.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/792559#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/792559#Item050-8">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>SD146.A333 A333 1985</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/792559#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

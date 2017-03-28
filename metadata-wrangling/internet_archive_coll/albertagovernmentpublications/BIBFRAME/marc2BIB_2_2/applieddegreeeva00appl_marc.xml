@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/2299262#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>2299262</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaMWISM</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-08-04T12:15:58</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-28</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEE</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>LC1047.C2</bf:classificationPortion>
+            <bf:itemPortion>A67 1998</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2299262#Agent110-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Applied Degree Evaluation Advisory Committee (Alta.)</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1101 $aApplied Degree Evaluation Advisory Committee (Alta.)</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Applied Degree Evaluation Advisory Committee (Alta.)</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Applied Degree Evaluation Advisory Committee (Alta.)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Applied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Applied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998.</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24000$aApplied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998.</bflc:title40MarcKey>
+            <rdfs:label>Applied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998.</rdfs:label>
+            <bflc:titleSortKey>Applied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998.</bflc:titleSortKey>
+            <bf:mainTitle>Applied Degree Evaluation Advisory Committee :/ report and recommendations : July 1998</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/2299262#Instance533-21">
+            <bf:instanceOf rdf:resource="http://example.org/2299262#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998 report and recommendations : July 1998.</rdfs:label>
+                  <bflc:titleSortKey>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998 report and recommendations : July 1998.</bflc:titleSortKey>
+                  <bf:mainTitle>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998</bf:mainTitle>
+                  <bf:subtitle>report and recommendations : July 1998</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:reproductionOf rdf:resource="http://example.org/2299262#Instance"/>
+            <bf:carrier>
+               <bf:Carrier>
+                  <rdfs:label>Photocopy</rdfs:label>
+               </bf:Carrier>
+            </bf:carrier>
+            <bf:extent>
+               <bf:Extent>
+                  <rdfs:label>8, 13 leaves : ill. ; 29 cm</rdfs:label>
+               </bf:Extent>
+            </bf:extent>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Cover title.</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2299262#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Technical education--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Technical education--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Technical education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/2299262#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Career education--Alberta.</rdfs:label>
+            <madsrdf:authoritativeLabel>Career education--Alberta.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Career education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Alberta</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2299262#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Dunford, Clint.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aDunford, Clint.</bflc:name00MarcKey>
+                  <rdfs:label>Dunford, Clint.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2299262#Agent700-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Bosetti, R. A.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBosetti, R. A.</bflc:name00MarcKey>
+                  <rdfs:label>Bosetti, R. A.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/2299262#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Alberta. Alberta Advanced Education and Career Development.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aAlberta.$bAlberta Advanced Education and Career Development.</bflc:name10MarcKey>
+                  <rdfs:label>Alberta. Alberta Advanced Education and Career Development.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/2299262#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/2299262#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1998</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/abc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>regular print reproduction</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Print"/>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm65933893</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998 report and recommendations : July 1998.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998 report and recommendations : July 1998.</rdfs:label>
+            <bflc:titleSortKey>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998 report and recommendations : July 1998.</bflc:titleSortKey>
+            <bf:mainTitle>Applied Degree Evaluation Advisory Committee : report and recommendations : July 1998 1998</bf:mainTitle>
+            <bf:subtitle>report and recommendations : July 1998</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Edmonton, Alta.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Alberta Advanced Education and Carer Development</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1998</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Edmonton, Alta. : Alberta Advanced Education and Carer Development, [1998]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 v.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Presented to the Honourable Clint Dunford, Minister of Advanced Education and Career Development."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Chair, Reno Bosetti -- Transmittal letter.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:hasReproduction rdf:resource="http://example.org/2299262#Instance533-21"/>
+      <bf:instanceOf rdf:resource="http://example.org/2299262#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/2299262#Item050-8">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>LC1047.C2 A67 1998</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/2299262#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>
