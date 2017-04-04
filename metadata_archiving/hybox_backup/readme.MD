@@ -1,0 +1,1 @@
+This is a backup of metadata (RDF in turtle) from a Hydra-in-a-box instance. Created for the purpose of understanding PCDM in this particular instance. Testing multipart modeling for ERA objects in Hydra. See https://docs.google.com/a/ualberta.ca/drawings/d/1dKFZT6dVi0vaLZhVRaWYuBf1K7B1NdkXb_4Gd9jvz5o/edit?usp=sharing for a map.
