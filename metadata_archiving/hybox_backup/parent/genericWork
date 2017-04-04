@@ -1,0 +1,84 @@
+@prefix premis:  <http://www.loc.gov/premis/rdf/v1#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix acl:  <http://www.w3.org/ns/auth/acl#> .
+@prefix ns004:  <http://pcdm.org/models#> .
+@prefix ns003:  <http://projecthydra.org/works/models#> .
+@prefix ns002:  <http://id.loc.gov/vocabulary/relators/> .
+@prefix ns001:  <info:fedora/fedora-system:def/model#> .
+@prefix xsi:  <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns007:  <http://pcdm.org/use#> .
+@prefix xmlns:  <http://www.w3.org/2000/xmlns/> .
+@prefix ns006:  <http://fedora.info/definitions/1/0/access/ObjState#> .
+@prefix ns005:  <http://www.openarchives.org/ore/terms/> .
+@prefix xml:  <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix event:  <http://fedora.info/definitions/v4/event#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix test:  <info:fedora/test/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora:  <http://fedora.info/definitions/v4/repository#> .
+@prefix ebucore:  <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ldp:  <http://www.w3.org/ns/ldp#> .
+@prefix iana:  <http://www.iana.org/assignments/relation/> .
+@prefix xs:  <http://www.w3.org/2001/XMLSchema> .
+@prefix config:  <info:fedoraconfig/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x>
+        rdf:type                 fedora:Container ;
+        rdf:type                 ns003:Work ;
+        rdf:type                 fedora:Resource ;
+        rdf:type                 ns004:Object ;
+        fedora:lastModifiedBy    "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        iana:last                <http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x/list_source#g70072535086980> ;
+        ns006:objState           ns006:active ;
+        foaf:based_near          "Alberta, Canada"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        foaf:based_near          "Athabasca River, Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        foaf:based_near          "Fort MacMurray, Alberta, Canada"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        ebucore:hasRelatedMediaFragment  <http://206.167.181.122:8984/rest/dev/57/12/m6/52/5712m6524> ;
+        fedora:createdBy         "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        fedora:created           "2017-03-15T16:15:20.028Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dcterms:modified         "2017-03-15T21:46:21.03758141+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        iana:first               <http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x/list_source#g70073087402880> ;
+        dcterms:rights           "http://creativecommons.org/licenses/by-nc-sa/3.0/us/"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        ns001:hasModel           "GenericWork"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dcterms:dateSubmitted    "2017-03-15T16:15:19.856765996+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dc:language              "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        ns002:dpt                "test@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        fedora:lastModified      "2017-03-15T21:46:21.055Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dcterms:isPartOf         <http://206.167.181.122:8984/rest/dev/ad/mi/n_/se/admin_set/default> ;
+        dcterms:created          "1996"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:creator               "Suncor Inc., Oil Sands Group"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        acl:accessControl        <http://206.167.181.122:8984/rest/dev/7a/c9/26/f6/7ac926f6-2741-4726-937c-31e2b92b17f6> ;
+        dcterms:title            "Suncor Steepbank Mine Project Application"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dcterms:type             "Report"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Environment"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Environmental Impact"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Steepbank Mine Project"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Oil Sands"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Environmental Assessment"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        dc:relation              "Petroleum"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        ebucore:hasRelatedImage  <http://206.167.181.122:8984/rest/dev/57/12/m6/52/5712m6524> ;
+        dc:description           "Suncor Inc. is applying for regulatory approval to proceed with the development of the proposed Steepbank Mine, to be located across the Athabasca River from its current operations near Fort McMurray in the Regional Municipality of Wood Buffalo in northeastern Alberta. In April1995 a disclosure document was released for the proposed mine. Since then, a comprehensive public and regulatory consultation and communication program and an environmental impact assessment have been underway in parallel with engineering feasibility studies. This document comprises the Application for Approval of Steepbank Mine and serves to meet the requirements under the Alberta Oil Sands Conservation Act, the Alberta Environmental Protection and Enhancement Act and the Alberta Water Resources Act. It also includes the Environmental Impact Assessment. This folder contains the main volumes of the EIA plus the supporting reports. Look at the Subject List at the left to see the Volume/Report titles then click on the applicable link on the right."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        rdf:type                 ldp:RDFSource ;
+        rdf:type                 ldp:Container ;
+        fedora:writable          "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+        fedora:hasParent         <http://206.167.181.122:8984/rest/dev> ;
+        ldp:contains             <http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x/member_of_collections> ;
+        ldp:contains             <http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x/members> ;
+        ldp:contains             <http://206.167.181.122:8984/rest/dev/c2/47/ds/08/c247ds08x/list_source> ;
+        ns004:memberOf           <http://206.167.181.122:8984/rest/dev/9k/41/zd/48/9k41zd48h> ;
+        ns004:memberOf           <http://206.167.181.122:8984/rest/dev/hm/50/tr/72/hm50tr726> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/57/12/m6/52/5712m6524> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/p8/41/8n/20/p8418n20k> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/vq/27/zn/40/vq27zn406> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/j9/60/20/60/j9602060k> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/hm/50/tr/73/hm50tr73g> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/gb/19/f5/80/gb19f580q> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/vh/53/wv/72/vh53wv72q> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/51/38/jd/84/5138jd84x> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/3r/07/4t/92/3r074t92z> ;
+        ns004:hasMember          <http://206.167.181.122:8984/rest/dev/80/49/g5/04/8049g504g> .
