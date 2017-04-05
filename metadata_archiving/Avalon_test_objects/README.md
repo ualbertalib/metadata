@@ -1,4 +1,4 @@
-This sample collections of A_V objects in Avalon 6 @:
+This is a sample of A_V objects in Avalon 6 @:
 
 http://206.167.181.124
 
