@@ -1,0 +1,109 @@
+@prefix premis:  <http://www.loc.gov/premis/rdf/v1#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix acl:  <http://www.w3.org/ns/auth/acl#> .
+@prefix ns004:  <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003:  <http://avalonmediasystem.org/rdf/vocab/collection#> .
+@prefix ns002:  <http://bibframe.org/vocab/> .
+@prefix ns001:  <info:fedora/fedora-system:def/model#> .
+@prefix xsi:  <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns008:  <http://avalonmediasystem.org/rdf/vocab/common#> .
+@prefix ns007:  <http://avalonmediasystem.org/rdf/vocab/media_object#> .
+@prefix xmlns:  <http://www.w3.org/2000/xmlns/> .
+@prefix ns006:  <http://projecthydra.org/ns/relations#> .
+@prefix ns005:  <info:fedora/fedora-system:def/relations-external#> .
+@prefix xml:  <http://www.w3.org/XML/1998/namespace> .
+@prefix ns009:  <http://avalonmediasystem.org/rdf/vocab/transcoding#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix event:  <http://fedora.info/definitions/v4/event#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix test:  <info:fedora/test/> .
+@prefix ns011:  <http://www.openarchives.org/ore/terms/> .
+@prefix ns010:  <http://avalonmediasystem.org/rdf/vocab/master_file#> .
+@prefix ns015:  <http://schema.org/> .
+@prefix ns014:  <http://avalonmediasystem.org/rdf/vocab/derivative#> .
+@prefix ns013:  <http://avalonmediasystem.org/rdf/vocab/encoding#> .
+@prefix ns012:  <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora:  <http://fedora.info/definitions/v4/repository#> .
+@prefix ebucore:  <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ldp:  <http://www.w3.org/ns/ldp#> .
+@prefix iana:  <http://www.iana.org/assignments/relation/> .
+@prefix xs:  <http://www.w3.org/2001/XMLSchema> .
+@prefix config:  <info:fedoraconfig/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source>
+        rdf:type               fedora:Container ;
+        rdf:type               fedora:Resource ;
+        fedora:lastModifiedBy  "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        iana:last              <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878531355120> ;
+        ns001:hasModel         "ActiveFedora::Aggregation::ListSource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        fedora:createdBy       "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        fedora:created         "2017-03-28T18:16:08.388Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        fedora:lastModified    "2017-03-28T18:16:54.239Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dcterms:hasPart        <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g50378040> ;
+        dcterms:hasPart        <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532566500> ;
+        dcterms:hasPart        <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878531355120> ;
+        dcterms:hasPart        <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g76339040> ;
+        iana:first             <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532566500> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878525541640>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/f4/75/2g/72/f4752g72m> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529427800>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/x3/46/d4/16/x346d4165> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878517316680> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878517316680>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/f4/75/2g/72/f4752g72m> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529427800> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529799560>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/x3/46/d4/16/x346d4165> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532320400> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529821300> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532320400>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/p5/54/7r/36/p5547r367> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529799560> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529821300>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/f4/75/2g/72/f4752g72m> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878529799560> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g50378040>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/p5/54/7r/36/p5547r367> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878531355120> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g76339040> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878531355120>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/dn/39/x1/52/dn39x152w> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g50378040> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g76339040>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/x3/46/d4/16/x346d4165> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g50378040> ;
+        iana:prev       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532566500> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g69878532566500>
+        ns011:proxyFor  <http://206.167.181.124:8984/fedora/rest/f4/75/2g/72/f4752g72m> ;
+        ns011:proxyIn   <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> ;
+        iana:next       <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source#g76339040> .
+
+<http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084/list_source>
+        rdf:type          ldp:RDFSource ;
+        rdf:type          ldp:Container ;
+        fedora:writable   "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+        fedora:hasParent  <http://206.167.181.124:8984/fedora/rest/3n/20/3z/08/3n203z084> .
