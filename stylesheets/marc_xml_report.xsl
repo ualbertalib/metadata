@@ -13,7 +13,7 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:variable name="docs"     select="collection('../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/Enhanced_marc?select=*marc.xml;recurse=yes')"/>
+    <xsl:variable name="docs"     select="collection('../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/enhanced_marc_merged_240_subfields?select=*marc.xml;recurse=yes')"/>
 
      <xsl:template match="*">
         <xsl:for-each select="$docs//*:leader | $docs//*:controlfield | $docs//*:subfield">
