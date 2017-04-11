@@ -1,12 +1,13 @@
-<atom:entry xmlns:atom="http://www.w3.org/2005/Atom" 
-			xmlns:doc="http://www.lyncode.com/xoai" 
-			xmlns:dcterms="http://purl.org/dc/terms/" 
-			xmlns:oreatom="http://www.openarchives.org/ore/atom/" 
-			xmlns:ore="http://www.openarchives.org/ore/terms/" 
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:schemaLocation="http://www.w3.org/2005/Atom"
-			"http://www.openarchives.org/OAI/2.0/atom_entry.xsd">
-	
+<?xml version="1.0" encoding="utf-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:oreatom="http://www.openarchives.org/ore/atom/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:ore="http://www.openarchives.org/ore/terms/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+			
 	<!-- Atom Specific; No ORE Semantics -->
 	<atom:id>era.library.ualberta.ca:1544bq05s</atom:id> <!-- arbitrarily determined -->
 	<atom:link rel="alternate" href="http://era.library.ualberta.ca/files/1544bq05s" /> <!-- this ReM represents this human-readable page -->
@@ -16,17 +17,17 @@
 	<atom:link rel="http://www.openarchives.org/ore/terms/describes" href="http://era.library.ualberta.ca/files/1544bq05s/ore.xml" /> <!-- This ReM is an ReM -->
 	<atom:source>
 		<atom:author>
-			<atom:name>University of Alberta Education &amp; Research Archive</name> <!-- name of record creator -->
-			<atom:uri>http://era.library.ualberta.ca</uri>
+			<atom:name>University of Alberta Education &amp; Research Archive</atom:name> <!-- name of record creator -->
+			<atom:uri>http://era.library.ualberta.ca</atom:uri>
         </atom:author>
 		<atom:generator>University of Alberta Education &amp; Research Archive</atom:generator> <!-- publisher of recod -->
 		<atom:published>2017-04-05T07:30:34Z</atom:published>  <!-- timestamp -->
-		<updated>2017-04-05T07:30:34Z</updated> <!-- timestamp -->
+		<atom:updated>2017-04-05T07:30:34Z</atom:updated> <!-- timestamp -->
 		<atom:id>era.library.ualberta.ca:1544bq05s</atom:id> <!-- arbitrary identifier -->
 	</atom:source>
 	<atom:published>2012-05-15</atom:published>  <!-- dcterms:created | dcterms:dateAccepted (thesis)  -->
 	<atom:link rel="license" type="application/rdf+xml" href="http://creativecommons.org/licenses/by-nc/2.5/rdf" /> <!-- rights for the resource map -->
-	<rights>Creative Commons Attribution-Non-Commercial-No Derivatives 3.0 Unported</rights>
+	<atom:rights>Creative Commons Attribution-Non-Commercial-No Derivatives 3.0 Unported</atom:rights>
 
 	<!-- Aggregation metadata -->
 	<atom:title>CIHR Research Proposal Template 3</atom:title> <!-- dcterms:title -->
