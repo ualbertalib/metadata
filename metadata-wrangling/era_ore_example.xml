@@ -16,8 +16,8 @@
 	<atom:link rel="http://www.openarchives.org/ore/terms/describes" href="http://era.library.ualberta.ca/files/1544bq05s/ore.xml" /> <!-- This ReM is an ReM -->
 	<atom:source>
 		<atom:author>
-            <atom:name>University of Alberta Education &amp; Research Archive</name> <!-- name of record creator -->
-            <atom:uri>http://era.library.ualberta.ca</uri>
+			<atom:name>University of Alberta Education &amp; Research Archive</name> <!-- name of record creator -->
+			<atom:uri>http://era.library.ualberta.ca</uri>
         </atom:author>
 		<atom:generator>University of Alberta Education &amp; Research Archive</atom:generator> <!-- publisher of recod -->
 		<atom:published>2017-04-05T07:30:34Z</atom:published>  <!-- timestamp -->
@@ -45,13 +45,13 @@
 	<atom:category scheme="http://terms.library.ualberta.ca/objects/" term="ResearchMaterial" label="Research Material"/>  <!-- dcterms:type -->
 
 
-    <!-- Creation and Modification date/time of the Aggregation (rdf literals) -->
+	<!-- Creation and Modification date/time of the Aggregation (rdf literals) -->
 	<atom:category scheme="http://www.openarchives.org/ore/atom/modified" term="2017-04-05T07:30:34Z" /> <!-- timestamp -->
 
-    <!-- Aggregated Resources -->
+	<!-- Aggregated Resources -->
 	<atom:link rel="http://www.openarchives.org/ore/terms/aggregates" href="https://era.library.ualberta.ca/files/1544bq05s/CIHR%20Research%20Proposal%20Template%203%203%20May%202012%20CM.docx" title="CIHR Research Proposal Template 1 3 May 2012 CM.docx" type="application/pdf" length="17763" />  <!-- <info:fedora/fedora-system:def/model#downloadFilename> | premis:hasOriginalName | fedora:mimetype | premis:hasSize ( the aggregated resource )-->
 	<atom:link rel="http://www.openarchives.org/ore/terms/aggregates" href="https://era.library.ualberta.ca/files/1544bq05s/" title="CIHR Research Proposal Template 3" type="text/html" />
-  	<atom:link rel="http://www.openarchives.org/ore/terms/aggregates" href="http://era.library.ualberta.ca/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:era.library.ualberta.ca/1544bq05s" title="Dublin Core Metadata for CIHR Research Proposal Template 3" type="application/xml"/>
+	<atom:link rel="http://www.openarchives.org/ore/terms/aggregates" href="http://era.library.ualberta.ca/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:era.library.ualberta.ca/1544bq05s" title="Dublin Core Metadata for CIHR Research Proposal Template 3" type="application/xml"/>
 	<!-- Additional properties pertaining to Aggregated Resources and Aggregation -->
 	<oreatom:triples>
 		<!-- Properties pertaining to aggregation -->
@@ -68,20 +68,20 @@
 		</rdf:Description>
 		<!-- Properties pertaining to the aggregated resource splash page-->
 		<rdf:Description rdf:about="http://era.library.ualberta.ca/files/1544bq05s/">
-            <rdf:type rdf:resource="info:eu-repo/semantics/humanStartPage"/>
-        </rdf:Description>
-        <rdf:Description rdf:about="info:eu-repo/semantics/humanStartPage">
-            <rdfs:label>humanStartPage</rdfs:label>
-            <rdfs:isDefinedBy rdf:resource="info:eu-repo/semantics/"/>
-        </rdf:Description>
-        <!-- asserts the relationship between the oai_pmh record and the ore record -->
-        <rdf:Description rdf:about="http://era.library.ualberta.ca/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:era.library.ualberta.ca/1544bq05s">
-            <dcterms:conformsTo rdf:resource="http://www.openarchives.org/OAI/2.0/oai_dc/"/>
-            <rdf:type rdf:resource="info:eu-repo/semantics/descriptiveMetadata"/>
-        </rdf:Description>
-        <rdf:Description rdf:about="info:eu-repo/semantics/descriptiveMetadata">
-            <rdfs:label>descriptiveMetadata</rdfs:label>
-            <rdfs:isDefinedBy rdf:resource="info:eu-repo/semantics/"/>
-        </rdf:Description>        
+			<rdf:type rdf:resource="info:eu-repo/semantics/humanStartPage"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="info:eu-repo/semantics/humanStartPage">
+			<rdfs:label>humanStartPage</rdfs:label>
+			<rdfs:isDefinedBy rdf:resource="info:eu-repo/semantics/"/>
+		</rdf:Description>
+		<!-- asserts the relationship between the oai_pmh record and the ore record -->
+		<rdf:Description rdf:about="http://era.library.ualberta.ca/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:era.library.ualberta.ca/1544bq05s">
+			<dcterms:conformsTo rdf:resource="http://www.openarchives.org/OAI/2.0/oai_dc/"/>
+			<rdf:type rdf:resource="info:eu-repo/semantics/descriptiveMetadata"/>
+		</rdf:Description>
+			<rdf:Description rdf:about="info:eu-repo/semantics/descriptiveMetadata">
+			<rdfs:label>descriptiveMetadata</rdfs:label>
+			<rdfs:isDefinedBy rdf:resource="info:eu-repo/semantics/"/>
+		</rdf:Description>        
 	</oreatom:triples>
 </atom:entry>
