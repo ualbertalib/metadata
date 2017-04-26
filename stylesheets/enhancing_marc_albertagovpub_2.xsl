@@ -71,7 +71,7 @@
         
         <xsl:variable name="frequency">
             <xsl:value-of
-                select="lower-case(ancestor-or-self::*:record/*:datafield[@tag = 310]/*:subfield[@code = 'a'])"
+                select="ancestor-or-self::*:record/*:datafield[@tag = 310]/*:subfield[@code = 'a']"
             />
         </xsl:variable>
 
@@ -87,7 +87,7 @@
                             <xsl:when test="$frequency = ''">
                                 <xsl:value-of select="//title"/>
                             </xsl:when>
-                            <xsl:when test="contains($frequency, 'annual')">
+                            <xsl:when test="contains($frequency, 'nnual')">
                                 <xsl:variable name="date">
                                     <xsl:value-of select="//date"/>
                                 </xsl:variable>
