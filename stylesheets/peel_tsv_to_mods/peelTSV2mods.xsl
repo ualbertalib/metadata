@@ -9,7 +9,7 @@
     
     <!-- location of the tsv/csv file -->
     <xsl:param name="doc"
-        select="'file:///home/mparedes/local-peel.git/IA%20Postcard%20metadata%20-%20Alberta%20Churches%20D.tsv'"/>
+        select="'file:///home/mparedes/local-peel.git/Calgary%20Stampede%20Postcard%20metadata%20-%20Stampede%20Postcards.tsv'"/>
 
     <xsl:function name="fn:rows" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
@@ -42,6 +42,7 @@
                                 <xsl:variable name="cellValue">
                                     <xsl:value-of select="$cell[$pos]"/>
                                 </xsl:variable>
+                                <xsl:if test="$lineItems[$pos] != ''">
                                 <xsl:choose>
                                     <xsl:when test="$cellValue = 'Title'">
                                         <xsl:element name="titleinfo">
@@ -253,6 +254,7 @@
                                         </xsl:element>
                                     </xsl:otherwise>
                                 </xsl:choose>
+                                </xsl:if>
                             </xsl:for-each>
                             <xsl:element name="location">
                                 <xsl:namespace name="mods">http://www.loc.gov/mods/v3</xsl:namespace>
@@ -297,5 +299,5 @@
         </xsl:choose>
 
     </xsl:template>
-
+    
 </xsl:stylesheet>
