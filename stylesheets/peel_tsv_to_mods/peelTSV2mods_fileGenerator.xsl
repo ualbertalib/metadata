@@ -3,28 +3,20 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3"
     xmlns:peel="http://peel.library.ualberta.ca/mods-extensions">
 
-    <xsl:output method="xml" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
-
-
-        
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+    
     <xsl:template match="/">
+               
         <xsl:for-each-group select="root/mods:mods" group-by="identifier">
             <xsl:for-each select="identifier">
                 <xsl:variable name="filename">
                     <xsl:value-of select="."/>
                 </xsl:variable>
                 <xsl:result-document href="peel/{$filename}.xml">  
-                    <xsl:if test="normalize-space(string(.)) != ''">
-                        <xsl:copy>
-                            <xsl:copy-of select="current-group()"/>
-                        </xsl:copy>
-                    </xsl:if>
-                    
+                    <xsl:copy-of select="current-group()"/>
                 </xsl:result-document>
             </xsl:for-each>
         </xsl:for-each-group>
     </xsl:template>
-    
-    
+   
 </xsl:stylesheet>
-

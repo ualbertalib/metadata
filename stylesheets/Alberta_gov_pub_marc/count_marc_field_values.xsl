@@ -13,10 +13,10 @@
     </xsl:template>
 
     <xsl:variable name="docs"
-        select="document('../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/test.xml?select=*marc.xml;recurse=yes')"/>
+        select="document('../../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/test.xml?select=*marc.xml;recurse=yes')"/>
 
     <xsl:variable name="docs1"
-        select="document('../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/list.xml?select=*marc.xml;recurse=yes')"/>
+        select="document('../../metadata-wrangling/internet_archive_coll/albertagovernmentpublications/list.xml?select=*marc.xml;recurse=yes')"/>
 
     <xsl:template match="*">
         <xsl:for-each select="$docs1//*:description[text()]">   

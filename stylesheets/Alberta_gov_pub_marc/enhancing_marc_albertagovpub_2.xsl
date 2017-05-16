@@ -80,24 +80,44 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:for-each select="document($meta_file)/metadata">
+                        <xsl:variable name="volume">
+                            <xsl:value-of select="//volume"/>
+                        </xsl:variable>
+                        <xsl:variable name="year">
+                            <xsl:value-of select="//year"/>
+                        </xsl:variable>
+                        <xsl:variable name="date">
+                            <xsl:value-of select="//date"/>
+                        </xsl:variable>
                         <xsl:variable name="title">
                             <xsl:value-of select="//title"/>
                         </xsl:variable>
                         <xsl:choose>
-                            <xsl:when test="$frequency = ''">
+                            <xsl:when test="$frequency = '' and $date = '' and $year = '' and $volume = ''">
                                 <xsl:value-of select="//title"/>
                             </xsl:when>
-                            <xsl:when test="contains($frequency, 'nnual')">
-                                <xsl:variable name="date">
-                                    <xsl:value-of select="//date"/>
-                                </xsl:variable>
-                                <xsl:value-of select="concat($title, ' / ', $date)"/>
+                            <xsl:when test="$frequency = 'Annual' or $frequency = 'Annual.' or $frequency = 'Annuel' or $frequency = 'Annual,' or $frequency = 'Annuel.' or $frequency = 'annual' or $frequency = 'Annual (irregular)'">  
+                                <xsl:choose>
+                                    <xsl:when test="$date != ''">
+                                        <xsl:value-of select="concat($title, ' / ', $date)"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="concat($title, ' / ', $volume)"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:variable name="volume">
-                                    <xsl:value-of select="//volume"/>
-                                </xsl:variable>
-                                <xsl:value-of select="concat($title, ' / ', $volume)"/>
+                                <xsl:choose>
+                                    <xsl:when test="$volume != ''">
+                                        <xsl:value-of select="concat($title, ' / ', $volume)"/>
+                                    </xsl:when>
+                                    <xsl:when test="$year != ''">
+                                        <xsl:value-of select="concat($title, ' / ', $year)"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="concat($title, ' / ', $date)"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:for-each>
