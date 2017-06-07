@@ -23,6 +23,9 @@
 
     <xsl:template match="*:datafield[@tag = 245]/*:subfield[@code = 'a'][1]">
         <root>
+            <xsl:element name="file_name">
+                <xsl:value-of select="replace(subsequence(reverse(tokenize(base-uri(),'/')), 1, 1), '_marc.xml', '')"/>
+            </xsl:element>
         <xsl:element name="title">
             <xsl:value-of select="."/>
         </xsl:element>

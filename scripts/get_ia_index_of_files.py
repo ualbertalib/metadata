@@ -15,7 +15,7 @@ s.access_key
 'C9khuFEwAKAj5Y5X'
 
 #preparing the input file 
-with open('albertagovpub_duplicates_file_names.json', 'r') as file:
+with open('../albertagovernmentpublications.json', 'r') as file:
 	#this is the list of new files added to the collection from the last download
 	with open('albertagovpub_duplicates_file_names_temp.json', "w") as f_new:
 		for eachLine in file:
@@ -29,13 +29,14 @@ with open('albertagovpub_duplicates_file_names.json', 'r') as file:
 
 with open('albertagovpub_duplicates_file_names_temp.json', 'r') as file_new:
 	#segmenting large file to avoid running down the IA servers 
-	segment = file_new.readlines()[11003:11010]
-	for lines in segment:
+	segment = file_new.readlines()[10995:11630]
+	for idx, lines in enumerate(segment):
 		itemid = lines
 		itemid = itemid.strip()
 		item = internetarchive.get_item(itemid)
 		marc = item.get_file(itemid + '_meta.xml')
 		marc.download()
+		print idx
 		print "Downloading " + itemid + " ..."
 		time.sleep(0)
 

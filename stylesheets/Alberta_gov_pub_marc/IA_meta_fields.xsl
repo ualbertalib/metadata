@@ -9,7 +9,7 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <xsl:text>Title&#09;Publisher&#09;Creator&#xa;</xsl:text>
+        <xsl:text>File&#09;Title&#09;Publisher&#09;Creator&#xa;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
 
@@ -26,7 +26,8 @@
         <xsl:variable name="title">
             <xsl:value-of select="replace(//title, $d, '')"/>
         </xsl:variable>
-        
+        <xsl:value-of select="//file_name"/>
+        <xsl:text>&#x9;</xsl:text>
         <xsl:value-of select="$title"/>
         <xsl:text>&#x9;</xsl:text>
         <xsl:value-of select="//publisher"/>
