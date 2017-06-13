@@ -14,9 +14,9 @@
     
     <xsl:template match="*">
         
-        <xsl:text>embargoedDate  embargo_deactivation_date   lastModifiedDate    workflowState   state   graduationdate  title   dissertant  collection  fedora3handle   thesisdeposit_link</xsl:text>
+        <xsl:text>embargoedDate&#09;embargo_deactivation_date&#09;lastModifiedDate&#09;workflowState&#09;visibility&#09;state&#09;graduationdate&#09;title&#09;dissertant&#09;collection&#09;fedora3handle&#09;thesisdeposit_link&#xa;</xsl:text>
         
-        <xsl:for-each select="collection('/home/mparedes/metadata_work/ERA_files/post-migration/unembargo_20160616-20161212_transformed/?select=*.xml;recurse=yes')//*:digitalObject">
+        <xsl:for-each select="collection('/home/mparedes/metadata_work/ERA_files/era_dump_complete/era_foxml-2017-06-08/?select=*.xml;recurse=yes')//*:digitalObject">
             
             <xsl:variable name="visibility_exception">
                 <xsl:choose>
@@ -46,7 +46,7 @@
                 <xsl:text>&#09;</xsl:text>
                 <xsl:value-of select="replace(normalize-space((//*:datastream[@ID='DCQ']//*:title)[last()]),'&quot;','')"/>        
                 <xsl:text>&#09;</xsl:text>
-                <xsl:value-of select="(//*:datastream[@ID='DCQ']//*:dis)[last()]"/>        
+                <xsl:value-of select="(//*:datastream[@ID='DCQ']//*:creator)[last()]"/>        
                 <xsl:text>&#09;</xsl:text>
                 <xsl:value-of select="(//*:datastream[@ID='RELS-EXT']//*:isMemberOfCollection/@*:resource)[last()]"/>      
                 <xsl:text>&#09;</xsl:text>
