@@ -48,6 +48,8 @@
                 <xsl:text>&#09;</xsl:text>
                 <xsl:value-of select="(//*:datastream[@ID='DCQ']//*:creator)[last()]"/>        
                 <xsl:text>&#09;</xsl:text>
+                <xsl:value-of select="(//*:datastream[@ID='DCQ']//*:type)[last()]"/>        
+                <xsl:text>&#09;</xsl:text>
                 <xsl:value-of select="(//*:datastream[@ID='RELS-EXT']//*:isMemberOfCollection/@*:resource)[last()]"/>      
                 <xsl:text>&#09;</xsl:text>
                 <xsl:value-of select="(//*:datastream[@ID='DCQ']//*:fedora3handle)[last()] | (//*:identifier[contains(.,'handle')])[last()]"/>   
