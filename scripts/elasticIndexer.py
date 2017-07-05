@@ -222,7 +222,8 @@ def main():
 	es.indices.create(index="era", body=indexSettings)
 	print('commencing indexing')
 	arrange(results, es)
-	
+	print(n, 'resources indexed')
+
 
 def collate(result, key, resource, datum):
 	if predicates[key][1] == 'NR':
@@ -273,6 +274,7 @@ def arrange(results, es):
 
 
 
+
 def elastic(datum, es):
 	actions = []
 	for resource in datum.keys():
@@ -282,7 +284,7 @@ def elastic(datum, es):
 			"_index": "era",
 			'_op_type': 'index',
 			"_type": 'resource',
-			"_id": resource[0],
+			"_id": resource,
 			"_source": entry
 		}
 		actions.append(action)
