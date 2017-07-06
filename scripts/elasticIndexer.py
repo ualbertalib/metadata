@@ -51,7 +51,7 @@ indexSettings = {
 					}
 				},
 				"doi": {
-					"type": "text",
+					"type": "keyword",
 					"fields": {
 						"label": {
 							"type": "text"
@@ -94,7 +94,7 @@ indexSettings = {
 					"type": "keyword",
 					"fields": {
 						"label": {
-							"type": "date"
+							"type": "text"
 						}
 					}
 				},
@@ -202,12 +202,15 @@ indexSettings = {
 }
 
 sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/ERA/sparql")
-query = """SELECT DISTINCT (count(?a) AS ?count) WHERE { ?a ?b ?c }"""
+query = """SELECT DISTINCT ?a WHERE { ?a ?b ?c }"""
 sparql.setQuery(query)
 sparql.setReturnFormat(JSON)
+resources = []
 for result in sparql.query().convert()['results']['bindings']:
-	n = int(result['count']['value'])
+	resources.append(result['a']['value'])
 
+n = len(list(set(resources)))
+print(n, 'items to index')
 
 def main():
 	query = """prefix xsd: <http://www.w3.org/2001/XMLSchema#> SELECT * WHERE {OPTIONAL {?resource <http://purl.org/dc/terms/type> ?resourceType } . OPTIONAL {?resource <http://purl.org/dc/terms/abstract> ?abstract } . OPTIONAL {?resource <http://purl.org/dc/terms/description> ?description } . OPTIONAL {?resource <http://purl.org/dc/terms/identifier> ?doi } . OPTIONAL {?resource <http://purl.org/dc/terms/title> ?title } . OPTIONAL {?resource <http://purl.org/dc/terms/contributor> ?contributor } . OPTIONAL {?resource <http://purl.org/dc/terms/creator> ?creator } . OPTIONAL {?resource <http://purl.org/dc/terms/spatial> ?spatial } . OPTIONAL {?resource <http://purl.org/dc/terms/temporal> ?temporal } . OPTIONAL {?resource <http://purl.org/dc/terms/subject> ?subject } . OPTIONAL {?resource <http://purl.org/dc/terms/created> ?dateCreated } . OPTIONAL {?resource <http://id.loc.gov/vocabulary/relators/dis> ?dissertant } . OPTIONAL {?resource <http://purl.org/dc/terms/dateAccepted> ?dateAccepted } . OPTIONAL {?resource <http://vivoweb.org/ontology/core#AcademicDepartment> ?department } . OPTIONAL {?resource <http://purl.org/ontology/bibo/ThesisDegree> ?degree } . OPTIONAL {?resource <http://terms.library.ualberta.ca/thesis/specialization> ?specialization } . OPTIONAL {?resource <http://terms.library.ualberta.ca/thesis/thesislevel> ?level } . OPTIONAL {?resource <http://id.loc.gov/vocabulary/relators/ths> ?supervisor } . OPTIONAL {?resource <http://terms.library.ualberta.ca/role/thesiscommitteemember> ?committee} . OPTIONAL {?resource <http://terms.library.ualberta.ca/identifiers/hasCollection> ?collection} . }"""
@@ -222,8 +225,6 @@ def main():
 	es.indices.create(index="era", body=indexSettings)
 	print('commencing indexing')
 	arrange(results, es)
-	print(n, 'resources indexed')
-
 
 def collate(result, key, resource, datum):
 	if predicates[key][1] == 'NR':
@@ -237,19 +238,15 @@ def collate(result, key, resource, datum):
 	elif predicates[key][1] == 'R':
 		if key not in datum[resource]:
 			datum[resource][key] = []
-		if key == 'temporal':
-			try:
-				datum[resource][key].append(parser.parse(result[key]['value']).isoformat('T'))
-			except Exception:
-				pass
+			datum[resource][key].append(result[key]['value'])
 		else:
 			datum[resource][key].append(result[key]['value'])
 	return datum
 
 
 def arrange(results, es):
+	total = 0
 	datum = {}
-	i = 1
 	for result in results["results"]["bindings"]:
 		resource = result['resource']['value']
 		for key in predicates.keys():
@@ -264,15 +261,13 @@ def arrange(results, es):
 				if isinstance(datum[data][key], list):
 					datum[data][key] = list(set(datum[data][key]))
 		if len(datum) == 500:
-			print('committing batch', i, 'of', str(math.ceil(n / 500)))
 			elastic(datum, es)
 			datum = {}
-			i = i + 1
-	print('committing batch', i, 'of', str(math.ceil(n / 500)))
+			total = total + 500
+			print('indexed', total)
+	total = total + len(datum)
 	elastic(datum, es)
-
-
-
+	print(total, 'of', n, 'resources indexed')
 
 
 def elastic(datum, es):
