@@ -1,7 +1,6 @@
 from elasticsearch import helpers, Elasticsearch
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dateutil import parser as parser
-import math
 
 predicates = {
 	"resourceType": ("<http://purl.org/dc/terms/type>", "NR"),
