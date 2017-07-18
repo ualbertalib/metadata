@@ -63,7 +63,7 @@
                                                 xmlns="http://www.loc.gov/mods/v3">
                                                 <xsl:attribute name="authority"
                                                   >gmgpc</xsl:attribute>
-                                                <xsl:text>Postcards</xsl:text>
+                                                <xsl:text>postcards</xsl:text>
                                             </xsl:element>
                                         </xsl:when>
                                         <!-- a new field is to be created in the csv template that can be mapped to this element -->
@@ -275,9 +275,9 @@
                                                     <xsl:attribute name="access">raw object</xsl:attribute>
                                                     <xsl:attribute name="note">
                                                         <xsl:text>width='</xsl:text>
-                                                        <xsl:value-of select="$lineItems[$pos + 1]"/>
+                                                        <xsl:value-of select="$lineItems[$pos ]"/>
                                                         <xsl:text>' height='</xsl:text>
-                                                        <xsl:value-of select="$lineItems[$pos]"/>
+                                                        <xsl:value-of select="$lineItems[$pos + 1]"/>
                                                         <xsl:text>'</xsl:text>
                                                     </xsl:attribute>
                                                     <xsl:text>http://peel.library.ualberta.ca/pcimages/</xsl:text>
@@ -292,9 +292,9 @@
                                                     <xsl:attribute name="access">preview</xsl:attribute>
                                                     <xsl:attribute name="note">
                                                         <xsl:text>width='</xsl:text>
-                                                        <xsl:value-of select="$lineItems[$pos + 3]"/>
-                                                        <xsl:text>' height='</xsl:text>
                                                         <xsl:value-of select="$lineItems[$pos + 2]"/>
+                                                        <xsl:text>' height='</xsl:text>
+                                                        <xsl:value-of select="$lineItems[$pos + 3]"/>
                                                         <xsl:text>'</xsl:text>
                                                     </xsl:attribute>
                                                     <xsl:text>http://peel.library.ualberta.ca/pcimages/</xsl:text>
@@ -315,9 +315,9 @@
                                                     <xsl:attribute name="access">raw object</xsl:attribute>
                                                     <xsl:attribute name="note">
                                                         <xsl:text>width='</xsl:text>
-                                                        <xsl:value-of select="$lineItems[$pos + 5]"/>
-                                                        <xsl:text>' height='</xsl:text>
                                                         <xsl:value-of select="$lineItems[$pos + 4]"/>
+                                                        <xsl:text>' height='</xsl:text>
+                                                        <xsl:value-of select="$lineItems[$pos + 5]"/>
                                                         <xsl:text>'</xsl:text>
                                                     </xsl:attribute>
                                                     <xsl:text>http://peel.library.ualberta.ca/pcimages/</xsl:text>
@@ -332,9 +332,9 @@
                                                     <xsl:attribute name="access">preview</xsl:attribute>
                                                     <xsl:attribute name="note">
                                                         <xsl:text>width='</xsl:text>
-                                                        <xsl:value-of select="replace($lineItems[$pos + 7], ',' , '')"/>
+                                                        <xsl:value-of select="replace($lineItems[$pos + 6], ',' , '')"/>
                                                         <xsl:text>' height='</xsl:text>
-                                                        <xsl:value-of select="$lineItems[$pos + 6]"/>
+                                                        <xsl:value-of select="$lineItems[$pos + 7]"/>
                                                         <xsl:text>'</xsl:text>
                                                     </xsl:attribute>
                                                     <xsl:text>http://peel.library.ualberta.ca/pcimages/</xsl:text>
