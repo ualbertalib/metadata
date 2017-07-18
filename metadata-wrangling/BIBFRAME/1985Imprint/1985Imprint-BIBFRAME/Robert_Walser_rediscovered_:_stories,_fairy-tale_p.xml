@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1352734#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1352734</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-01-28</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes translation</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>PT2647.A64</bf:classificationPortion>
+            <bf:itemPortion>A6 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>838/.91209</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1352734#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Walser, Robert, 1878-1956.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Walser, Robert, 1878-1956.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aWalser, Robert,$d1878-1956.</bflc:name00MarcKey>
+                  <rdfs:label>Walser, Robert, 1878-1956.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Works. Selections. English. 1985</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Works. Selections. English. 1985</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aWorks.$kSelections.$lEnglish.$f1985</bflc:title40MarcKey>
+            <rdfs:label>Works. Selections. English. 1985</rdfs:label>
+            <bflc:titleSortKey>Works. Selections. English. 1985</bflc:titleSortKey>
+            <bf:mainTitle>Works</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:originDate>1985</bf:originDate>
+      <bf:natureOfContent>Selections</bf:natureOfContent>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>Selections</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language>
+            <rdfs:label>English</rdfs:label>
+         </bf:Language>
+      </bf:language>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1352734#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Harman, Mark.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHarman, Mark.</bflc:name00MarcKey>
+                  <rdfs:label>Harman, Mark.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1352734#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Dartmouth College.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aDartmouth College.</bflc:name10MarcKey>
+                  <rdfs:label>Dartmouth College.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1352734#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1352734#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nhu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   84040585</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0874513340</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm11841548</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Robert Walser rediscovered : stories, fairy-tale plays, and critical responses /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Robert Walser rediscovered : stories, fairy-tale plays, and critical responses /</rdfs:label>
+            <bflc:titleSortKey>Robert Walser rediscovered : stories, fairy-tale plays, and critical responses /</bflc:titleSortKey>
+            <bf:mainTitle>Robert Walser rediscovered</bf:mainTitle>
+            <bf:subtitle>stories, fairy-tale plays, and critical responses</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>edited by Mark Harman ; including the anti-fairy tales, Cinderella and Snowwhite, translated by Walter Arndt</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Hanover, NH</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Published for Dartmouth College by University Press of New England</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Hanover, NH : Published for Dartmouth College by University Press of New England, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>ix, 225 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>23 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes indexes.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 215-216.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1352734#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1352734#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PT2647.A64 A6 1985</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1352734#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

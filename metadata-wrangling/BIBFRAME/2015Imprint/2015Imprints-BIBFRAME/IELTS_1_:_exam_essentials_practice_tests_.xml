@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6804897#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6804897</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-22T15:45:56</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-19</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCQ</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PE1128</bf:classificationPortion>
+            <bf:itemPortion>.H37 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>428.24076</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6804897#Agent100-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Harrison, Mark, 1955-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Harrison, Mark, 1955-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aHarrison, Mark,$d1955-$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Harrison, Mark, 1955-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>IELTS 1 : exam essentials practice tests /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>IELTS 1 : exam essentials practice tests /</rdfs:label>
+            <bflc:titleSortKey>IELTS 1 : exam essentials practice tests /</bflc:titleSortKey>
+            <bf:mainTitle>IELTS 1</bf:mainTitle>
+            <bf:subtitle>exam essentials practice tests</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6804897#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>English language--Examinations, questions, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>English language--Examinations, questions, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>English language</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Examinations, questions, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6804897#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>English language--Textbooks for foreign speakers.</rdfs:label>
+            <madsrdf:authoritativeLabel>English language--Textbooks for foreign speakers.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>English language</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Textbooks for foreign speakers</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6804897#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>International English Language Testing System--Study guides.</rdfs:label>
+            <madsrdf:authoritativeLabel>International English Language Testing System--Study guides.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>International English Language Testing System</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Study guides</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6804897#Agent700-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Whitehead, Russell,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aWhitehead, Russell,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Whitehead, Russell,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6804897#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6804897#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:dimensions>4 3/4 in. or 12 cm.</bf:dimensions>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781285747194</rdf:value>
+            <bf:qualifier>pbk. : with answer key</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1285747194</rdf:value>
+            <bf:qualifier>pbk. : with answer key</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn922783742</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>IELTS 1 : exam essentials practice tests /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>IELTS 1 : exam essentials practice tests /</rdfs:label>
+            <bflc:titleSortKey>IELTS 1 : exam essentials practice tests /</bflc:titleSortKey>
+            <bf:mainTitle>IELTS 1</bf:mainTitle>
+            <bf:subtitle>exam essentials practice tests</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Mark Harrison, Russell Whitehead</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>IELTS one</rdfs:label>
+            <bflc:titleSortKey>IELTS one</bflc:titleSortKey>
+            <bf:mainTitle>IELTS one</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>International English Language Testing System one</rdfs:label>
+            <bflc:titleSortKey>International English Language Testing System one</bflc:titleSortKey>
+            <bf:mainTitle>International English Language Testing System one</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>spine</bf:variantType>
+            <rdfs:label>Exam essentials practice tests 1 with key : IELTS</rdfs:label>
+            <bflc:titleSortKey>Exam essentials practice tests 1 with key : IELTS</bflc:titleSortKey>
+            <bf:mainTitle>Exam essentials practice tests 1 with key</bf:mainTitle>
+            <bf:subtitle>IELTS</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Andover, Hampshire, United Kingdom</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>National Geographic Learning/Cengage Learning</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Andover, Hampshire, United Kingdom : National Geographic Learning/Cengage Learning, [2015]</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>256 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Accompanying materials</bf:noteType>
+            <rdfs:label>1 DVD-ROM (4 3/4 in.).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>29 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/c">
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cd">
+            <rdfs:label>computer disc</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Exam essentials</bf:seriesStatement>
+      <bf:instanceOf rdf:resource="http://example.org/6804897#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6804897#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PE1128.H37 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6804897#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

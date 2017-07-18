@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6813604#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6813604</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-24T14:06:23</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-29</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BTCTA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>HLS</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bio">
+            <rdfs:label>contains biographical information</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/f-cg"/>
+      </bf:geographicCoverage>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-us"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>DT658.22.L85</bf:classificationPortion>
+            <bf:itemPortion>G47 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>967.5103/1</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6813604#Agent100-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Gerard, E. (Emmanuel),</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Gerard, E. (Emmanuel),</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aGerard, E.$q(Emmanuel),$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Gerard, E. (Emmanuel),</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Death in the Congo : murdering Patrice Lumumba /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Death in the Congo : murdering Patrice Lumumba /</rdfs:label>
+            <bflc:titleSortKey>Death in the Congo : murdering Patrice Lumumba /</bflc:titleSortKey>
+            <bf:mainTitle>Death in the Congo</bf:mainTitle>
+            <bf:subtitle>murdering Patrice Lumumba</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6813604#Agent600-26">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Lumumba, Patrice, 1925-1961--Assassination.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Lumumba, Patrice, 1925-1961</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aLumumba, Patrice,$d1925-1961$xAssassination.</bflc:name00MarcKey>
+            <rdfs:label>Lumumba, Patrice, 1925-1961</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6813604#Agent600-27">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Name"/>
+            <madsrdf:authoritativeLabel>Hammarskjöld, Dag, 1905-1961.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Hammarskjöld, Dag, 1905-1961.</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aHammarskjöld, Dag,$d1905-1961.</bflc:name00MarcKey>
+            <rdfs:label>Hammarskjöld, Dag, 1905-1961.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6813604#Agent610-28">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>United Nations--Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>United Nations</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aUnited Nations$zCongo (Democratic Republic)</bflc:name10MarcKey>
+            <rdfs:label>United Nations</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Congo (Democratic Republic)--History--Civil War, 1960-1965.</rdfs:label>
+            <madsrdf:authoritativeLabel>Congo (Democratic Republic)--History--Civil War, 1960-1965.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>Civil War, 1960-1965</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Belgium--Foreign relations--Congo (Democratic Republic)</rdfs:label>
+            <madsrdf:authoritativeLabel>Belgium--Foreign relations--Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Belgium</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Foreign relations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Congo (Democratic Republic)--Foreign relations--Belgium.</rdfs:label>
+            <madsrdf:authoritativeLabel>Congo (Democratic Republic)--Foreign relations--Belgium.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Foreign relations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Belgium</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Congo (Democratic Republic)--Foreign relations--United States.</rdfs:label>
+            <madsrdf:authoritativeLabel>Congo (Democratic Republic)--Foreign relations--United States.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Foreign relations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>United States</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>United States--Foreign relations--Congo (Democratic Republic)</rdfs:label>
+            <madsrdf:authoritativeLabel>United States--Foreign relations--Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>United States</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Foreign relations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6813604#Topic651-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Congo (Democratic Republic)--Politics and government--1960-1997.</rdfs:label>
+            <madsrdf:authoritativeLabel>Congo (Democratic Republic)--Politics and government--1960-1997.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Congo (Democratic Republic)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Politics and government</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>1960-1997</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6813604#Agent700-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Kuklick, Bruce, 1941-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aKuklick, Bruce,$d1941-$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Kuklick, Bruce, 1941-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6813604#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6813604#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/mau"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014015902</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780674725270</rdf:value>
+            <bf:qualifier>hardcover</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0674725271</rdf:value>
+            <bf:qualifier>hardcover</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn875999924</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Death in the Congo : murdering Patrice Lumumba /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Death in the Congo : murdering Patrice Lumumba /</rdfs:label>
+            <bflc:titleSortKey>Death in the Congo : murdering Patrice Lumumba /</bflc:titleSortKey>
+            <bf:mainTitle>Death in the Congo</bf:mainTitle>
+            <bf:subtitle>murdering Patrice Lumumba</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Emmanuel Gerard, Bruce Kuklick</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Cambridge, Massachusetts</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Harvard University Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Cambridge, Massachusetts : Harvard University Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xiii, 276 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations, maps</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>25 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>The Congo of the Belgians -- Independence -- The empire strikes back -- The Cold War comes to Africa -- Dag Hammarskjöld and the UN -- The government falls -- Mobutu -- Africans against Lumumba -- The Central Intelligence Agency -- The return of the Belgians -- Lumumba imperiled -- Killing Lumumba -- Epilogue -- Notes -- Essay on sources.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6813604#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6813604#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>DT658.22.L85 G47 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6813604#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

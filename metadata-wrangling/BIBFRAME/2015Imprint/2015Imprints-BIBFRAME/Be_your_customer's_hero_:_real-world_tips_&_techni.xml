@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6785705#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6785705</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-05-28T13:26:34</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-20</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BTCTA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>IAD</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OSU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AFMK</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>HF5415.5</bf:classificationPortion>
+            <bf:itemPortion>.T664 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>658.8/12</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6785705#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Toporek, Adam.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Toporek, Adam.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aToporek, Adam.</bflc:name00MarcKey>
+                  <rdfs:label>Toporek, Adam.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</rdfs:label>
+            <bflc:titleSortKey>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</bflc:titleSortKey>
+            <bf:mainTitle>Be your customer's hero</bf:mainTitle>
+            <bf:subtitle>real-world tips &amp; techniques for the service front lines</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6785705#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Customer services.</rdfs:label>
+            <madsrdf:authoritativeLabel>Customer services.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6785705#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Customer relations.</rdfs:label>
+            <madsrdf:authoritativeLabel>Customer relations.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6785705#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Management.</rdfs:label>
+            <madsrdf:authoritativeLabel>Management.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/6785705#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6785705#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nyu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014045798</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780814449059 (pbk.)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0814449050 (pbk.)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780814449066 (ebook)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn897042275</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</rdfs:label>
+            <bflc:titleSortKey>Be your customer's hero : real-world tips &amp; techniques for the service front lines /</bflc:titleSortKey>
+            <bf:mainTitle>Be your customer's hero</bf:mainTitle>
+            <bf:subtitle>real-world tips &amp; techniques for the service front lines</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Adam Toporek</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>AMACOM American Management Association</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New York : AMACOM American Management Association, 2015.</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xii, 244 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>23 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes index.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Acknowledgments -- Introduction -- Before we get started -- Great service is all in your head -- The customer is always -- Winning is not a customer service goal -- Do you know your mental rules? -- Be proud, and then swallow your pride -- Keep your cool when the ball comes at you -- Are you renting customers space in your head? -- It's true: your attitude does determine your altitude -- The mind of the modern customer -- Customers have mental rules, too -- What's in it for me? -- All customers are irrational -- Everyone is rushed, everyone is stressed -- You don't know your customer's story -- Everyone's been burned before -- The seven service triggers -- Introducing the seven service triggers -- Service trigger #1: being ignored -- Service trigger #2: being abandoned -- Avoiding service triggers #1 and #2 -- Service trigger #3: being hassled -- Service trigger #4: being faced with incompetence -- Service trigger #5: being shuffled -- Service trigger #6: being powerless -- Service trigger #7: being disrespected -- Be a great teammate -- Why teamwork matters -- Rise above, don't stoop down -- It's showtime -- The clothes make the rep -- Always be professional -- Set the next shift up for success -- Five reasons customer documentation matters -- Document quickly and effectively -- When to help a teammate with a customer -- Own the service floor -- Make that first impression count -- How are you today? -- How to handle "i'm just browsing" -- Don't be a helicopter rep -- Can you remember one thing? -- The name game is no game -- Judge not lest ye miss an opportunity -- Become the customer's personal detective -- Never talk badly about customers with customers -- Wow customers in the blink of an eye -- Communicate like a pro -- Customer service lessons grandma taught you -- Give your customers your undivided attention -- Is your body language saying the right things? -- Smile when you dial -- The phone is different, and the same -- Use brwy communication -- Want to help your customers? shut up -- Ask questions, lots of questions -- Jargon is a wall between you and the customer -- 10 power words you must use -- Assure accountability -- Always get buy-in for your response times -- Don't make promises you can't keep -- The art of the pivot -- Master difficult situations -- Complaints should come with bows on them -- Listening is a start, understanding is the goal -- Cater to your customers with this service process -- Focus on what you can do, not on what you can't -- Making it right is more important than being right -- Let upset customers punch themselves out -- What to do when the customer won't stop talking -- The art of framing -- Sales techniques that help close the deal -- Use your authority -- Don't blame the policy for the problem -- Fine print isn't always so fine for customers -- Handling customer service "experts" -- When a complaint is a scam -- Handle nightmare customers -- Applying what you know when the heat is on -- There's no silver bullet for a hand grenade -- 13 go-to tactics for defusing angry customers -- How to draw the line with a customer -- How to handle customer threats -- What to do when a customer with an audience goes crazy -- Understand the digital front lines -- The channel impacts the message -- Privacy and security are the new triggers -- Good email is an art -- The social customer is here to stay -- Be your customer's hero -- What really makes a hero-class customer experience? -- Adopt the mindset of a hero -- Be your customer's hero -- Putting what you've learned into practice -- Index.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6785705#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6785705#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HF5415.5.T664 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6785705#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

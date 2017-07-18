@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1315451#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1315451</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-24</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/rus"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/aut">
+            <rdfs:label>autobiography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes translation</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/rus">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/heb">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/a-is"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>DS151.Z5</bf:classificationPortion>
+            <bf:itemPortion>A3 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1315451#Agent100-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Jabotinsky, Vladimir, 1880-1940.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Jabotinsky, Vladimir, 1880-1940.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aJabotinsky, Vladimir,$d1880-1940.</bflc:name00MarcKey>
+                  <rdfs:label>Jabotinsky, Vladimir, 1880-1940.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Sipur ḥayai. Russian</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Sipur ḥayai. Russian</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aSipur ḥayai.$lRussian</bflc:title40MarcKey>
+            <rdfs:label>Sipur ḥayai. Russian</rdfs:label>
+            <bflc:titleSortKey>Sipur ḥayai. Russian</bflc:titleSortKey>
+            <bf:mainTitle>Sipur ḥayai</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:language>
+         <bf:Language>
+            <rdfs:label>Russian</rdfs:label>
+         </bf:Language>
+      </bf:language>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1315451#Agent600-24">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Name"/>
+            <madsrdf:authoritativeLabel>Jabotinsky, Vladimir, 1880-1940.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Jabotinsky, Vladimir, 1880-1940.</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aJabotinsky, Vladimir,$d1880-1940.</bflc:name00MarcKey>
+            <rdfs:label>Jabotinsky, Vladimir, 1880-1940.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1315451#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Revisionist Zionists--Biography.</rdfs:label>
+            <madsrdf:authoritativeLabel>Revisionist Zionists--Biography.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Revisionist Zionists</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Biography</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1315451#Work740-26">
+            <rdfs:label>Story of my life.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Story of my life.</rdfs:label>
+                  <bflc:titleSortKey>Story of my life.</bflc:titleSortKey>
+                  <bf:mainTitle>Story of my life</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1315451#Work740-27">
+            <rdfs:label>Sipur ḥayai.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Sipur ḥayai.</rdfs:label>
+                  <bflc:titleSortKey>Sipur ḥayai.</bflc:titleSortKey>
+                  <bf:mainTitle>Sipur ḥayai</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1315451#Work830-28">
+            <rdfs:label>Biblioteka "Alii͡a" ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Biblioteka "Alii͡a" ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aBiblioteka "Alii͡a" ;$v118.</bflc:title30MarcKey>
+                  <rdfs:label>Biblioteka "Alii͡a" ;</rdfs:label>
+                  <bflc:titleSortKey>Biblioteka "Alii͡a" ;</bflc:titleSortKey>
+                  <bf:mainTitle>Biblioteka "Alii͡a"</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>118</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1315451#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1315451#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/is"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/por">
+            <rdfs:label>portraits</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   86155513</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm15084009</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Povestʹ moikh dneĭ /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Povestʹ moikh dneĭ /</rdfs:label>
+            <bflc:titleSortKey>Povestʹ moikh dneĭ /</bflc:titleSortKey>
+            <bf:mainTitle>Povestʹ moikh dneĭ</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Vladimir (Zeev) Zhabotinskiĭ</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Tel-Aviv</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Biblioteka-Alii͡a</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Tel-Aviv] : Biblioteka-Alii͡a, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xxiv, 292 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>port.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>18 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Biblioteka-Alii͡a</bf:seriesStatement>
+      <bf:seriesEnumeration>118</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Translation of: Sipur ḥayai.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Titles on t.p. verso: The story of my life; Sipur ḥayai.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1315451#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1315451#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>DS151.Z5 A3 1985</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1315451#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

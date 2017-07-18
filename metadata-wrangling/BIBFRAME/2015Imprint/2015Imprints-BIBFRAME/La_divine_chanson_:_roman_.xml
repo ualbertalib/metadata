@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6811366#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6811366</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-11T01:53:50</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-07</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AUXAM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>AUXAM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>LTSCA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/gen">
+            <rdfs:label>general</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/fic">
+            <rdfs:label>fiction</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PQ2683.A23</bf:classificationPortion>
+            <bf:itemPortion>.D58 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6811366#Agent100-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Waberi, Abdourahman A., 1965-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Waberi, Abdourahman A., 1965-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aWaberi, Abdourahman A.,$d1965-</bflc:name00MarcKey>
+                  <rdfs:label>Waberi, Abdourahman A., 1965-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>La divine chanson : roman /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>La divine chanson : roman /</rdfs:label>
+            <bflc:titleSortKey>divine chanson : roman /</bflc:titleSortKey>
+            <bf:mainTitle>La divine chanson</bf:mainTitle>
+            <bf:subtitle>roman</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance rdf:resource="http://example.org/6811366#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6811366#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9782843047329 (pbk.)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>2843047323 (pbk.)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn900410698</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>La divine chanson : roman /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>La divine chanson : roman /</rdfs:label>
+            <bflc:titleSortKey>divine chanson : roman /</bflc:titleSortKey>
+            <bf:mainTitle>La divine chanson</bf:mainTitle>
+            <bf:subtitle>roman</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Abdourahman A. Waberi</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Paris</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Zulma</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Paris : Zulma, c2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>237 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>19 cm.</bf:dimensions>
+      <bf:instanceOf rdf:resource="http://example.org/6811366#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6811366#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PQ2683.A23.D58 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6811366#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

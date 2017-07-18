@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1311525#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1311525</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-13</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/fic">
+            <rdfs:label>fiction</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PR 9619.3 C35</bf:classificationPortion>
+            <bf:itemPortion>L742 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1311525#Agent100-10">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Campbell, Marion, 1948-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Campbell, Marion, 1948-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aCampbell, Marion,$d1948-</bflc:name00MarcKey>
+                  <rdfs:label>Campbell, Marion, 1948-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Lines of flight : a novel /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Lines of flight : a novel /</rdfs:label>
+            <bflc:titleSortKey>Lines of flight : a novel /</bflc:titleSortKey>
+            <bf:mainTitle>Lines of flight</bf:mainTitle>
+            <bf:subtitle>a novel</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance rdf:resource="http://example.org/1311525#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1311525#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/at"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0949206016</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm17930927</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Lines of flight : a novel /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Lines of flight : a novel /</rdfs:label>
+            <bflc:titleSortKey>Lines of flight : a novel /</bflc:titleSortKey>
+            <bf:mainTitle>Lines of flight</bf:mainTitle>
+            <bf:subtitle>a novel</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Marion Campbell</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Fremantle, W.A.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Fremantle Arts Centre Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Fremantle, W.A. : Fremantle Arts Centre Press, c1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>291 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>20 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:instanceOf rdf:resource="http://example.org/1311525#Work"/>
+   </bf:Instance>
+</rdf:RDF>

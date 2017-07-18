@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1329424#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1329424</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-10-17</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/hun"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PH 3419 H154</bf:classificationPortion>
+            <bf:itemPortion>E53 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1329424#Agent100-9">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Hajnal, László Gábor.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Hajnal, László Gábor.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aHajnal, László Gábor.</bflc:name00MarcKey>
+                  <rdfs:label>Hajnal, László Gábor.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Embermalom /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Embermalom /</rdfs:label>
+            <bflc:titleSortKey>Embermalom /</bflc:titleSortKey>
+            <bf:mainTitle>Embermalom</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance rdf:resource="http://example.org/1329424#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1329424#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/gw"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn465246727</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Embermalom /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Embermalom /</rdfs:label>
+            <bflc:titleSortKey>Embermalom /</bflc:titleSortKey>
+            <bf:mainTitle>Embermalom</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Hajnal Laszlo Gabor</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>München</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>s.n.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>München : [s.n.], 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>83 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>18 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:instanceOf rdf:resource="http://example.org/1329424#Work"/>
+   </bf:Instance>
+</rdf:RDF>

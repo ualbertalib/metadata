@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1386434#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1386434</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-07-03</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>PN1994</bf:classificationPortion>
+            <bf:itemPortion>.D395 1985 vol. 1</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>791.43 s</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>791.43</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1386434#Agent100-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Delluc, Louis, 1890-1924.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Delluc, Louis, 1890-1924.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aDelluc, Louis,$d1890-1924.</bflc:name00MarcKey>
+                  <rdfs:label>Delluc, Louis, 1890-1924.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Le cinéma et les cinéastes /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Le cinéma et les cinéastes /</rdfs:label>
+            <bflc:titleSortKey>cinéma et les cinéastes /</bflc:titleSortKey>
+            <bf:mainTitle>Le cinéma et les cinéastes</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://example.org/1386434#GenreForm655-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+            <rdfs:label>Motion pictures.</rdfs:label>
+            <madsrdf:authoritativeLabel>Motion pictures.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcgft</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1386434#Agent700-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Lherminier, Pierre.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aLherminier, Pierre.</bflc:name00MarcKey>
+                  <rdfs:label>Lherminier, Pierre.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1386434#Work800-24">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1386434#Agent800-24">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Delluc, Louis, 1890-1924.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>8001 $aDelluc, Louis,$d1890-1924.$tEcrits cinématographiques ;$v1.</bflc:name00MarcKey>
+                        <rdfs:label>Delluc, Louis, 1890-1924.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Ecrits cinématographiques ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Ecrits cinématographiques ;</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>8001 $aDelluc, Louis,$d1890-1924.$tEcrits cinématographiques ;$v1.</bflc:title00MarcKey>
+                  <rdfs:label>Ecrits cinématographiques ;</rdfs:label>
+                  <bflc:titleSortKey>Ecrits cinématographiques ;</bflc:titleSortKey>
+                  <bf:mainTitle>Ecrits cinématographiques</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>1</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1386434#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1386434#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/plt">
+            <rdfs:label>plates</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   85200510 //r88</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>2900596025</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm12806010</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Le cinéma et les cinéastes /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Le cinéma et les cinéastes /</rdfs:label>
+            <bflc:titleSortKey>cinéma et les cinéastes /</bflc:titleSortKey>
+            <bf:mainTitle>Le cinéma et les cinéastes</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Louis Delluc ; édition établie et présentée par Pierre Lherminier</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Paris</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Cinémathèque française</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Paris] : Cinémathèque française, [1985]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>349 p., [48] p. of plates</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>23 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Ecrits cinématographiques</bf:seriesStatement>
+      <bf:seriesEnumeration>1</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes indexes.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1386434#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1386434#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PN1994.D395 1985 vol. 1</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1386434#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

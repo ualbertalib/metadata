@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6803533#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6803533</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-21T10:02:19</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-25</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DNLM/DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>NLM</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>IXA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>WAU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCQ</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UAB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>RA425</bf:classificationPortion>
+            <bf:itemPortion>.R55 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>2014 F-402</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>WA 100</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>362.1</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6803533#Agent100-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Riegelman, Richard K.,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Riegelman, Richard K.,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aRiegelman, Richard K.,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Riegelman, Richard K.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Public health 101 : healthy people--healthy populations /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Public health 101 : healthy people--healthy populations /</rdfs:label>
+            <bflc:titleSortKey>Public health 101 : healthy people--healthy populations /</bflc:titleSortKey>
+            <bf:mainTitle>Public health 101</bf:mainTitle>
+            <bf:subtitle>healthy people--healthy populations</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803533#Topic650-37">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Public health--Textbooks.</rdfs:label>
+            <madsrdf:authoritativeLabel>Public health--Textbooks.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Public health</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Textbooks</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803533#Topic650-38">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Public Health.</rdfs:label>
+            <madsrdf:authoritativeLabel>Public Health.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6803533#Agent700-39">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Kirkwood, Brenda,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aKirkwood, Brenda,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Kirkwood, Brenda,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6803533#Work830-40">
+            <rdfs:label>Essential public health.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Essential public health.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aEssential public health.</bflc:title30MarcKey>
+                  <rdfs:label>Essential public health.</rdfs:label>
+                  <bflc:titleSortKey>Essential public health.</bflc:titleSortKey>
+                  <bf:mainTitle>Essential public health</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/6803533#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6803533#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/mau"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2013039072</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>101617838</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DNLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781284045284</rdf:value>
+            <bf:qualifier>pbk. with access code</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1284045285</rdf:value>
+            <bf:qualifier>pbk. with access code</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1284040844</rdf:value>
+            <bf:qualifier>pbk. with access code</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781284040845</rdf:value>
+            <bf:qualifier>pbk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1284040844</rdf:value>
+            <bf:qualifier>pbk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781284074611</rdf:value>
+            <bf:qualifier>enhanced</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1284074617</rdf:value>
+            <bf:qualifier>enhanced</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn859168734</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Public health 101 : healthy people--healthy populations /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Public health 101 : healthy people--healthy populations /</rdfs:label>
+            <bflc:titleSortKey>Public health 101 : healthy people--healthy populations /</bflc:titleSortKey>
+            <bf:mainTitle>Public health 101</bf:mainTitle>
+            <bf:subtitle>healthy people--healthy populations</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Richard Riegelman, MD, MPH, PhD (Professor and Founding Dean, the George Washington University School of Public Health and Health Services, Washington, DC), Brenda Kirkwood, MPH, DrPH (University at Albany, State University of New York, School of Public Health, Albany, NY)</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Public health one hundred one</rdfs:label>
+            <bflc:titleSortKey>Public health one hundred one</bflc:titleSortKey>
+            <bf:mainTitle>Public health one hundred one</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:editionStatement>Enhanced second edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Burlington, MA</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Jones &amp; Bartlett Learning</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Burlington, MA : Jones &amp; Bartlett Learning, [2015]</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xx, 320 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Essential public health</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Public health: the population health approach -- Evidence-based public health -- Public health data and communications -- Social and behavioral sciences and public health -- Health law, policy, and ethics -- Non-communicable diseases -- Communicable diseases -- Environmental health and safety -- Health professionals and the health workforce -- Healthcare institutions -- Health insurance and healthcare systems -- Public health institutions and systems -- Food and drugs as public health issues -- From single solutions to systems thinking : the future of population health.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6803533#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6803533#Item050-18">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>RA425.R55 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6803533#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6803533#Item060-19">
+            <bf:heldBy>
+               <bf:Agent>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Agent>
+            </bf:heldBy>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem/>
+   </bf:Instance>
+</rdf:RDF>

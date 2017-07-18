@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6805301#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6805301</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-04T10:45:33</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-16</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaONFJC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaONFJC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes translation</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger">
+            <bf:part>original</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>JZ1308</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:subject>
+         <rdfs:Resource>
+            <rdf:value>SOC 000000</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bisacsh</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </rdfs:Resource>
+      </bf:subject>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>303.482</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6805301#Agent100-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Krajewski, Markus, 1972-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Krajewski, Markus, 1972-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aKrajewski, Markus,$d1972-$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Krajewski, Markus, 1972-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Restlosigket. English</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Restlosigket. English</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aRestlosigket.$lEnglish</bflc:title40MarcKey>
+            <rdfs:label>Restlosigket. English</rdfs:label>
+            <bflc:titleSortKey>Restlosigket. English</bflc:titleSortKey>
+            <bf:mainTitle>Restlosigket</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:language>
+         <bf:Language>
+            <rdfs:label>English</rdfs:label>
+         </bf:Language>
+      </bf:language>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>still image</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6805301#Topic650-41">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Internationalism.</rdfs:label>
+            <madsrdf:authoritativeLabel>Internationalism.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6805301#Topic650-42">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Cosmopolitanism.</rdfs:label>
+            <madsrdf:authoritativeLabel>Cosmopolitanism.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6805301#Topic650-43">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Globalization.</rdfs:label>
+            <madsrdf:authoritativeLabel>Globalization.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6805301#Agent700-44">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Marcrum, Charles, II,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMarcrum, Charles,$cII,$etranslator.</bflc:name00MarcKey>
+                  <rdfs:label>Marcrum, Charles, II,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>translator.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6805301#Work830-45">
+            <rdfs:label>Electronic mediations ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Electronic mediations ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aElectronic mediations ;$v45</bflc:title30MarcKey>
+                  <rdfs:label>Electronic mediations ;</rdfs:label>
+                  <bflc:titleSortKey>Electronic mediations ;</bflc:titleSortKey>
+                  <bf:mainTitle>Electronic mediations</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>45</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/6805301#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6805301#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/mnu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Nbn>
+            <rdf:value>GBB4D5088</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bnb</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nbn>
+            <rdf:value>GBB4D3308</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bnb</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>016956264</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Uk</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>016954482</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Uk</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781452941394</rdf:value>
+            <bf:qualifier>electronic bk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1452941394</rdf:value>
+            <bf:qualifier>electronic bk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781452941387</rdf:value>
+            <bf:qualifier>electronic bk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1452941386</rdf:value>
+            <bf:qualifier>electronic bk.</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780816695935 (hbk.)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780816683512 (pbk.)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:acquisitionSource>
+         <bf:AcquisitionSource>
+            <bf:identifiedBy>
+               <bf:StockNumber>
+                  <rdf:value>945611</rdf:value>
+               </bf:StockNumber>
+            </bf:identifiedBy>
+            <rdfs:label>EBSCO</rdfs:label>
+         </bf:AcquisitionSource>
+      </bf:acquisitionSource>
+      <rdfs:label>World projects global information before World War I /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>World projects global information before World War I /</rdfs:label>
+            <bflc:titleSortKey>World projects global information before World War I /</bflc:titleSortKey>
+            <bf:mainTitle>World projects</bf:mainTitle>
+            <bf:subtitle>global information before World War I</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Markus Krajewski ; translated by Charles Marcrum II</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>electronic resource</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Minneapolis</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>University of Minnesota Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Minneapolis : University of Minnesota Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Electronic mediations</bf:seriesStatement>
+      <bf:seriesEnumeration>45</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Translated from the German.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on CIP data; item not viewed.</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6805301#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6805301#Item050-22">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>JZ1308</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6805301#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6805301#Item856-46">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=945611"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>(Unlimited Concurrent Users)</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6805301#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

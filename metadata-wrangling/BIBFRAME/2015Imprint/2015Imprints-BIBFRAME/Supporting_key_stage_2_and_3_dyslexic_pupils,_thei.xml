@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6765843#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>p</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6765843</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-18T10:01:19</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-07-14</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BTCTA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UAB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/han">
+            <rdfs:label>handbook</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>LC4708</bf:classificationPortion>
+            <bf:itemPortion>.R394 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>371.9</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:classification>
+         <bf:Classification>
+            <bf:classificationPortion>EDU000000</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bisacsh</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6765843#Agent100-19">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Raymond, Sally,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Raymond, Sally,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aRaymond, Sally,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Raymond, Sally,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Supporting dyslexic pupils 7-14 across the curriculum</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Supporting dyslexic pupils 7-14 across the curriculum</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aSupporting dyslexic pupils 7-14 across the curriculum</bflc:title40MarcKey>
+            <rdfs:label>Supporting dyslexic pupils 7-14 across the curriculum</rdfs:label>
+            <bflc:titleSortKey>Supporting dyslexic pupils 7-14 across the curriculum</bflc:titleSortKey>
+            <bf:mainTitle>Supporting dyslexic pupils 7-14 across the curriculum</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>"'I have found Sally Raymond's worksheets ideally suited for use with pupils in need of focussed literacy development materials. They find them varied and accessible with opportunities to include personal interests and topics. I use them to match specific learning needs to activities which introduce, explain, engage and assess individual targets and skills.' Julia Smith B.Ed. SpLD APC (Patoss) - dyslexia assessor and tutor This A4 resource book provides all the materials required to follow structured programmes of learning support for dyslexic pupils. Created by Sally Raymond, an experienced teacher of dyslexic pupils, this resource provides a wide variety of adaptable worksheets with lots of teaching advice and supportive guidance. The worksheets: - are fully adaptable to meet the needs of different pupils - support Department of Education recommendations and Ofsted advice and guidance - encourage cross-curricula support and interventions to promote maximum access to a wide range of topics"--</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Provided by publisher.</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6765843#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Dyslexic children--Education--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Dyslexic children--Education--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Dyslexic children</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Education</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6765843#Topic650-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Dyslexic children--Ability testing--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Dyslexic children--Ability testing--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Dyslexic children</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Ability testing</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6765843#Topic650-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Curriculum planning--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Curriculum planning--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Curriculum planning</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/6765843#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6765843#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014012820</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781138774612 (Hardback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1138774618 (Hardback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781138774629 (Paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1138774626 (Paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781315752266 (E-book)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn874726203</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Supporting key stage 2 and 3 dyslexic pupils, their teachers and support staff : the Dragonfly Worksheets /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Supporting key stage 2 and 3 dyslexic pupils, their teachers and support staff : the Dragonfly Worksheets /</rdfs:label>
+            <bflc:titleSortKey>Supporting key stage 2 and 3 dyslexic pupils, their teachers and support staff : the Dragonfly Worksheets /</bflc:titleSortKey>
+            <bf:mainTitle>Supporting key stage 2 and 3 dyslexic pupils, their teachers and support staff</bf:mainTitle>
+            <bf:subtitle>the Dragonfly Worksheets</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Sally Raymond</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <bf:variantType>portion</bf:variantType>
+            <rdfs:label>Dragonfly worksheets</rdfs:label>
+            <bflc:titleSortKey>Dragonfly worksheets</bflc:titleSortKey>
+            <bf:mainTitle>Dragonfly worksheets</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:editionStatement>Second edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>London</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Routledge, Taylor &amp; Francis Group</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>London : Routledge, Taylor &amp; Francis Group, 2015.</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>119 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>30 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"First edition published 2001"--T.p. verso.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6765843#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6765843#Item050-15">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>LC4708.R394 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6765843#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

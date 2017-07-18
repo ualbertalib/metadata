@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6758511#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6758511</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-11-26T09:09:57</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-23</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>MEA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>KSU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>FDA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>CD971</bf:classificationPortion>
+            <bf:itemPortion>.S33 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>025.3/414</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6758511#Agent100-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Santamaria, Daniel A.,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Santamaria, Daniel A.,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aSantamaria, Daniel A.,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Santamaria, Daniel A.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Extensible processing for archives and special collections : reducing processing backlogs /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Extensible processing for archives and special collections : reducing processing backlogs /</rdfs:label>
+            <bflc:titleSortKey>Extensible processing for archives and special collections : reducing processing backlogs /</bflc:titleSortKey>
+            <bf:mainTitle>Extensible processing for archives and special collections</bf:mainTitle>
+            <bf:subtitle>reducing processing backlogs</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Archives--Processing.</rdfs:label>
+            <madsrdf:authoritativeLabel>Archives--Processing.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Archives</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Processing</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Cataloging of archival materials.</rdfs:label>
+            <madsrdf:authoritativeLabel>Cataloging of archival materials.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Archives--Collection management.</rdfs:label>
+            <madsrdf:authoritativeLabel>Archives--Collection management.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Archives</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Collection management</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Archives--Administration--Case studies.</rdfs:label>
+            <madsrdf:authoritativeLabel>Archives--Administration--Case studies.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Archives</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Administration</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Case studies</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Libraries--Special collections.</rdfs:label>
+            <madsrdf:authoritativeLabel>Libraries--Special collections.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Libraries</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Special collections</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Technical services (Libraries)</rdfs:label>
+            <madsrdf:authoritativeLabel>Technical services (Libraries)</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Cataloging of special collections in libraries.</rdfs:label>
+            <madsrdf:authoritativeLabel>Cataloging of special collections in libraries.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6758511#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Libraries--Special collections--Case studies.</rdfs:label>
+            <madsrdf:authoritativeLabel>Libraries--Special collections--Case studies.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Libraries</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Special collections</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Case studies</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/6758511#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6758511#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/ilu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014017913</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780838912577</rdf:value>
+            <bf:qualifier>paperback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0838912575</rdf:value>
+            <bf:qualifier>paperback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn881824190</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Extensible processing for archives and special collections : reducing processing backlogs /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Extensible processing for archives and special collections : reducing processing backlogs /</rdfs:label>
+            <bflc:titleSortKey>Extensible processing for archives and special collections : reducing processing backlogs /</bflc:titleSortKey>
+            <bf:mainTitle>Extensible processing for archives and special collections</bf:mainTitle>
+            <bf:subtitle>reducing processing backlogs</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Daniel A. Santamaria</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Chicago</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Neal-Schuman, an imprint of the American Library Association</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Chicago : Neal-Schuman, an imprint of the American Library Association, 2015.</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xii, 235 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>23 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>The backlog problem and archival processing -- Beyond MPLP : principles of extensible processing -- General processing workflow : working with collections -- Attacking your backlog : using collections assessment surveys as part of a backlog reduction project -- Expanding accessioning and working with new collections -- Descriptive standards and facilitating access to description -- Digitization and facilitating access to content -- Supervision, management, and planning -- But what about : answering frequent questions and concerns about extensible processing -- Conclusion -- Appendix A. Case studies 1 and 2 : institution-wide backlog reduction -- Appendix B. Case studies 3 and 4 : individual collections with privacy concerns -- Appendix C. Case studies 5 and 6 : accessioning and other functions in the context of an extensible processing program -- Appendix D. Case studies 7 and 8 : consortial survey and assessment projects -- Appendix E. Finding aid examples -- Appendix F. Processing work plan examples and template -- Appendix G. Deed of gift example -- Appendix H. Take down policy example -- Appendix I. Related conference presentation and papers.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6758511#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6758511#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>CD971.S33 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6758511#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

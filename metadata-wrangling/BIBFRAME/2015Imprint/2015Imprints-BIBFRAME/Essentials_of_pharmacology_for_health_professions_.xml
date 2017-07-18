@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6700689#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6700689</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-16T13:59:50</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-07</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>NLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>NLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BURCL</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>NEH</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>HAC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UAB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>RM300</bf:classificationPortion>
+            <bf:itemPortion>.W67 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>2014 G-299</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>QV 4</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>615.5/8</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6700689#Agent100-20">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Woodrow, Ruth,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Woodrow, Ruth,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aWoodrow, Ruth,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Woodrow, Ruth,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Essentials of pharmacology for health professions /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Essentials of pharmacology for health professions /</rdfs:label>
+            <bflc:titleSortKey>Essentials of pharmacology for health professions /</bflc:titleSortKey>
+            <bf:mainTitle>Essentials of pharmacology for health professions</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>Now in its 7th Edition, ESSENTIALS OF PHARMACOLOGY FOR HEALTH PROFESSIONS is the best-selling resource for those preparing for licensed practical nursing, medical assisting, and other allied health careers. Clear, concise writing focused on "need to know" drug information gives readers the confidence to master pharmacology. Learn calculations quickly through a simplified step-by-step process. Part I chapters center on basic pharmacologic principles. Medication preparation, supplies, and specific information on each route of administration is covered. Administration checklists allow the learner to put the knowledge into practice. . Part II chapters organize drugs by classifications, and includes purpose, side effects, cautions, interactions, and contraindications. Patient education is highlighted for each category. Reference tables with each classification list the most commonly prescribed drugs according to generic and trade names, with dosage and available forms. The complete pharmacology resource for allied health professionals at every experience level, ESSENTIALS OF PHARMACOLOGY FOR HEALTH PROFESSIONS, 7th Edition also makes a great refresher and on-the-job reference.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6700689#Topic650-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Pharmacology.</rdfs:label>
+            <madsrdf:authoritativeLabel>Pharmacology.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6700689#Topic650-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Allied Health Personnel.</rdfs:label>
+            <madsrdf:authoritativeLabel>Allied Health Personnel.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6700689#Topic650-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Drug Therapy.</rdfs:label>
+            <madsrdf:authoritativeLabel>Drug Therapy.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6700689#Topic650-37">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Pharmacology--Examinations, questions, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Pharmacology--Examinations, questions, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Pharmacology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Examinations, questions, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6700689#Agent700-38">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Colbert, Bruce J.,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aColbert, Bruce J.,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Colbert, Bruce J.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6700689#Agent700-39">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Smith, David M. (Pharmacist),</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aSmith, David M.$c(Pharmacist),$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Smith, David M. (Pharmacist),</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6700689#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6700689#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/ctu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2013952531</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>101633729</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DNLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781285077888 (paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1285077881 (paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1285077903</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781285077901</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn878929861</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Essentials of pharmacology for health professions /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Essentials of pharmacology for health professions /</rdfs:label>
+            <bflc:titleSortKey>Essentials of pharmacology for health professions /</bflc:titleSortKey>
+            <bf:mainTitle>Essentials of pharmacology for health professions</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Ruth Woodrow, RN, MA, Bruce J. Colbert, MS, RRT, David M. Smith, RPh, MS</bf:responsibilityStatement>
+      <bf:editionStatement>Seventh edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Stamford, CT, USA</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Cengage Learning</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Stamford, CT, USA : Cengage Learning, [2015]</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xxviii, 639 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>color illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Previous edition: published as Essentials of pharmacology for health occupations. 2011.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Consumer safety and drug regulations -- Drug names and references -- Sources and bodily effects of drugs -- Medication preparations and supplies -- Abbreviations and systems of measurement -- Safe dosage calculations -- Responsibilities and principles of drug administration -- Administration by the gastrointestinal route -- Administration by the parenteral route -- Poison control -- Vitamins, minerals, and herbs -- Skin medications -- Autonomic nervous system drugs -- Antineoplastic drugs -- Urinary system drugs -- Gastrointestinal drugs -- Anti-infective drugs -- Eye medications -- Analgesics, sedatives, and hypnotics -- Psychotropic medications, alcohol, and drug abuse -- Musculoskeletal and anti-inflammatory drugs -- Anticonvulsants, antiparkinsonian drugs, and agents for Alzheimer's disease -- Endocrine system drugs -- Reproductive system drugs -- Cardiovascular drugs -- Respiratory system drugs and antihistamines -- Drugs and older adults.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6700689#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6700689#Item050-15">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>RM300.W67 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6700689#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6700689#Item060-16">
+            <bf:heldBy>
+               <bf:Agent>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Agent>
+            </bf:heldBy>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6849277#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>8</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6849277</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>UkCbUP</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-05T02:10:19</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-17</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UkCbUP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UkCbUP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849277#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Song, Lingyang,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Song, Lingyang,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aSong, Lingyang,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Song, Lingyang,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Wireless Device-to-Device Communications and Networks /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Wireless Device-to-Device Communications and Networks /</rdfs:label>
+            <bflc:titleSortKey>Wireless Device-to-Device Communications and Networks /</bflc:titleSortKey>
+            <bf:mainTitle>Wireless Device-to-Device Communications and Networks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849277#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Machine-to-machine communications.</rdfs:label>
+            <madsrdf:authoritativeLabel>Machine-to-machine communications.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849277#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Niyato, Dusit,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aNiyato, Dusit,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Niyato, Dusit,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849277#Agent700-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Han, Zhu,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHan, Zhu,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Han, Zhu,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849277#Agent700-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Hossain, Ekram,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHossain, Ekram,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Hossain, Ekram,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6849277#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6849277#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781107478732 (ebook)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781107063570 (hardback)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <rdfs:label>Wireless Device-to-Device Communications and Networks /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Wireless Device-to-Device Communications and Networks /</rdfs:label>
+            <bflc:titleSortKey>Wireless Device-to-Device Communications and Networks /</bflc:titleSortKey>
+            <bf:mainTitle>Wireless Device-to-Device Communications and Networks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Lingyang Song, Dusit Niyato, Zhu Han, Ekram Hossain</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Wireless Device-to-Device Communications &amp; Networks</rdfs:label>
+            <bflc:titleSortKey>Wireless Device-to-Device Communications &amp; Networks</bflc:titleSortKey>
+            <bf:mainTitle>Wireless Device-to-Device Communications &amp; Networks</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Cambridge</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Cambridge University Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Cambridge : Cambridge University Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource (431 pages)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>digital, PDF file(s).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/c">
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from publisher's bibliographic system (viewed on 05 Mar 2015).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:instanceOf rdf:resource="http://example.org/6849277#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6849277#Item856-28">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://dx.doi.org/10.1017/CBO9781107478732"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6849277#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

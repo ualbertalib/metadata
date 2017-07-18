@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1310646#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1310646</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-10</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DNLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DNLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>RF 286.5</bf:classificationPortion>
+            <bf:itemPortion>D612 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>W1</bf:classificationPortion>
+            <bf:itemPortion>AD436D v.3 (P)</bf:itemPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>[WV 270 D612 1983]</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <rdfs:label>Disorders with defective hearing /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Disorders with defective hearing /</rdfs:label>
+            <bflc:titleSortKey>Disorders with defective hearing /</bflc:titleSortKey>
+            <bf:mainTitle>Disorders with defective hearing</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1310646#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Audiology--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Audiology--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Audiology</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1310646#Topic650-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hearing disorders--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hearing disorders--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hearing disorders</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1310646#Agent700-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Colletti, V.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aColletti, V.</bflc:name00MarcKey>
+                  <rdfs:label>Colletti, V.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1310646#Agent700-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Stephens, S. D. G.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aStephens, S. D. G.</bflc:name00MarcKey>
+                  <rdfs:label>Stephens, S. D. G.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1310646#Agent710-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Università di Verona.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aUniversità di Verona.</bflc:name10MarcKey>
+                  <rdfs:label>Università di Verona.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1310646#Agent710-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>International Association of Physicians in Audiology.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aInternational Association of Physicians in Audiology.</bflc:name10MarcKey>
+                  <rdfs:label>International Association of Physicians in Audiology.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1310646#Agent711-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>International Symposium on Audiological Medicine. (2nd : 1983 : Sirmione, Italy)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>7112 $aInternational Symposium on Audiological Medicine.$n(2nd :$d1983 :$cSirmione, Italy)</bflc:name11MarcKey>
+                  <rdfs:label>International Symposium on Audiological Medicine. (2nd : 1983 : Sirmione, Italy)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1310646#Work830-31">
+            <rdfs:label>Advances in audiology ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Advances in audiology ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAdvances in audiology ;$vv. 3.</bflc:title30MarcKey>
+                  <rdfs:label>Advances in audiology ;</rdfs:label>
+                  <bflc:titleSortKey>Advances in audiology ;</bflc:titleSortKey>
+                  <bf:mainTitle>Advances in audiology</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>v. 3</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1310646#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1310646#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/sz"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Nbn>
+            <rdf:value>NLM8500698</rdf:value>
+         </bf:Nbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>3805539657</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm11649338</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Disorders with defective hearing /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Disorders with defective hearing /</rdfs:label>
+            <bflc:titleSortKey>Disorders with defective hearing /</bflc:titleSortKey>
+            <bf:mainTitle>Disorders with defective hearing</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>volume editors, V. Colletti, S.D.G. Stephens</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Basel</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Karger</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Basel ; New York : Karger, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>viii, 216 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>25 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Advances in audiology</bf:seriesStatement>
+      <bf:seriesEnumeration>vol. 3</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Selected papers presented at the Second International Symposium on Audiological Medicine, held in Sirmione del Garda, Italy, in April 1983.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"The University of Verona was honoured by being chosen by the International Association of Physicians in Audiology to organize the Symposium"--Pref.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographies and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1310646#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1310646#Item060-10">
+            <bf:heldBy>
+               <bf:Agent>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Agent>
+            </bf:heldBy>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem/>
+   </bf:Instance>
+</rdf:RDF>

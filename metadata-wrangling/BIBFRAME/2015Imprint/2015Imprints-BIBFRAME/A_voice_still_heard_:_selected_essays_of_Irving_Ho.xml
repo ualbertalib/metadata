@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6799910#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6799910</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>StDuBDS</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-01T19:30:37</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-12-03</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>StDuBDS</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>StDuBDS</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/pn"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/spe">
+            <rdfs:label>specialized</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/fic">
+            <rdfs:label>essay</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PS3515</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>814.54</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6799910#Agent100-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Howe, Irving,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Howe, Irving,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aHowe, Irving,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Howe, Irving,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Essays. Selections</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Essays. Selections</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aEssays.$kSelections</bflc:title40MarcKey>
+            <rdfs:label>Essays. Selections</rdfs:label>
+            <bflc:titleSortKey>Essays. Selections</bflc:titleSortKey>
+            <bf:mainTitle>Essays</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:natureOfContent>Selections</bf:natureOfContent>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>Selections</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>Man of letters, political critic, public intellectual, Irving Howe was one of America's most exemplary and embattled writers. Since his death in 1993, Howe's work and his personal example of commitment to high principle, both literary and political, have had a vigorous afterlife. This posthumous collection includes 26 essays that originally appeared in publications such as the New York Review of Books, the New Republic, and the Nation. Taken together, they reveal the depth and breadth of Howe's enthusiasms and range over politics, literature, Judaism, and the tumults of American society.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6799910#Agent700-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Howe, Nina,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHowe, Nina,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Howe, Nina,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6799910#Agent700-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Dickstein, Morris,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aDickstein, Morris,$econtributor.</bflc:name00MarcKey>
+                  <rdfs:label>Dickstein, Morris,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>contributor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6799910#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6799910#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/ctu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780300210583 (ebook)</rdf:value>
+            <bf:acquisitionTerms>£33.60</bf:acquisitionTerms>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn902984712</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>A voice still heard : selected essays of Irving Howe /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>A voice still heard : selected essays of Irving Howe /</rdfs:label>
+            <bflc:titleSortKey>voice still heard : selected essays of Irving Howe /</bflc:titleSortKey>
+            <bf:mainTitle>A voice still heard</bf:mainTitle>
+            <bf:subtitle>selected essays of Irving Howe</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Irving Howe, Nina Howe, and Morris Dickstein</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New Haven</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Yale University Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New Haven : Yale University Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on online resource; title from home page (viewed on December 3, 2014).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6799910#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6799910#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PS3515</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6799910#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6799910#Item856-30">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://dx.doi.org/10.12987/yale/9780300203660.001.0001"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>(Unlimited Concurrent Users)</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6799910#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

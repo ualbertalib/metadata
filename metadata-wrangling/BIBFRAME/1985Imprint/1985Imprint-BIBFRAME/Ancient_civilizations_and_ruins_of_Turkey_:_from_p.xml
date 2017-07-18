@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1321997#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1321997</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-09-21</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes translation</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/tur">
+            <bf:part>original</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/a-tu"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>DS155</bf:classificationPortion>
+            <bf:itemPortion>.A56 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1321997#Agent100-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Akurgal, Ekrem.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Akurgal, Ekrem.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aAkurgal, Ekrem.</bflc:name00MarcKey>
+                  <rdfs:label>Akurgal, Ekrem.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</rdfs:label>
+            <bflc:titleSortKey>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</bflc:titleSortKey>
+            <bf:mainTitle>Ancient civilizations and ruins of Turkey</bf:mainTitle>
+            <bf:subtitle>from prehistoric times until the end of the Roman Empire</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1321997#Topic651-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Turkey--Civilization.</rdfs:label>
+            <madsrdf:authoritativeLabel>Turkey--Civilization.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Turkey</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Civilization</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1321997#Topic651-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Turkey--Antiquities.</rdfs:label>
+            <madsrdf:authoritativeLabel>Turkey--Antiquities.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Turkey</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Antiquities</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1321997#Work740-25">
+            <rdfs:label>Ancient ruins of Turkey.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Ancient ruins of Turkey.</rdfs:label>
+                  <bflc:titleSortKey>Ancient ruins of Turkey.</bflc:titleSortKey>
+                  <bf:mainTitle>Ancient ruins of Turkey</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1321997#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1321997#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/tu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/pln">
+            <rdfs:label>plans</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/plt">
+            <rdfs:label>plates</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm15130174</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</rdfs:label>
+            <bflc:titleSortKey>Ancient civilizations and ruins of Turkey : from prehistoric times until the end of the Roman Empire /</bflc:titleSortKey>
+            <bf:mainTitle>Ancient civilizations and ruins of Turkey</bf:mainTitle>
+            <bf:subtitle>from prehistoric times until the end of the Roman Empire</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Ekrem Akurgal ; [translated by John Whybrow and Mollie Emre]</bf:responsibilityStatement>
+      <bf:editionStatement>6th ed</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>İstanbul, Turkey</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Haset Ki̇tabevi̇</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>İstanbul, Turkey : Haset Ki̇tabevi̇, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>vii, 398 p., 112 p. of plates</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill. (some col.), maps, plans</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>20 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title on spine: Ancient ruins of Turkey.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes index.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. [356]-366.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1321997#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1321997#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>DS155.A56 1985</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1321997#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

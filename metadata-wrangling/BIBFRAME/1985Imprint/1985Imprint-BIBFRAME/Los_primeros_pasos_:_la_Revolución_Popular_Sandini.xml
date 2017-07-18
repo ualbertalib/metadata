@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1375783#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1375783</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-05-22</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/spa"/>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/ncnq"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>F1528</bf:classificationPortion>
+            <bf:itemPortion>.B67 1981</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>972.85/052</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1375783#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Borge, Tomás, 1930-2012.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Borge, Tomás, 1930-2012.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aBorge, Tomás,$d1930-2012.</bflc:name00MarcKey>
+                  <rdfs:label>Borge, Tomás, 1930-2012.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Los primeros pasos : la Revolución Popular Sandinista /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Los primeros pasos : la Revolución Popular Sandinista /</rdfs:label>
+            <bflc:titleSortKey>primeros pasos : la Revolución Popular Sandinista /</bflc:titleSortKey>
+            <bf:mainTitle>Los primeros pasos</bf:mainTitle>
+            <bf:subtitle>la Revolución Popular Sandinista</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1375783#Agent610-23">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>Frente Sandinista de Liberación Nacional..</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Frente Sandinista de Liberación Nacional..</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aFrente Sandinista de Liberación Nacional..</bflc:name10MarcKey>
+            <rdfs:label>Frente Sandinista de Liberación Nacional..</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1375783#Topic651-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Nicaragua--History--Revolution, 1979.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nicaragua--History--Revolution, 1979.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Nicaragua</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>Revolution, 1979</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1375783#Topic651-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Nicaragua--Politics and government--1979-1990.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nicaragua--Politics and government--1979-1990.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Nicaragua</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Politics and government</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>1979-1990</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1375783#Work830-26">
+            <rdfs:label>Colección mínima (Mexico City, Mexico) ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Colección mínima (Mexico City, Mexico) ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aColección mínima (Mexico City, Mexico) ;$v80.</bflc:title30MarcKey>
+                  <rdfs:label>Colección mínima (Mexico City, Mexico) ;</rdfs:label>
+                  <bflc:titleSortKey>Colección mínima (Mexico City, Mexico) ;</bflc:titleSortKey>
+                  <bf:mainTitle>Colección mínima (Mexico City, Mexico)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>80</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1375783#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1375783#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/mx"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   82144677</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9682311020</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm14958698</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Los primeros pasos : la Revolución Popular Sandinista /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Los primeros pasos : la Revolución Popular Sandinista /</rdfs:label>
+            <bflc:titleSortKey>primeros pasos : la Revolución Popular Sandinista /</bflc:titleSortKey>
+            <bf:mainTitle>Los primeros pasos</bf:mainTitle>
+            <bf:subtitle>la Revolución Popular Sandinista</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>por Tomás Borge</bf:responsibilityStatement>
+      <bf:editionStatement>4. ed</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>México</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Siglo Veintiuno Editores</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>México : Siglo Veintiuno Editores, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>302 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>15 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Colección mínima</bf:seriesStatement>
+      <bf:seriesEnumeration>80</bf:seriesEnumeration>
+      <bf:instanceOf rdf:resource="http://example.org/1375783#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1375783#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>F1528.B67 1981</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1375783#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

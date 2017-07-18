@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6849305#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>8</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6849305</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>UkCbUP</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-05T02:10:17</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-03-06</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UkCbUP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UkCbUP</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849305#Agent100-14">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Wheaton, Gerry,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Wheaton, Gerry,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aWheaton, Gerry,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Wheaton, Gerry,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>The Role of Jewish Feasts in John's Gospel /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The Role of Jewish Feasts in John's Gospel /</rdfs:label>
+            <bflc:titleSortKey>Role of Jewish Feasts in John's Gospel /</bflc:titleSortKey>
+            <bf:mainTitle>The Role of Jewish Feasts in John's Gospel</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Work rdf:about="http://example.org/6849305#Work630-25">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Bible. John--Criticism, interpretation, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <rdfs:label>Bible. John</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Bible. John</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>63000$aBible.$pJohn$xCriticism, interpretation, etc.</bflc:title30MarcKey>
+                  <rdfs:label>Bible. John</rdfs:label>
+                  <bflc:titleSortKey>Bible. John</bflc:titleSortKey>
+                  <bf:mainTitle>Bible</bf:mainTitle>
+                  <bf:partName>John</bf:partName>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849305#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Fast and feasts--Judaism.</rdfs:label>
+            <madsrdf:authoritativeLabel>Fast and feasts--Judaism.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Fast and feasts</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Judaism</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849305#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Fasts and feasts in the Bible.</rdfs:label>
+            <madsrdf:authoritativeLabel>Fasts and feasts in the Bible.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849305#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Jews in the New Testament.</rdfs:label>
+            <madsrdf:authoritativeLabel>Jews in the New Testament.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6849305#Work830-29">
+            <rdfs:label>Society for New Testament Studies Monograph Series ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Society for New Testament Studies Monograph Series ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aSociety for New Testament Studies Monograph Series ;$vno. 162.</bflc:title30MarcKey>
+                  <rdfs:label>Society for New Testament Studies Monograph Series ;</rdfs:label>
+                  <bflc:titleSortKey>Society for New Testament Studies Monograph Series ;</bflc:titleSortKey>
+                  <bf:mainTitle>Society for New Testament Studies Monograph Series</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>no. 162</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/6849305#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6849305#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781139942034 (ebook)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781107079687 (hardback)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781107438897 (paperback)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <rdfs:label>The Role of Jewish Feasts in John's Gospel /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The Role of Jewish Feasts in John's Gospel /</rdfs:label>
+            <bflc:titleSortKey>Role of Jewish Feasts in John's Gospel /</bflc:titleSortKey>
+            <bf:mainTitle>The Role of Jewish Feasts in John's Gospel</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Gerry Wheaton</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Cambridge</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Cambridge University Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Cambridge : Cambridge University Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource (231 pages)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>digital, PDF file(s).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/c">
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Society for New Testament Studies Monograph Series</bf:seriesStatement>
+      <bf:seriesEnumeration>no. 162</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from publisher's bibliographic system (viewed on 05 Mar 2015).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:instanceOf rdf:resource="http://example.org/6849305#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6849305#Item856-30">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://dx.doi.org/10.1017/CBO9781139942034"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6849305#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

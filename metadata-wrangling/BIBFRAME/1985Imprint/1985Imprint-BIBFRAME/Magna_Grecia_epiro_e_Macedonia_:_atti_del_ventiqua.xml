@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1362367#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1362367</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-03-11</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ita"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>DG 55 M3</bf:classificationPortion>
+            <bf:itemPortion>C76 1984</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1362367#Agent111-9">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Convegno di studi sulla Magna Grecia. (24th : 1984 : Taranto, Italy)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>1112 $aConvegno di studi sulla Magna Grecia.$n(24th :$d1984 :$cTaranto, Italy)</bflc:name11MarcKey>
+                  <bflc:primaryContributorName11MatchKey>Convegno di studi sulla Magna Grecia. (24th : 1984 : Taranto, Italy)</bflc:primaryContributorName11MatchKey>
+                  <rdfs:label>Convegno di studi sulla Magna Grecia. (24th : 1984 : Taranto, Italy)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</rdfs:label>
+            <bflc:titleSortKey>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</bflc:titleSortKey>
+            <bf:mainTitle>Magna Grecia epiro e Macedonia</bf:mainTitle>
+            <bf:subtitle>atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1362367#Topic650-17">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Excavations (Archaeology)--Italy, Southern--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Excavations (Archaeology)--Italy, Southern--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Excavations (Archaeology)</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Italy, Southern</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1362367#Topic651-18">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Magna Graecia (Italy)--Antiquities--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Magna Graecia (Italy)--Antiquities--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Magna Graecia (Italy)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Antiquities</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1362367#Agent710-19">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Istituto per la storia e l'archeologia della Magna Grecia.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aIstituto per la storia e l'archeologia della Magna Grecia.</bflc:name10MarcKey>
+                  <rdfs:label>Istituto per la storia e l'archeologia della Magna Grecia.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1362367#Agent711-20">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Convegno di studi sulla Magna Grecia.</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>7112 $aConvegno di studi sulla Magna Grecia.</bflc:name11MarcKey>
+                  <rdfs:label>Convegno di studi sulla Magna Grecia.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1362367#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1362367#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/it"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn465324455</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</rdfs:label>
+            <bflc:titleSortKey>Magna Grecia epiro e Macedonia : atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984.</bflc:titleSortKey>
+            <bf:mainTitle>Magna Grecia epiro e Macedonia</bf:mainTitle>
+            <bf:subtitle>atti del ventiquattresimo Convegno di studi sulla Magna Grecia, Taranto, 5-10 Ottobre 1984</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Taranto, Italy</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Istituto per la storia e l'archeologia della Magna Grecia</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Taranto, Italy : Istituto per la storia e l'archeologia della Magna Grecia, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>668 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>25 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:instanceOf rdf:resource="http://example.org/1362367#Work"/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1397323#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1397323</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-08-26</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>Z 688 C28</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1397323#Agent100-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>MacNaughton, Margot.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>MacNaughton, Margot.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aMacNaughton, Margot.</bflc:name00MarcKey>
+                  <rdfs:label>MacNaughton, Margot.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</rdfs:label>
+            <bflc:titleSortKey>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</bflc:titleSortKey>
+            <bf:mainTitle>Northern studies assessment project</bf:mainTitle>
+            <bf:subtitle>a report : undertaken as a summer project for the National Library of Canada</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>A study assessing the National Library of Canada's collection in support of Northern studies, comparing their holdings to those of the Scott Polar Research Institute and the Arctic Institute of North America.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1397323#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Libraries--Special collections--Arctic regions.</rdfs:label>
+            <madsrdf:authoritativeLabel>Libraries--Special collections--Arctic regions.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Libraries</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Special collections</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Arctic regions</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1397323#Topic651-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Arctic regions--Library resources--Evaluation.</rdfs:label>
+            <madsrdf:authoritativeLabel>Arctic regions--Library resources--Evaluation.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Arctic regions</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Library resources</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Evaluation</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1397323#Agent700-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Muren, Marie.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMuren, Marie.</bflc:name00MarcKey>
+                  <rdfs:label>Muren, Marie.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1397323#Agent710-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>National Library of Canada.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aNational Library of Canada.</bflc:name10MarcKey>
+                  <rdfs:label>National Library of Canada.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1397323#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1397323#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/onc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm54892916</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</rdfs:label>
+            <bflc:titleSortKey>Northern studies assessment project : a report : undertaken as a summer project for the National Library of Canada /</bflc:titleSortKey>
+            <bf:mainTitle>Northern studies assessment project</bf:mainTitle>
+            <bf:subtitle>a report : undertaken as a summer project for the National Library of Canada</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Margot MacNaughton and Marie Muren</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Ottawa</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>The Library</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Ottawa : The Library, 1985]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>23, 20 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>29 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"August 1985".</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1397323#Work"/>
+   </bf:Instance>
+</rdf:RDF>

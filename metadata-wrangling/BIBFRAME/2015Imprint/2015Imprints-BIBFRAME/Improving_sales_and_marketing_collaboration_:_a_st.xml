@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6800018#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6800018</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaPaEBR</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-21T13:24:11</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-12-21</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/adu">
+            <rdfs:label>adult</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:colorContent>
+         <bf:ColorContent rdf:about="http://id.loc.gov/vocabulary/mcolor/mul">
+            <rdfs:label>multicolored</rdfs:label>
+         </bf:ColorContent>
+      </bf:colorContent>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/spe">
+            <rdfs:label>specialized</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/abs">
+            <rdfs:label>abstract or summary</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>HF5438.4</bf:classificationPortion>
+            <bf:itemPortion>.M255 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>658.81</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6800018#Agent100-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Malshe, Avinash.,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Malshe, Avinash.,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aMalshe, Avinash.,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Malshe, Avinash.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Improving sales and marketing collaboration : a step-by-step guide /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Improving sales and marketing collaboration : a step-by-step guide /</rdfs:label>
+            <bflc:titleSortKey>Improving sales and marketing collaboration : a step-by-step guide /</bflc:titleSortKey>
+            <bf:mainTitle>Improving sales and marketing collaboration</bf:mainTitle>
+            <bf:subtitle>a step-by-step guide</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>In any company, sales and marketing are the two primary business functions that are focused on creating satisfied customers. Because of their complementary orientations and objectives, these two functions are ideally positioned for a fruitful, synergetic collaboration. Unfortunately, the practical reality in many companies is far removed from this utopia. Sales and marketing personnel fail to communicate effectively, resulting in misunderstandings, lack of communication, frustration, and sometimes even downright anger and sabotage. Instead of supporting each other in creating superior value for customers, sales and marketing fight tiresome internal battles that are a drain on profits, efficiency and customer satisfaction.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6800018#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Sales management.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sales management.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6800018#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Marketing--Management.</rdfs:label>
+            <madsrdf:authoritativeLabel>Marketing--Management.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Marketing</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Management</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6800018#Agent700-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Biemans, Wim G., 1960-,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBiemans, Wim G.,$d1960-,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Biemans, Wim G., 1960-,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6800018#Work830-35">
+            <rdfs:label>Selling and sales force management collection.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Selling and sales force management collection.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aSelling and sales force management collection.$x2161-8917</bflc:title30MarcKey>
+                  <rdfs:label>Selling and sales force management collection.</rdfs:label>
+                  <bflc:titleSortKey>Selling and sales force management collection.</bflc:titleSortKey>
+                  <bf:mainTitle>Selling and sales force management collection</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:identifiedBy>
+               <bf:Issn>
+                  <rdf:value>2161-8917</rdf:value>
+               </bf:Issn>
+            </bf:identifiedBy>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/6800018#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6800018#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:soundContent>
+         <bf:SoundContent>
+            <rdfs:label>silent</rdfs:label>
+         </bf:SoundContent>
+      </bf:soundContent>
+      <bf:digitalCharacteristic>
+         <bf:DigitalCharacteristic>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/EncodingFormat"/>
+            <rdfs:label>multiple file formats</rdfs:label>
+         </bf:DigitalCharacteristic>
+      </bf:digitalCharacteristic>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nyu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781606498033</rdf:value>
+            <bf:qualifier>e-book</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781606498026</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+            <bf:qualifier>paperback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn898491922</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Improving sales and marketing collaboration : a step-by-step guide /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Improving sales and marketing collaboration : a step-by-step guide /</rdfs:label>
+            <bflc:titleSortKey>Improving sales and marketing collaboration : a step-by-step guide /</bflc:titleSortKey>
+            <bf:mainTitle>Improving sales and marketing collaboration</bf:mainTitle>
+            <bf:subtitle>a step-by-step guide</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Avinash Malshe and Wim Biemans</bf:responsibilityStatement>
+      <bf:editionStatement>First edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York, New York (222 East 46th Street, New York, NY 10017)</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Business Expert Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New York, New York (222 East 46th Street, New York, NY 10017) : Business Expert Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource (xviii, 187 pages)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Selling and sales force management collection</bf:seriesStatement>
+      <bf:hasSeries>
+         <bf:Instance>
+            <bf:identifiedBy>
+               <bf:Issn>
+                  <rdf:value>2161-8917</rdf:value>
+               </bf:Issn>
+            </bf:identifiedBy>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Part of: 2014 digital library.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references (pages 179-183) and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Introduction -- Working together to create value for customers -- Sales and marketing don't always get along -- Taking a look under the hood of the interface -- Mending the rift between sales and marketing -- Assessing your sales-marketing interface -- Challenges to your sales-marketing interface.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from PDF title page (viewed on December 21, 2014).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6800018#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6800018#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HF5438.4.M255 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6800018#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6800018#Item856-36">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://site.ebrary.com/lib/ualbertagep/Doc?id=10997458"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6800018#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6786164#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6786164</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>FlBoTFG</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-15T16:31:12</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-15</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>FlBoTFG</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>FlBoTFG</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TJ241</bf:classificationPortion>
+            <bf:itemPortion>.M36 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Manufacturing and engineering technology /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Manufacturing and engineering technology /</rdfs:label>
+            <bflc:titleSortKey>Manufacturing and engineering technology /</bflc:titleSortKey>
+            <bf:mainTitle>Manufacturing and engineering technology</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6786164#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Machinery industry--Technological innovations--Congresses.</rdfs:label>
+            <madsrdf:authoritativeLabel>Machinery industry--Technological innovations--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Machinery industry</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Technological innovations</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Congresses</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6786164#Agent700-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Sheng, Ai,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aSheng, Ai,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Sheng, Ai,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6786164#Agent700-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Wang, Yizhong,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aWang, Yizhong,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Wang, Yizhong,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6786164#Agent711-36">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>International Conference on Manufacturing and Engineering Technology (2014 : Sanya, China)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>7112 $aInternational Conference on Manufacturing and Engineering Technology$d(2014 :$cSanya, China)</bflc:name11MarcKey>
+                  <rdfs:label>International Conference on Manufacturing and Engineering Technology (2014 : Sanya, China)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6786164#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6786164#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/chr">
+            <rdfs:label>charts</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781315760728 (e-book : PDF)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn900602622</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Manufacturing and engineering technology /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Manufacturing and engineering technology /</rdfs:label>
+            <bflc:titleSortKey>Manufacturing and engineering technology /</bflc:titleSortKey>
+            <bf:mainTitle>Manufacturing and engineering technology</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>editors, Ai Sheng, Information Science and Engineering Technology Research Association (ISET), Hong Kong, Ching, Yizhong Wang, Tianjin University of Science and Technology, Tianjin, China</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>London</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>CRC Press/Balkema</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Taylor &amp; Francis Group</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>London : CRC Press/Balkema : Taylor &amp; Francis Group, 2015.</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Proceedings of the 2014 International Conference on Manufacturing and Engineering Technology (ICMET 2014), Sanya, China, 17-19 October 2014"--title page.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"A Balkema book."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Using an FPGA-based system for IEEE 1641 waveform generation -- Analysis of GTM-AS rapier loom's rapier mechanism -- Analysis of GTM-A rapier loom's take-up mechanism -- Design of wireless communication platform of MCU based on Wi-Fi -- The controlled blasting technology of sewage treatment pool concrete wall water hole in complicated environment -- Research based on thermal shock in gear temperature field and stress field -- Study on the setting and evaluation of left-turn waiting area at signalized intersections -- Pretreatment of pineapple leaf fiber with Bu-gong tea saponin -- Design of automatic vacuum casting machine -- Consider tooth surface forming error of spiral bevel gears parameterized modeling and modification technology research -- A reliability allocation method for Weapon Systems based on multi-expert blur theory -- Research on system reliability allocation based on BP neural network and improved algebraic method -- The design and realization of a user mode device driver framework -- The research on the planning strategy of rural environmental image improvement : taking Tiangongsi village of Baoding as an example -- Trajectory optimization with multiple constraints for a guided bomb using a pseudospectral method --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>The research and design of terminal data security in power system -- Study on crash simulation and structure optimization of rear bumper of the truck -- Impact analysis of optimized rear bumper of the truck (mobile barrier 50% bias) -- 2DLDA based semi-supervised face recognition -- Reheating furnace model system based on Message-Oriented Middleware -- Research of the effects fabric performance for outside contour loose quantity of the fold collar -- Corrosion behavior of X80 pipeline steel in soil environment containing Sulfate-Reducing Bacteria -- The application of torsion angle method in shaft dynamic torque measurement -- The application of torque-sensitive materials in shaft dynamic torque measurement -- Research on evaluation method of design schemes for customized product based on house of quality and its applications -- Research on the tungsten alloy long-rod penetrator penetrating concrete target -- The research of photocatalytic degradation of compound TiO[subscript 2] film in dyeing wastewater -- Effect of slag composition on inclusion transformation process for high-speed wheel steel during LF-VD process -- The influence of line spacing and text background on visual search of web pages -- Study on pre-drainage seam gas technology with borehole drilled along seam in outburst and soft mine -- Research on the master/slave model of the parallel processing technology for homogeneous multicore DSP -- Research key technologies of the current network security situation awareness -- Study on the data mining method of vehicle insurance based on a rough set -- Assessment for the fire risk of the underground parking area -- Deep-hole precision processing method of pin bush -- Workflow-based airworthiness certification document flow and its management system --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Influence of fit tolerance between square tenon thickness and oval mortise width on ultimate pulling resistance -- Influence of fit tolerance between tenon width and mortise length on joint performance of oval-tenon manufactured by Alnus formosana wood -- Air flow noise analysis for the intake manifold based on CFD -- Probabilistic design of spherical function mechanisms -- An indirect measurement method of volumetric errors for linear axes in CNC machine tools -- CPOM to synthesis gas by ceria-promoted nickel nanowire catalyst -- Research and development of a multiple data source curve drawing software for IC equipment -- Analysis and calculation for LV auxiliary power system short-circuit current of the fossil fuel power plant -- An open-source musculoskeletal model for lumbar force predictions -- Improvement of the algorithm in addition to optimize the canal with the application -- Thermal analysis of a power box -- FA used in the development of the vending machine with the function of returning changes -- Research on the cost driver selection and combination in Activity-Based Costing -- First-principle simulations of quantum transport for a nanoscale InAs device -- Application and realization of remote control in power ultrasonic treatment -- A novel method for deriving reservoir operation curves based on the concept of dynamic variable sampling space -- IETM data in the comprehensive utilization of equipment life cycle -- Research on the PV-Storage-Charging station method base on graph theory -- Analysis of vibration characteristics of a ball screw system -- Design of a multiplexing Pulse Power Source control system based on the CAN bus -- Research on discrete bipolar switching effect in memristor device --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Modification of the analytical model for drag bits in rotary rock drilling -- Influence of titanium on hot-dip 55% Al-Zn alloy coating -- Designing and testing the control circuit for the base current of SiC transistors -- Management of the food supply chain-based networking technology -- Research of a cold-chain logistics security monitoring platform based on Internet of things -- The study of the impact of RMB appreciation on China's service trade and the dealings of the enterprise's strategies -- The study of the causes of the impact of RMB appreciation on service export -- Gray correlation of China's logistics capability and the growth of agriculture economy -- Diploma of patriarch-based management in Quanzhou's industry transformation and upgrading, and the analysis of its strategies -- E-commerce development strategy and platform establishment for the agricultural products of Quanzhou city -- Quanzhou rural tourism development model and marketing strategy analysis -- Econometric analysis on the relationship between regional logistics and industrial structure's changes in Fujian province of China -- Study on the relationship between the economic growth and environmental pollution in Fujian province based on the VAR model -- Analysis of online consumer's shopping behavior -- The comparison and evaluation on the regional scientific and technological innovation efficiency in Fujian province of China -- Business model analysis of bank online store -- Target detection and tracking based on digital image -- Research and implementation of retrieval technology based on image content -- Hybrid ring coupler with arbitrary power division using phase inverters -- Research on developing a log system based on .Net -- Kinematic analysis of a deployable mast used for solar cell arrays --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Research on the genetic algorithm-based all-terminal network optimization -- Evaluation of an equipment operation maintenance plan based on the AHP and entropy weight methods -- A new guidance method for reentry warhead against a stationary target -- Magnetorheological elastomer damper design and finite-element analysis -- Research on a new cloud trust model and its defense abilities -- A secure data access method based on eID for mobile Internet -- Research on security access control method of power intranet terminal -- An on-line monitoring system for the determination of ammonium nitrogen in waters -- Research on calculation of thermal electromotive force of second-class Pt-Rh 10%-Pt thermocouple on 100 temperature points based on LabVIEW -- Competitive dynamic I-Ching decision model : solar battery industry in Taiwan -- Thermal effects of various conductive thin films deposited on flexible substrates -- Preservative effects of antimicrobial controlled-release coatings containing Tea Polyphenol nanoparticles on tilapia fillets -- Stress analysis and injury research of human thorax tissues during vehicle rear impacts -- Research on Y-shaped elastomeric reciprocating seal lubrication conditions based on numerical calculation -- Residual stresses effects of transparently conductive thin films deposited on flexible substrates -- Development of an ice shape non-contact measuring system based on 3D scanning technology -- The feedback and correction of classification model for cold strips surface defects based on the immune algorithm -- Research on nonlinear polynomial least square error compensation based on method DEWE 2010 -- An efficient distance metric for time series data mining -- Research on the damping characteristics optimization of the tracked vehicle -- Rubber chemicals wastewater treatment technology research --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Research on three-dimensional measurement of wind tunnel model based on Kinect -- Preparation of metallographic specimen of commercial pure titanium used for surgical implants -- Practical studies on a central solar heating system with high efficiency -- Research on spillage refinement algorithm of 70,000 tons tanker based on damage probability -- Research on some Thermal Weapon Sights signal acquisition technology -- The formation mechanism and control measures of leakage defects on the cast aluminum heat exchanger -- Optimizing an intake manifold shape for better function -- The study of the road deceleration strip -- Crowdsourcing for early provisioning of road-disruption information : model and implementation -- A study on effective implementation of staff rotation system in a state-owned enterprise -- Research on cylindrical equipment launch process parameters simulation -- Design of mobile phone bluetooth remote control light switch -- A review of firm's low carbon capability -- Light trapping effect of aluminum back reflector on stainless steel substrate for a-Si solar cell -- A study on modeling of underwater FCAW process based on MATLAB -- Fabrication and characterizations of electrospark coating on aluminum alloy substrate -- Cause analysis of the high logistics cost in China and relevant suggestions -- The development strategy of Chinese road freight enterprise under new circumstance -- The higher order crack tip fields for anti-plane crack in power functionally graded piezoelectric materials -- The higher order crack tip fields for arbitrarily oriented crack with the physical weak-discontinuity -- A simulation model of spare inventory with complex conditions --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>An aggregate-function-based filled function method for constrained global optimization -- The simulation model for research of island operation control strategy in HVDC weak sending-end system -- Parametric screening and design refinement of ceiling fan blades -- Prediction of thermophysical properties of hydrogen via linear prediction and Artificial Neural Networks -- Research on the development process, existing problems and countermeasures of organization system, management mechanism, and law system of emergency management of mega city in China : taking Shanghai as an example -- The affection of the dip angle changing to the meridional velocity distribution for variable-obliquity inducer -- Designed Textile Reinforced Concrete elements for architectural facade applications.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:instanceOf rdf:resource="http://example.org/6786164#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6786164#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>TJ241.M36 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6786164#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6786164#Item856-37">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://marc.crcnetbase.com/isbn/9781315760728"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>(Unlimited Concurrent Users)</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6786164#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

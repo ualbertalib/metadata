@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6659726#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>u</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6659726</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-11T09:37:16</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-07-17</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CUX</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CUX</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CUX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>MMU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>TEF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>SF 996</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>SF 996</bf:classificationPortion>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>636.088/9</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <rdfs:label>Fowler's zoo and wild animal medicine /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Fowler's zoo and wild animal medicine /</rdfs:label>
+            <bflc:titleSortKey>Fowler's zoo and wild animal medicine /</bflc:titleSortKey>
+            <bf:mainTitle>Fowler's zoo and wild animal medicine</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6659726#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Zoo animals--Diseases.</rdfs:label>
+            <madsrdf:authoritativeLabel>Zoo animals--Diseases.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Zoo animals</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Diseases</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6659726#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Wildlife diseases.</rdfs:label>
+            <madsrdf:authoritativeLabel>Wildlife diseases.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6659726#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Animals, Zoo.</rdfs:label>
+            <madsrdf:authoritativeLabel>Animals, Zoo.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6659726#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Animals, Wild.</rdfs:label>
+            <madsrdf:authoritativeLabel>Animals, Wild.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6659726#Topic650-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Veterinary Medicine.</rdfs:label>
+            <madsrdf:authoritativeLabel>Veterinary Medicine.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6659726#Agent700-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Miller, R. Eric,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMiller, R. Eric,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Miller, R. Eric,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6659726#Agent700-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Fowler, Murray E.,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aFowler, Murray E.,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Fowler, Murray E.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6659726#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6659726#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/mou"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781455773978 (hardcover)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1455773972 (hardcover)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn883842459</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Fowler's zoo and wild animal medicine /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Fowler's zoo and wild animal medicine /</rdfs:label>
+            <bflc:titleSortKey>Fowler's zoo and wild animal medicine /</bflc:titleSortKey>
+            <bf:mainTitle>Fowler's zoo and wild animal medicine</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>edited by R. Eric Miller and Murray E. Fowler</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>Zoo and wild animal medicine</rdfs:label>
+            <bflc:titleSortKey>Zoo and wild animal medicine</bflc:titleSortKey>
+            <bf:mainTitle>Zoo and wild animal medicine</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:editionStatement>Volume 8 [i.e. Eighth edition]</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>St. Louis, Mo.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Elsevier/Saunders</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>St. Louis, Mo. : Elsevier/Saunders, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource (782 pages)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations (chiefly color)</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/c">
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Preceded by: Fowler's zoo and wild animal medicine / R. Eric Miller, Murray Fowler. c2012.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Amphibian groups -- Anurans -- Caudata (Urodela): tailed amphibians -- Caecilians -- Reptile groups -- Chelonians (turtles, tortoises) -- Crocodilians (crocodiles, alligators, caiman, gharial) -- Sphenodontia: the biology and veterinary care of Tuatara -- Lacertilia (lizards, skinks, geckos) and Amphisbaenids (worm lizards) -- Ophidia (snakes) -- Avian groups -- Ratites or Struthioniformes: Struthiones, Rheae, Cassuarii, Apteryges (ostriches, rheas, emus, cassowaries, and kiwis), and Tinamiformes (tinamous) -- Sphenisciformes (penguins) -- Gaviiformes, Podicipediformes, and Procellariformes (loons, grebes, petrels, and albatrosses) -- Pelecaniformes (pelicans, tropicbirds, cormorants, frigatebirds, anhingas, gannets) -- Ciconiiformes (herons, ibises, spoonbills, storks) -- Phoenicopteriformes -- Charadriiformes -- Anseriformes -- Falconiformes (falcons, hawks, eagles, kites, harriers, buzzards, ospreys, caracaras, secretary birds, Old World and New World vultures) -- Galliformes -- Gruiformes (cranes, limpkins, rails, gallinules, coots, bustards) -- Columbiformes -- Psittaciformes -- Cuculiformes (cuckoos, roadrunners) -- Strigiformes -- Caprimulgiformes (nightjars and allies) -- Musophagiformes -- Trochiliformes (hummingbirds) -- Apodiformes and Coliiformes -- Trogoniformes -- Coraciiformes (kingfishers, motmots, bee-eaters, hoopoes, hornbills) -- Piciformes (honeyguides, barbets, woodpeckers, toucans) -- Passeriformes (songbirds, perching birds) -- Mammal Groups -- Monotremata (echidna, platypus) -- Marsupialia (marsupials) -- Insectivores (Insectivora, Macroscelidea, Scandentia) -- Chiroptera (bats) -- Prosimians -- New World and Old World monkeys -- Great apes -- Xenarthra -- Pholidota -- Lagomorpha (pikas, rabbits, and hares) -- Rodentia -- Cetacea (whales, dolphins, porpoises) -- Pinnipedia -- Sirenia -- Canidae -- Felidae -- Mustelidae -- Procyonids and Viverids -- Ursidae -- Hyaenidae -- Tubulidentata (aardvark) -- Proboscidea -- Hyrocoidea (hyraxes) -- Rhinoceridae (rhinoceroses) -- Tapiridae -- Equidae -- Suidae and Tayassuidae (wild pigs, peccaries) -- Hippopotamidae (hippopotamus) -- Camelidae -- Giraffidae -- Tragulidae, Moschidae, and Cervidae -- Bovidae (except sheep and goats) and Antilocapridae -- Sheep, goats, and goat-like animals -- General zoo and wild animal topics -- Avian deflighting techniques -- The use of computed tomography and magnetic resonance imaging in zoo animals -- Gout in exotic animals -- The EAZWV and AAZV infectious diseases notebooks -- Update on iron overload in zoologic species -- The Journal of zoo and wildlife medicine -- A legal overview for zoologic medicine veterinarians -- Minimally invasive surgery techniques -- Conservation Medicine to One Health: the role of zoologic veterinarians -- Recent updates for antemortem tuberculosis diagnostics in zoo animals -- Updates on West Nile virus -- Use of ultrasonography in wildlife species -- Wildpro Multimedia -- ISIS, MedARKS, ZIMS, and global sharing of medical information by zoologic institutions -- Update on remote delivery and restraint equipment -- Guidelines for the management of zoonotic diseases -- Contraception -- AAZV guidelines for zoo and aquarium veterinary medical programs and veterinary hospitals.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on online resource; title from resource home page (ScienceDirect, viewed on July 18, 2014).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6659726#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6659726#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>SF 996</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6659726#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6659726#Item856-36">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://www.sciencedirect.com/science/book/9781455773978"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>(Unlimited Concurrent Users)</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6659726#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

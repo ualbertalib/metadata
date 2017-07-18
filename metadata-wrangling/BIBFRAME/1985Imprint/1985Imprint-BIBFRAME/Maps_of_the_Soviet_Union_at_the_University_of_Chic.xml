@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1312002#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1312002</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-14</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cat">
+            <rdfs:label>catalog</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/e-ur"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>GA 195 C55</bf:classificationPortion>
+            <bf:itemPortion>W784 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1312002#Agent100-10">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Winters, Christopher, 1944-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Winters, Christopher, 1944-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aWinters, Christopher,$d1944-</bflc:name00MarcKey>
+                  <rdfs:label>Winters, Christopher, 1944-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Maps of the Soviet Union at the University of Chicago Map Collection /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Maps of the Soviet Union at the University of Chicago Map Collection /</rdfs:label>
+            <bflc:titleSortKey>Maps of the Soviet Union at the University of Chicago Map Collection /</bflc:titleSortKey>
+            <bf:mainTitle>Maps of the Soviet Union at the University of Chicago Map Collection</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1312002#Agent610-19">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>University of Chicago. Library. Map Collections--Catalogs.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>University of Chicago. Library. Map Collections</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aUniversity of Chicago.$bLibrary.$bMap Collections$vCatalogs.</bflc:name10MarcKey>
+            <rdfs:label>University of Chicago. Library. Map Collections</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1312002#Topic650-20">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Map collections--Illinois--Chicago.</rdfs:label>
+            <madsrdf:authoritativeLabel>Map collections--Illinois--Chicago.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Map collections</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Illinois</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Chicago</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1312002#Topic651-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soviet Union--Maps--Bibliography--Catalogs.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soviet Union--Maps--Bibliography--Catalogs.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Soviet Union</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Maps</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Bibliography</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Catalogs</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1312002#Agent710-22">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>University of Chicago. Library. Map Collection.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aUniversity of Chicago.$bLibrary.$bMap Collection.</bflc:name10MarcKey>
+                  <rdfs:label>University of Chicago. Library. Map Collection.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1312002#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1312002#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/ilu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm18752009</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Maps of the Soviet Union at the University of Chicago Map Collection /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Maps of the Soviet Union at the University of Chicago Map Collection /</rdfs:label>
+            <bflc:titleSortKey>Maps of the Soviet Union at the University of Chicago Map Collection /</bflc:titleSortKey>
+            <bf:mainTitle>Maps of the Soviet Union at the University of Chicago Map Collection</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>compiled by Christopher Winters</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Chicago</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>University of Chicago Library</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Chicago : University of Chicago Library, 1985].</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>253 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>29 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Caption title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1312002#Work"/>
+   </bf:Instance>
+</rdf:RDF>

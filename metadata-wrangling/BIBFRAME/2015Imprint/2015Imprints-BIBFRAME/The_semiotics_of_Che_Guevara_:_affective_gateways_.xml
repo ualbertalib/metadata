@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6803521#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>p</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6803521</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-20T12:25:30</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-22</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BTCTA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UKMGB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCQ</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>NDD</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UAB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bio">
+            <rdfs:label>contains biographical information</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/cl"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>F2849.22.G85</bf:classificationPortion>
+            <bf:itemPortion>C28114 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>980.03092/2</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:classification>
+         <bf:Classification>
+            <bf:classificationPortion>LAN016000</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bisacsh</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <bf:classification>
+         <bf:Classification>
+            <bf:classificationPortion>REL000000</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bisacsh</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6803521#Agent100-21">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Cambre, Maria-Carolina,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Cambre, Maria-Carolina,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aCambre, Maria-Carolina,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Cambre, Maria-Carolina,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>The semiotics of Che Guevara : affective gateways /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The semiotics of Che Guevara : affective gateways /</rdfs:label>
+            <bflc:titleSortKey>semiotics of Che Guevara : affective gateways /</bflc:titleSortKey>
+            <bf:mainTitle>The semiotics of Che Guevara</bf:mainTitle>
+            <bf:subtitle>affective gateways</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>"Alberto Korda's famous photograph of Che Guevara titled the 'Guerrillero Heroico' has been reproduced, modified and remixed countless times since it was taken on March 5, 1960, in Havana, Cuba. This book looks again at this well-known mass-produced image to explore how an image can take on cultural force in diverse parts of the globe and legitimate varying positions and mass action in unexpected global political contexts. Analytically, the book develops a comparative analysis of how images become attached to a range of meanings that are absolutely inseparable from their contexts of use. Addressing the need for a fluid and responsive approach to the study of visual meaning-making, this book relies on multiple methodologies such as semiotics, research-creation, multimodal discourse analysis, ethnography and phenomenology and shows how each method has something to offer toward the understanding of the social and cultural work of images in our globally oriented cultures"--</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Provided by publisher.</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6803521#Agent600-33">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Guevara, Che, 1928-1967--Portraits.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Guevara, Che, 1928-1967</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aGuevara, Che,$d1928-1967$vPortraits.</bflc:name00MarcKey>
+            <rdfs:label>Guevara, Che, 1928-1967</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Work rdf:about="http://example.org/6803521#Work600-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#NameTitle"/>
+            <madsrdf:authoritativeLabel>Korda, Alberto, 1928-2001. Guerillero heróico.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/6803521#Agent600-34">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Korda, Alberto, 1928-2001.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>60010$aKorda, Alberto,$d1928-2001.$tGuerillero heróico.</bflc:name00MarcKey>
+                        <rdfs:label>Korda, Alberto, 1928-2001.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Guerillero heróico.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Guerillero heróico.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>60010$aKorda, Alberto,$d1928-2001.$tGuerillero heróico.</bflc:title00MarcKey>
+                  <rdfs:label>Guerillero heróico.</rdfs:label>
+                  <bflc:titleSortKey>Guerillero heróico.</bflc:titleSortKey>
+                  <bf:mainTitle>Guerillero heróico</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:subject>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6803521#Agent600-35">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Guevara, Che, 1928-1967--Influence.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Guevara, Che, 1928-1967</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aGuevara, Che,$d1928-1967$xInfluence.</bflc:name00MarcKey>
+            <rdfs:label>Guevara, Che, 1928-1967</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Guerrillas--Latin America--Portraits.</rdfs:label>
+            <madsrdf:authoritativeLabel>Guerrillas--Latin America--Portraits.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Guerrillas</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Latin America</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Portraits</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-37">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Portraits--Political aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Portraits--Political aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Portraits</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Political aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-38">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Portraits--Social aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Portraits--Social aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Portraits</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-39">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Photographs--Political aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Photographs--Political aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Photographs</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Political aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-40">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Photographs--Social aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Photographs--Social aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Photographs</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-41">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Visual communication.</rdfs:label>
+            <madsrdf:authoritativeLabel>Visual communication.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6803521#Topic650-42">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Semiotics.</rdfs:label>
+            <madsrdf:authoritativeLabel>Semiotics.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6803521#Work830-43">
+            <rdfs:label>Bloomsbury advances in semiotics.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Bloomsbury advances in semiotics.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aBloomsbury advances in semiotics.</bflc:title30MarcKey>
+                  <rdfs:label>Bloomsbury advances in semiotics.</rdfs:label>
+                  <bflc:titleSortKey>Bloomsbury advances in semiotics.</bflc:titleSortKey>
+                  <bf:mainTitle>Bloomsbury advances in semiotics</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/6803521#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6803521#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014021233</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nbn>
+            <rdf:value>GBB497210</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bnb</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>016863314</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Uk</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781472505231</rdf:value>
+            <bf:qualifier>hardback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1472505239</rdf:value>
+            <bf:qualifier>hardback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781472505293</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+            <bf:qualifier>ePub</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781472512222</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+            <bf:qualifier>ePDF</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn857981459</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>The semiotics of Che Guevara : affective gateways /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The semiotics of Che Guevara : affective gateways /</rdfs:label>
+            <bflc:titleSortKey>semiotics of Che Guevara : affective gateways /</bflc:titleSortKey>
+            <bf:mainTitle>The semiotics of Che Guevara</bf:mainTitle>
+            <bf:subtitle>affective gateways</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Maria-Carolina Cambre</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>London</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Bloomsbury Academic, an imprint of Bloomsbury Publishing Plc</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>London : Bloomsbury Academic, an imprint of Bloomsbury Publishing Plc, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xi, 224 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>24 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Bloomsbury advances in semiotics</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>1. Introduction -- 2. Stealing the image? : copyright and the failed branding of Che Guevara's image -- 3. Virtual Resurrections : Che Guevara's image as place of hope -- 4. Revolution within : youth and the face of Che Guevara in Venezuela -- 5. Beyond semiotics : the agency of Che Guevara's image in East Timor -- 6. Alchemy : indigenous and artistic methods for understanding the work of Che's image -- 7. About face -- 8. The unfinished business of the Guerrillero Heroico : queering Che.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:supplementaryContent>
+         <rdfs:Resource>
+            <bflc:locator rdf:resource="http://www.netread.com/jcusers2/bk1388/231/9781472505231/image/lgcover.9781472505231.jpg"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Cover image</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </rdfs:Resource>
+      </bf:supplementaryContent>
+      <bf:instanceOf rdf:resource="http://example.org/6803521#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6803521#Item050-17">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>F2849.22.G85 C28114 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6803521#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6808753#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6808753</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-21T15:46:11</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-21</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/msc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:notation>
+         <bf:Script>
+            <bf:code>a</bf:code>
+            <rdfs:label>basic roman</rdfs:label>
+         </bf:Script>
+      </bf:notation>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>ISSN RECORD</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Home healthcare now (Online)</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title30MatchKey>Home healthcare now (Online)</bflc:title30MatchKey>
+            <bflc:title30MarcKey>1300 $aHome healthcare now (Online)</bflc:title30MarcKey>
+            <rdfs:label>Home healthcare now (Online)</rdfs:label>
+            <bflc:titleSortKey>Home healthcare now (Online)</bflc:titleSortKey>
+            <bf:mainTitle>Home healthcare now (Online)</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6808753#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Home nursing--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Home nursing--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Home nursing</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6808753#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hospice care--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hospice care--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hospice care</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:continues>
+         <bf:Work rdf:about="http://example.org/6808753#Work780-30">
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>  2002212631</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>48789333</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/6808753#Instance780-30">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Home healthcare nurse (Online)</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>1539-0713</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="http://example.org/6808753#Work780-30"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continues>
+      <bf:hasInstance rdf:resource="http://example.org/6808753#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6808753#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015/..</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/pau"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Currently published</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/mon">
+            <rdfs:label>monthly</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>completely irregular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014203338</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Issn>
+            <rdf:value>2374-4537</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>1</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Issn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn888231714</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:acquisitionSource>
+         <bf:AcquisitionSource>
+            <rdfs:label>Wolters Kluwer Health/Lippincott Williams and Wilkins, PO Box 1580, Hagerstown, MD 21741-1580</rdfs:label>
+         </bf:AcquisitionSource>
+      </bf:acquisitionSource>
+      <rdfs:label>Home healthcare now</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Home healthcare now</rdfs:label>
+            <bflc:titleSortKey>Home healthcare now</bflc:titleSortKey>
+            <bf:mainTitle>Home healthcare now</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>electronic resource</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Hagerstown, MD</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Wolters Kluwer Health/Lippincott Williams and Wilkins</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Hagerstown, MD : Wolters Kluwer Health/Lippincott Williams and Wilkins 2015</bf:provisionActivityStatement>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Ten times a year</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/c">
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Numbering</bf:noteType>
+            <rdfs:label>Began with Volume 33, Number 1 (January 2015).</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Description based on: Volume 33, Number 1 (January 2015); title from journal home page (Journals@Ovid, viewed Feb. 23, 2015).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Latest issue consulted: Volume 33, Number 2 (February 2015).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:otherPhysicalFormat>
+         <bf:Instance rdf:about="http://example.org/6808753#Instance776-29">
+            <bflc:relationship>
+               <bflc:Relationship>
+                  <bflc:relation>
+                     <rdfs:Resource>
+                        <rdfs:label>Print version</rdfs:label>
+                     </rdfs:Resource>
+                  </bflc:relation>
+                  <bf:relatedTo rdf:resource="http://example.org/6808753#Instance"/>
+               </bflc:Relationship>
+            </bflc:relationship>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>  2014203337</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>888231390</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Home healthcare now</rdfs:label>
+               </bf:Title>
+            </bf:title>
+            <bf:identifiedBy>
+               <bf:Issn>
+                  <rdf:value>2374-4529</rdf:value>
+               </bf:Issn>
+            </bf:identifiedBy>
+            <bf:instanceOf rdf:resource="http://example.org/6808753#Work"/>
+         </bf:Instance>
+      </bf:otherPhysicalFormat>
+      <bf:instanceOf rdf:resource="http://example.org/6808753#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6808753#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>ISSN RECORD</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6808753#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6808753#Item856-31">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://resolver.library.ualberta.ca/resolver?ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fualberta.ca%3Aopac&amp;rft.genre=journal&amp;rft.object_id=2550000001348819&amp;rft.issn=2374-4537&amp;rft.eissn=2374-4529&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;url_ver=Z39.88-2004"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access: 2015- </rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6808753#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

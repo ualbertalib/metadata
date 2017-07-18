@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1331608#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1331608</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-10-25</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <bf:code>sg</bf:code>
+            <rdfs:label>songs</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>M 1619 G793</bf:classificationPortion>
+            <bf:itemPortion>S798 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331608#Agent100-11">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Greer, Albert, 1937-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Greer, Albert, 1937-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aGreer, Albert,$d1937-</bflc:name00MarcKey>
+                  <rdfs:label>Greer, Albert, 1937-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Songs and arias</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Songs and arias</rdfs:label>
+            <bflc:titleSortKey>Songs and arias</bflc:titleSortKey>
+            <bf:mainTitle>Songs and arias</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>sound recording</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/prm">
+            <rdfs:label>performed music</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:credits>Albert Greer, tenor; George Brough, piano; Christina Mahler, violoncello; Douglas Miller, flute.</bf:credits>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331608#Topic650-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Oratorios--Excerpts, Arranged.</rdfs:label>
+            <madsrdf:authoritativeLabel>Oratorios--Excerpts, Arranged.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Oratorios</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Excerpts, Arranged</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331608#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Songs (High voice) with piano.</rdfs:label>
+            <madsrdf:authoritativeLabel>Songs (High voice) with piano.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331608#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Operas--Excerpts, Arranged.</rdfs:label>
+            <madsrdf:authoritativeLabel>Operas--Excerpts, Arranged.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Operas</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Excerpts, Arranged</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331608#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Songs (High voice) with instrumental ensemble.</rdfs:label>
+            <madsrdf:authoritativeLabel>Songs (High voice) with instrumental ensemble.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-25">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-25">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Handel, George Frideric, 1685-1759.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aHandel, George Frideric,$d1685-1759.$tAcis and Galatea.$pWould you gain the tender creature;$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Handel, George Frideric, 1685-1759.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Acis and Galatea. Would you gain the tender creature; arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Acis and Galatea. Would you gain the tender creature; arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aHandel, George Frideric,$d1685-1759.$tAcis and Galatea.$pWould you gain the tender creature;$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Acis and Galatea. Would you gain the tender creature; arranged.</rdfs:label>
+                  <bflc:titleSortKey>Acis and Galatea. Would you gain the tender creature; arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Acis and Galatea</bf:mainTitle>
+                  <bf:partName>Would you gain the tender creature</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-26">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-26">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Bach, Johann Sebastian, 1685-1750.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aBach, Johann Sebastian,$d1685-1750.$tMasses,$nBWV 232,$rB minor.$pBenedictus;$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Bach, Johann Sebastian, 1685-1750.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Masses, BWV 232, B minor. Benedictus; arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Masses, BWV 232, B minor. Benedictus; arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aBach, Johann Sebastian,$d1685-1750.$tMasses,$nBWV 232,$rB minor.$pBenedictus;$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Masses, BWV 232, B minor. Benedictus; arranged.</rdfs:label>
+                  <bflc:titleSortKey>Masses, BWV 232, B minor. Benedictus; arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Masses</bf:mainTitle>
+                  <bf:partNumber>BWV 232</bf:partNumber>
+                  <bf:partName>Benedictus</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+            <bf:musicKey>B minor</bf:musicKey>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-27">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-27">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Britten, Benjamin, 1913-1976.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aBritten, Benjamin,$d1913-1976.$tSongs.$kSelections.</bflc:name00MarcKey>
+                        <rdfs:label>Britten, Benjamin, 1913-1976.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Songs. Selections.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Songs. Selections.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aBritten, Benjamin,$d1913-1976.$tSongs.$kSelections.</bflc:title00MarcKey>
+                  <rdfs:label>Songs. Selections.</rdfs:label>
+                  <bflc:titleSortKey>Songs. Selections.</bflc:titleSortKey>
+                  <bf:mainTitle>Songs</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:natureOfContent>Selections</bf:natureOfContent>
+            <bf:genreForm>
+               <bf:GenreForm>
+                  <rdfs:label>Selections</rdfs:label>
+               </bf:GenreForm>
+            </bf:genreForm>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-28">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-28">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Morawetz, Oskar, 1917-2007.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aMorawetz, Oskar,$d1917-2007.$tLand of dreams.</bflc:name00MarcKey>
+                        <rdfs:label>Morawetz, Oskar, 1917-2007.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Land of dreams.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Land of dreams.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aMorawetz, Oskar,$d1917-2007.$tLand of dreams.</bflc:title00MarcKey>
+                  <rdfs:label>Land of dreams.</rdfs:label>
+                  <bflc:titleSortKey>Land of dreams.</bflc:titleSortKey>
+                  <bf:mainTitle>Land of dreams</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-29">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-29">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Mozart, Wolfgang Amadeus, 1756-1791.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aMozart, Wolfgang Amadeus,$d1756-1791.$tZauberflöte.$pDies Bildnis ist bezaubernd schön$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Mozart, Wolfgang Amadeus, 1756-1791.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Zauberflöte. Dies Bildnis ist bezaubernd schön arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Zauberflöte. Dies Bildnis ist bezaubernd schön arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aMozart, Wolfgang Amadeus,$d1756-1791.$tZauberflöte.$pDies Bildnis ist bezaubernd schön$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Zauberflöte. Dies Bildnis ist bezaubernd schön arranged.</rdfs:label>
+                  <bflc:titleSortKey>Zauberflöte. Dies Bildnis ist bezaubernd schön arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Zauberflöte</bf:mainTitle>
+                  <bf:partName>Dies Bildnis ist bezaubernd schön</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-30">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-30">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Handel, George Frideric, 1685-1759.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aHandel, George Frideric,$d1685-1759.$tSemele.$pWhere'er you walk$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Handel, George Frideric, 1685-1759.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Semele. Where'er you walk arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Semele. Where'er you walk arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aHandel, George Frideric,$d1685-1759.$tSemele.$pWhere'er you walk$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Semele. Where'er you walk arranged.</rdfs:label>
+                  <bflc:titleSortKey>Semele. Where'er you walk arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Semele</bf:mainTitle>
+                  <bf:partName>Where'er you walk</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-31">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-31">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Bach, Johann Sebastian, 1685-1750.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aBach, Johann Sebastian,$d1685-1750.$tWeihnachts-Oratorium.$pFrohe Hirten, eilt$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Bach, Johann Sebastian, 1685-1750.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Weihnachts-Oratorium. Frohe Hirten, eilt arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Weihnachts-Oratorium. Frohe Hirten, eilt arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aBach, Johann Sebastian,$d1685-1750.$tWeihnachts-Oratorium.$pFrohe Hirten, eilt$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Weihnachts-Oratorium. Frohe Hirten, eilt arranged.</rdfs:label>
+                  <bflc:titleSortKey>Weihnachts-Oratorium. Frohe Hirten, eilt arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Weihnachts-Oratorium</bf:mainTitle>
+                  <bf:partName>Frohe Hirten, eilt</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-32">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-32">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Bizet, Georges, 1838-1875.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aBizet, Georges,$d1838-1875.$tPêcheurs de perles.$pJe crois entendre encore$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Bizet, Georges, 1838-1875.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Pêcheurs de perles. Je crois entendre encore arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Pêcheurs de perles. Je crois entendre encore arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aBizet, Georges,$d1838-1875.$tPêcheurs de perles.$pJe crois entendre encore$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Pêcheurs de perles. Je crois entendre encore arranged.</rdfs:label>
+                  <bflc:titleSortKey>Pêcheurs de perles. Je crois entendre encore arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Pêcheurs de perles</bf:mainTitle>
+                  <bf:partName>Je crois entendre encore</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-33">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-33">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Quilter, Roger, 1877-1953.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aQuilter, Roger,$d1877-1953.$tShakespeare songs,$nop. 6.</bflc:name00MarcKey>
+                        <rdfs:label>Quilter, Roger, 1877-1953.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Shakespeare songs, op. 6.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Shakespeare songs, op. 6.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aQuilter, Roger,$d1877-1953.$tShakespeare songs,$nop. 6.</bflc:title00MarcKey>
+                  <rdfs:label>Shakespeare songs, op. 6.</rdfs:label>
+                  <bflc:titleSortKey>Shakespeare songs, op. 6.</bflc:titleSortKey>
+                  <bf:mainTitle>Shakespeare songs</bf:mainTitle>
+                  <bf:partNumber>op. 6</bf:partNumber>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-34">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-34">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Falla, Manuel de, 1876-1946.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aFalla, Manuel de,$d1876-1946.$tCanciones populares españolas.$pNana$oarranged.</bflc:name00MarcKey>
+                        <rdfs:label>Falla, Manuel de, 1876-1946.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Canciones populares españolas. Nana arranged.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Canciones populares españolas. Nana arranged.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aFalla, Manuel de,$d1876-1946.$tCanciones populares españolas.$pNana$oarranged.</bflc:title00MarcKey>
+                  <rdfs:label>Canciones populares españolas. Nana arranged.</rdfs:label>
+                  <bflc:titleSortKey>Canciones populares españolas. Nana arranged.</bflc:titleSortKey>
+                  <bf:mainTitle>Canciones populares españolas</bf:mainTitle>
+                  <bf:partName>Nana</bf:partName>
+               </bf:Title>
+            </bf:title>
+            <bf:version>arranged</bf:version>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331608#Agent700-35">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Willan, Healey, 1880-1968.Lake Isle of Innisfree.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>70012$aWillan, Healey,$d1880-1968.Lake Isle of Innisfree.</bflc:name00MarcKey>
+                  <rdfs:label>Willan, Healey, 1880-1968.Lake Isle of Innisfree.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1331608#Work700-36">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1331608#Agent700-36">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Somers, Harry, 1925-1999.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aSomers, Harry,$d1925-1999.$tSongs to words by Walt Whitman.</bflc:name00MarcKey>
+                        <rdfs:label>Somers, Harry, 1925-1999.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Songs to words by Walt Whitman.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Songs to words by Walt Whitman.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aSomers, Harry,$d1925-1999.$tSongs to words by Walt Whitman.</bflc:title00MarcKey>
+                  <rdfs:label>Songs to words by Walt Whitman.</rdfs:label>
+                  <bflc:titleSortKey>Songs to words by Walt Whitman.</bflc:titleSortKey>
+                  <bf:mainTitle>Songs to words by Walt Whitman</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331608#Agent700-37">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Brough, George.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBrough, George.</bflc:name00MarcKey>
+                  <rdfs:label>Brough, George.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331608#Agent700-38">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Mahler, Christina.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMahler, Christina.</bflc:name00MarcKey>
+                  <rdfs:label>Mahler, Christina.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331608#Agent700-39">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Miller, Douglas, flutist.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMiller, Douglas,$cflutist.</bflc:name00MarcKey>
+                  <rdfs:label>Miller, Douglas, flutist.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1331608#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1331608#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/onc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>WRC1-4342</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>World Records</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>4342</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>World Records</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm70306382</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Songs and arias</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Songs and arias</rdfs:label>
+            <bflc:titleSortKey>Songs and arias</bflc:titleSortKey>
+            <bf:mainTitle>Songs and arias</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Albert Greer, tenor</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>sound recording</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Toronto</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>World Records</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Toronto] : World Records, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 sound disc</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>digital, 33 1/3 rpm, stereo</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>12 in.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/s">
+            <rdfs:label>audio</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>World Records: WRC1-4342.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Dies Bildnis ist bezaubernd schön / W.A. Mozart -- Je croi entendre encore / G. Bizet -- Where e'er you walk ; Would you gain the tender creature / G.F. Handel -- Frohe Hirten, eilt, ach eilet ; Benedictus / J.S. Bach -- Down by the Salley Gardens ; How sweet the answer ; The little old table / B. Britten -- Three Shakespeare songs : 1st set, op. 61 / R. Quilter -- Three songs to words by Walt Whitman / H. Somers -- The Lakes Isle of Innisfree / H. Willan -- The land of dreams / O. Morawetz -- Nana / M. de Falla.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1331608#Work"/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1370835#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1370835</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-04-17</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>state, provincial, territorial, dependant government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-cn-sn"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>S 592.575</bf:classificationPortion>
+            <bf:itemPortion>M664 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</rdfs:label>
+            <bflc:titleSortKey>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</bflc:titleSortKey>
+            <bf:mainTitle>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1370835#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Acid sulfate soils.</rdfs:label>
+            <madsrdf:authoritativeLabel>Acid sulfate soils.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1370835#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils, Salts in--Saskatchewan.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils, Salts in--Saskatchewan.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils, Salts in</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Saskatchewan</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1370835#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Soils--Sulfur content--Saskatchewan.</rdfs:label>
+            <madsrdf:authoritativeLabel>Soils--Sulfur content--Saskatchewan.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Soils</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sulfur content</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Saskatchewan</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1370835#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Mermut, A. R.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aMermut, A. R.</bflc:name00MarcKey>
+                  <rdfs:label>Mermut, A. R.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1370835#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Saskatchewan. Agriculture Development Fund.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aSaskatchewan.$bAgriculture Development Fund.</bflc:name10MarcKey>
+                  <rdfs:label>Saskatchewan. Agriculture Development Fund.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1370835#Work740-27">
+            <rdfs:label>Origin and nature of salts in Saskatchewan.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Origin and nature of salts in Saskatchewan.</rdfs:label>
+                  <bflc:titleSortKey>Origin and nature of salts in Saskatchewan.</bflc:titleSortKey>
+                  <bf:mainTitle>Origin and nature of salts in Saskatchewan</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1370835#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1370835#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/snc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm70345237</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</rdfs:label>
+            <bflc:titleSortKey>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan.</bflc:titleSortKey>
+            <bf:mainTitle>Mineralogy, morphology and dynamics of salts in agricultural soils in Saskatchewan</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Regina?</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>ADF, Saskatchewan Agriculture Development Fund</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985?</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Regina?] : ADF, Saskatchewan Agriculture Development Fund, [1985?]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 v. (various pagings)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>At head of title: Technical/final report to Saskatchewan Agriculture Research Fund.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"S-86-10-0037."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"S-85-10-0023/7-85-60."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"7-84-43."</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>On verso of t.p.: Origin and nature of salts in Saskatchewan ... A. R. Mermut.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1370835#Work"/>
+   </bf:Instance>
+</rdf:RDF>

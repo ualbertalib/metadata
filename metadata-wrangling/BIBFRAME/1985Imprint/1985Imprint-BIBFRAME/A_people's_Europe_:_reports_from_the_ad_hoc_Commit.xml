@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1348441#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1348441</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-01-10</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+            <rdfs:label>international intergovernmental government publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/e"/>
+      </bf:geographicCoverage>
+      <rdfs:label>A people's Europe : reports from the ad hoc Committee.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>A people's Europe : reports from the ad hoc Committee.</rdfs:label>
+            <bflc:titleSortKey>people's Europe : reports from the ad hoc Committee.</bflc:titleSortKey>
+            <bf:mainTitle>A people's Europe</bf:mainTitle>
+            <bf:subtitle>reports from the ad hoc Committee</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1348441#Agent610-19">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>European Economic Community.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>European Economic Community.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aEuropean Economic Community.</bflc:name10MarcKey>
+            <rdfs:label>European Economic Community.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1348441#Agent710-20">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Commission of the European Communities.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aCommission of the European Communities.</bflc:name10MarcKey>
+                  <rdfs:label>Commission of the European Communities.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1348441#Work830-21">
+            <rdfs:label>Bulletin of the European Communities. Supplement ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Bulletin of the European Communities. Supplement ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aBulletin of the European Communities.$pSupplement ;$v1985:7.</bflc:title30MarcKey>
+                  <rdfs:label>Bulletin of the European Communities. Supplement ;</rdfs:label>
+                  <bflc:titleSortKey>Bulletin of the European Communities. Supplement ;</bflc:titleSortKey>
+                  <bf:mainTitle>Bulletin of the European Communities</bf:mainTitle>
+                  <bf:partName>Supplement</bf:partName>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>1985:7</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1348441#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1348441#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/lu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9282556379</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn234153474</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:classification>
+         <bf:Classification>
+            <rdfs:label>CB-NF-85-007-EN-C</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>sudocs</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <rdfs:label>A people's Europe : reports from the ad hoc Committee.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>A people's Europe : reports from the ad hoc Committee.</rdfs:label>
+            <bflc:titleSortKey>people's Europe : reports from the ad hoc Committee.</bflc:titleSortKey>
+            <bf:mainTitle>A people's Europe</bf:mainTitle>
+            <bf:subtitle>reports from the ad hoc Committee</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Luxembourg</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Office for Official Publications of the European Communities</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Luxembourg : Office for Official Publications of the European Communities, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>33 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>25 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Bulletin of the European Communities. Supplement</bf:seriesStatement>
+      <bf:seriesEnumeration>7/85</bf:seriesEnumeration>
+      <bf:instanceOf rdf:resource="http://example.org/1348441#Work"/>
+   </bf:Instance>
+</rdf:RDF>

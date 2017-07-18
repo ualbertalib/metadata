@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1323285#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1323285</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-09-27</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+            <rdfs:label>conference publication</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>ML410.M23</bf:classificationPortion>
+            <bf:itemPortion>M24 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>780/.92/4</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <rdfs:label>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</rdfs:label>
+            <bflc:titleSortKey>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</bflc:titleSortKey>
+            <bf:mainTitle>Mahler-Interpretation</bf:mainTitle>
+            <bf:subtitle>Aspekte zum Werk und Wirken von Gustav Mahler</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1323285#Agent600-23">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Mahler, Gustav, 1860-1911--Congresses.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Mahler, Gustav, 1860-1911</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aMahler, Gustav,$d1860-1911$vCongresses.</bflc:name00MarcKey>
+            <rdfs:label>Mahler, Gustav, 1860-1911</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1323285#Agent700-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Stephan, Rudolf.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aStephan, Rudolf.</bflc:name00MarcKey>
+                  <rdfs:label>Stephan, Rudolf.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1323285#Agent711-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Meeting"/>
+                  <bflc:name11MatchKey>Internationales Gustav-Mahler-Symposium (1979 : Düsseldorf, Germany)</bflc:name11MatchKey>
+                  <bflc:name11MarcKey>7112 $aInternationales Gustav-Mahler-Symposium$d(1979 :$cDüsseldorf, Germany)</bflc:name11MarcKey>
+                  <rdfs:label>Internationales Gustav-Mahler-Symposium (1979 : Düsseldorf, Germany)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1323285#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1323285#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/gw"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/mus">
+            <rdfs:label>music</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   86107878 /MN</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>3795717884</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm13680420</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</rdfs:label>
+            <bflc:titleSortKey>Mahler-Interpretation : Aspekte zum Werk und Wirken von Gustav Mahler /</bflc:titleSortKey>
+            <bf:mainTitle>Mahler-Interpretation</bf:mainTitle>
+            <bf:subtitle>Aspekte zum Werk und Wirken von Gustav Mahler</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>herausgegeben von Rudolf Stephan</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Mainz</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Schott</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Mainz ; New York : Schott, c1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>190 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>music</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>24 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Schott Musikwissenschaft</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Papers presented at the Internationales Gustav-Mahler-Symposium held in Düsseldorf, Oct. 30-Nov. 1, 1979.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Kapellmeistermusik / Marius Flothuis -- Liebes-Erklärung an die 10. Symphonie von Gustav Mahler / Diether de la Motte -- Mahlers Beethoven-Interpretation / Ernst Hilmar -- Mahler und Schumann / Arno Forchert -- Gustav Mahlers Retuschen im Finale seiner 6. Symphonie / Peter Andraschke -- Die Mahler-Rezeption in Holland 1903-1911 / Eduard Reeser -- Zur Geschichte der 4. Symphonie / Gösta Neuwirth -- Gerettete Herausforderung, Mahlers 4. Symphonie, Mengelbergs Interpretation / Klaus Kropfinger -- Karl Horwitz' "Vom Tode" / Hermann Danuser.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1323285#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1323285#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>ML410.M23 M24 1985</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1323285#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

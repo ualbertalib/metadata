@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1378930#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1378930</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-06-07</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <bf:code>mu</bf:code>
+            <rdfs:label>multiple forms</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:temporalCoverage rdf:datatype="http://id.loc.gov/datatypes/edtf">1930</bf:temporalCoverage>
+      <bf:temporalCoverage rdf:datatype="http://id.loc.gov/datatypes/edtf">1942</bf:temporalCoverage>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcmuscomp/fg">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>marcmuscomp</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcmuscomp/pr">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>marcmuscomp</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcmuscomp/su">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>marcmuscomp</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:instrument>
+         <bf:MusicInstrument>
+            <bf:instrumentType>keyboard</bf:instrumentType>
+            <rdfs:label>organ</rdfs:label>
+            <bf:count>1</bf:count>
+         </bf:MusicInstrument>
+      </bf:instrument>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>M7</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1378930#Agent100-16">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Duruflé, Maurice, 1902-1986.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Duruflé, Maurice, 1902-1986.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aDuruflé, Maurice,$d1902-1986.</bflc:name00MarcKey>
+                  <rdfs:label>Duruflé, Maurice, 1902-1986.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Organ music. Selections</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Organ music. Selections</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aOrgan music.$kSelections</bflc:title40MarcKey>
+            <rdfs:label>Organ music. Selections</rdfs:label>
+            <bflc:titleSortKey>Organ music. Selections</bflc:titleSortKey>
+            <bf:mainTitle>Organ music</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:natureOfContent>Selections</bf:natureOfContent>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>Selections</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/prm">
+            <rdfs:label>performed music</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:credits>Olivier Latry playing the organ of Saint-Etienne du Mont, Paris.</bf:credits>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1378930#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Organ music.</rdfs:label>
+            <madsrdf:authoritativeLabel>Organ music.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1378930#Agent700-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Latry, Olivier, 1962- ,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aLatry, Olivier,$d1962- ,$eperformer.</bflc:name00MarcKey>
+                  <rdfs:label>Latry, Olivier, 1962- ,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>performer.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1378930#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1378930#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:soundCharacteristic>
+         <bf:PlayingSpeed>
+            <rdfs:label>1.4 m. per sec.</rdfs:label>
+         </bf:PlayingSpeed>
+      </bf:soundCharacteristic>
+      <bf:dimensions>4 3/4 in. or 12 cm.</bf:dimensions>
+      <bf:generation>
+         <bf:Generation>
+            <rdfs:label>mass produced</rdfs:label>
+         </bf:Generation>
+      </bf:generation>
+      <bf:baseMaterial>
+         <bf:BaseMaterial rdf:about="http://id.loc.gov/vocabulary/mmaterial/pla">
+            <rdfs:label>plastic</rdfs:label>
+         </bf:BaseMaterial>
+      </bf:baseMaterial>
+      <bf:emulsion>
+         <bf:Emulsion rdf:about="http://id.loc.gov/vocabulary/mmaterial/mtl">
+            <rdfs:label>metal</rdfs:label>
+         </bf:Emulsion>
+      </bf:emulsion>
+      <bf:soundCharacteristic>
+         <bf:PlaybackCharacteristic>
+            <rdfs:label>digital recording</rdfs:label>
+         </bf:PlaybackCharacteristic>
+      </bf:soundCharacteristic>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   86754258 /R</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>BNL 112508</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>BNL productions</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>112508</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>BNL productions</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm14716598</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Intégrale de l'œuvre pour orgue</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Intégrale de l'œuvre pour orgue</rdfs:label>
+            <bflc:titleSortKey>Intégrale de l'œuvre pour orgue</bflc:titleSortKey>
+            <bf:mainTitle>Intégrale de l'œuvre pour orgue</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Maurice Duruflé</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>sound recording</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>France</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>BNL productions</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>p1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>France : BNL productions, p1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 sound disc</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>digital, stereo.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>4 3/4 in.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/s">
+            <rdfs:label>audio</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/sd">
+            <rdfs:label>audio disc</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Compact disc.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>BNL productions: BNL 112508.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Fugue sur le carillon des heures de la Cathédrale de Soissons (3:33) -- Prélude, adagio et choral varié sur le Veni Creator (20:00) -- Scherzo (6:24) -- Prélude sur l'introit de l'Epiphanie (1:55) -- Prélude et fugue sur le nom d'Alain (12:02) -- Suite, opus 5 (23:00).</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1378930#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1378930#Item050-14">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>M7</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1378930#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

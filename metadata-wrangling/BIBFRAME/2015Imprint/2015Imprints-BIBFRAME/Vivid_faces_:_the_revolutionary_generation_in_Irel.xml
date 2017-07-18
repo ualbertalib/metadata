@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6756927#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>8</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6756927</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-01-29T13:12:23</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-26</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>YDXCP</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>SINLB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>LE#</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AFMK</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bio">
+            <rdfs:label>contains biographical information</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/e-ie"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>DA962</bf:classificationPortion>
+            <bf:itemPortion>.F67 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>941.5082/1</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6756927#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Foster, R. F. (Robert Fitzroy), 1949-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Foster, R. F. (Robert Fitzroy), 1949-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aFoster, R. F.$q(Robert Fitzroy),$d1949-</bflc:name00MarcKey>
+                  <rdfs:label>Foster, R. F. (Robert Fitzroy), 1949-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</rdfs:label>
+            <bflc:titleSortKey>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</bflc:titleSortKey>
+            <bf:mainTitle>Vivid faces</bf:mainTitle>
+            <bf:subtitle>the revolutionary generation in Ireland, 1890-1923</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>"A masterful history of Ireland's Easter Rising told through the lives of ordinary people who forged a revolutionary generation. On Easter Monday, 1916, Irish rebels poured into Dublin's streets to proclaim an independent republic. Ireland's long struggle for self-government had suddenly become a radical and bloody fight for independence from Great Britain. Irish nationalists mounted a week-long insurrection, occupying public buildings and creating mayhem before the British army regained control. The Easter Rising provided the spark for the Irish revolution, a turning point in the violent history of Irish independence. In this highly original history, acclaimed scholar R.F. Foster explores the human dimension of this pivotal event. He focuses on the ordinary men and women, Yeats's 'vivid faces,' who rose 'from counter or desk among grey / Eighteenth-century houses' and took to the streets. A generation made, not born, they rejected the inherited ways of the Church, their bourgeois families, and British rule. They found inspiration in the ideals of socialism and feminism, in new approaches to love, art, and belief. Drawing on fresh sources, including personal letters and diaries, Foster summons his characters to life. We meet Rosamond Jacob, who escaped provincial Waterford for bustling Dublin. On a jaunt through the city she might visit a modern art gallery, buy cigarettes, or read a radical feminist newspaper. She could practice the Irish language, attend a lecture on Freud, or flirt with a man who would later be executed for his radical activity. These became the roots of a rich life of activism in Irish and women's causes. Vivid Faces shows how Rosamond and her peers were galvanized to action by a vertiginous sense of transformation: as one confided to his diary, 'I am changing and things around me change.' Politics had fused with the intimacies of love and belief, making the Rising an event not only of the streets but also of the hearts and minds of a generation"--From publisher's website.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6756927#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Revolutions--Social aspects--Ireland--History--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Revolutions--Social aspects--Ireland--History--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Revolutions</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6756927#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Social change--Ireland--History--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Social change--Ireland--History--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social change</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6756927#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Politics and culture--Ireland--History--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Politics and culture--Ireland--History--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Politics and culture</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6756927#Topic651-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Ireland--History--Easter Rising, 1916--Social aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Ireland--History--Easter Rising, 1916--Social aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>Easter Rising, 1916</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6756927#Topic651-33">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Ireland--History--Easter Rising, 1916--Biography.</rdfs:label>
+            <madsrdf:authoritativeLabel>Ireland--History--Easter Rising, 1916--Biography.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>Easter Rising, 1916</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Biography</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6756927#Topic651-34">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Ireland--History--War of Independence, 1919-1921--Social aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Ireland--History--War of Independence, 1919-1921--Social aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>War of Independence, 1919-1921</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/6756927#Topic651-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Ireland--History--Civil War, 1922-1923--Social aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Ireland--History--Civil War, 1922-1923--Social aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Ireland</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>Civil War, 1922-1923</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/6756927#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6756927#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nyu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014032055</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780393082791 (hardcover)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0393082792 (hardcover)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn900241297</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</rdfs:label>
+            <bflc:titleSortKey>Vivid faces : the revolutionary generation in Ireland, 1890-1923 /</bflc:titleSortKey>
+            <bf:mainTitle>Vivid faces</bf:mainTitle>
+            <bf:subtitle>the revolutionary generation in Ireland, 1890-1923</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>R.F. Foster</bf:responsibilityStatement>
+      <bf:editionStatement>First American edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>W.W. Norton &amp; Company</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New York : W.W. Norton &amp; Company, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xxiii, 463 pages, 16 unnumbered pages of plates</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations, portraits</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>24 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Introduction: The Ireland of yesterday -- Fathers and children -- Learning -- Playing -- Loving -- Writing -- Arming -- Fighting -- Reckoning -- Remembering -- Conclusion: Freedoms -- Biographical appendix.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6756927#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6756927#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>DA962.F67 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6756927#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

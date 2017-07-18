@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6712181#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6712181</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>FlBoTFG</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-20T10:41:22</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-20</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>FlBoTFG</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>FlBoTFG</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>TD477</bf:classificationPortion>
+            <bf:itemPortion>.A64 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Aquananotechnology : global prospects /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Aquananotechnology : global prospects /</rdfs:label>
+            <bflc:titleSortKey>Aquananotechnology : global prospects /</bflc:titleSortKey>
+            <bf:mainTitle>Aquananotechnology</bf:mainTitle>
+            <bf:subtitle>global prospects</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>"Nanotechnology is finding numerous uses in the water industry, including high surface area filtration media, membranes for desalination plants, and fundamental new methods for desalination. This book provides a comprehensive overview from a global perspective, the latest research, and developments in the use of nanotechnology for water purification and desalination methods. It demonstrates the role of nanotechnology in water treatment"--</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Provided by publisher.</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6712181#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Water--Purification--Materials.</rdfs:label>
+            <madsrdf:authoritativeLabel>Water--Purification--Materials.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Water</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Purification</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Materials</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6712181#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Nanostructured materials--Environmental aspects.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nanostructured materials--Environmental aspects.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Nanostructured materials</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Environmental aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6712181#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Nanofiltration.</rdfs:label>
+            <madsrdf:authoritativeLabel>Nanofiltration.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6712181#Agent700-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Reisner, David Evans,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aReisner, David Evans,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Reisner, David Evans,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6712181#Agent700-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Pradeep, T.,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aPradeep, T.,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Pradeep, T.,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6712181#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6712181#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/flu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/map">
+            <rdfs:label>maps</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/chr">
+            <rdfs:label>charts</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/plt">
+            <rdfs:label>plates</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781466512252 (e-book : PDF)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn891387115</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Aquananotechnology : global prospects /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Aquananotechnology : global prospects /</rdfs:label>
+            <bflc:titleSortKey>Aquananotechnology : global prospects /</bflc:titleSortKey>
+            <bf:mainTitle>Aquananotechnology</bf:mainTitle>
+            <bf:subtitle>global prospects</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>edited by David E. Reisner, T. Pradeep</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Boca Raton</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>CRC Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Boca Raton : CRC Press, [2015]</bf:provisionActivityStatement>
+      <bf:copyrightDate>©2015</bf:copyrightDate>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Bimodal UV-assisted nano-TiO2 catalyst : crumb rubber device for treatment of contaminated water / Zaki Ahmad, Robina Farooq [and four others] -- Hierarchical carbon and hydrogels for sensing, remediation in drinking water, and aquaculture drug delivery / Cesar A. Barbero [and ten others] -- Use of nanomaterials in water remediation by a subcritical water process / Guy Baret -- Reduction of priority pollutants by nanoscale zerovalent iron in subsurface environments / Chun-Chi Lee [and four others] -- Nanotoxicity : aquatic organisms and ecosystems / Ashutosh Kumar, Rishi Shanker, and Alok Dhawan -- SonoPhotoCatalytic cavitation (SPCC) in water treatment / Tony F. Diego, Curt Hallberg, and Maria Jose Lopez Tendero -- Bilge and ballast water treatment using nanotechnology / Paul L. Edmiston -- Nanoengineered organosilica materials for the treatment of produced water / Paul L. Edmiston, Stephen Jolly, and Stephen Spoonamore -- Arsenic removal metrics that commercialized the drinking water market / Lisa M. Farmen -- Commercialization of nano from water sensors to membranes / Brent Giles -- Nano-photocatalytic materials for environmental applications / Hui Zhang and Liang-Hong Guo -- Engineered polymers and organic-inorganic hybrids as antimicrobial materials for water disinfection / Divakara S.S.M. Uppu, Jiaul Hoque, and Jayanta Haldar -- Key water treatment technologies and their use by several industrial segments and future potential for nanotechnology / Mike Henley --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Iron-based magnetic nanomaterials in wastewater treatment / Zongshan Zhao, Jing Lan, Guoliang Li, and Guibin Jiang -- Sustainable clean water : closing the cycle / Satish Vasu Kailas and Monto Mani -- Thin film nanocomposite reverse osmosis membranes / Christopher J. Kurth and Bob Burk -- Technological developments in water defluoridation / Nitin K. Labhsetwar [and five others] -- Nanotechnology tunneling in the Environmental Kuznets Curve (EKC) : nano zerovalent iron for underground water remediation / Ali Marjowy and Rasool Lesan-Khosh -- Engineered nanoscale materials for defluoridation of groundwater / Shihabudheen M. Maliyekkal -- Advances in nanostructured polymers and membranes for removal of heavy metals in water / Bhekie B. Mamba [and five others] -- Point-of-drinking water purification innovation : the water initiative / Eugene A. Fitzgerald, Thomas A. Langdo, Kevin M. McGovern, and Rick Renjilian -- WaterHealth international : decentralized systems provide sustainable drinking water / Mahendra K. Misra and Sanjay Bhatnagar -- Electrospun nanofibers in water purification / Sajini Vadukumpully, Shantikumar V. Nair, and A. Sreekumaran Nair -- Light-activated nanotechnology for drinking water purification / Mark D. Owen and Tom Hawkins -- Modified TiO2-based photocatalytic systems for the removal of emerging contaminants from water / Ligy Philip, Arya Vijayanandan, and Jaganathan Senthilnathan -- Noble metal nanosystems for drinking water purification : from nanoparticles to clusters / Thalappil Pradeep and Megalamane Siddaramappa Bootharaju -- Water desalination : emerging and existing technologies / Shaurya Prakash, Mark A. Shannon, and Karen Bellman --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Challenges and opportunities for nanotechnology in the energy-water nexus / Shaurya Prakash and Karen Bellman -- Nanotechnology in passive atmospheric water capture / Carlos Ángel Sánchez Recio, Zaki Ahmad, and Tony F. Diego -- Evaluation of a zinc clinoptilolite (ZZ®) for drinking water treatment / Gerardo Rodríguez-Fuentes [and eight others] -- Phosphorous removal and recovery using nanotechnology / J. Richard Schorr [and four others] -- Nanomaterials persuasive in long history of pursuing perchlorates / Suvankar Sengupta [and four others] -- Stormwater runoff treatment using bioswales augmented with advanced nanoengineered materials / Hanbae Yang and Stephen Spoonamore -- Graphene : applications in environmental remediation and sensing / Theruvakkattil Sreenivasan Sreeprasad -- Quantitative high throughput assay for detection of biologically active endocrine disrupting chemicals in water / Diana A. Stavreva, Lyuba Varticovski, and Gordon L. Hager -- Novel carbon-based nanoadsorbents for water purification / Nishith Verma and Ashutosh Sharma -- Engineered nanomaterials for landfill leachate treatment in the humid tropics : the Sri Lankan perspective / Meththika Vithanage [and five others] -- Al13 cluster nanoflocculants for remediation of dissolved organic compounds and colloidal particles in water / Dongsheng Wang, Hongxiao Tang, and Jiuhui Qu -- GE water provides portfolio of nanotech membrane-based solutions / Ralph Exton.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:instanceOf rdf:resource="http://example.org/6712181#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6712181#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>TD477.A64 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6712181#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6712181#Item856-33">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://marc.crcnetbase.com/isbn/9781466512252"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>(Unlimited Concurrent Users)</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6712181#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

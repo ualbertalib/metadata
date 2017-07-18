@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6679338#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6679338</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-05T11:10:26</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-28</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DNLM/DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>NLM</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>BTCTA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCO</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CDX</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UAB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>BF637.C6</bf:classificationPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationNlm>
+            <bf:classificationPortion>WM 55</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>National Library of Medicine</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:ClassificationNlm>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>174/.91583</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6679338#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Herlihy, Barbara,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Herlihy, Barbara,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aHerlihy, Barbara,$eauthor,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Herlihy, Barbara,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author</rdfs:label>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label/>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>ACA ethical standards casebook /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>ACA ethical standards casebook /</rdfs:label>
+            <bflc:titleSortKey>ACA ethical standards casebook /</bflc:titleSortKey>
+            <bf:mainTitle>ACA ethical standards casebook</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/6679338#Agent610-29">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>American Counseling Association.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>American Counseling Association.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61022$aAmerican Counseling Association.</bflc:name10MarcKey>
+            <rdfs:label>American Counseling Association.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6679338#Topic650-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Counseling.</rdfs:label>
+            <madsrdf:authoritativeLabel>Counseling.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6679338#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Counseling--standards--United States--Practice Guideline.</rdfs:label>
+            <madsrdf:authoritativeLabel>Counseling--standards--United States--Practice Guideline.</madsrdf:authoritativeLabel>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Counseling</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>standards</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>United States</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Practice Guideline</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6679338#Topic650-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Ethics, Professional--United States--Practice Guideline.</rdfs:label>
+            <madsrdf:authoritativeLabel>Ethics, Professional--United States--Practice Guideline.</madsrdf:authoritativeLabel>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Ethics, Professional</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>United States</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Practice Guideline</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>mesh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6679338#Agent700-33">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Corey, Gerald,</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aCorey, Gerald,$eauthor,$eeditor.</bflc:name00MarcKey>
+                  <rdfs:label>Corey, Gerald,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author</rdfs:label>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label/>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>editor.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6679338#Agent710-34">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>American Counseling Association,</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aAmerican Counseling Association,$eissuing body.</bflc:name10MarcKey>
+                  <rdfs:label>American Counseling Association,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>issuing body.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/6679338#Work710-35">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/6679338#Agent710-35">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                        <bflc:name10MatchKey>American Counseling Association.</bflc:name10MatchKey>
+                        <bflc:name10MarcKey>7102 $iPreceded by (work):$aAmerican Counseling Association.$tACA ethical standards casebook.</bflc:name10MarcKey>
+                        <rdfs:label>American Counseling Association.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>ACA ethical standards casebook.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title10MatchKey>ACA ethical standards casebook.</bflc:title10MatchKey>
+                  <bflc:title10MarcKey>7102 $iPreceded by (work):$aAmerican Counseling Association.$tACA ethical standards casebook.</bflc:title10MarcKey>
+                  <rdfs:label>ACA ethical standards casebook.</rdfs:label>
+                  <bflc:titleSortKey>ACA ethical standards casebook.</bflc:titleSortKey>
+                  <bf:mainTitle>ACA ethical standards casebook</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bflc:relationship>
+         <bflc:Relationship>
+            <bflc:relation>
+               <rdfs:Resource>
+                  <rdfs:label>Preceded by (work)</rdfs:label>
+               </rdfs:Resource>
+            </bflc:relation>
+            <bf:relatedTo rdf:resource="http://example.org/6679338#Work710-35"/>
+         </bflc:Relationship>
+      </bflc:relationship>
+      <bf:hasInstance rdf:resource="http://example.org/6679338#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6679338#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/vau"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014008225</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Nban>
+            <rdf:value>101627049</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DNLM</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Nban>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781556203213 (pbk. : alk. paper)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1556203217 (pbk. : alk. paper)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn871619678</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>ACA ethical standards casebook /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>ACA ethical standards casebook /</rdfs:label>
+            <bflc:titleSortKey>ACA ethical standards casebook /</bflc:titleSortKey>
+            <bf:mainTitle>ACA ethical standards casebook</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Barbara Herlihy, Gerald Corey [editors]</bf:responsibilityStatement>
+      <bf:title>
+         <bf:Title>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+            <rdfs:label>American Counseling Association ethical standards casebook</rdfs:label>
+            <bflc:titleSortKey>American Counseling Association ethical standards casebook</bflc:titleSortKey>
+            <bf:mainTitle>American Counseling Association ethical standards casebook</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:editionStatement>Seventh edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Alexandria, VA</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>American Counseling Association</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Alexandria, VA : American Counseling Association, [2015]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xviii, 317 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>23 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Client rights and informed consent / Gerald Corey and Barbara Herlihy -- Social justice and counseling across cultures / Courtland C. Lee -- Confidentiality / Barbara Herlihy and Gerald Corey -- Competence / Gerald Corey and Barbara Herlihy -- Managing value conflicts / Barbara Herlihy and Gerald Corey -- Counseling minor clients / Mark Salo -- Managing boundaries / Gerald Corey and Barbara Herlihy -- Working with clients who may harm themselves / James L. Werth Jr. and Jennifer Stroup -- Technology, social media, and online counseling / Martin Jencius -- Supervision and counselor education / Barbara Herlihy and Gerald Corey -- Research and publication / Richard E. Watts -- The intersection of ethics and law / Burt Bertram and Anne Marie "Nancy" Wheeler.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6679338#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6679338#Item050-13">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>BF637.C6</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6679338#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1405672#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1405672</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-09-26</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cat">
+            <rdfs:label>catalog</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bio">
+            <rdfs:label>individual biography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>N 7396 D554</bf:classificationPortion>
+            <bf:itemPortion>A4 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1405672#Agent110-9">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Galerie Dresdnere.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>1102 $aGalerie Dresdnere.</bflc:name10MarcKey>
+                  <bflc:primaryContributorName10MatchKey>Galerie Dresdnere.</bflc:primaryContributorName10MatchKey>
+                  <rdfs:label>Galerie Dresdnere.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>"The unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>"The unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</rdfs:label>
+            <bflc:titleSortKey>unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</bflc:titleSortKey>
+            <bf:mainTitle>"The unknown Jennifer Dickson"</bf:mainTitle>
+            <bf:subtitle>a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1405672#Agent600-18">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Dickson, Jennifer--Exhibitions.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Dickson, Jennifer</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aDickson, Jennifer$vExhibitions.</bflc:name00MarcKey>
+            <rdfs:label>Dickson, Jennifer</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/1405672#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1405672#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/onc"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm65883809</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>"The unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>"The unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</rdfs:label>
+            <bflc:titleSortKey>unknown Jennifer Dickson" : a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes /</bflc:titleSortKey>
+            <bf:mainTitle>"The unknown Jennifer Dickson"</bf:mainTitle>
+            <bf:subtitle>a 25 year retrospective, 1959-1984 ; graphics, etchings, silkscreens, mezzoscreens, paintings, drawings, shadow-boxes, sculpture, cibachromes</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Galerie Dresdnere : 9 February-5 March 1985</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Toronto</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>The Galerie</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Toronto : The Galerie, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>[16] p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>23 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Cover title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1405672#Work"/>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1313867#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1313867</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-20</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/f-tz"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PN 2995.4</bf:classificationPortion>
+            <bf:itemPortion>L727 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1313867#Agent100-10">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Lihamba, Amandina.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Lihamba, Amandina.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aLihamba, Amandina.</bflc:name00MarcKey>
+                  <rdfs:label>Lihamba, Amandina.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</rdfs:label>
+            <bflc:titleSortKey>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</bflc:titleSortKey>
+            <bf:mainTitle>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:dissertation>
+         <bf:Dissertation>
+            <rdfs:label>Thesis (Ph.D.)--University of Leeds, 1985.</rdfs:label>
+         </bf:Dissertation>
+      </bf:dissertation>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/1313867#Instance533-18">
+            <bf:instanceOf rdf:resource="http://example.org/1313867#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</rdfs:label>
+                  <bflc:titleSortKey>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</bflc:titleSortKey>
+                  <bf:mainTitle>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:reproductionOf rdf:resource="http://example.org/1313867#Instance"/>
+            <bf:carrier>
+               <bf:Carrier>
+                  <rdfs:label>Photocopy</rdfs:label>
+               </bf:Carrier>
+            </bf:carrier>
+            <bf:provisionActivity>
+               <bf:ProvisionActivity>
+                  <bf:place>
+                     <bf:Place>
+                        <rdfs:label>Leeds</rdfs:label>
+                     </bf:Place>
+                  </bf:place>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>The University</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:date>1985</bf:date>
+               </bf:ProvisionActivity>
+            </bf:provisionActivity>
+            <bf:extent>
+               <bf:Extent>
+                  <rdfs:label>30 cm</rdfs:label>
+               </bf:Extent>
+            </bf:extent>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1313867#Agent600-20">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Name"/>
+            <madsrdf:authoritativeLabel>Hussein, Ebrahim H., 1943</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Hussein, Ebrahim H., 1943-</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aHussein, Ebrahim H.,$d1943-</bflc:name00MarcKey>
+            <rdfs:label>Hussein, Ebrahim H., 1943-</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1313867#Topic650-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Theater--Tanzania--History--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Theater--Tanzania--History--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Theater</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Tanzania</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1313867#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Theater and society--Tanzania.</rdfs:label>
+            <madsrdf:authoritativeLabel>Theater and society--Tanzania.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Theater and society</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Tanzania</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1313867#Topic651-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Tanzania--Political aspects--Tanzania.</rdfs:label>
+            <madsrdf:authoritativeLabel>Tanzania--Political aspects--Tanzania.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Tanzania</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Political aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Tanzania</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="http://example.org/1313867#Topic651-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Tanzania--Politics and government--1964</rdfs:label>
+            <madsrdf:authoritativeLabel>Tanzania--Politics and government--1964</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Tanzania</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Politics and government</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>1964-</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/1313867#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1313867#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn465084599</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</rdfs:label>
+            <bflc:titleSortKey>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984 /</bflc:titleSortKey>
+            <bf:mainTitle>Politics and theatre in Tanzania after the Arusha declaration, 1967-1984</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Amandina Lihamba</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>viii, 535 leaves</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>maps</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:hasReproduction rdf:resource="http://example.org/1313867#Instance533-18"/>
+      <bf:instanceOf rdf:resource="http://example.org/1313867#Work"/>
+   </bf:Instance>
+</rdf:RDF>

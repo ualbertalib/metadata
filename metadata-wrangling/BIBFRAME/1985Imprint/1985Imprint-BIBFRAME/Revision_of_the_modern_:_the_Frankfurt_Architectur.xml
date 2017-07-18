@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1356485#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1356485</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-02-13</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>NA680</bf:classificationPortion>
+            <bf:itemPortion>R48 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Revision of the modern : the Frankfurt Architecture Museum collection /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Revision of the modern : the Frankfurt Architecture Museum collection /</rdfs:label>
+            <bflc:titleSortKey>Revision of the modern : the Frankfurt Architecture Museum collection /</bflc:titleSortKey>
+            <bf:mainTitle>Revision of the modern</bf:mainTitle>
+            <bf:subtitle>the Frankfurt Architecture Museum collection</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1356485#Agent610-21">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+            <madsrdf:authoritativeLabel>Deutsches Architekturmuseum.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name10MatchKey>Deutsches Architekturmuseum.</bflc:name10MatchKey>
+            <bflc:name10MarcKey>61020$aDeutsches Architekturmuseum.</bflc:name10MarcKey>
+            <rdfs:label>Deutsches Architekturmuseum.</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1356485#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Architecture, Modern--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Architecture, Modern--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Architecture, Modern</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1356485#Agent700-23">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Klotz, Heinrich.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aKlotz, Heinrich.</bflc:name00MarcKey>
+                  <rdfs:label>Klotz, Heinrich.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1356485#Agent700-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Jencks, Charles.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aJencks, Charles.</bflc:name00MarcKey>
+                  <rdfs:label>Jencks, Charles.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1356485#Agent710-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Deutsches Architekturmuseum.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aDeutsches Architekturmuseum.</bflc:name10MarcKey>
+                  <rdfs:label>Deutsches Architekturmuseum.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1356485#Work730-26">
+            <rdfs:label>Architectural design.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Architectural design.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>7300 $aArchitectural design.</bflc:title30MarcKey>
+                  <rdfs:label>Architectural design.</rdfs:label>
+                  <bflc:titleSortKey>Architectural design.</bflc:titleSortKey>
+                  <bf:mainTitle>Architectural design</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1356485#Work830-27">
+            <rdfs:label>Architectural design profile. ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Architectural design profile. ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aArchitectural design profile. ;$v58.</bflc:title30MarcKey>
+                  <rdfs:label>Architectural design profile. ;</rdfs:label>
+                  <bflc:titleSortKey>Architectural design profile. ;</bflc:titleSortKey>
+                  <bf:mainTitle>Architectural design profile</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>58</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1356485#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1356485#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/enk"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0312679386 (St. Martin's Press : pbk.)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm13074961</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Revision of the modern : the Frankfurt Architecture Museum collection /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Revision of the modern : the Frankfurt Architecture Museum collection /</rdfs:label>
+            <bflc:titleSortKey>Revision of the modern : the Frankfurt Architecture Museum collection /</bflc:titleSortKey>
+            <bf:mainTitle>Revision of the modern</bf:mainTitle>
+            <bf:subtitle>the Frankfurt Architecture Museum collection</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>guest-edited by Heinrich Klotz</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>London</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Architectural Design</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Distributed in the U.S.A. by St. Martin's Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>London : Architectural Design ; New York : Distributed in the U.S.A. by St. Martin's Press, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>87 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill. (some col.)</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Architectural design profile.</bf:seriesStatement>
+      <bf:seriesEnumeration>58</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Published in association with the German Architecture Museum"--Half title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Published as part of Architectural design vol. 55, 3/4-1985"--T.p., Verso.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>The founding of the German Architecture Museum / Heinrich Klotz--In the steps of Vasari : Charles Jencks interviews Heinrich Klotz--The collection--The Architecture Museum, Frankfurt, 1979-84.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1356485#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1356485#Item050-8">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>NA680 R48 1985</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1356485#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

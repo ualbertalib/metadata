@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1405075#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1405075</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-09-25</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ita"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/cat">
+            <rdfs:label>catalog</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>NC242.B3</bf:classificationPortion>
+            <bf:itemPortion>A4 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>741.6/092/4</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1405075#Agent100-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Beardsley, Aubrey, 1872-1898.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Beardsley, Aubrey, 1872-1898.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aBeardsley, Aubrey,$d1872-1898.</bflc:name00MarcKey>
+                  <rdfs:label>Beardsley, Aubrey, 1872-1898.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</rdfs:label>
+            <bflc:titleSortKey>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</bflc:titleSortKey>
+            <bf:mainTitle>Aubrey Beardsley, 1872-1898</bf:mainTitle>
+            <bf:subtitle>Roma 13 marzo-28 aprile 1985</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Agent rdf:about="http://example.org/1405075#Agent600-23">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel>Beardsley, Aubrey, 1872-1898--Exhibitions.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bflc:name00MatchKey>Beardsley, Aubrey, 1872-1898</bflc:name00MatchKey>
+            <bflc:name00MarcKey>60010$aBeardsley, Aubrey,$d1872-1898$vExhibitions.</bflc:name00MarcKey>
+            <rdfs:label>Beardsley, Aubrey, 1872-1898</rdfs:label>
+         </bf:Agent>
+      </bf:subject>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1405075#Work700-24">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1405075#Agent700-24">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Reade, Brian.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aReade, Brian.$tBeardsley.$f1967.$lItalian.</bflc:name00MarcKey>
+                        <rdfs:label>Reade, Brian.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Beardsley. 1967. Italian.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Beardsley. 1967. Italian.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aReade, Brian.$tBeardsley.$f1967.$lItalian.</bflc:title00MarcKey>
+                  <rdfs:label>Beardsley. 1967. Italian.</rdfs:label>
+                  <bflc:titleSortKey>Beardsley. 1967. Italian.</bflc:titleSortKey>
+                  <bf:mainTitle>Beardsley</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:originDate>1967</bf:originDate>
+            <bf:language>
+               <bf:Language>
+                  <rdfs:label>Italian</rdfs:label>
+               </bf:Language>
+            </bf:language>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1405075#Agent710-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Jurisdiction"/>
+                  <bflc:name10MatchKey>Italy. Soprintendenza speciale alla Galleria nazionale d'arte moderna e contemporanea.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7101 $aItaly.$bSoprintendenza speciale alla Galleria nazionale d'arte moderna e contemporanea.</bflc:name10MarcKey>
+                  <rdfs:label>Italy. Soprintendenza speciale alla Galleria nazionale d'arte moderna e contemporanea.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1405075#Agent710-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>Victoria and Albert Museum.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aVictoria and Albert Museum.</bflc:name10MarcKey>
+                  <rdfs:label>Victoria and Albert Museum.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1405075#Agent710-27">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Organization"/>
+                  <bflc:name10MatchKey>British Council.</bflc:name10MatchKey>
+                  <bflc:name10MarcKey>7102 $aBritish Council.</bflc:name10MarcKey>
+                  <rdfs:label>British Council.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1405075#Work830-28">
+            <rdfs:label>Cataloghi (Fratelli Palombi editori)</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Cataloghi (Fratelli Palombi editori)</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aCataloghi (Fratelli Palombi editori)</bflc:title30MarcKey>
+                  <rdfs:label>Cataloghi (Fratelli Palombi editori)</rdfs:label>
+                  <bflc:titleSortKey>Cataloghi (Fratelli Palombi editori)</bflc:titleSortKey>
+                  <bf:mainTitle>Cataloghi (Fratelli Palombi editori)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/1405075#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1405075#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/it"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/por">
+            <rdfs:label>portraits</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   85237348</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>8876215638</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm13642225</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</rdfs:label>
+            <bflc:titleSortKey>Aubrey Beardsley, 1872-1898 : Roma 13 marzo-28 aprile 1985 /</bflc:titleSortKey>
+            <bf:mainTitle>Aubrey Beardsley, 1872-1898</bf:mainTitle>
+            <bf:subtitle>Roma 13 marzo-28 aprile 1985</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Soprintendenza speciale alla Galleria Nazionale d'arte moderna e contemporanea, Victoria and Albert Museum, Londra, The British Council</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Roma</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>F.lli Palombi</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Roma] : F.lli Palombi, c1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>234 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ill., ports.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>29 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Cataloghi (Fratelli Palombi editori)</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>"Introduzione e schede tradotte dal testo di Brian Reade, Beardsley, 1967"--Colophon.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Bibliography: p. 230-234.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1405075#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1405075#Item050-9">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>NC242.B3 A4 1985</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1405075#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

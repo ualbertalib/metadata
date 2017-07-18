@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1324887#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1324887</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-06-18T15:50:34</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-10-01</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/NotatedMusic"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/lat"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <bf:code>ms</bf:code>
+            <rdfs:label>masses</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:musicFormat>
+         <bf:MusicFormat>
+            <bf:code>a</bf:code>
+            <rdfs:label>full score</rdfs:label>
+         </bf:MusicFormat>
+      </bf:musicFormat>
+      <bf:voice>
+         <bf:MusicVoice>
+            <bf:voiceType>chorus</bf:voiceType>
+            <rdfs:label>mixed chorus</rdfs:label>
+            <bf:count>4</bf:count>
+         </bf:MusicVoice>
+      </bf:voice>
+      <bf:ensemble>
+         <bf:MusicEnsemble>
+            <bf:ensembleType>instrumental</bf:ensembleType>
+            <rdfs:label>orchestra</rdfs:label>
+         </bf:MusicEnsemble>
+      </bf:ensemble>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>M2010</bf:classificationPortion>
+            <bf:itemPortion>.C53 G maj. 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1324887#Agent100-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Cherubini, Luigi, 1760-1842.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Cherubini, Luigi, 1760-1842.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aCherubini, Luigi,$d1760-1842.</bflc:name00MarcKey>
+                  <rdfs:label>Cherubini, Luigi, 1760-1842.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Messa solenne, G major Latin</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Messa solenne, G major Latin</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aMessa solenne,$rG major$lLatin</bflc:title40MarcKey>
+            <rdfs:label>Messa solenne, G major Latin</rdfs:label>
+            <bflc:titleSortKey>Messa solenne, G major Latin</bflc:titleSortKey>
+            <bf:mainTitle>Messa solenne</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:language>
+         <bf:Language>
+            <rdfs:label>Latin</rdfs:label>
+         </bf:Language>
+      </bf:language>
+      <bf:musicKey>G major</bf:musicKey>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/ntm">
+            <rdfs:label>notated music</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1324887#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Masses--Scores.</rdfs:label>
+            <madsrdf:authoritativeLabel>Masses--Scores.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Masses</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Scores</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1324887#Topic650-24">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Coronation music.</rdfs:label>
+            <madsrdf:authoritativeLabel>Coronation music.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1324887#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Louis XVIII, King of France, 1755-1824.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7000 $aLouis$bXVIII,$cKing of France,$d1755-1824.</bflc:name00MarcKey>
+                  <rdfs:label>Louis XVIII, King of France, 1755-1824.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1324887#Agent700-26">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Carli Ballola, Giovanni, 1932-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aCarli Ballola, Giovanni,$d1932-</bflc:name00MarcKey>
+                  <rdfs:label>Carli Ballola, Giovanni, 1932-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/1324887#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1324887#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/it"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   88751879 /M/r90</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm64021637</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Messa solenne in sol magg. (per l'incoronazione di Luigi XVIII) /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Messa solenne in sol magg. (per l'incoronazione di Luigi XVIII) /</rdfs:label>
+            <bflc:titleSortKey>Messa solenne in sol magg. (per l'incoronazione di Luigi XVIII) /</bflc:titleSortKey>
+            <bf:mainTitle>Messa solenne</bf:mainTitle>
+            <bf:subtitle>in sol magg. (per l'incoronazione di Luigi XVIII)</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Luigi Cherubini ; a cura di Giovanni Carli Ballola</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>music</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:editionStatement>1a ed</bf:editionStatement>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Musical presentation</bf:noteType>
+            <rdfs:label>Partitura. --</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Roma</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Boccaccini &amp; Spada</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Roma : Boccaccini &amp; Spada, c1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 score (261 p.)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>34 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>For chorus (SATB) and orchestra.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1324887#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1324887#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>M2010.C53 G maj. 1985</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1324887#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

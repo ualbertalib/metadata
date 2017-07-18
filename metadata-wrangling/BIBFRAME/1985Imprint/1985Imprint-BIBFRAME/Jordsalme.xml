@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1331611#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1331611</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-10-25</bf:creationDate>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/nor"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <bf:code>mu</bf:code>
+            <rdfs:label>multiple forms</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/nor">
+            <bf:part>sung or spoken text</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/lat">
+            <bf:part>sung or spoken text</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/nor">
+            <bf:part>libretto</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/lat">
+            <bf:part>libretto</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <bf:part>libretto</bf:part>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/e-no"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>M 1772 A512</bf:classificationPortion>
+            <bf:itemPortion>J82 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331611#Agent100-14">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Anker, Pernille.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Anker, Pernille.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aAnker, Pernille.</bflc:name00MarcKey>
+                  <rdfs:label>Anker, Pernille.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Jordsalme</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Jordsalme</rdfs:label>
+            <bflc:titleSortKey>Jordsalme</bflc:titleSortKey>
+            <bf:mainTitle>Jordsalme</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>sound recording</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/prm">
+            <rdfs:label>performed music</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:credits>Pernille Anker, voice ; Gilles Obermayer, 5 tumba drums, various percussion instruments from Africa and Asia ; Hans Frederik Jacobsen, willow pipe, Bamboo flute, sopranino flute, tambourine, langeleik ; Warren Carlstrøm, Celtic harp ; Pål Thorstensen, double-bass.</bf:credits>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331611#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Songs, Norwegian--Norway.</rdfs:label>
+            <madsrdf:authoritativeLabel>Songs, Norwegian--Norway.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Songs, Norwegian</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Norway</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331611#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Folk songs, Norwegian--Norway.</rdfs:label>
+            <madsrdf:authoritativeLabel>Folk songs, Norwegian--Norway.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Folk songs, Norwegian</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Norway</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1331611#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Folk music--Norway.</rdfs:label>
+            <madsrdf:authoritativeLabel>Folk music--Norway.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Folk music</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Norway</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331611#Agent700-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Obermayer, Gilles.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aObermayer, Gilles.</bflc:name00MarcKey>
+                  <rdfs:label>Obermayer, Gilles.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331611#Agent700-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Jacobsen, Hans Frederik.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aJacobsen, Hans Frederik.</bflc:name00MarcKey>
+                  <rdfs:label>Jacobsen, Hans Frederik.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331611#Agent700-31">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Carlstrøm, Warren.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aCarlstrøm, Warren.</bflc:name00MarcKey>
+                  <rdfs:label>Carlstrøm, Warren.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1331611#Agent700-32">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Thorstensen, Pål.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aThorstensen, Pål.</bflc:name00MarcKey>
+                  <rdfs:label>Thorstensen, Pål.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1331611#Work740-33">
+            <rdfs:label>Earth hymn.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Earth hymn.</rdfs:label>
+                  <bflc:titleSortKey>Earth hymn.</bflc:titleSortKey>
+                  <bf:mainTitle>Earth hymn</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasInstance rdf:resource="http://example.org/1331611#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1331611#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:soundCharacteristic>
+         <bf:PlayingSpeed>
+            <rdfs:label>13 1/3 rpm</rdfs:label>
+         </bf:PlayingSpeed>
+      </bf:soundCharacteristic>
+      <bf:soundCharacteristic>
+         <bf:PlaybackChannels rdf:about="http://id.loc.gov/vocabulary/mplayback/ste">
+            <rdfs:label>stereophonic</rdfs:label>
+         </bf:PlaybackChannels>
+      </bf:soundCharacteristic>
+      <bf:soundCharacteristic>
+         <bf:GrooveCharacteristic>
+            <rdfs:label>microgroove/fine</rdfs:label>
+         </bf:GrooveCharacteristic>
+      </bf:soundCharacteristic>
+      <bf:dimensions>12 in.</bf:dimensions>
+      <bf:generation>
+         <bf:Generation>
+            <rdfs:label>mass produced</rdfs:label>
+         </bf:Generation>
+      </bf:generation>
+      <bf:baseMaterial>
+         <bf:BaseMaterial rdf:about="http://id.loc.gov/vocabulary/mmaterial/pla">
+            <rdfs:label>plastic</rdfs:label>
+         </bf:BaseMaterial>
+      </bf:baseMaterial>
+      <bf:soundCharacteristic>
+         <bf:GrooveCharacteristic>
+            <rdfs:label>lateral or combined cutting</rdfs:label>
+         </bf:GrooveCharacteristic>
+      </bf:soundCharacteristic>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/no"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>FXLP 59</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>For X</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:AudioIssueNumber>
+            <rdf:value>59</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>For X</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:AudioIssueNumber>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm70306383</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Jordsalme</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Jordsalme</rdfs:label>
+            <bflc:titleSortKey>Jordsalme</bflc:titleSortKey>
+            <bf:mainTitle>Jordsalme</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Pernille Anker</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>sound recording</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Norway</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>For X</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>p1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[Norway] : For X, p1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 sound disc</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>analog, 33 1/3 rpm, stereo.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>12 in.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/s">
+            <rdfs:label>audio</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/sd">
+            <rdfs:label>audio disc</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>For X: FXLP 59.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Song texts in Norwegian and Latin on sleeve; English translation entitled Earth hymn ([2 p.]) inserted in container.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Jordsalme / P. Anker (2:40) -- Nyttårsbonn / traditional ; text, Th. Kingo (4:44) -- Den store hvite flokk / traditional ; text, Hans A. Brorson (3:04) -- Nu rinner solen opp / traditional ; text, Th. Kingo (3:24) -- Elsk din neste / text, Bjørnstjerne Bjørnson ; music by P. Anker (5:18) -- Messe for sang og perkusion : Kyrie (3:58) ; Gloria (2:00) ; Credo (3:42) ; Sanctus (3:45) ; Angus Dei (3:38) ; Halleluja (3:01) / P. Anker.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1331611#Work"/>
+   </bf:Instance>
+</rdf:RDF>

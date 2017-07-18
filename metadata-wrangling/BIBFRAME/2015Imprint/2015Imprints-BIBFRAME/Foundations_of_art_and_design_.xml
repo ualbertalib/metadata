@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6785831#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6785831</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>OCoLC</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-11T11:42:43</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-03-11</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AU@</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>N7430.5</bf:classificationPortion>
+            <bf:itemPortion>.F498 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6785831#Agent100-17">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Fichner-Rathus, Lois, 1953-</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Fichner-Rathus, Lois, 1953-</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aFichner-Rathus, Lois,$d1953-$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Fichner-Rathus, Lois, 1953-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Foundations of art and design /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Foundations of art and design /</rdfs:label>
+            <bflc:titleSortKey>Foundations of art and design /</bflc:titleSortKey>
+            <bf:mainTitle>Foundations of art and design</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/sti">
+            <rdfs:label>still image</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6785831#Topic650-35">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Visual perception.</rdfs:label>
+            <madsrdf:authoritativeLabel>Visual perception.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6785831#Topic650-36">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Visual communication in art.</rdfs:label>
+            <madsrdf:authoritativeLabel>Visual communication in art.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasInstance rdf:resource="http://example.org/6785831#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6785831#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/ctu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014935526</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781285456546 (paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1285456548 (paperback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>1285456629</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781285456621</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn879399242</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Foundations of art and design /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Foundations of art and design /</rdfs:label>
+            <bflc:titleSortKey>Foundations of art and design /</bflc:titleSortKey>
+            <bf:mainTitle>Foundations of art and design</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Lois Fichner-Rathus, the College of New Jersey</bf:responsibilityStatement>
+      <bf:editionStatement>Second edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Stambord, CT</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Cengage Learning</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Stambord, CT : Cengage Learning, [2015]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xviii, 315 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations (some color)</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>28 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes index.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Machine generated contents note: 1.The Creative Impulse -- Looking at Life and Art -- Nature -- Culture -- Art History -- Yourself -- Thinking and Writing about Life and Art: Recording, Interpreting, Communicating -- Understanding Art -- Subject versus Content -- Theory &amp; Practice Giving Form to Experience -- Form -- Content -- Iconography -- Compare &amp; Contrast -- A Style by Any Other Name ... Appropriation and Subversion in Contemporary Art -- Putting It All Together -- The Visual Elements -- Visual Elements -- Principles of Design -- Putting It All Together -- Principles of Design -- Mediums and Techniques -- Style -- Key Terms -- Artists on Art -- Digital Resources -- 2.Line -- Line, Communication, and the Impulse to Order -- Characteristics of Line -- The Measure of Line -- Types and Qualities of Lines -- Directionality of Line: Vertical, Horizontal, and Diagonal -- Compare &amp; Contrast --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: The Best of Times and the Worst of Times: Two Revealing Self-Portraits by Vincent van Gogh -- Location of Line -- Actual, Implied, and Psychological Lines -- Line and Shape -- Outline and Contour Line -- Line, Value, and Shape -- Line and Texture -- Interpretation of the Quality of Line -- Closure and Continuity -- The Expressive Language of Line -- Key Terms -- Artists on Art -- Digital Resources -- 3.Shape -- Shape, Form, Volume, and Mass -- Shape -- Form -- Volume -- Mass -- Types of Shape -- Geometric Shapes -- Organic Shapes -- Compare &amp; Contrast -- The Expressive Potential of Shape -- Nonobjective and Abstract Shapes -- Amorphous Shapes and Shapelessness in Art -- Positive and Negative Shapes---Figure and Ground -- Using Shape -- Shape as Icon -- Key Terms -- Artists on Art -- Digital Resources -- 4.Value -- Shades of Gray -- Value Contrast -- Value Pattern -- Low-Key and High-Key Values -- Chiaroscuro --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: Theory &amp; Practice The Fundamentals of Chiaroscuro -- Tenebrism -- Highlights and Cast Shadows -- Descriptive and Expressive Properties of Value -- Key Terms -- Artists on Art -- Digital Resources -- 5.Color -- Color and Light -- The Science of Light -- Bringing Color Full Circle -- Additive and Subtractive Colors -- Cool and Warm Colors -- Properties of Color -- Hue -- Value -- Intensity, Chroma, and Saturation -- Color Mixing -- Visual Color Mixing in Practice -- Physical Color Mixing in Practice -- Theory &amp; Practice Interacting with Color -- Color and Principles of Design -- Color and Emphasis -- Color and Balance -- Compare &amp; Contrast -- Everything Old Is New Again: Keith Haring Meets Michelangelo -- Color Schemes: Harmony and Disharmony -- The Monochromatic Color Scheme -- The Analogous Color Scheme -- Complementary Color Schemes -- Split-Complementary Color Schemes -- Triadic Color Schemes -- Color Disharmony -- Local, Optical, and Arbitrary Color --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: Color and Symbolism -- Key Terms -- Artists on Art -- Digital Resources -- 6.Texture -- Types of Texture -- Actual Texture -- Compare &amp; Contrast -- Humans vs. Nature: The Raft of the Medusa -- Visual Texture -- Subversive Texture -- Using Texture -- Key Terms -- Artists on Art -- Digital Resources -- 7.Space -- Creating the Illusion of Space -- Relative Size -- Overlapping -- Transparency -- Location -- Atmospheric Perspective -- Linear Perspective -- Compare &amp; Contrast -- So Close and Yet So Far: Perspective, Physical Proximity, and Emotional Distance -- Optical and Conceptual Representation -- Multiple Perspectives -- Amplified Perspective -- Isometric Projection -- Theory &amp; Practice Creating the Illusion of Space in Sculpture -- Actual Space -- Architecture -- Key Terms -- Artists on Art -- Digital Resources -- 8.Time And Motion -- Actual Motion -- Kinetic Art -- Recording Actual Motion -- Illusion of Motion -- Multiple Exposures and Blurred Lines --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: Optical Sensations -- Theory &amp; Practice Chasing the Fourth Dimension: Loie Fuller -- Implied Motion -- The Fourth Dimension -- Time and Motion -- Motion Pictures: Film and Video -- Manipulating Time -- Animation -- Key Terms -- Artists on Art -- Digital Resources -- 9.Unity And Variety -- Ways to Achieve Unity -- Proximity -- Repetition -- Color and Value -- Line -- Shape -- Theory &amp; Practice: Unity and Variety in Grant Wood's American Gothic -- Texture -- Continuity -- The Grid -- Unity with Variety -- Repetition -- Contrast -- Structure -- Motif -- Emphasis on Unity -- Emphasis on Variety -- Emphasis on Disunity -- Conceptual and Symbolic Unity and Disunity -- Key Terms -- Artists on Art -- Digital Resources -- 10.Focal Point And Emphasis -- The Relationship between Focal Point and Emphasis -- Methods of Creating Focal Point and Emphasis -- Directional Lines -- Contrast -- Placement -- Isolation -- Theory &amp; Practice Focal Point and Emphasis --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: Multiple Focal Points -- Absence of Focal Point -- Key Terms -- Artists on Art -- Digital Resources -- 11.Balance And Rhythm -- Actual Balance -- Pictorial Balance -- Horizontal Balance -- Vertical Balance -- Diagonal Balance -- Radial Balance -- Symmetrical and Asymmetrical Balance -- Symmetrical Balance -- Asymmetrical Balance -- Ways to Achieve Balance -- Value and Color -- Shape and Texture -- Pattern -- Position -- Using Balance and Imbalance -- Rhythm -- Types of Rhythm -- Key Terms -- Artists on Art -- Digital Resources -- 12.Scale And Proportion -- Size and Scale -- The Size of Art -- Relative Size -- Scale in Art -- Hierarchical Scale -- Compare &amp; Contrast -- Symbols, Scale, and Sacred Space -- Size, Scale, and Symbolism -- Proportion -- Theory &amp; Practice Polykleitos's Canon: The Body Beautiful -- The Golden Mean: "Moderation in All Things" -- The Golden Rectangle -- The Spiral -- Fibonacci Numbers -- The Root Five Rectangle -- Key Terms --</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents note continued: Artists on Art -- Digital Resources.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6785831#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6785831#Item050-15">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>N7430.5.F498 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6785831#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6784293#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6784293</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>CaPaEBR</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-11-16T14:22:52</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-16</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>CaBNVSL</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AEU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/adu">
+            <rdfs:label>adult</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+            <rdfs:label>document (computer)</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:colorContent>
+         <bf:ColorContent rdf:about="http://id.loc.gov/vocabulary/mcolor/mul">
+            <rdfs:label>multicolored</rdfs:label>
+         </bf:ColorContent>
+      </bf:colorContent>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:intendedAudience>
+         <bf:IntendedAudience rdf:about="http://id.loc.gov/vocabulary/maudience/spe">
+            <rdfs:label>specialized</rdfs:label>
+         </bf:IntendedAudience>
+      </bf:intendedAudience>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/abs">
+            <rdfs:label>abstract or summary</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>HD60</bf:classificationPortion>
+            <bf:itemPortion>.C423 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>658.408</bf:classificationPortion>
+            <bf:edition>23</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6784293#Agent100-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Chandler, David, 1969-,</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Chandler, David, 1969-,</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aChandler, David,$d1969-,$eauthor.</bflc:name00MarcKey>
+                  <rdfs:label>Chandler, David, 1969-,</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>author.</rdfs:label>
+               </bf:Role>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Corporate social responsibility : a strategic perspective /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Corporate social responsibility : a strategic perspective /</rdfs:label>
+            <bflc:titleSortKey>Corporate social responsibility : a strategic perspective /</bflc:titleSortKey>
+            <bf:mainTitle>Corporate social responsibility</bf:mainTitle>
+            <bf:subtitle>a strategic perspective</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content>
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:summary>
+         <bf:Summary>
+            <rdfs:label>The goal of this book is to detail the core, defining principles of strategic corporate social responsibility (strategic CSR) that differentiate it from related concepts, such as CSR, sustainability, and business ethics. The foundation for these principles lies in a pragmatic philosophy, oriented around stakeholder theory and designed to appeal to managers skeptical of existing definitions and organizing principles of CSR, sustainability, or business ethics. It is also designed to stimulate thought within the community of academics committed to these ideas, but who approach them from more traditional perspectives. Most importantly, the goal of this book is to solidify the intellectual framework around an emerging concept, strategic CSR, which seeks to redefine the concept of value creation for business in the twenty-first century. Ultimately, therefore, the purpose of this book is radical--it aims to reform both business education and business practice. By building a theory that defines CSR as core to business operations and value creation (as opposed to peripheral practices that can be marginalized within the firm), these defining principles become applicable across the range of operational functions. In the process, they redefine how businesses approach each of these functions in practice, but also redefine how these subjects should be taught in business schools worldwide. As such, this book will hopefully be of value to instructors, as a complement to their work; students, as a guide in their education; and managers, as a framework to help respond to the complex set of pressures that they face every day.</rdfs:label>
+         </bf:Summary>
+      </bf:summary>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6784293#Topic650-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Social responsibility of business .</rdfs:label>
+            <madsrdf:authoritativeLabel>Social responsibility of business .</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/6784293#Work830-32">
+            <rdfs:label>Principles for responsible management education collection.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Principles for responsible management education collection.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aPrinciples for responsible management education collection.$x2331-0022</bflc:title30MarcKey>
+                  <rdfs:label>Principles for responsible management education collection.</rdfs:label>
+                  <bflc:titleSortKey>Principles for responsible management education collection.</bflc:titleSortKey>
+                  <bf:mainTitle>Principles for responsible management education collection</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:identifiedBy>
+               <bf:Issn>
+                  <rdf:value>2331-0022</rdf:value>
+               </bf:Issn>
+            </bf:identifiedBy>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/6784293#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6784293#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:soundContent>
+         <bf:SoundContent>
+            <rdfs:label>silent</rdfs:label>
+         </bf:SoundContent>
+      </bf:soundContent>
+      <bf:digitalCharacteristic>
+         <bf:DigitalCharacteristic>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/EncodingFormat"/>
+            <rdfs:label>multiple file formats</rdfs:label>
+         </bf:DigitalCharacteristic>
+      </bf:digitalCharacteristic>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nyu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781606499153</rdf:value>
+            <bf:qualifier>e-book</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9781606499146</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+            <bf:qualifier>paperback</bf:qualifier>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <rdfs:label>Corporate social responsibility : a strategic perspective /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Corporate social responsibility : a strategic perspective /</rdfs:label>
+            <bflc:titleSortKey>Corporate social responsibility : a strategic perspective /</bflc:titleSortKey>
+            <bf:mainTitle>Corporate social responsibility</bf:mainTitle>
+            <bf:subtitle>a strategic perspective</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>David Chandler</bf:responsibilityStatement>
+      <bf:editionStatement>First edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York, New York (222 East 46th Street, New York, NY 10017)</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Business Expert Press</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New York, New York (222 East 46th Street, New York, NY 10017) : Business Expert Press, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 online resource (xxxv, 171 pages)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media>
+            <rdfs:label>computer</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier>
+            <rdfs:label>online resource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rda</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Principles for responsible management education collection</bf:seriesStatement>
+      <bf:hasSeries>
+         <bf:Instance>
+            <bf:identifiedBy>
+               <bf:Issn>
+                  <rdf:value>2331-0022</rdf:value>
+               </bf:Issn>
+            </bf:identifiedBy>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Part of: 2014 digital library.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references (pages 157-166) and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Principle 1. Business equals social progress -- Principle 2. Shareholders do not own the firm -- Principle 3. Identifying stakeholders is easy : prioritizing stakeholder interests is difficult -- Principle 4. CSR is not solely a corporate responsibility -- Principle 5. Market-based solutions are optimal -- Principle 6. Profit = economic value + social value -- Principle 7. The free market is an illusion -- Principle 8. Scale matters : only business can save the planet -- Principle 9. Strategic CSR is not an option : it is business -- Principle 10. Milton Friedman was right : the social responsibility of business is business -- Conclusion. Strategic CSR as value creation.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Access restricted to authorized users and institutions.</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from PDF title page (viewed on November 16, 2014).</rdfs:label>
+            <bf:noteType>description source</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/6784293#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6784293#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HD60.C423 2015</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6784293#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6784293#Item856-33">
+            <bf:electronicLocator>
+               <rdfs:Resource>
+                  <bflc:locator rdf:resource="http://site.ebrary.com/lib/ualbertagep/Doc?id=10978742"/>
+                  <bf:note>
+                     <bf:Note>
+                        <rdfs:label>University of Alberta Access</rdfs:label>
+                     </bf:Note>
+                  </bf:note>
+               </rdfs:Resource>
+            </bf:electronicLocator>
+            <bf:itemOf rdf:resource="http://example.org/6784293#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

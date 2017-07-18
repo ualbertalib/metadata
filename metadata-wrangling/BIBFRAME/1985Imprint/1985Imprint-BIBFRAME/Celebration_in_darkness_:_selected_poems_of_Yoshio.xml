@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1299746#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1299746</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-07-13</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/jpn">
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+            </bf:source>
+         </bf:Language>
+      </bf:language>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>PL782.E3</bf:classificationPortion>
+            <bf:itemPortion>Y6 1985</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:classification>
+         <bf:ClassificationDdc>
+            <bf:classificationPortion>895.6/15/08</bf:classificationPortion>
+            <bf:edition>19</bf:edition>
+            <bf:edition>full</bf:edition>
+         </bf:ClassificationDdc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1299746#Agent100-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Yoshioka, Minoru, 1919-1990.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Yoshioka, Minoru, 1919-1990.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aYoshioka, Minoru,$d1919-1990.</bflc:name00MarcKey>
+                  <rdfs:label>Yoshioka, Minoru, 1919-1990.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Yami no shukusai. English</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Yami no shukusai. English</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aYami no shukusai.$lEnglish</bflc:title40MarcKey>
+            <rdfs:label>Yami no shukusai. English</rdfs:label>
+            <bflc:titleSortKey>Yami no shukusai. English</bflc:titleSortKey>
+            <bf:mainTitle>Yami no shukusai</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:language>
+         <bf:Language>
+            <rdfs:label>English</rdfs:label>
+         </bf:Language>
+      </bf:language>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1299746#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Japanese poetry--20th century--Translations into English.</rdfs:label>
+            <madsrdf:authoritativeLabel>Japanese poetry--20th century--Translations into English.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Japanese poetry</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Translations into English</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1299746#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Japanese poetry--20th century.</rdfs:label>
+            <madsrdf:authoritativeLabel>Japanese poetry--20th century.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Japanese poetry</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Temporal>
+                  <madsrdf:authoritativeLabel>20th century</madsrdf:authoritativeLabel>
+               </madsrdf:Temporal>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1299746#Agent700-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Onuma, Tadayoshi, 1943-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aOnuma, Tadayoshi,$d1943-</bflc:name00MarcKey>
+                  <rdfs:label>Onuma, Tadayoshi, 1943-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1299746#Agent700-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Ōoka, Makoto, 1931-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aŌoka, Makoto,$d1931-</bflc:name00MarcKey>
+                  <rdfs:label>Ōoka, Makoto, 1931-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1299746#Agent700-30">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Tsuruoka, Yoshihisa, 1936-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aTsuruoka, Yoshihisa,$d1936-</bflc:name00MarcKey>
+                  <rdfs:label>Tsuruoka, Yoshihisa, 1936-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/1299746#Work700-31">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/1299746#Agent700-31">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Iijima, Kōichi, 1930-2013.</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aIijima, Kōichi,$d1930-2013.$tTanin no sora.$lEnglish.</bflc:name00MarcKey>
+                        <rdfs:label>Iijima, Kōichi, 1930-2013.</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Tanin no sora. English.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Tanin no sora. English.</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aIijima, Kōichi,$d1930-2013.$tTanin no sora.$lEnglish.</bflc:title00MarcKey>
+                  <rdfs:label>Tanin no sora. English.</rdfs:label>
+                  <bflc:titleSortKey>Tanin no sora. English.</bflc:titleSortKey>
+                  <bf:mainTitle>Tanin no sora</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:language>
+               <bf:Language>
+                  <rdfs:label>English</rdfs:label>
+               </bf:Language>
+            </bf:language>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:relatedTo>
+         <bf:Work rdf:about="http://example.org/1299746#Work740-32">
+            <rdfs:label>Strangers' sky.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>Strangers' sky.</rdfs:label>
+                  <bflc:titleSortKey>Strangers' sky.</bflc:titleSortKey>
+                  <bf:mainTitle>Strangers' sky</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:relatedTo>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1299746#Work830-33">
+            <rdfs:label>Asian poetry in translation. Japan. ;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Asian poetry in translation. Japan. ;</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aAsian poetry in translation.$pJapan. ;$v#6.</bflc:title30MarcKey>
+                  <rdfs:label>Asian poetry in translation. Japan. ;</rdfs:label>
+                  <bflc:titleSortKey>Asian poetry in translation. Japan. ;</bflc:titleSortKey>
+                  <bf:mainTitle>Asian poetry in translation</bf:mainTitle>
+                  <bf:partName>Japan</bf:partName>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:seriesEnumeration>#6</bf:seriesEnumeration>
+      <bf:hasInstance rdf:resource="http://example.org/1299746#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1299746#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/miu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/por">
+            <rdfs:label>portraits</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   84023423</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>0942668073 (soft)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm11346026</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Celebration in darkness : selected poems of Yoshioka Minoru. Strangers' sky : selected poems of Iijima Kōichi /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Celebration in darkness : selected poems of Yoshioka Minoru. Strangers' sky : selected poems of Iijima Kōichi /</rdfs:label>
+            <bflc:titleSortKey>Celebration in darkness : selected poems of Yoshioka Minoru. Strangers' sky : selected poems of Iijima Kōichi /</bflc:titleSortKey>
+            <bf:mainTitle>Celebration in darkness</bf:mainTitle>
+            <bf:subtitle>selected poems of Yoshioka Minoru. Strangers' sky : selected poems of Iijima Kōichi</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>translated by Onuma Tadayoshi ; introduction by Ōoka Makoto ; commentary on the poets by Tsuruoka Yoshihisa</bf:responsibilityStatement>
+      <bf:editionStatement>1st ed</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Rochester, Mich.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Katydid Books</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Oakland University</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Rochester, Mich. : Katydid Books : Oakland University, 1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>200 p.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>ports.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>23 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:seriesStatement>Asian poetry in translation. Japan.</bf:seriesStatement>
+      <bf:seriesEnumeration>#6</bf:seriesEnumeration>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>English translation with Japanese originals.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Japanese titles on added t.p.: Yami no shukusai. Tanin no sora.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:instanceOf rdf:resource="http://example.org/1299746#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1299746#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>PL782.E3 Y6 1985</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1299746#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

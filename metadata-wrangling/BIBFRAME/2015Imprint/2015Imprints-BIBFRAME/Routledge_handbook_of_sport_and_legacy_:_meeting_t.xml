@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/6849361#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>6849361</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-26T12:54:55</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-22</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>AGPC</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda"/>
+            </bf:descriptionConventions>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+            <rdfs:label>bibliography</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>GV716</bf:classificationPortion>
+            <bf:itemPortion>.R696 2015</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</rdfs:label>
+            <bflc:titleSortKey>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</bflc:titleSortKey>
+            <bf:mainTitle>Routledge handbook of sport and legacy</bf:mainTitle>
+            <bf:subtitle>meeting the challenge of major sports events</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849361#Topic650-21">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hosting of sports events--Planning--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hosting of sports events--Planning--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hosting of sports events</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Planning</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849361#Topic650-22">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hosting of sporting events--Economic aspects--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hosting of sporting events--Economic aspects--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hosting of sporting events</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Economic aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/6849361#Topic650-23">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Hosting of sporting events--Social aspects--Handbooks, manuals, etc.</rdfs:label>
+            <madsrdf:authoritativeLabel>Hosting of sporting events--Social aspects--Handbooks, manuals, etc.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Hosting of sporting events</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Social aspects</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Handbooks, manuals, etc</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849361#Agent700-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Holt, Richard, 1948-</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHolt, Richard,$d1948-</bflc:name00MarcKey>
+                  <rdfs:label>Holt, Richard, 1948-</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/6849361#Agent700-25">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Ruta, Dino.</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aRuta, Dino.</bflc:name00MarcKey>
+                  <rdfs:label>Ruta, Dino.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance rdf:resource="http://example.org/6849361#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/6849361#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/nyu"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:copyrightDate rdf:datatype="http://id.loc.gov/datatypes/edtf">2015</bf:copyrightDate>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <bf:supplementaryContent>
+         <bf:SupplementaryContent>
+            <rdfs:label>Index present</rdfs:label>
+         </bf:SupplementaryContent>
+      </bf:supplementaryContent>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>  2014032577</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780415675819 (Hardback)</rdf:value>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Isbn>
+            <rdf:value>9780203132562 (eBook)</rdf:value>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>invalid</rdfs:label>
+               </bf:Status>
+            </bf:status>
+         </bf:Isbn>
+      </bf:identifiedBy>
+      <rdfs:label>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</rdfs:label>
+            <bflc:titleSortKey>Routledge handbook of sport and legacy : meeting the challenge of major sports events /</bflc:titleSortKey>
+            <bf:mainTitle>Routledge handbook of sport and legacy</bf:mainTitle>
+            <bf:subtitle>meeting the challenge of major sports events</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>edited by Richard Holt and Dino Ruta ; assistant editor James Panter</bf:responsibilityStatement>
+      <bf:editionStatement>1st Edition</bf:editionStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>New York</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Routledge</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>2015</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>New York : Routledge, 2015.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>xviii, 373 pages</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>26 cm</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>volume</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Includes bibliographical references and index.</rdfs:label>
+            <bf:noteType>bibliography</bf:noteType>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Part 1. Planning and governance of legacy: 1. A strategic and pluralistic approcach to legacy: the case of the Giro d'Italia / Dino Ruta -- 2. Economic legacy to cities of hosting mega sports events: a case study of Beijing 2008 / Chris Gratton, Holger Preuss and Dongfeng Liu -- 3. The 1908 Olympic Games: a case study in accidental and incidental legacies / Martin Polley -- 4. A stakeholder analysis of the governance of the 2010 FIFA World Cup: a case study of the city of Cape Town / Kamilla Swart, Urmilla Bob and Dean Allen -- 5. Vancouver 2010 Olympic Winter Games: modes of legacy network governance / Becca Leopkey and Milena M. Parent -- Part 2. Urbanisation and legacy: 6. Sydney Olympic Park 2000 to 2010: a case study of legacy implementation over the longer term / Richard Cashman -- 7. Croke Park as a historic venue: combining national legacy with multiple use / Mike Cronin -- 8. The legacy of memory: the Stockholm and Helsinki Olympic stadia as living memorials / Alan Bairner -- 9. The legacy of the 2004 Olympics for the Athens transport system / Eva Kassens-Noor -- 10. Framing the future: sustainability, legacy and the 2012 London games / John R. Gold and Margaret M. Gold -- Part 3. Social and cultural legacies: 11. Paralympic legacy: what legacy? / Keith Gilbert and Otto J. Schantz -- 12. A lost legacy of fraternity: the case of European youth football / Kevin Tallec Marston -- 13. Cultural Olympiad or an Olympics for cultural regeneration? "Torino 2006" and its legacy / Chito Guala -- 14. Major sporting events and long-lasting tourism impacts: 2006 FIFA World Cup in Germany / Holger Preuss and Harry Arne Solberg -- 15. A socially responsible business legacy: raising standards in procurement, supply chains and employment at the London Olympics of 2012 / Jill Timms -- Part 4. Human capital and legacy: 16. City capacity building: preparing to exploit the legacy of a large-scale sports event: the case of Valencia and the 2007 America's Cup / Dino Ruta and Beatrice Manzoni -- 17. Transferring knowledge, know-how and capability: managing and sharing knowledge for future events / Sue Halbwirth and Kristine Toohey -- 18. From the first soccer women's world championship in 1991 to the Beijing Olympic Games in 2008: how capacity-building in small scale tournaments can help win mega-event bids / Jean Williams -- 19. Learning disability sport, volunteers and legacy: the case of Special Olympics Great Britain National Games 2009 / John Williams and Neil Carter -- 20. The impact of the Olympics on the high performance legacy of a host country / Matthew J. Robinson -- Part 5. The politics and image of legacy: 21. The political and diplomatic legacy of the Montréal Olympics / Danielle Griffin-- 22. Media, sport and memory: the mediated legacies of great sporting events / Tim O'Sullivan and Dilwyn Porter -- 23. "Global visibility and prestige": the anticipated legacies of mega sporting events in the Gulf states / David Hassan and Maurice Field -- 24. Modern temples of marble and concrete: the legacy of the unsuccessful Olympic ambition of Fascist Rome / Daphné Bolz -- 25. The mixed legacy of Munich: the material, cultural and political consequences of the 1972 Olympic Games / Kay Schiller and Christopher Young.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/6849361#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/6849361#Item050-10">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>GV716.R696 2015</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/6849361#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

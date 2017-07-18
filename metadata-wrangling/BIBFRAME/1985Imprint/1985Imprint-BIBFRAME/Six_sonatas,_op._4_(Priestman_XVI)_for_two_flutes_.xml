@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1338222#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1338222</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-11-23</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/NotatedMusic"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <bf:code>sn</bf:code>
+            <rdfs:label>sonatas</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:musicFormat>
+         <bf:MusicFormat>
+            <bf:code>a</bf:code>
+            <rdfs:label>full score</rdfs:label>
+         </bf:MusicFormat>
+      </bf:musicFormat>
+      <bf:instrument>
+         <bf:MusicInstrument>
+            <bf:instrumentType>woodwind</bf:instrumentType>
+            <rdfs:label>flute</rdfs:label>
+            <bf:count>2</bf:count>
+         </bf:MusicInstrument>
+      </bf:instrument>
+      <bf:instrument>
+         <bf:MusicInstrument>
+            <bf:instrumentType>woodwind</bf:instrumentType>
+            <rdfs:label>oboe</rdfs:label>
+            <bf:count>2</bf:count>
+         </bf:MusicInstrument>
+      </bf:instrument>
+      <bf:instrument>
+         <bf:MusicInstrument>
+            <bf:instrumentType>woodwind</bf:instrumentType>
+            <rdfs:label>recorder</rdfs:label>
+            <bf:count>2</bf:count>
+         </bf:MusicInstrument>
+      </bf:instrument>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:source>
+               <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            </bf:source>
+            <bf:classificationPortion>M289</bf:classificationPortion>
+            <bf:itemPortion>.L</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1338222#Agent100-14">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Lœillet, Jacques, 1685-1748.</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Lœillet, Jacques, 1685-1748.</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aLœillet, Jacques,$d1685-1748.</bflc:name00MarcKey>
+                  <rdfs:label>Lœillet, Jacques, 1685-1748.</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Sonatas, flutes (2), op. 4</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Sonatas, flutes (2), op. 4</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aSonatas,$mflutes (2),$nop. 4</bflc:title40MarcKey>
+            <rdfs:label>Sonatas, flutes (2), op. 4</rdfs:label>
+            <bflc:titleSortKey>Sonatas, flutes (2), op. 4</bflc:titleSortKey>
+            <bf:mainTitle>Sonatas</bf:mainTitle>
+            <bf:partNumber>op. 4</bf:partNumber>
+         </bf:Title>
+      </bf:title>
+      <bf:musicMedium>
+         <bf:MusicMedium>
+            <rdfs:label>flutes (2)</rdfs:label>
+         </bf:MusicMedium>
+      </bf:musicMedium>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentType/ntm">
+            <rdfs:label>notated music</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1338222#Topic650-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sonatas (Flutes (2))--Scores.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sonatas (Flutes (2))--Scores.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sonatas (Flutes (2))</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Scores</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1338222#Topic650-27">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sonatas (Oboes (2))--Scores.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sonatas (Oboes (2))--Scores.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sonatas (Oboes (2))</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Scores</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://example.org/1338222#Topic650-28">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Sonatas (Recorders (2))--Scores.</rdfs:label>
+            <madsrdf:authoritativeLabel>Sonatas (Recorders (2))--Scores.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Sonatas (Recorders (2))</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Scores</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1338222#Agent700-29">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Block, R. P. (Robert Paul)</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBlock, R. P.$q(Robert Paul)</bflc:name00MarcKey>
+                  <rdfs:label>Block, R. P. (Robert Paul)</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasSeries>
+         <bf:Work rdf:about="http://example.org/1338222#Work830-30">
+            <rdfs:label>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title30MatchKey>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</bflc:title30MatchKey>
+                  <bflc:title30MarcKey>830 0$aComplete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</bflc:title30MarcKey>
+                  <rdfs:label>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</rdfs:label>
+                  <bflc:titleSortKey>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</bflc:titleSortKey>
+                  <bf:mainTitle>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasSeries>
+      <bf:hasInstance rdf:resource="http://example.org/1338222#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1338222#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1985</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value>   87751074 /M</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:MusicPlate>
+            <rdf:value>MR 2036</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Musica Rara</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:MusicPlate>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocm17326223</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>Six sonatas, op. 4 (Priestman XVI) for two flutes or oboes (recorders in C) without bass</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Six sonatas, op. 4 (Priestman XVI) for two flutes or oboes (recorders in C) without bass</rdfs:label>
+            <bflc:titleSortKey>Six sonatas, op. 4 (Priestman XVI) for two flutes or oboes (recorders in C) without bass</bflc:titleSortKey>
+            <bf:mainTitle>Six sonatas, op. 4 (Priestman XVI) for two flutes or oboes (recorders in C) without bass</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Jacques (Jacob Jean Baptiste) Loeillet ; editor, R.P. Block</bf:responsibilityStatement>
+      <bf:genreForm>
+         <bf:GenreForm>
+            <rdfs:label>music</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Monteux, France</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Musica Rara</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>c1985</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Monteux, France : Musica Rara, c1985.</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 score (31 p.)</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>30 cm.</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaType/n">
+            <rdfs:label>unmediated</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:seriesStatement>Complete sonatas for winds by Jean-Baptiste Loeillet de Gant, John Loeillet of London, and Jacques (Jacob Jean-Baptiste) Loeillet.</bf:seriesStatement>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Caption title.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Edited from the 1st ed. published: Paris : Roussel, ca. 1728.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:tableOfContents>
+         <bf:TableOfContents>
+            <rdfs:label>Contents: No. 1 in G, op. 4/1 -- In D, op. 4/2 -- In B minor, op. 4/3 -- In A, op. 4/4 -- In G, op. 4/5 -- In E minor, op. 4/6.</rdfs:label>
+         </bf:TableOfContents>
+      </bf:tableOfContents>
+      <bf:instanceOf rdf:resource="http://example.org/1338222#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1338222#Item050-12">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>M289.L</rdfs:label>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/organizations/dlc"/>
+                  </bf:source>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf rdf:resource="http://example.org/1338222#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>
