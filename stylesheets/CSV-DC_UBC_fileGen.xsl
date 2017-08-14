@@ -8,10 +8,10 @@
     
     <xsl:template match="/">
         
-        <xsl:for-each-group select="dc_root/dublin_core" group-by="dcvalue[@element ='contributor']">
-            <xsl:for-each select="dcvalue[@element ='contributor']">
-
-                <xsl:result-document href="UBC/{.}.xml">  
+        <xsl:for-each-group select="dc_root/dublin_core" group-by="dcvalue[@element ='identifier']">
+            <xsl:for-each select="dcvalue[@element ='identifier']">
+                <xsl:variable name="name" select="replace(replace(., 'http://hdl.handle.net/', ''), '/', '-')"/>
+                <xsl:result-document href="UBC/{$name}.xml">  
                     <xsl:copy-of select="current-group()"/>
                 </xsl:result-document>
             </xsl:for-each>
