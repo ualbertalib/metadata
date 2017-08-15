@@ -46,7 +46,7 @@
                                     />
                                 </xsl:variable>
                                 <xsl:if test="$pos &gt; 2">
-                                    <xsl:if test="$lineItems[$pos] != ''">
+                                    <xsl:if test="$lineItems[$pos] != '' and $lineItems[$pos] != ','">
                                         <xsl:element name="dcvalue">
                                             <xsl:attribute name="element"
                                                 select="replace($cellname[2], '\[*en\]', '')"/>
