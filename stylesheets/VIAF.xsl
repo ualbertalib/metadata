@@ -30,7 +30,8 @@
                         <xsl:text>http://www.viaf.org/viaf/search?query=local.corporateNames%20all%20%22</xsl:text><xsl:value-of select="$name-part"/>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+                <xsl:text>&#09;</xsl:text>
+                <xsl:value-of select="@rdf:about"/>
             </xsl:for-each>
             <xsl:text>&#xa;</xsl:text>
         </xsl:for-each>
