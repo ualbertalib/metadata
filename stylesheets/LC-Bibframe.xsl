@@ -10,12 +10,26 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <xsl:for-each select="root/rdf:RDF/bf:Work">
-            <xsl:value-of select="normalize-space(bf:title/bf:Title/rdfs:label)"/>
+        <xsl:for-each select="root/rdf:RDF//bf:Work">
+            <xsl:variable name="c">"</xsl:variable>
+            <xsl:variable name="title" select="replace(normalize-space(bf:title/bf:Title/rdfs:label), $c, '' )"/>
+            <xsl:value-of select="$title"/>
             <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="normalize-space(bf:title/bf:Title/bflc:titleSortKey)"/>
-            <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="normalize-space(bf:title/bf:Title/bf:mainTitle)"/>
+            <xsl:choose>
+                <xsl:when test="parent::bf:hasSeries">
+                    <xsl:variable name="agent" select="normalize-space(../../bf:contribution[1]/bf:Contribution/bf:agent/bf:Agent/rdfs:label)"/>
+                    <xsl:value-of select="$agent"/>
+                    <xsl:text>&#09;</xsl:text>
+                    <xsl:value-of select="concat($agent,' | ', $title)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:variable name="agent" select="normalize-space(bf:contribution[1]/bf:Contribution/bf:agent/bf:Agent/rdfs:label)"/>
+                <xsl:value-of select="$agent"/>
+                    <xsl:text>&#09;</xsl:text>
+                    <xsl:value-of select="concat($agent,' | ', $title)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+
             <xsl:text>&#09;</xsl:text>
             <xsl:value-of select="@rdf:about"/>
             <xsl:text>&#xa;</xsl:text>

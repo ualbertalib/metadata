@@ -10,7 +10,7 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <xsl:for-each select="root/rdf:RDF/bf:Work/bf:contribution/bf:Contribution/bf:agent/bf:Agent">
+        <xsl:for-each select="root/rdf:RDF//bf:Agent[@rdf:about]">
             <xsl:value-of select="normalize-space(rdfs:label)"/>
             <xsl:variable name="name-part">
                 <xsl:value-of select="normalize-space(replace(rdfs:label, ' ', '%20'))"/>
@@ -30,9 +30,10 @@
                         <xsl:text>http://www.viaf.org/viaf/search?query=local.corporateNames%20all%20%22</xsl:text><xsl:value-of select="$name-part"/>
                     </xsl:otherwise>
                 </xsl:choose>
-                <xsl:text>&#09;</xsl:text>
-                <xsl:value-of select="@rdf:about"/>
+                
             </xsl:for-each>
+            <xsl:text>&#09;</xsl:text>
+            <xsl:value-of select="@rdf:about"/>
             <xsl:text>&#xa;</xsl:text>
         </xsl:for-each>
     </xsl:template>

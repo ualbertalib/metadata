@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/LC-merged-urls.tsv'"/>
+    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/1985_imprints_names_VIAF.tsv'"/>
 
     <xsl:param name="rdf"
         select="'file:///home/mparedes/metadata_work/MARC/1985Imprint-BIBFRAME-2/merged-file.xml'"/>
@@ -31,7 +31,7 @@
 
 
 
-    <xsl:template match="//rdf:RDF/bf:Work/bf:contribution/bf:Contribution/bf:agent/bf:Agent">
+    <xsl:template match="//rdf:RDF/bf:Work//bf:contribution/bf:Contribution/bf:agent/bf:Agent">
         <xsl:variable name="te" select="@rdf:about"/>
         <xsl:variable name="p">
             <xsl:value-of
@@ -48,7 +48,7 @@
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
                         <xsl:if test="$lineItems[3] != ''">
                             <xsl:variable name="viaf"
-                                select="concat('http://id.loc.gov/authorities/names/', $lineItems[3])"/>
+                                select="concat('http://viaf.org/viaf/', $lineItems[3])"/>
                             <xsl:if test="$lineItems[6] = $te">
                                 <xsl:attribute name="rdf:about" select="$viaf"/>
                             </xsl:if>

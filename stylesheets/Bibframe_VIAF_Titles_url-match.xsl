@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/LC-titles.tsv'"/>
+    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/1985_imprints_titles-VIAF.tsv'"/>
 
     <xsl:param name="rdf"
         select="'file:///home/mparedes/metadata_work/MARC/1985Imprint-BIBFRAME-2/merged-file.xml'"/>
@@ -31,7 +31,7 @@
 
 
 
-    <xsl:template match="//rdf:RDF/bf:Work">
+    <xsl:template match="//rdf:RDF//bf:Work">
         <xsl:variable name="te" select="@rdf:about"/>
         <xsl:element name="bf:Work">
             <xsl:attribute name="rdf:about" select="@rdf:about"/>
@@ -41,9 +41,9 @@
                     <xsl:variable name="lines" select="tokenize($tsv, '&#xa;')" as="xs:string+"/>
                     <xsl:for-each select="$lines[position() &gt; 1]">
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
-                        <xsl:if test="$lineItems[2] != ''">
+                        <xsl:if test="$lineItems[4] != ''">
                             <xsl:variable name="viaf"
-                                select="concat('http://viaf.org/viaf/', $lineItems[2])"/>
+                                select="concat('http://viaf.org/viaf', $lineItems[4])"/>
                             <xsl:if test="$lineItems[5] = $te">
                                 <xsl:attribute name="rdf:about" select="$viaf"/>
                             </xsl:if>
