@@ -1,0 +1,101 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 1 using expression grel:if(lastIndexOf(value, \",\") == value.length()-1, substring(value, 0, value.length()-1), value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1",
+    "expression": "grel:if(lastIndexOf(value, \",\") == value.length()-1, substring(value, 0, value.length()-1), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 1 using expression grel:if(lastIndexOf(value, \".\") == value.length()-1, substring(value, 0, value.length()-1), value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1",
+    "expression": "grel:if(lastIndexOf(value, \".\") == value.length()-1, substring(value, 0, value.length()-1), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/recon",
+    "description": "Reconcile cells in column Column 1 to type /people/person",
+    "columnName": "Column 1",
+    "config": {
+      "mode": "standard-service",
+      "service": "http://refine.codefork.com/reconcile/viaf",
+      "identifierSpace": "http://rdf.freebase.com/ns/user/hangy/viaf",
+      "schemaSpace": "http://rdf.freebase.com/ns/type.object.id",
+      "type": {
+        "id": "/people/person",
+        "name": "Person"
+      },
+      "autoMatch": true,
+      "columnDetails": []
+    },
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column score at index 1 based on column Column 1 using expression grel:forEach(cell.recon.candidates, v, if(and(v.score >= 0.8, isBlank(cells[\"matched_ID\"].value)), v.score, '')).join(\";\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "score",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Column 1",
+    "expression": "grel:forEach(cell.recon.candidates, v, if(and(v.score >= 0.8, isBlank(cells[\"matched_ID\"].value)), v.score, '')).join(\";\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column score using expression grel:if(isNonBlank(value), value + \";\", value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "score",
+    "expression": "grel:if(isNonBlank(value), value + \";\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column score using expression grel:with(split(value, \";\"), v, if(v[1]==\"\", toNumber(v[0]), max(toNumber(v[0]), toNumber(v[1]))))",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "score",
+    "expression": "grel:with(split(value, \";\"), v, if(v[1]==\"\", toNumber(v[0]), max(toNumber(v[0]), toNumber(v[1]))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column VIAF-ID at index 1 based on column Column 1 using expression grel:with(forEach(cell.recon.candidates, v, if(v.score == cells[\"score\"].value, v.id, '')).join(\";\"), a, a.split(\";\")[0])",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "VIAF-ID",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Column 1",
+    "expression": "grel:with(forEach(cell.recon.candidates, v, if(v.score == cells[\"score\"].value, v.id, '')).join(\";\"), a, a.split(\";\")[0])",
+    "onError": "set-to-blank"
+  }
+]

@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/1985_imprints_name_multi_source.tsv'"/>
+    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/2015_imprints_names_VIAF.tsv'"/>
 
     <xsl:param name="rdf"
         select="'file:///home/mparedes/metadata_work/MARC/1985Imprint-BIBFRAME-2/merged-file.xml'"/>
@@ -31,13 +31,13 @@
 
 
 
-    <xsl:template match="//rdf:RDF/bf:Work//bf:contribution/bf:Contribution/bf:agent/bf:Agent">
+    <xsl:template match="//rdf:RDF/bf:Work//bf:Agent[@rdf:about]">
         <xsl:variable name="te" select="@rdf:about"/>
-        <xsl:variable name="p">
+<!--        <xsl:variable name="p">
             <xsl:value-of
                 select="normalize-space(replace(rdf:type/@rdf:resource, 'http://id.loc.gov/ontologies/bibframe/', ''))"
-            />
-        </xsl:variable>
+            />-->
+        <!--</xsl:variable>-->
         <xsl:element name="bf:Agent">
             <xsl:attribute name="rdf:about" select="@rdf:about"/>
             <xsl:choose>
@@ -46,10 +46,10 @@
                     <xsl:variable name="lines" select="tokenize($tsv, '&#xa;')" as="xs:string+"/>
                     <xsl:for-each select="$lines[position() &gt; 1]">
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
-                        <xsl:if test="$lineItems[7] != ''">
+                        <xsl:if test="$lineItems[2] != ''">
                             <xsl:variable name="viaf"
-                                select="concat('http://id.loc.gov/authorities/names/', $lineItems[7])"/>
-                            <xsl:if test="$lineItems[10] = $te">
+                                select="concat('//viaf.org/viaf/', $lineItems[2])"/>
+                            <xsl:if test="$lineItems[7] = $te">
                                 <xsl:attribute name="rdf:about" select="$viaf"/>
                             </xsl:if>
                         </xsl:if>
