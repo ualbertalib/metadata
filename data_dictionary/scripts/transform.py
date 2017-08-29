@@ -11,7 +11,7 @@ def main():
 def processOwlDocument():
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-	with open('../ontologies/terms.json', 'r') as terms:
+	with open('../ontologies/jupiter.json', 'r') as terms:
 		owlDoc = json.load(terms)
 		# the owl json consists of an index for each term, property, or instance
 		for index in owlDoc:
@@ -77,7 +77,7 @@ def display(output):
 		# iterates over each dictionary (resources)
 		for s, resource in sorted(resources.items()):
 			# prints the resource name, replacing the URI with a prefix (defined in config.py)
-			print('#### %s' % (addPrefixes(s)))
+			print('### %s' % (addPrefixes(s)))
 			# iterates over the dictionary for this particular resource
 			for annotationName, annotationValues in sorted(resource.items()):
 				# checks to see if this is an empty list
