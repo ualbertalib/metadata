@@ -1,0 +1,1326 @@
+@prefix : <http://terms.library.ualberta.ca/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://terms.library.ualberta.ca/> .
+
+<http://terms.library.ualberta.ca/> rdf:type owl:Ontology ;
+                                     rdfs:comment "Describes entities and relationships belonging to objects in an institutional repository, with special attention to the needs of the Education and Research Archive at the University of Alberta. Utilizes external authorities and ontologies wherever possible."@en ;
+                                     rdfs:label "Jupiter Ontology"@en ;
+                                     owl:versionInfo "0.1 - Project Jupiter [Beta, Created on 08-22-2017]"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://pcdm.org/models#fileOf
+<http://pcdm.org/models#fileOf> rdf:type owl:AnnotationProperty ;
+                                rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/isAggregatedBy> .
+
+
+###  http://pcdm.org/models#hasFile
+<http://pcdm.org/models#hasFile> rdf:type owl:AnnotationProperty ;
+                                 rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/aggregates> .
+
+
+###  http://pcdm.org/models#hasMember
+<http://pcdm.org/models#hasMember> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/aggregates> .
+
+
+###  http://pcdm.org/models#hasRelatedObject
+<http://pcdm.org/models#hasRelatedObject> rdf:type owl:AnnotationProperty ;
+                                          rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/aggregates> .
+
+
+###  http://pcdm.org/models#memberOf
+<http://pcdm.org/models#memberOf> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/isAggregatedBy> .
+
+
+###  http://pcdm.org/models#relatedObjectOf
+<http://pcdm.org/models#relatedObjectOf> rdf:type owl:AnnotationProperty ;
+                                         rdfs:subPropertyOf <http://www.openarchives.org/ore/terms/isAggregatedBy> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+<http://purl.obolibrary.org/obo/IAO_0000112> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/coverage
+<http://purl.org/dc/elements/1.1/coverage> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/relation
+<http://purl.org/dc/elements/1.1/relation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+<http://purl.org/dc/elements/1.1/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    rdfs:range rdfs:Literal ;
+                                    rdfs:domain <http://purl.org/ontology/bibo/Thesis> .
+
+
+###  http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:domain <http://pcdm.org/works#Work> .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/contributor> .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:domain <http://purl.org/ontology/bibo/Article> ,
+                                               <http://purl.org/ontology/bibo/Book> ,
+                                               <http://purl.org/ontology/bibo/Chapter> ,
+                                               <http://purl.org/ontology/bibo/Image> ,
+                                               <http://purl.org/ontology/bibo/Report> ,
+                                               <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                               <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                               <http://vivoweb.org/ontology/core#Dataset> ,
+                                               <http://vivoweb.org/ontology/core#Review> .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+<http://purl.org/dc/terms/dateAccepted> rdf:type owl:AnnotationProperty ;
+                                        rdfs:range xsd:dateTime ;
+                                        rdfs:domain <http://purl.org/ontology/bibo/Thesis> .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:AnnotationProperty ;
+                                         rdfs:range xsd:dateTime ;
+                                         rdfs:domain <http://purl.org/ontology/bibo/Thesis> .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:domain <http://pcdm.org/models#Collection> ,
+                                                   <http://purl.org/ontology/bibo/Article> ,
+                                                   <http://purl.org/ontology/bibo/Book> ,
+                                                   <http://purl.org/ontology/bibo/Chapter> ,
+                                                   <http://purl.org/ontology/bibo/Image> ,
+                                                   <http://purl.org/ontology/bibo/Report> ,
+                                                   <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                                   <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                                   <http://vivoweb.org/ontology/core#Dataset> ,
+                                                   <http://vivoweb.org/ontology/core#Review> .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
+                                      rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty ;
+                                    rdfs:range <http://purl.org/dc/terms/LinguisticSystem> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> ;
+                                   rdfs:range <http://creativecommons.org/ns#License> .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> rdf:type owl:AnnotationProperty ;
+                                   rdfs:range <http://purl.org/dc/terms/Location> .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty ;
+                                   <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en ;
+                                   <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#subjectT-002> ;
+                                   rdfs:comment "The topic of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Subject"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#note> "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/subject> .
+
+
+###  http://purl.org/dc/terms/temporal
+<http://purl.org/dc/terms/temporal> rdf:type owl:AnnotationProperty ;
+                                    rdfs:range <http://purl.org/dc/terms/PeriodOfTime> .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty ;
+                                rdfs:range rdfs:Class .
+
+
+###  http://terms.library.ualberta.ca/Jupiter
+:Jupiter rdf:type owl:AnnotationProperty .
+
+
+###  http://terms.library.ualberta.ca/displayable
+:displayable rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/facet
+:facet rdf:type owl:AnnotationProperty ;
+       rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/indexWith
+:indexWith rdf:type owl:AnnotationProperty ;
+           rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/preferredValue
+:preferredValue rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/searchable
+:searchable rdf:type owl:AnnotationProperty ;
+            rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/sort
+:sort rdf:type owl:AnnotationProperty ;
+      rdfs:subPropertyOf :Jupiter .
+
+
+###  http://terms.library.ualberta.ca/tokenize
+:tokenize rdf:type owl:AnnotationProperty ;
+          rdfs:subPropertyOf :Jupiter .
+
+
+###  http://www.openarchives.org/ore/terms/aggregates
+<http://www.openarchives.org/ore/terms/aggregates> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.openarchives.org/ore/terms/isAggregatedBy
+<http://www.openarchives.org/ore/terms/isAggregatedBy> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#preflabel
+<http://www.w3.org/2004/02/skos/core#preflabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2008/05/skos#editorialNote
+<http://www.w3.org/2008/05/skos#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://pcdm.org/models#fileOf
+<http://pcdm.org/models#fileOf> rdf:type owl:ObjectProperty ;
+                                owl:inverseOf <http://pcdm.org/models#hasFile> ;
+                                rdfs:domain <http://pcdm.org/models#File> ;
+                                rdfs:range <http://pcdm.org/models#Object> .
+
+
+###  http://pcdm.org/models#hasFile
+<http://pcdm.org/models#hasFile> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://pcdm.org/models#Object> ;
+                                 rdfs:range <http://pcdm.org/models#File> .
+
+
+###  http://pcdm.org/models#hasMember
+<http://pcdm.org/models#hasMember> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.openarchives.org/ore/terms/Aggregation> ;
+                                   rdfs:range <http://www.openarchives.org/ore/terms/Aggregation> .
+
+
+###  http://pcdm.org/models#hasRelatedObject
+<http://pcdm.org/models#hasRelatedObject> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://www.openarchives.org/ore/terms/Aggregation> ;
+                                          rdfs:range <http://pcdm.org/models#Object> .
+
+
+###  http://pcdm.org/models#memberOf
+<http://pcdm.org/models#memberOf> rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf <http://pcdm.org/models#hasMember> ;
+                                  rdfs:domain <http://www.openarchives.org/ore/terms/Aggregation> ;
+                                  rdfs:range <http://www.openarchives.org/ore/terms/Aggregation> .
+
+
+###  http://pcdm.org/models#relatedObjectOf
+<http://pcdm.org/models#relatedObjectOf> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://pcdm.org/models#hasRelatedObject> ;
+                                         rdfs:domain <http://pcdm.org/models#Object> ;
+                                         rdfs:range <http://www.openarchives.org/ore/terms/Aggregation> .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                          <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> ;
+                                    rdfs:domain <http://pcdm.org/works#Work> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain <http://pcdm.org/works#Work> .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/source> ,
+                                                     <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ;
+                                   rdfs:domain <http://purl.org/ontology/bibo/Article> ,
+                                               <http://purl.org/ontology/bibo/Book> ,
+                                               <http://purl.org/ontology/bibo/Chapter> ,
+                                               <http://purl.org/ontology/bibo/Image> ,
+                                               <http://purl.org/ontology/bibo/Report> ,
+                                               <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                               <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                               <http://vivoweb.org/ontology/core#Dataset> ,
+                                               <http://vivoweb.org/ontology/core#Review> .
+
+
+###  http://purl.org/dc/terms/temporal
+<http://purl.org/dc/terms/temporal> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ,
+                                                       owl:topObjectProperty ;
+                                    rdfs:domain <http://purl.org/ontology/bibo/Article> ,
+                                                <http://purl.org/ontology/bibo/Book> ,
+                                                <http://purl.org/ontology/bibo/Chapter> ,
+                                                <http://purl.org/ontology/bibo/Image> ,
+                                                <http://purl.org/ontology/bibo/Report> ,
+                                                <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                                <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                                <http://vivoweb.org/ontology/core#Dataset> ,
+                                                <http://vivoweb.org/ontology/core#Review> .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/type> ;
+                                rdfs:domain <http://pcdm.org/works#Work> .
+
+
+###  http://purl.org/ontology/bibo/degree
+<http://purl.org/ontology/bibo/degree> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                       rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+                                       rdfs:range <http://purl.org/ontology/bibo/ThesisDegree> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000112> "The source of the public description and this info is found here:  http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html.  Bibo considers this term \"unstable\".  The bibo editorial note is: \"We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen.\""^^xsd:string ;
+                                       rdfs:comment "The thesis degree."@en ;
+                                       rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                       rdfs:label "degree"@en ,
+                                                  "related degree"^^xsd:string ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"^^xsd:string ;
+                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen."@en ;
+                                       <http://www.w3.org/2008/05/skos#editorialNote> "We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen."@en ,
+                                                                                      "[editor: Zach Schoenberger; date: 22-08-2017] Currently being used with literal. To bring in line with vocab, instances of 'thesis degree' need to be used, minted in ual namespace."^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                       rdfs:domain <http://purl.org/ontology/bibo/Article> ;
+                                       rdfs:range <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                       rdfs:comment "The publication status of (typically academic) content."@en ;
+                                       rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                       rdfs:label "status"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "We are not defining, using an enumeration, the range of the bibo:status to the defined list of bibo:DocumentStatus. We won't do it because we want people to be able to define new status if needed by some special usecases. Creating such an enumeration would restrict this to happen."@en .
+
+
+###  http://terms.library.ualberta.ca/institution
+:institution rdf:type owl:ObjectProperty ;
+             :preferredValue "http://id.loc.gov/authorities/names/n79058482"^^xsd:anyURI ;
+             rdfs:comment "The University where the graduating student was enrolled."@en ;
+             rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+             rdfs:label "Institution"@en .
+
+
+###  http://terms.library.ualberta.ca/thesisLevel
+:thesisLevel rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+             rdfs:range <http://purl.org/spar/fabio/Thesis> ;
+             rdfs:comment "The degree credential awarded"@en ;
+             rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+             rdfs:label "Thesis Level"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://prismstandard.org/namespaces/basic/3.0/doi
+<http://prismstandard.org/namespaces/basic/3.0/doi> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://pcdm.org/works#Work> ;
+                                                    rdfs:range rdfs:Literal ;
+                                                    rdfs:comment "The Digital Object Identifier, DOI, for the article."@en ;
+                                                    rdfs:isDefinedBy "http://prismstandard.org/namespaces/basic/3.0"^^xsd:anyURI ;
+                                                    rdfs:label "Digital Object Identifier"@en .
+
+
+###  http://purl.org/dc/elements/1.1/Contributor
+<http://purl.org/dc/elements/1.1/Contributor> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://purl.org/ontology/bibo/Article> ,
+                                                          <http://purl.org/ontology/bibo/Book> ,
+                                                          <http://purl.org/ontology/bibo/Chapter> ,
+                                                          <http://purl.org/ontology/bibo/Image> ,
+                                                          <http://purl.org/ontology/bibo/Report> ,
+                                                          <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                                          <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                                          <http://vivoweb.org/ontology/core#Dataset> ,
+                                                          <http://vivoweb.org/ontology/core#Review> ;
+                                              rdfs:range rdfs:Literal ;
+                                              <http://purl.org/dc/terms/description> "Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity."@en ;
+                                              <http://purl.org/dc/terms/hasVersion> "http://dublincore.org/usage/terms/history/#contributor-006"^^xsd:anyURI ;
+                                              rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+                                              rdfs:isDefinedBy "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+                                              rdfs:label "Contributor"@en .
+
+
+###  http://purl.org/dc/elements/1.1/Creator
+<http://purl.org/dc/elements/1.1/Creator> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://pcdm.org/models#Collection> ,
+                                                      <http://purl.org/ontology/bibo/Article> ,
+                                                      <http://purl.org/ontology/bibo/Book> ,
+                                                      <http://purl.org/ontology/bibo/Chapter> ,
+                                                      <http://purl.org/ontology/bibo/Image> ,
+                                                      <http://purl.org/ontology/bibo/Report> ,
+                                                      <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                                                      <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                                                      <http://vivoweb.org/ontology/core#Dataset> ,
+                                                      <http://vivoweb.org/ontology/core#Review> ;
+                                          rdfs:range rdfs:Literal ;
+                                          <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          <http://purl.org/dc/terms/hasVersion> "http://dublincore.org/usage/terms/history/#creator-006"^^xsd:anyURI ;
+                                          rdfs:comment :Dissertant ,
+                                                       "An entity primarily responsible for making the resource."@en ;
+                                          rdfs:isDefinedBy "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+                                          rdfs:label "Creator"@en .
+
+
+###  http://purl.org/dc/elements/1.1/Rights
+<http://purl.org/dc/elements/1.1/Rights> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://pcdm.org/works#Work> ;
+                                         rdfs:range rdfs:Literal ;
+                                         <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+                                         <http://purl.org/dc/terms/hasVersion> "http://dublincore.org/usage/terms/history/#rights-006"^^xsd:anyURI ;
+                                         rdfs:comment "Information about rights held in and over the resource."@en ;
+                                         rdfs:isDefinedBy "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+                                         rdfs:label "Rights"^^xsd:string .
+
+
+###  http://purl.org/dc/elements/1.1/Subject
+<http://purl.org/dc/elements/1.1/Subject> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://pcdm.org/works#Work> ;
+                                          rdfs:range rdfs:Literal ;
+                                          <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en ;
+                                          <http://purl.org/dc/terms/hasVersion> "http://dublincore.org/usage/terms/history/#subject-007"^^xsd:anyURI ;
+                                          rdfs:comment "The topic of the resource."@en ;
+                                          rdfs:isDefinedBy "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+                                          rdfs:label "Subject"@en .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ,
+                                                       <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ,
+                                                          <http://purl.org/dc/terms/title> .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ,
+                                                      <http://purl.org/dc/terms/date> .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+<http://purl.org/dc/terms/dateAccepted> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ,
+                                                           <http://purl.org/dc/terms/date> .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ,
+                                                            <http://purl.org/dc/terms/date> .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ,
+                                                       <http://purl.org/dc/terms/date> ;
+                                    rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+                                    rdfs:range xsd:dateTime ;
+                                    <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#modified-003> ;
+                                    rdfs:comment "Date on which the resource was changed."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Date Modified"@en .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
+                                 rdfs:domain <http://pcdm.org/models#Collection> ,
+                                             <http://pcdm.org/works#Work> ;
+                                 rdfs:range rdfs:Literal ;
+                                 <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#titleT-002> ;
+                                 rdfs:comment "A name given to the resource."@en ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "Title"@en .
+
+
+###  http://terms.library.ualberta.ca/Dissertant
+:Dissertant rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+            rdfs:range rdfs:Literal ;
+            :indexWith <http://purl.org/dc/elements/1.1/Creator> ;
+            rdfs:comment "A person responsible for making the thesis."@en ;
+            rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+            rdfs:label "Dissertant"@en .
+
+
+###  http://terms.library.ualberta.ca/ark
+:ark rdf:type owl:DatatypeProperty ;
+     rdfs:domain <http://purl.org/ontology/bibo/Article> ,
+                 <http://purl.org/ontology/bibo/Book> ,
+                 <http://purl.org/ontology/bibo/Chapter> ,
+                 <http://purl.org/ontology/bibo/Image> ,
+                 <http://purl.org/ontology/bibo/Report> ,
+                 :learningObject ,
+                 :researchMaterial ,
+                 <http://vivoweb.org/ontology/core#ConferencePaper> ,
+                 <http://vivoweb.org/ontology/core#ConferencePoster> ,
+                 <http://vivoweb.org/ontology/core#Dataset> ,
+                 <http://vivoweb.org/ontology/core#Review> ;
+     rdfs:range rdfs:Literal ;
+     rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+     rdfs:label "Archival Resource Key ID"@en .
+
+
+###  http://terms.library.ualberta.ca/commiteeMember
+:commiteeMember rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "A person who was a member of a group of persons responsible for evaluating and approving the student's thesis."@en ;
+                rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+                rdfs:label "Commitee Member"@en .
+
+
+###  http://terms.library.ualberta.ca/department
+:department rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "A distinct, usually specialized educational unit within an educational organization responsible for the degree program to which the graduating student belonged."@en ,
+                         "Example: \"Department of Biological Sciences\" or \"Department of Chemistry\""@en ;
+            rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+            rdfs:label "Department"@en .
+
+
+###  http://terms.library.ualberta.ca/depositor
+:depositor rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://pcdm.org/models#Collection> ,
+                       <http://pcdm.org/works#Work> ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "User responsible for depositing the resource"@en ;
+           rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+           rdfs:label "Depositor"^^xsd:anyURI ;
+           owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://terms.library.ualberta.ca/fedora3Handle
+:fedora3Handle rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://pcdm.org/works#Work> ;
+               rdfs:range rdfs:Literal ;
+               rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+               rdfs:label "Fedora 3 Handle"@en ;
+               owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://terms.library.ualberta.ca/fedora3UUID
+:fedora3UUID rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://pcdm.org/models#Collection> ,
+                         <http://pcdm.org/works#Work> ;
+             rdfs:range rdfs:Literal ;
+             rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+             rdfs:label "Fedora 3 UUID"@en ;
+             owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://terms.library.ualberta.ca/graduationDate
+:graduationDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "Date student graduated from degree program."@en ;
+                rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+                rdfs:label "Graduation Date"@en .
+
+
+###  http://terms.library.ualberta.ca/nnaFile
+:nnaFile rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://purl.org/ontology/bibo/Image> ;
+         rdfs:range rdfs:Literal ;
+         rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+         rdfs:label "Northern North America Filename"@en .
+
+
+###  http://terms.library.ualberta.ca/nnaItem
+:nnaItem rdf:type owl:DatatypeProperty ;
+         rdfs:range rdfs:Literal ;
+         rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+         rdfs:label "Northern North America Item ID"@en .
+
+
+###  http://terms.library.ualberta.ca/proquest
+:proquest rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "Proquest Id for legacy thesis"@en ;
+          rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+          rdfs:label "Proquest"@en ;
+          owl:backwardCompatibleWith "http://terms.library.library.ca/identifiers/proquest"^^xsd:anyURI ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://terms.library.ualberta.ca/specialization
+:specialization rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "Example: \"Microbiology and Biotechnology\"; \"Comparative Literature\""@en ,
+                             "Subject focus of degree awarded."@en ;
+                rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+                rdfs:label "Specialization"@en .
+
+
+###  http://terms.library.ualberta.ca/supervisor
+:supervisor rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://purl.org/ontology/bibo/Thesis> ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "Person responsible for the role of advising the graduating student."@en ;
+            rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+            rdfs:label "Supervisor"@en .
+
+
+###  http://terms.library.ualberta.ca/unicorn
+:unicorn rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://pcdm.org/works#Work> ;
+         rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+         rdfs:label "Unicorn"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://creativecommons.org/ns#License
+<http://creativecommons.org/ns#License> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://purl.org/dc/terms/LicenseDocument> ;
+                                        rdfs:comment "a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors"@en ;
+                                        rdfs:isDefinedBy "https://creativecommons.org/ns#"^^xsd:anyURI ;
+                                        rdfs:label "License"@en .
+
+
+###  http://pcdm.org/models#AlternateOrder
+<http://pcdm.org/models#AlternateOrder> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://pcdm.org/models#Object> ;
+                                        rdfs:comment """
+        An AlternateOrder is an alternate ordering of its parent's members.  It should only order the
+        parent's members, and otherwise has all of the features of ordering (some members may be
+        omitted from the order, members may appear more than once in the order, etc.).
+      """@en ;
+                                        rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                        rdfs:label "Alternate Order"@en .
+
+
+###  http://pcdm.org/models#Collection
+<http://pcdm.org/models#Collection> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.openarchives.org/ore/terms/Aggregation> ;
+                                    rdfs:comment """
+        A Collection is a group of resources. Collections have descriptive metadata, access metadata,
+        and may links to works and/or collections. By default, member works and collections are an
+        unordered set, but can be ordered using the ORE Proxy class.
+      """@en ;
+                                    rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                    rdfs:label "Collection"@en .
+
+
+###  http://pcdm.org/models#File
+<http://pcdm.org/models#File> rdf:type owl:Class ;
+                              rdfs:subClassOf <http://terms.library.ualbera.ca/PCDM> ;
+                              rdfs:comment """
+        A File is a sequence of binary data and is described by some accompanying metadata.
+        The metadata typically includes at least basic technical metadata (size, content type,
+        modification date, etc.), but can also include properties related to preservation,
+        digitization process, provenance, etc. Files MUST be contained by exactly one Object.
+      """@en ;
+                              rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                              rdfs:label "File"@en .
+
+
+###  http://pcdm.org/models#Object
+<http://pcdm.org/models#Object> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.openarchives.org/ore/terms/Aggregation> ;
+                                rdfs:comment """
+        An Object is an intellectual entity, sometimes called a \"work\", \"digital object\", etc.
+        Objects have descriptive metadata, access metadata, may contain files and other Objects as
+        member \"components\". Each level of a work is therefore represented by an Object instance,
+        and is capable of standing on its own, being linked to from Collections and other Objects.
+        Member Objects can be ordered using the ORE Proxy class.
+      """@en ;
+                                rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                rdfs:label "Object"@en .
+
+
+###  http://pcdm.org/works#FileSet
+<http://pcdm.org/works#FileSet> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://pcdm.org/models#Object> ;
+                                rdfs:comment """
+      A group of related Files, typically a single master File and its derivatives.
+    """@en ;
+                                rdfs:isDefinedBy <http://pcdm.org/works#> ;
+                                rdfs:label "FileSet"@en .
+
+
+###  http://pcdm.org/works#Range
+<http://pcdm.org/works#Range> rdf:type owl:Class ;
+                              rdfs:subClassOf <http://pcdm.org/models#Object> ;
+                              rdfs:comment """
+      A section of a Work, corresponding to a IIIF Range.  Has member FileSets representing the
+      physical parts of the Work are part of the section (e.g., which pages are in a chapter).
+    """@en ;
+                              rdfs:isDefinedBy <http://pcdm.org/works#> ;
+                              rdfs:label "Range"@en ;
+                              <http://www.w3.org/2004/02/skos/core#closeMatch> <http://iiif.io/model/shared-canvas/1.0/#Range> .
+
+
+###  http://pcdm.org/works#TopRange
+<http://pcdm.org/works#TopRange> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://pcdm.org/models#Object> ;
+                                 rdfs:comment """
+      A logical ordering of the component parts of a Work, corresponding to a IIIF Range with
+      the \"top\" viewing hint.  Has member Ranges that represent the logical structure, such
+      as chapters within a book, scenes in a film, etc.
+    """@en ;
+                                 rdfs:isDefinedBy <http://pcdm.org/works#> ;
+                                 rdfs:label "TopRange"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#closeMatch> <http://iiif.io/model/shared-canvas/1.0/#Range> .
+
+
+###  http://pcdm.org/works#Work
+<http://pcdm.org/works#Work> rdf:type owl:Class ;
+                             rdfs:subClassOf <http://pcdm.org/models#Object> ;
+                             rdfs:comment """
+      A work or intellectual entity, such as a book, film, dissertation, etc.
+      Works have member FileSets representing their physical structure (e.g., pages in a book),
+      and related TopRanges representing their logical structure or structures (e.g., sections
+      and chapters in a book).
+    """@en ;
+                             rdfs:isDefinedBy <http://pcdm.org/works#> ;
+                             rdfs:label "Work"@en .
+
+
+###  http://purl.org/dc/terms/Agent
+<http://purl.org/dc/terms/Agent> rdf:type owl:Class ;
+                                 rdfs:subClassOf :Concept ;
+                                 rdfs:label "Agent"@en .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Concept ;
+                                           rdfs:label "License Document"@en .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+<http://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class ;
+                                            rdfs:subClassOf :Concept ;
+                                            rdfs:label "Linguistic System"@en .
+
+
+###  http://purl.org/dc/terms/Location
+<http://purl.org/dc/terms/Location> rdf:type owl:Class ;
+                                    rdfs:subClassOf :Concept ;
+                                    rdfs:label "Location"@en .
+
+
+###  http://purl.org/dc/terms/PeriodOfTime
+<http://purl.org/dc/terms/PeriodOfTime> rdf:type owl:Class ;
+                                        rdfs:subClassOf :Concept ;
+                                        rdfs:label "Period of Time"@en .
+
+
+###  http://purl.org/ontology/bibo/Article
+<http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                        rdfs:comment "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/ontology/bibo/> ;
+                                        rdfs:label "Article"@en ;
+                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                        <http://www.w3.org/2004/02/skos/core#preflabel> "Journal Article"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/Book
+<http://purl.org/ontology/bibo/Book> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                     rdfs:comment "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en ;
+                                     rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                     rdfs:label "Book"@en ;
+                                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/BookSection
+<http://purl.org/ontology/bibo/BookSection> rdf:type owl:Class ;
+                                            rdfs:subClassOf :RepositoryObject ;
+                                            rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                            rdfs:label "Book Section"^^xsd:anyURI .
+
+
+###  http://purl.org/ontology/bibo/Chapter
+<http://purl.org/ontology/bibo/Chapter> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://purl.org/ontology/bibo/BookSection> ;
+                                        rdfs:comment "A chapter of a book."@en ;
+                                        rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                        rdfs:label "Chapter"@en ;
+                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"^^xsd:string ;
+                                        <http://www.w3.org/2004/02/skos/core#preflabel> "Chapter"@en .
+
+
+###  http://purl.org/ontology/bibo/Conference
+<http://purl.org/ontology/bibo/Conference> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Concept .
+
+
+###  http://purl.org/ontology/bibo/Document
+<http://purl.org/ontology/bibo/Document> rdf:type owl:Class ;
+                                         rdfs:subClassOf :RepositoryObject ;
+                                         rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                         rdfs:label "Document"@en .
+
+
+###  http://purl.org/ontology/bibo/DocumentStatus
+<http://purl.org/ontology/bibo/DocumentStatus> rdf:type owl:Class ;
+                                               rdfs:subClassOf :Concept ;
+                                               rdfs:comment "The status of the publication of a document."@en ;
+                                               rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                               rdfs:label "Document Status"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/Image
+<http://purl.org/ontology/bibo/Image> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                      rdfs:comment "A document that presents visual or diagrammatic information."@en ;
+                                      rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                      rdfs:label "Image"@en ;
+                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/Report
+<http://purl.org/ontology/bibo/Report> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                       rdfs:comment "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."@en ;
+                                       rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                       rdfs:label "Report"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/Thesis
+<http://purl.org/ontology/bibo/Thesis> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                       rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ;
+                                       rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                       rdfs:label "Thesis"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/ThesisDegree
+<http://purl.org/ontology/bibo/ThesisDegree> rdf:type owl:Class ;
+                                             rdfs:subClassOf :Concept ;
+                                             rdfs:comment "The academic degree of a Thesis"@en ;
+                                             rdfs:isDefinedBy "http://purl.org/ontology/bibo/"^^xsd:anyURI ;
+                                             rdfs:label "Thesis degree"@en ;
+                                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  http://purl.org/spar/fabio/DoctoralThesis
+<http://purl.org/spar/fabio/DoctoralThesis> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.org/spar/fabio/Thesis> ;
+                                            owl:disjointWith <http://purl.org/spar/fabio/MastersThesis> ;
+                                            rdfs:comment "A thesis reporting the research undertaken during a period of graduate study leading to a doctoral degree."@en ;
+                                            rdfs:isDefinedBy "http://purl.org/spar/fabio/"^^xsd:anyURI ;
+                                            rdfs:label "doctoral thesis"@en .
+
+
+###  http://purl.org/spar/fabio/MastersThesis
+<http://purl.org/spar/fabio/MastersThesis> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.org/spar/fabio/Thesis> ;
+                                           rdfs:comment "A thesis reporting a research project undertaken as part of a graduate course of education leading to a master's degree."@en ;
+                                           rdfs:isDefinedBy "http://purl.org/spar/fabio/"^^xsd:anyURI ;
+                                           rdfs:label "master's thesis"@en .
+
+
+###  http://purl.org/spar/fabio/Thesis
+<http://purl.org/spar/fabio/Thesis> rdf:type owl:Class ;
+                                    rdfs:subClassOf :Concept .
+
+
+###  http://terms.library.ualbera.ca/PCDM
+<http://terms.library.ualbera.ca/PCDM> rdf:type owl:Class .
+
+
+###  http://terms.library.ualberta.ca/Concept
+:Concept rdf:type owl:Class .
+
+
+###  http://terms.library.ualberta.ca/RepositoryObject
+:RepositoryObject rdf:type owl:Class ;
+                  rdfs:label "Repository Object"@en .
+
+
+###  http://terms.library.ualberta.ca/learningObject
+:learningObject rdf:type owl:Class ;
+                rdfs:subClassOf :RepositoryObject ;
+                rdfs:comment "a collection of content items, practice items, and assessment items that are combined based on a single learning objective"@en ;
+                rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+                rdfs:label "Learning Object"@en .
+
+
+###  http://terms.library.ualberta.ca/researchMaterial
+:researchMaterial rdf:type owl:Class ;
+                  rdfs:subClassOf :RepositoryObject ;
+                  rdfs:comment "a resource that cannot be neatly defined within the scope of any other type (i.e. \"other\")"@en ;
+                  rdfs:isDefinedBy "http://terms.library.ualberta.ca"^^xsd:anyURI ;
+                  rdfs:label "Research Material"@en .
+
+
+###  http://vivoweb.org/ontology/core#ConferencePaper
+<http://vivoweb.org/ontology/core#ConferencePaper> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.org/ontology/bibo/Article> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A paper presented at a conference; optionally collected into a Proceedings or a special Journal issue"^^xsd:string ;
+                                                   rdfs:label "Conference Paper"^^xsd:string .
+
+
+###  http://vivoweb.org/ontology/core#ConferencePoster
+<http://vivoweb.org/ontology/core#ConferencePoster> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "The digital file (or physical equivalent), if available after the conference, vs. the act of attending/presenting: use ConferencePresentation for information about date/time/location/name of the event where the poster was presented"^^xsd:string ;
+                                                    rdfs:label "Conference Poster"^^xsd:string .
+
+
+###  http://vivoweb.org/ontology/core#Dataset
+<http://vivoweb.org/ontology/core#Dataset> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                           <http://purl.obolibrary.org/obo/IAO_0000112> "US Patent Data; US Job Data"^^xsd:string ;
+                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A named collection of data, usually containing only one type of data"^^xsd:string ;
+                                           rdfs:label "Dataset"^^xsd:string .
+
+
+###  http://vivoweb.org/ontology/core#Review
+<http://vivoweb.org/ontology/core#Review> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.org/ontology/bibo/Article> ;
+                                          <http://purl.obolibrary.org/obo/IAO_0000115> "An article reviewing one or more other information resources (a book, one or more other articles, movies, etc)"^^xsd:string ;
+                                          rdfs:label "Review"^^xsd:string .
+
+
+###  http://www.openarchives.org/ore/terms/Aggregation
+<http://www.openarchives.org/ore/terms/Aggregation> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://terms.library.ualbera.ca/PCDM> .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class ;
+           rdfs:subClassOf :Concept ;
+           rdfs:label "Class"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://pcdm.org/models#
+<http://pcdm.org/models#> rdf:type owl:NamedIndividual ;
+                          <http://purl.org/dc/terms/modified> "2016/04/18"^^xsd:date ;
+                          <http://purl.org/dc/terms/title> "Portland Common Data Model"@en ;
+                          <http://purl.org/dc/terms/publisher> <http://www.duraspace.org/> ;
+                          rdfs:comment "Ontology for the Portland Common Data Model, intended to underlie a wide array of repository and DAMS applications."@en ;
+                          rdfs:seeAlso <https://github.com/duraspace/pcdm/wiki> ;
+                          owl:priorVersion <http://pcdm.org/2015/09/28/models> ;
+                          owl:versionInfo "2016/04/18"^^xsd:string .
+
+
+###  http://pcdm.org/works#
+<http://pcdm.org/works#> rdf:type owl:NamedIndividual ;
+                         <http://purl.org/dc/terms/modified> "2016-02-16"^^xsd:date ;
+                         <http://purl.org/dc/terms/title> "Portland Common Data Model: Works Extension"@en ;
+                         <http://purl.org/dc/terms/publisher> <http://www.duraspace.org/> ;
+                         rdfs:comment """Ontology for a PCDM extension that adds subclasses of pcdm:Object
+      to refine the relationships between a work and its constituent parts.  Also establishes
+      links to the IIIF Presentation API."""@en ;
+                         rdfs:seeAlso <http://iiif.io/api/presentation/2.0/> ,
+                                      <https://github.com/duraspace/pcdm/wiki> ;
+                         owl:versionInfo "2016/02/16"^^xsd:string .
+
+
+###  http://purl.org/ontology/bibo/status/accepted
+<http://purl.org/ontology/bibo/status/accepted> rdf:type owl:NamedIndividual ,
+                                                         <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                                rdfs:comment "Accepted for publication after peer reviewing."@en ;
+                                                rdfs:label "accepted"@en ;
+                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                                <http://www.w3.org/2004/02/skos/core#preflabel> "Accepted"@en .
+
+
+###  http://purl.org/ontology/bibo/status/draft
+<http://purl.org/ontology/bibo/status/draft> rdf:type owl:NamedIndividual ,
+                                                      <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                             rdfs:comment "Document drafted"@en ;
+                                             rdfs:label "draft"@en ;
+                                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                             <http://www.w3.org/2004/02/skos/core#preflabel> "Draft"@en .
+
+
+###  http://purl.org/ontology/bibo/status/published
+<http://purl.org/ontology/bibo/status/published> rdf:type owl:NamedIndividual ,
+                                                          <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                                 rdfs:comment "Published document"@en ;
+                                                 rdfs:label "published"@en ;
+                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                                 <http://www.w3.org/2004/02/skos/core#preflabel> "Published"@en .
+
+
+###  http://purl.org/ontology/bibo/status/unpublished
+<http://purl.org/ontology/bibo/status/unpublished> rdf:type owl:NamedIndividual ,
+                                                            <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                                   rdfs:comment "Unpublished document"@en ;
+                                                   rdfs:label "unpublished"@en ;
+                                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string ;
+                                                   <http://www.w3.org/2004/02/skos/core#preflabel> "Unpublished"@en .
+
+
+###  http://vivoweb.org/ontology/core#submitted
+<http://vivoweb.org/ontology/core#submitted> rdf:type owl:NamedIndividual ,
+                                                      <http://purl.org/ontology/bibo/DocumentStatus> ;
+                                             rdfs:label "submitted"^^xsd:string ;
+                                             <http://www.w3.org/2004/02/skos/core#preflabel> "Submitted"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/2004/02/skos/core#preflabel> "English"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/fre> <http://www.w3.org/2004/02/skos/core#preflabel> "French"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/ger> <http://www.w3.org/2004/02/skos/core#preflabel> "German"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/ipk> <http://www.w3.org/2004/02/skos/core#preflabel> "Inupiaq"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/ita> <http://www.w3.org/2004/02/skos/core#preflabel> "Italian"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/jpn> <http://www.w3.org/2004/02/skos/core#preflabel> "Japanese"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/por> <http://www.w3.org/2004/02/skos/core#preflabel> "Portuguese"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/rus> <http://www.w3.org/2004/02/skos/core#preflabel> "Russian"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/spa> <http://www.w3.org/2004/02/skos/core#preflabel> "Spanish"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/ukr> <http://www.w3.org/2004/02/skos/core#preflabel> "Ukranian"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/vie> <http://www.w3.org/2004/02/skos/core#preflabel> "Vietnamese"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/zho> <http://www.w3.org/2004/02/skos/core#preflabel> "Chinese"@en .
+
+
+<http://id.loc.gov/vocabulary/iso639-2/zxx> <http://www.w3.org/2004/02/skos/core#preflabel> "No linguistic content"@en .
+
+
+<http://pcdm.org/models#fileOf> rdfs:comment "Links from a File to its containing Object."@en ;
+                                rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                rdfs:label "is file of"@en .
+
+
+<http://pcdm.org/models#hasFile> rdfs:comment "Links to a File contained by this Object."@en ;
+                                 rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                 rdfs:label "has file"@en .
+
+
+<http://pcdm.org/models#hasMember> rdfs:comment """Links to a subsidiary Object or Collection. Typically used to link
+          to component parts, such as a book linking to a page.  Note on transitivity: hasMember is
+          not defined as transitive, but applications may treat it as transitive as local needs
+          dictate."""@en ;
+                                   rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                   rdfs:label "has member"@en .
+
+
+<http://pcdm.org/models#hasRelatedObject> rdfs:comment "Links to a related Object that is not a component part, such as an object representing a donor agreement or policies that govern the resource."@en ;
+                                          rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                          rdfs:label "has related object"@en .
+
+
+<http://pcdm.org/models#memberOf> rdfs:comment "Links from an Object or Collection to a containing Object or Collection."@en ;
+                                  rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                  rdfs:label "is member of"@en .
+
+
+<http://pcdm.org/models#relatedObjectOf> rdfs:comment "Links from an Object to a Object or Collection that it is related to."@en ;
+                                         rdfs:isDefinedBy <http://pcdm.org/models#> ;
+                                         rdfs:label "is related object of"@en .
+
+
+<http://purl.org/dc/terms/abstract> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#abstract-003> ;
+                                    rdfs:comment "A summary of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Abstract"@en .
+
+
+<http://purl.org/dc/terms/alternative> <http://purl.org/dc/terms/description> "The distinction between titles and alternative titles is application-specific."@en ;
+                                       <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#alternative-003> ;
+                                       rdfs:comment "An alternative name for the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Alternative Title"@en .
+
+
+<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#created-003> ;
+                                   rdfs:comment "Date of creation of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Date Created"@en .
+
+
+<http://purl.org/dc/terms/dateAccepted> <http://purl.org/dc/terms/description> "Examples of resources to which a Date Accepted may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)."@en ;
+                                        <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#dateAccepted-002> ;
+                                        rdfs:comment "Date of acceptance of the resource."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                        rdfs:label "Date Accepted"@en .
+
+
+<http://purl.org/dc/terms/dateSubmitted> <http://purl.org/dc/terms/description> "Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal)."@en ;
+                                         <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#dateSubmitted-002> ;
+                                         rdfs:comment "Date of submission of the resource."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                         rdfs:label "Date Submitted"@en .
+
+
+<http://purl.org/dc/terms/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                                       <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#descriptionT-001> ;
+                                       rdfs:comment "An account of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Description"@en .
+
+
+<http://purl.org/dc/terms/identifier> <http://purl.org/dc/terms/description> "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system."@en ;
+                                      <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#identifierT-001> ;
+                                      rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Identifier"@en .
+
+
+<http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/description> "Changes in version imply substantive changes in content rather than differences in format."@en ;
+                                       <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#isVersionOf-003> ;
+                                       rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Is Version Of"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#note> "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+
+<http://purl.org/dc/terms/language> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."@en ;
+                                    <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#languageT-001> ;
+                                    rdfs:comment "A language of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Language"@en .
+
+
+<http://purl.org/dc/terms/license> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#license-002> ;
+                                   rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "License"@en .
+
+
+<http://purl.org/dc/terms/relation> <http://purl.org/dc/terms/description> "Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+                                    <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#relationT-001> ;
+                                    rdfs:comment "A related resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Relation"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#note> "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+
+<http://purl.org/dc/terms/source> <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+                                  <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#sourceT-001> ;
+                                  rdfs:comment "A related resource from which the described resource is derived."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Source"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#note> "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+
+<http://purl.org/dc/terms/spatial> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#spatial-003> ;
+                                   rdfs:comment "Spatial characteristics of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Spatial Coverage"@en .
+
+
+<http://purl.org/dc/terms/temporal> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#temporal-003> ;
+                                    rdfs:comment "Temporal characteristics of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Temporal Coverage"@en .
+
+
+<http://purl.org/dc/terms/type> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+                                <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#typeT-001> ;
+                                rdfs:comment "The nature or genre of the resource."@en ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                rdfs:label "Type"@en .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
