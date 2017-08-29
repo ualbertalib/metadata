@@ -5,14 +5,13 @@ from config import definitions as defs
 
 def main():
 	output = processOwlDocument()
-#	print(json.dumps(output))
 	display(output)
 
 
 def processOwlDocument():
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-	with open('terms.json', 'r') as terms:
+	with open('../ontologies/terms.json', 'r') as terms:
 		owlDoc = json.load(terms)
 		# the owl json consists of an index for each term, property, or instance
 		for index in owlDoc:
@@ -72,7 +71,6 @@ def display(output):
 		print('   **%s:** %s  ' % (n['prefix'], n['uri']))
 	print('   ')
 	# sorts output alphabetically (so the display is always the same order)
-	
 	for t, resources in sorted(output.items()):
 		# prints the key (Property, Term, or Value)
 		print("# %s  " % (t))
