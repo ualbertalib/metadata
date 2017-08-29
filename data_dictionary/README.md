@@ -1,3 +1,6 @@
+# How to use this document
+   
+Below you will find the definitions for properties, terms, and values used in the Jupiter project. These definitions provide guidance on how to use these properties and terms. This is a living document. Any changes can be suggested by submitting a ticket. The metadata team will update the document accordingly. In the "ontologies" folder there is a master file from which the readme is derived. The master file is machine actionable and can be used as such. This is a project under development. Please send your feedback to metadata@ualberta.ca
 # Definitions
    
    **rdfs:comment** defines the term or property  

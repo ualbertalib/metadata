@@ -1,7 +1,7 @@
 import json
 from config import namespaces as ns
 from config import definitions as defs
-
+from config import welcome
 
 def main():
 	output = processOwlDocument()
@@ -57,6 +57,10 @@ def add(type, resource, output):
 
 
 def display(output):
+	print('# How to use this document')
+	print('   ')
+	print(welcome)
+
 	# defines annotations (set in config.py)
 	print('# Definitions')
 	print('   ')
