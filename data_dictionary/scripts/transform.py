@@ -36,6 +36,7 @@ def processOwlDocument():
 	return output
 
 
+
 def add(type, resource, output):
 	"""takes the type of index to be processes (resource, property, or instance (value); parses data and returns the processed data"""
 	# the subject of the resource is found in the @id property
@@ -52,8 +53,6 @@ def add(type, resource, output):
 				# @id is used if the value is a URI (i.e. rdfs:isDefinedBy purl.org/dc/terms/)
 			elif "@id" in values:
 				output[type][subject][predicate].append(values['@id'])
-
-
 	return(output)
 
 
