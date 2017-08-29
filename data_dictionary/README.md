@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Definitions
    
    **rdfs:comment** defines the term or property  
@@ -1827,6 +1826,3 @@
   Submitted  
    
 ***
-=======
-
->>>>>>> ca0e83269a3d73e79b59b12819bb716dcba0e004
