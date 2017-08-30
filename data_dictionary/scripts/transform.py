@@ -23,21 +23,17 @@ def processOwlDocument():
 				# iterate over the types
 				for types in index['@type']:
 					# if this index is a Class (i.e. a "term"), add it to the output as such
+
 					if types == "http://www.w3.org/2002/07/owl#Class":
 						output = add('Terms', index, output)
-						# pass
-					# if this index is a property, add it as such
 					elif (types == "http://www.w3.org/2002/07/owl#DatatypeProperty") or (types == "http://www.w3.org/2002/07/owl#ObjectProperty"):
 						output = add('Properties', index, output)
-						# pass
-					# if this index is an instance, add it as such
 					elif (types == "http://www.w3.org/2002/07/owl#NamedIndividual"):
 						output = add('Values', index, output)
 			# if there is no class, it is by default an instance (this needs to corrected in the owl document, but it could be a bug in protege)
 			else:
 				output = add('Values', index, output)
 	return output
-
 
 
 def add(type, resource, output):
@@ -47,9 +43,12 @@ def add(type, resource, output):
 	output[type][subject] = {}
 	for predicate in resource:
 		output[type][subject][predicate] = []
-			# predicates store a list of dictionaries, we iterate over those
+		# predicates store a list of dictionaries, we iterate over those
 		for values in resource[predicate]:
-				# @value contains the value expressed (i.e rdfs:label is predicate, @value is 'Creator')
+			if '@type' in values:
+					# store the value as a string
+				output[type][subject][predicate].append(values['@type'])
+			# @value contains the value expressed (i.e rdfs:label is predicate, @value is 'Creator')
 			if '@value' in values:
 					# store the value as a string
 				output[type][subject][predicate].append(values['@value'].replace('\n', ''))
@@ -60,9 +59,9 @@ def add(type, resource, output):
 
 
 def display(output):
-	print('# How to use this document')
+	print('# Jupiter Data Dictionary')
 	print('   ')
-	print(welcome)
+	print("%s" % welcome)
 
 	# defines annotations (set in config.py)
 	print('# Definitions')
@@ -75,6 +74,13 @@ def display(output):
 	print('   ')
 	for n in ns:
 		print('   **%s:** %s  ' % (n['prefix'], n['uri']))
+	print('   ')
+	print('# Table of Contents')
+	for t, resources in sorted(output.items()):
+		print("### %s " % (t))
+		for s, resource in sorted(resources.items()):
+			print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(s), removeNS(s)))
+		print('   ')
 	print('   ')
 	# sorts output alphabetically (so the display is always the same order)
 	for t, resources in sorted(output.items()):

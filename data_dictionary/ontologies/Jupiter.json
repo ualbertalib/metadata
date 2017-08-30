@@ -14,19 +14,6 @@
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://creativecommons.org/ns#License"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/license"
-  } ]
-}, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://purl.org/ontology/bibo/ThesisDegree"
   } ],
@@ -38,7 +25,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://purl.org/ontology/bibo/DocumentStatus"
@@ -47,7 +34,7 @@
     "@id" : "http://purl.org/ontology/bibo/status"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Organization"
@@ -60,20 +47,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://terms.library.ualberta.ca/workType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/type"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://purl.org/ontology/bibo/DocumentStatus"
@@ -317,6 +291,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Ukranian"
+  } ]
+}, {
+  "@id" : "http://id.loc.gov/vocabulary/iso639-2/vie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/vocabulary/iso639-2/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vietnamese"
   } ]
 }, {
   "@id" : "http://id.loc.gov/vocabulary/iso639-2/zho",
@@ -583,8 +568,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/models#Object"
-  }, {
-    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "http://prismstandard.org/namespaces/basic/3.0/doi",
@@ -812,47 +795,6 @@
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/type",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/source",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/bibo/Article"
-  }, {
-    "@id" : "http://purl.org/ontology/bibo/Book"
-  }, {
-    "@id" : "http://purl.org/ontology/bibo/Chapter"
-  }, {
-    "@id" : "http://purl.org/ontology/bibo/Image"
-  }, {
-    "@id" : "http://purl.org/ontology/bibo/Report"
-  }, {
-    "@id" : "http://terms.library.ualberta.ca/learningObject"
-  }, {
-    "@id" : "http://terms.library.ualberta.ca/researchMaterial"
-  }, {
-    "@id" : "http://vivoweb.org/ontology/core#ConferencePaper"
-  }, {
-    "@id" : "http://vivoweb.org/ontology/core#ConferencePoster"
-  }, {
-    "@id" : "http://vivoweb.org/ontology/core#Dataset"
-  }, {
-    "@id" : "http://vivoweb.org/ontology/core#Review"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://purl.org/dc/terms"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Source"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/LicenseDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1224,8 +1166,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://creativecommons.org/ns#License"
-  }, {
-    "@id" : "_:genid2"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/rights"
@@ -1308,7 +1248,45 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/ontology/bibo/Article"
+  }, {
+    "@id" : "http://purl.org/ontology/bibo/Book"
+  }, {
+    "@id" : "http://purl.org/ontology/bibo/Chapter"
+  }, {
+    "@id" : "http://purl.org/ontology/bibo/Image"
+  }, {
+    "@id" : "http://purl.org/ontology/bibo/Report"
+  }, {
+    "@id" : "http://terms.library.ualberta.ca/learningObject"
+  }, {
+    "@id" : "http://terms.library.ualberta.ca/researchMaterial"
+  }, {
+    "@id" : "http://vivoweb.org/ontology/core#ConferencePaper"
+  }, {
+    "@id" : "http://vivoweb.org/ontology/core#ConferencePoster"
+  }, {
+    "@id" : "http://vivoweb.org/ontology/core#Dataset"
+  }, {
+    "@id" : "http://vivoweb.org/ontology/core#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://purl.org/dc/terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/source"
   } ]
@@ -1436,10 +1414,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/coverage"
   } ],
-  "http://www.w3.org/2002/07/owl#Restriction" : [ {
-    "@type" : "http://www.w3.org/2002/07/owl#rational",
-    "@value" : "dcterms:temporalCoverage only (universal) xsd:string"
-  } ],
   "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
     "@language" : "en",
     "@value" : "Extended to use literal range. To meet DCterms spec, a LOD vocabulary must be implemented."
@@ -1474,7 +1448,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/type",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."
@@ -1543,7 +1517,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://terms.library.ualberta.ca/workType"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid5"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -1720,7 +1694,7 @@
     "@value" : "related degree"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid3"
+    "@id" : "_:genid2"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "unstable"
@@ -1754,7 +1728,7 @@
     "@value" : "status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid3"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -2137,7 +2111,7 @@
     "@value" : "Institution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "http://terms.library.ualberta.ca/learningObject",
@@ -2303,7 +2277,7 @@
   } ]
 }, {
   "@id" : "http://terms.library.ualberta.ca/thesisLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The degree credential awarded"
@@ -2344,17 +2318,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://terms.library.ualberta.ca/vie",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://id.loc.gov/vocabulary/iso639-2/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Vietnamese"
   } ]
 }, {
   "@id" : "http://terms.library.ualberta.ca/workType",
@@ -2442,7 +2405,31 @@
   "@id" : "http://www.openarchives.org/ore/terms/isAggregatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/2002/07/owl#Restriction",
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#allValuesFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#oneOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#someValuesFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
