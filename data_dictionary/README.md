@@ -298,26 +298,7 @@ Below you will find the definitions for properties, terms, and values used in th
   http://www.w3.org/2001/XMLSchema#string  
    
 ***
-### dc:relation
-   
-   **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
-   
-   **rdfs:label**   
-  Relation  
-   
-***
-### dc:source
+### http://purl.org/dc/elements/source
    
    **rdfs:comment**   
   A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
@@ -336,7 +317,7 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#Review  
    
    **rdfs:isDefinedBy**   
-  http://purl.org/dc/elements/1.1/  
+  http://purl.org/dc/terms  
    
    **rdfs:label**   
   Source  
@@ -565,6 +546,9 @@ Below you will find the definitions for properties, terms, and values used in th
    **rdfs:label**   
   Is Version Of  
    
+   **rdfs:range**   
+  http://www.w3.org/2001/XMLSchema#string  
+   
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/relation  
    
@@ -654,6 +638,37 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
+   
+***
+### dcterms:relation
+   
+   **rdfs:comment**   
+  A related resource. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
+   
+   **rdfs:domain**   
+  http://purl.org/ontology/bibo/Article  
+  http://purl.org/ontology/bibo/Book  
+  http://purl.org/ontology/bibo/Chapter  
+  http://purl.org/ontology/bibo/Image  
+  http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
+  http://vivoweb.org/ontology/core#ConferencePaper  
+  http://vivoweb.org/ontology/core#ConferencePoster  
+  http://vivoweb.org/ontology/core#Dataset  
+  http://vivoweb.org/ontology/core#Review  
+   
+   **rdfs:isDefinedBy**   
+  http://purl.org/dc/terms/  
+   
+   **rdfs:label**   
+  Relation  
+   
+   **rdfs:range**   
+  http://www.w3.org/2001/XMLSchema#string  
+   
+   **rdfs:subPropertyOf**   
+  http://purl.org/dc/elements/1.1/relation  
    
 ***
 ### dcterms:spatial
