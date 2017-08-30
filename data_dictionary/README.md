@@ -298,6 +298,53 @@ Below you will find the definitions for properties, terms, and values used in th
   http://www.w3.org/2001/XMLSchema#string  
    
 ***
+### dc:relation
+   
+   **rdfs:domain**   
+  http://purl.org/ontology/bibo/Article  
+  http://purl.org/ontology/bibo/Book  
+  http://purl.org/ontology/bibo/Chapter  
+  http://purl.org/ontology/bibo/Image  
+  http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
+  http://vivoweb.org/ontology/core#ConferencePaper  
+  http://vivoweb.org/ontology/core#ConferencePoster  
+  http://vivoweb.org/ontology/core#Dataset  
+  http://vivoweb.org/ontology/core#Review  
+   
+   **rdfs:label**   
+  Relation  
+   
+***
+### dc:source
+   
+   **rdfs:comment**   
+  A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
+   
+   **rdfs:domain**   
+  http://purl.org/ontology/bibo/Article  
+  http://purl.org/ontology/bibo/Book  
+  http://purl.org/ontology/bibo/Chapter  
+  http://purl.org/ontology/bibo/Image  
+  http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
+  http://vivoweb.org/ontology/core#ConferencePaper  
+  http://vivoweb.org/ontology/core#ConferencePoster  
+  http://vivoweb.org/ontology/core#Dataset  
+  http://vivoweb.org/ontology/core#Review  
+   
+   **rdfs:isDefinedBy**   
+  http://purl.org/dc/elements/1.1/  
+   
+   **rdfs:label**   
+  Source  
+   
+   **rdfs:range**   
+  http://www.w3.org/2001/XMLSchema#string  
+   
+***
 ### dcterms:abstract
    
    **dcterms:hasVersion**   
@@ -506,12 +553,6 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### dcterms:isVersionOf
    
-   **dcterms:description**   
-  Changes in version imply substantive changes in content rather than differences in format.  
-   
-   **dcterms:hasVersion**   
-  http://dublincore.org/usage/terms/history/#isVersionOf-003  
-   
    **rdfs:comment**   
   A related resource of which the described resource is a version, edition, or adaptation.  
    
@@ -526,10 +567,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/relation  
-  http://purl.org/dc/terms/relation  
-   
-   **skos:note**   
-  This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.  
    
 ***
 ### dcterms:language
@@ -554,7 +591,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/LinguisticSystem  
-  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  _:genid1  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/language  
@@ -569,7 +606,17 @@ Below you will find the definitions for properties, terms, and values used in th
   A legal document giving official permission to do something with the resource.  
    
    **rdfs:domain**   
-  http://pcdm.org/works#Work  
+  http://purl.org/ontology/bibo/Article  
+  http://purl.org/ontology/bibo/Book  
+  http://purl.org/ontology/bibo/Chapter  
+  http://purl.org/ontology/bibo/Image  
+  http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
+  http://vivoweb.org/ontology/core#ConferencePaper  
+  http://vivoweb.org/ontology/core#ConferencePoster  
+  http://vivoweb.org/ontology/core#Dataset  
+  http://vivoweb.org/ontology/core#Review  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -579,6 +626,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://creativecommons.org/ns#License  
+  _:genid2  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/rights  
@@ -608,85 +656,7 @@ Below you will find the definitions for properties, terms, and values used in th
   http://purl.org/dc/elements/1.1/date  
    
 ***
-### dcterms:relation
-   
-   **dcterms:description**   
-  Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.   
-   
-   **dcterms:hasVersion**   
-  http://dublincore.org/usage/terms/history/#relationT-001  
-   
-   **rdfs:comment**   
-  A related resource.  
-   
-   **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
-   
-   **rdfs:isDefinedBy**   
-  http://purl.org/dc/terms/  
-   
-   **rdfs:label**   
-  Relation  
-   
-   **rdfs:subPropertyOf**   
-  http://purl.org/dc/elements/1.1/relation  
-   
-   **skos:note**   
-  This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.  
-   
-***
-### dcterms:source
-   
-   **dcterms:description**   
-  The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
-   
-   **dcterms:hasVersion**   
-  http://dublincore.org/usage/terms/history/#sourceT-001  
-   
-   **rdfs:comment**   
-  A related resource from which the described resource is derived.  
-   
-   **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
-   
-   **rdfs:isDefinedBy**   
-  http://purl.org/dc/terms/  
-   
-   **rdfs:label**   
-  Source  
-   
-   **rdfs:subPropertyOf**   
-  http://purl.org/dc/elements/1.1/source  
-  http://purl.org/dc/terms/relation  
-   
-   **skos:note**   
-  This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.  
-   
-***
 ### dcterms:spatial
-   
-   **dcterms:hasVersion**   
-  http://dublincore.org/usage/terms/history/#spatial-003  
    
    **rdfs:comment**   
   Spatial characteristics of the resource.  
@@ -712,15 +682,16 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/Location  
+  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/coverage  
    
+   **skos:editorialNote**   
+  Extended to use literal range. To meet DCterms spec, a LOD vocabulary must be implemented.  
+   
 ***
 ### dcterms:temporal
-   
-   **dcterms:hasVersion**   
-  http://dublincore.org/usage/terms/history/#temporal-003  
    
    **rdfs:comment**   
   Temporal characteristics of the resource.  
@@ -746,9 +717,16 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/PeriodOfTime  
+  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/coverage  
+   
+   **owl:Restriction**   
+  dcterms:temporalCoverage only (universal) xsd:string  
+   
+   **skos:editorialNote**   
+  Extended to use literal range. To meet DCterms spec, a LOD vocabulary must be implemented.  
    
 ***
 ### dcterms:title
@@ -834,7 +812,7 @@ Below you will find the definitions for properties, terms, and values used in th
   related degree  
    
    **rdfs:range**   
-  http://purl.org/ontology/bibo/ThesisDegree  
+  _:genid3  
    
    **status:term_status**   
   unstable  
@@ -862,10 +840,7 @@ Below you will find the definitions for properties, terms, and values used in th
   status  
    
    **rdfs:range**   
-  http://purl.org/ontology/bibo/DocumentStatus  
-   
-   **rdfs:subPropertyOf**   
-  http://www.w3.org/2002/07/owl#topObjectProperty  
+  _:genid4  
    
    **status:term_status**   
   stable  
@@ -1052,7 +1027,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Institution  
    
    **rdfs:range**   
-  http://xmlns.com/foaf/0.1/Organization  
+  _:genid5  
    
 ***
 ### ual:nnaFile
@@ -1143,7 +1118,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Supervisor  
    
    **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#short  
+  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:thesisLevel
@@ -1292,6 +1267,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:subClassOf**   
   http://pcdm.org/models#Object  
+  _:genid6  
    
 ***
 ### dcterms:LicenseDocument
@@ -1312,7 +1288,8 @@ Below you will find the definitions for properties, terms, and values used in th
   Article  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
+  _:genid7  
    
    **status:term_status**   
   stable  
@@ -1333,19 +1310,10 @@ Below you will find the definitions for properties, terms, and values used in th
   Book  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
    **status:term_status**   
   stable  
-   
-***
-### bibo:BookSection
-   
-   **rdfs:isDefinedBy**   
-  http://purl.org/ontology/bibo/  
-   
-   **rdfs:label**   
-  Book Section  
    
 ***
 ### bibo:Chapter
@@ -1360,22 +1328,13 @@ Below you will find the definitions for properties, terms, and values used in th
   Chapter  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/BookSection  
+  http://terms.library.ualberta.ca/workType  
    
    **status:term_status**   
   unstable  
    
    **skos:preflabel**   
   Chapter  
-   
-***
-### bibo:Document
-   
-   **rdfs:isDefinedBy**   
-  http://purl.org/ontology/bibo/  
-   
-   **rdfs:label**   
-  Document  
    
 ***
 ### bibo:DocumentStatus
@@ -1405,7 +1364,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Image  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
    **status:term_status**   
   stable  
@@ -1423,7 +1382,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Report  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
    **status:term_status**   
   stable  
@@ -1441,7 +1400,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Thesis  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
    **status:term_status**   
   stable  
@@ -1509,6 +1468,9 @@ Below you will find the definitions for properties, terms, and values used in th
    **rdfs:label**   
   Learning Object  
    
+   **rdfs:subClassOf**   
+  http://terms.library.ualberta.ca/workType  
+   
 ***
 ### ual:researchMaterial
    
@@ -1521,6 +1483,21 @@ Below you will find the definitions for properties, terms, and values used in th
    **rdfs:label**   
   Research Material  
    
+   **rdfs:subClassOf**   
+  http://terms.library.ualberta.ca/workType  
+   
+***
+### ual:workType
+   
+   **rdfs:comment**   
+  Different classes for determining instances of a work according to the nature of the archived object.  
+   
+   **rdfs:isDefinedBy**   
+  http://terms.library.ualberta.ca  
+   
+   **rdfs:label**   
+  Work Type  
+   
 ***
 ### vivo:ConferencePaper
    
@@ -1531,7 +1508,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Conference Paper  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Article  
+  http://terms.library.ualberta.ca/workType  
    
 ***
 ### vivo:ConferencePoster
@@ -1543,7 +1520,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Conference Poster  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
 ***
 ### vivo:Dataset
@@ -1558,7 +1535,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Dataset  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Document  
+  http://terms.library.ualberta.ca/workType  
    
 ***
 ### vivo:Review
@@ -1570,7 +1547,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Review  
    
    **rdfs:subClassOf**   
-  http://purl.org/ontology/bibo/Article  
+  http://terms.library.ualberta.ca/workType  
    
 ***
 ### ore:Aggregation
