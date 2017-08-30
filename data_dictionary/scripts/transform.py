@@ -8,10 +8,13 @@ def main():
 	display(output)
 
 
+### ADD TABLE OF CONTENTS
+
+
 def processOwlDocument():
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-	with open('../ontologies/jupiter.json', 'r') as terms:
+	with open('../ontologies/Jupiter.json', 'r') as terms:
 		owlDoc = json.load(terms)
 		# the owl json consists of an index for each term, property, or instance
 		for index in owlDoc:

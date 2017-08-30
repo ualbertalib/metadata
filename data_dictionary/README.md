@@ -1684,79 +1684,109 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:eng
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   English  
    
 ***
 ### lang:fre
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   French  
    
 ***
 ### lang:ger
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   German  
    
 ***
 ### lang:ipk
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Inupiaq  
    
 ***
 ### lang:ita
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Italian  
    
 ***
 ### lang:jpn
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Japanese  
    
 ***
 ### lang:por
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Portuguese  
    
 ***
 ### lang:rus
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Russian  
    
 ***
 ### lang:spa
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Spanish  
    
 ***
 ### lang:ukr
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Ukranian  
-   
-***
-### lang:vie
-   
-   **skos:preflabel**   
-  Vietnamese  
    
 ***
 ### lang:zho
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   Chinese  
    
 ***
 ### lang:zxx
    
-   **skos:preflabel**   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
   No linguistic content  
    
 ***
@@ -1818,6 +1848,15 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **skos:preflabel**   
   Unpublished  
+   
+***
+### ual:vie
+   
+   **rdfs:isDefinedBy**   
+  http://id.loc.gov/vocabulary/iso639-2/  
+   
+   **rdfs:label**   
+  Vietnamese  
    
 ***
 ### vivo:submitted
