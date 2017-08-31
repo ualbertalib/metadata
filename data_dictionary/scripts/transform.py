@@ -4,11 +4,10 @@ from config import definitions as defs
 from config import welcome
 
 def main():
+	#displayWelcome()
 	output = processOwlDocument()
-	display(output)
-
-
-### ADD TABLE OF CONTENTS
+	#displayBody(output)
+	resetProfiles(output)
 
 
 def processOwlDocument():
@@ -20,17 +19,12 @@ def processOwlDocument():
 		for index in owlDoc:
 			# check for type declaration (some individual instances do not contain a declaration, for reasons unknown)
 			if '@type' in index:
-				# iterate over the types
-				for types in index['@type']:
-					# if this index is a Class (i.e. a "term"), add it to the output as such
-
-					if types == "http://www.w3.org/2002/07/owl#Class":
-						output = add('Terms', index, output)
-					elif (types == "http://www.w3.org/2002/07/owl#DatatypeProperty") or (types == "http://www.w3.org/2002/07/owl#ObjectProperty"):
-						output = add('Properties', index, output)
-					elif (types == "http://www.w3.org/2002/07/owl#NamedIndividual"):
-						output = add('Values', index, output)
-			# if there is no class, it is by default an instance (this needs to corrected in the owl document, but it could be a bug in protege)
+				if "http://www.w3.org/2002/07/owl#Class" in index["@type"]:
+					output = add('Terms', index, output)
+				elif ("http://www.w3.org/2002/07/owl#DatatypeProperty" in index["@type"]) or ("http://www.w3.org/2002/07/owl#ObjectProperty" in index["@type"]):
+					output = add('Properties', index, output)
+				elif "http://www.w3.org/2002/07/owl#NamedIndividual" in index["@type"]:
+					output = add('Values', index, output)
 			else:
 				output = add('Values', index, output)
 	return output
@@ -38,48 +32,50 @@ def processOwlDocument():
 
 def add(type, resource, output):
 	"""takes the type of index to be processes (resource, property, or instance (value); parses data and returns the processed data"""
-	# the subject of the resource is found in the @id property
 	subject = resource['@id']
 	output[type][subject] = {}
 	for predicate in resource:
 		output[type][subject][predicate] = []
-		# predicates store a list of dictionaries, we iterate over those
-		for values in resource[predicate]:
-			if '@type' in values:
-					# store the value as a string
-				output[type][subject][predicate].append(values['@type'])
-			# @value contains the value expressed (i.e rdfs:label is predicate, @value is 'Creator')
-			if '@value' in values:
-					# store the value as a string
-				output[type][subject][predicate].append(values['@value'].replace('\n', ''))
-				# @id is used if the value is a URI (i.e. rdfs:isDefinedBy purl.org/dc/terms/)
-			elif "@id" in values:
-				output[type][subject][predicate].append(values['@id'])
+		if predicate != '@id':
+			for val in resource[predicate]:
+				if isinstance(val, dict):
+					if '@value' in val:
+						output[type][subject][predicate].append(val['@value'].replace('\n', ''))
+					elif "@id" in val:
+						if "http://www.w3.org/2001/XMLSchema#" not in val["@id"]:
+							output[type][subject][predicate].append(val['@id'])
+				else:
+					if (type == "Values") and (val != "http://www.w3.org/2002/07/owl#NamedIndividual"):
+						output[type][subject][predicate].append(val)
+					else:
+						pass
 	return(output)
 
 
-def display(output):
+def displayWelcome():
 	print('# Jupiter Data Dictionary')
 	print('   ')
 	print("%s" % welcome)
-
-	# defines annotations (set in config.py)
-	print('# Definitions')
-	print('   ')
-	for d in defs:
-		print('   **%s** %s  ' % (d['term'], d['def']))
-	print('   ')
 	# declares namespaces (set in config.py)
 	print('# Namespaces')
 	print('   ')
 	for n in ns:
 		print('   **%s:** %s  ' % (n['prefix'], n['uri']))
 	print('   ')
+	# defines annotations (set in config.py)
+	print('# Definitions')
+	print('   ')
+	for d in defs:
+		print('   **%s** %s  ' % (d['term'], d['def']))
+	print('   ')
+
+
+def displayBody(output):
 	print('# Table of Contents')
 	for t, resources in sorted(output.items()):
 		print("### %s " % (t))
 		for s, resource in sorted(resources.items()):
-			print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(s), removeNS(s)))
+			print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
 		print('   ')
 	print('   ')
 	# sorts output alphabetically (so the display is always the same order)
@@ -117,6 +113,53 @@ def removeNS(v):
 		if line['uri'] in v:
 			v = v.replace(line['uri'], '')
 	return v
+
+
+def resetProfiles(output):
+	profiles = []
+	for propertyKey, propertyValues in output['Properties'].items():
+		profile = {
+			"uri": propertyKey,  # string
+			"implemented": None,  # boolean
+			"config": {
+				"obligation": None,  # enumerated string: "optional", "required"
+				"repeat": None,  # boolean
+				"facet": None,  # boolean
+				"tokenize": None,  # boolean
+				"display": None,  # boolean
+				"sort": None,  # boolean
+				"onForm": None,  # boolean
+				"propertyName": None,  # string
+				"displayLabel": None,  # string
+				"acceptedValues": [],
+				"dataType": None,  # enumerated string: "string", "enumeratedString", "enumeratedURI", "dateTime"
+				"comments": None,  # string
+				"backwardCompatibleWith": [],  # string
+				"indexWith": [],  # string
+				"definedBy": None  # string
+			}
+		}
+		if 'http://www.w3.org/2000/01/rdf-schema#label' in propertyValues:
+			profile['config']["propertyName"] = propertyValues['http://www.w3.org/2000/01/rdf-schema#label'][0]
+		profile['config']['definedBy'] = "https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s" % addPrefixes(propertyKey).replace(":", "").lower()
+		if "http://www.w3.org/2000/01/rdf-schema#range" in propertyValues:
+			for valueKey, vals in output['Values'].items():
+				if propertyValues["http://www.w3.org/2000/01/rdf-schema#range"] == vals['@type']:
+					profile['config']['acceptedValues'].append({"uri": valueKey, "label": vals["http://www.w3.org/2000/01/rdf-schema#label"][0], "implemented": None})
+		profiles.append(profile)
+		for profileType in ["collection", "generic", "thesis"]:
+			filename = '../profiles/%s/profile.json' % profileType
+			with open(filename, 'w+') as p:
+				json.dump(profiles, p)
+
+
+# def updateProfiles(output):
+
+
+# def editForm():
+
+
+
 
 
 if __name__ == "__main__":

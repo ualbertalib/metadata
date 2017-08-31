@@ -1,18 +1,6 @@
 # Jupiter Data Dictionary
    
 Below you will find the definitions for properties, terms, and values used in the Jupiter project. These definitions provide guidance on how to use these properties and terms. This is a living document. Any changes can be suggested by submitting a ticket. The metadata team will update the document accordingly. In the "ontologies" folder there is a master file from which the readme is derived. The master file is machine actionable and can be used as such. This is a project under development. Please send your feedback to metadata@ualberta.ca
-# Definitions
-   
-   **rdfs:comment** defines the term or property  
-   **rdfs:domain** indicates terms (classes, values, datatypes, etc.) that may invoke a given property  
-   **rdfs:range** indicates terms (classes, values, datatypes, etc.) that must be used with this property  
-   **rdfs:label** the name of the term or property  
-   **rdfs:preflabel** the label preferred for display  
-   **owl:deprecated** indicates whether the property or term is active in the current deployment (default = false)  
-   **owl:backwardCompatible** mappings to previous vocabularies used in previous deployments  
-   **obo:IAO_0000112** usage example  
-   **obo:IAO_0000115** description  
-   
 # Namespaces
    
    **bibo:** http://purl.org/ontology/bibo/  
@@ -42,121 +30,137 @@ Below you will find the definitions for properties, terms, and values used in th
    **works:** http://pcdm.org/works#  
    **xsd:** http://www.w3.org/2001/XMLSchema#  
    
+# Definitions
+   
+   **@type** the object class. Particulary important for determining scope for use of terms and values.  
+   **rdfs:comment** defines the term or property  
+   **rdfs:domain** indicates terms (classes, values, datatypes, etc.) that may invoke a given property  
+   **rdfs:range** indicates terms (classes, values, datatypes, etc.) that must be used with this property  
+   **rdfs:label** the name of the term or property  
+   **rdfs:preflabel** the label preferred for display  
+   **owl:deprecated** indicates whether the property or term is active in the current deployment (default = false)  
+   **owl:backwardCompatible** mappings to previous vocabularies used in previous deployments  
+   **obo:IAO_0000112** usage example  
+   **obo:IAO_0000115** description  
+   
 # Table of Contents
 ### Properties 
- [pcdm:fileOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fileOf) *
- [pcdm:hasFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#hasFile) *
- [pcdm:hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#hasMember) *
- [pcdm:hasRelatedObject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#hasRelatedObject) *
- [pcdm:memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#memberOf) *
- [pcdm:relatedObjectOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#relatedObjectOf) *
- [prism:doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#doi) *
- [dc:Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Contributor) *
- [dc:Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Creator) *
- [dc:Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Rights) *
- [dc:Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Subject) *
- [dcterms:abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#abstract) *
- [dcterms:alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#alternative) *
- [dcterms:created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#created) *
- [dcterms:dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dateAccepted) *
- [dcterms:dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dateSubmitted) *
- [dcterms:description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#description) *
- [dcterms:identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#identifier) *
- [dcterms:isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#isVersionOf) *
- [dcterms:language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#language) *
- [dcterms:license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#license) *
- [dcterms:modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#modified) *
- [dcterms:relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#relation) *
- [dcterms:source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#source) *
- [dcterms:spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#spatial) *
- [dcterms:temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#temporal) *
- [dcterms:title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#title) *
- [dcterms:type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#type) *
- [bibo:degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#degree) *
- [bibo:status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#status) *
- [ual:Dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Dissertant) *
- [ual:ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ark) *
- [ual:commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#commiteeMember) *
- [ual:department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#department) *
- [ual:depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#depositor) *
- [ual:fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fedora3Handle) *
- [ual:fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fedora3UUID) *
- [ual:graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#graduationDate) *
- [ual:institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#institution) *
- [ual:nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#nnaFile) *
- [ual:nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#nnaItem) *
- [ual:proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#proquest) *
- [ual:specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#specialization) *
- [ual:supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#supervisor) *
- [ual:thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#thesisLevel) *
- [ual:unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#unicorn) *
+ [pcdm:fileOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmfileof) *
+ [pcdm:hasFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmhasfile) *
+ [pcdm:hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmhasmember) *
+ [pcdm:hasRelatedObject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmhasrelatedobject) *
+ [pcdm:memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmmemberof) *
+ [pcdm:relatedObjectOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmrelatedobjectof) *
+ [prism:doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) *
+ [dc:Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) *
+ [dc:Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
+ [dc:Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights) *
+ [dc:Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
+ [dcterms:abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract) *
+ [dcterms:alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative) *
+ [dcterms:created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated) *
+ [dcterms:dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdateaccepted) *
+ [dcterms:dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdatesubmitted) *
+ [dcterms:description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) *
+ [dcterms:identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier) *
+ [dcterms:isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof) *
+ [dcterms:language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
+ [dcterms:license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) *
+ [dcterms:modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsmodified) *
+ [dcterms:relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation) *
+ [dcterms:source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermssource) *
+ [dcterms:spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) *
+ [dcterms:temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) *
+ [dcterms:title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
+ [dcterms:type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
+ [bibo:degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibodegree) *
+ [bibo:status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus) *
+ [ual:Dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdissertant) *
+ [ual:ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark) *
+ [ual:commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualcommiteemember) *
+ [ual:department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepartment) *
+ [ual:depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor) *
+ [ual:fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle) *
+ [ual:fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid) *
+ [ual:graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualgraduationdate) *
+ [ual:institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualinstitution) *
+ [ual:nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnafile) *
+ [ual:nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnaitem) *
+ [ual:proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualproquest) *
+ [ual:specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualspecialization) *
+ [ual:supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualsupervisor) *
+ [ual:thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualthesislevel) *
+ [ual:unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn) *
+ [ore:aggregates](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#oreaggregates) *
+ [ore:isAggregatedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#oreisaggregatedby) *
    
 ### Terms 
- [cc:License](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#License) *
- [pcdm:AlternateOrder](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#AlternateOrder) *
- [pcdm:Collection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Collection) *
- [pcdm:File](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#File) *
- [pcdm:Object](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Object) *
- [works:FileSet](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#FileSet) *
- [works:Range](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Range) *
- [works:TopRange](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#TopRange) *
- [works:Work](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Work) *
- [dcterms:LicenseDocument](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#LicenseDocument) *
- [bibo:Article](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Article) *
- [bibo:Book](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Book) *
- [bibo:Chapter](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Chapter) *
- [bibo:DocumentStatus](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#DocumentStatus) *
- [bibo:Image](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Image) *
- [bibo:Report](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Report) *
- [bibo:Thesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Thesis) *
- [bibo:ThesisDegree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ThesisDegree) *
- [fabio:DoctoralThesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#DoctoralThesis) *
- [fabio:MastersThesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#MastersThesis) *
- [fabio:Thesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Thesis) *
- [ual:learningObject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#learningObject) *
- [ual:researchMaterial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#researchMaterial) *
- [ual:workType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#workType) *
- [vivo:ConferencePaper](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ConferencePaper) *
- [vivo:ConferencePoster](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ConferencePoster) *
- [vivo:Dataset](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Dataset) *
- [vivo:Review](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Review) *
- [ore:Aggregation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Aggregation) *
- [foaf:Organization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#Organization) *
+ [cc:License](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#cclicense) *
+ [lang:iso639-2_Language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langiso639-2_language) *
+ [pcdm:AlternateOrder](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmalternateorder) *
+ [pcdm:Collection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmcollection) *
+ [pcdm:File](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmfile) *
+ [pcdm:Object](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmobject) *
+ [works:FileSet](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#worksfileset) *
+ [works:Range](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#worksrange) *
+ [works:TopRange](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#workstoprange) *
+ [works:Work](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#workswork) *
+ [dcterms:LicenseDocument](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicensedocument) *
+ [bibo:Article](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#biboarticle) *
+ [bibo:Book](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibobook) *
+ [bibo:Chapter](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibochapter) *
+ [bibo:DocumentStatus](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibodocumentstatus) *
+ [bibo:Image](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#biboimage) *
+ [bibo:Report](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#biboreport) *
+ [bibo:Thesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibothesis) *
+ [bibo:ThesisDegree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibothesisdegree) *
+ [fabio:DoctoralThesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fabiodoctoralthesis) *
+ [fabio:MastersThesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fabiomastersthesis) *
+ [fabio:Thesis](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fabiothesis) *
+ [ual:learningObject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#uallearningobject) *
+ [ual:researchMaterial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualresearchmaterial) *
+ [ual:workType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualworktype) *
+ [vivo:ConferencePaper](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivoconferencepaper) *
+ [vivo:ConferencePoster](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivoconferenceposter) *
+ [vivo:Dataset](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivodataset) *
+ [vivo:Review](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivoreview) *
+ [ore:Aggregation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#oreaggregation) *
+ [foaf:Organization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#foaforganization) *
    
 ### Values 
- [http://creativecommons.org/licenses/by-nc-nd/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc-nd/3.0/) *
- [http://creativecommons.org/licenses/by-nc-nd/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc-nd/4.0/) *
- [http://creativecommons.org/licenses/by-nc-sa/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc-sa/3.0/) *
- [http://creativecommons.org/licenses/by-nc-sa/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc-sa/4.0/) *
- [http://creativecommons.org/licenses/by-nc/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc/3.0/) *
- [http://creativecommons.org/licenses/by-nc/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nc/4.0/) *
- [http://creativecommons.org/licenses/by-nd/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nd/3.0/) *
- [http://creativecommons.org/licenses/by-nd/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-nd/4.0/) *
- [http://creativecommons.org/licenses/by-sa/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-sa/3.0/) *
- [http://creativecommons.org/licenses/by-sa/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by-sa/4.0/) *
- [http://creativecommons.org/licenses/by/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by/3.0/) *
- [http://creativecommons.org/licenses/by/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/licenses/by/4.0/) *
- [http://creativecommons.org/publicdomain/mark/1.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/publicdomain/mark/1.0/) *
- [http://creativecommons.org/publicdomain/zero/1.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http://creativecommons.org/publicdomain/zero/1.0/) *
- [naf:n79058482](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#n79058482) *
- [lang:eng](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#eng) *
- [lang:fre](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#fre) *
- [lang:ger](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ger) *
- [lang:ipk](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ipk) *
- [lang:ita](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ita) *
- [lang:jpn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#jpn) *
- [lang:por](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#por) *
- [lang:rus](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#rus) *
- [lang:spa](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#spa) *
- [lang:ukr](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ukr) *
- [lang:vie](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vie) *
- [lang:zho](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#zho) *
- [lang:zxx](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#zxx) *
- [bibo:status#accepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#status#accepted) *
- [bibo:status#draft](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#status#draft) *
- [bibo:status#published](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#status#published) *
- [bibo:status#unpublished](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#status#unpublished) *
- [vivo:submitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#submitted) *
+ [http://creativecommons.org/licenses/by-nc-nd/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc-nd/3.0/) *
+ [http://creativecommons.org/licenses/by-nc-nd/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc-nd/4.0/) *
+ [http://creativecommons.org/licenses/by-nc-sa/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc-sa/3.0/) *
+ [http://creativecommons.org/licenses/by-nc-sa/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc-sa/4.0/) *
+ [http://creativecommons.org/licenses/by-nc/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc/3.0/) *
+ [http://creativecommons.org/licenses/by-nc/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nc/4.0/) *
+ [http://creativecommons.org/licenses/by-nd/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nd/3.0/) *
+ [http://creativecommons.org/licenses/by-nd/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-nd/4.0/) *
+ [http://creativecommons.org/licenses/by-sa/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-sa/3.0/) *
+ [http://creativecommons.org/licenses/by-sa/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by-sa/4.0/) *
+ [http://creativecommons.org/licenses/by/3.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by/3.0/) *
+ [http://creativecommons.org/licenses/by/4.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/licenses/by/4.0/) *
+ [http://creativecommons.org/publicdomain/mark/1.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/publicdomain/mark/1.0/) *
+ [http://creativecommons.org/publicdomain/zero/1.0/](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#http//creativecommons.org/publicdomain/zero/1.0/) *
+ [naf:n79058482](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#nafn79058482) *
+ [lang:eng](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langeng) *
+ [lang:fre](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langfre) *
+ [lang:ger](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langger) *
+ [lang:ipk](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langipk) *
+ [lang:ita](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langita) *
+ [lang:jpn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langjpn) *
+ [lang:por](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langpor) *
+ [lang:rus](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langrus) *
+ [lang:spa](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langspa) *
+ [lang:ukr](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langukr) *
+ [lang:vie](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langvie) *
+ [lang:zho](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langzho) *
+ [lang:zxx](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#langzxx) *
+ [bibo:status#accepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#accepted) *
+ [bibo:status#draft](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#draft) *
+ [bibo:status#published](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#published) *
+ [bibo:status#unpublished](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#unpublished) *
+ [vivo:submitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivosubmitted) *
    
    
 # Properties  
@@ -286,14 +290,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://prismstandard.org/namespaces/basic/3.0  
    
    **rdfs:label**   
   Digital Object Identifier  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### dc:Contributor
@@ -302,34 +302,19 @@ Below you will find the definitions for properties, terms, and values used in th
   Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.  
    
    **dcterms:hasVersion**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://dublincore.org/usage/terms/history/#contributor-006  
    
    **rdfs:comment**   
   An entity responsible for making contributions to the resource.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/elements/1.1/  
    
    **rdfs:label**   
   Contributor  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### dc:Creator
@@ -338,38 +323,19 @@ Below you will find the definitions for properties, terms, and values used in th
   Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.  
    
    **dcterms:hasVersion**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://dublincore.org/usage/terms/history/#creator-006  
-   
-   **ual:indexWith**   
-  http://terms.library.ualberta.ca/Dissertant  
    
    **rdfs:comment**   
   An entity primarily responsible for making the resource.  
    
    **rdfs:domain**   
-  http://pcdm.org/models#Collection  
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/elements/1.1/  
    
    **rdfs:label**   
   Creator  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### dc:Rights
@@ -378,7 +344,6 @@ Below you will find the definitions for properties, terms, and values used in th
   Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  
    
    **dcterms:hasVersion**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://dublincore.org/usage/terms/history/#rights-006  
    
    **rdfs:comment**   
@@ -388,14 +353,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/elements/1.1/  
    
    **rdfs:label**   
   Rights  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### dc:Subject
@@ -404,7 +365,6 @@ Below you will find the definitions for properties, terms, and values used in th
   Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.  
    
    **dcterms:hasVersion**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://dublincore.org/usage/terms/history/#subject-007  
    
    **rdfs:comment**   
@@ -414,14 +374,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/elements/1.1/  
    
    **rdfs:label**   
   Subject  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### dcterms:abstract
@@ -434,6 +390,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:domain**   
   http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -443,7 +400,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://www.w3.org/2000/01/rdf-schema#Literal  
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/description  
@@ -492,12 +448,13 @@ Below you will find the definitions for properties, terms, and values used in th
   http://purl.org/ontology/bibo/Chapter  
   http://purl.org/ontology/bibo/Image  
   http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
   http://vivoweb.org/ontology/core#ConferencePaper  
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -507,7 +464,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://www.w3.org/2000/01/rdf-schema#Literal  
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
@@ -526,15 +482,13 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:domain**   
   http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
   Date Accepted  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#dateTime  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
@@ -553,15 +507,13 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:domain**   
   http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
   Date Submitted  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#dateTime  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
@@ -585,12 +537,13 @@ Below you will find the definitions for properties, terms, and values used in th
   http://purl.org/ontology/bibo/Chapter  
   http://purl.org/ontology/bibo/Image  
   http://purl.org/ontology/bibo/Report  
+  http://terms.library.ualberta.ca/learningObject  
+  http://terms.library.ualberta.ca/researchMaterial  
   http://vivoweb.org/ontology/core#ConferencePaper  
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -600,7 +553,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://www.w3.org/2000/01/rdf-schema#Literal  
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/description  
@@ -616,6 +568,9 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:comment**   
   An unambiguous reference to the resource within a given context.  
+   
+   **rdfs:domain**   
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -639,14 +594,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
   Is Version Of  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/relation  
@@ -674,10 +625,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/LinguisticSystem  
-  _:genid1  
-   
-   **rdfs:subPropertyOf**   
-  http://purl.org/dc/elements/1.1/language  
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
    
 ***
 ### dcterms:license
@@ -689,17 +637,7 @@ Below you will find the definitions for properties, terms, and values used in th
   A legal document giving official permission to do something with the resource.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -724,15 +662,13 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:domain**   
   http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
   Date Modified  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#dateTime  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
@@ -755,16 +691,13 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
   Relation  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/relation  
@@ -787,16 +720,13 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/terms  
    
    **rdfs:label**   
   Source  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/source  
@@ -819,9 +749,9 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
@@ -829,7 +759,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/Location  
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/coverage  
@@ -857,7 +786,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#Review  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/dc/terms/  
    
    **rdfs:label**   
@@ -865,7 +793,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:range**   
   http://purl.org/dc/terms/PeriodOfTime  
-  http://www.w3.org/2001/XMLSchema#string  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/coverage  
@@ -892,9 +819,6 @@ Below you will find the definitions for properties, terms, and values used in th
    **rdfs:label**   
   Title  
    
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/title  
    
@@ -920,7 +844,6 @@ Below you will find the definitions for properties, terms, and values used in th
   Type  
    
    **rdfs:range**   
-  http://www.w3.org/2000/01/rdf-schema#Class  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -933,6 +856,8 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
+  http://www.w3.org/2000/01/rdf-schema#Class  
+  http://terms.library.ualberta.ca/workType  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/type  
@@ -947,18 +872,16 @@ Below you will find the definitions for properties, terms, and values used in th
   The thesis degree.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
   degree  
-  related degree  
    
    **rdfs:range**   
-  _:genid2  
+  http://purl.org/ontology/bibo/ThesisDegree  
    
    **status:term_status**   
   unstable  
@@ -967,7 +890,6 @@ Below you will find the definitions for properties, terms, and values used in th
   We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen.  
    
    **http://www.w3.org/2008/05/skos#editorialNote**   
-  We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen.  
   [editor: Zach Schoenberger; date: 22-08-2017] Currently being used with literal. To bring in line with vocab, instances of 'thesis degree' need to be used, minted in ual namespace.  
    
 ***
@@ -980,14 +902,13 @@ Below you will find the definitions for properties, terms, and values used in th
   http://purl.org/ontology/bibo/Article  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
   status  
    
    **rdfs:range**   
-  _:genid3  
+  http://purl.org/ontology/bibo/DocumentStatus  
    
    **status:term_status**   
   stable  
@@ -998,50 +919,29 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### ual:Dissertant
    
-   **ual:indexWith**   
-  http://purl.org/dc/elements/1.1/Creator  
-   
    **rdfs:comment**   
   A person responsible for making the thesis.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Dissertant  
    
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
 ***
 ### ual:ark
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Article  
-  http://purl.org/ontology/bibo/Book  
-  http://purl.org/ontology/bibo/Chapter  
-  http://purl.org/ontology/bibo/Image  
-  http://purl.org/ontology/bibo/Report  
-  http://terms.library.ualberta.ca/learningObject  
-  http://terms.library.ualberta.ca/researchMaterial  
-  http://vivoweb.org/ontology/core#ConferencePaper  
-  http://vivoweb.org/ontology/core#ConferencePoster  
-  http://vivoweb.org/ontology/core#Dataset  
-  http://vivoweb.org/ontology/core#Review  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Archival Resource Key ID  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:commiteeMember
@@ -1050,17 +950,13 @@ Below you will find the definitions for properties, terms, and values used in th
   A person who was a member of a group of persons responsible for evaluating and approving the student's thesis.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Commitee Member  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:department
@@ -1070,17 +966,13 @@ Below you will find the definitions for properties, terms, and values used in th
   Example: "Department of Biological Sciences" or "Department of Chemistry"  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Department  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:depositor
@@ -1093,19 +985,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   Depositor  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
-   **owl:deprecated**   
-  http://www.w3.org/2001/XMLSchema#boolean  
-  true  
    
 ***
 ### ual:fedora3Handle
@@ -1114,18 +997,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Fedora 3 Handle  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
-   **owl:deprecated**   
-  http://www.w3.org/2001/XMLSchema#boolean  
-  true  
    
 ***
 ### ual:fedora3UUID
@@ -1135,18 +1010,10 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Fedora 3 UUID  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
-   **owl:deprecated**   
-  http://www.w3.org/2001/XMLSchema#boolean  
-  true  
    
 ***
 ### ual:graduationDate
@@ -1155,72 +1022,58 @@ Below you will find the definitions for properties, terms, and values used in th
   Date student graduated from degree program.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Graduation Date  
    
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
 ***
 ### ual:institution
    
    **ual:preferredValue**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/authorities/names/n79058482  
    
    **rdfs:comment**   
   The University where the graduating student was enrolled.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Institution  
    
    **rdfs:range**   
-  _:genid4  
+  http://xmlns.com/foaf/0.1/Organization  
    
 ***
 ### ual:nnaFile
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Image  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Northern North America Filename  
    
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
 ***
 ### ual:nnaItem
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Image  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Northern North America Item ID  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:proquest
@@ -1229,25 +1082,13 @@ Below you will find the definitions for properties, terms, and values used in th
   Proquest Id for legacy thesis  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Proquest  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
-   
-   **owl:backwardCompatibleWith**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
-  http://terms.library.library.ca/identifiers/proquest  
-   
-   **owl:deprecated**   
-  http://www.w3.org/2001/XMLSchema#boolean  
-  true  
    
 ***
 ### ual:specialization
@@ -1257,17 +1098,13 @@ Below you will find the definitions for properties, terms, and values used in th
   Subject focus of degree awarded.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Specialization  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:supervisor
@@ -1276,17 +1113,13 @@ Below you will find the definitions for properties, terms, and values used in th
   Person responsible for the role of advising the graduating student.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Supervisor  
-   
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
    
 ***
 ### ual:thesisLevel
@@ -1295,10 +1128,9 @@ Below you will find the definitions for properties, terms, and values used in th
   The degree credential awarded  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
+  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
@@ -1314,14 +1146,16 @@ Below you will find the definitions for properties, terms, and values used in th
   http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
   Unicorn  
    
-   **rdfs:range**   
-  http://www.w3.org/2001/XMLSchema#string  
+***
+### ore:aggregates
+   
+***
+### ore:isAggregatedBy
    
 ***
 # Terms  
@@ -1331,7 +1165,6 @@ Below you will find the definitions for properties, terms, and values used in th
   a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   https://creativecommons.org/ns#  
    
    **rdfs:label**   
@@ -1339,6 +1172,15 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:subClassOf**   
   http://purl.org/dc/terms/LicenseDocument  
+   
+***
+### lang:iso639-2_Language
+   
+   **rdfs:comment**   
+  An instance of this class is an ISO639-2 Language.  A finite set of individuals are instances of an ISO639-2 Language.  
+   
+   **rdfs:label**   
+  ISO639-2 Language  
    
 ***
 ### pcdm:AlternateOrder
@@ -1459,7 +1301,6 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:subClassOf**   
   http://terms.library.ualberta.ca/workType  
-  _:genid5  
    
    **status:term_status**   
   stable  
@@ -1474,7 +1315,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1493,7 +1333,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A chapter of a book.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1515,7 +1354,6 @@ Below you will find the definitions for properties, terms, and values used in th
   The status of the publication of a document.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1531,7 +1369,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A document that presents visual or diagrammatic information.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1550,7 +1387,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc..  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1569,7 +1405,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A document created to summarize research findings associated with the completion of an academic degree.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1588,7 +1423,6 @@ Below you will find the definitions for properties, terms, and values used in th
   The academic degree of a Thesis  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/ontology/bibo/  
    
    **rdfs:label**   
@@ -1604,7 +1438,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A thesis reporting the research undertaken during a period of graduate study leading to a doctoral degree.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/spar/fabio/  
    
    **rdfs:label**   
@@ -1623,7 +1456,6 @@ Below you will find the definitions for properties, terms, and values used in th
   A thesis reporting a research project undertaken as part of a graduate course of education leading to a master's degree.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://purl.org/spar/fabio/  
    
    **rdfs:label**   
@@ -1642,7 +1474,6 @@ Below you will find the definitions for properties, terms, and values used in th
   a collection of content items, practice items, and assessment items that are combined based on a single learning objective  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
@@ -1658,7 +1489,6 @@ Below you will find the definitions for properties, terms, and values used in th
   a resource that cannot be neatly defined within the scope of any other type (i.e. "other")  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
@@ -1674,11 +1504,9 @@ Below you will find the definitions for properties, terms, and values used in th
   Different classes for determining instances of a work according to the nature of the archived object.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://terms.library.ualberta.ca  
    
    **rdfs:label**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   Work Type  
    
 ***
@@ -1742,7 +1570,6 @@ Below you will find the definitions for properties, terms, and values used in th
   The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.  
    
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://xmlns.com/foaf/spec/  
    
    **rdfs:label**   
@@ -1752,11 +1579,17 @@ Below you will find the definitions for properties, terms, and values used in th
 # Values  
 ### http://creativecommons.org/licenses/by-nc-nd/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution-NonCommercial-NoDerivs 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by-nc-nd/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution-NonCommercial-NoDerivatives 4.0 International  
@@ -1764,11 +1597,17 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/licenses/by-nc-sa/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution-NonCommercial-ShareAlike 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by-nc-sa/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution-NonCommercial-ShareAlike 4.0 International  
@@ -1776,11 +1615,17 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/licenses/by-nc/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution-NonCommercial 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by-nc/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution-NonCommercial 4.0 International  
@@ -1788,11 +1633,17 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/licenses/by-nd/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution-NoDerivs 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by-nd/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution-NoDerivatives 4.0 International  
@@ -1800,11 +1651,17 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/licenses/by-sa/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution-ShareAlike 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by-sa/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution-ShareAlike 4.0 International  
@@ -1812,11 +1669,17 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/licenses/by/3.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Attribution 3.0 Unported  
    
 ***
 ### http://creativecommons.org/licenses/by/4.0/
+   
+   **@type**   
+  http://creativecommons.org/ns#License  
    
    **rdfs:label**   
   Attribution 4.0 International  
@@ -1824,17 +1687,26 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### http://creativecommons.org/publicdomain/mark/1.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   Public Domain Mark 1.0  
    
 ***
 ### http://creativecommons.org/publicdomain/zero/1.0/
    
+   **@type**   
+  http://creativecommons.org/ns#License  
+   
    **rdfs:label**   
   CC0 1.0 Universal  
    
 ***
 ### naf:n79058482
+   
+   **@type**   
+  http://xmlns.com/foaf/0.1/Organization  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/authorities/names  
@@ -1845,8 +1717,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:eng
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1855,8 +1729,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:fre
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1865,8 +1741,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:ger
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1875,8 +1753,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:ipk
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1885,8 +1765,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:ita
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1895,8 +1777,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:jpn
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1905,8 +1789,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:por
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1915,8 +1801,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:rus
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1925,8 +1813,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:spa
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1935,8 +1825,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:ukr
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1945,8 +1837,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:vie
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1955,8 +1849,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:zho
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1965,8 +1861,10 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### lang:zxx
    
+   **@type**   
+  http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+   
    **rdfs:isDefinedBy**   
-  http://www.w3.org/2001/XMLSchema#anyURI  
   http://id.loc.gov/vocabulary/iso639-2/  
    
    **rdfs:label**   
@@ -1974,6 +1872,9 @@ Below you will find the definitions for properties, terms, and values used in th
    
 ***
 ### bibo:status#accepted
+   
+   **@type**   
+  http://purl.org/ontology/bibo/DocumentStatus  
    
    **rdfs:comment**   
   Accepted for publication after peer reviewing.  
@@ -1990,6 +1891,9 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### bibo:status#draft
    
+   **@type**   
+  http://purl.org/ontology/bibo/DocumentStatus  
+   
    **rdfs:comment**   
   Document drafted  
    
@@ -2004,6 +1908,9 @@ Below you will find the definitions for properties, terms, and values used in th
    
 ***
 ### bibo:status#published
+   
+   **@type**   
+  http://purl.org/ontology/bibo/DocumentStatus  
    
    **rdfs:comment**   
   Published document  
@@ -2020,6 +1927,9 @@ Below you will find the definitions for properties, terms, and values used in th
 ***
 ### bibo:status#unpublished
    
+   **@type**   
+  http://purl.org/ontology/bibo/DocumentStatus  
+   
    **rdfs:comment**   
   Unpublished document  
    
@@ -2034,6 +1944,9 @@ Below you will find the definitions for properties, terms, and values used in th
    
 ***
 ### vivo:submitted
+   
+   **@type**   
+  http://purl.org/ontology/bibo/DocumentStatus  
    
    **rdfs:label**   
   submitted  
