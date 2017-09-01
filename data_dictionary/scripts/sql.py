@@ -4,7 +4,7 @@ from mysql.connector import Error
 from hydraNorth import hydraNorth
 from secret import config
 
-main():
+def main():
 	conn = connect()
 	cursor = conn.cursor()
 	createDB(cursor)
