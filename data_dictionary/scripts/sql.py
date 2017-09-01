@@ -2,7 +2,7 @@ import json
 import mysql.connector
 from mysql.connector import Error
 from hydraNorth import hydraNorth
-from secret import config
+from secret import db
 
 def main():
 	conn = connect()
@@ -27,7 +27,7 @@ def createDB(cursor):
 def connect():
     """ Connect to MySQL database """
     try:
-        conn = mysql.connector.connect()
+        conn = mysql.connector.connect(db)
         if conn.is_connected():
             print('Connected to MySQL database')
 
