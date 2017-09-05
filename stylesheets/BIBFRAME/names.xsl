@@ -9,8 +9,10 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
+    <xsl:variable name="doc" select="collection('../../metadata-wrangling/BIBFRAME/UADATA-BIBFRAME-Segmented/?select=*Seg-10.xml;recurse=yes')"/>
+
     <xsl:template match="/">
-        <xsl:for-each select="//bf:Agent[@rdf:about]">
+        <xsl:for-each select="$doc//bf:Agent[@rdf:about]">
             <xsl:variable name="c">"</xsl:variable>
             <xsl:variable name="name" select="replace(normalize-space(rdfs:label), $c, '' )"/>
             <xsl:value-of select="$name"/>
