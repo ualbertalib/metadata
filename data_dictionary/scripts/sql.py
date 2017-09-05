@@ -2,40 +2,31 @@ import json
 import mysql.connector
 from mysql.connector import Error
 from hydraNorth import hydraNorth
-from secret import db
+from secret import host, database, user, password
 
 def main():
-	conn = connect()
+	conn = mysql.connector.connect(host = host, database = database, user = user, password = password)
 	cursor = conn.cursor()
-	createDB(cursor)
+	with open('../profiles/generic/profile.json', 'r') as data:
+		data = json.load(data)
+		for item in data:
+			generic = "INSERT INTO generic SET uri='%s';" % (item['uri'])
+			collection = "INSERT INTO collection SET uri='%s';" % (item['uri'])
+			thesis = "INSERT INTO thesis SET uri='%s';" % (item['uri'])
+			print(generic)
+			print(collection)
+			print(thesis)
+			cursor.execute(generic, collection, thesis)
+			conn.commit()
+			for instance in item['config']['acceptedValues']:
+				instances = "INSERT INTO instances VALUES ('%s', '%s');" % (instance['uri'], instance['label'])
+				instanceMappings = "INSERT INTO instanceMap VALUES('%s', '%s');" % (instance['uri'], item['uri'])
+				print(instances)
+				print(instanceMappings)
+				cursor.execute(instances, instanceMappings)
+				conn.commit()
 	cursor.close()
 	conn.close()
-
-def createDB(cursor):
-	for profileType in ['collection', 'generic', 'thesis']:
-		filename = '../profiles/%s/profile.json'
-		with open(filename, 'w+') as data:
-			for item in json.load(data):
-				query = "INSERT INTO %s SET uri='%s';" % (profileType, data['item']['uri'])
-				cursor.execute(query)
-				for instance in data['item']['acceptedValues']:
-					query = "INSERT INTO instances VALUES ('%s', '%s')" % (instance['uri'], instance['label'])
-					cursor.execute(query)
-					query = "INSERT INTO instanceMap VALUES('%s', '%s')" % (instance['uri'], data['item']['uri'])
-					cursor.execute(query)
-
-def connect():
-    """ Connect to MySQL database """
-    try:
-        conn = mysql.connector.connect(db)
-        if conn.is_connected():
-            print('Connected to MySQL database')
-
-    except Error as e:
-        print(e)
-
-    return conn
-
 
 if __name__ == '__main__':
     main()
