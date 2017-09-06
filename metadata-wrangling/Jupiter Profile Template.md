@@ -1,3 +1,16 @@
+---
+title: Jupiter Profile Template
+author:
+ Danoosh Davoodi
+date: 2017-09-06
+profile:
+    project: Jupiter
+    namespaces:
+        pcdm: http://pcdm.org/models#
+        works: http://pcdm.org/works#
+        dcterms: http://purl.org/dc/terms/
+        ual: http://terms.library.ualberta.ca
+---
 # Jupiter Profile Template 
 ## Introduction 
 
@@ -20,7 +33,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 
-### `jupiter:Collection < pcdm:Collection`
+### `jupiter:Collection < pcdm:Collection` (works:Collection)
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
@@ -32,7 +45,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 
-### `jupiter:Work < pcdm:Object`
+### `jupiter:Work < pcdm:Object` (works:Work)
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
