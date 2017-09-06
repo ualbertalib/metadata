@@ -52,6 +52,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
 | ark              | `ual:ark`              | MUST             | Literal                | {1,1}            |
+| subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
