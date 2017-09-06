@@ -5,6 +5,8 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 ## Model
+![Alt text](https://github.com/ualbertalib/metadata/blob/master/metadata-wrangling/draft%20single%20file.jpg)
+
 ### `jupiter:Community < pcdm:Object`
 
 
@@ -46,7 +48,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
 | part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`        | {0,n}            |
+| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
 
