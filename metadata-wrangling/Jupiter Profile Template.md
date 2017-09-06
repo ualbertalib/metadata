@@ -4,6 +4,7 @@ author:
  Danoosh Davoodi
 date: 2017-09-06
 profile:
+    organization: University of Alberta Libraries
     project: Jupiter
     namespaces:
         pcdm: http://pcdm.org/models#
@@ -11,6 +12,8 @@ profile:
         rdfs: http://www.w3.org/2000/01/rdf-schema#
         dc: http://purl.org/dc/elements/1.1/
         dcterms: http://purl.org/dc/terms/
+        bibo: http://purl.org/ontology/bibo/
+        prism: http://prismstandard.org/namespaces/basic/3.0/
         ual: http://terms.library.ualberta.ca
 ---
 # Jupiter Profile Template 
@@ -43,11 +46,11 @@ This model describes the Jupiter project proposed data model and its use cases.
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Community`    | {1,1}            |
 | has member       | `pcdm:hasMember`       | SHOULD           | `jupiter:Work`         | {0,n}            |
-| label            | `rdfs:label            | MAY              | Literal                | {1,1}            |
+| label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
 
 
-### `jupiter:Work < pcdm:Object` (works:Work)
+### `jupiter:Work (Generic) < pcdm:Object` (works:Work)
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
@@ -65,9 +68,38 @@ This model describes the Jupiter project proposed data model and its use cases.
 | part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
 | has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
-| label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
+### `jupiter:Work (Thesis) < pcdm:Object` (works:Work)
 
+| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
+|------------------|------------------------|------------------|------------------------|------------------|
+| institution      | `ual:institution`      | MUST             | Literal                | {1,1}            |
+| dissertant       | `ual:dissertant`       | MUST             | Literal                | {1,1}            |
+| supervisor       | `ual:supervisor`       | MUST             | Literal                | {1,n}            |
+| committee member | `ual:committeeMember`  | MUST             | Literal                | {1,n}            |
+| department       | `ual:department`       | MUST             | Literal                | {1,n}            |
+| subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
+| specialization   | `ual:specialization`   | MAY              | Literal                | {0,1}            |
+| dateSubmitted    | `dcterms:dateSubmitted`| MUST             | Date                   | {1,1}            |
+| dateAccepted     | `dcterms:dateAccepted` | MUST             | Date                   | {1,1}            |
+| graduationdate   | `ual:graduationdate`   | MUST             | Date                   | {1,1}            |
+| title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
+| alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
+| degree           | `bibo:degree`          | MUST             | Literal                | {1,1}            |
+| thesislevel      | `ual:thesislevel`      | MUST             | Literal                | {1,1}            |
+| identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
+| nicorn           | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
+| fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
+| fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
+| proquest         | `ual:proquest`         | MAY              | Literal                | {0,1}            |
+| digital object identifier | `prism:doi`   | MUST             | Literal                | {1,1}            |
+| abstract         | `dcterms:abstract`     | MUST             | Literal                | {1,1}            |
+| language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
+| isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
+| rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
+| part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Collection`   | {1,n}            |
+| has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
+| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
 
 ### `jupiter:FileSet < pcdm:Object`
 
