@@ -73,7 +73,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
-| member of        | `ocdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
 | has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}           |
 | Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Work`(pcdm:object)     | {0,n}         |
@@ -133,7 +133,6 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
-| member of        | `pcdm:memberOf`        | MUST             | `jupiter:FileSet`      | {1,n}            |
 | file of          | `pcdm:fileOf`          | MUST             | `jupiter:FileSet`      | {1,1}            |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
