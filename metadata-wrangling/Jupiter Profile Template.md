@@ -26,8 +26,9 @@ This model describes the Jupiter project proposed data model and its use cases.
 ![Alt text](https://github.com/ualbertalib/metadata/blob/master/metadata-wrangling/draft%20single%20file.jpg)
 
 ### `jupiter:Community < pcdm:Object`
-
-
+  ```turtle
+    jupiter:Community a rdfs:Class .
+  ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
@@ -39,18 +40,24 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 ### `jupiter:Collection < pcdm:Collection` (works:Collection)
+  ```turtle
+    jupiter:Collection a rdfs:Class .
+  ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
 | description      | `dcterms:description`  | MAY              | Literal                | {0,1}            |
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
-| part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Community`    | {1,1}            |
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Community`    | {1,1}            |
 | has member       | `pcdm:hasMember`       | SHOULD           | `jupiter:Work`         | {0,n}            |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
 
 
 ### `jupiter:Work (Generic) < pcdm:Object` (works:Work)
+  ```turtle
+    jupiter:Work a rdfs:Class .
+  ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
@@ -65,11 +72,15 @@ This model describes the Jupiter project proposed data model and its use cases.
 | language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
-| part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Collection`   | {1,n}            |
+| member of        | `ocdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
+| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}           |
+| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Work`(pcdm:object)     | {0,n}         |
 
 ### `jupiter:Work (Thesis) < pcdm:Object` (works:Work)
+  ```turtle
+    jupiter:Work a rdfs:Class .
+  ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
@@ -97,16 +108,31 @@ This model describes the Jupiter project proposed data model and its use cases.
 | language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
-| part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Collection`   | {1,n}            |
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
 | has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
+| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Work`(pcdm:object)     | {0,n}         |
 
 ### `jupiter:FileSet < pcdm:Object`
+  ```turtle
+    jupiter:FileSet a rdfs:Class .
+  ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
-| part of          | `dcterms:isPartOf`     | MUST             | `jupiter:Work`         | {1,1}            |
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Work`         | {1,1}            |
 | has file         | `pcdm:hasFile`         | SHOULD           | `jupiter:File (pcdm:File)`| {1,n}           |
+| label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
+
+### `jupiter:File < pcdm:Object`
+  ```turtle
+    jupiter:File a rdfs:Class .
+  ```
+
+| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
+|------------------|------------------------|------------------|------------------------|------------------|
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:FileSet`      | {1,n}            |
+| file of          | `pcdm:fileOf`          | MUST             | `jupiter:FileSet`      | {1,1}            |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
 
