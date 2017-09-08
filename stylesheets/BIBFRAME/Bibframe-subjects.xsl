@@ -9,14 +9,22 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
     
+    <xsl:variable name="doc" select="collection('../../metadata-wrangling/BIBFRAME/UADATA-BIBFRAME-Segmented?select=UADATA-Seg*.xml;recurse=yes')"/>
+    
     <xsl:template match="/">
-        <xsl:for-each select="root/rdf:RDF//bf:subject/bf:Topic[@rdf:about]">
+        <xsl:text>Sub</xsl:text>
+        <xsl:text>&#09;</xsl:text>
+        <xsl:text>URI</xsl:text>
+        <xsl:text>&#09;</xsl:text>
+        <xsl:text>blank</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:for-each select="rdf:RDF//bf:subject/bf:Topic[@rdf:about]">
             <xsl:value-of select="normalize-space(rdfs:label)"/>
             <xsl:text>&#09;</xsl:text>
-            <xsl:for-each select="bf:source/bf:Source/bf:code">
+<!--            <xsl:for-each select="bf:source/bf:Source/bf:code">
            <xsl:value-of select="normalize-space(.)"/>
             <xsl:text>&#09;</xsl:text>
-            </xsl:for-each>
+            </xsl:for-each>-->
             <xsl:value-of select="@rdf:about"/>
             <xsl:text>&#xa;</xsl:text>
         </xsl:for-each>

@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/1985_imprints_subjects_LCSH.tsv'"/>
+    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/UA/subjects/LCSH/UADATA-Seg-6-subjects.tsv'"/>
     
     <xsl:param name="rdf"
         select="'file:///home/mparedes/metadata_work/MARC/1985Imprint-BIBFRAME-2/merged-file.xml'"/>
@@ -31,7 +31,7 @@
     
     
     
-    <xsl:template match="//rdf:RDF/bf:Work/bf:subject/bf:Topic">
+    <xsl:template match="rdf:RDF//bf:subject/bf:Topic">
         <xsl:variable name="te" select="@rdf:about"/>
         <xsl:element name="bf:Topic">
             <xsl:attribute name="rdf:about" select="@rdf:about"/>
