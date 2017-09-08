@@ -75,11 +75,11 @@ Below you will find the definitions for properties, terms, and values used in th
  [dcterms:type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
  [bibo:degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibodegree) *
  [bibo:status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus) *
- [ual:Dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdissertant) *
  [ual:ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark) *
  [ual:commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualcommiteemember) *
  [ual:department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepartment) *
  [ual:depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor) *
+ [ual:dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdissertant) *
  [ual:fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle) *
  [ual:fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid) *
  [ual:graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualgraduationdate) *
@@ -106,6 +106,7 @@ Below you will find the definitions for properties, terms, and values used in th
  [works:TopRange](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#workstoprange) *
  [works:Work](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#workswork) *
  [dcterms:LicenseDocument](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicensedocument) *
+ [dcterms:LinguisticSystem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslinguisticsystem) *
  [bibo:Article](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#biboarticle) *
  [bibo:Book](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibobook) *
  [bibo:Chapter](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibochapter) *
@@ -160,6 +161,7 @@ Below you will find the definitions for properties, terms, and values used in th
  [bibo:status#draft](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#draft) *
  [bibo:status#published](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#published) *
  [bibo:status#unpublished](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus#unpublished) *
+ [ual:other](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualother) *
  [vivo:submitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#vivosubmitted) *
    
    
@@ -389,8 +391,8 @@ Below you will find the definitions for properties, terms, and values used in th
   A summary of the resource.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
   http://pcdm.org/works#Work  
+  http://purl.org/ontology/bibo/Thesis  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -443,6 +445,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Date of creation of the resource.  
    
    **rdfs:domain**   
+  http://pcdm.org/works#Work  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -454,7 +457,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -481,8 +483,8 @@ Below you will find the definitions for properties, terms, and values used in th
   Date of acceptance of the resource.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
   http://pcdm.org/works#Work  
+  http://purl.org/ontology/bibo/Thesis  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -506,8 +508,8 @@ Below you will find the definitions for properties, terms, and values used in th
   Date of submission of the resource.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
   http://pcdm.org/works#Work  
+  http://purl.org/ontology/bibo/Thesis  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -532,6 +534,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:domain**   
   http://pcdm.org/models#Collection  
+  http://pcdm.org/works#Work  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -543,7 +546,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -624,8 +626,8 @@ Below you will find the definitions for properties, terms, and values used in th
   Language  
    
    **rdfs:range**   
-  http://purl.org/dc/terms/LinguisticSystem  
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
 ***
 ### dcterms:license
@@ -661,8 +663,8 @@ Below you will find the definitions for properties, terms, and values used in th
   Date on which the resource was changed.  
    
    **rdfs:domain**   
-  http://purl.org/ontology/bibo/Thesis  
   http://pcdm.org/works#Work  
+  http://purl.org/ontology/bibo/Thesis  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -680,6 +682,7 @@ Below you will find the definitions for properties, terms, and values used in th
   A related resource. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
    
    **rdfs:domain**   
+  http://pcdm.org/works#Work  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -691,7 +694,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -709,6 +711,7 @@ Below you will find the definitions for properties, terms, and values used in th
   A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  
    
    **rdfs:domain**   
+  http://pcdm.org/works#Work  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -720,7 +723,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms  
@@ -738,6 +740,7 @@ Below you will find the definitions for properties, terms, and values used in th
   Spatial characteristics of the resource.  
    
    **rdfs:domain**   
+  http://pcdm.org/works#Work  
   http://purl.org/ontology/bibo/Article  
   http://purl.org/ontology/bibo/Book  
   http://purl.org/ontology/bibo/Chapter  
@@ -749,7 +752,6 @@ Below you will find the definitions for properties, terms, and values used in th
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
-  http://pcdm.org/works#Work  
    
    **rdfs:isDefinedBy**   
   http://purl.org/dc/terms/  
@@ -852,12 +854,12 @@ Below you will find the definitions for properties, terms, and values used in th
   http://purl.org/ontology/bibo/Thesis  
   http://terms.library.ualberta.ca/learningObject  
   http://terms.library.ualberta.ca/researchMaterial  
+  http://terms.library.ualberta.ca/workType  
   http://vivoweb.org/ontology/core#ConferencePaper  
   http://vivoweb.org/ontology/core#ConferencePoster  
   http://vivoweb.org/ontology/core#Dataset  
   http://vivoweb.org/ontology/core#Review  
   http://www.w3.org/2000/01/rdf-schema#Class  
-  http://terms.library.ualberta.ca/workType  
    
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/type  
@@ -917,21 +919,6 @@ Below you will find the definitions for properties, terms, and values used in th
   We are not defining, using an enumeration, the range of the bibo:status to the defined list of bibo:DocumentStatus. We won't do it because we want people to be able to define new status if needed by some special usecases. Creating such an enumeration would restrict this to happen.  
    
 ***
-### ual:Dissertant
-   
-   **rdfs:comment**   
-  A person responsible for making the thesis.  
-   
-   **rdfs:domain**   
-  http://pcdm.org/works#Work  
-   
-   **rdfs:isDefinedBy**   
-  http://terms.library.ualberta.ca  
-   
-   **rdfs:label**   
-  Dissertant  
-   
-***
 ### ual:ark
    
    **rdfs:domain**   
@@ -989,6 +976,21 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:label**   
   Depositor  
+   
+***
+### ual:dissertant
+   
+   **rdfs:comment**   
+  A person responsible for making the thesis.  
+   
+   **rdfs:domain**   
+  http://pcdm.org/works#Work  
+   
+   **rdfs:isDefinedBy**   
+  http://terms.library.ualberta.ca  
+   
+   **rdfs:label**   
+  Dissertant  
    
 ***
 ### ual:fedora3Handle
@@ -1286,6 +1288,15 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **rdfs:label**   
   License Document  
+   
+***
+### dcterms:LinguisticSystem
+   
+   **rdfs:isDefinedBy**   
+  http://purl.org/dc/terms/  
+   
+   **rdfs:label**   
+  Linguistic System  
    
 ***
 ### bibo:Article
@@ -1719,6 +1730,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1731,6 +1743,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1743,6 +1756,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1755,6 +1769,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1767,6 +1782,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1779,6 +1795,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1791,6 +1808,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1803,6 +1821,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1815,6 +1834,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1827,6 +1847,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1839,6 +1860,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1851,6 +1873,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1863,6 +1886,7 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **@type**   
   http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language  
+  http://purl.org/dc/terms/LinguisticSystem  
    
    **rdfs:isDefinedBy**   
   http://id.loc.gov/vocabulary/iso639-2/  
@@ -1941,6 +1965,15 @@ Below you will find the definitions for properties, terms, and values used in th
    
    **skos:preflabel**   
   Unpublished  
+   
+***
+### ual:other
+   
+   **@type**   
+  http://purl.org/dc/terms/LinguisticSystem  
+   
+   **rdfs:label**   
+  Other language  
    
 ***
 ### vivo:submitted

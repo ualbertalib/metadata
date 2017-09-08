@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type ="text/javascript" src ="{{ url_for('static', filename='script.js') }}" ></script>
+  </head>
+  {% block body %}
+  <body class = "body">
+    <div class="container-fluid">
+      <h3 class="text-center">Jupiter Application Profile Editor</h3>
+      {% from "_formhelpers.html" import render_field %}
+      <form method=post action="/_setProfile">
+        <dl>
+          {{ render_field(form.newProperty) }}
+          {{ render_field(form.implemented) }}
+        </dl>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Profile
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="profile">
+            <button class="dropdown-item" type="button" id="profile" value='collection'>Collection</button>
+            <button class="dropdown-item" type="button" id="profile" value='generic'>Generic</button>
+            <button class="dropdown-item" type="button" id="profile" value='thesis'>Thesis</button>
+          </ul>
+        </div>
+
+        <p id="result"></p>
+
+        <div class="dropdown">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="properties">
+            <!-- dynamic fill with properties-->
+          </ul>
+        </div>
+
+        <p><input type=submit value=Register></p>
+      </form>
+    
+    {% if error %}
+      <p class="error"><strong>Error:</strong>{{error}}</p>
+    {% endif %}
+    </div>
+
+  </body>
+  {% endblock %}
+</html>

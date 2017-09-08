@@ -1,13 +1,19 @@
 import json
+import csv
 from config import namespaces as ns
 from config import definitions as defs
-from config import welcome
+from config import ddWelcome, profileWelcome
+from SPARQLWrapper import SPARQLWrapper, JSON
+
 
 def main():
+	#output = processOwlDocument()
+	#processProfileData(output)
+	#shipProfileToTriples()
 	#displayWelcome()
-	output = processOwlDocument()
 	#displayBody(output)
-	resetProfiles(output)
+	#fetchFromTriples()
+	#profileDisplay()
 
 
 def processOwlDocument():
@@ -52,10 +58,41 @@ def add(type, resource, output):
 	return(output)
 
 
-def displayWelcome():
+def profileDisplay():
+	for ptype in ["collection", "generic", "thesis"]:
+		filename = "../profiles/%s/profile.json" % (ptype)
+		with open(filename) as data:
+			data = sorted(json.load(data).items())
+			print('# Jupiter %s Application Profile' % (ptype.title()))
+			print('   ')
+			print("%s" % profileWelcome)
+			print('   ')
+			# declares namespaces (set in config.py)
+			print('# Namespaces')
+			print('   ')
+			for n in ns:
+				print('   **%s:** %s  ' % (n['prefix'], n['uri']))
+				print('   ')
+			print('   ')
+			for key, values in data:
+				print('### %s' % (addPrefixes(key)))
+				print('   ')
+				# for k, v in sorted(values).items():
+				for i in values:
+					if i == 'acceptedValues':
+						for j in values[i]:
+							if j['onForm'] == 'true':
+								print(' **%s** (on form): %s (%s)' % (i, j['label'], addPrefixes(j['uri'])))
+					else:
+						print(' **%s**: %s' % (i, values[i]) )
+				print('   ')
+
+
+
+def dataDictionaryDisplay():
 	print('# Jupiter Data Dictionary')
 	print('   ')
-	print("%s" % welcome)
+	print("%s" % ddWelcome)
 	# declares namespaces (set in config.py)
 	print('# Namespaces')
 	print('   ')
@@ -68,9 +105,6 @@ def displayWelcome():
 	for d in defs:
 		print('   **%s** %s  ' % (d['term'], d['def']))
 	print('   ')
-
-
-def displayBody(output):
 	print('# Table of Contents')
 	for t, resources in sorted(output.items()):
 		print("### %s " % (t))
@@ -115,52 +149,103 @@ def removeNS(v):
 	return v
 
 
-def resetProfiles(output):
-	profiles = []
-	for propertyKey, propertyValues in output['Properties'].items():
-		profile = {
-			"uri": propertyKey,  # string
-			"implemented": None,  # boolean
-			"config": {
-				"obligation": None,  # enumerated string: "optional", "required"
-				"repeat": None,  # boolean
-				"facet": None,  # boolean
-				"tokenize": None,  # boolean
-				"display": None,  # boolean
-				"sort": None,  # boolean
-				"onForm": None,  # boolean
-				"propertyName": None,  # string
-				"displayLabel": None,  # string
-				"acceptedValues": [],
-				"dataType": None,  # enumerated string: "string", "enumeratedString", "enumeratedURI", "dateTime"
-				"comments": None,  # string
-				"backwardCompatibleWith": [],  # string
-				"indexWith": [],  # string
-				"definedBy": None  # string
-			}
-		}
-		if 'http://www.w3.org/2000/01/rdf-schema#label' in propertyValues:
-			profile['config']["propertyName"] = propertyValues['http://www.w3.org/2000/01/rdf-schema#label'][0]
-		profile['config']['definedBy'] = "https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s" % addPrefixes(propertyKey).replace(":", "").lower()
-		if "http://www.w3.org/2000/01/rdf-schema#range" in propertyValues:
-			for valueKey, vals in output['Values'].items():
-				if propertyValues["http://www.w3.org/2000/01/rdf-schema#range"] == vals['@type']:
-					profile['config']['acceptedValues'].append({"uri": valueKey, "label": vals["http://www.w3.org/2000/01/rdf-schema#label"][0], "implemented": None})
-		profiles.append(profile)
-		for profileType in ["collection", "generic", "thesis"]:
-			filename = '../profiles/%s/profile.json' % profileType
+def fetchFromTriples():
+	sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+	for ptype in ["collection", "generic", "thesis"]:
+		profile = {}
+		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)
+		sparql.setReturnFormat(JSON)
+		sparql.setQuery(query)
+		results = sparql.query().convert()
+		for result in results['results']['bindings']:
+			if result['property']['value'] not in profile.keys():
+				profile[result['property']['value']] = {}
+			elif result['annotation']['value'] == 'http://terms.library.ualberta.ca/acceptedValue':
+				if 'acceptedValues' not in profile[result['property']['value']]:
+					profile[result['property']['value']]['acceptedValues'] = []
+				query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> SELECT * WHERE { GRAPH ual:instances { <%s> rdfs:label ?label ; ual:onForm ?onForm } }" % (result['value']['value'])
+				sparql.setQuery(query)
+				annotations = sparql.query().convert()
+				for annotation in annotations['results']['bindings']:
+					profile[result['property']['value']]['acceptedValues'].append({'uri': result['value']['value'], 'onForm': annotation['onForm']['value'], 'label': annotation['label']['value']})
+			else:
+				profile[result['property']['value']][result['annotation']['value']] = result['value']['value']
+
+		filename = '../profiles/%s/profile.json' % ptype
+		with open(filename, 'w+') as p:
+			json.dump(profile, p, sort_keys=True, indent=4)
+
+
+
+def processProfileData(output):
+
+	"""processed the orignal data dictionary spreadsheet from google sheets""" 
+
+	for ptype in ["collection", "generic", "thesis"]:
+		profiles = []
+		filename = "../profiles/%s.csv" % (ptype)
+		with open(filename, newline='') as data:
+			reader = csv.DictReader(data)
+			for row in reader:
+				profile = {
+					"uri": row['uri'],  # string
+					"conf": {
+						"required": bool(row['required']),  # enumerated string: "optional", "required"
+						"repeat": bool(row['repeat']),  # boolean
+						"facet": bool(row['facet']),  # boolean
+						"tokenize": "",  # boolean
+						"display": bool(row['display']),  # boolean
+						"sort": bool(row['sort']),  # boolean
+						"onForm": bool(row['onForm']),  # boolean
+						"propertyName": "",  # string
+						"displayLabel": row['displayLabel'],  # string
+						"acceptedValues": [],
+						"dataType": row['dataType'],  # enumerated string: "string", "enumeratedString", "enumeratedURI", "dateTime"
+						"comments": row["comments"].replace("\"","'"),  # string
+						"backwardCompatibleWith": row["backwardCompatibleWith"],  # string
+						"indexAs": row['indexAs'],  # string
+						"definedBy": row['definedBy']  # string
+					}
+				}
+				profile['conf']["propertyName"] = output["Properties"][row['uri']]['http://www.w3.org/2000/01/rdf-schema#label'][0]
+				if "http://www.w3.org/2000/01/rdf-schema#range" in output["Properties"][row['uri']]:
+						for valueKey, vals in output['Values'].items():
+							if not set(output["Properties"][row['uri']]["http://www.w3.org/2000/01/rdf-schema#range"]).isdisjoint(vals['@type']):
+								profile['conf']['acceptedValues'].append({"uri": valueKey, "label": vals["http://www.w3.org/2000/01/rdf-schema#label"][0], "onForm": "True"})
+				profiles.append(profile)
+			filename = '../profiles/%s/profile.json' % ptype
 			with open(filename, 'w+') as p:
-				json.dump(profiles, p)
+				json.dump(profiles, p, sort_keys=True, indent=4)
 
 
-# def updateProfiles(output):
-
-
-# def editForm():
-
-
-
-
+def shipProfileToTriples():
+	sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+	sparql.setMethod("POST")
+	for ptype in ["collection", "generic", "thesis"]:
+		filename = "../profiles/%s/profile.json" % (ptype)
+		with open(filename) as data:
+			for item in json.load(data):
+				query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:%s { <%s> rdf:type rdf:Property" % (ptype, item['uri'])
+				for key in item['conf']:
+					if key == 'acceptedValues':
+						for triple in item['conf'][key]:
+							addValue = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:instances { <%s> rdfs:label \"%s\" ; ual:onForm \"%s\" } } " % (triple['uri'], triple['label'], "true")
+							print(addValue)
+							print(' ')
+							sparql.setQuery(addValue)
+							sparql.query()
+							query = query + "; ual:acceptedValue <%s>" % (triple['uri'])
+					elif isinstance(item['conf'][key], str) and ("http" in item['conf'][key]):
+						query = query + "; ual:%s <%s> " % (key, item['conf'][key])
+					elif item['conf'][key] == "none":
+						query = query + "; ual:%s \"%s\"" % (key, "")
+					else:
+						query = query + "; ual:%s \"%s\"" % (key, str(item['conf'][key]).lower())
+				query = query + "} }"
+				sparql.setQuery(query)
+				sparql.query()
+				print(query)
+				print('')
 
 if __name__ == "__main__":
 	main()

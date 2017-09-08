@@ -40,5 +40,6 @@ definitions = [
 	{"term": "obo:IAO_0000115", "def": "description"}
 ]
 
-welcome = 'Below you will find the definitions for properties, terms, and values used in the Jupiter project. These definitions provide guidance on how to use these properties and terms. This is a living document. Any changes can be suggested by submitting a ticket. The metadata team will update the document accordingly. In the "ontologies" folder there is a master file from which the readme is derived. The master file is machine actionable and can be used as such. This is a project under development. Please send your feedback to metadata@ualberta.ca'
+ddWelcome = ' The Jupiter Data Dictionary is a collection of living documents. Below you will find the Juputiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  See [application profiles] (https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profiles) for current deployment specifications in Jupiter. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.'
 
+profileWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.'
