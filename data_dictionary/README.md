@@ -1,6 +1,6 @@
 # Jupiter Data Dictionary
    
- The Jupiter Data Dictionary is a collection of living documents. Below you will find the Juputiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  See [application profiles] (https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profiles) for current deployment specifications in Jupiter. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.
+ The Jupiter Data Dictionary is a collection of living documents. Below you will find the Juputiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  See [application profiles](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profiles)  for current deployment specifications in Jupiter. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.
 # Namespaces
    
    **bibo:** http://purl.org/ontology/bibo/  
