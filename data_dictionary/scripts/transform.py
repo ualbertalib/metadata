@@ -7,11 +7,10 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 
 def main():
-	#output = processOwlDocument()
+	output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
-	#displayWelcome()
-	#displayBody(output)
+	dataDictionaryDisplay(output)
 	#fetchFromTriples()
 	#profileDisplay()
 
@@ -89,7 +88,7 @@ def profileDisplay():
 
 
 
-def dataDictionaryDisplay():
+def dataDictionaryDisplay(output):
 	print('# Jupiter Data Dictionary')
 	print('   ')
 	print("%s" % ddWelcome)
