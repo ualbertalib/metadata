@@ -46,7 +46,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **repeat** can this property occur more than once? (boolean)  
    **required** is the property required to have a value? (boolean)  
    **sort** is this property sortable in SOLR? (boolean)  
-   **tokenize** is this property tokenized in SOLR? (boolean  
+   **tokenize** is this property tokenized in SOLR? (boolean)  
 
 # Profile by annotation
 ### backwardCompatibleWith  
@@ -67,50 +67,50 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by property
 
 ### dc:Creator  
-display: **false**  
+repeat: **false**  
+dataType: **text**  
+facet: **false**  
 required: **false**  
-propertyName: **creator**  
-displayLabel: **none**  
+display: **false**  
+sort: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
-facet: **false**  
 backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
-dataType: **text**  
-sort: **false**  
-repeat: **false**  
 onForm: **false**  
-### dcterms:description  
-display: **true**  
-required: **false**  
-propertyName: **description**  
-displayLabel: **description**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
-facet: **false**  
-dataType: **text**  
-sort: **false**  
-repeat: **false**  
-onForm: **true**  
-### dcterms:title  
-display: **true**  
-comments: **required for communties**  
-required: **true**  
-propertyName: **title**  
-displayLabel: **title**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
-facet: **false**  
-dataType: **text**  
-sort: **true**  
-repeat: **false**  
-onForm: **true**  
-### ual:depositor  
-display: **false**  
-comments: **legacy property; usage: admin email.**  
-required: **false**  
-propertyName: **depositor**  
 displayLabel: **none**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
-facet: **false**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
-dataType: **auto**  
-sort: **false**  
+propertyName: **creator**  
+### dcterms:description  
 repeat: **false**  
+dataType: **text**  
+facet: **false**  
+required: **false**  
+display: **true**  
+sort: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
+onForm: **true**  
+displayLabel: **description**  
+propertyName: **description**  
+### dcterms:title  
+repeat: **false**  
+dataType: **text**  
+facet: **false**  
+required: **true**  
+display: **true**  
+sort: **true**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
+onForm: **true**  
+displayLabel: **title**  
+propertyName: **title**  
+comments: **required for communties**  
+### ual:depositor  
+repeat: **false**  
+dataType: **auto**  
+facet: **false**  
+required: **false**  
+display: **false**  
+sort: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
 onForm: **false**  
+displayLabel: **none**  
+propertyName: **depositor**  
+comments: **legacy property; usage: admin email.**  

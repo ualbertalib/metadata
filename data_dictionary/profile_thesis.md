@@ -46,7 +46,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **repeat** can this property occur more than once? (boolean)  
    **required** is the property required to have a value? (boolean)  
    **sort** is this property sortable in SOLR? (boolean)  
-   **tokenize** is this property tokenized in SOLR? (boolean  
+   **tokenize** is this property tokenized in SOLR? (boolean)  
 
 # Profile by annotation
 ### backwardCompatibleWith  
@@ -125,115 +125,118 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by property
 
 ### prism:doi  
-displayLabel: **doi**  
-onForm: **none**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi**  
-repeat: **false**  
 propertyName: **digital object identifier**  
-facet: **false**  
-sort: **false**  
-comments: **always doi (currently set to searchable (should this be changed?)**  
 dataType: **auto**  
-### dc:Rights  
-displayLabel: **rights**  
-onForm: **none**  
-display: **false**  
-required: **true**  
-backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
-repeat: **true**  
-propertyName: **rights**  
-facet: **false**  
-sort: **false**  
-dataType: **text**  
-### dc:Subject  
-displayLabel: **subject/keyword**  
-onForm: **none**  
-display: **true**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcubject**  
-repeat: **true**  
-propertyName: **subject**  
-facet: **true**  
-sort: **false**  
-dataType: **text**  
-### dcterms:abstract  
-displayLabel: **abstract**  
-onForm: **none**  
-indexAs: **http://purl.org/dc/terms/description**  
-display: **false**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract**  
-repeat: **true**  
-propertyName: **abstract**  
-facet: **none**  
-sort: **false**  
-dataType: **text**  
-### dcterms:alternative  
-displayLabel: **none**  
-onForm: **none**  
-display: **true**  
-required: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
 repeat: **false**  
-propertyName: **alternative title**  
-facet: **false**  
-sort: **false**  
-dataType: **text**  
-### dcterms:dateAccepted  
-displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdateaccepted**  
-repeat: **false**  
-propertyName: **date accepted**  
-facet: **false**  
-sort: **false**  
-dataType: **auto**  
-### dcterms:dateSubmitted  
-displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdatesubmitted**  
-repeat: **false**  
-propertyName: **date submitted**  
-facet: **false**  
-sort: **false**  
-dataType: **auto**  
-### dcterms:identifier  
 displayLabel: **doi**  
-onForm: **none**  
-indexAs: **http://prismstandard.org/namespaces/basic/3.0/doi**  
-display: **true**  
-required: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
-repeat: **false**  
-propertyName: **identifier**  
-facet: **false**  
 sort: **false**  
-comments: **often doi, but not always; currently set to searchable (should this be changed?)**  
-dataType: **text**  
-### dcterms:isVersionOf  
-displayLabel: **citation for previous publication**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
 onForm: **none**  
-display: **false**  
-required: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof**  
-repeat: **false**  
-propertyName: **is version of**  
-facet: **false**  
-sort: **false**  
-dataType: **text**  
-### dcterms:language  
-displayLabel: **language**  
-onForm: **none**  
-display: **true**  
 required: **true**  
+comments: **always doi (currently set to searchable (should this be changed?)**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi**  
+### dc:Rights  
+propertyName: **rights**  
+dataType: **text**  
+repeat: **true**  
+displayLabel: **rights**  
+sort: **false**  
+backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
+onForm: **none**  
+required: **true**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
+### dc:Subject  
+propertyName: **subject**  
+dataType: **text**  
+repeat: **true**  
+displayLabel: **subject/keyword**  
+sort: **false**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **true**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcubject**  
+### dcterms:abstract  
+propertyName: **abstract**  
+indexAs: **http://purl.org/dc/terms/description**  
+dataType: **text**  
+repeat: **true**  
+displayLabel: **abstract**  
+sort: **false**  
+onForm: **none**  
+required: **true**  
+display: **false**  
+facet: **none**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract**  
+### dcterms:alternative  
+propertyName: **alternative title**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+onForm: **none**  
+required: **false**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
+### dcterms:dateAccepted  
+propertyName: **date accepted**  
+dataType: **auto**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+onForm: **none**  
+required: **true**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdateaccepted**  
+### dcterms:dateSubmitted  
+propertyName: **date submitted**  
+dataType: **auto**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+onForm: **none**  
+required: **true**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdatesubmitted**  
+### dcterms:identifier  
+propertyName: **identifier**  
+indexAs: **http://prismstandard.org/namespaces/basic/3.0/doi**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **doi**  
+sort: **false**  
+onForm: **none**  
+required: **false**  
+comments: **often doi, but not always; currently set to searchable (should this be changed?)**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
+### dcterms:isVersionOf  
+propertyName: **is version of**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **citation for previous publication**  
+sort: **false**  
+onForm: **none**  
+required: **false**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof**  
+### dcterms:language  
+propertyName: **language**  
+dataType: **uri**  
+repeat: **true**  
+required: **true**  
+displayLabel: **language**  
+sort: **false**  
+onForm: **none**  
 values displayed on form:  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
@@ -250,210 +253,207 @@ values displayed on form:
   * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
-repeat: **true**  
-propertyName: **language**  
+display: **true**  
 facet: **true**  
-sort: **false**  
-dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
 ### dcterms:title  
-displayLabel: **none**  
-onForm: **none**  
-display: **true**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
-repeat: **false**  
 propertyName: **title**  
-facet: **false**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **none**  
 sort: **true**  
-dataType: **text**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
 ### dcterms:type  
-displayLabel: **type of item**  
-onForm: **none**  
-display: **false**  
-required: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
-repeat: **true**  
 propertyName: **type**  
-facet: **true**  
-sort: **false**  
 dataType: **uri**  
+repeat: **true**  
+displayLabel: **type of item**  
+sort: **false**  
+onForm: **none**  
+required: **true**  
+display: **false**  
+facet: **true**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
 ### bibo:degree  
-displayLabel: **degree**  
-onForm: **none**  
-display: **true**  
-required: **false**  
-backwardCompatibleWith: **http://purl.org/ontology/bibo/ThesisDegree**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibodegree**  
-repeat: **false**  
 propertyName: **degree**  
-facet: **false**  
-sort: **false**  
 dataType: **enumerated text**  
+repeat: **false**  
+displayLabel: **degree**  
+sort: **false**  
+backwardCompatibleWith: **http://purl.org/ontology/bibo/ThesisDegree**  
+onForm: **none**  
+required: **false**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibodegree**  
 ### ual:commiteeMember  
-displayLabel: **examining committee member and department**  
-onForm: **none**  
-indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/role/thesiscommitteemember**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualcommiteeember**  
-repeat: **true**  
 propertyName: **commitee member**  
-facet: **none**  
-sort: **none**  
+indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
 dataType: **text**  
-### ual:department  
-displayLabel: **department**  
-onForm: **none**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://vivoweb.org/ontology/core#AcademicDepartment**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepartment**  
 repeat: **true**  
-propertyName: **department**  
-facet: **false**  
-sort: **false**  
-dataType: **text**  
-### ual:depositor  
-displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **false**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
-repeat: **false**  
-propertyName: **depositor**  
-facet: **false**  
-sort: **false**  
-comments: **legacy property; usage: admin email.**  
-dataType: **auto**  
-### ual:dissertant  
-displayLabel: **author or creator**  
-onForm: **none**  
-indexAs: **http://purl.org/dc/elements/1.1/Creator**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dis**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdissertant**  
-repeat: **false**  
-propertyName: **dissertant**  
-facet: **none**  
+displayLabel: **examining committee member and department**  
 sort: **none**  
-dataType: **text**  
-### ual:fedora3Handle  
-displayLabel: **none**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/role/thesiscommitteemember**  
 onForm: **none**  
-display: **false**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3handle**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle**  
-repeat: **false**  
-propertyName: **fedora 3 handle**  
-facet: **false**  
-sort: **false**  
-comments: **legacy property**  
-dataType: **text**  
-### ual:fedora3UUID  
-displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid**  
-repeat: **false**  
-propertyName: **fedora 3 uuid**  
-facet: **false**  
-sort: **false**  
-comments: **legacy property**  
-dataType: **text**  
-### ual:graduationDate  
-displayLabel: **graduation date**  
-onForm: **none**  
-display: **true**  
 required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/date/graduationdate**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualgraduationdate**  
-repeat: **false**  
-propertyName: **graduation date**  
-facet: **false**  
+display: **true**  
+facet: **none**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualcommiteeember**  
+### ual:department  
+propertyName: **department**  
+dataType: **text**  
+repeat: **true**  
+displayLabel: **department**  
 sort: **false**  
+backwardCompatibleWith: **http://vivoweb.org/ontology/core#AcademicDepartment**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepartment**  
+### ual:depositor  
+propertyName: **depositor**  
 dataType: **auto**  
-### ual:institution  
-displayLabel: **degree grantor**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
 onForm: **none**  
-display: **true**  
+required: **false**  
+comments: **legacy property; usage: admin email.**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
+### ual:dissertant  
+propertyName: **dissertant**  
+indexAs: **http://purl.org/dc/elements/1.1/Creator**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **author or creator**  
+sort: **none**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dis**  
+onForm: **none**  
 required: **true**  
+display: **true**  
+facet: **none**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdissertant**  
+### ual:fedora3Handle  
+propertyName: **fedora 3 handle**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3handle**  
+onForm: **none**  
+required: **false**  
+comments: **legacy property**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle**  
+### ual:fedora3UUID  
+propertyName: **fedora 3 uuid**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
+onForm: **none**  
+required: **false**  
+comments: **legacy property**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid**  
+### ual:graduationDate  
+propertyName: **graduation date**  
+dataType: **auto**  
+repeat: **false**  
+displayLabel: **graduation date**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/date/graduationdate**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualgraduationdate**  
+### ual:institution  
+propertyName: **institution**  
+dataType: **auto**  
+repeat: **false**  
+required: **true**  
+displayLabel: **degree grantor**  
+sort: **false**  
 backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dgg**  
+onForm: **none**  
 values displayed on form:  
   * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
 
-repeat: **false**  
-propertyName: **institution**  
+display: **true**  
 facet: **false**  
-sort: **false**  
-dataType: **auto**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualinstitution**  
 ### ual:proquest  
-displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/proquest**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualproquest**  
-repeat: **false**  
 propertyName: **proquest**  
-facet: **false**  
-sort: **false**  
-comments: **legacy property**  
 dataType: **text**  
-### ual:specialization  
-displayLabel: **specialization**  
-onForm: **none**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/thesis/specialization**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualspecialization**  
-repeat: **true**  
-propertyName: **specialization**  
-facet: **false**  
-sort: **false**  
-dataType: **text**  
-### ual:supervisor  
-displayLabel: **supervisor and department**  
-onForm: **none**  
-indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
-display: **true**  
-required: **true**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/ths**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualsupervisor**  
-repeat: **true**  
-propertyName: **supervisor**  
-facet: **none**  
-sort: **none**  
-dataType: **text**  
-### ual:thesisLevel  
-displayLabel: **degree level**  
-onForm: **none**  
-display: **true**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/thesis/thesislevel**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualthesislevel**  
 repeat: **false**  
-propertyName: **thesis level**  
-facet: **false**  
-sort: **false**  
-dataType: **uri**  
-### ual:unicorn  
 displayLabel: **none**  
-onForm: **none**  
-display: **false**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn**  
-repeat: **false**  
-propertyName: **unicorn**  
-facet: **false**  
 sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/proquest**  
+onForm: **none**  
+required: **false**  
 comments: **legacy property**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualproquest**  
+### ual:specialization  
+propertyName: **specialization**  
 dataType: **text**  
+repeat: **true**  
+displayLabel: **specialization**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/thesis/specialization**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualspecialization**  
+### ual:supervisor  
+propertyName: **supervisor**  
+indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
+dataType: **text**  
+repeat: **true**  
+displayLabel: **supervisor and department**  
+sort: **none**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/ths**  
+onForm: **none**  
+required: **true**  
+display: **true**  
+facet: **none**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualsupervisor**  
+### ual:thesisLevel  
+propertyName: **thesis level**  
+dataType: **uri**  
+repeat: **false**  
+displayLabel: **degree level**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/thesis/thesislevel**  
+onForm: **none**  
+required: **false**  
+display: **true**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualthesislevel**  
+### ual:unicorn  
+propertyName: **unicorn**  
+dataType: **text**  
+repeat: **false**  
+displayLabel: **none**  
+sort: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
+onForm: **none**  
+required: **false**  
+comments: **legacy property**  
+display: **false**  
+facet: **false**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn**  

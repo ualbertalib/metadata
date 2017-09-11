@@ -10,8 +10,8 @@ def main():
 	#output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
-	fetchFromTriples()
-	profileDisplay("generic") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
+	#fetchFromTriples()
+	profileDisplay("collection") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
 	#dataDictionaryDisplay(output)
 
 def processOwlDocument():

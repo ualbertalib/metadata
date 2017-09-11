@@ -42,7 +42,7 @@ profileDefinitions = [
 	{"term": "repeat", "def": "can this property occur more than once? (boolean)"},
 	{"term": "required", "def": "is the property required to have a value? (boolean)"},
 	{"term": "sort", "def": "is this property sortable in SOLR? (boolean)"},
-	{"term": "tokenize", "def": "is this property tokenized in SOLR? (boolean"}
+	{"term": "tokenize", "def": "is this property tokenized in SOLR? (boolean)"}
 ]
 
 definitions = [
