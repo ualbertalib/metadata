@@ -10,8 +10,8 @@ def main():
 	#output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
-	#fetchFromTriples()
-	profileDisplay("thesis") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
+	fetchFromTriples()
+	profileDisplay("generic") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
 	#dataDictionaryDisplay(output)
 
 def processOwlDocument():
@@ -197,7 +197,6 @@ def fetchFromTriples():
 		filename = '../profiles/%s/profile.json' % ptype
 		with open(filename, 'w+') as p:
 			json.dump(profile, p, sort_keys=True, indent=4)
-	print("profile data has been shipped from triplestore to json")
 
 
 def processProfileData(output):
