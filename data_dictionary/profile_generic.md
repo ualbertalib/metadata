@@ -230,7 +230,7 @@ comments: **often doi, but not always; currently set to searchable (should this 
 indexAs: **http://prismstandard.org/namespaces/basic/3.0/doi**  
 onForm: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
-repeat: **true**  
+repeat: **false**  
 display: **true**  
 required: **false**  
 displayLabel: **doi**  
@@ -379,7 +379,7 @@ facet: **true**
 comments: **'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'**  
 onForm: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus**  
-repeat: **true**  
+repeat: **false**  
 display: **true**  
 required: **false**  
 values displayed on form:  
