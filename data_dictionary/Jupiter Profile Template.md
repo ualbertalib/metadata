@@ -110,7 +110,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | degree           | `bibo:degree`          | MUST             | Literal                | {1,1}            |
 | thesislevel      | `ual:thesislevel`      | MUST             | Literal                | {1,1}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| nicorn           | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
+| unicorn           | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
 | fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
 | fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
 | proquest         | `ual:proquest`         | MAY              | Literal                | {0,1}            |
