@@ -40,6 +40,19 @@ definitions = [
 	{"term": "obo:IAO_0000115", "def": "description"}
 ]
 
+profileDefinitions = [
+	{"term": "@type", "def": "the object class. Particulary important for determining scope for use of terms and values."},
+	{"term": "rdfs:comment", "def": "defines the term or property"},
+	{"term": "rdfs:domain", "def": "indicates terms (classes, values, datatypes, etc.) that may invoke a given property"},
+	{"term": "rdfs:range", "def": "indicates terms (classes, values, datatypes, etc.) that must be used with this property"},
+	{"term": "rdfs:label", "def": "the name of the term or property"},
+	{"term": "rdfs:preflabel", "def": "the label preferred for display"},
+	{"term": "owl:deprecated", "def": "indicates whether the property or term is active in the current deployment (default = false)"},
+	{"term": "owl:backwardCompatible", "def": "mappings to previous vocabularies used in previous deployments"},
+	{"term": "obo:IAO_0000112", "def": "usage example"},
+	{"term": "obo:IAO_0000115", "def": "description"}
+]
+
 ddWelcome = ' The Jupiter Data Dictionary is a collection of living documents. Below you will find the Juputiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  See [application profiles](http://github.com/ualbertalib/metadata/tree/master/data_dictionary/profiles) for current deployment specifications in Jupiter. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.'
 
 profileWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.'

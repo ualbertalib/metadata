@@ -2,7 +2,7 @@ import json
 import csv
 from config import namespaces as ns
 from config import definitions as defs
-from config import ddWelcome, profileWelcome
+from config import ddWelcome, profileWelcome, profileDefinitions
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 
@@ -10,10 +10,9 @@ def main():
 	output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
-	dataDictionaryDisplay(output)
 	#fetchFromTriples()
-	#profileDisplay()
-
+	#profileDisplay("generic")
+	dataDictionaryDisplay(output)
 
 def processOwlDocument():
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
@@ -57,60 +56,82 @@ def add(type, resource, output):
 	return(output)
 
 
-def profileDisplay():
-	for ptype in ["collection", "generic", "thesis"]:
-		filename = "../profiles/%s/profile.json" % (ptype)
-		with open(filename) as data:
-			data = sorted(json.load(data).items())
-			print('# Jupiter %s Application Profile' % (ptype.title()))
-			print('   ')
-			print("%s" % profileWelcome)
-			print('   ')
-			# declares namespaces (set in config.py)
-			print('# Namespaces')
-			print('   ')
-			for n in ns:
-				print('   **%s:** %s  ' % (n['prefix'], n['uri']))
-				print('   ')
-			print('   ')
-			for key, values in data:
-				print('### %s' % (addPrefixes(key)))
-				print('   ')
-				# for k, v in sorted(values).items():
-				for i in values:
-					if i == 'acceptedValues':
-						for j in values[i]:
-							if j['onForm'] == 'true':
-								print(' **%s** (on form): %s (%s)' % (i, j['label'], addPrefixes(j['uri'])))
-					else:
-						print(' **%s**: %s' % (i, values[i]) )
-				print('   ')
-
+def profileDisplay(ptype):
+	filename = "../profiles/%s/profile.json" % (ptype)
+	with open(filename) as profileData:
+		dataOriginal = json.load(profileData)
+		data = sorted(dataOriginal.items())
+		print('# Jupiter %s Application Profile' % (ptype.title()))
+		print('')
+		print("%s" % profileWelcome)
+		print('')
+		print('# Namespaces  ')
+		for n in ns:
+			print('**%s:** %s  ' % (n['prefix'], n['uri']))
+		print('')
+		print('# Definitions')
+		print('')
+		for d in profileDefinitions:
+			print('   **%s** %s  ' % (d['term'], d['def']))
+		print('')
+		print('# Profile by annotation')
+		annotations = []
+		display = False
+		for key, value in data:
+			for key in value.keys():
+				annotations.append(key)
+		annotations = list(set(annotations))
+		for annotation in annotations:
+			for key, value in data:
+				if (annotation in value) and (value[annotation] == 'true'):
+					display = True
+			if display == True:
+				print('### %s  ' % (removeNS(annotation)))
+				display = False
+			for key, value in data:
+				if (annotation in value) and (value[annotation] == 'true'):
+					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(key), addPrefixes(key).replace(':', '').lower()))
+		for key, value in data:
+				print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(key), addPrefixes(key).replace(':', '').lower()))
+		print('')
+		print('# Profile by property')
+		print('')
+		for key, values in data:
+			print('### %s  ' % (addPrefixes(key)))
+			for i in values:
+				if i == 'acceptedValues':
+					print("values displayed on form:  ")
+					for j in values[i]:
+						if j['onForm'] == 'true':
+							print('  * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+					print('')
+				elif (i != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (values[i] != ''):
+					print("%s: **%s**  " % (removeNS(i), values[i]))
 
 
 def dataDictionaryDisplay(output):
 	print('# Jupiter Data Dictionary')
-	print('   ')
+	print('')
 	print("%s" % ddWelcome)
 	# declares namespaces (set in config.py)
 	print('# Namespaces')
-	print('   ')
+	print('')
 	for n in ns:
 		print('   **%s:** %s  ' % (n['prefix'], n['uri']))
-	print('   ')
+	print('')
 	# defines annotations (set in config.py)
 	print('# Definitions')
-	print('   ')
+	print('')
 	for d in defs:
 		print('   **%s** %s  ' % (d['term'], d['def']))
-	print('   ')
+	print('')
 	print('# Table of Contents')
 	for t, resources in sorted(output.items()):
 		print("### %s " % (t))
 		for s, resource in sorted(resources.items()):
 			print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
-		print('   ')
-	print('   ')
+		print('')
+	print('')
 	# sorts output alphabetically (so the display is always the same order)
 	for t, resources in sorted(output.items()):
 		# prints the key (Property, Term, or Value)
@@ -123,14 +144,14 @@ def dataDictionaryDisplay(output):
 			for annotationName, annotationValues in sorted(resource.items()):
 				# checks to see if this is an empty list
 				if len(annotationValues) > 0:
-					print('   ')
+					print('')
 					# prints the name of the annotation
 					print('   **%s**   ' % (addPrefixes(annotationName)))
 					# prints annotation values line by line
 					for value in annotationValues:
 						print('  %s  ' % (value))
 			# print("- [ ] Mark for editing")
-			print('   ')
+			print('')
 			print('***')
 
 
@@ -173,7 +194,7 @@ def fetchFromTriples():
 		filename = '../profiles/%s/profile.json' % ptype
 		with open(filename, 'w+') as p:
 			json.dump(profile, p, sort_keys=True, indent=4)
-
+	print("profile data has been shipped from triplestore to json")
 
 
 def processProfileData(output):
@@ -189,18 +210,18 @@ def processProfileData(output):
 				profile = {
 					"uri": row['uri'],  # string
 					"conf": {
-						"required": bool(row['required']),  # enumerated string: "optional", "required"
-						"repeat": bool(row['repeat']),  # boolean
-						"facet": bool(row['facet']),  # boolean
+						"required": row['required'],  # enumerated string: "optional", "required"
+						"repeat": row['repeat'],  # boolean
+						"facet": row['facet'],  # boolean
 						"tokenize": "",  # boolean
-						"display": bool(row['display']),  # boolean
-						"sort": bool(row['sort']),  # boolean
-						"onForm": bool(row['onForm']),  # boolean
+						"display": row['display'],  # boolean
+						"sort": row['sort'],  # boolean
+						"onForm": row['onForm'],  # boolean
 						"propertyName": "",  # string
 						"displayLabel": row['displayLabel'],  # string
 						"acceptedValues": [],
 						"dataType": row['dataType'],  # enumerated string: "string", "enumeratedString", "enumeratedURI", "dateTime"
-						"comments": row["comments"].replace("\"","'"),  # string
+						"comments": row["comments"].replace("\"", "'"),  # string
 						"backwardCompatibleWith": row["backwardCompatibleWith"],  # string
 						"indexAs": row['indexAs'],  # string
 						"definedBy": row['definedBy']  # string
@@ -215,6 +236,7 @@ def processProfileData(output):
 			filename = '../profiles/%s/profile.json' % ptype
 			with open(filename, 'w+') as p:
 				json.dump(profiles, p, sort_keys=True, indent=4)
+	print('profile data has been shipped from csv to json')
 
 
 def shipProfileToTriples():
@@ -245,6 +267,7 @@ def shipProfileToTriples():
 				sparql.query()
 				print(query)
 				print('')
+	print("profile data has been shipped from json data to triplestore")
 
 if __name__ == "__main__":
 	main()
