@@ -166,7 +166,7 @@ propertyName: **abstract**
 displayLabel: **abstract**  
 sort: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract**  
-repeat: **true**  
+repeat: **false**  
 ### dcterms:alternative  
 display: **true**  
 dataType: **text**  
@@ -265,7 +265,7 @@ repeat: **true**
 display: **true**  
 dataType: **enumerated text**  
 backwardCompatibleWith: **http://purl.org/ontology/bibo/ThesisDegree**  
-required: **false**  
+required: **true**  
 propertyName: **degree**  
 displayLabel: **degree**  
 facet: **false**  
