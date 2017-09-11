@@ -7,12 +7,12 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 
 def main():
-	output = processOwlDocument()
+	#output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
 	#fetchFromTriples()
-	#profileDisplay("generic")
-	dataDictionaryDisplay(output)
+	profileDisplay("thesis")
+	#dataDictionaryDisplay(output)
 
 def processOwlDocument():
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
@@ -80,19 +80,19 @@ def profileDisplay(ptype):
 		for key, value in data:
 			for key in value.keys():
 				annotations.append(key)
-		annotations = list(set(annotations))
+		annotations = sorted(list(set(annotations)))
 		for annotation in annotations:
 			for key, value in data:
-				if (annotation in value) and (value[annotation] == 'true'):
+				if (annotation in value) and (('true' in value[annotation]) or ('indexAs' in annotation)):
 					display = True
 			if display == True:
 				print('### %s  ' % (removeNS(annotation)))
 				display = False
 			for key, value in data:
-				if (annotation in value) and (value[annotation] == 'true'):
-					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(key), addPrefixes(key).replace(':', '').lower()))
-		for key, value in data:
-				print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(key), addPrefixes(key).replace(':', '').lower()))
+				if (annotation in value) and ('true' in value[annotation]):
+					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
+				elif (annotation in value) and ( ('indexAs' in annotation) and (value[annotation] !='')):
+					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
 		print('')
 		print('# Profile by property')
 		print('')
@@ -107,6 +107,7 @@ def profileDisplay(ptype):
 					print('')
 				elif (i != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (values[i] != ''):
 					print("%s: **%s**  " % (removeNS(i), values[i]))
+
 
 
 def dataDictionaryDisplay(output):
@@ -203,7 +204,7 @@ def processProfileData(output):
 
 	for ptype in ["collection", "generic", "thesis"]:
 		profiles = []
-		filename = "../profiles/%s.csv" % (ptype)
+		filename = "../profiles/original_profile_data/%s.csv" % (ptype)
 		with open(filename, newline='') as data:
 			reader = csv.DictReader(data)
 			for row in reader:
