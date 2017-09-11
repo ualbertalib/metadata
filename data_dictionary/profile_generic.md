@@ -50,221 +50,223 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
- [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) is compatible with [id/doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/doi)  
- [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) is compatible with [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscontributor)  
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) is compatible with [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreator)  
- [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) is compatible with [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrights)  
- [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark) is compatible with [id/arkid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/arkid)  
- [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor) is compatible with [dpt](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#mreldpt)  
- [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle) is compatible with [id/fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/fedora3handle)  
- [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid) is compatible with [id/fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/fedora3uuid)  
- [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnafile) is compatible with [id/halpern:nnafile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/halpernnnafile)  
- [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnaitem) is compatible with [id/halpern:nnaitem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/halpernnnaitem)  
- [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn) is compatible with [id/unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualid/unicorn)  
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
+  * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) is compatible with http://purl.org/dc/terms/contributor  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) is compatible with http://purl.org/dc/terms/creator  
+  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) is compatible with http://purl.org/dc/terms/rights  
+  * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark) is compatible with http://terms.library.ualberta.ca/id/arkid  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
+  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
+  * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnafile) is compatible with http://terms.library.ualberta.ca/id/halpern:nnafile  
+  * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnaitem) is compatible with http://terms.library.ualberta.ca/id/halpern:nnaitem  
+  * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
 ### display  
- [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) *
- [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) *
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
- [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights) *
- [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
- [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative) *
- [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated) *
- [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) *
- [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier) *
- [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof) *
- [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
- [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) *
- [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation) *
- [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermssource) *
- [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) *
- [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) *
- [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
- [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
- [status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus) *
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi  )  
+  * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights  )  
+  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative  )  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
+  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  )  
+  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense  )  
+  * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation  )  
+  * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermssource  )  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial  )  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype  )  
+  * [status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus  )  
 ### facet  
- [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) *
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
- [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
- [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
- [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) *
- [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) *
- [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) *
- [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
+  * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  )  
+  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense  )  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial  )  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype  )  
 ### indexAs  
- [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) indexes as [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier)  
- [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) indexes as [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract)  
- [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier) indexes as [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi)  
- [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) indexes as [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject)  
- [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) indexes as [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject)  
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) indexes as [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) indexes as [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract  )  
+  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier) indexes as [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi  )  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) indexes as [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) indexes as [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
 ### onForm  
- [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) *
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
- [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights) *
- [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
- [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated) *
- [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) *
- [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof) *
- [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
- [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense) *
- [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation) *
- [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermssource) *
- [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) *
- [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) *
- [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
- [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
+  * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights  )  
+  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  )  
+  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense  )  
+  * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation  )  
+  * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermssource  )  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial  )  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype  )  
 ### repeat  
- [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor) *
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
- [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
- [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative) *
- [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier) *
- [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
- [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial) *
- [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal) *
- [status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus) *
+  * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative  )  
+  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  )  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial  )  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal  )  
+  * [status](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus  )  
 ### required  
- [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi) *
- [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) *
- [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject) *
- [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage) *
- [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
- [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype) *
- [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark) *
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi  )  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype  )  
+  * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark  )  
 ### sort  
- [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated) *
- [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle  )  
 
 # Profile by property
 
 ### prism:doi  
-displayLabel: **doi**  
-required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **digital object identifier**  
 dataType: **auto**  
-indexAs: **http://purl.org/dc/terms/identifier**  
-sort: **false**  
-comments: **always doi (currently set to searchable (should this be changed?)**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi**  
-### dc:Contributor  
-displayLabel: **additional contributors**  
-required: **false**  
-backwardCompatibleWith: **http://purl.org/dc/terms/contributor**  
 display: **true**  
-facet: **true**  
-repeat: **true**  
-onForm: **true**  
-propertyName: **contributor**  
-dataType: **text**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor**  
-### dc:Creator  
-displayLabel: **author or creator**  
 required: **true**  
-backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
-display: **true**  
-facet: **true**  
-repeat: **true**  
-onForm: **true**  
-propertyName: **creator**  
-dataType: **text**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
-### dc:Rights  
-displayLabel: **rights**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **true**  
-propertyName: **rights**  
-dataType: **text**  
-sort: **false**  
-comments: **cannot have both dc:license and dc:rights**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
-### dc:Subject  
-displayLabel: **subject/keyword**  
-required: **true**  
-display: **true**  
-facet: **true**  
-repeat: **true**  
-onForm: **true**  
-propertyName: **subject**  
-dataType: **text**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject**  
-### dcterms:alternative  
-displayLabel: **none**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **true**  
 onForm: **false**  
-propertyName: **alternative title**  
-dataType: **text**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
-### dcterms:created  
-displayLabel: **date created**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **true**  
-propertyName: **date created**  
-dataType: **text**  
-sort: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated**  
-### dcterms:description  
-displayLabel: **description**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **true**  
-propertyName: **description**  
-dataType: **text**  
-indexAs: **http://purl.org/dc/terms/abstract**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
-### dcterms:identifier  
+comments: **always doi (currently set to searchable (should this be changed?)**  
 displayLabel: **doi**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **true**  
-onForm: **false**  
-propertyName: **identifier**  
-dataType: **text**  
-indexAs: **http://prismstandard.org/namespaces/basic/3.0/doi**  
-sort: **false**  
-comments: **often doi, but not always; currently set to searchable (should this be changed?)**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
-### dcterms:isVersionOf  
-displayLabel: **citation for previous publication**  
-required: **false**  
-display: **true**  
-facet: **false**  
+propertyName: **digital object identifier**  
 repeat: **false**  
-onForm: **true**  
-propertyName: **is version of**  
-dataType: **text**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
 sort: **false**  
-comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof**  
-### dcterms:language  
-displayLabel: **language**  
-repeat: **true**  
+indexAs: **http://purl.org/dc/terms/identifier**  
+### dc:Contributor  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor**  
 display: **true**  
-facet: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
+required: **false**  
 onForm: **true**  
-propertyName: **language**  
+displayLabel: **additional contributors**  
+propertyName: **contributor**  
+repeat: **true**  
+facet: **true**  
+backwardCompatibleWith: **http://purl.org/dc/terms/contributor**  
+sort: **false**  
+### dc:Creator  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
+display: **true**  
+required: **true**  
+onForm: **true**  
+displayLabel: **author or creator**  
+propertyName: **creator**  
+repeat: **true**  
+facet: **true**  
+backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
+sort: **false**  
+### dc:Rights  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+comments: **cannot have both dc:license and dc:rights**  
+displayLabel: **rights**  
+propertyName: **rights**  
+repeat: **false**  
+facet: **false**  
+sort: **false**  
+### dc:Subject  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject**  
+display: **true**  
+required: **true**  
+onForm: **true**  
+displayLabel: **subject/keyword**  
+propertyName: **subject**  
+repeat: **true**  
+facet: **true**  
+sort: **false**  
+### dcterms:alternative  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
+display: **true**  
+required: **false**  
+onForm: **false**  
+displayLabel: **none**  
+propertyName: **alternative title**  
+repeat: **true**  
+facet: **false**  
+sort: **false**  
+### dcterms:created  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+displayLabel: **date created**  
+propertyName: **date created**  
+repeat: **false**  
+facet: **false**  
+sort: **true**  
+### dcterms:description  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+displayLabel: **description**  
+propertyName: **description**  
+repeat: **false**  
+facet: **false**  
+sort: **false**  
+indexAs: **http://purl.org/dc/terms/abstract**  
+### dcterms:identifier  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
+display: **true**  
+required: **false**  
+onForm: **false**  
+comments: **often doi, but not always; currently set to searchable (should this be changed?)**  
+displayLabel: **doi**  
+propertyName: **identifier**  
+repeat: **true**  
+facet: **false**  
+sort: **false**  
+indexAs: **http://prismstandard.org/namespaces/basic/3.0/doi**  
+### dcterms:isVersionOf  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
+displayLabel: **citation for previous publication**  
+propertyName: **is version of**  
+repeat: **false**  
+facet: **false**  
+sort: **false**  
+### dcterms:language  
 dataType: **uri**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
+sort: **false**  
+display: **true**  
+required: **true**  
+onForm: **true**  
+displayLabel: **language**  
+propertyName: **language**  
+repeat: **true**  
+facet: **true**  
 values displayed on form:  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
@@ -281,18 +283,19 @@ values displayed on form:
   * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
-sort: **false**  
-required: **true**  
 ### dcterms:license  
-displayLabel: **license information**  
-repeat: **false**  
-backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
-display: **true**  
-facet: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense**  
-onForm: **true**  
-propertyName: **license**  
 dataType: **uri**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense**  
+sort: **false**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+comments: **cannot have both dc:license and dc:rights**  
+displayLabel: **license information**  
+propertyName: **license**  
+repeat: **false**  
+facet: **true**  
+backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
 values displayed on form:  
   * **Attribution 4.0 International** (http://creativecommons.org/licenses/by/4.0/)  
   * **Attribution-NonCommercial 3.0 Unported** (http://creativecommons.org/licenses/by-nc/3.0/)  
@@ -309,88 +312,88 @@ values displayed on form:
   * **Attribution-NonCommercial-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-nc-sa/4.0/)  
   * **Attribution-NonCommercial-NoDerivs 3.0 Unported** (http://creativecommons.org/licenses/by-nc-nd/3.0/)  
 
-sort: **false**  
-comments: **cannot have both dc:license and dc:rights**  
-required: **false**  
 ### dcterms:relation  
-displayLabel: **link to related item**  
-required: **false**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **true**  
-propertyName: **relation**  
 dataType: **text**  
-sort: **false**  
-comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation**  
-### dcterms:source  
-displayLabel: **source**  
-required: **false**  
 display: **true**  
-facet: **false**  
-repeat: **false**  
+required: **false**  
 onForm: **true**  
-propertyName: **source**  
-dataType: **text**  
-sort: **false**  
 comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
+displayLabel: **link to related item**  
+propertyName: **relation**  
+repeat: **false**  
+facet: **false**  
+sort: **false**  
+### dcterms:source  
+dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
+display: **true**  
+required: **false**  
+onForm: **true**  
+comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
+displayLabel: **source**  
+propertyName: **source**  
+repeat: **false**  
+facet: **false**  
+sort: **false**  
 ### dcterms:spatial  
-displayLabel: **place**  
-required: **false**  
-display: **true**  
-facet: **true**  
-repeat: **true**  
-onForm: **true**  
-propertyName: **spatial coverage**  
 dataType: **text**  
-indexAs: **http://purl.org/dc/elements/1.1/Subject**  
-sort: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial**  
-### dcterms:temporal  
-displayLabel: **time**  
+display: **true**  
 required: **false**  
-display: **true**  
-facet: **true**  
-repeat: **true**  
 onForm: **true**  
-propertyName: **temporal coverage**  
-dataType: **text**  
+displayLabel: **place**  
+propertyName: **spatial coverage**  
+repeat: **true**  
+facet: **true**  
+sort: **false**  
 indexAs: **http://purl.org/dc/elements/1.1/Subject**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal**  
-### dcterms:title  
-displayLabel: **none**  
-required: **true**  
-display: **true**  
-facet: **false**  
-repeat: **false**  
-onForm: **true**  
-propertyName: **title**  
+### dcterms:temporal  
 dataType: **text**  
-sort: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
-### dcterms:type  
-displayLabel: **type of item**  
-required: **true**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal**  
 display: **true**  
-facet: **true**  
-repeat: **false**  
+required: **false**  
 onForm: **true**  
-propertyName: **type**  
-dataType: **uri**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
-### bibo:status  
-displayLabel: **type of item**  
+displayLabel: **time**  
+propertyName: **temporal coverage**  
 repeat: **true**  
+facet: **true**  
+sort: **false**  
+indexAs: **http://purl.org/dc/elements/1.1/Subject**  
+### dcterms:title  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
 display: **true**  
+required: **true**  
+onForm: **true**  
+displayLabel: **none**  
+propertyName: **title**  
+repeat: **false**  
 facet: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus**  
-onForm: **false**  
-propertyName: **status**  
+sort: **true**  
+### dcterms:type  
+dataType: **uri**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
+display: **true**  
+required: **true**  
+onForm: **true**  
+displayLabel: **type of item**  
+propertyName: **type**  
+repeat: **false**  
+facet: **true**  
+sort: **false**  
+### bibo:status  
 dataType: **auto**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus**  
+sort: **false**  
+display: **true**  
+required: **false**  
+onForm: **false**  
+comments: **'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'**  
+displayLabel: **type of item**  
+propertyName: **status**  
+repeat: **true**  
+facet: **false**  
 values displayed on form:  
   * **unpublished** (http://purl.org/ontology/bibo/status#unpublished)  
   * **published** (http://purl.org/ontology/bibo/status#published)  
@@ -398,96 +401,93 @@ values displayed on form:
   * **submitted** (http://vivoweb.org/ontology/core#submitted)  
   * **accepted** (http://purl.org/ontology/bibo/status#accepted)  
 
-sort: **false**  
-comments: **'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'**  
-required: **false**  
 ### ual:ark  
-displayLabel: **none**  
-required: **true**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/arkid**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **archival resource key id**  
 dataType: **text**  
-sort: **false**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark**  
+display: **false**  
+required: **true**  
+onForm: **false**  
+displayLabel: **none**  
+propertyName: **archival resource key id**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/arkid**  
+sort: **false**  
 ### ual:depositor  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **depositor**  
 dataType: **auto**  
-sort: **false**  
-comments: **legacy property; usage: admin email.**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
+display: **false**  
+required: **false**  
+onForm: **false**  
+comments: **legacy property; usage: admin email.**  
+displayLabel: **none**  
+propertyName: **depositor**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
+sort: **false**  
 ### ual:fedora3Handle  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3handle**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **fedora 3 handle**  
 dataType: **text**  
-sort: **false**  
-comments: **legacy property**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle**  
+display: **false**  
+required: **false**  
+onForm: **false**  
+comments: **legacy property**  
+displayLabel: **none**  
+propertyName: **fedora 3 handle**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3handle**  
+sort: **false**  
 ### ual:fedora3UUID  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **fedora 3 uuid**  
 dataType: **text**  
-sort: **false**  
-comments: **legacy property**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid**  
+display: **false**  
+required: **false**  
+onForm: **false**  
+comments: **legacy property**  
+displayLabel: **none**  
+propertyName: **fedora 3 uuid**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
+sort: **false**  
 ### ual:nnaFile  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnafile**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **northern north america filename**  
 dataType: **text**  
-sort: **false**  
-comments: **legacy property**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnafile**  
+display: **false**  
+required: **false**  
+onForm: **false**  
+comments: **legacy property**  
+displayLabel: **none**  
+propertyName: **northern north america filename**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnafile**  
+sort: **false**  
 ### ual:nnaItem  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnaitem**  
-display: **false**  
-facet: **false**  
-repeat: **false**  
-onForm: **false**  
-propertyName: **northern north america item id**  
 dataType: **text**  
-sort: **false**  
-comments: **legacy property**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnaitem**  
-### ual:unicorn  
-displayLabel: **none**  
-required: **false**  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
 display: **false**  
-facet: **false**  
-repeat: **false**  
+required: **false**  
 onForm: **false**  
-propertyName: **unicorn**  
-dataType: **text**  
-sort: **false**  
 comments: **legacy property**  
+displayLabel: **none**  
+propertyName: **northern north america item id**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnaitem**  
+sort: **false**  
+### ual:unicorn  
+dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn**  
+display: **false**  
+required: **false**  
+onForm: **false**  
+comments: **legacy property**  
+displayLabel: **none**  
+propertyName: **unicorn**  
+repeat: **false**  
+facet: **false**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
+sort: **false**  

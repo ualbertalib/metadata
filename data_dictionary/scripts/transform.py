@@ -11,7 +11,7 @@ def main():
 	#processProfileData(output)
 	#shipProfileToTriples()
 	#fetchFromTriples()
-	profileDisplay("generic")
+	profileDisplay("thesis") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
 	#dataDictionaryDisplay(output)
 
 def processOwlDocument():
@@ -85,16 +85,16 @@ def profileDisplay(ptype):
 			for key, value in data:
 				if (annotation in value) and (('true' in value[annotation]) or ('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
 					display = True
-			if display == True:
+			if display is True:
 				print('### %s  ' % (removeNS(annotation)))
 				display = False
 			for key, value in data:
 				if (annotation in value) and ('true' in value[annotation]):
-					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
-				elif (annotation in value) and ( ('indexAs' in annotation) and (value[annotation] !='')):
-					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
-				elif (annotation in value) and ( ('backwardCompatibleWith' in annotation) and (value[annotation] !='')):
-					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) is compatible with [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
+					print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
+				elif (annotation in value) and (('indexAs' in annotation) and (value[annotation] != '')):
+					print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
+				elif (annotation in value) and (('backwardCompatibleWith' in annotation) and (value[annotation] != '')):
+					print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) is compatible with %s  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), value[annotation]))
 		print('')
 		print('# Profile by property')
 		print('')
@@ -132,7 +132,7 @@ def dataDictionaryDisplay(output):
 	for t, resources in sorted(output.items()):
 		print("### %s " % (t))
 		for s, resource in sorted(resources.items()):
-			print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
+			print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
 		print('')
 	print('')
 	# sorts output alphabetically (so the display is always the same order)
