@@ -61,9 +61,15 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
+| creator          | `dc:creator`           | MUST             | Literal                | {1,n}            |
+| contributor      | `dc:contributor`       | MAY              | Literal                | {0,n}            |
+| depositor        | `ual:depositor`        | MAY              | Literal                | {0,1}            |
 | type             | `dcterms:type`         | MUST             | Literal                | {1,1}            |
 | ark              | `ual:ark`              | MUST             | Literal                | {1,1}            |
 | subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
+| temporal         | `dcterms:temporal`     | MAY              | Literal                | {0,n}            |
+| spatial          | `dcterms:spatial`      | MAY              | Literal                | {0,n}            |
+| created          | `dcterms:created`      | MAY              | Literal                | {0,1}            |
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
