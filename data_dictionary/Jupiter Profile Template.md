@@ -67,7 +67,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| nicorn           | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
+| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
 | fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
 | fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
 | language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
