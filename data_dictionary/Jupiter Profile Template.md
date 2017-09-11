@@ -64,8 +64,8 @@ This model describes the Jupiter project proposed data model and its use cases.
 | creator          | `dc:creator`           | MUST             | Literal                | {1,n}            |
 | contributor      | `dc:contributor`       | MAY              | Literal                | {0,n}            |
 | depositor        | `ual:depositor`        | MAY              | Literal                | {0,1}            |
-| type             | `dcterms:type`         | MUST             | Literal                | {1,1}            |
-| ark              | `ual:ark`              | MUST             | Literal                | {1,1}            |
+| type             | `dcterms:type`         | MUST             | uri                    | {1,1}            |
+| status           | `bibo:status`          | MAY              | auto                   | {0,1}            |
 | subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
 | temporal         | `dcterms:temporal`     | MAY              | Literal                | {0,n}            |
 | spatial          | `dcterms:spatial`      | MAY              | Literal                | {0,n}            |
@@ -73,10 +73,13 @@ This model describes the Jupiter project proposed data model and its use cases.
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
-| fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
-| fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
-| language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
+| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,1}            |
+| ark              | `ual:ark`              | MAY              | Literal                | {0,1}            |
+| fedora 3 uuid    | `ual:fedora3UUID`      | MAY              | Literal                | {0,1}            |
+| fedora 3 handle  | `ual:fedora3Handle`    | MAY              | Literal                | {0,1}            |
+| northern north america filename | `ual:nnaFile` | MAY        | Literal                | {0,1}            |
+| northern north america item id | `ual:nnaItem` | MAY         | Literal                | {0,1}            |
+| language         | `dcterms:language`     | MUST             | uri                    | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
