@@ -110,13 +110,13 @@ This model describes the Jupiter project proposed data model and its use cases.
 | degree           | `bibo:degree`          | MUST             | Literal                | {1,1}            |
 | thesislevel      | `ual:thesislevel`      | MUST             | Literal                | {1,1}            |
 | identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| unicorn           | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
+| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
 | fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
 | fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
 | proquest         | `ual:proquest`         | MAY              | Literal                | {0,1}            |
 | digital object identifier | `prism:doi`   | MUST             | Literal                | {1,1}            |
 | abstract         | `dcterms:abstract`     | MUST             | Literal                | {1,1}            |
-| language         | `dcterms:language`     | MUST             | Literal                | [1,n}            |
+| language         | `dcterms:language`     | MUST             | uri                    | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
