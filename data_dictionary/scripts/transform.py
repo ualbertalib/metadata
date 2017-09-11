@@ -7,11 +7,11 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 
 def main():
-	#output = processOwlDocument()
+	output = processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
 	#fetchFromTriples()
-	profileDisplay("collection") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
+	profileDisplay("generic") #requres profile to be created one object type at a time (thesis, collection, generic). pipe outout to corresponding file
 	#dataDictionaryDisplay(output)
 
 def processOwlDocument():
@@ -244,26 +244,30 @@ def processProfileData(output):
 def shipProfileToTriples():
 	sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
 	sparql.setMethod("POST")
+	for ptype in ["collection", "generic", "thesis", "instances"]:
+		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))
+		sparql.query()
 	for ptype in ["collection", "generic", "thesis"]:
 		filename = "../profiles/%s/profile.json" % (ptype)
 		with open(filename) as data:
-			for item in json.load(data):
-				query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:%s { <%s> rdf:type rdf:Property" % (ptype, item['uri'])
-				for key in item['conf']:
-					if key == 'acceptedValues':
-						for triple in item['conf'][key]:
+			data = json.load(data)
+			for item in data:
+				query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:%s { <%s> rdf:type rdf:Property" % (ptype, item)
+				for key in data[item].keys():
+					if 'acceptedValues' in key:
+						for triple in data[item][key]:
 							addValue = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:instances { <%s> rdfs:label \"%s\" ; ual:onForm \"%s\" } } " % (triple['uri'], triple['label'], "true")
 							print(addValue)
 							print(' ')
 							sparql.setQuery(addValue)
 							sparql.query()
 							query = query + "; ual:acceptedValue <%s>" % (triple['uri'])
-					elif isinstance(item['conf'][key], str) and ("http" in item['conf'][key]):
-						query = query + "; ual:%s <%s> " % (key, item['conf'][key])
-					elif item['conf'][key] == "none":
-						query = query + "; ual:%s \"%s\"" % (key, "")
+					elif isinstance(data[item][key], str) and ("http" in data[item][key]):
+						query = query + "; <%s> <%s> " % (key, data[item][key])
+					elif data[item][key] == "none":
+						query = query + "; <%s> \"%s\"" % (key, "")
 					else:
-						query = query + "; ual:%s \"%s\"" % (key, str(item['conf'][key]).lower())
+						query = query + "; <%s> \"%s\"" % (key, str(data[item][key]).lower())
 				query = query + "} }"
 				sparql.setQuery(query)
 				sparql.query()
