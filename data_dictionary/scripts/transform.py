@@ -11,7 +11,7 @@ def main():
 	#processProfileData(output)
 	#shipProfileToTriples()
 	#fetchFromTriples()
-	profileDisplay("thesis")
+	profileDisplay("generic")
 	#dataDictionaryDisplay(output)
 
 def processOwlDocument():
@@ -83,7 +83,7 @@ def profileDisplay(ptype):
 		annotations = sorted(list(set(annotations)))
 		for annotation in annotations:
 			for key, value in data:
-				if (annotation in value) and (('true' in value[annotation]) or ('indexAs' in annotation)):
+				if (annotation in value) and (('true' in value[annotation]) or ('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
 					display = True
 			if display == True:
 				print('### %s  ' % (removeNS(annotation)))
@@ -93,6 +93,8 @@ def profileDisplay(ptype):
 					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) *" % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
 				elif (annotation in value) and ( ('indexAs' in annotation) and (value[annotation] !='')):
 					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
+				elif (annotation in value) and ( ('backwardCompatibleWith' in annotation) and (value[annotation] !='')):
+					print(" [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s) is compatible with [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
 		print('')
 		print('# Profile by property')
 		print('')
@@ -181,7 +183,7 @@ def fetchFromTriples():
 		for result in results['results']['bindings']:
 			if result['property']['value'] not in profile.keys():
 				profile[result['property']['value']] = {}
-			elif result['annotation']['value'] == 'http://terms.library.ualberta.ca/acceptedValue':
+			if result['annotation']['value'] == 'http://terms.library.ualberta.ca/acceptedValue':
 				if 'acceptedValues' not in profile[result['property']['value']]:
 					profile[result['property']['value']]['acceptedValues'] = []
 				query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> SELECT * WHERE { GRAPH ual:instances { <%s> rdfs:label ?label ; ual:onForm ?onForm } }" % (result['value']['value'])

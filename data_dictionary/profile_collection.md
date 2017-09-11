@@ -49,6 +49,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **tokenize** is this property tokenized in SOLR? (boolean  
 
 # Profile by annotation
+### backwardCompatibleWith  
+ [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator) is compatible with [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreator)  
+ [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor) is compatible with [dpt](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#mreldpt)  
 ### display  
  [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription) *
  [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle) *
@@ -64,48 +67,50 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by property
 
 ### dc:Creator  
-dataType: **text**  
 display: **false**  
+sort: **false**  
+facet: **false**  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
+required: **false**  
 propertyName: **creator**  
+backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
 onForm: **false**  
 repeat: **false**  
-facet: **false**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
 displayLabel: **none**  
-required: **false**  
 ### dcterms:description  
-dataType: **text**  
 display: **true**  
+sort: **false**  
+facet: **false**  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
+required: **false**  
 propertyName: **description**  
 onForm: **true**  
 repeat: **false**  
-facet: **false**  
-sort: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
 displayLabel: **description**  
-required: **false**  
 ### dcterms:title  
-dataType: **text**  
 display: **true**  
+sort: **true**  
+comments: **required for communties**  
+facet: **false**  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
+required: **true**  
 propertyName: **title**  
 onForm: **true**  
 repeat: **false**  
-comments: **required for communties**  
-facet: **false**  
-sort: **true**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
 displayLabel: **title**  
-required: **true**  
 ### ual:depositor  
-dataType: **auto**  
 display: **false**  
-propertyName: **depositor**  
-onForm: **false**  
-repeat: **false**  
+sort: **false**  
 comments: **legacy property; usage: admin email.**  
 facet: **false**  
-sort: **false**  
+dataType: **auto**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
-displayLabel: **none**  
 required: **false**  
+propertyName: **depositor**  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
+onForm: **false**  
+repeat: **false**  
+displayLabel: **none**  
