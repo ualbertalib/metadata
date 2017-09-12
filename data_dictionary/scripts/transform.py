@@ -4,10 +4,10 @@ from config import namespaces as ns
 from config import definitions as defs
 from config import ddWelcome, profileWelcome, profileDefinitions
 from SPARQLWrapper import SPARQLWrapper, JSON
-
+import main
 
 def main():
-	output = processOwlDocument()
+	output = main.processOwlDocument()
 	#processProfileData(output)
 	#shipProfileToTriples()
 	#fetchFromTriples()
@@ -156,20 +156,6 @@ def dataDictionaryDisplay(output):
 			# print("- [ ] Mark for editing")
 			print('')
 			print('***')
-
-
-def addPrefixes(v):
-	for line in ns:
-		if line['uri'] in v:
-			v = v.replace(line['uri'], line['prefix'] + ':')
-	return v
-
-
-def removeNS(v):
-	for line in ns:
-		if line['uri'] in v:
-			v = v.replace(line['uri'], '')
-	return v
 
 
 def fetchFromTriples():
