@@ -50,65 +50,65 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
-  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dccreator) is compatible with http://purl.org/dc/terms/creator  
-  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
+  * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
 ### display  
-  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermsdescription  )  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermstitle  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### indexAs  
 ### onForm  
-  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermsdescription  )  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermstitle  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### required  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermstitle  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### sort  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#dctermstitle  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 
 # Profile by property
 
 ### dc:Creator  
+backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
+dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
 display: **false**  
-dataType: **text**  
-repeat: **false**  
-backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
-propertyName: **creator**  
 facet: **false**  
-required: **false**  
 onForm: **false**  
+propertyName: **creator**  
+repeat: **false**  
+required: **false**  
 sort: **false**  
 ### dcterms:description  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
-displayLabel: **description**  
-display: **true**  
 dataType: **text**  
-repeat: **false**  
-propertyName: **description**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
+display: **true**  
+displayLabel: **description**  
 facet: **false**  
-required: **false**  
 onForm: **true**  
+propertyName: **description**  
+repeat: **false**  
+required: **false**  
 sort: **false**  
 ### dcterms:title  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
-displayLabel: **title**  
-display: **true**  
-dataType: **text**  
-repeat: **false**  
-propertyName: **title**  
-facet: **false**  
-required: **true**  
 comments: **required for communties**  
+dataType: **text**  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
+display: **true**  
+displayLabel: **title**  
+facet: **false**  
 onForm: **true**  
+propertyName: **title**  
+repeat: **false**  
+required: **true**  
 sort: **true**  
 ### ual:depositor  
+backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
+comments: **legacy property; usage: admin email.**  
+dataType: **auto**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
 display: **false**  
-dataType: **auto**  
-repeat: **false**  
-backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
-propertyName: **depositor**  
 facet: **false**  
-required: **false**  
-comments: **legacy property; usage: admin email.**  
 onForm: **false**  
+propertyName: **depositor**  
+repeat: **false**  
+required: **false**  
 sort: **false**  

@@ -47,10 +47,10 @@ class owlDocument(object):
 class Profiler(object):
 	def __init__(self, ptype):
 		self.ptype = ptype
-		self._createProfile()
+		self.__createProfile()
 
 
-	def _createProfile(self):
+	def __createProfile(self):
 		filename = "../profiles/%s/profile.json" % (self.ptype)
 		with open(filename, 'r+') as profileData:
 			dataOriginal = json.load(profileData)
@@ -84,25 +84,24 @@ class Profiler(object):
 					display = False
 				for key, value in data:
 					if (annotation in value) and ('true' in value[annotation]):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
 					elif (annotation in value) and (('indexAs' in annotation) and (value[annotation] != '')):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
 					elif (annotation in value) and (('backwardCompatibleWith' in annotation) and (value[annotation] != '')):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic#%s) is compatible with %s  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), value[annotation]))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s) is compatible with %s  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), value[annotation]))
 			print('')
 			print('# Profile by property')
 			print('')
-			for key, values in data:
-				print('### %s  ' % (addPrefixes(key)))
-				for i in values:
-					if i == 'acceptedValues':
+			for keys, values in data:
+				print('### %s  ' % (addPrefixes(keys)))
+				for key, value in sorted(values.items()):
+					if key == 'acceptedValues':
 						print("values displayed on form:  ")
-						for j in values[i]:
+						for j in value:
 							if j['onForm'] == 'true':
 								print('  * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-						print('')
-					elif (i != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (values[i] != ''):
-						print("%s: **%s**  " % (removeNS(i), values[i]))
+					elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value != ''):
+						print("%s: **%s**  " % (removeNS(key), value))
 
 
 def addPrefixes(v):
