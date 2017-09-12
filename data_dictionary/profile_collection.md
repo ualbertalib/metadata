@@ -67,48 +67,48 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by property
 
 ### dc:Creator  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
+display: **false**  
+dataType: **text**  
 repeat: **false**  
 backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
-facet: **false**  
-onForm: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator**  
 propertyName: **creator**  
-display: **false**  
-sort: **false**  
-dataType: **text**  
+facet: **false**  
 required: **false**  
+onForm: **false**  
+sort: **false**  
 ### dcterms:description  
-repeat: **false**  
-facet: **false**  
-onForm: **true**  
-displayLabel: **description**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
-propertyName: **description**  
+displayLabel: **description**  
 display: **true**  
-sort: **false**  
 dataType: **text**  
-required: **false**  
-### dcterms:title  
 repeat: **false**  
+propertyName: **description**  
 facet: **false**  
+required: **false**  
 onForm: **true**  
-displayLabel: **title**  
+sort: **false**  
+### dcterms:title  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
-propertyName: **title**  
+displayLabel: **title**  
 display: **true**  
-sort: **true**  
-comments: **required for communties**  
 dataType: **text**  
+repeat: **false**  
+propertyName: **title**  
+facet: **false**  
 required: **true**  
+comments: **required for communties**  
+onForm: **true**  
+sort: **true**  
 ### ual:depositor  
+definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
+display: **false**  
+dataType: **auto**  
 repeat: **false**  
 backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  
-facet: **false**  
-onForm: **false**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
 propertyName: **depositor**  
-display: **false**  
-sort: **false**  
-comments: **legacy property; usage: admin email.**  
-dataType: **auto**  
+facet: **false**  
 required: **false**  
+comments: **legacy property; usage: admin email.**  
+onForm: **false**  
+sort: **false**  
