@@ -65,7 +65,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | contributor      | `dc:contributor`       | MAY              | Literal                | {0,n}            |
 | depositor        | `ual:depositor`        | MAY              | Literal                | {0,1}            |
 | type             | `dcterms:type`         | MUST             | uri                    | {1,1}            |
-| status           | `bibo:status`          | MAY              | auto                   | {0,1}            |
+| status           | `bibo:status`          | MAY              | auto                   | {0,n}            |
 | subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
 | temporal         | `dcterms:temporal`     | MAY              | Literal                | {0,n}            |
 | spatial          | `dcterms:spatial`      | MAY              | Literal                | {0,n}            |
@@ -82,6 +82,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | language         | `dcterms:language`     | MUST             | uri                    | [1,n}            |
 | isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
+| license          | `dcterms:license`      | MAY              | uri                    | {0,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
 | has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}           |
