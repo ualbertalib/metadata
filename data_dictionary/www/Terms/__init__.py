@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from wtforms import Form, TextField, BooleanField, validators
-from SPARQLWrapper import SPARQLWrapper
+from SPARQLWrapper import SPARQLWrapper, JSON
 app = Flask(__name__)
 
 @app.route('/', methods=["GET", "POST"])
@@ -19,23 +19,43 @@ class editProperties(Form):
     newProperty = TextField('newProperty', [validators.Length(max=20)])
     implemented = BooleanField('implemented', [validators.Required()])
 
-@app.route('/getProperties')
-def getProperties():
+
+
+@app.route('/_getA')
+def getAnnotations():
     try:
         graph = request.args.get('profile', 0, type=str)
-        #sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
-        # query = "PREFIX ual: <http://terms.library.ualberta.ca/> select ?a from GRAPH ual:%s where {?a ?b ?c}" % (graph)
-        #sparql.setReturnFormat(JSON)
-        #results = sparql.query(query).convert()
-        #output = []
-        #for result in results["results"]["bindings"]:
-        #     output.append(result["value"])
-        return jsonify(result = ['you', 'me', 'myself', 'i'])
+        p = request.args.get('property', 0, type=str)
+        sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+        query = "PREFIX ual: <http://terms.library.ualberta.ca/> select ?a where {GRAPH ual:%s {?a ?b ?c} }" % (graph)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(query)
+        results = sparql.query().convert()
+        output = []
+        for result in results["results"]["bindings"]:
+             output.append(result['a']["value"])
+        return jsonify(result=list(set(output)))
 
     except Exception as e:
         return e
 
 
+@app.route('/_getP')
+def getProperties():
+    try:
+        graph = request.args.get('graph', 0, type=str)
+        sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+        query = "PREFIX ual: <http://terms.library.ualberta.ca/> select ?a where {GRAPH ual:%s {?a ?b ?c} }" % (graph)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(query)
+        results = sparql.query().convert()
+        output = []
+        for result in results["results"]["bindings"]:
+            output.append(result['a']["value"])
+        return jsonify(result=list(set(output)))
+
+    except Exception as e:
+        return e
 
 
 @app.route('/editor', methods=["GET", "POST"])

@@ -93,7 +93,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### repeat  
   * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  )  
   * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
-  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsabstract  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualcommiteemember  )  
@@ -162,7 +161,7 @@ display: **false**
 displayLabel: **abstract**  
 indexAs: **http://purl.org/dc/terms/description**  
 propertyName: **abstract**  
-repeat: **true**  
+repeat: **false**  
 required: **true**  
 sort: **false**  
 ### dcterms:alternative  
