@@ -5,9 +5,8 @@ import os
 class owlDocument(object):
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
-		print('this is the file path: ',os.getcwd())
 		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-		if 'ubuntu' in os.getcwd():
+		if 'cron' in os.getcwd():
 			self.path = "/home/ubuntu/metadata/data_dictionary"
 		else:
 			self.path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
@@ -54,7 +53,7 @@ class Profiler(object):
 	def __init__(self, ptype):
 		self.ptype = ptype
 		self.__createProfile()
-		if 'ubuntu' in os.getcwd():
+		if 'cron' in os.getcwd():
 			self.path = "/home/ubuntu/metadata/data_dictionary"
 		else:
 			self.path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"

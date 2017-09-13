@@ -4,8 +4,8 @@ import os
 
 
 def main():
-	print(os.getcwd())
-	if 'ubuntu' in os.getcwd():
+
+	if 'cron' in os.getcwd():
 		path = "/home/ubuntu/metadata/data_dictionary/"
 	else:
 		path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
