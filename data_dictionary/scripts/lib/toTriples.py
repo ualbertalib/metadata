@@ -4,6 +4,7 @@ import os
 
 
 def main():
+	print(os.getcwd())
 	if 'ubuntu' in os.getcwd():
 		path = "/home/ubuntu/metadata/data_dictionary/"
 	else:
