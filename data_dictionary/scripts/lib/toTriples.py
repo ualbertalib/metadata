@@ -31,7 +31,6 @@ def main():
 				query = query + "} }"
 				sparql.setQuery(query)
 				sparql.query()
-				print(query)
 
 
 if __name__ == "__main__":

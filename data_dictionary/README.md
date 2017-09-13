@@ -52,10 +52,10 @@
   * [pcdm:memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmmemberof)  
   * [pcdm:relatedObjectOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#pcdmrelatedobjectof)  
   * [prism:doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi)  
-  * [dc:Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor)  
-  * [dc:Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator)  
-  * [dc:Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights)  
-  * [dc:Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject)  
+  * [dc:contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor)  
+  * [dc:creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator)  
+  * [dc:rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights)  
+  * [dc:subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject)  
   * [dcterms:abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract)  
   * [dcterms:alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative)  
   * [dcterms:created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated)  
@@ -298,7 +298,7 @@
   Digital Object Identifier  
 
 ***
-### dc:Contributor
+### dc:contributor
 
    **dcterms:description**   
   Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.  
@@ -319,7 +319,7 @@
   Contributor  
 
 ***
-### dc:Creator
+### dc:creator
 
    **dcterms:description**   
   Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.  
@@ -340,7 +340,7 @@
   Creator  
 
 ***
-### dc:Rights
+### dc:rights
 
    **dcterms:description**   
   Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  
@@ -361,7 +361,7 @@
   Rights  
 
 ***
-### dc:Subject
+### dc:subject
 
    **dcterms:description**   
   Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.  

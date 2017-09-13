@@ -2,9 +2,12 @@ from flask import Flask, render_template, request, jsonify
 from wtforms import Form, TextField, BooleanField, validators
 from SPARQLWrapper import SPARQLWrapper, JSON
 import sys
-sys.path.insert(0, '/home/ubuntu/metadata/data_dictionary/scripts/lib/')
+import json
+sys.path.insert(0, 'metadata/data_dictionary/scripts/lib/')
 from main import Profiler
-from fromTriples import transporter
+from config import sparql
+
+
 
 app = Flask(__name__)
 sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
@@ -92,25 +95,13 @@ def setAnnotations():
         sparql.setQuery(query)
         results = sparql.query().convert()
         for result in results["results"]["bindings"]:
-            value = result['v']['value']
-        return jsonify(result=value)
+            results = result['v']['value']
+        print(results)
+        return jsonify(result=[results])
 
     except Exception as e:
         return e
 
-@app.route('/_setProfiles')
-def setProfiles():
-    try:
-        transporter()
-        for ptype in ['thesis', 'collection', 'generic']:
-            filename = "/home/ubuntu/metadata/data_dictionary/profile_%s.md" % (ptype)
-            orig_stdout = sys.stdout
-            with open(filename, 'w+') as f:
-                sys.stdout = f
-                profiler(ptype)
-                sys.stdout = orig_stdout
-    except Exception as e:
-        return e
 
 @app.route('/editor', methods=["GET", "POST"])
 def editor():    
@@ -118,6 +109,8 @@ def editor():
         return render_template("editor.html")
     except Exception as e:
         return str(e)
+
+
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ from SPARQLWrapper import JSON
 def main():
 	transporter()
 
+
 def transporter():
 	for ptype in ["collection", "generic", "thesis"]:
 		profile = {}

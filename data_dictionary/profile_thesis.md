@@ -193,7 +193,7 @@ repeat: **false**
 required: **true**  
 sort: **false**  
 ### dcterms:identifier  
-comments: **often doi, but not always; legacy container for non-doi identifiers (not active in Jupiter)**  
+comments: **often doi, but not always; legacy container for non-doi identifiers (not active in jupiter)**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
 display: **false**  
