@@ -4,6 +4,9 @@ from SPARQLWrapper import JSON
 
 
 def main():
+	transporter()
+
+def transporter():
 	for ptype in ["collection", "generic", "thesis"]:
 		profile = {}
 		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)

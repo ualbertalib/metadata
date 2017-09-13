@@ -1,9 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 from wtforms import Form, TextField, BooleanField, validators
 from SPARQLWrapper import SPARQLWrapper, JSON
-import json
-app = Flask(__name__)
+import sys
+sys.path.insert(0, '/home/ubuntu/metadata/data_dictionary/scripts/lib/')
+from main import Profiler
+from fromTriples import transporter
 
+app = Flask(__name__)
+sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+sparql.setReturnFormat(JSON)
 @app.route('/', methods=["GET", "POST"])
 
 def run():
@@ -16,18 +21,12 @@ def run():
         return str(e)
 
 
-class editProperties(Form):
-    newProperty = TextField('newProperty', [validators.Length(max=20)])
-    implemented = BooleanField('implemented', [validators.Required()])
-
-
 @app.route('/_getProperties')
 def _getProperties():
     try:
         g = request.args.get('g', 0, type=str)
-        sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
         query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {?p ?a ?v} }" % (g)
-        sparql.setReturnFormat(JSON)
+        sparql.setMethod('GET')
         sparql.setQuery(query)
         results = sparql.query().convert()
         triples = []
@@ -50,9 +49,8 @@ def getAnnotations():
     try:
         g = request.args.get('g', 0, type=str)
         p = request.args.get('p', 0, type=str)
-        sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
         query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> ?a ?v} }" % (g, p)
-        sparql.setReturnFormat(JSON)
+        sparql.setMethod('GET')
         sparql.setQuery(query)
         results = sparql.query().convert()
         triples = []
@@ -66,6 +64,53 @@ def getAnnotations():
     except Exception as e:
         return e
 
+
+@app.route('/_setAnnotations')
+def setAnnotations():
+    try:
+        g = request.args.get('g', 0, type=str)
+        p = request.args.get('p', 0, type=str)
+        a = request.args.get('a', 0, type=str)
+        ov = request.args.get('ov', 0, type=str)
+        nv = request.args.get('nv', 0, type=str)
+        if "http" in ov:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, ov)
+        else:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, ov)
+        sparql.setMethod('POST')
+        sparql.setQuery(query)
+        sparql.query()
+        if "http" in nv:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, nv)
+        else:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, nv)
+        sparql.setMethod('POST')
+        sparql.setQuery(query)
+        sparql.query()
+        query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> <%s> ?v} }" % (g, p, a)
+        sparql.setMethod('GET')
+        sparql.setQuery(query)
+        results = sparql.query().convert()
+        for result in results["results"]["bindings"]:
+            value = result['v']['value']
+        return jsonify(result=value)
+
+    except Exception as e:
+        return e
+
+@app.route('/_setProfiles')
+def setProfiles():
+    try:
+        transporter()
+        for ptype in ['thesis', 'collection', 'generic']:
+            filename = "/home/ubuntu/metadata/data_dictionary/profile_%s.md" % (ptype)
+            orig_stdout = sys.stdout
+            with open(filename, 'w+') as f:
+                sys.stdout = f
+                profiler(ptype)
+                sys.stdout = orig_stdout
+    except Exception as e:
+        return e
 
 @app.route('/editor', methods=["GET", "POST"])
 def editor():    
