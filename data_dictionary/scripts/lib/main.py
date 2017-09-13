@@ -5,7 +5,7 @@ import os
 class owlDocument(object):
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
-		print(os.getcwd())
+		print('this is the file path: ',os.getcwd())
 		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
 		if 'ubuntu' in os.getcwd():
 			self.path = "/home/ubuntu/metadata/data_dictionary"
