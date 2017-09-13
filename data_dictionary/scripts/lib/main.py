@@ -100,6 +100,7 @@ class Profiler(object):
 						for j in value:
 							if j['onForm'] == 'true':
 								print('  * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+						print('')
 					elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value != ''):
 						print("%s: **%s**  " % (removeNS(key), value))
 
