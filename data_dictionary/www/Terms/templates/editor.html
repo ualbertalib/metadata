@@ -17,40 +17,33 @@
     <div class="container-fluid">
       <h3 class="text-center">Jupiter Application Profile Editor</h3>
       
-      <form method=post action="#">
+      <form>
         
         <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default dropdown-toggle" name='profiles' type="button" data-toggle="dropdown">
             Select Profile
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="profile" id='profile'  data-toggle="button">
-            <li><button class="dropdown-item" type="button" id="profile" value='collection' data-toggle="button">Collection</li>
-            <li><button class="dropdown-item" type="button" id="profile" value='generic' data-toggle="button">Generic</li>
-            <li><button class="dropdown-item" type="button" id="profile" value='thesis' data-toggle="button">Thesis</li>
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="profile" name='profiles'  data-toggle="button">
+            <li><button class="dropdown-item" type="button" name="profile" value='collection' data-toggle="button">Collection</li></button>
+            <li><button class="dropdown-item" type="button" name="profile" value='generic' data-toggle="button">Generic</li></button>
+            <li><button class="dropdown-item" type="button" name="profile" value='thesis' data-toggle="button">Thesis</li></button>
           </ul>
+
         </div>
 
         <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default dropdown-toggle"  name="properties" type="button" data-toggle="dropdown">
             Properties
+
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="properties" id='properties' data-toggle="button">
-            
-            
-          </ul>
-
-        <div class="dropdown">
-          <ul class="dropdown-menu" role="menu" aria-labelledby="properties">
-            <!-- dynamic fill with properties-->
-          </ul>
+          <ul class="dropdown-menu" id='properties' role="menu" aria-labelledby="properties" name='properties' data-toggle="button"></ul>
         </div>
-
-        <p><input type=submit value=Register></p>
+        
+        <div class="list-group">
+        <ul class="list-group" aria-labelledby="annotations" name='annotations'></ul>
+        </div>
 
       </form>
-    </div>
-
   </body>
 </html>

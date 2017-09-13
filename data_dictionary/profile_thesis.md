@@ -109,6 +109,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
+  * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#bibodegree  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepartment  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdissertant  )  
@@ -265,7 +266,7 @@ displayLabel: **degree**
 facet: **false**  
 propertyName: **degree**  
 repeat: **false**  
-required: **false**  
+required: **true**  
 sort: **false**  
 ### ual:commiteeMember  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/role/thesiscommitteemember**  
