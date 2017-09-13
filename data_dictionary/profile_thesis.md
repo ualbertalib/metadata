@@ -229,6 +229,7 @@ values displayed on form:
   * **Vietnamese** (http://id.loc.gov/vocabulary/iso639-2/vie)  
   * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
 display: **true**  
@@ -346,6 +347,7 @@ sort: **false**
 ### ual:institution  
 values displayed on form:  
   * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
+
 backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dgg**  
 dataType: **auto**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualinstitution**  

@@ -264,6 +264,7 @@ values displayed on form:
   * **Vietnamese** (http://id.loc.gov/vocabulary/iso639-2/vie)  
   * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
 display: **true**  
@@ -290,6 +291,7 @@ values displayed on form:
   * **Attribution-NonCommercial-ShareAlike 3.0 Unported** (http://creativecommons.org/licenses/by-nc-sa/3.0/)  
   * **Attribution-NonCommercial-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-nc-sa/4.0/)  
   * **Attribution-NonCommercial-NoDerivs 3.0 Unported** (http://creativecommons.org/licenses/by-nc-nd/3.0/)  
+
 backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
 comments: **must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license**  
 dataType: **uri**  
@@ -378,6 +380,7 @@ values displayed on form:
   * **draft** (http://purl.org/ontology/bibo/status#draft)  
   * **submitted** (http://vivoweb.org/ontology/core#submitted)  
   * **accepted** (http://purl.org/ontology/bibo/status#accepted)  
+
 comments: **'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'**  
 dataType: **auto**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus**  
