@@ -23,8 +23,6 @@ def main():
 					if 'acceptedValues' in key:
 						for triple in data[item][key]:
 							addValue = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:instances { <%s> rdfs:label \"%s\" ; ual:onForm \"%s\" } } " % (triple['uri'], triple['label'], "true")
-							print(addValue)
-							print(' ')
 							sparql.setQuery(addValue)
 							sparql.query()
 							query = query + "; ual:acceptedValue <%s>" % (triple['uri'])

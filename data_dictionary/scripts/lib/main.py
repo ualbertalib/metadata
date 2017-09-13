@@ -52,12 +52,12 @@ class owlDocument(object):
 class Profiler(object):
 	def __init__(self, ptype):
 		self.ptype = ptype
-		self.__createProfile()
 		if 'cron' in os.getcwd():
 			self.path = "/home/ubuntu/metadata/data_dictionary"
 		else:
 			self.path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
-
+		self.__createProfile()
+		
 	def __createProfile(self):
 		filename = "%s/profiles/%s/profile.json" % (self.path, self.ptype)
 		with open(filename, 'r+') as profileData:
