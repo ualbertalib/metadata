@@ -1,6 +1,7 @@
 import json
 from config import sparql
 from SPARQLWrapper import JSON
+import os
 
 
 def main():

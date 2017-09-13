@@ -1,5 +1,6 @@
 import json
 from config import sparql
+import os
 
 
 def main():
