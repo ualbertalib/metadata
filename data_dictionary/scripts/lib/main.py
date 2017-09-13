@@ -1,12 +1,17 @@
 import json
 from config import namespaces, profileWelcome, profileDefinitions
-
+import os
 
 class owlDocument(object):
 	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
 		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-		with open('../ontologies/Jupiter.json', 'r') as terms:
+		if 'ubuntu' in os.getcwd():
+			self.path = "/home/ubuntu/metadata/data_dictionary"
+		else:
+			self.path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
+		filename = '%s/ontologies/Jupiter.json' % (self.path)
+		with open(filename, 'r') as terms:
 			owlDoc = json.load(terms)
 			# the owl json consists of an self.index for each term, property, or instance
 			for self.index in owlDoc:
@@ -48,10 +53,13 @@ class Profiler(object):
 	def __init__(self, ptype):
 		self.ptype = ptype
 		self.__createProfile()
-
+		if 'ubuntu' in os.getcwd():
+			self.path = "/home/ubuntu/metadata/data_dictionary"
+		else:
+			self.path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
 
 	def __createProfile(self):
-		filename = "../profiles/%s/profile.json" % (self.ptype)
+		filename = "%s/profiles/%s/profile.json" % (self.path, self.ptype)
 		with open(filename, 'r+') as profileData:
 			dataOriginal = json.load(profileData)
 			data = sorted(dataOriginal.items())

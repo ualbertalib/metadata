@@ -8,6 +8,10 @@ def main():
 
 
 def transporter():
+	if 'ubuntu' in os.getcwd():
+		path = "/home/ubuntu/metadata/data_dictionary"
+	else:
+		path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
 	for ptype in ["collection", "generic", "thesis"]:
 		profile = {}
 		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)
@@ -28,10 +32,9 @@ def transporter():
 			else:
 				profile[result['property']['value']][result['annotation']['value']] = result['value']['value']
 
-		filename = '../profiles/%s/profile.json' % ptype
+		filename = '%s/profiles/%s/profile.json' % (path, ptype)
 		with open(filename, 'w+') as p:
-			json.dump(profile, p, sort_keys=True, indent=4)
-
+			json.dump(profile, p, sort_keys=True, indent=4)			
 
 
 if __name__ == "__main__":

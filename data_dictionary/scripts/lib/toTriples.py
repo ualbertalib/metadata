@@ -3,12 +3,16 @@ from config import sparql
 
 
 def main():
+	if 'ubuntu' in os.getcwd():
+		path = "/home/ubuntu/metadata/data_dictionary/"
+	else:
+		path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
 	sparql.setMethod("POST")
 	for ptype in ["collection", "generic", "thesis", "instances"]:
 		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))
 		sparql.query()
 	for ptype in ["collection", "generic", "thesis"]:
-		filename = "../profiles/%s/profile.json" % (ptype)
+		filename = "%s/profiles/%s/profile.json" % (path, ptype)
 		with open(filename) as data:
 			data = json.load(data)
 			for item in data:
