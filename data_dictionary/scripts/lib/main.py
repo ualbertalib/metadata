@@ -4,7 +4,7 @@ import os
 
 
 class owlDocument(object):
-	""" separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
+	"""takes ontology.json as input; separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
 		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
 		filename = 'data_dictionary/ontologies/Jupiter.json'
@@ -47,6 +47,7 @@ class owlDocument(object):
 
 
 class Profiler(object):
+	""" takes a specified profile.json and returns a profile.md as std.out"""
 	def __init__(self, ptype):
 		self.ptype = ptype
 		self.__createProfile()

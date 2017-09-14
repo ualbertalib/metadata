@@ -83,6 +83,51 @@ def setAnnotations():
         return e
 
 
+@app.route('/_delAnnotations')
+def delAnnotations():
+    try:
+        g = request.args.get('g', 0, type=str)
+        p = request.args.get('p', 0, type=str)
+        a = request.args.get('a', 0, type=str)
+        ov = request.args.get('ov', 0, type=str)
+        if "http" in ov:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, ov)
+        else:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, ov)
+        sparql.setMethod('POST')
+        sparql.setQuery(query)
+        sparql.query()
+        return jsonify(result=None)
+    except Exception as e:
+        return e
+
+
+@app.route('/_newAnnotation')
+def newAnnotation():
+    try:
+        g = request.args.get('g', 0, type=str)
+        p = request.args.get('p', 0, type=str)
+        a = request.args.get('a', 0, type=str)
+        nv = request.args.get('nv', 0, type=str)
+        if "http" in nv:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, nv)
+        else:
+            query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, nv)
+        sparql.setMethod('POST')
+        sparql.setQuery(query)
+        sparql.query()
+        query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> <%s> ?v} }" % (g, p, a)
+        sparql.setMethod('GET')
+        sparql.setQuery(query)
+        results = sparql.query().convert()
+        for result in results["results"]["bindings"]:
+            results = [result['v']['value']]
+        return jsonify(result=results)
+
+    except Exception as e:
+        return e
+   
+
 @app.route('/editor', methods=["GET", "POST"])
 def editor():
     try:
