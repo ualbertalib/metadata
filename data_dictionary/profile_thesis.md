@@ -51,7 +51,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
-  * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights) is compatible with http://purl.org/dc/terms/rights  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights) is compatible with http://purl.org/dc/terms/rights  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#bibodegree) is compatible with http://purl.org/ontology/bibo/ThesisDegree  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualcommiteemember) is compatible with http://terms.library.ualberta.ca/role/thesiscommitteemember  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepartment) is compatible with http://vivoweb.org/ontology/core#AcademicDepartment  
@@ -68,7 +68,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
 ### display  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
-  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
@@ -82,7 +82,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsupervisor  )  
   * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualthesislevel  )  
 ### facet  
-  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
 ### indexAs  
@@ -91,8 +91,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdissertant) indexes as [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsupervisor) indexes as [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
 ### repeat  
-  * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  )  
-  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualcommiteemember  )  
@@ -101,8 +101,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsupervisor  )  
 ### required  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
-  * [Rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  )  
-  * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsabstract  )  
   * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdateaccepted  )  
   * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdatesubmitted  )  
@@ -134,7 +134,7 @@ propertyName: **digital object identifier**
 repeat: **false**  
 required: **true**  
 sort: **false**  
-### dc:Rights  
+### dc:rights  
 backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
@@ -145,7 +145,7 @@ propertyName: **rights**
 repeat: **true**  
 required: **true**  
 sort: **false**  
-### dc:Subject  
+### dc:subject  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcubject**  
 display: **true**  
@@ -215,6 +215,9 @@ required: **false**
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
+  * **Vietnamese** (http://id.loc.gov/vocabulary/iso639-2/vie)  
+  * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
@@ -226,9 +229,6 @@ values displayed on form:
   * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
   * **Portuguese** (http://id.loc.gov/vocabulary/iso639-2/por)  
   * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-  * **Vietnamese** (http://id.loc.gov/vocabulary/iso639-2/vie)  
-  * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
