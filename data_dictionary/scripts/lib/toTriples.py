@@ -1,12 +1,9 @@
 import json
-from config import sparql
+from config import sparql, path
 import os
 
 
 def main():
-
-
-	path = "data_dictionary"
 	sparql.setMethod("POST")
 	for ptype in ["collection", "generic", "thesis", "instances"]:
 		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))

@@ -2,6 +2,7 @@ from config import namespaces, definitions, ddWelcome
 import main
 from main import owlDocument, addPrefixes
 
+
 def main():
 	owlDoc = owlDocument().output
 	print('# Jupiter Data Dictionary')

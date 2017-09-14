@@ -1,7 +1,6 @@
 import json
-from config import sparql
+from config import sparql, path
 from SPARQLWrapper import JSON
-import os
 
 
 def main():
@@ -9,6 +8,8 @@ def main():
 
 
 def transporter():
+
+	"""imports vocabulary from the triple store and saves it as three profile.json files"""
 	for ptype in ["collection", "generic", "thesis"]:
 		profile = {}
 		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)
@@ -31,7 +32,7 @@ def transporter():
 
 		filename = '%s/profiles/%s/profile.json' % (path, ptype)
 		with open(filename, 'w+') as p:
-			json.dump(profile, p, sort_keys=True, indent=4)			
+			json.dump(profile, p, sort_keys=True, indent=4)
 
 
 if __name__ == "__main__":

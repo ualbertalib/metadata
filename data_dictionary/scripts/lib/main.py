@@ -1,5 +1,5 @@
 import json
-from config import namespaces, profileWelcome, profileDefinitions
+from config import namespaces, profileWelcome, profileDefinitions, path
 import os
 
 
@@ -49,11 +49,10 @@ class owlDocument(object):
 class Profiler(object):
 	def __init__(self, ptype):
 		self.ptype = ptype
-		self.path = "data_dictionary/"
 		self.__createProfile()
 
 	def __createProfile(self):
-		filename = "%s/profiles/%s/profile.json" % (self.path, self.ptype)
+		filename = "%s/profiles/%s/profile.json" % (path, self.ptype)
 		with open(filename, 'r+') as profileData:
 			dataOriginal = json.load(profileData)
 			data = sorted(dataOriginal.items())
