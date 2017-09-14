@@ -9,10 +9,6 @@ def main():
 
 
 def transporter():
-	if 'cron' in os.getcwd():
-		path = "/home/ubuntu/metadata/data_dictionary"
-	else:
-		path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
 	for ptype in ["collection", "generic", "thesis"]:
 		profile = {}
 		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)

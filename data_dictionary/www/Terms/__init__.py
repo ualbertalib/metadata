@@ -1,27 +1,8 @@
 from flask import Flask, render_template, request, jsonify
-from wtforms import Form, TextField, BooleanField, validators
 from SPARQLWrapper import SPARQLWrapper, JSON
-import sys
-import json
-sys.path.insert(0, 'metadata/data_dictionary/scripts/lib/')
-from main import Profiler
-from config import sparql
-
-
-
 app = Flask(__name__)
 sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
 sparql.setReturnFormat(JSON)
-@app.route('/', methods=["GET", "POST"])
-
-def run():
-    try:
-        form = editProperties(request.form)
-        if request.method == "POST" and form.validate():
-            newProperty = form.newProperty.data
-        return render_template("index.html")
-    except Exception as e:
-        return str(e)
 
 
 @app.route('/_getProperties')
@@ -96,7 +77,6 @@ def setAnnotations():
         results = sparql.query().convert()
         for result in results["results"]["bindings"]:
             results = result['v']['value']
-        print(results)
         return jsonify(result=[results])
 
     except Exception as e:
@@ -104,13 +84,11 @@ def setAnnotations():
 
 
 @app.route('/editor', methods=["GET", "POST"])
-def editor():    
+def editor():
     try:
         return render_template("editor.html")
     except Exception as e:
         return str(e)
-
-
 
 
 if __name__ == "__main__":

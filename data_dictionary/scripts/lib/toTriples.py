@@ -5,10 +5,8 @@ import os
 
 def main():
 
-	if 'cron' in os.getcwd():
-		path = "/home/ubuntu/metadata/data_dictionary/"
-	else:
-		path = "/home/zschoenb/Documents/Projects/metadata/data_dictionary"
+
+	path = "data_dictionary"
 	sparql.setMethod("POST")
 	for ptype in ["collection", "generic", "thesis", "instances"]:
 		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))
