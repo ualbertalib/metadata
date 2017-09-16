@@ -259,10 +259,7 @@ values displayed on form:
   * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
   * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
   * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
-  * **Portuguese** (http://id.loc.gov/vocabulary/iso639-2/por)  
   * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-  * **Vietnamese** (http://id.loc.gov/vocabulary/iso639-2/vie)  
-  * **Inupiaq** (http://id.loc.gov/vocabulary/iso639-2/ipk)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 dataType: **uri**  
