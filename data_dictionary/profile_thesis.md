@@ -215,7 +215,6 @@ required: **false**
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
@@ -226,6 +225,7 @@ values displayed on form:
   * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
   * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
   * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
