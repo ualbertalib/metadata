@@ -49,14 +49,14 @@ This model describes the Jupiter project proposed data model and its use cases.
 | description      | `dcterms:description`  | MAY              | Literal                | {0,1}            |
 | title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Community`    | {1,1}            |
-| has member       | `pcdm:hasMember`       | SHOULD           | `jupiter:Work`         | {0,n}            |
+| has member       | `pcdm:hasMember`       | SHOULD           | `jupiter:Item`         | {0,n}            |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
 
 
-### `jupiter:Work (Generic) < pcdm:Object` (works:Work)
+### `jupiter:Item (Generic) < pcdm:Object` (works:Work)
   ```turtle
-    jupiter:Work a rdfs:Class .
+    jupiter:Item a rdfs:Class .
   ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
@@ -85,12 +85,12 @@ This model describes the Jupiter project proposed data model and its use cases.
 | license          | `dcterms:license`      | MAY              | uri                    | {0,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}           |
-| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Work`(pcdm:object)     | {0,n}         |
+| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Item`(pcdm:object)        | {0,n}           |
+| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Item`(pcdm:object)     | {0,n}         |
 
-### `jupiter:Work (Thesis) < pcdm:Object` (works:Work)
+### `jupiter:Item (Thesis) < pcdm:Object` (works:Work)
   ```turtle
-    jupiter:Work a rdfs:Class .
+    jupiter:Item a rdfs:Class .
   ```
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
@@ -122,8 +122,8 @@ This model describes the Jupiter project proposed data model and its use cases.
 | rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
 | member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
 | has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Work`(pcdm:object)        | {0,n}            |
-| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Work`(pcdm:object)     | {0,n}         |
+| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Item`(pcdm:object)        | {0,n}            |
+| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Item`(pcdm:object)     | {0,n}         |
 
 ### `jupiter:FileSet < pcdm:Object`
   ```turtle
@@ -132,7 +132,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 | Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
 |------------------|------------------------|------------------|------------------------|------------------|
-| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Work`         | {1,1}            |
+| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Item`         | {1,1}            |
 | has file         | `pcdm:hasFile`         | SHOULD           | `jupiter:File (pcdm:File)`| {1,n}           |
 | label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
 
@@ -153,7 +153,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 <http://ual.ca/jupiter/collections/collection1> a jupiter:Collection ;
     dcterms:description "A Sample Collection" ;
     dcterms:title "1st collection" ;
-    pcdm:hasMember <http://ual.ca/works/work1> .
+    pcdm:hasMember <http://ual.ca/items/item1> .
 
 <http://ual.ca/ns#SampleCollection> a rdfs:Class ;
     rdfs:label "Sample Collection"@en ;
@@ -163,32 +163,32 @@ This model describes the Jupiter project proposed data model and its use cases.
     pcdm:hasMember <http://ual.ca/collections/collection1> .
 ```
 
-### Defining a new Work and reference to Works
+### Defining a new Item and reference to Items
 ```turtle
-<http://ual.ca/jupiter/works/work1> a jupiter:Work ;
-    dcterms:title "1st work" ;
-    dcterms:alternate "work's other title" ;
+<http://ual.ca/jupiter/items/item1> a jupiter:Item ;
+    dcterms:title "1st item" ;
+    dcterms:alternate "item's other title" ;
     dcterms:identifier "A DOI" ;
-    pcdm:hasRelatedObject <http://ual.ca/works/work2> ;
+    pcdm:hasRelatedObject <http://ual.ca/items/item2> ;
     pcdm:hasMember <http://ual.ca/fileset/fileset1> .
 
 <http://ual.ca/ns#SampleWork> a rdfs:Class ;
     rdfs:label "Sample Work"@en ;
-    rdfs:subclassOf jupiter:Work.
+    rdfs:subclassOf jupiter:Item.
 
 <http://ual.ca/collections/collection1> a jupiter:Collection ;
-    pcdm:hasMember <http://ual.ca/works/work1> .
+    pcdm:hasMember <http://ual.ca/items/item1> .
 ```
 
 ### Defining a new FileSet and reference to FileSets
 ```turtle 
-<http://ual.ca/jupiter/fileset/fileset1> a jupiter:Work ;
+<http://ual.ca/jupiter/fileset/fileset1> a jupiter:Item ;
     pcdm:hasFile <http://ual.ca/fileset/fileset1/file1> .
 
 <http://ual.ca/ns#SampleFileSet> a rdfs:Class ;
     rdfs:label "Sample FileSet"@en ;
     rdfs:subclassOf jupiter:FileSet.
 
-<http://ual.ca/works/work1> a jupiter:Work ;
+<http://ual.ca/works/work1> a jupiter:Item ;
     pcdm:hasMember <http://ual.ca/filesets/fileset1> .
 ```
