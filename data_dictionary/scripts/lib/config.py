@@ -7,11 +7,11 @@ namespaces = [
 	{"prefix": "cc", "uri": "http://creativecommons.org/ns#"},
 	{"prefix": "dc", "uri": "http://purl.org/dc/elements/1.1/"},
 	{"prefix": "dcterms", "uri": "http://purl.org/dc/terms/"},
-	{"prefix": "eprints", "uri": "http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Type_Vocabulary_Encoding_Scheme#"},
+#	{"prefix": "eprints", "uri": "http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Type_Vocabulary_Encoding_Scheme#"},
 	{"prefix": "fabio", "uri": "http://purl.org/spar/fabio/"},
 	{"prefix": "foaf", "uri": "http://xmlns.com/foaf/0.1/"},
-	{"prefix": "geonames", "uri": "http://www.geonames.org/ontology#"},
-	{"prefix": "iana", "uri": "http://www.iana.org/assignments/media-types/"},
+#	{"prefix": "geonames", "uri": "http://www.geonames.org/ontology#"},
+#	{"prefix": "iana", "uri": "http://www.iana.org/assignments/media-types/"},
 	{"prefix": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
 	{"prefix": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
@@ -24,11 +24,11 @@ namespaces = [
 	{"prefix": "status", "uri": "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
 	{"prefix": "owl", "uri": "http://www.w3.org/2002/07/owl#"},
 	{"prefix": "ore", "uri": "http://www.openarchives.org/ore/terms/"},
-	{"prefix": "tgn", "uri": "http://vocab.getty.edu/tgn/"},
+#	{"prefix": "tgn", "uri": "http://vocab.getty.edu/tgn/"},
 	{"prefix": "ual", "uri": "http://terms.library.ualberta.ca/"},
 	{"prefix": "vivo", "uri": "http://vivoweb.org/ontology/core#"},
-	{"prefix": "works", "uri": "http://pcdm.org/works#"},
-	{"prefix": "xsd", "uri": "http://www.w3.org/2001/XMLSchema#"}
+	{"prefix": "works", "uri": "http://pcdm.org/works#"}
+#	{"prefix": "xsd", "uri": "http://www.w3.org/2001/XMLSchema#"}
 ]
 
 profileDefinitions = [
