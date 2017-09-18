@@ -1,0 +1,1 @@
+A web app that reads from and writes to a database (triplestore). In this particular context, the app is used to edit application profiles for metadata used in the University of Alberta's Jupiter repository software. The app could easily be extended to conform to any graph data model. It runs on Python (Flask).

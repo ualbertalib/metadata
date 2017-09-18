@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='tether.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+  
+  <body class = "body">
+
+      <h1 class="text-center">Jupiter Application Profile Audit Viewer</h1>
+      <div class="list-group" name='auditTrail'>
+        <ul class="list-group" aria-labelledby="auditTrail" id='auditTrail'></ul>
+      </div>
+    <a href='/'>Visit application profile editor</a>
+
+  </body>
+  <script type ="text/javascript" >
+    var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    $(document).ready(function() {
+            $.getJSON($SCRIPT_ROOT + '/_view', function(data) {
+            
+            $.each(data.result, function( index, value ) {
+                  $("#auditTrail").append("<li list-group-item class='row'><div name='date' class='col'>" + value.date + "</div><div name='user' class='col' >" + value.user + "</div><div name='value' class='col'>" + value.detail + "</div></li>")
+                });
+            });
+            return false;
+        });
+
+  </script>
+</html>
+          
