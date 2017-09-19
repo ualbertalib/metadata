@@ -7,11 +7,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **cc:** http://creativecommons.org/ns#  
 **dc:** http://purl.org/dc/elements/1.1/  
 **dcterms:** http://purl.org/dc/terms/  
-**eprints:** http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Type_Vocabulary_Encoding_Scheme#  
 **fabio:** http://purl.org/spar/fabio/  
 **foaf:** http://xmlns.com/foaf/0.1/  
-**geonames:** http://www.geonames.org/ontology#  
-**iana:** http://www.iana.org/assignments/media-types/  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
 **mrel:** http://id.loc.gov/vocabulary/relators/  
 **naf:** http://id.loc.gov/authorities/names/  
@@ -24,11 +21,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
 **owl:** http://www.w3.org/2002/07/owl#  
 **ore:** http://www.openarchives.org/ore/terms/  
-**tgn:** http://vocab.getty.edu/tgn/  
 **ual:** http://terms.library.ualberta.ca/  
 **vivo:** http://vivoweb.org/ontology/core#  
 **works:** http://pcdm.org/works#  
-**xsd:** http://www.w3.org/2001/XMLSchema#  
 
 # Definitions
 
