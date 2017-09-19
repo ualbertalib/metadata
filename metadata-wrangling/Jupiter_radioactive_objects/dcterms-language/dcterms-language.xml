@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dcterm="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#">
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/n2/96/wz/38/n296wz38r">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-03T22:18:19.171Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/n2/96/wz/38/n296wz38r/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-10T08:57:59.627Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fbd427d0-8df0-471d-9500-0ec5652c2595</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">barr@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowe BH</dcterm:creator>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollack CV</dcterm:creator>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodrigo C</dcterm:creator>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodrigo GJ</dcterm:creator>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walters EH</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:3af7cf63-4ac4-435c-9729-9e5a0e9b96ed</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:3af7cf63-4ac4-435c-9729-9e5a0e9b96ed</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2013-02-22T23:22:43.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Review</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558q97f</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558q97f</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-25T08:30:15Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-25T08:30:15Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodrigo GJ, Pollack CV, Rodrigo C, Rowe BH, Walters EH. Heliox for treatment of exacerbations of chronic obstructive
+pulmonary disease. CochraneDatabase of Systematic Reviews 2001, Issue 1. Art.No.: CD003571. DOI: 10.1002/14651858.CD003571.</dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2009 The Cochrane Collaboration. Published by JohnWiley &amp; Sons, Ltd. This review is published as a Cochrane Review in the Cochrane Database of Systematic Reviews 2001, Issue 1. Cochrane Reviews are regularly updated as new evidence emerges and in response to comments and criticisms, and the Cochrane Database of Systematic Reviews should be consulted for the most recent version of the Review.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Randomized Controlled Trials as Topic</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helium</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxygen</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulmonary Disease, Chronic Obstructive</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.30482</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gq67jr43m</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.30482</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gq67jr43m</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowe Heliox for treatment.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/z8/90/rt/51/z890rt51p"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-29T18:24:02.213Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heliox for treatment of exacerbations of chronic obstructive pulmonary disease</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/1g/05/fc/05/1g05fc05k">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-04T15:39:13.563Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/1g/05/fc/05/1g05fc05k/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-14T21:46:22.978Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9a34728a-85f7-4d3c-938c-337b5fc9b316</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhayashi@ualberta.net</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayashi, Naotaka</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:53748d94-6a74-4a6f-a7d8-10550150a2a6</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:53748d94-6a74-4a6f-a7d8-10550150a2a6</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2012-01-12T17:33:18.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-Non-Commercial-No Derivatives 3.0 Unported</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal Article (Published)</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r43b</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r43b</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011/06/21</dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-01-14T13:17:21Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-01-14T13:17:21Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japanese</dcterm:language>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustainability</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climate change</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arboretum</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuussuaq</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narsarsuaq</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plantation</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qanasiassat</dcterm:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/12/57/9t/52/12579t52x">
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.38384</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calgary Chinese Community Service Association</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r98x</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sf268632m</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">family-law-slides-simplified-chinese.pptx</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/g4/45/cf/45/g445cf45s"/>
+	<dcterm:spatial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calgary, Alberta</dcterm:spatial>
+	<dcterm:temporal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring 2014</dcterm:temporal>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the slide show for a public seminar organized by and held at Calgary Chinese Community Service Association on February 6, 2014, about the basic legal procedures of divorce application in Alberta. This is the simplified Chinese version of the presentation.</dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-05-01T00:16:01.406Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">家庭法之认识法律制度  Jia ting fa zhi ren shi fa lü zhi du (Family Law: Know the Legal System and Procedures)</dcterm:title>
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-10T04:00:36.142Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/12/57/9t/52/12579t52x/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-10T12:12:10.327Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">97f8b9a5-fc5c-4695-a182-b95fdac35e1b</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calgary Chinese Community Service Association</dcterm:creator>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong, Janice</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:c3892e2b-00b0-4d1f-aeb1-53b209dbc71d</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:c3892e2b-00b0-4d1f-aeb1-53b209dbc71d</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2014-04-02T15:56:22.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-Non-Commercial 3.0 Unported</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Learning Object</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r155</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r155</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-02T09:56:22Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-02T09:56:22Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese</dcterm:language>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese community in Alberta</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese community in Calgary</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">divorce law in Alberta</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">family law in Alberta</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.38384</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calgary Chinese Community Service Association</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r98x</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sf268632m</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/1g/05/fc/05/1g05fc05k">
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transplanting</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">樹木園</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">気候変動</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.25127</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circumpolar Collection</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s029</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2801pg780</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.25127</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circumpolar Collection</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s029</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2801pg780</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HAYASHI_2011_Hopporin_Greenland.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/7s/75/dc/81/7s75dc81s"/>
+	<dcterm:spatial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Greenland</dcterm:spatial>
+	<dcterm:temporal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1893/2009</dcterm:temporal>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A short essay about plantations in South Greenland 南グリーンランドの植林事業について</dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-14T17:46:22.854Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proactive action for future generations: the case of a tree-planting project in South Greenland［次世代に可能性をつなげる行動 ─ 南グリーンランドの植林事業─］</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/dn/39/x2/67/dn39x267q">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-10T03:15:04.767Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/dn/39/x2/67/dn39x267q/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-10T08:03:02.460Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c87dabdb-d106-4095-8c56-207fc23e377b</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edmonton Social Planning Council</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:1a3757d3-4ec9-409b-93f5-7089afcd0b7d</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:1a3757d3-4ec9-409b-93f5-7089afcd0b7d</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2012-05-11T19:15:43.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-Non-Commercial-No Derivatives 3.0 Unported</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Report</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r27z</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r27z</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992/08</dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-05-11T13:15:43Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-05-11T13:15:43Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</dcterm:language>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racism</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiculturalism</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.26342</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racism</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s232</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qj72p8351</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.26342</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racism</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s232</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qj72p8351</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992_realidades_alberta.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/4x/51/hk/32/4x51hk321"/>
+	<dcterm:spatial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada, Alberta</dcterm:spatial>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-29T15:40:37.975Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realidades de Alberta</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bd/f6/5v/78/bdf65v785t">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-26T18:20:41.407Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bd/f6/5v/78/bdf65v785t/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-06T11:09:04.325Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1e91a7fd-5039-4e67-ac26-2e25c38e5055</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonya.betz@gmail.com</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betz, Sonya</dcterm:creator>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/publicdomain/zero/1.0/</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r79q</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r79q</belongsToCommunity>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-26T18:20:41.251Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No linguistic content</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test</dcterm:subject>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Articles</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s29q</hasCollectionId>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Articles</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s29q</hasCollectionId>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screen Shot 2015-10-23 at 12.05.47 PM.png</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bj/m2/14/p1/bjm214p129"/>
+	<dcterm:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:relation>
+	<dcterm:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:source>
+	<relativePath xmlns="http://scholarsphere.psu.edu/ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></relativePath>
+	<hasEmbargo xmlns="http://projecthydra.org/ns/auth/acl#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/3f/5b/a0/7d/3f5ba07d-c481-4bef-9faa-4b74bdbb175b"/>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Articles</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s29q</hasCollectionId>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-26T12:24:14.689Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b2/77/3v/73/b2773v73c">
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r12b</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r422</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</dcterm:language>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vietnamese, LSA, semantic, HAL, HiDex, language processing</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research Materials (Linguistics)</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s496</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g158bh353</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research Materials (Linguistics)</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s496</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g158bh353</ingestbatch>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/sj/13/92/03/sj1392036"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-10T17:49:51.084Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vietnamese Latent Semantic Analysis (matrix)</dcterm:title>
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-03T03:18:44.928Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b2/77/3v/73/b2773v73c/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-20T05:16:08.728Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fa503d8e-e13d-4985-bdca-2571ed073b3d</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hpham@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hien Pham</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:124cb9f3-cfcb-4cf6-a0b1-45ff8c166052</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:124cb9f3-cfcb-4cf6-a0b1-45ff8c166052</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-Non-Commercial 3.0 Unported</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r12b</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r422</belongsToCommunity>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/1n/79/h5/37/1n79h537k">
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-25T00:02:19.314Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dans les coulisses : le Greffe de la Cour pénale internationale</dcterm:title>
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-05T21:16:35.665Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/1n/79/h5/37/1n79h537k/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-08T21:04:39.209Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7aacce88-7afc-4644-ad9a-e1ea08e150b7</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cour pénale internationale</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:9490d936-0d78-4122-9660-799e00ec5481</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:9490d936-0d78-4122-9660-799e00ec5481</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2012-11-07T22:45:49.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r155</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r155</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-11-07T15:45:49Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-11-07T15:45:49Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © International Criminal Court 2010. All rights reserved. This is not an official document. It is intended for public information only. This booklet is not for sale, reproduction or commercial use.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cour pénale internationale</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tribunaux--Administration</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.29359</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free access e-resources</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t220</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5m60qs64z</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.29359</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free access e-resources</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t220</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5m60qs64z</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dans les coulisses.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/00/00/00/90/000000905"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/08/61/2n/94/08612n94v">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-04T18:54:58.397Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/08/61/2n/94/08612n94v/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-12T17:57:57.885Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7399d564-d9cd-487b-9e08-a3611d910c96</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliografia Nazionale Italiana.</dcterm:creator>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:5bb84708-4599-45cf-80b5-cc85ab581c59</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:5bb84708-4599-45cf-80b5-cc85ab581c59</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2014-07-16T20:56:33.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Review</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wh246v792</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wh246v792</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-07-16T14:56:33Z</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-07-16T14:56:33Z</dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of this product is restricted to members of the University of Alberta community and to users of the Library's physical facilities. It is the responsibility of each user to ensure that he or she uses this product for individual, non- commercial educational or research purposes only, and does not systematically download or retain substantial portions of information.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliography, National -- Italy -- Periodicals</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy--Imprints--Periodicals.</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.39116</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliografia Nazionale Italiana. Monografie</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558v030</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2z10wq679</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.39116</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliografia Nazionale Italiana. Monografie</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558v030</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2z10wq679</ingestbatch>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BNI, Monografie 3-4-2013.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/ws/85/9g/24/ws859g241"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-07-16T21:05:27.392Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliografia Nazionale Italiana. Monografie, Marzo-Aprile 2013.</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/55/8g/46/44558g46h">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-18T13:18:35.374Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/55/8g/46/44558g46h/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-07T03:43:48.246Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f4e4c88a-d423-4a9e-af50-caa7985653e8</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">era@ualberta.ca</dpt>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:8fe84eeb-cfb9-4879-aa2f-72514a33091b</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:8fe84eeb-cfb9-4879-aa2f-72514a33091b</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2010-11-10T18:39:37.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Alberta</dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keitel, Peter.</dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text in German. Abstract in English.</dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permission is hereby granted to the University of Alberta Libraries to reproduce single copies of this thesis and to lend or sell such copies for private, scholarly or scientific research purposes only. The author reserves all other publication and other rights in association with the copyright in the thesis and, except as herein before provided, neither the thesis nor any substantial portion thereof may be printed or otherwise reproduced in any material form whatsoever without the author's prior written permission.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Criminal investigation in literature.</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Criminology in literature.</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detective and mystery stories, German--History and criticism.</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German fiction--20th century--History and criticism.</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murder in literature.</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Arts</ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.22115</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t722hc115</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">680845</unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.22115</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">680845</unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t722hc115</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ML41111.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/hq/37/vq/65/hq37vq65q"/>
+	<AcademicDepartment xmlns="http://vivoweb.org/ontology/core#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Germanic Languages</AcademicDepartment>
+	<dcterm:temporal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th century</dcterm:temporal>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-09T17:22:54.352Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kriminologische aspekte der motivstruktur des verbrechens im modernen detuschen Roman</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cv/69/2t/62/cv692t6208">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-10T23:54:50.497Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cv/69/2t/62/cv692t6208/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-29T19:30:31.394Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81ed6618-d300-4bc5-ab45-5c6e329b5ebd</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wells, Kristopher</dcterm:creator>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Report</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r72s</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vh53wz11m</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r72s</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vh53wz11m</belongsToCommunity>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</dcterm:created>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wells, K. (2007). Homophobic Bullying. Children’s Services and Education.</dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">english</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">© 2007 Kristopher Wells. This version of this article is open access and can be downloaded and shared. The original author(s) and source must be cited.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Education</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gender minorities</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homophobia</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homophobia in high schools</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inclusive education</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sexual minorities</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sexual minority students</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queer youth</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sexual orientation</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bullying</dcterm:subject>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presentations and Outreach Materials (EDI)</hasCollection>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outreach Materials (iSMSS)</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s83h</hasCollectionId>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b3r074t960</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cdj52w472s</ingestbatch>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</year_created>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presentations and Outreach Materials (EDI)</hasCollection>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outreach Materials (iSMSS)</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s83h</hasCollectionId>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b3r074t960</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cdj52w472s</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</year_created>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchFiles/CSE_2007.pdf</downloadFilename>
+	<dcterm:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Children's Services and Education</dcterm:contributor>
+	<dcterm:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://humanservices.alberta.ca/abuse-bullying/18312.html</dcterm:relation>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homophobic bullying is defined as bullying behaviours that are motivated by prejudice against a person’s actual or perceived sexual orientation or gender. You don’t have to be a sexual minority to identity. You don’t have to be a sexual minority to become a target. For example, while using comments like “that’s so gay” may seem innocent, they still contribute to the development of a negative or hostile environment towards sexual minorities. They also serve as a way to keep people in their “gender boxes” by reinforcing stereotypes of what it means to be male or female. Too often homophobia becomes the language of bullying which targets anyone who is perceived as different or outside the “norm”. Homophobic name-calling and gay bashing is bullying with a theme. Bullies who hide behind homophobic beliefs and attitudes are still bullies. In fact, law enforcement may consider homophobic bullying to be a hate incident–something that’s against the law.</dcterm:description>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homophobic Bullying. Children’s Services and Education</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/2r/36/v0/81/2r36v0817">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-16T19:26:49.772Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/2r/36/v0/81/2r36v0817/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-07T02:09:23.982Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">131c179e-180a-45b8-a1fc-54d5d4f879cc</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">era@ualberta.ca</dpt>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:5b04895a-ade6-4871-baf6-4f25dbd0f42d</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:5b04895a-ade6-4871-baf6-4f25dbd0f42d</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2010-11-10T18:32:09.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Alberta</dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koznarsky, Taras V.</dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text in Ukrainian. Abstract in English.</dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukrainian</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permission is hereby granted to the University of Alberta Libraries to reproduce single copies of this thesis and to lend or sell such copies for private, scholarly or scientific research purposes only. The author reserves all other publication and other rights in association with the copyright in the thesis and, except as herein before provided, neither the thesis nor any substantial portion thereof may be printed or otherwise reproduced in any material form whatsoever without the author's prior written permission.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vynnychenko, Volodymyr Kyrylovych, 1880-1951--Criticism and interpretation.</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vynnychenko, Volodymyr Kyrylovych, 1880-1951--Sun machine.</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Arts</ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.21854</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9019s4437</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1684721</unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.21854</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1684721</unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9019s4437</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MM94870.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/15/44/br/13/1544br13p"/>
+	<AcademicDepartment xmlns="http://vivoweb.org/ontology/core#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Slavic and East European Studies</AcademicDepartment>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-09T19:19:02.957Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utopia and anti-utopia in V. Vynnychenko's novel "Sun machine" ("Soniachna mashyna")</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/8p/58/pd/32/8p58pd32g">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-04T01:59:35.219Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/8p/58/pd/32/8p58pd32g/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-20T05:10:09.203Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43c4b773-3e9e-4583-a3cf-fe61677726a6</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">helencoe@med.ualberta.ca</dpt>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:45899bb8-2084-4bef-a472-f2847cac5a21</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:45899bb8-2084-4bef-a472-f2847cac5a21</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:type>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dgg>
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No liguistic content</dcterm:language>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02870w14n</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></unicorn>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02870w14n</ingestbatch>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></thesislevel>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/dr/26/xx/74/dr26xx740"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-14T20:35:31.380Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Canadian Common CV (CCV): Navigating and Troubleshooting</dcterm:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/x6/33/f3/34/x633f334r">
+	<dis xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhai, Hou Long.</dis>
+	<dcterm:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract in English. Text in Russian.</dcterm:abstract>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:created>
+	<dcterm:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</dcterm:dateAccepted>
+	<dcterm:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:dateSubmitted>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russian</dcterm:language>
+	<dcterm:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permission is hereby granted to the University of Alberta Libraries to reproduce single copies of this thesis and to lend or sell such copies for private, scholarly or scientific research purposes only. The author reserves all other publication and other rights in association with the copyright in the thesis and, except as herein before provided, neither the thesis nor any substantial portion thereof may be printed or otherwise reproduced in any material form whatsoever without the author's prior written permission.</dcterm:rights>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pushkin, Aleksandr Sergeevich, 1799-1837--Evgeniĭ Onegin.</dcterm:subject>
+	<ThesisDegree xmlns="http://purl.org/ontology/bibo/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Arts</ThesisDegree>
+	<fedora3handle xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.21398</fedora3handle>
+	<graduationdate xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kh04dr96m</ingestbatch>
+	<proquest xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<specialization xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<trid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2285382</unicorn>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</year_created>
+	<graduationdate xmlns="http://terms.library.ualberta.ca/date/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></graduationdate>
+	<fedora3handle xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hdl.handle.net/10402/era.21398</fedora3handle>
+	<proquest xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></proquest>
+	<ser xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ser>
+	<trid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></trid>
+	<unicorn xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2285382</unicorn>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theses and Dissertations</hasCollection>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558t416</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kh04dr96m</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</year_created>
+	<specialization xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></specialization>
+	<thesislevel xmlns="http://terms.library.ualberta.ca/thesis/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's</thesislevel>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ML23353.pdf</downloadFilename>
+	<isPartOf xmlns="info:fedora/fedora-system:def/relations-external#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/x0/59/c9/50/x059c950n"/>
+	<AcademicDepartment xmlns="http://vivoweb.org/ontology/core#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department of Slavic and East European Studies</AcademicDepartment>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dcterm:description>
+	<dcterm:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-09T17:17:37.296Z</dcterm:modified>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The function of literature in A.S. Pushkin's novel in verse "Eugene Onegin" = Funkt͡sii͡a literatury v romane v stikhakh A.S. Pushkina "Evgeniĭ Onegin"</dcterm:title>
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-18T10:55:06.172Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/x6/33/f3/34/x633f334r/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-10T10:53:02.115Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">924001e3-0ec9-45ee-bc4c-f2bbb644a1e4</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">riedlber@ualberta.ca</dpt>
+	<fedora3uuid xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:87567441-98bf-4883-83c5-d60d88403614</fedora3uuid>
+	<fedora3uuid xmlns="http://terms.library.ualberta.ca/id/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuid:87567441-98bf-4883-83c5-d60d88403614</fedora3uuid>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<createdDate xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema-instance#dateTime">2010-11-10T18:18:12.000Z</createdDate>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am required to use/link to a publisher's license</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r66n</belongsToCommunity>
+	<dgg xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Alberta</dgg>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cc/f9/5j/b4/ccf95jb47k">
+	<created xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-10T23:21:03.296Z</created>
+	<createdBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</createdBy>
+	<exportsAs xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cc/f9/5j/b4/ccf95jb47k/fcr:export?format=jcr/xml"/>
+	<hasParent xmlns="http://fedora.info/definitions/v4/repository#" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod"/>
+	<lastModified xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-29T19:29:34.862Z</lastModified>
+	<lastModifiedBy xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedoraAdmin</lastModifiedBy>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Container</mixinTypes>
+	<mixinTypes xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fedora:Resource</mixinTypes>
+	<primaryType xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nt:folder</primaryType>
+	<uuid xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d11267b2-b854-4003-8f1e-56facad03e1c</uuid>
+	<writable xmlns="http://fedora.info/definitions/v4/repository#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</writable>
+	<dpt xmlns="http://id.loc.gov/vocabulary/relators/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eraadmi@ualberta.ca</dpt>
+	<dcterm:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beard, Laura J.</dcterm:creator>
+	<hasModel xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericFile</hasModel>
+	<dcterm:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribution 4.0 International</dcterm:license>
+	<dcterm:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal Article (Published)</dcterm:type>
+	<belongsToCommunity xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r72s</belongsToCommunity>
+	<belongsToCommunity xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558r72s</belongsToCommunity>
+	<dcterm:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</dcterm:created>
+	<dcterm:isVersionOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beard, L.J. (1998). La sujetividad femenina en la metaficción feminista latinoamericana. Revista iberoamericana, 64, 182-183, 299-311.</dcterm:isVersionOf>
+	<dcterm:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spanish</dcterm:language>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feminism</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latin america</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metafiction</dcterm:subject>
+	<dcterm:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjectivity</dcterm:subject>
+	<hasCollection xmlns="http://terms.library.library.ca/identifiers/" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/55/8s/71/44558s71q"/>
+	<hasCollectionId xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s71q</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cdj52w472s</ingestbatch>
+	<year_created xmlns="http://terms.library.library.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</year_created>
+	<hasCollection xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:resource="http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/55/8s/71/44558s71q"/>
+	<hasCollectionId xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44558s71q</hasCollectionId>
+	<ingestbatch xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cdj52w472s</ingestbatch>
+	<year_created xmlns="http://terms.library.ualberta.ca/identifiers/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</year_created>
+	<downloadFilename xmlns="info:fedora/fedora-system:def/model#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchFiles/IA_64_182.pdf</downloadFilename>
+	<dcterm:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://revista-iberoamericana.pitt.edu/ojs/index.php/Iberoamericana/article/view/6165/6341</dcterm:relation>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+	<rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0created"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0lastModified"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/mix/1.0referenceable"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0base"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0folder"/>
+	<rdf:type rdf:resource="http://www.jcp.org/jcr/nt/1.0hierarchyNode"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<dcterm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En los últimos años, hemos visto que varias teorías del posmodernismo y del feminismo comparten un deseo de romper con las distinciones tradicionales de varias oposiciones binarias: \"el arte\" y \"la vida\", lo masculino y lo femenino, la alta cultura y la cultura popular, lo central y lo marginal. Desafian el dominante concepto liberal de la sujetividad, con su creencia en un ser unido y en una naturaleza humana universal.</dcterm:description>
+	<dcterm:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La sujetividad femenina en la metaficción feminista latinoamericana</dcterm:title>
+</rdf:Description>
+
+</rdf:RDF>
