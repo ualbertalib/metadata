@@ -79,6 +79,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense  )  
   * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial  )  
@@ -188,6 +189,7 @@ repeat: **true**
 required: **true**  
 sort: **false**  
 ### dcterms:alternative  
+comments: **what about this one?**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
 display: **true**  
@@ -202,7 +204,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated**  
 display: **true**  
 displayLabel: **date created**  
-facet: **false**  
+facet: **true**  
 onForm: **true**  
 propertyName: **date created**  
 repeat: **false**  
