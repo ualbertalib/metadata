@@ -75,7 +75,7 @@ def setAnnotations():
         sparql.setMethod('POST')
         sparql.setQuery(query)
         sparql.query()
-        auditQ = "prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix premis: <http://www.loc.gov/premis/rdf/v1#> INSERT DATA { GRAPH <http://terms.library.ualberta.ca/audit> { _:blankNode rdf:Type premis:Event ; premis:hasAgent <http://terms.library.ualberta.ca/user/%s> ; premis:hasEventDateTime '%s'^^xsd:dateTime ; premis:hasEventDetail \"%s\" } }" % (u, datetime.datetime.now(), query)
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:ReplaceAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:deletion '%s'; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov, nv)
         sparql.setQuery(auditQ)
         sparql.query()
         # obtains the new value from the graph to ensure the data has changed
@@ -110,9 +110,9 @@ def delAnnotations():
         sparql.setMethod('POST')
         sparql.setQuery(query)
         sparql.query()
-        auditQ = "prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix premis: <http://www.loc.gov/premis/rdf/v1#> INSERT DATA { GRAPH <http://terms.library.ualberta.ca/audit> { _:blankNode rdf:Type premis:Event ; premis:hasAgent <http://terms.library.ualberta.ca/user/%s> ; premis:hasEventDateTime '%s'^^xsd:dateTime ; premis:hasEventDetail \"%s\" } }" % (u, datetime.datetime.now(), query)
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:DeleteAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:deletion '%s'} }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov)
         sparql.setQuery(auditQ)
-        sparql.query()        
+        sparql.query()       
         return jsonify(result=None)
     except Exception as e:
         return e
@@ -136,9 +136,9 @@ def newAnnotation():
         sparql.setMethod('POST')
         sparql.setQuery(query)
         sparql.query()
-        auditQ = "prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix premis: <http://www.loc.gov/premis/rdf/v1#> INSERT DATA { GRAPH <http://terms.library.ualberta.ca/audit> { _:blankNode rdf:Type premis:Event ; premis:hasAgent <http://terms.library.ualberta.ca/user/%s> ; premis:hasEventDateTime '%s'^^xsd:dateTime ; premis:hasEventDetail \"%s\" } }" % (u, datetime.datetime.now(), query)
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:AddAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, nv)
         sparql.setQuery(auditQ)
-        sparql.query()        
+        sparql.query()     
         query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> <%s> ?v} }" % (g, p, a)
         sparql.setMethod('GET')
         sparql.setQuery(query)
@@ -154,13 +154,25 @@ def newAnnotation():
 @app.route('/_view')
 def view():
     try:
-        query = "prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix premis: <http://www.loc.gov/premis/rdf/v1#> select ?userName ?date ?detail where {graph <http://terms.library.ualberta.ca/audit> {?event premis:hasAgent ?user ; premis:hasEventDateTime ?date ; premis:hasEventDetail ?detail . ?user premis:hasAgentName ?userName} } ORDER BY desc(?date)"
+        query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?userName ?date ?type ?graph ?property ?annotation ?insertion ?deletion where {graph ual:audit {?event schema:agent ?user ; rdf:type ?type ; schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL {?event ual:insertion ?insertion } . ?user foaf:name ?userName} } ORDER BY desc(?date)"
         sparql.setMethod('GET')
         sparql.setQuery(query)
         results = sparql.query().convert()
         events = []
         for result in results["results"]["bindings"]:
-            events.append({'user':  result['userName']['value'], "date": result['date']['value'], "detail": result['detail']["value"]})
+            binding = {"user": result['userName']['value'],
+                            "date": result['date']['value'],
+                            "type": result['type']['value'],
+                            "graph": result['graph']["value"],
+                            "property": result['property']["value"],
+                            "annotation": result['annotation']["value"]
+                        }
+            if 'insertion' in result:
+                binding["insertion"] = result['insertion']["value"]
+            if 'deletion' in result:
+                binding["deletion"] = result['deletion']["value"]
+            events.append(binding)
+
         # return results to the JS function
         return jsonify(result=events)
     except Exception as e:

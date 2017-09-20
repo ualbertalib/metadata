@@ -15,7 +15,18 @@
 
       <h1 class="text-center">Jupiter Application Profile Audit Viewer</h1>
       <div class="list-group" name='auditTrail'>
-        <ul class="list-group" aria-labelledby="auditTrail" id='auditTrail'></ul>
+        <ul class="list-group" aria-labelledby="auditTrail" id='auditTrail'>
+          <li list-group-item class='row'>
+            <h5 class='col'>Date</h5>
+            <h5 class='col'>User</h5>
+            <h5 class='col'>Type</h5>
+            <h5 class='col'>Profile</h5>
+            <h5 class='col'>Property</h5>
+            <h5 class='col'>Annotation</h5>
+            <h5 class='col'>Deletion</h5>
+            <h5 class='col'>Insertion</h5>
+          </li>
+        </ul>
       </div>
     <a href='/'>Visit application profile editor</a>
 
@@ -24,14 +35,31 @@
     var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     $(document).ready(function() {
             $.getJSON($SCRIPT_ROOT + '/_view', function(data) {
-            
             $.each(data.result, function( index, value ) {
-                  $("#auditTrail").append("<li list-group-item class='row'><div name='date' class='col'>" + value.date + "</div><div name='user' class='col' >" + value.user + "</div><div name='value' class='col'>" + value.detail + "</div></li>")
-                });
+                  
+                  var user = value['user']
+                  var date = value['date']
+                  var type = value['type'].replace('http://schema.org/', '')
+                  var graph = value['graph'].replace('http://206.167.181.123:9999/blazegraph/namespace/terms/', '')
+                  var property = value['property']
+                  var annotation = value['annotation'].replace('http://terms.library.ualberta.ca/', '')
+                  if (typeof value['insertion'] !== 'undefined') {
+                    var insertion = value['insertion'].replace('http://terms.library.ualberta.ca/', '')
+                  } else {
+                    insertion = null
+                  }
+                  if (typeof value['deletion'] !== 'undefined') {
+                    var deletion = value['deletion'].replace('http://terms.library.ualberta.ca/', '')
+                  } else {
+                    deletion = null
+                  }
+
+                    $("#auditTrail").append("<li list-group-item class='row'><div class='col'>" + date + "</div><div class='col'>" + user + "</div><div class='col'>" + type + "</div><div class='col'>" + graph + "</div><div class='col'>" + property + "</div><div class='col'>" + annotation + "</div><div class='col'>" + deletion + "</div><div class='col'>" + insertion + "</div></li>")
+                  
+              });
             });
             return false;
         });
-
   </script>
 </html>
           
