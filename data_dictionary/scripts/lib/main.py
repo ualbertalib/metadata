@@ -86,11 +86,11 @@ class Profiler(object):
 					display = False
 				for key, value in data:
 					if (annotation in value) and ('true' in value[annotation]):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower()))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower()))
 					elif (annotation in value) and (('indexAs' in annotation) and (value[annotation] != '')):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
 					elif (annotation in value) and (('backwardCompatibleWith' in annotation) and (value[annotation] != '')):
-						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#%s) is compatible with %s  " % (removeNS(key), addPrefixes(key).replace(':', '').lower(), value[annotation]))
+						print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is compatible with %s  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower(), value[annotation]))
 			print('')
 			print('# Profile by property')
 			print('')
