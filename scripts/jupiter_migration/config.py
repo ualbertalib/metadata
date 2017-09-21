@@ -1,0 +1,28 @@
+sparql = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
+namespaces = [
+	{"PREFIX": "premis", "uri": "<http://www.loc.gov/premis/rdf/v1#>"},
+	{"PREFIX": "test", "uri": "<info:fedora/test/>"},
+	{"PREFIX": "rdfs", "uri": "<http://www.w3.org/2000/01/rdf-schema#>"},
+	{"PREFIX": "ual", "uri": "<http://terms.library.ualberta.ca/>"},
+	{"PREFIX": "ualids", "uri": "<http://terms.library.ualberta.ca/identifiers/>"},
+	{"PREFIX": "ualid", "uri": "<http://terms.library.ualberta.ca/id/>"},
+	{"PREFIX": "ualdate", "uri": "<http://terms.library.ualberta.ca/date/>"},
+	{"PREFIX": "ualrole", "uri": "<http://terms.library.ualberta.ca/role/>"},
+	{"PREFIX": "ualthesis", "uri": "<http://terms.library.ualberta.ca/thesis/>"},
+	{"PREFIX": "info", "uri": "<info:fedora/fedora-system:def/model#>"},
+	{"PREFIX": "dcterm", "uri": "<http://purl.org/dc/terms/>"},
+	{"PREFIX": "pcdm", "uri": "<http://pcdm.org/models#>"},
+	{"PREFIX": "works", "uri": "<http://projecthydra.org/works/models#>"},
+	{"PREFIX": "rdf", "uri": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"},
+	{"PREFIX": "fedora", "uri": "<http://fedora.info/definitions/v4/repository#>"},
+	{"PREFIX": "iana", "uri": "<http://www.iana.org/assignments/relation/>"},
+	{"PREFIX": "dc", "uri": "<http://purl.org/dc/elements/1.1/>"},
+	{"PREFIX": "acl", "uri": "<http://projecthydra.org/ns/auth/acl#>"},
+	{"PREFIX": "webacl", "uri": "<http://www.w3.org/ns/auth/acl#>"},
+	{"PREFIX": "scholar", "uri": "<http://scholarsphere.psu.edu/ns#>"},
+	{"PREFIX": "rels", "uri": "<info:fedora/fedora-system:def/relations-external#>"},
+	{"PREFIX": "vivo", "uri": "<http://vivoweb.org/ontology/core#>"},
+	{"PREFIX": "bibo", "uri": "<http://purl.org/ontology/bibo/>"},
+	{"PREFIX": "mrels", "uri": "<http://id.loc.gov/vocabulary/relators/>"},
+	{"PREFIX": "prism", "uri": "<http://prismstandard.org/namespaces/basic/3.0/>"}
+}
