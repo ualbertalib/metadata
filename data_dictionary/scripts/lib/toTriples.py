@@ -12,7 +12,7 @@ def main():
 		directory = "%s/profiles/%s/" % (path, ptype)
 		if not os.path.exists(directory):
 			os.makedirs(directory)
-		filename = os.path.join(directory, 'profile.json')
+		filename = directory + 'profile.json'
 		with open(filename) as data:
 			data = json.load(data)
 			for item in data:
