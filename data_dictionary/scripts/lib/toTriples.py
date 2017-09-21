@@ -9,7 +9,7 @@ def main():
 		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))
 		sparql.query()
 	for ptype in ["collection", "generic", "thesis"]:
-		directory = "%s/profiles/%s/" % (path, ptype)
+		directory = "%s/profiles/%s/"
 		if not os.path.exists(directory):
 			os.makedirs(directory)
 		filename = directory + 'profile.json'
