@@ -48,7 +48,21 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor) is compatible with http://purl.org/dc/terms/contributor  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
-  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense) is compatible with http://purl.org/dc/terms/rights  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights) is compatible with http://purl.org/dc/terms/rights  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject) is compatible with http://purl.org/dc/terms/subject  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative) is compatible with http://purl.org/dc/terms/alternative  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated) is compatible with http://purl.org/dc/terms/created  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription) is compatible with http://purl.org/dc/terms/description  
+  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier) is compatible with http://purl.org/dc/terms/identifier  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof) is compatible with http://purl.org/dc/terms/isVersionOf  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage) is compatible with http://purl.org/dc/terms/language  
+  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense) is compatible with http://purl.org/dc/terms/license  
+  * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsrelation) is compatible with http://purl.org/dc/terms/relation  
+  * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermssource) is compatible with http://purl.org/dc/terms/source  
+  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial) is compatible with http://purl.org/dc/terms/spatial  
+  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal) is compatible with http://purl.org/dc/terms/temporal  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype) is compatible with http://purl.org/dc/terms/type  
   * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark) is compatible with http://terms.library.ualberta.ca/id/arkid  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
@@ -166,6 +180,7 @@ repeat: **true**
 required: **true**  
 sort: **false**  
 ### dc:rights  
+backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
 comments: **must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights**  
@@ -178,6 +193,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dc:subject  
+backwardCompatibleWith: **http://purl.org/dc/terms/subject**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject**  
 display: **true**  
@@ -189,6 +205,7 @@ repeat: **true**
 required: **true**  
 sort: **false**  
 ### dcterms:alternative  
+backwardCompatibleWith: **http://purl.org/dc/terms/alternative**  
 comments: **what about this one?**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
@@ -200,6 +217,7 @@ repeat: **true**
 required: **false**  
 sort: **false**  
 ### dcterms:created  
+backwardCompatibleWith: **http://purl.org/dc/terms/created**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated**  
 display: **true**  
@@ -211,6 +229,7 @@ repeat: **false**
 required: **false**  
 sort: **true**  
 ### dcterms:description  
+backwardCompatibleWith: **http://purl.org/dc/terms/description**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
 display: **true**  
@@ -222,6 +241,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:identifier  
+backwardCompatibleWith: **http://purl.org/dc/terms/identifier**  
 comments: **often doi, but not always; legacy container for non-doi identifiers (not active in jupiter)**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
@@ -234,6 +254,7 @@ repeat: **true**
 required: **false**  
 sort: **false**  
 ### dcterms:isVersionOf  
+backwardCompatibleWith: **http://purl.org/dc/terms/isVersionOf**  
 comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof**  
@@ -259,6 +280,7 @@ values displayed on form:
   * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
   * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
+backwardCompatibleWith: **http://purl.org/dc/terms/language**  
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
 display: **true**  
@@ -272,21 +294,15 @@ sort: **false**
 ### dcterms:license  
 values displayed on form:  
   * **Attribution 4.0 International** (http://creativecommons.org/licenses/by/4.0/)  
-  * **Attribution-NonCommercial 3.0 Unported** (http://creativecommons.org/licenses/by-nc/3.0/)  
   * **Attribution-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-sa/4.0/)  
   * **Attribution-NonCommercial 4.0 International** (http://creativecommons.org/licenses/by-nc/4.0/)  
-  * **Attribution-NoDerivs 3.0 Unported** (http://creativecommons.org/licenses/by-nd/3.0/)  
-  * **Attribution 3.0 Unported** (http://creativecommons.org/licenses/by/3.0/)  
   * **Attribution-NonCommercial-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nc-nd/4.0/)  
-  * **Attribution-ShareAlike 3.0 Unported** (http://creativecommons.org/licenses/by-sa/3.0/)  
   * **CC0 1.0 Universal** (http://creativecommons.org/publicdomain/zero/1.0/)  
   * **Attribution-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nd/4.0/)  
   * **Public Domain Mark 1.0** (http://creativecommons.org/publicdomain/mark/1.0/)  
-  * **Attribution-NonCommercial-ShareAlike 3.0 Unported** (http://creativecommons.org/licenses/by-nc-sa/3.0/)  
   * **Attribution-NonCommercial-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-nc-sa/4.0/)  
-  * **Attribution-NonCommercial-NoDerivs 3.0 Unported** (http://creativecommons.org/licenses/by-nc-nd/3.0/)  
 
-backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
+backwardCompatibleWith: **http://purl.org/dc/terms/license**  
 comments: **must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license**  
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense**  
@@ -299,6 +315,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:relation  
+backwardCompatibleWith: **http://purl.org/dc/terms/relation**  
 comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation**  
@@ -311,6 +328,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:source  
+backwardCompatibleWith: **http://purl.org/dc/terms/source**  
 comments: **relation, source, and isversionof will eventually be mapped together (to some extent)**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage**  
@@ -323,6 +341,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:spatial  
+backwardCompatibleWith: **http://purl.org/dc/terms/spatial**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial**  
 display: **true**  
@@ -335,6 +354,7 @@ repeat: **true**
 required: **false**  
 sort: **false**  
 ### dcterms:temporal  
+backwardCompatibleWith: **http://purl.org/dc/terms/temporal**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal**  
 display: **true**  
@@ -347,6 +367,7 @@ repeat: **true**
 required: **false**  
 sort: **false**  
 ### dcterms:title  
+backwardCompatibleWith: **http://purl.org/dc/terms/title**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
 display: **true**  
@@ -357,6 +378,7 @@ repeat: **false**
 required: **true**  
 sort: **true**  
 ### dcterms:type  
+backwardCompatibleWith: **http://purl.org/dc/terms/type**  
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
 display: **true**  

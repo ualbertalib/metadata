@@ -1,17 +1,14 @@
 # Jupiter Data Dictionary
 
- The Jupiter Data Dictionary is a collection of living documents. Below you will find the Juputiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  See [application profiles](http://github.com/ualbertalib/metadata/tree/master/data_dictionary/profiles) for current deployment specifications in Jupiter. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.
+The Jupiter Data Dictionary is a collection of living documents. Below you will find the Jupiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  Current deployment specifications in Jupiter are described by application profiles. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.
 # Namespaces
 
    **bibo:** http://purl.org/ontology/bibo/  
    **cc:** http://creativecommons.org/ns#  
    **dc:** http://purl.org/dc/elements/1.1/  
    **dcterms:** http://purl.org/dc/terms/  
-   **eprints:** http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Type_Vocabulary_Encoding_Scheme#  
    **fabio:** http://purl.org/spar/fabio/  
    **foaf:** http://xmlns.com/foaf/0.1/  
-   **geonames:** http://www.geonames.org/ontology#  
-   **iana:** http://www.iana.org/assignments/media-types/  
    **lang:** http://id.loc.gov/vocabulary/iso639-2/  
    **mrel:** http://id.loc.gov/vocabulary/relators/  
    **naf:** http://id.loc.gov/authorities/names/  
@@ -24,11 +21,9 @@
    **status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
    **owl:** http://www.w3.org/2002/07/owl#  
    **ore:** http://www.openarchives.org/ore/terms/  
-   **tgn:** http://vocab.getty.edu/tgn/  
    **ual:** http://terms.library.ualberta.ca/  
    **vivo:** http://vivoweb.org/ontology/core#  
    **works:** http://pcdm.org/works#  
-   **xsd:** http://www.w3.org/2001/XMLSchema#  
 
 # Definitions
 
