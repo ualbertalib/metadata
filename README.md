@@ -1,2 +1,2 @@
 # metadata
-This repository contains stylesheets and scripts used by the members of the metadata team for a variety of tasks, mainly related to HydraNorth (Fedora 4, Hydra - ualbertalib/HydraNorth), such as the preparation of datasets for migration.
+This repository is used by the members of the metadata team for a variety of tasks, mainly related to legacy projects (HydraNorth/Hydra) and ongoing projects (Peel, Jupiter, UalbertaLib). Included is a Jupiter data dictionary, projects at different stages of development (metadata-wrangling), stored metadata (metadata_archiving), schemas, random potentially useful scripts (in python and bash) and stylesheets.
