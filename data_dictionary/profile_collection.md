@@ -73,7 +73,6 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:description  
-comments: **A description is required for communities and optional for collections. An exception is when a community must be created but a description is not immediately ready/available.**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
 display: **true**  
