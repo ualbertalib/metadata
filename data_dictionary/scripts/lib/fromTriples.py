@@ -10,7 +10,7 @@ def main():
 def transporter():
 
 	"""imports vocabulary from the triple store and saves it as three profile.json files"""
-	for ptype in ["collection", "generic", "thesis"]:
+	for ptype in ["collection", "community" "generic", "thesis"]:
 		profile = {}
 		query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (ptype)
 		sparql.setReturnFormat(JSON)

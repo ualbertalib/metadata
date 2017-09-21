@@ -1,0 +1,830 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"set",
+				"setQuery"
+			],
+			[
+				"sparql",
+				"SPARQLWrapper\tmodule"
+			],
+			[
+				"pro",
+				"propertyKey\tstatement"
+			],
+			[
+				"jso",
+				"jsonify\tmodule"
+			],
+			[
+				"res",
+				"resourceType"
+			],
+			[
+				"ann",
+				"annotations"
+			],
+			[
+				"render",
+				"renderPrefixes\tfunction"
+			],
+			[
+				"add",
+				"addTerm"
+			],
+			[
+				"propert",
+				"properties"
+			],
+			[
+				"d",
+				"definitions\tstatement"
+			],
+			[
+				"object",
+				"objectProperty\tstatement"
+			],
+			[
+				"neo",
+				"neo4j\tmodule"
+			],
+			[
+				"comm",
+				"communityName\tforstmt"
+			],
+			[
+				"dict",
+				"from_dict"
+			],
+			[
+				"sort",
+				"sort_keys\tparam"
+			],
+			[
+				"communi",
+				"communityName\tforstmt"
+			],
+			[
+				"leng",
+				"length_dist\tfunction"
+			],
+			[
+				"max",
+				"maxint\tinstance"
+			],
+			[
+				"semant",
+				"semantic_similarity\tfunction"
+			],
+			[
+				"skip",
+				"skip_header\tparam"
+			],
+			[
+				"sk",
+				"skip_header\tparam"
+			],
+			[
+				"is",
+				"isinstance\tfunction"
+			],
+			[
+				"E",
+				"Exception\tclass"
+			],
+			[
+				"s",
+				"serialize\tfunction"
+			],
+			[
+				"fie",
+				"fieldNum\tforstmt"
+			],
+			[
+				"read",
+				"read\tfunction"
+			],
+			[
+				"rub",
+				"ruby-text"
+			],
+			[
+				"iso",
+				"isoformat\tfunction"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"style",
+				"font-style"
+			],
+			[
+				"P",
+				"ParameterValue"
+			],
+			[
+				"Dict",
+				"DictReader\tclass"
+			],
+			[
+				"sel",
+				"selectAll"
+			],
+			[
+				"al",
+				"alpha\tstatement"
+			],
+			[
+				"json",
+				"JSON"
+			],
+			[
+				"fa",
+				"False\tinstance"
+			],
+			[
+				"performa",
+				"performanceId\tstatement"
+			],
+			[
+				"peformance",
+				"performanceId\tstatement"
+			],
+			[
+				"contrib",
+				"contributors"
+			],
+			[
+				"per",
+				"performanceNum\tstatement"
+			],
+			[
+				"l",
+				"length\tstatement"
+			],
+			[
+				"recording",
+				"recordingId\tstatement"
+			],
+			[
+				"perf",
+				"performanceId\tstatement"
+			],
+			[
+				"composition",
+				"compositionTitle\tstatement"
+			],
+			[
+				"collection",
+				"collectionElements\tstatement"
+			],
+			[
+				"collecti",
+				"collectionElements\tstatement"
+			],
+			[
+				"j",
+				"j\tstatement"
+			],
+			[
+				"subject",
+				"subject"
+			],
+			[
+				"select",
+				"selectObject"
+			],
+			[
+				"selec",
+				"selectPredicate"
+			],
+			[
+				"se",
+				"selectSubject"
+			],
+			[
+				"where",
+				"wherePredicate"
+			],
+			[
+				"spar",
+				"sparqlObject"
+			],
+			[
+				"id",
+				"idType"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/generic/profile.json",
+			"settings":
+			{
+				"buffer_size": 36193,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "flaskapp.wsgi",
+			"settings":
+			{
+				"buffer_size": 244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta name=\"viewport\" content = \"width=device-width, initial-scale=1.0\">\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css\" integrity=\"sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ\" crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js\" integrity=\"sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js\" integrity=\"sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn\" crossorigin=\"anonymous\"></script>\n    <script type=\"text/javascript\">\n      var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};\n    </script>\n    <script type =\"text/javascript\" src =\"{{ url_for('static', filename='script.js') }}\" ></script>\n  </head>\n  \n  <body class = \"body\">\n    <div class=\"container-fluid\">\n      <h3 class=\"text-center\">Jupiter Application Profile Editor</h3>\n      \n      <form method=post action=\"#\">\n        \n        <div class=\"dropdown\">\n          <button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">\n            Select Profile\n            <span class=\"caret\"></span>\n          </button>\n          <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"profile\" id='profile'  data-toggle=\"button\">\n            <li><button class=\"dropdown-item\" type=\"button\" id=\"profile\" value='collection' data-toggle=\"button\">Collection</a></li>\n            <li><button class=\"dropdown-item\" type=\"button\" id=\"profile\" value='generic' data-toggle=\"button\">Generic</a></li>\n            <li><button class=\"dropdown-item\" type=\"button\" id=\"profile\" value='thesis' data-toggle=\"button\">Thesis</a></li>\n          </ul>\n        </div>\n\n         <span id=\"result\">?</span>\n\n          <div class=\"dropdown\">\n            <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"properties\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n              Properties\n            </button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\" id=\"properties\">\n              <button class=\"dropdown-item\" type=\"button\" id=\"property\"></button>\n            </div>\n          </div>\n\n        <p><input type=submit value=Register></p>\n\n      </form>\n    </div>\n\n  </body>\n</html>",
+			"file": "Terms/templates/editor.html",
+			"file_size": 2349,
+			"file_write_time": 131492072656131465,
+			"settings":
+			{
+				"buffer_size": 2605,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 112.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"git: p",
+				"Git: Push"
+			],
+			[
+				"git: com",
+				"Git: Commit"
+			],
+			[
+				"git: add",
+				"Git: Quick Add"
+			],
+			[
+				"git: ",
+				"Git: Help"
+			],
+			[
+				"git ",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Quick Add"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/static",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/templates"
+	],
+	"file_history":
+	[
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/sftp-config.json",
+		"/home/zschoenb/Documents/Projects/metadata/.gitignore",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/hydraNorth.txt",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/static/script.js",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/thesis/profile.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/update.sh",
+		"/home/zschoenb/.config/sublime-text-3/Packages/User/sftp_servers/ubuntu",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/config.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/__init__.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/transform.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/generic/profile.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/ontologies/Jupiter.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/collection/profile.json",
+		"/home/zschoenb/.gitignore",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/static/_formhelpers.html",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/templates/_formhelpers.html",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/templates/index.html",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/templates/header.html",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/db.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/static/jquery.min.js",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/Terms/index.html",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/__init__.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/www/flaskapp.wsgi",
+		"/home/zschoenb/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/hydraNorth.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/secret.py",
+		"/home/zschoenb/.config/sublime-text-3/Packages/SFTP/SFTP.sublime-settings",
+		"/home/zschoenb/.config/sublime-text-3/Packages/rsub/rsub.sublime-settings",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/sql.py",
+		"/home/zschoenb/termsld.owl",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/t2.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/README.md",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/collection.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/thesis.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/genericWork.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/generic.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/ontologies/properties.json",
+		"/tmp/mozilla_zschoenb0/Jupiter.json",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/oop.py",
+		"/home/zschoenb/Documents/Projects/metadata/data_dictionary/scripts/transform (copy).py",
+		"/home/zschoenb/Documents/Projects/metadata/terms/terms.py",
+		"/home/zschoenb/Documents/Projects/metadata/terms/config.py",
+		"/home/zschoenb/Documents/Projects/metadata/terms/output.md",
+		"/home/zschoenb/Documents/Projects/metadata/terms/terms.json",
+		"/home/zschoenb/Documents/Projects/metadata/terms/transform.py",
+		"/home/zschoenb/Documents/Projects/metadata/.git-ignore",
+		"/home/zschoenb/.git-credentials",
+		"/home/zschoenb/Documents/Projects/metadata/terms/catalog-v001.xml",
+		"/home/zschoenb/Documents/Projects/metadata/terms/widoco.jar/config/config.properties",
+		"/home/zschoenb/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/zschoenb/Documents/Projects/metadata/terms/namespaces.py",
+		"/home/zschoenb/Documents/catalog-v001.xml",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/ERAImport.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/requestSolrResources.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/ERAImportAll.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/elasticIndexerDynamic.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/neo4j.py",
+		"/home/zschoenb/select?q=*%3A*",
+		"/home/zschoenb/select?q=*%3A*&fq=active_fedora_model_ssi%3AGenericFile&fq=rights_tesim%3A*&fq=license_tesim%3A*&rows=40000&fl=id%2C+resource_type_tesim%2C+rights_tesim%2C+license_tesim&wt=json&indent=true",
+		"/home/zschoenb/resources.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/updateTriples.sh",
+		"/tmp/mozilla_zschoenb0/ep_2010-10-20.n3",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/jupiter-test.nt",
+		"/home/zschoenb/Documents/bibo.rdf",
+		"/home/zschoenb/Documents/xsd.xml",
+		"/home/zschoenb/Documents/cc.rdf",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/construct.py",
+		"/etc/fstab",
+		"/home/zschoenb/.smbcredentials",
+		"/tmp/mozilla_zschoenb0/createInstances.xsl",
+		"/tmp/mozilla_zschoenb0/model-2.owl",
+		"/tmp/mozilla_zschoenb0/queryResults.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/elasticIndexer.py",
+		"/home/zschoenb/Documents/nt/Collectiondpt.nt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/missing.txt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/resources.txt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/temp.rdf",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/merge.txt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/edit.py",
+		"/home/zschoenb/Documents/Projects/resources.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/matches.txt",
+		"/home/zschoenb/Downloads/resources.tsv",
+		"/home/zschoenb/Documents/Projects/metadata/metadata-wrangling/ORCID/era_matches/conservative.csv",
+		"/home/zschoenb/Downloads/resources(1).tsv",
+		"/home/zschoenb/Documents/nt/GenericFileThesisDegree.nt",
+		"/home/zschoenb/Documents/Collection.nt",
+		"/home/zschoenb/Documents/GenericFile.nt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/longestCommonSubstring.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/creatorNames.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/au.sh",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/ualbertaORCIDNames.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/UalbertaORCIDS.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/reconcile.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/matches.json",
+		"/home/zschoenb/Documents/Projects/metadata/metadata-wrangling/ORCID/UalbertaORCIDProfiles.json",
+		"/home/zschoenb/Documents/Projects/metadata/metadata-wrangling/ORCID/ualbertaAffiliatedProfiles/0000-0001-5000-3822.json",
+		"/home/zschoenb/Documents/solrERAExample.txt",
+		"/home/zschoenb/Documents/solrThesisExample.txt",
+		"/home/zschoenb/Documents/Projects/Peel/tgm3.py",
+		"/home/zschoenb/Documents/Projects/Peel/tgm2.py",
+		"/home/zschoenb/Downloads/rhw2.pem",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/UalbertaPeople.txt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/ualbertaORCIDS/0000-0001-5000-3822.json",
+		"/home/zschoenb/Documents/eastcloud.txt",
+		"/home/zschoenb/Documents/rob.gpg",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/orcid.py",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/0000-0002-0533-4478.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/peopleData.json",
+		"/tmp/mozilla_zschoenb0/vh53ww47k.endnote",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/test.json",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/test.xml",
+		"/home/zschoenb/Documents/ERAViz1.nt",
+		"/home/zschoenb/Documents/Projects/metadata/scripts/output.txt",
+		"/home/zschoenb/Downloads/ESTest.py",
+		"/home/zschoenb/Downloads/ESTest.txt",
+		"/home/zschoenb/output.nt",
+		"/home/zschoenb/linked.py",
+		"/home/zschoenb/Documents/Projects/ia/convert.py",
+		"/home/zschoenb/Documents/Projects/ia/titler.py",
+		"/home/zschoenb/Downloads/ESTest(1).py",
+		"/home/zschoenb/ERAViz.nt",
+		"/home/zschoenb/blazegraph.nt",
+		"/home/zschoenb/Documents/Projects/ia/files.txt",
+		"/home/zschoenb/Documents/Projects/ia/jsonFix.py",
+		"/etc/apt/apt.conf.d/10periodic",
+		"/etc/apt/apt.conf.d/50unattended-upgrades",
+		"/home/zschoenb/Documents/Projects/ia/communities.txt",
+		"/home/zschoenb/Documents/Projects/ia/semantic_diff.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"backwardCompatibleWith\"",
+			"indexAs",
+			"/langu",
+			"dc/terms/",
+			"/MARC_Language",
+			"^",
+			"config",
+			"supervisor",
+			"dissert",
+			"doi\"",
+			"_without_label_ssim",
+			"_tesim",
+			"_date_tesim",
+			"\"embargo_history_ssim\"",
+			"implemented",
+			"id.loc",
+			"dc/terms/language",
+			"langu",
+			"acceptedValues\": [",
+			"type",
+			"\\",
+			"bind",
+			"    ",
+			"\"",
+			"\",",
+			"\"acceptedValues\": \\[.+*\\]",
+			"\"acceptedValues\": [.+]",
+			"\"acceptedVavlues\": [.+]",
+			"acceptedVavlues\": [.*]",
+			"acceptedVa",
+			"$",
+			"output[type][subject]",
+			"predicate",
+			"index",
+			"predicate",
+			"Metadata",
+			"bool",
+			"False",
+			"True",
+			"true",
+			"false",
+			"bool",
+			"#type",
+			"\t\"onThesisForm\": \"\",",
+			"\t\"inGeneralObject\": \"\",",
+			"\"onThesisForm\": \"\",",
+			"\"definition\": \"\"",
+			"\"indexWith\": [],",
+			"\"backwardCompatibleWith\": [],",
+			"\"\"",
+			"resource",
+			"term",
+			"preflabel",
+			"skos:preflabel",
+			"skos:prefLabel",
+			"namedInd",
+			"An alternate order",
+			"rdfs:domain",
+			"domain",
+			"range",
+			"\t{\"uri\": ",
+			"\t{",
+			"^",
+			">",
+			"<",
+			"owl:",
+			"rdfs:",
+			"ignore",
+			"\"type\":",
+			"\"label\": ",
+			"hasParent",
+			"^<",
+			"<",
+			"><http:",
+			"\": \"",
+			"{\"",
+			"type",
+			"\",\"",
+			"^",
+			"\"\"",
+			"\"\"\"",
+			" ",
+			"\\t",
+			"http://purl.org/eprint/type/",
+			"\\t(.+)?$",
+			"\\t.+?$",
+			"\\t?.+$",
+			"\\t.+$",
+			"\\t?.+^",
+			"\t",
+			". ",
+			"basic",
+			"GraphD",
+			"    ",
+			"date",
+			"if 'date' in",
+			"if date in",
+			"resources",
+			"date",
+			"namespace/jupiter-test/sparql",
+			"b0v8380704",
+			"http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b0/v8/38/07/b0v8380704",
+			"\"",
+			"jupiter",
+			"    ",
+			"ERA",
+			"')\n",
+			"-",
+			"    ",
+			"^$",
+			"0000-0001-5000-3822",
+			"'",
+			"'family'",
+			"type",
+			"'",
+			"'creator'",
+			"'http",
+			"'resource'",
+			"'era'",
+			"}$",
+			"source",
+			"0000-0001-5000-3822",
+			"https://pub.orcid.org/v2.0/",
+			"^\\{\"created-date\":",
+			"^\\t",
+			"^\\{\"created-date\":",
+			"${\"created-date\":",
+			"{\"created-date\":"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/zschoenb/Documents/Projects/metadata/data_dictionary/profiles/generic/profile.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "flaskapp.wsgi",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Terms/templates/editor.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2435,
+								2435
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 118.0
+	},
+	"output.git-push":
+	{
+		"height": 30.0
+	},
+	"output.sftp":
+	{
+		"height": 263.0
+	},
+	"pinned_build_system": "",
+	"project": "flask.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

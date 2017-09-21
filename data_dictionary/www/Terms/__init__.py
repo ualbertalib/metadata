@@ -64,13 +64,19 @@ def setAnnotations():
         nv = request.args.get('nv', 0, type=str)  # new value (the replacement value)
         u = request.args.get('u', 0, type=str)  # user (for audit)
         # this should be improved by adding a uri test on the ov separate from the new value (unless we agree, some annos must be either uri or lit only)
-        uriQ = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> <%s> } INSERT { <%s> <%s> <%s> } WHERE { <%s> <%s> <%s> }" % (g, p, a, ov, p, a, nv, p, a, ov)
-        litQ = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> '%s' } INSERT { <%s> <%s> '%s' } WHERE { <%s> <%s> '%s' }" % (g, p, a, ov, p, a, nv, p, a, ov)
+        uri1 = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> '%s' } INSERT { <%s> <%s> <%s> } WHERE { <%s> <%s> '%s' }" % (g, p, a, ov, p, a, nv, p, a, ov)
+        uri2 = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> <%s> } INSERT { <%s> <%s> <%s> } WHERE { <%s> <%s> <%s> }" % (g, p, a, ov, p, a, nv, p, a, ov)
+        lit1 = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> <%s> } INSERT { <%s> <%s> '%s' } WHERE { <%s> <%s> <%s> }" % (g, p, a, ov, p, a, nv, p, a, ov)
+        lit2 = "PREFIX ual: <http://terms.library.ualberta.ca/> WITH ual:%s DELETE { <%s> <%s> '%s' } INSERT { <%s> <%s> '%s' } WHERE { <%s> <%s> '%s' }" % (g, p, a, ov, p, a, nv, p, a, ov)
         # tests if the new value is a uri or a literal and sets appropriately
-        if "http" in nv:
-            query = uriQ
-        else:
-            query = litQ
+        if "http" in ov and nv:
+            query = uri2
+        elif ("http" in nv) and ("http" not in ov):
+            query = uri1
+        elif ("http" not in nv) and ("http" not in ov):
+            query = lit2
+        elif ("http" not in nv) and ("http" in ov):
+            query = lit1
         # perform the query
         sparql.setMethod('POST')
         sparql.setQuery(query)

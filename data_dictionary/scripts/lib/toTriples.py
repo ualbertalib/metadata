@@ -5,7 +5,7 @@ import os
 
 def main():
 	sparql.setMethod("POST")
-	for ptype in ["collection", "generic", "thesis", "instances"]:
+	for ptype in ["collection", "community", "generic", "thesis", "instances"]:
 		sparql.setQuery('DROP GRAPH <http://terms.library.ualberta.ca/%s>' % (ptype))
 		sparql.query()
 	for ptype in ["collection", "generic", "thesis"]:
