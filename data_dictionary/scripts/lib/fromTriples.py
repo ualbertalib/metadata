@@ -1,7 +1,7 @@
 import json
 from config import sparql, path
 from SPARQLWrapper import JSON
-
+import os
 
 def main():
 	transporter()
@@ -30,7 +30,10 @@ def transporter():
 			else:
 				profile[result['property']['value']][result['annotation']['value']] = result['value']['value']
 
-		filename = '%s/profiles/%s/profile.json' % (path, ptype)
+		directory = "%s/profiles/%s/" % (path, ptype)
+		if not os.path.exists(directory):
+			os.makedirs(directory)
+		filename = os.path.join(directory, 'profile.json')
 		with open(filename, 'w+') as p:
 			json.dump(profile, p, sort_keys=True, indent=4)
 
