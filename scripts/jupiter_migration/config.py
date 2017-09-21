@@ -1,7 +1,6 @@
 sparql = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
 namespaces = [
 	{"PREFIX": "premis", "uri": "<http://www.loc.gov/premis/rdf/v1#>"},
-	{"PREFIX": "test", "uri": "<info:fedora/test/>"},
 	{"PREFIX": "rdfs", "uri": "<http://www.w3.org/2000/01/rdf-schema#>"},
 	{"PREFIX": "ual", "uri": "<http://terms.library.ualberta.ca/>"},
 	{"PREFIX": "ualids", "uri": "<http://terms.library.ualberta.ca/identifiers/>"},
@@ -24,5 +23,10 @@ namespaces = [
 	{"PREFIX": "vivo", "uri": "<http://vivoweb.org/ontology/core#>"},
 	{"PREFIX": "bibo", "uri": "<http://purl.org/ontology/bibo/>"},
 	{"PREFIX": "mrels", "uri": "<http://id.loc.gov/vocabulary/relators/>"},
-	{"PREFIX": "prism", "uri": "<http://prismstandard.org/namespaces/basic/3.0/>"}
-}
+	{"PREFIX": "prism", "uri": "<http://prismstandard.org/namespaces/basic/3.0/>"},
+	{"PREFIX": "cc", "uri": "http://creativecommons.org/ns#"},
+	{"PREFIX": "fabio", "uri": "http://purl.org/spar/fabio/"},
+	{"PREFIX": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
+	{"PREFIX": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
+	{"PREFIX": "naf", "uri": "http://id.loc.gov/authorities/names/"}
+]
