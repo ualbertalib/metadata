@@ -1,6 +1,14 @@
 import json
 from config import namespaces, profileWelcome, profileDefinitions, path
 import os
+import sys
+
+
+def main(ptype = sys.argv[1]):
+	Profiler(ptype)
+	# query = Query().getQuery(ptype)
+	# print("%s%s" % (query.construct, query.where))
+
 
 
 class owlDocument(object):
@@ -107,6 +115,43 @@ class Profiler(object):
 						print("%s: **%s**  " % (removeNS(key), value))
 
 
+
+class Query:
+	ptype = ""
+
+	@staticmethod
+	def getQuery(ptype):
+		if (ptype == "collection"):
+			return Collection()
+		elif (ptype == "community"):
+			return Community()
+		elif (ptype == "thesis"):
+			return Thesis()
+		elif (ptype == "generic"):
+			return Generic()
+		else:
+			return None
+
+
+class Collection(Query):
+	construct = "CONSTRUCT { ?resource info:hasModel 'IRItem'^^xsd:string ; rdf:type pcdm:Collection } "
+	where = "WHERE { ?resource info:hasModel 'Collection'^^xsd:string ; OPTIONAL { ?s ualids:is_community 'false'^^xsd:boolean } . OPTIONAL { ?s ualid:is_community 'false'^^xsd:boolean } . OPTIONAL { ?s ual:is_community 'false'^^xsd:boolean } . ?s ?p ?o}"
+
+class Community(Query):
+	construct = "CONSTRUCT { ?resource info:hasModel 'IRItem'^^xsd:string ; rdf:type pcdm:Object; rdf:type ual:Community } "
+	where = "WHERE { ?resource info:hasModel 'Community'^^xsd:string} { ?resource info:hasModel 'Collection'^^xsd:string ; OPTIONAL { ?s ualids:is_community 'true'^^xsd:boolean } . OPTIONAL { ?s ualid:is_community 'true'^^xsd:boolean } . OPTIONAL { ?s ual:is_community 'true'^^xsd:boolean } . ?s ?p ?o}"
+
+
+class Generic(Query):
+	construct = "CONSTRUCT { ?resource info:hasModel 'IRItem'^^xsd:string ; rdf:type pcdm:Object; rdf:type works:work } "
+	where = "WHERE { ?resource info:hasModel 'GenericFile'^^xsd:string ; dcterm:type ?type . filter(?type != 'Thesis') . ?resource ?p ?o }"
+
+
+class Thesis(Query):
+	construct = "CONSTRUCT { ?resource info:hasModel 'IRItem'^^xsd:string ; rdf:type pcdm:Object; rdf:type works:work ; rdf:type bibo:Thesis } "
+	where = "WHERE { ?resource info:hasModel 'GenericFile'^^xsd:string ; dcterm:type 'Thesis'^^xsd:string ; ?p ?o}"
+
+
 def addPrefixes(v):
 	for line in namespaces:
 		if line['uri'] in v:
@@ -118,3 +163,7 @@ def removeNS(v):
 		if line['uri'] in v:
 			v = v.replace(line['uri'], '')
 	return v
+
+
+if __name__ == "__main__":
+	main()

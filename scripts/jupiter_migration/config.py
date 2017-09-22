@@ -1,4 +1,6 @@
-sparql = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
+sparqlprod = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
+sparqldev = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/radioactive/sparql")
+
 namespaces = [
 	{"PREFIX": "premis", "uri": "<http://www.loc.gov/premis/rdf/v1#>"},
 	{"PREFIX": "rdfs", "uri": "<http://www.w3.org/2000/01/rdf-schema#>"},
