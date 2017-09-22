@@ -58,6 +58,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### required  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### searchable  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### sort  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 
@@ -98,6 +100,7 @@ onForm: **true**
 propertyName: **title**  
 repeat: **false**  
 required: **true**  
+searchable: **true**  
 sort: **true**  
 ### ual:depositor  
 backwardCompatibleWith: **http://id.loc.gov/vocabulary/relators/dpt**  

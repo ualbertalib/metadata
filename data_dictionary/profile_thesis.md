@@ -98,7 +98,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### repeat  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
-  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstype  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
@@ -122,6 +122,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualinstitution  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
+### searchable  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
 ### sort  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
 
@@ -135,9 +139,11 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **doi**  
 facet: **false**  
+onForm: **false**  
 propertyName: **digital object identifier**  
 repeat: **false**  
 required: **true**  
+searchable: **false**  
 sort: **false**  
 ### dc:rights  
 backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
@@ -146,6 +152,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **false**  
 displayLabel: **rights**  
 facet: **false**  
+onForm: **false**  
 propertyName: **rights**  
 repeat: **true**  
 required: **true**  
@@ -157,6 +164,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **subject/keyword**  
 facet: **true**  
+onForm: **false**  
 propertyName: **subject**  
 repeat: **true**  
 required: **true**  
@@ -168,9 +176,11 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **false**  
 displayLabel: **abstract**  
 indexAs: **http://purl.org/dc/terms/description**  
+onForm: **false**  
 propertyName: **abstract**  
 repeat: **false**  
 required: **true**  
+searchable: **true**  
 sort: **false**  
 ### dcterms:alternative  
 backwardCompatibleWith: **http://purl.org/dc/terms/alternative**  
@@ -178,6 +188,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative**  
 display: **true**  
 facet: **false**  
+onForm: **false**  
 propertyName: **alternative title**  
 repeat: **false**  
 required: **false**  
@@ -188,6 +199,7 @@ dataType: **auto**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdateaccepted**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **date accepted**  
 repeat: **false**  
 required: **true**  
@@ -198,6 +210,7 @@ dataType: **auto**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdatesubmitted**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **date submitted**  
 repeat: **false**  
 required: **true**  
@@ -208,8 +221,8 @@ comments: **often doi, but not always; legacy container for non-doi identifiers 
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
 display: **false**  
-displayLabel: **doi**  
 facet: **false**  
+onForm: **false**  
 propertyName: **identifier**  
 repeat: **false**  
 required: **false**  
@@ -221,13 +234,13 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **false**  
 displayLabel: **citation for previous publication**  
 facet: **false**  
+onForm: **false**  
 propertyName: **is version of**  
-repeat: **false**  
+repeat: **true**  
 required: **false**  
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
@@ -238,6 +251,7 @@ values displayed on form:
   * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
   * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
   * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 backwardCompatibleWith: **http://purl.org/dc/terms/language**  
 dataType: **uri**  
@@ -245,8 +259,9 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **language**  
 facet: **true**  
+onForm: **false**  
 propertyName: **language**  
-repeat: **true**  
+repeat: **false**  
 required: **true**  
 sort: **false**  
 ### dcterms:title  
@@ -255,9 +270,11 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
 display: **true**  
 facet: **false**  
+onForm: **false**  
 propertyName: **title**  
 repeat: **false**  
 required: **true**  
+searchable: **true**  
 sort: **true**  
 ### dcterms:type  
 backwardCompatibleWith: **http://purl.org/dc/terms/type**  
@@ -266,6 +283,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **false**  
 displayLabel: **type of item**  
 facet: **true**  
+onForm: **false**  
 propertyName: **type**  
 repeat: **true**  
 required: **true**  
@@ -277,6 +295,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **degree**  
 facet: **false**  
+onForm: **false**  
 propertyName: **degree**  
 repeat: **false**  
 required: **true**  
@@ -288,6 +307,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **examining committee member and department**  
 indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
+onForm: **false**  
 propertyName: **commitee member**  
 repeat: **true**  
 required: **true**  
@@ -298,6 +318,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **department**  
 facet: **false**  
+onForm: **false**  
 propertyName: **department**  
 repeat: **true**  
 required: **true**  
@@ -309,6 +330,7 @@ dataType: **auto**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **depositor**  
 repeat: **false**  
 required: **false**  
@@ -320,9 +342,11 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **author or creator**  
 indexAs: **http://purl.org/dc/elements/1.1/Creator**  
+onForm: **false**  
 propertyName: **dissertant**  
 repeat: **false**  
 required: **true**  
+searchable: **true**  
 ### ual:fedora3Handle  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3handle**  
 comments: **legacy property**  
@@ -330,6 +354,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **fedora 3 handle**  
 repeat: **false**  
 required: **false**  
@@ -341,6 +366,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **fedora 3 uuid**  
 repeat: **false**  
 required: **false**  
@@ -352,6 +378,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **graduation date**  
 facet: **false**  
+onForm: **false**  
 propertyName: **graduation date**  
 repeat: **false**  
 required: **true**  
@@ -366,6 +393,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **degree grantor**  
 facet: **false**  
+onForm: **false**  
 propertyName: **institution**  
 repeat: **false**  
 required: **true**  
@@ -377,6 +405,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualproquest**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **proquest**  
 repeat: **false**  
 required: **false**  
@@ -388,6 +417,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **specialization**  
 facet: **false**  
+onForm: **false**  
 propertyName: **specialization**  
 repeat: **true**  
 required: **true**  
@@ -399,6 +429,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **supervisor and department**  
 indexAs: **http://purl.org/dc/elements/1.1/Contributor**  
+onForm: **false**  
 propertyName: **supervisor**  
 repeat: **true**  
 required: **true**  
@@ -409,6 +440,7 @@ definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary
 display: **true**  
 displayLabel: **degree level**  
 facet: **false**  
+onForm: **false**  
 propertyName: **thesis level**  
 repeat: **false**  
 required: **false**  
@@ -420,6 +452,7 @@ dataType: **text**
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn**  
 display: **false**  
 facet: **false**  
+onForm: **false**  
 propertyName: **unicorn**  
 repeat: **false**  
 required: **false**  

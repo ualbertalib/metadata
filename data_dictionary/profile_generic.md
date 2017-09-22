@@ -125,6 +125,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial  )  
   * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal  )  
@@ -137,6 +138,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
+### searchable  
+  * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### sort  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
@@ -155,6 +161,7 @@ onForm: **false**
 propertyName: **digital object identifier**  
 repeat: **false**  
 required: **true**  
+searchable: **false**  
 sort: **false**  
 ### dc:contributor  
 backwardCompatibleWith: **http://purl.org/dc/terms/contributor**  
@@ -179,6 +186,7 @@ onForm: **true**
 propertyName: **creator**  
 repeat: **true**  
 required: **true**  
+searchable: **true**  
 sort: **false**  
 ### dc:rights  
 backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
@@ -204,6 +212,7 @@ onForm: **true**
 propertyName: **subject**  
 repeat: **true**  
 required: **true**  
+searchable: **true**  
 sort: **false**  
 ### dcterms:alternative  
 backwardCompatibleWith: **http://purl.org/dc/terms/alternative**  
@@ -240,6 +249,7 @@ onForm: **true**
 propertyName: **description**  
 repeat: **false**  
 required: **false**  
+searchable: **true**  
 sort: **false**  
 ### dcterms:identifier  
 backwardCompatibleWith: **http://purl.org/dc/terms/identifier**  
@@ -247,7 +257,6 @@ comments: **often doi, but not always; legacy container for non-doi identifiers 
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier**  
 display: **false**  
-displayLabel: **doi**  
 facet: **false**  
 onForm: **false**  
 propertyName: **identifier**  
@@ -264,22 +273,22 @@ displayLabel: **citation for previous publication**
 facet: **false**  
 onForm: **true**  
 propertyName: **is version of**  
-repeat: **false**  
+repeat: **true**  
 required: **false**  
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
+  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
   * **Other language** (http://terms.library.ualberta.ca/other)  
   * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
   * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
-  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
-  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
-  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
-  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 backwardCompatibleWith: **http://purl.org/dc/terms/language**  
 dataType: **uri**  
@@ -377,6 +386,7 @@ onForm: **true**
 propertyName: **title**  
 repeat: **false**  
 required: **true**  
+searchable: **true**  
 sort: **true**  
 ### dcterms:type  
 backwardCompatibleWith: **http://purl.org/dc/terms/type**  
@@ -392,11 +402,9 @@ required: **true**
 sort: **false**  
 ### bibo:status  
 values displayed on form:  
-  * **unpublished** (http://purl.org/ontology/bibo/status#unpublished)  
   * **published** (http://purl.org/ontology/bibo/status#published)  
   * **draft** (http://purl.org/ontology/bibo/status#draft)  
   * **submitted** (http://vivoweb.org/ontology/core#submitted)  
-  * **accepted** (http://purl.org/ontology/bibo/status#accepted)  
 
 comments: **'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'**  
 dataType: **auto**  
