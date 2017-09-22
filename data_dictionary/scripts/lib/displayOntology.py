@@ -1,6 +1,4 @@
 from config import namespaces, definitions, ddWelcome
-import main
-from main import owlDocument, addPrefixes
 
 
 def main():
@@ -49,6 +47,53 @@ def main():
 			print('')
 			print('***')
 
+class owlDocument(object):
+	"""takes ontology.json as input; separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
+	def __init__(self):
+		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
+		filename = 'data_dictionary/ontologies/Jupiter.json'
+		with open(filename, 'r') as terms:
+			owlDoc = json.load(terms)
+			# the owl json consists of an self.index for each term, property, or instance
+			for self.index in owlDoc:
+				# check for type declaration (some individual instances do not contain a declaration, for reasons unknown)
+				if '@type' in self.index:
+					if "http://www.w3.org/2002/07/owl#Class" in self.index["@type"]:
+						self.output = self.__add('Terms')
+					elif ("http://www.w3.org/2002/07/owl#DatatypeProperty" in self.index["@type"]) or ("http://www.w3.org/2002/07/owl#ObjectProperty" in self.index["@type"]):
+						self.output = self.__add('Properties')
+					elif "http://www.w3.org/2002/07/owl#NamedIndividual" in self.index["@type"]:
+						self.output = self.__add('Values')
+				else:
+					self.output = __add('Values')
+
+
+	def __add(self, type):
+		"""takes the type of self.index to be processes (resource, property, or instance (value); parses data and returns the processed data"""
+		subject = self.index['@id']
+		self.output[type][subject] = {}
+		for predicate in self.index:
+			self.output[type][subject][predicate] = []
+			if predicate != '@id':
+				for val in self.index[predicate]:
+					if isinstance(val, dict):
+						if '@value' in val:
+							self.output[type][subject][predicate].append(val['@value'].replace('\n', ''))
+						elif "@id" in val:
+							if "http://www.w3.org/2001/XMLSchema#" not in val["@id"]:
+								self.output[type][subject][predicate].append(val['@id'])
+					else:
+						if (type == "Values") and (val != "http://www.w3.org/2002/07/owl#NamedIndividual"):
+							self.output[type][subject][predicate].append(val)
+						else:
+							pass
+		return self.output
+
+def addPrefixes(v):
+	for line in namespaces:
+		if line['uri'] in v:
+			v = v.replace(line['uri'], line['prefix'] + ':')
+	return v
 
 if __name__ == "__main__":
 	main()
