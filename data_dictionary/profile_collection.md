@@ -46,6 +46,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription) is compatible with http://purl.org/dc/terms/description  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
 ### display  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
@@ -73,6 +75,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:description  
+backwardCompatibleWith: **http://purl.org/dc/terms/description**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription**  
 display: **true**  
@@ -84,6 +87,7 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### dcterms:title  
+backwardCompatibleWith: **http://purl.org/dc/terms/title**  
 comments: **required for communties**  
 dataType: **text**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle**  
