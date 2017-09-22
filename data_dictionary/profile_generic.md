@@ -278,17 +278,17 @@ required: **false**
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
-  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
-  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
-  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
-  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
   * **Other language** (http://terms.library.ualberta.ca/other)  
   * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
   * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 backwardCompatibleWith: **http://purl.org/dc/terms/language**  
 dataType: **uri**  
