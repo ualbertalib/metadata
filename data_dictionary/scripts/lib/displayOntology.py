@@ -2,52 +2,6 @@ from config import namespaces, definitions, ddWelcome
 import json
 
 
-def main():
-	owlDoc = owlDocument().output
-	print('# Jupiter Data Dictionary')
-	print('')
-	print("%s" % ddWelcome)
-	# declares namespaces (set in config.py)
-	print('# Namespaces')
-	print('')
-	for n in namespaces:
-		print('   **%s:** %s  ' % (n['prefix'], n['uri']))
-	print('')
-	# defines annotations (set in config.py)
-	print('# Definitions')
-	print('')
-	for d in definitions:
-		print('   **%s** %s  ' % (d['term'], d['def']))
-	print('')
-	print('# Table of Contents')
-	for t, resources in sorted(owlDoc.items()):
-		print("### %s " % (t))
-		for s, resource in sorted(resources.items()):
-			print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
-		print('')
-	print('')
-	# sorts owlDoc alphabetically (so the display is always the same order)
-	for t, resources in sorted(owlDoc.items()):
-		# prints the key (Property, Term, or Value)
-		print("# %s  " % (t))
-		# iterates over each dictionary (resources)
-		for s, resource in sorted(resources.items()):
-			# prints the resource name, replacing the URI with a prefix (defined in config.py)
-			print('### %s' % (addPrefixes(s)))
-			# iterates over the dictionary for this particular resource
-			for annotationName, annotationValues in sorted(resource.items()):
-				# checks to see if this is an empty list
-				if len(annotationValues) > 0:
-					print('')
-					# prints the name of the annotation
-					print('   **%s**   ' % (addPrefixes(annotationName)))
-					# prints annotation values line by line
-					for value in annotationValues:
-						print('  %s  ' % (value))
-			# print("- [ ] Mark for editing")
-			print('')
-			print('***')
-
 class owlDocument(object):
 	"""takes ontology.json as input; separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
@@ -66,8 +20,7 @@ class owlDocument(object):
 					elif "http://www.w3.org/2002/07/owl#NamedIndividual" in self.index["@type"]:
 						self.output = self.__add('Values')
 				else:
-					self.output = __add('Values')
-
+					self.output = self.__add('Values')
 
 	def __add(self, type):
 		"""takes the type of self.index to be processes (resource, property, or instance (value); parses data and returns the processed data"""
@@ -90,11 +43,49 @@ class owlDocument(object):
 							pass
 		return self.output
 
-def addPrefixes(v):
-	for line in namespaces:
-		if line['uri'] in v:
-			v = v.replace(line['uri'], line['prefix'] + ':')
-	return v
+	def generate(self):
+		print('# Jupiter Data Dictionary')
+		print('')
+		print("%s" % ddWelcome)
+		# declares namespaces (set in config.py)
+		print('# Namespaces')
+		print('')
+		for n in namespaces:
+			print('   **%s:** %s  ' % (n['prefix'], n['uri']))
+		print('')
+		# defines annotations (set in config.py)
+		print('# Definitions')
+		print('')
+		for d in definitions:
+			print('   **%s** %s  ' % (d['term'], d['def']))
+		print('')
+		print('# Table of Contents')
+		for t, resources in sorted(self.output.items()):
+			print("### %s " % (t))
+			for s, resource in sorted(resources.items()):
+				print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (Utilities.addPrefixes(s), Utilities.addPrefixes(s).replace(':', '').lower()))
+			print('')
+		print('')
+		# sorts owlDoc alphabetically (so the display is always the same order)
+		for t, resources in sorted(self.output.items()):
+			# prints the key (Property, Term, or Value)
+			print("# %s  " % (t))
+			# iterates over each dictionary (resources)
+			for s, resource in sorted(resources.items()):
+				# prints the resource name, replacing the URI with a prefix (defined in config.py)
+				print('### %s' % (Utilities.addPrefixes(s)))
+				# iterates over the dictionary for this particular resource
+				for annotationName, annotationValues in sorted(resource.items()):
+					# checks to see if this is an empty list
+					if len(annotationValues) > 0:
+						print('')
+						# prints the name of the annotation
+						print('   **%s**   ' % (Utilities.addPrefixes(annotationName)))
+						# prints annotation values line by line
+						for value in annotationValues:
+							print('  %s  ' % (value))
+				# print("- [ ] Mark for editing")
+				print('')
+				print('***')
 
-if __name__ == "__main__":
-	main()
+
