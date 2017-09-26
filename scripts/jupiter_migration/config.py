@@ -1,34 +1,73 @@
-sparqlprod = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
-sparqldev = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/radioactive/sparql")
+from SPARQLWrapper import SPARQLWrapper
 
-namespaces = [
-	{"PREFIX": "premis", "uri": "<http://www.loc.gov/premis/rdf/v1#>"},
-	{"PREFIX": "rdfs", "uri": "<http://www.w3.org/2000/01/rdf-schema#>"},
-	{"PREFIX": "ual", "uri": "<http://terms.library.ualberta.ca/>"},
-	{"PREFIX": "ualids", "uri": "<http://terms.library.ualberta.ca/identifiers/>"},
-	{"PREFIX": "ualid", "uri": "<http://terms.library.ualberta.ca/id/>"},
-	{"PREFIX": "ualdate", "uri": "<http://terms.library.ualberta.ca/date/>"},
-	{"PREFIX": "ualrole", "uri": "<http://terms.library.ualberta.ca/role/>"},
-	{"PREFIX": "ualthesis", "uri": "<http://terms.library.ualberta.ca/thesis/>"},
-	{"PREFIX": "info", "uri": "<info:fedora/fedora-system:def/model#>"},
-	{"PREFIX": "dcterm", "uri": "<http://purl.org/dc/terms/>"},
-	{"PREFIX": "pcdm", "uri": "<http://pcdm.org/models#>"},
-	{"PREFIX": "works", "uri": "<http://projecthydra.org/works/models#>"},
-	{"PREFIX": "rdf", "uri": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"},
-	{"PREFIX": "fedora", "uri": "<http://fedora.info/definitions/v4/repository#>"},
-	{"PREFIX": "iana", "uri": "<http://www.iana.org/assignments/relation/>"},
-	{"PREFIX": "dc", "uri": "<http://purl.org/dc/elements/1.1/>"},
-	{"PREFIX": "acl", "uri": "<http://projecthydra.org/ns/auth/acl#>"},
-	{"PREFIX": "webacl", "uri": "<http://www.w3.org/ns/auth/acl#>"},
-	{"PREFIX": "scholar", "uri": "<http://scholarsphere.psu.edu/ns#>"},
-	{"PREFIX": "rels", "uri": "<info:fedora/fedora-system:def/relations-external#>"},
-	{"PREFIX": "vivo", "uri": "<http://vivoweb.org/ontology/core#>"},
-	{"PREFIX": "bibo", "uri": "<http://purl.org/ontology/bibo/>"},
-	{"PREFIX": "mrels", "uri": "<http://id.loc.gov/vocabulary/relators/>"},
-	{"PREFIX": "prism", "uri": "<http://prismstandard.org/namespaces/basic/3.0/>"},
-	{"PREFIX": "cc", "uri": "http://creativecommons.org/ns#"},
-	{"PREFIX": "fabio", "uri": "http://purl.org/spar/fabio/"},
-	{"PREFIX": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
-	{"PREFIX": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
-	{"PREFIX": "naf", "uri": "http://id.loc.gov/authorities/names/"}
+sparqlTerms = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+sparql_mig_dev = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
+sparql_mig_test = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql")
+sparql_mig_simple = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/simple/sparql")
+
+mig_ns = [
+	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
+	{"prefix": "rdfs", "uri": "http://www.w3.org/2000/01/rdf-schema#"},
+	{"prefix": "ual", "uri": "http://terms.library.ualberta.ca/"},
+	{"prefix": "ualids", "uri": "http://terms.library.ualberta.ca/identifiers/"},
+	{"prefix": "ualid", "uri": "http://terms.library.ualberta.ca/id/"},
+	{"prefix": "ualdate", "uri": "http://terms.library.ualberta.ca/date/"},
+	{"prefix": "ualrole", "uri": "http://terms.library.ualberta.ca/role/"},
+	{"prefix": "ualthesis", "uri": "http://terms.library.ualberta.ca/thesis/"},
+	{"prefix": "info", "uri": "info:fedora/fedora-system:def/model#"},
+	{"prefix": "dcterm", "uri": "http://purl.org/dc/terms/"},
+	{"prefix": "pcdm", "uri": "http://pcdm.org/models#"},
+	{"prefix": "works", "uri": "http://projecthydra.org/works/models#"},
+	{"prefix": "rdf", "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"},
+	{"prefix": "fedora", "uri": "http://fedora.info/definitions/v4/repository#"},
+	{"prefix": "iana", "uri": "http://www.iana.org/assignments/relation/"},
+	{"prefix": "dc", "uri": "http://purl.org/dc/elements/1.1/"},
+	{"prefix": "acl", "uri": "http://projecthydra.org/ns/auth/acl#"},
+	{"prefix": "webacl", "uri": "http://www.w3.org/ns/auth/acl#"},
+	{"prefix": "scholar", "uri": "http://scholarsphere.psu.edu/ns#"},
+	{"prefix": "rels", "uri": "info:fedora/fedora-system:def/relations-external#"},
+	{"prefix": "vivo", "uri": "http://vivoweb.org/ontology/core#"},
+	{"prefix": "bibo", "uri": "http://purl.org/ontology/bibo/"},
+	{"prefix": "mrels", "uri": "http://id.loc.gov/vocabulary/relators/"},
+	{"prefix": "prism", "uri": "http://prismstandard.org/namespaces/basic/3.0/"},
+	{"prefix": "cc", "uri": "http://creativecommons.org/ns#"},
+	{"prefix": "fabio", "uri": "http://purl.org/spar/fabio/"},
+	{"prefix": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
+	{"prefix": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
+	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"}
 ]
+
+profileDefinitions = [
+	{"term": "acceptedValue", "def": "values belonging to properties with restricted value parameters (only those displayed on form)"},
+	{"term": "backwardCompatibleWith", "def": "crosswalk to previously used terms (in ERA) for migration mapping"},
+	{"term": "comments", "def": "Jupiter specific instructions for using or questions about this property"},
+	{"term": "definedBy", "def": "a link to the Jupiter ontology, including a general description of the property"},
+	{"term": "dataType", "def": "the kinds of values permitted for use by the property: 'text', 'enumerated text' (i.e. non-URI drop-down), 'uri' (i.e. dropdown with URI), 'auto' (generated by application logic)"},
+	{"term": "display", "def": "does this property appear when an object is displayed to the user? (boolean)"},
+	{"term": "displayLabel", "def": "if this object is displayed to the user, what is the label used to describe the property in the display?"},
+	{"term": "facet", "def": "is this property faceted in SOLR? (boolean)"},
+	{"term": "indexAs", "def": "another property with which this property should be indexed in SOLR"},
+	{"term": "onForm", "def": "does this property appear on the form when a user creates a new resource? (boolean)"},
+	{"term": "propertyName", "def": "an informal name for describing the property"},
+	{"term": "repeat", "def": "can this property occur more than once? (boolean)"},
+	{"term": "required", "def": "is the property required to have a value? (boolean)"},
+	{"term": "sort", "def": "is this property sortable in SOLR? (boolean)"},
+	{"term": "tokenize", "def": "is this property tokenized in SOLR? (boolean)"}
+]
+
+definitions = [
+	{"term": "@type", "def": "the object class. Particulary important for determining scope for use of terms and values."},
+	{"term": "rdfs:comment", "def": "defines the term or property"},
+	{"term": "rdfs:domain", "def": "indicates terms (classes, values, datatypes, etc.) that may invoke a given property"},
+	{"term": "rdfs:range", "def": "indicates terms (classes, values, datatypes, etc.) that must be used with this property"},
+	{"term": "rdfs:label", "def": "the name of the term or property"},
+	{"term": "rdfs:preflabel", "def": "the label preferred for display"},
+	{"term": "owl:deprecated", "def": "indicates whether the property or term is active in the current deployment (default = false)"},
+	{"term": "owl:backwardCompatible", "def": "mappings to previous vocabularies used in previous deployments"},
+	{"term": "obo:IAO_0000112", "def": "usage example"},
+	{"term": "obo:IAO_0000115", "def": "description"}
+]
+
+ddWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find the Jupiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  Current deployment specifications in Jupiter are described by application profiles. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.'
+
+profileWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.'

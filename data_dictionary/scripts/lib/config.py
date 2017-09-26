@@ -1,7 +1,7 @@
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import SPARQLWrapper
 
 sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
-path = "data_dictionary"
+
 namespaces = [
 	{"prefix": "bibo", "uri": "http://purl.org/ontology/bibo/"},
 	{"prefix": "cc", "uri": "http://creativecommons.org/ns#"},
