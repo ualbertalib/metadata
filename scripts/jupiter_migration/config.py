@@ -134,130 +134,118 @@ vocabs = {
 	"license": [
 		{
 			"label": "Attribution 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by/4.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by-nc/3.0/"
 		},
 		{
 			"label": "Attribution-ShareAlike 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by-sa/4.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by-nc/4.0/"
 		},
 		{
 			"label": "Attribution-NoDerivs 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by-nd/3.0/"
 		},
 		{
 			"label": "Attribution 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by/3.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial-NoDerivatives 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
 		},
 		{
 			"label": "Attribution-ShareAlike 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by-sa/3.0/"
 		},
 		{
 			"label": "CC0 1.0 Universal",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/publicdomain/zero/1.0/"
 		},
 		{
 			"label": "Attribution-NoDerivatives 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by-nd/4.0/"
 		},
 		{
 			"label": "Public Domain Mark 1.0",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/publicdomain/mark/1.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial-ShareAlike 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial-ShareAlike 4.0 International",
-			"onForm": "true",
 			"uri": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 		},
 		{
 			"label": "Attribution-NonCommercial-NoDerivs 3.0 Unported",
-			"onForm": "false",
 			"uri": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
 		}
 	],
 	"type": [
 		{
 			"label": "Article",
-			"onForm": "true",
-			"uri": "http://purl.org/ontology/bibo/Article"
+			"uri": "http://purl.org/ontology/bibo/Article",
+			"mapping": ["Journal Article (Published)", "Journal Article (Draft-Submitted)"]
 		},
 		{
 			"label": "Book",
-			"onForm": "true",
-			"uri": "http://purl.org/ontology/bibo/Book"
+			"uri": "http://purl.org/ontology/bibo/Book",
+			"mapping": ["Book"]
 		},
 		{
 			"label": "Chapter",
-			"onForm": "true",
-			"uri": "http://purl.org/ontology/bibo/Chapter"
+			"uri": "http://purl.org/ontology/bibo/Chapter",
+			"mapping": ["Book Chapter"]						
 		},
 		{
 			"label": "Image",
-			"onForm": "true",
-			"uri": "http://purl.org/ontology/bibo/Image"
+			"uri": "http://purl.org/ontology/bibo/Image",
+			"mapping": ["Image"]			
 		},
 		{
 			"label": "Report",
-			"onForm": "true",
-			"uri": "http://purl.org/ontology/bibo/Report"
+			"uri": "http://purl.org/ontology/bibo/Report",
+			"mapping": ["Report", "Computing Science Technical Report", "Structural Engineering Report"]			
 		},
 		{
 			"label": "Research Material",
-			"onForm": "true",
-			"uri": "http://terms.library.ualberta.ca/researchMaterial"
+			"uri": "http://terms.library.ualberta.ca/researchMaterial",
+			"mapping": ["Research Material"]
 		},
 		{
 			"label": "Conference Paper",
-			"onForm": "true",
-			"uri": "http://vivoweb.org/ontology/core#ConferencePaper"
+			"uri": "http://vivoweb.org/ontology/core#ConferencePaper",
+			"mapping": ["Conference/workshop Presentation"]
 		},
 		{
 			"label": "Conference Poster",
-			"onForm": "true",
-			"uri": "http://vivoweb.org/ontology/core#ConferencePoster"
+			"uri": "http://vivoweb.org/ontology/core#ConferencePoster",
+			"mapping": "Conference/workshop Poster"
 		},
 		{
 			"label": "Dataset",
-			"onForm": "true",
-			"uri": "http://vivoweb.org/ontology/core#Dataset"
+			"uri": "http://vivoweb.org/ontology/core#Dataset",
+			"mapping": "Dataset"
 		},
 		{
 			"label": "Review",
-			"onForm": "true",
-			"uri": "http://vivoweb.org/ontology/core#Review"
+			"uri": "http://vivoweb.org/ontology/core#Review",
+			"mapping": "Review"
 		},
 		{
 			"label": "Learning Object",
-			"onForm": "true",
-			"uri": "http://terms.library.ualberta.ca/learningObject"
+			"uri": "http://terms.library.ualberta.ca/learningObject",
+			"mapping": "Learning Object"
 		}
 	]
 }
+
+
