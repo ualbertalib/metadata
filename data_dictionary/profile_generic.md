@@ -278,17 +278,17 @@ required: **false**
 sort: **false**  
 ### dcterms:language  
 values displayed on form:  
-  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
-  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
-  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
-  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
   * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
   * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
   * **Other language** (http://terms.library.ualberta.ca/other)  
   * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
   * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+  * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+  * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+  * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+  * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+  * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
 
 backwardCompatibleWith: **http://purl.org/dc/terms/language**  
 dataType: **uri**  
@@ -389,6 +389,19 @@ required: **true**
 searchable: **true**  
 sort: **true**  
 ### dcterms:type  
+values displayed on form:  
+  * **Article** (http://purl.org/ontology/bibo/Article)  
+  * **Book** (http://purl.org/ontology/bibo/Book)  
+  * **Chapter** (http://purl.org/ontology/bibo/Chapter)  
+  * **Image** (http://purl.org/ontology/bibo/Image)  
+  * **Report** (http://purl.org/ontology/bibo/Report)  
+  * **Research Material** (http://terms.library.ualberta.ca/researchMaterial)  
+  * **Conference Paper** (http://vivoweb.org/ontology/core#ConferencePaper)  
+  * **Conference Poster** (http://vivoweb.org/ontology/core#ConferencePoster)  
+  * **Dataset** (http://vivoweb.org/ontology/core#Dataset)  
+  * **Review** (http://vivoweb.org/ontology/core#Review)  
+  * **Learning Object** (http://terms.library.ualberta.ca/learningObject)  
+
 backwardCompatibleWith: **http://purl.org/dc/terms/type**  
 dataType: **uri**  
 definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  

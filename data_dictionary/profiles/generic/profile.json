@@ -179,6 +179,36 @@
     "http://purl.org/dc/terms/language": {
         "acceptedValues": [
             {
+                "label": "Ukranian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
+            },
+            {
+                "label": "Japanese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
+            },
+            {
+                "label": "German",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
+            },
+            {
+                "label": "Other language",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/other"
+            },
+            {
+                "label": "Italian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
+            },
+            {
+                "label": "Russian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
+            },
+            {
                 "label": "No linguistic content",
                 "onForm": "true",
                 "uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
@@ -217,36 +247,6 @@
                 "label": "Spanish",
                 "onForm": "true",
                 "uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
-            },
-            {
-                "label": "Ukranian",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
-            },
-            {
-                "label": "Japanese",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
-            },
-            {
-                "label": "German",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
-            },
-            {
-                "label": "Other language",
-                "onForm": "true",
-                "uri": "http://terms.library.ualberta.ca/other"
-            },
-            {
-                "label": "Italian",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
-            },
-            {
-                "label": "Russian",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
             }
         ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://purl.org/dc/terms/language",
@@ -447,6 +447,63 @@
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     },
     "http://purl.org/dc/terms/type": {
+        "acceptedValues": [
+            {
+                "label": "Article",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Article"
+            },
+            {
+                "label": "Book",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Book"
+            },
+            {
+                "label": "Chapter",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Chapter"
+            },
+            {
+                "label": "Image",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Image"
+            },
+            {
+                "label": "Report",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Report"
+            },
+            {
+                "label": "Research Material",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/researchMaterial"
+            },
+            {
+                "label": "Conference Paper",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#ConferencePaper"
+            },
+            {
+                "label": "Conference Poster",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#ConferencePoster"
+            },
+            {
+                "label": "Dataset",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#Dataset"
+            },
+            {
+                "label": "Review",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#Review"
+            },
+            {
+                "label": "Learning Object",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/learningObject"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://purl.org/dc/terms/type",
         "http://terms.library.ualberta.ca/comments": "",
         "http://terms.library.ualberta.ca/dataType": "uri",

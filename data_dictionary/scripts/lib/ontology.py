@@ -63,7 +63,7 @@ class owlDocument(object):
 		for t, resources in sorted(self.output.items()):
 			print("### %s " % (t))
 			for s, resource in sorted(resources.items()):
-				print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s)  " % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
+				print("  * [%s](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#%s)  " % (addPrefixes(s), addPrefixes(s).replace(':', '').lower()))
 			print('')
 		print('')
 		# sorts owlDoc alphabetically (so the display is always the same order)

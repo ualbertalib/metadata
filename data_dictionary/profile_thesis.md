@@ -56,7 +56,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof) is compatible with http://purl.org/dc/terms/isVersionOf  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage) is compatible with http://purl.org/dc/terms/language  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstype) is compatible with http://purl.org/dc/terms/type  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree) is compatible with http://purl.org/ontology/bibo/ThesisDegree  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember) is compatible with http://terms.library.ualberta.ca/role/thesiscommitteemember  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment) is compatible with http://vivoweb.org/ontology/core#AcademicDepartment  
@@ -89,7 +88,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### facet  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstype  )  
 ### indexAs  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) indexes as [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember) indexes as [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
@@ -99,7 +97,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstype  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
@@ -113,7 +110,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstype  )  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
@@ -276,18 +272,6 @@ repeat: **false**
 required: **true**  
 searchable: **true**  
 sort: **true**  
-### dcterms:type  
-backwardCompatibleWith: **http://purl.org/dc/terms/type**  
-dataType: **uri**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype**  
-display: **false**  
-displayLabel: **type of item**  
-facet: **true**  
-onForm: **false**  
-propertyName: **type**  
-repeat: **true**  
-required: **true**  
-sort: **false**  
 ### bibo:degree  
 backwardCompatibleWith: **http://purl.org/ontology/bibo/ThesisDegree**  
 dataType: **enumerated text**  
@@ -457,3 +441,7 @@ propertyName: **unicorn**
 repeat: **false**  
 required: **false**  
 sort: **false**  
+### rdf:Type  
+acceptedValues: **http://purl.org/ontology/bibo/Thesis**  
+dataType: **auto**  
+propertyName: **rdf Type**  

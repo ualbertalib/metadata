@@ -71,3 +71,193 @@ definitions = [
 ddWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find the Jupiter ontology -- definitions for properties (predicates), terms (vocabulary or classes), and values (instances) used in the Jupiter project.  Current deployment specifications in Jupiter are described by application profiles. Changes to any of these documents can be suggested by submitting a Github issue. The metadata team will update the document accordingly. FYI: markdown files are accompanied by json files that may also be consulted.'
 
 profileWelcome = 'The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.'
+
+vocabs = {
+	"language": [
+		{
+			"label": "Ukranian",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
+		},
+		{
+			"label": "Japanese",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
+		},
+		{
+			"label": "German",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
+		},
+		{
+			"label": "Other language",
+			"uri": "http://terms.library.ualberta.ca/other"
+		},
+		{
+			"label": "Italian",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
+		},
+		{
+			"label": "Russian",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
+		},
+		{
+			"label": "No linguistic content",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
+		},
+		{
+			"label": "English",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/eng"
+		},
+		{
+			"label": "French",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/fre"
+		},
+		{
+			"label": "Portuguese",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/por"
+		},
+		{
+			"label": "Chinese",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/zho"
+		},
+		{
+			"label": "Vietnamese",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/vie"
+		},
+		{
+			"label": "Inupiaq",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/ipk"
+		},
+		{
+			"label": "Spanish",
+			"uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
+		}
+	],
+	"license": [
+		{
+			"label": "Attribution 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by/4.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by-nc/3.0/"
+		},
+		{
+			"label": "Attribution-ShareAlike 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by-sa/4.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by-nc/4.0/"
+		},
+		{
+			"label": "Attribution-NoDerivs 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by-nd/3.0/"
+		},
+		{
+			"label": "Attribution 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by/3.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+		},
+		{
+			"label": "Attribution-ShareAlike 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by-sa/3.0/"
+		},
+		{
+			"label": "CC0 1.0 Universal",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/publicdomain/zero/1.0/"
+		},
+		{
+			"label": "Attribution-NoDerivatives 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by-nd/4.0/"
+		},
+		{
+			"label": "Public Domain Mark 1.0",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/publicdomain/mark/1.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial-ShareAlike 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial-ShareAlike 4.0 International",
+			"onForm": "true",
+			"uri": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+		},
+		{
+			"label": "Attribution-NonCommercial-NoDerivs 3.0 Unported",
+			"onForm": "false",
+			"uri": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
+		}
+	],
+	"type": [
+		{
+			"label": "Article",
+			"onForm": "true",
+			"uri": "http://purl.org/ontology/bibo/Article"
+		},
+		{
+			"label": "Book",
+			"onForm": "true",
+			"uri": "http://purl.org/ontology/bibo/Book"
+		},
+		{
+			"label": "Chapter",
+			"onForm": "true",
+			"uri": "http://purl.org/ontology/bibo/Chapter"
+		},
+		{
+			"label": "Image",
+			"onForm": "true",
+			"uri": "http://purl.org/ontology/bibo/Image"
+		},
+		{
+			"label": "Report",
+			"onForm": "true",
+			"uri": "http://purl.org/ontology/bibo/Report"
+		},
+		{
+			"label": "Research Material",
+			"onForm": "true",
+			"uri": "http://terms.library.ualberta.ca/researchMaterial"
+		},
+		{
+			"label": "Conference Paper",
+			"onForm": "true",
+			"uri": "http://vivoweb.org/ontology/core#ConferencePaper"
+		},
+		{
+			"label": "Conference Poster",
+			"onForm": "true",
+			"uri": "http://vivoweb.org/ontology/core#ConferencePoster"
+		},
+		{
+			"label": "Dataset",
+			"onForm": "true",
+			"uri": "http://vivoweb.org/ontology/core#Dataset"
+		},
+		{
+			"label": "Review",
+			"onForm": "true",
+			"uri": "http://vivoweb.org/ontology/core#Review"
+		},
+		{
+			"label": "Learning Object",
+			"onForm": "true",
+			"uri": "http://terms.library.ualberta.ca/learningObject"
+		}
+	]
+}
