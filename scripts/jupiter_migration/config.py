@@ -1,9 +1,7 @@
-from SPARQLWrapper import SPARQLWrapper
-
-sparqlTerms = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
-sparql_mig_dev = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql")
-sparql_mig_test = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql")
-sparql_mig_simple = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/simple/sparql")
+sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
+sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql"
+sparql_mig_test = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"
+sparql_mig_simple = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"
 
 mig_ns = [
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
@@ -35,8 +33,8 @@ mig_ns = [
 	{"prefix": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
 	{"prefix": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
-	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"}
-	{"schema": "schema", "uri": "http://schema.org/"}
+	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
+	{"prefix": "schema", "uri": "http://schema.org/"}
 ]
 
 profileDefinitions = [
