@@ -23,6 +23,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **ore:** http://www.openarchives.org/ore/terms/  
 **ual:** http://terms.library.ualberta.ca/  
 **vivo:** http://vivoweb.org/ontology/core#  
+**swrc:** http://ontoware.org/swrc/ontology#  
 **works:** http://pcdm.org/works#  
 
 # Definitions

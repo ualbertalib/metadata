@@ -23,6 +23,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **ore:** http://www.openarchives.org/ore/terms/  
    **ual:** http://terms.library.ualberta.ca/  
    **vivo:** http://vivoweb.org/ontology/core#  
+   **swrc:** http://ontoware.org/swrc/ontology#  
    **works:** http://pcdm.org/works#  
 
 # Definitions
@@ -53,7 +54,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dc:subject](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dcsubject)  
   * [dcterms:abstract](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsabstract)  
   * [dcterms:alternative](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsalternative)  
+  * [dcterms:contributor](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermscontributor)  
   * [dcterms:created](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermscreated)  
+  * [dcterms:creator](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermscreator)  
   * [dcterms:dateAccepted](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsdateaccepted)  
   * [dcterms:dateSubmitted](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsdatesubmitted)  
   * [dcterms:description](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsdescription)  
@@ -63,13 +66,16 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dcterms:license](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermslicense)  
   * [dcterms:modified](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsmodified)  
   * [dcterms:relation](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsrelation)  
+  * [dcterms:rights](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsrights)  
   * [dcterms:source](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermssource)  
   * [dcterms:spatial](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermsspatial)  
+  * [dcterms:subject](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermssubject)  
   * [dcterms:temporal](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermstemporal)  
   * [dcterms:title](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermstitle)  
   * [dcterms:type](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#dctermstype)  
   * [bibo:degree](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibodegree)  
   * [bibo:status](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibostatus)  
+  * [http://swrc.ontoware.org/ontology#institution](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//swrc.ontoware.org/ontology#institution)  
   * [ual:ark](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualark)  
   * [ual:commiteeMember](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualcommiteemember)  
   * [ual:department](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualdepartment)  
@@ -78,7 +84,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [ual:fedora3Handle](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualfedora3handle)  
   * [ual:fedora3UUID](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualfedora3uuid)  
   * [ual:graduationDate](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualgraduationdate)  
-  * [ual:institution](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualinstitution)  
   * [ual:nnaFile](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualnnafile)  
   * [ual:nnaItem](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualnnaitem)  
   * [ual:proquest](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualproquest)  
@@ -109,7 +114,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [bibo:Image](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#biboimage)  
   * [bibo:Report](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#biboreport)  
   * [bibo:Thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibothesis)  
-  * [bibo:ThesisDegree](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibothesisdegree)  
   * [fabio:DoctoralThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiodoctoralthesis)  
   * [fabio:MastersThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiomastersthesis)  
   * [fabio:Thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiothesis)  
@@ -431,6 +435,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   http://purl.org/dc/terms/title  
 
 ***
+### dcterms:contributor
+
+   **rdfs:subPropertyOf**   
+  http://purl.org/dc/elements/1.1/contributor  
+
+***
 ### dcterms:created
 
    **dcterms:hasVersion**   
@@ -464,6 +474,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **rdfs:subPropertyOf**   
   http://purl.org/dc/elements/1.1/date  
+
+***
+### dcterms:creator
+
+   **rdfs:subPropertyOf**   
+  http://purl.org/dc/elements/1.1/creator  
 
 ***
 ### dcterms:dateAccepted
@@ -700,6 +716,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   http://purl.org/dc/elements/1.1/relation  
 
 ***
+### dcterms:rights
+
+   **rdfs:subPropertyOf**   
+  http://purl.org/dc/elements/1.1/rights  
+
+***
 ### dcterms:source
 
    **rdfs:comment**   
@@ -762,6 +784,30 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **skos:editorialNote**   
   Extended to use literal range. To meet DCterms spec, a LOD vocabulary must be implemented.  
+
+***
+### dcterms:subject
+
+   **dcterms:description**   
+  Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.  
+
+   **dcterms:hasVersion**   
+  http://dublincore.org/usage/terms/history/#subjectT-002  
+
+   **rdfs:comment**   
+  The topic of the resource.  
+
+   **rdfs:isDefinedBy**   
+  http://purl.org/dc/terms/  
+
+   **rdfs:label**   
+  Subject  
+
+   **rdfs:subPropertyOf**   
+  http://purl.org/dc/elements/1.1/subject  
+
+   **skos:note**   
+  This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.  
 
 ***
 ### dcterms:temporal
@@ -877,9 +923,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **rdfs:label**   
   degree  
 
-   **rdfs:range**   
-  http://purl.org/ontology/bibo/ThesisDegree  
-
    **status:term_status**   
   unstable  
 
@@ -912,6 +955,27 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **skos:editorialNote**   
   We are not defining, using an enumeration, the range of the bibo:status to the defined list of bibo:DocumentStatus. We won't do it because we want people to be able to define new status if needed by some special usecases. Creating such an enumeration would restrict this to happen.  
+
+***
+### http://swrc.ontoware.org/ontology#institution
+
+   **ual:preferredValue**   
+  http://id.loc.gov/authorities/names/n79058482  
+
+   **rdfs:comment**   
+  The University where the graduating student was enrolled.  
+
+   **rdfs:domain**   
+  http://pcdm.org/works#Work  
+
+   **rdfs:isDefinedBy**   
+  http://swrc.ontoware.org/  
+
+   **rdfs:label**   
+  Institution  
+
+   **rdfs:range**   
+  http://xmlns.com/foaf/0.1/Organization  
 
 ***
 ### ual:ark
@@ -1026,27 +1090,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **rdfs:label**   
   Graduation Date  
-
-***
-### ual:institution
-
-   **ual:preferredValue**   
-  http://id.loc.gov/authorities/names/n79058482  
-
-   **rdfs:comment**   
-  The University where the graduating student was enrolled.  
-
-   **rdfs:domain**   
-  http://pcdm.org/works#Work  
-
-   **rdfs:isDefinedBy**   
-  http://terms.library.ualberta.ca  
-
-   **rdfs:label**   
-  Institution  
-
-   **rdfs:range**   
-  http://xmlns.com/foaf/0.1/Organization  
 
 ***
 ### ual:nnaFile
@@ -1418,21 +1461,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **rdfs:subClassOf**   
   http://terms.library.ualberta.ca/workType  
-
-   **status:term_status**   
-  stable  
-
-***
-### bibo:ThesisDegree
-
-   **rdfs:comment**   
-  The academic degree of a Thesis  
-
-   **rdfs:isDefinedBy**   
-  http://purl.org/ontology/bibo/  
-
-   **rdfs:label**   
-  Thesis degree  
 
    **status:term_status**   
   stable  

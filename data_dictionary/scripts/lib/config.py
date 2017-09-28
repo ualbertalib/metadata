@@ -27,6 +27,7 @@ namespaces = [
 #	{"prefix": "tgn", "uri": "http://vocab.getty.edu/tgn/"},
 	{"prefix": "ual", "uri": "http://terms.library.ualberta.ca/"},
 	{"prefix": "vivo", "uri": "http://vivoweb.org/ontology/core#"},
+	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
 	{"prefix": "works", "uri": "http://pcdm.org/works#"}
 #	{"prefix": "xsd", "uri": "http://www.w3.org/2001/XMLSchema#"}
 ]
