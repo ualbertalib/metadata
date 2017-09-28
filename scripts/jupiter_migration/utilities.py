@@ -14,9 +14,8 @@ def addPrefixes(v):
 def removeNS(v):
 	""" removes the namespace from a predicate, leaving only the predicate term """
 	for line in namespaces:
-		if line['uri'] in v:
-			v = v.replace(line['uri'], '')
-	return v
+		if line['uri'] in v:         
+			return v.replace(line['uri'], '')
 
 
 def PrintException():
