@@ -10,9 +10,13 @@
     <xsl:template match="/">
 
         <xsl:variable name="nod" as="xs:string+">
-            <!--            <Item>p</Item>
-            <Item>ead</Item>-->
+            <Item>p</Item>
+            <Item>author</Item>
             <Item>persname</Item>
+            <Item>addressline</Item>
+            <Item>physdesc</Item>
+            <Item>persname</Item>
+            <Item>physloc</Item>
         </xsl:variable>
         <xsl:for-each select="$nod">
             <xsl:for-each select="$doc1//node()[local-name() = $nod]">
