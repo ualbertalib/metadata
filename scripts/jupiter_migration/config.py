@@ -35,7 +35,7 @@ mig_ns = [
 	{"prefix": "lang", "uri": "http://id.loc.gov/vocabulary/iso639-2/"},
 	{"prefix": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
-	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"}
+	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
 	{"schema": "schema", "uri": "http://schema.org/"}
 ]
 
