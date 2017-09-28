@@ -1,4 +1,29 @@
 {
+    "http://ontoware.org/swrc/ontology#institution": {
+        "acceptedValues": [
+            {
+                "label": "University of Alberta",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/authorities/names/n79058482"
+            }
+        ],
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://id.loc.gov/vocabulary/relators/dgg",
+        "http://terms.library.ualberta.ca/comments": "",
+        "http://terms.library.ualberta.ca/dataType": "auto",
+        "http://terms.library.ualberta.ca/definedBy": "https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualinstitution",
+        "http://terms.library.ualberta.ca/display": "true",
+        "http://terms.library.ualberta.ca/displayLabel": "degree grantor",
+        "http://terms.library.ualberta.ca/facet": "false",
+        "http://terms.library.ualberta.ca/indexAs": "",
+        "http://terms.library.ualberta.ca/onForm": "false",
+        "http://terms.library.ualberta.ca/propertyName": "institution",
+        "http://terms.library.ualberta.ca/repeat": "false",
+        "http://terms.library.ualberta.ca/required": "true",
+        "http://terms.library.ualberta.ca/searchable": "",
+        "http://terms.library.ualberta.ca/sort": "false",
+        "http://terms.library.ualberta.ca/tokenize": "",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    },
     "http://prismstandard.org/namespaces/basic/3.0/doi": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/id/doi",
         "http://terms.library.ualberta.ca/comments": "always doi (currently set to searchable (should this be changed?)",
@@ -412,31 +437,6 @@
         "http://terms.library.ualberta.ca/tokenize": "",
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     },
-    "http://terms.library.ualberta.ca/institution": {
-        "acceptedValues": [
-            {
-                "label": "University of Alberta",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/authorities/names/n79058482"
-            }
-        ],
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://id.loc.gov/vocabulary/relators/dgg",
-        "http://terms.library.ualberta.ca/comments": "",
-        "http://terms.library.ualberta.ca/dataType": "auto",
-        "http://terms.library.ualberta.ca/definedBy": "https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualinstitution",
-        "http://terms.library.ualberta.ca/display": "true",
-        "http://terms.library.ualberta.ca/displayLabel": "degree grantor",
-        "http://terms.library.ualberta.ca/facet": "false",
-        "http://terms.library.ualberta.ca/indexAs": "",
-        "http://terms.library.ualberta.ca/onForm": "false",
-        "http://terms.library.ualberta.ca/propertyName": "institution",
-        "http://terms.library.ualberta.ca/repeat": "false",
-        "http://terms.library.ualberta.ca/required": "true",
-        "http://terms.library.ualberta.ca/searchable": "",
-        "http://terms.library.ualberta.ca/sort": "false",
-        "http://terms.library.ualberta.ca/tokenize": "",
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    },
     "http://terms.library.ualberta.ca/proquest": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/id/proquest",
         "http://terms.library.ualberta.ca/comments": "legacy property",
@@ -492,6 +492,7 @@
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     },
     "http://terms.library.ualberta.ca/thesisLevel": {
+        "acceptedValues": [],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/thesis/thesislevel",
         "http://terms.library.ualberta.ca/comments": "",
         "http://terms.library.ualberta.ca/dataType": "uri",
