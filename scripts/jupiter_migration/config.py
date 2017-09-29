@@ -52,7 +52,7 @@ vocabs = {
 		},
 		{
 			"uri": "http://terms.library.ualberta.ca/other",
-			"mapping": []
+			"mapping": ["other", "Other"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/ita",
@@ -64,15 +64,15 @@ vocabs = {
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/zxx",
-			"mapping": []
+			"mapping": ["No linguistic content", "No liguistic content"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/eng",
-			"mapping": []
+			"mapping": ["English", "english"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/fre",
-			"mapping": []
+			"mapping": ["French"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/por",
@@ -92,7 +92,7 @@ vocabs = {
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/spa",
-			"mapping": []
+			"mapping": ["Spanish", "spanish"]
 		}
 	],
 	"license": [
