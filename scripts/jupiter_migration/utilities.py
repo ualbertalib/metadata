@@ -1,6 +1,7 @@
 from config import mig_ns as namespaces
 import linecache
 import sys
+import os
 
 
 def addPrefixes(v):
@@ -14,7 +15,7 @@ def addPrefixes(v):
 def removeNS(v):
 	""" removes the namespace from a predicate, leaving only the predicate term """
 	for line in namespaces:
-		if line['uri'] in v:         
+		if line['uri'] in v:
 			return v.replace(line['uri'], '')
 
 
@@ -27,3 +28,22 @@ def PrintException():
 	linecache.checkcache(filename)
 	line = linecache.getline(filename, lineno, f.f_globals)
 	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
+
+
+def cleanOutputs(types):
+	for the_file in os.listdir('cache/'):
+		file_path = os.path.join('cache/', the_file)
+		try:
+			if os.path.isfile(file_path):
+				os.unlink(file_path)
+		except Exception as e:
+			print(e)
+	for ptype in types:
+		folder = 'results/%s' % (ptype)
+		for the_file in os.listdir(folder):
+			file_path = os.path.join(folder, the_file)
+			try:
+				if os.path.isfile(file_path):
+					os.unlink(file_path)
+			except Exception as e:
+				print(e)
