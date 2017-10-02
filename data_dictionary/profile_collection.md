@@ -3,28 +3,43 @@
 The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.
 
 # Namespaces  
+**acl:** http://projecthydra.org/ns/auth/acl#  
 **bibo:** http://purl.org/ontology/bibo/  
 **cc:** http://creativecommons.org/ns#  
 **dc:** http://purl.org/dc/elements/1.1/  
 **dcterms:** http://purl.org/dc/terms/  
 **fabio:** http://purl.org/spar/fabio/  
+**fedora:** http://fedora.info/definitions/v4/repository#  
 **foaf:** http://xmlns.com/foaf/0.1/  
+**iana:** http://www.iana.org/assignments/media-types/  
+**info:** info:fedora/fedora-system:def/model#  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
 **mrel:** http://id.loc.gov/vocabulary/relators/  
 **naf:** http://id.loc.gov/authorities/names/  
 **obo:** http://purl.obolibrary.org/obo/  
-**pcdm:** http://pcdm.org/models#  
-**prism:** http://prismstandard.org/namespaces/basic/3.0/  
-**rdf:** http://www.w3.org/1999/02/22-rdf-syntax-ns#  
-**rdfs:** http://www.w3.org/2000/01/rdf-schema#  
-**skos:** http://www.w3.org/2004/02/skos/core#  
-**status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
 **owl:** http://www.w3.org/2002/07/owl#  
 **ore:** http://www.openarchives.org/ore/terms/  
-**ual:** http://terms.library.ualberta.ca/  
-**vivo:** http://vivoweb.org/ontology/core#  
+**pcdm:** http://pcdm.org/models#  
+**premis:** http://www.loc.gov/premis/rdf/v1#  
+**prism:** http://prismstandard.org/namespaces/basic/3.0/  
+**rels:** info:fedora/fedora-system:def/relations-external#  
+**rdf:** http://www.w3.org/1999/02/22-rdf-syntax-ns#  
+**rdfs:** http://www.w3.org/2000/01/rdf-schema#  
+**schema:** http://schema.org/  
+**scholar:** http://scholarsphere.psu.edu/ns#  
+**skos:** http://www.w3.org/2004/02/skos/core#  
+**status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
 **swrc:** http://ontoware.org/swrc/ontology#  
+**ual:** http://terms.library.ualberta.ca/  
+**ualdate:** http://terms.library.ualberta.ca/date/  
+**ualid:** http://terms.library.ualberta.ca/id/  
+**ualids:** http://terms.library.ualberta.ca/identifiers/  
+**ualrole:** http://terms.library.ualberta.ca/role/  
+**ualthesis:** http://terms.library.ualberta.ca/thesis/  
+**vivo:** http://vivoweb.org/ontology/core#  
+**webacl:** http://www.w3.org/ns/auth/acl#  
 **works:** http://pcdm.org/works#  
+**vivo:** http://vivoweb.org/ontology/core#  
 
 # Definitions
 

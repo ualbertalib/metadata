@@ -3,28 +3,43 @@
 The Jupiter Data Dictionary is a collection of living documents. Below you will find an application profile for properties implemented in production Jupiter. Changes to these variables can be suggested by submitting a Github ticket. The metadata team will edit the document accordingly.
 
 # Namespaces  
+**acl:** http://projecthydra.org/ns/auth/acl#  
 **bibo:** http://purl.org/ontology/bibo/  
 **cc:** http://creativecommons.org/ns#  
 **dc:** http://purl.org/dc/elements/1.1/  
 **dcterms:** http://purl.org/dc/terms/  
 **fabio:** http://purl.org/spar/fabio/  
+**fedora:** http://fedora.info/definitions/v4/repository#  
 **foaf:** http://xmlns.com/foaf/0.1/  
+**iana:** http://www.iana.org/assignments/media-types/  
+**info:** info:fedora/fedora-system:def/model#  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
 **mrel:** http://id.loc.gov/vocabulary/relators/  
 **naf:** http://id.loc.gov/authorities/names/  
 **obo:** http://purl.obolibrary.org/obo/  
-**pcdm:** http://pcdm.org/models#  
-**prism:** http://prismstandard.org/namespaces/basic/3.0/  
-**rdf:** http://www.w3.org/1999/02/22-rdf-syntax-ns#  
-**rdfs:** http://www.w3.org/2000/01/rdf-schema#  
-**skos:** http://www.w3.org/2004/02/skos/core#  
-**status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
 **owl:** http://www.w3.org/2002/07/owl#  
 **ore:** http://www.openarchives.org/ore/terms/  
-**ual:** http://terms.library.ualberta.ca/  
-**vivo:** http://vivoweb.org/ontology/core#  
+**pcdm:** http://pcdm.org/models#  
+**premis:** http://www.loc.gov/premis/rdf/v1#  
+**prism:** http://prismstandard.org/namespaces/basic/3.0/  
+**rels:** info:fedora/fedora-system:def/relations-external#  
+**rdf:** http://www.w3.org/1999/02/22-rdf-syntax-ns#  
+**rdfs:** http://www.w3.org/2000/01/rdf-schema#  
+**schema:** http://schema.org/  
+**scholar:** http://scholarsphere.psu.edu/ns#  
+**skos:** http://www.w3.org/2004/02/skos/core#  
+**status:** http://www.w3.org/2003/06/sw-vocab-status/ns#  
 **swrc:** http://ontoware.org/swrc/ontology#  
+**ual:** http://terms.library.ualberta.ca/  
+**ualdate:** http://terms.library.ualberta.ca/date/  
+**ualid:** http://terms.library.ualberta.ca/id/  
+**ualids:** http://terms.library.ualberta.ca/identifiers/  
+**ualrole:** http://terms.library.ualberta.ca/role/  
+**ualthesis:** http://terms.library.ualberta.ca/thesis/  
+**vivo:** http://vivoweb.org/ontology/core#  
+**webacl:** http://www.w3.org/ns/auth/acl#  
 **works:** http://pcdm.org/works#  
+**vivo:** http://vivoweb.org/ontology/core#  
 
 # Definitions
 
@@ -46,27 +61,27 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
-  * [http://fedora.info/definitions/v4/repository#created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#created) is compatible with http://fedora.info/definitions/v4/repository#created  
-  * [http://fedora.info/definitions/v4/repository#createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#createdby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
-  * [http://fedora.info/definitions/v4/repository#digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#digest) is compatible with http://fedora.info/definitions/v4/repository#digest  
-  * [http://fedora.info/definitions/v4/repository#exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#exportsas) is compatible with http://fedora.info/definitions/v4/repository#exportsAs  
-  * [http://fedora.info/definitions/v4/repository#hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#hasfixityservice) is compatible with http://fedora.info/definitions/v4/repository#hasFixityService  
-  * [http://fedora.info/definitions/v4/repository#hasVersions](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#hasversions) is compatible with http://fedora.info/definitions/v4/repository#hasVersions  
-  * [http://fedora.info/definitions/v4/repository#lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#lastmodified) is compatible with http://fedora.info/definitions/v4/repository#lastModified  
-  * [http://fedora.info/definitions/v4/repository#lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#lastmodifiedby) is compatible with http://fedora.info/definitions/v4/repository#lastModifiedBy  
-  * [http://fedora.info/definitions/v4/repository#mimeType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#mimetype) is compatible with http://fedora.info/definitions/v4/repository#mimeType  
-  * [http://fedora.info/definitions/v4/repository#mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#mixintypes) is compatible with http://fedora.info/definitions/v4/repository#mixinTypes  
-  * [http://fedora.info/definitions/v4/repository#primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#primarytype) is compatible with http://fedora.info/definitions/v4/repository#primaryType  
-  * [http://fedora.info/definitions/v4/repository#uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#uuid) is compatible with http://fedora.info/definitions/v4/repository#uuid  
-  * [http://fedora.info/definitions/v4/repository#writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//fedora.info/definitions/v4/repository#writable) is compatible with http://fedora.info/definitions/v4/repository#writable  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreated) is compatible with http://fedora.info/definitions/v4/repository#created  
+  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreatedby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
+  * [digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoradigest) is compatible with http://fedora.info/definitions/v4/repository#digest  
+  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraexportsas) is compatible with http://fedora.info/definitions/v4/repository#exportsAs  
+  * [hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasfixityservice) is compatible with http://fedora.info/definitions/v4/repository#hasFixityService  
+  * [hasVersions](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasversions) is compatible with http://fedora.info/definitions/v4/repository#hasVersions  
+  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodified) is compatible with http://fedora.info/definitions/v4/repository#lastModified  
+  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodifiedby) is compatible with http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [mimeType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramimetype) is compatible with http://fedora.info/definitions/v4/repository#mimeType  
+  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramixintypes) is compatible with http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraprimarytype) is compatible with http://fedora.info/definitions/v4/repository#primaryType  
+  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorauuid) is compatible with http://fedora.info/definitions/v4/repository#uuid  
+  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorawritable) is compatible with http://fedora.info/definitions/v4/repository#writable  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution) is compatible with http://id.loc.gov/vocabulary/relators/dgg  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollectionId  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
-  * [http://projecthydra.org/ns/auth/acl#embargoHistory](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//projecthydra.org/ns/auth/acl#embargohistory) is compatible with http://projecthydra.org/ns/auth/acl#embargoHistory  
-  * [http://projecthydra.org/ns/auth/acl#embargoReleaseDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//projecthydra.org/ns/auth/acl#embargoreleasedate) is compatible with http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
-  * [http://projecthydra.org/ns/auth/acl#hasEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//projecthydra.org/ns/auth/acl#hasembargo) is compatible with http://projecthydra.org/ns/auth/acl#hasEmbargo  
-  * [http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//projecthydra.org/ns/auth/acl#visibilityafterembargo) is compatible with http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo  
-  * [http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//projecthydra.org/ns/auth/acl#visibilityduringembargo) is compatible with http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo  
+  * [embargoHistory](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargohistory) is compatible with http://projecthydra.org/ns/auth/acl#embargoHistory  
+  * [embargoReleaseDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargoreleasedate) is compatible with http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
+  * [hasEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclhasembargo) is compatible with http://projecthydra.org/ns/auth/acl#hasEmbargo  
+  * [visibilityAfterEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclvisibilityafterembargo) is compatible with http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo  
+  * [visibilityDuringEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclvisibilityduringembargo) is compatible with http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights) is compatible with http://purl.org/dc/terms/rights  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject) is compatible with http://purl.org/dc/terms/subject  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) is compatible with http://purl.org/dc/terms/abstract  
@@ -78,7 +93,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage) is compatible with http://purl.org/dc/terms/language  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree) is compatible with http://purl.org/ontology/bibo/ThesisDegree  
-  * [http://scholarsphere.psu.edu/ns#relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//scholarsphere.psu.edu/ns#relativepath) is compatible with http://scholarsphere.psu.edu/ns#relativePath  
+  * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#scholarrelativepath) is compatible with http://scholarsphere.psu.edu/ns#relativePath  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember) is compatible with http://terms.library.ualberta.ca/role/thesiscommitteemember  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment) is compatible with http://vivoweb.org/ontology/core#AcademicDepartment  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
@@ -94,7 +109,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor) is compatible with http://id.loc.gov/vocabulary/relators/ths  
   * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel) is compatible with http://terms.library.ualberta.ca/thesis/thesislevel  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
-  * [info:fedora/fedora-system:def/model#downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infofedora/fedora-systemdef/model#downloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
+  * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infodownloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
@@ -152,31 +167,31 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
-### http://fedora.info/definitions/v4/repository#created  
+### fedora:created  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#created**  
-### http://fedora.info/definitions/v4/repository#createdBy  
+### fedora:createdBy  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#createdBy**  
-### http://fedora.info/definitions/v4/repository#digest  
+### fedora:digest  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#digest**  
-### http://fedora.info/definitions/v4/repository#exportsAs  
+### fedora:exportsAs  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#exportsAs**  
-### http://fedora.info/definitions/v4/repository#hasFixityService  
+### fedora:hasFixityService  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasFixityService**  
-### http://fedora.info/definitions/v4/repository#hasVersions  
+### fedora:hasVersions  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasVersions**  
-### http://fedora.info/definitions/v4/repository#lastModified  
+### fedora:lastModified  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModified**  
-### http://fedora.info/definitions/v4/repository#lastModifiedBy  
+### fedora:lastModifiedBy  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModifiedBy**  
-### http://fedora.info/definitions/v4/repository#mimeType  
+### fedora:mimeType  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mimeType**  
-### http://fedora.info/definitions/v4/repository#mixinTypes  
+### fedora:mixinTypes  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mixinTypes**  
-### http://fedora.info/definitions/v4/repository#primaryType  
+### fedora:primaryType  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#primaryType**  
-### http://fedora.info/definitions/v4/repository#uuid  
+### fedora:uuid  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#uuid**  
-### http://fedora.info/definitions/v4/repository#writable  
+### fedora:writable  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#writable**  
 ### swrc:institution  
 values displayed on form:  
@@ -209,15 +224,15 @@ repeat: **false**
 required: **true**  
 searchable: **false**  
 sort: **false**  
-### http://projecthydra.org/ns/auth/acl#embargoHistory  
+### acl:embargoHistory  
 backwardCompatibleWith: **http://projecthydra.org/ns/auth/acl#embargoHistory**  
-### http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
+### acl:embargoReleaseDate  
 backwardCompatibleWith: **http://projecthydra.org/ns/auth/acl#embargoReleaseDate**  
-### http://projecthydra.org/ns/auth/acl#hasEmbargo  
+### acl:hasEmbargo  
 backwardCompatibleWith: **http://projecthydra.org/ns/auth/acl#hasEmbargo**  
-### http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo  
+### acl:visibilityAfterEmbargo  
 backwardCompatibleWith: **http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo**  
-### http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo  
+### acl:visibilityDuringEmbargo  
 backwardCompatibleWith: **http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo**  
 ### dc:rights  
 backwardCompatibleWith: **http://purl.org/dc/terms/rights**  
@@ -362,7 +377,7 @@ propertyName: **degree**
 repeat: **false**  
 required: **true**  
 sort: **false**  
-### http://scholarsphere.psu.edu/ns#relativePath  
+### scholar:relativePath  
 backwardCompatibleWith: **http://scholarsphere.psu.edu/ns#relativePath**  
 ### ual:commiteeMember  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/role/thesiscommitteemember**  
@@ -518,5 +533,5 @@ sort: **false**
 acceptedValues: **http://purl.org/ontology/bibo/Thesis**  
 dataType: **auto**  
 propertyName: **rdf Type**  
-### info:fedora/fedora-system:def/model#downloadFilename  
+### info:downloadFilename  
 backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**  
