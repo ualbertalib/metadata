@@ -46,6 +46,20 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
+  * [http://fedora.info/definitions/v4/repository#created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#created) is compatible with http://fedora.info/definitions/v4/repository#created  
+  * [http://fedora.info/definitions/v4/repository#createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#createdby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
+  * [http://fedora.info/definitions/v4/repository#digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#digest) is compatible with http://fedora.info/definitions/v4/repository#digest  
+  * [http://fedora.info/definitions/v4/repository#exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#exportsas) is compatible with http://fedora.info/definitions/v4/repository#exportsAs  
+  * [http://fedora.info/definitions/v4/repository#hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#hasfixityservice) is compatible with http://fedora.info/definitions/v4/repository#hasFixityService  
+  * [http://fedora.info/definitions/v4/repository#hasVersions](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#hasversions) is compatible with http://fedora.info/definitions/v4/repository#hasVersions  
+  * [http://fedora.info/definitions/v4/repository#lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#lastmodified) is compatible with http://fedora.info/definitions/v4/repository#lastModified  
+  * [http://fedora.info/definitions/v4/repository#lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#lastmodifiedby) is compatible with http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [http://fedora.info/definitions/v4/repository#mimeType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#mimetype) is compatible with http://fedora.info/definitions/v4/repository#mimeType  
+  * [http://fedora.info/definitions/v4/repository#mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#mixintypes) is compatible with http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [http://fedora.info/definitions/v4/repository#primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#primarytype) is compatible with http://fedora.info/definitions/v4/repository#primaryType  
+  * [http://fedora.info/definitions/v4/repository#uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#uuid) is compatible with http://fedora.info/definitions/v4/repository#uuid  
+  * [http://fedora.info/definitions/v4/repository#writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//fedora.info/definitions/v4/repository#writable) is compatible with http://fedora.info/definitions/v4/repository#writable  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollectionId  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor) is compatible with http://purl.org/dc/terms/contributor  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
@@ -64,13 +78,20 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal) is compatible with http://purl.org/dc/terms/temporal  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype) is compatible with http://purl.org/dc/terms/type  
+  * [http://scholarsphere.psu.edu/ns#onBehalfOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//scholarsphere.psu.edu/ns#onbehalfof) is compatible with http://scholarsphere.psu.edu/ns#onBehalfOf  
+  * [http://scholarsphere.psu.edu/ns#proxyDepositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//scholarsphere.psu.edu/ns#proxydepositor) is compatible with http://scholarsphere.psu.edu/ns#proxyDepositor  
+  * [http://scholarsphere.psu.edu/ns#relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#http//scholarsphere.psu.edu/ns#relativepath) is compatible with http://scholarsphere.psu.edu/ns#relativePath  
   * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark) is compatible with http://terms.library.ualberta.ca/id/arkid  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
+  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/ingestbatch  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile) is compatible with http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is compatible with http://terms.library.ualberta.ca/id/halpern:nnaitem  
+  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollection  
+  * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcommunityid) is compatible with http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
+  * [info:fedora/fedora-system:def/model#downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infofedora/fedora-systemdef/model#downloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
 ### display  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
@@ -150,6 +171,34 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### http://fedora.info/definitions/v4/repository#created  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#created**  
+### http://fedora.info/definitions/v4/repository#createdBy  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#createdBy**  
+### http://fedora.info/definitions/v4/repository#digest  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#digest**  
+### http://fedora.info/definitions/v4/repository#exportsAs  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#exportsAs**  
+### http://fedora.info/definitions/v4/repository#hasFixityService  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasFixityService**  
+### http://fedora.info/definitions/v4/repository#hasVersions  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasVersions**  
+### http://fedora.info/definitions/v4/repository#lastModified  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModified**  
+### http://fedora.info/definitions/v4/repository#lastModifiedBy  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModifiedBy**  
+### http://fedora.info/definitions/v4/repository#mimeType  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mimeType**  
+### http://fedora.info/definitions/v4/repository#mixinTypes  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mixinTypes**  
+### http://fedora.info/definitions/v4/repository#primaryType  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#primaryType**  
+### http://fedora.info/definitions/v4/repository#uuid  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#uuid**  
+### http://fedora.info/definitions/v4/repository#writable  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#writable**  
+### pcdm:memberOf  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollectionId**  
 ### prism:doi  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
 comments: **always doi (currently set to searchable (should this be changed?)**  
@@ -431,6 +480,12 @@ propertyName: **status**
 repeat: **true**  
 required: **false**  
 sort: **false**  
+### http://scholarsphere.psu.edu/ns#onBehalfOf  
+backwardCompatibleWith: **http://scholarsphere.psu.edu/ns#onBehalfOf**  
+### http://scholarsphere.psu.edu/ns#proxyDepositor  
+backwardCompatibleWith: **http://scholarsphere.psu.edu/ns#proxyDepositor**  
+### http://scholarsphere.psu.edu/ns#relativePath  
+backwardCompatibleWith: **http://scholarsphere.psu.edu/ns#relativePath**  
 ### ual:ark  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/arkid**  
 dataType: **text**  
@@ -478,6 +533,8 @@ propertyName: **fedora 3 uuid**
 repeat: **false**  
 required: **false**  
 sort: **false**  
+### ual:identifiers/ingestbatch  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/ingestbatch**  
 ### ual:nnaFile  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnafile**  
 comments: **legacy property**  
@@ -502,6 +559,10 @@ propertyName: **northern north america item id**
 repeat: **false**  
 required: **false**  
 sort: **false**  
+### ual:parentCollectionTitle  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollection**  
+### ual:parentCommunityId  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/belongsToCommunity**  
 ### ual:unicorn  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
 comments: **legacy property**  
@@ -514,3 +575,5 @@ propertyName: **unicorn**
 repeat: **false**  
 required: **false**  
 sort: **false**  
+### info:fedora/fedora-system:def/model#downloadFilename  
+backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**  
