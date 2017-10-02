@@ -16,8 +16,7 @@ def removeNS(v):
 	""" removes the namespace from a predicate, leaving only the predicate term """
 	for line in namespaces:
 		if line['uri'] in v:
-			return v.replace(line['uri'], '')
-
+			return v.replace(line['uri'], '').replace('/', "_")
 
 def PrintException():
 	""" for testing """
