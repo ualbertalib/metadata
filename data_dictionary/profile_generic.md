@@ -100,7 +100,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
-  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/ingestbatch  
+  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
+  * [ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile) is compatible with http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is compatible with http://terms.library.ualberta.ca/id/halpern:nnaitem  
   * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollection  
@@ -549,7 +550,9 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 ### ual:identifiers/ingestbatch  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/ingestbatch**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
+### ual:ingestbatch  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
 ### ual:nnaFile  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/halpern:nnafile**  
 comments: **legacy property**  

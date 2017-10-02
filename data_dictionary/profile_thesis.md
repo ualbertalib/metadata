@@ -101,7 +101,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is compatible with http://terms.library.ualberta.ca/date/graduationdate  
-  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/ingestbatch  
+  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
+  * [ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
   * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/id/hasCollection  
   * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcommunityid) is compatible with http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest) is compatible with http://terms.library.ualberta.ca/id/proquest  
@@ -463,7 +464,9 @@ repeat: **false**
 required: **true**  
 sort: **false**  
 ### ual:identifiers/ingestbatch  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/ingestbatch**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
+### ual:ingestbatch  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
 ### ual:parentCollectionTitle  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/hasCollection**  
 ### ual:parentCommunityId  
