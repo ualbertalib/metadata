@@ -36,8 +36,11 @@ class Profiler(object):
 					annotations = sparql.query().convert()
 					for annotation in annotations['results']['bindings']:
 						profile[result['property']['value']]['acceptedValues'].append({'uri': result['value']['value'], 'onForm': annotation['onForm']['value'], 'label': annotation['label']['value']})
+				elif result['annotation']['value'] in profile[result['property']['value']]:
+					profile[result['property']['value']][result['annotation']['value']].append(result['value']['value'])
 				else:
-					profile[result['property']['value']][result['annotation']['value']] = result['value']['value']
+					profile[result['property']['value']][result['annotation']['value']] = []
+					profile[result['property']['value']][result['annotation']['value']].append(result['value']['value'])
 
 			directory = "data_dictionary/profiles/%s/" % (self.ptype)
 			if not os.path.exists(directory):
@@ -75,19 +78,23 @@ class Profiler(object):
 						annotations.append(key)
 				annotations = sorted(list(set(annotations)))
 				for annotation in annotations:
-					for key, value in data:
-						if (annotation in value) and (('true' in value[annotation]) or ('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
+					for propertyName, PropertyData in data:
+						if (annotation in PropertyData) and (('true' in PropertyData[annotation]) or ('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
 							display = True
 					if display is True:
 						print('### %s  ' % (removeNS(annotation)))
 						display = False
-					for key, value in data:
-						if (annotation in value) and ('true' in value[annotation]):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower()))
-						elif (annotation in value) and (('indexAs' in annotation) and (value[annotation] != '')):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower(), removeNS(value[annotation]), addPrefixes(value[annotation]).replace(':', '').lower()))
-						elif (annotation in value) and (('backwardCompatibleWith' in annotation) and (value[annotation] != '')):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is compatible with %s  " % (removeNS(key), self.ptype, addPrefixes(key).replace(':', '').lower(), value[annotation]))
+					for propertyName, PropertyData in data:
+						if (annotation in PropertyData) and ('true' in PropertyData[annotation]):
+							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+						elif ((annotation in PropertyData) and ('indexAs' in annotation)) and (PropertyData[annotation][0] != ''):
+							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							for anno in PropertyData[annotation]:
+								print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
+						elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation)) and (PropertyData[annotation][0] != ''):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+								for anno in PropertyData[annotation]:
+									print("    * %s  " % (anno))
 				print('')
 				print('# Profile by property')
 				print('')
@@ -95,12 +102,13 @@ class Profiler(object):
 					print('### %s  ' % (addPrefixes(keys)))
 					for key, value in sorted(values.items()):
 						if key == 'acceptedValues':
-							print("values displayed on form:  ")
+							print("  * values displayed on form:  ")
 							for j in value:
 								if j['onForm'] == 'true':
-									print('  * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-							print('')
-						elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value != ''):
-							print("%s: **%s**  " % (removeNS(key), value))
+									print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+						elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value[0] != ''):					
+							print("  * %s:  " % (removeNS(key)))
+							for v in value:
+								print("    * %s  " % (v))
 		except:
 			PrintException()
