@@ -61,6 +61,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
+  * [hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#pcdmhasmember) is compatible with info:fedora/fedora-system:def/relations-external#hasCollectionMember  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription) is compatible with http://purl.org/dc/terms/description  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
@@ -82,6 +83,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### pcdm:hasMember  
+backwardCompatibleWith: **info:fedora/fedora-system:def/relations-external#hasCollectionMember**  
 ### dc:creator  
 backwardCompatibleWith: **http://purl.org/dc/terms/creator**  
 dataType: **text**  

@@ -14,17 +14,11 @@
     "http://fedora.info/definitions/v4/repository#hasFixityService": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#hasFixityService"
     },
-    "http://fedora.info/definitions/v4/repository#hasVersions": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#hasVersions"
-    },
     "http://fedora.info/definitions/v4/repository#lastModified": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#lastModified"
     },
     "http://fedora.info/definitions/v4/repository#lastModifiedBy": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#lastModifiedBy"
-    },
-    "http://fedora.info/definitions/v4/repository#mimeType": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#mimeType"
     },
     "http://fedora.info/definitions/v4/repository#mixinTypes": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#mixinTypes"
@@ -64,7 +58,7 @@
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     },
     "http://pcdm.org/models#memberOf": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/identifiers/hasCollectionId"
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://fedora.info/definitions/v4/repository#hasParent"
     },
     "http://prismstandard.org/namespaces/basic/3.0/doi": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/id/doi",
@@ -497,14 +491,8 @@
         "http://terms.library.ualberta.ca/tokenize": "",
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     },
-    "http://terms.library.ualberta.ca/identifiers/ingestbatch": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/identifiers/ingestbatch"
-    },
-    "http://terms.library.ualberta.ca/ingestbatch": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/identifiers/ingestbatch"
-    },
     "http://terms.library.ualberta.ca/parentCollectionTitle": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/id/hasCollection"
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/identifiers/hasCollection"
     },
     "http://terms.library.ualberta.ca/parentCommunityId": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "http://terms.library.ualberta.ca/identifiers/belongsToCommunity"
@@ -607,5 +595,8 @@
     },
     "info:fedora/fedora-system:def/model#downloadFilename": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": "info:fedora/fedora-system:def/model#downloadFilename"
+    },
+    "info:fedora/fedora-system:def/model#isPartOf": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": "info:fedora/fedora-system:def/model#isPartOf"
     }
 }

@@ -66,16 +66,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoradigest) is compatible with http://fedora.info/definitions/v4/repository#digest  
   * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraexportsas) is compatible with http://fedora.info/definitions/v4/repository#exportsAs  
   * [hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasfixityservice) is compatible with http://fedora.info/definitions/v4/repository#hasFixityService  
-  * [hasVersions](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasversions) is compatible with http://fedora.info/definitions/v4/repository#hasVersions  
   * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodified) is compatible with http://fedora.info/definitions/v4/repository#lastModified  
   * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodifiedby) is compatible with http://fedora.info/definitions/v4/repository#lastModifiedBy  
-  * [mimeType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramimetype) is compatible with http://fedora.info/definitions/v4/repository#mimeType  
   * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramixintypes) is compatible with http://fedora.info/definitions/v4/repository#mixinTypes  
   * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraprimarytype) is compatible with http://fedora.info/definitions/v4/repository#primaryType  
   * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorauuid) is compatible with http://fedora.info/definitions/v4/repository#uuid  
   * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorawritable) is compatible with http://fedora.info/definitions/v4/repository#writable  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution) is compatible with http://id.loc.gov/vocabulary/relators/dgg  
-  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof) is compatible with http://fedora.info/definitions/v4/repository#hasParent  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
   * [embargoHistory](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargohistory) is compatible with http://projecthydra.org/ns/auth/acl#embargoHistory  
   * [embargoReleaseDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargoreleasedate) is compatible with http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
@@ -101,9 +99,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is compatible with http://terms.library.ualberta.ca/date/graduationdate  
-  * [identifiers/ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualidentifiers/ingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
-  * [ingestbatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch) is compatible with http://terms.library.ualberta.ca/identifiers/ingestbatch  
-  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/id/hasCollection  
+  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollection  
   * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcommunityid) is compatible with http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest) is compatible with http://terms.library.ualberta.ca/id/proquest  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization) is compatible with http://terms.library.ualberta.ca/thesis/specialization  
@@ -111,6 +107,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel) is compatible with http://terms.library.ualberta.ca/thesis/thesislevel  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
   * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infodownloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infoispartof) is compatible with info:fedora/fedora-system:def/model#isPartOf  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
@@ -178,14 +175,10 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#digest**
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#exportsAs**  
 ### fedora:hasFixityService  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasFixityService**  
-### fedora:hasVersions  
-backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasVersions**  
 ### fedora:lastModified  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModified**  
 ### fedora:lastModifiedBy  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModifiedBy**  
-### fedora:mimeType  
-backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mimeType**  
 ### fedora:mixinTypes  
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#mixinTypes**  
 ### fedora:primaryType  
@@ -210,7 +203,7 @@ repeat: **false**
 required: **true**  
 sort: **false**  
 ### pcdm:memberOf  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollectionId**  
+backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent**  
 ### prism:doi  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/doi**  
 comments: **always doi (currently set to searchable (should this be changed?)**  
@@ -463,12 +456,8 @@ propertyName: **graduation date**
 repeat: **false**  
 required: **true**  
 sort: **false**  
-### ual:identifiers/ingestbatch  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
-### ual:ingestbatch  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/ingestbatch**  
 ### ual:parentCollectionTitle  
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/hasCollection**  
+backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollection**  
 ### ual:parentCommunityId  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/belongsToCommunity**  
 ### ual:proquest  
@@ -538,3 +527,5 @@ dataType: **auto**
 propertyName: **rdf Type**  
 ### info:downloadFilename  
 backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**  
+### info:isPartOf  
+backwardCompatibleWith: **info:fedora/fedora-system:def/model#isPartOf**  
