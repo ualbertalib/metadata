@@ -61,7 +61,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
-<<<<<<< HEAD
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreated) is backward compatible with:  
     * http://fedora.info/definitions/v4/repository#created  
   * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreatedby) is backward compatible with:  
@@ -163,57 +162,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infoispartof) is backward compatible with:  
     * info:fedora/fedora-system:def/model#isPartOf  
-=======
-  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreated) is compatible with http://fedora.info/definitions/v4/repository#created  
-  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreatedby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
-  * [digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoradigest) is compatible with http://fedora.info/definitions/v4/repository#digest  
-  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoraexportsas) is compatible with http://fedora.info/definitions/v4/repository#exportsAs  
-  * [hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedorahasfixityservice) is compatible with http://fedora.info/definitions/v4/repository#hasFixityService  
-  * [hasVersions](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedorahasversions) is compatible with http://fedora.info/definitions/v4/repository#hasVersions  
-  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoralastmodified) is compatible with http://fedora.info/definitions/v4/repository#lastModified  
-  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoralastmodifiedby) is compatible with http://fedora.info/definitions/v4/repository#lastModifiedBy  
-  * [mimeType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoramimetype) is compatible with http://fedora.info/definitions/v4/repository#mimeType  
-  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoramixintypes) is compatible with http://fedora.info/definitions/v4/repository#mixinTypes  
-  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoraprimarytype) is compatible with http://fedora.info/definitions/v4/repository#primaryType  
-  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedorauuid) is compatible with http://fedora.info/definitions/v4/repository#uuid  
-  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedorawritable) is compatible with http://fedora.info/definitions/v4/repository#writable  
-  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof) is compatible with http://fedora.info/definitions/v4/repository#hasParent  
-  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi) is compatible with http://terms.library.ualberta.ca/id/doi  
-  * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor) is compatible with http://purl.org/dc/terms/contributor  
-  * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator) is compatible with http://purl.org/dc/terms/creator  
-  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights) is compatible with http://purl.org/dc/terms/rights  
-  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject) is compatible with http://purl.org/dc/terms/subject  
-  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative) is compatible with http://purl.org/dc/terms/alternative  
-  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated) is compatible with http://purl.org/dc/terms/created  
-  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription) is compatible with http://purl.org/dc/terms/description  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier) is compatible with http://purl.org/dc/terms/identifier  
-  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof) is compatible with http://purl.org/dc/terms/isVersionOf  
-  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage) is compatible with http://purl.org/dc/terms/language  
-  * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense) is compatible with http://purl.org/dc/terms/license  
-  * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsrelation) is compatible with http://purl.org/dc/terms/relation  
-  * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermssource) is compatible with http://purl.org/dc/terms/source  
-  * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial) is compatible with http://purl.org/dc/terms/spatial  
-  * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal) is compatible with http://purl.org/dc/terms/temporal  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle) is compatible with http://purl.org/dc/terms/title  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype) is compatible with http://purl.org/dc/terms/type  
-  * [onBehalfOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholaronbehalfof) is compatible with http://scholarsphere.psu.edu/ns#onBehalfOf  
-  * [proxyDepositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarproxydepositor) is compatible with http://scholarsphere.psu.edu/ns#proxyDepositor  
-  * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarrelativepath) is compatible with http://scholarsphere.psu.edu/ns#relativePath  
-  * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark) is compatible with http://terms.library.ualberta.ca/id/arkid  
-  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is compatible with http://id.loc.gov/vocabulary/relators/dpt  
-  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is compatible with http://terms.library.ualberta.ca/id/fedora3handle  
-  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is compatible with http://terms.library.ualberta.ca/id/fedora3uuid  
-  * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile) is compatible with http://terms.library.ualberta.ca/id/halpern:nnafile  
-  * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is compatible with http://terms.library.ualberta.ca/id/halpern:nnaitem  
-  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcollectiontitle) is compatible with http://terms.library.ualberta.ca/identifiers/hasCollection  
-  * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcommunityid) is compatible with http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
-  * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is compatible with http://terms.library.ualberta.ca/id/unicorn  
-  * [hasOriginalName](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#premishasoriginalname) is compatible with http://www.loc.gov/premis/rdf/v1#hasOriginalName  
-  * [hasSize](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#premishassize) is compatible with http://www.loc.gov/premis/rdf/v1#hasSize  
-  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype) is compatible with http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
-  * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infodownloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
-  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infoispartof) is compatible with info:fedora/fedora-system:def/model#isPartOf  
->>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
 ### display  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
@@ -335,13 +283,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://fedora.info/definitions/v4/repository#writable  
 ### pcdm:memberOf  
-<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
     * http://fedora.info/definitions/v4/repository#hasParent  
-=======
-backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent**  
->>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
 ### prism:doi  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/doi  
@@ -917,7 +861,6 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
   * sort:  
     * false  
 ### ual:fedora3UUID  
-<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * comments:  
@@ -940,19 +883,6 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
     * false  
   * sort:  
     * false  
-=======
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
-comments: **legacy property**  
-dataType: **text**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid**  
-display: **false**  
-facet: **false**  
-onForm: **false**  
-propertyName: **fedora 3 uuid**  
-repeat: **false**  
-required: **false**  
-sort: **false**  
->>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
 ### ual:nnaFile  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
@@ -1008,7 +938,6 @@ sort: **false**
     * http://terms.library.ualberta.ca/belongsToCommunity  
     * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
 ### ual:unicorn  
-<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * comments:  
@@ -1046,26 +975,3 @@ sort: **false**
 ### info:isPartOf  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#isPartOf  
-=======
-backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
-comments: **legacy property**  
-dataType: **text**  
-definedBy: **https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn**  
-display: **false**  
-facet: **false**  
-onForm: **false**  
-propertyName: **unicorn**  
-repeat: **false**  
-required: **false**  
-sort: **false**  
-### premis:hasOriginalName  
-backwardCompatibleWith: **http://www.loc.gov/premis/rdf/v1#hasOriginalName**  
-### premis:hasSize  
-backwardCompatibleWith: **http://www.loc.gov/premis/rdf/v1#hasSize**  
-### rdf:type  
-backwardCompatibleWith: **http://www.w3.org/1999/02/22-rdf-syntax-ns#type**  
-### info:downloadFilename  
-backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**  
-### info:isPartOf  
-backwardCompatibleWith: **info:fedora/fedora-system:def/model#isPartOf**  
->>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
