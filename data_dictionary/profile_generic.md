@@ -62,6 +62,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreated) is backward compatible with:  
     * http://fedora.info/definitions/v4/repository#created  
   * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreatedby) is backward compatible with:  
@@ -163,6 +166,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infoispartof) is backward compatible with:  
     * info:fedora/fedora-system:def/model#isPartOf  
+<<<<<<< HEAD
 =======
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreated) is compatible with http://fedora.info/definitions/v4/repository#created  
   * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#fedoracreatedby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
@@ -214,6 +218,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infodownloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infoispartof) is compatible with info:fedora/fedora-system:def/model#isPartOf  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master
 ### display  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
@@ -336,12 +342,18 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://fedora.info/definitions/v4/repository#writable  
 ### pcdm:memberOf  
 <<<<<<< HEAD
+<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
     * http://fedora.info/definitions/v4/repository#hasParent  
 =======
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+>>>>>>> master
 ### prism:doi  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/doi  
@@ -918,6 +930,9 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
     * false  
 ### ual:fedora3UUID  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * comments:  
@@ -940,6 +955,7 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
     * false  
   * sort:  
     * false  
+<<<<<<< HEAD
 =======
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/fedora3uuid**  
 comments: **legacy property**  
@@ -953,6 +969,8 @@ repeat: **false**
 required: **false**  
 sort: **false**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master
 ### ual:nnaFile  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
@@ -1009,6 +1027,9 @@ sort: **false**
     * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
 ### ual:unicorn  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * comments:  
@@ -1046,6 +1067,7 @@ sort: **false**
 ### info:isPartOf  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#isPartOf  
+<<<<<<< HEAD
 =======
 backwardCompatibleWith: **http://terms.library.ualberta.ca/id/unicorn**  
 comments: **legacy property**  
@@ -1069,3 +1091,5 @@ backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**
 ### info:isPartOf  
 backwardCompatibleWith: **info:fedora/fedora-system:def/model#isPartOf**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master

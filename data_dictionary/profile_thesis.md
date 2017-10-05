@@ -62,6 +62,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreated) is backward compatible with:  
     * http://fedora.info/definitions/v4/repository#created  
   * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreatedby) is backward compatible with:  
@@ -159,6 +162,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infoispartof) is backward compatible with:  
     * info:fedora/fedora-system:def/model#isPartOf  
+<<<<<<< HEAD
 =======
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreated) is compatible with http://fedora.info/definitions/v4/repository#created  
   * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreatedby) is compatible with http://fedora.info/definitions/v4/repository#createdBy  
@@ -208,6 +212,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infodownloadfilename) is compatible with info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infoispartof) is compatible with info:fedora/fedora-system:def/model#isPartOf  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
@@ -283,21 +289,31 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://fedora.info/definitions/v4/repository#exportsAs  
 ### fedora:hasFixityService  
 <<<<<<< HEAD
+<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://fedora.info/definitions/v4/repository#hasFixityService  
 =======
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasFixityService**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#hasFixityService  
+>>>>>>> master
 ### fedora:lastModified  
   * backwardCompatibleWith:  
     * http://fedora.info/definitions/v4/repository#lastModified  
 ### fedora:lastModifiedBy  
+<<<<<<< HEAD
 <<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://fedora.info/definitions/v4/repository#lastModifiedBy  
 =======
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModifiedBy**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+>>>>>>> master
 ### fedora:mixinTypes  
   * backwardCompatibleWith:  
     * http://fedora.info/definitions/v4/repository#mixinTypes  
@@ -337,12 +353,18 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#lastModif
     * false  
 ### pcdm:memberOf  
 <<<<<<< HEAD
+<<<<<<< HEAD
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
     * http://fedora.info/definitions/v4/repository#hasParent  
 =======
 backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+>>>>>>> master
 ### prism:doi  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/doi  
@@ -787,6 +809,9 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
     * false  
 ### ual:graduationDate  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/date/graduationdate  
   * dataType:  
@@ -813,6 +838,7 @@ backwardCompatibleWith: **http://fedora.info/definitions/v4/repository#hasParent
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/hasCollection  
     * http://terms.library.ualberta.ca/identifiers/hasCollection  
+<<<<<<< HEAD
 =======
 backwardCompatibleWith: **http://terms.library.ualberta.ca/date/graduationdate**  
 dataType: **auto**  
@@ -828,6 +854,8 @@ sort: **false**
 ### ual:parentCollectionTitle  
 backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollection**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master
 ### ual:parentCommunityId  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/belongsToCommunity  
@@ -955,13 +983,19 @@ backwardCompatibleWith: **http://terms.library.ualberta.ca/identifiers/hasCollec
     * rdf Type  
 ### info:downloadFilename  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#downloadFilename  
 ### info:isPartOf  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#isPartOf  
+<<<<<<< HEAD
 =======
 backwardCompatibleWith: **info:fedora/fedora-system:def/model#downloadFilename**  
 ### info:isPartOf  
 backwardCompatibleWith: **info:fedora/fedora-system:def/model#isPartOf**  
 >>>>>>> 5e46127e2043c777488c08daf9b70109a2fa7df3
+=======
+>>>>>>> master
