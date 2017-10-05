@@ -39,6 +39,8 @@ def cleanOutputs(types):
 			print(e)
 	for ptype in types:
 		folder = 'results/%s' % (ptype)
+		if not os.path.exists(folder):
+			os.makedirs(folder)
 		for the_file in os.listdir(folder):
 			file_path = os.path.join(folder, the_file)
 			try:
