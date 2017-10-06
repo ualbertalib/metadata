@@ -2,6 +2,7 @@ from config import mig_ns as namespaces
 import linecache
 import sys
 import os
+from SPARQLWrapper import JSON, SPARQLWrapper
 
 
 def addPrefixes(v):
@@ -39,6 +40,8 @@ def cleanOutputs(types):
 			print(e)
 	for ptype in types:
 		folder = 'results/%s' % (ptype)
+		if not os.path.exists(folder):
+			os.makedirs(folder)
 		for the_file in os.listdir(folder):
 			file_path = os.path.join(folder, the_file)
 			try:
@@ -46,3 +49,8 @@ def cleanOutputs(types):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
+        sparqlResults = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/results/sparql")
+        query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
+        sparqlResults.setReturnFormat(JSON)
+        sparqlResults.setQuery(query)
+        sparqlResults.query()    

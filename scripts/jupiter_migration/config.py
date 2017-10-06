@@ -2,7 +2,14 @@ sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
 sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham/sparql"
 sparql_mig_test = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"
 sparql_mig_simple = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"
-types = ["collection", "community", "generic", "thesis", "technical"]
+types = [
+	"collection",
+	"community",
+	"generic",
+	"thesis",
+	"binary",
+	"relatedobject"
+	]
 mig_ns = [
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
 	{"prefix": "rdfs", "uri": "http://www.w3.org/2000/01/rdf-schema#"},
@@ -15,7 +22,7 @@ mig_ns = [
 	{"prefix": "info", "uri": "info:fedora/fedora-system:def/model#"},
 	{"prefix": "dcterm", "uri": "http://purl.org/dc/terms/"},
 	{"prefix": "pcdm", "uri": "http://pcdm.org/models#"},
-	{"prefix": "works", "uri": "http://projecthydra.org/works/models#"},
+	{"prefix": "works", "uri": "http://pcdm.org/works#"},
 	{"prefix": "rdf", "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"},
 	{"prefix": "fedora", "uri": "http://fedora.info/definitions/v4/repository#"},
 	{"prefix": "iana", "uri": "http://www.iana.org/assignments/relation/"},
