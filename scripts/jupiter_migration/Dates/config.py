@@ -3,10 +3,10 @@ sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era
 sparql_mig_test = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"
 sparql_mig_simple = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"
 types = [
-	"collection",
-	"community",
-	"generic",
-	"thesis",
+	#"collection",
+	#"community",
+	#"generic",
+	#"thesis",
 	"era1statsFile",
 	"era1statsFileset",
 	"fedora3foxmlFile",

@@ -49,10 +49,10 @@ def cleanOutputs(types):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
-		sparqlResults = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/results/sparql")
-		sparqlResults.setMethod('POST')
-		query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
-		sparqlResults.setReturnFormat(JSON)
-		sparqlResults.setQuery(query)
-		sparqlResults.query()
+	sparqlResults = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/results/sparql")
+	sparqlResults.setMethod('POST')
+	query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
+	sparqlResults.setReturnFormat(JSON)
+	sparqlResults.setQuery(query)
+	sparqlResults.query()
 

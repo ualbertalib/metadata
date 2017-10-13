@@ -90,16 +90,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://fedora.info/definitions/v4/repository#hasParent  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/doi  
-  * [embargoHistory](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargohistory) is backward compatible with:  
-    * http://projecthydra.org/ns/auth/acl#embargoHistory  
-  * [embargoReleaseDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclembargoreleasedate) is backward compatible with:  
-    * http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
-  * [hasEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclhasembargo) is backward compatible with:  
-    * http://projecthydra.org/ns/auth/acl#hasEmbargo  
-  * [visibilityAfterEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclvisibilityafterembargo) is backward compatible with:  
-    * http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo  
-  * [visibilityDuringEmbargo](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#aclvisibilityduringembargo) is backward compatible with:  
-    * http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights) is backward compatible with:  
     * http://purl.org/dc/terms/rights  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject) is backward compatible with:  
@@ -138,12 +128,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is backward compatible with:  
     * http://terms.library.ualberta.ca/date/graduationdate  
-  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcollectiontitle) is backward compatible with:  
-    * http://terms.library.ualberta.ca/hasCollection  
-    * http://terms.library.ualberta.ca/identifiers/hasCollection  
-  * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualparentcommunityid) is backward compatible with:  
-    * http://terms.library.ualberta.ca/belongsToCommunity  
-    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/proquest  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization) is backward compatible with:  
@@ -308,21 +292,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### acl:embargoHistory  
-  * backwardCompatibleWith:  
-    * http://projecthydra.org/ns/auth/acl#embargoHistory  
-### acl:embargoReleaseDate  
-  * backwardCompatibleWith:  
-    * http://projecthydra.org/ns/auth/acl#embargoReleaseDate  
-### acl:hasEmbargo  
-  * backwardCompatibleWith:  
-    * http://projecthydra.org/ns/auth/acl#hasEmbargo  
-### acl:visibilityAfterEmbargo  
-  * backwardCompatibleWith:  
-    * http://projecthydra.org/ns/auth/acl#visibilityAfterEmbargo  
-### acl:visibilityDuringEmbargo  
-  * backwardCompatibleWith:  
-    * http://projecthydra.org/ns/auth/acl#visibilityDuringEmbargo  
 ### dc:rights  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/rights  
@@ -746,14 +715,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * sort:  
     * false  
-### ual:parentCollectionTitle  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/hasCollection  
-    * http://terms.library.ualberta.ca/identifiers/hasCollection  
-### ual:parentCommunityId  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/belongsToCommunity  
-    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
 ### ual:proquest  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/proquest  

@@ -144,12 +144,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/halpern:nnaitem  
-  * [parentCollectionTitle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcollectiontitle) is backward compatible with:  
-    * http://terms.library.ualberta.ca/hasCollection  
-    * http://terms.library.ualberta.ca/identifiers/hasCollection  
-  * [parentCommunityId](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualparentcommunityid) is backward compatible with:  
-    * http://terms.library.ualberta.ca/belongsToCommunity  
-    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * [hasOriginalName](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#premishasoriginalname) is backward compatible with:  
@@ -929,14 +923,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### ual:parentCollectionTitle  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/hasCollection  
-    * http://terms.library.ualberta.ca/identifiers/hasCollection  
-### ual:parentCommunityId  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/belongsToCommunity  
-    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
 ### ual:unicorn  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/unicorn  
