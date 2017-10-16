@@ -25,7 +25,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 ## Model
 ![Alt text](https://github.com/ualbertalib/metadata/blob/master/metadata-wrangling/draft%20single%20file.jpg)
 
-### `jupiter:Community < pcdm:Object`
+### [`jupiter:Community < pcdm:Object`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_community.md)
   ```turtle
     jupiter:Community a rdfs:Class .
   ```
@@ -39,7 +39,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 
-### `jupiter:Collection < pcdm:Collection` (works:Collection)
+### [`jupiter:Collection < pcdm:Collection`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_collection.md) (works:Collection)
   ```turtle
     jupiter:Collection a rdfs:Class .
   ```
@@ -54,7 +54,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 
 
 
-### `jupiter:Item (Generic) < pcdm:Object` (works:Work)
+### [`jupiter:Item (Generic) < pcdm:Object`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_generic.md) (works:Work)
   ```turtle
     jupiter:Item a rdfs:Class .
   ```
@@ -88,7 +88,7 @@ This model describes the Jupiter project proposed data model and its use cases.
 | has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Item`(pcdm:object)        | {0,n}           |
 | Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Item`(pcdm:object)     | {0,n}         |
 
-### `jupiter:Item (Thesis) < pcdm:Object` (works:Work)
+### [`jupiter:Item (Thesis) < pcdm:Object`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md) (works:Work)
   ```turtle
     jupiter:Item a rdfs:Class .
   ```
