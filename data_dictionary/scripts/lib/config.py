@@ -2,6 +2,16 @@ from SPARQLWrapper import SPARQLWrapper
 
 sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
 
+ignore = [ 
+	"http://projecthydra.org/ns/auth/acl#",
+	"http://fedora.info/definitions/v4/repository#",
+	"http://www.iana.org/assignments/media-types/",
+	"info:fedora/fedora-system:def/model#",
+	"info:fedora/fedora-system:def/relations-external#",
+	"http://www.loc.gov/premis/rdf/v1#",
+	"http://www.w3.org/ns/auth/acl#"
+]
+
 namespaces = [
 	{"prefix": "acl", "uri": "http://projecthydra.org/ns/auth/acl#"},
 	{"prefix": "bibo", "uri": "http://purl.org/ontology/bibo/"},
