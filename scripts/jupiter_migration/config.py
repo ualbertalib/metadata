@@ -1,5 +1,5 @@
 sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
-sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql"
+sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"
 sparql_mig_test = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"
 sparql_mig_simple = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"
 types = [
@@ -13,8 +13,7 @@ types = [
 	"fedora3foxmlFileset",
 	"contentFile",
 	"contentFileset",
-	"characterizationFile",
-	"characterizationFileset"
+	"characterizationFile"
 	]
 mig_ns = [
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
@@ -47,7 +46,8 @@ mig_ns = [
 	{"prefix": "mrel", "uri": "http://id.loc.gov/vocabulary/relators/"},
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
 	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
-	{"prefix": "schema", "uri": "http://schema.org/"}
+	{"prefix": "schema", "uri": "http://schema.org/"},
+	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"}
 ]
 vocabs = {
 	"language": [
