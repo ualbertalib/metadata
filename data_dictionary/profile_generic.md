@@ -114,6 +114,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/language  
   * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense) is backward compatible with:  
     * http://purl.org/dc/terms/license  
+  * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsmodified) is backward compatible with:  
+    * http://purl.org/dc/terms/modified  
   * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsrelation) is backward compatible with:  
     * http://purl.org/dc/terms/relation  
   * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermssource) is backward compatible with:  
@@ -140,6 +142,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
+  * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch) is backward compatible with:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is backward compatible with:  
@@ -152,10 +157,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.loc.gov/premis/rdf/v1#hasSize  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * [createdDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infocreateddate) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
   * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infodownloadfilename) is backward compatible with:  
     * info:fedora/fedora-system:def/model#downloadFilename  
   * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#infoispartof) is backward compatible with:  
     * info:fedora/fedora-system:def/model#isPartOf  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#relsispartof) is backward compatible with:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  
 ### display  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  )  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
@@ -593,6 +602,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### dcterms:modified  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/modified  
 ### dcterms:relation  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/relation  
@@ -877,6 +889,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### ual:ingestBatch  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
 ### ual:nnaFile  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
@@ -955,9 +971,15 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+### info:createdDate  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
 ### info:downloadFilename  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#downloadFilename  
 ### info:isPartOf  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#isPartOf  
+### rels:isPartOf  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  
