@@ -3,8 +3,8 @@ sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
 sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results2/sparql"
 # choose a transformation source:
 # sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"  # dev, 1 hour to transform
-sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"  # complex objects, 10 minute tranfsformation
-# sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  # one of each object type
+# sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"  # complex objects, 10 minute tranfsformation
+sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  # one of each object type
 
 # object types to transform (comment out those you wish to skip)
 types = [
@@ -54,7 +54,9 @@ mig_ns = [
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
 	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
 	{"prefix": "schema", "uri": "http://schema.org/"},
-	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"}
+	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"},
+	{"prefix": "use", "uri": "http://pcdm.org/use#"},
+	{"prefix": "ebucore", "uri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"}
 ]
 
 # transformation mappings
