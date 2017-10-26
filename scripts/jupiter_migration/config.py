@@ -10,15 +10,15 @@ sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  #
 types = [
 	"collection",
 	"community",
-	"generic",
-	"thesis",
-	"era1statsFile",
-	"era1statsFileset",
-	"fedora3foxmlFile",
-	"fedora3foxmlFileset",
-	"contentFile",
-	"contentFileset",
-	"characterizationFile"
+	"generic"
+#	"thesis",
+#	"era1statsFile",
+#	"era1statsFileset",
+#	"fedora3foxmlFile",
+#	"fedora3foxmlFileset",
+#	"contentFile",
+#	"contentFileset",
+#	"characterizationFile"
 	]
 
 # prefix dictionary
