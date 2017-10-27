@@ -81,6 +81,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/language  
   * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense) is backward compatible with:  
     * http://purl.org/dc/terms/license  
+  * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsmodified) is backward compatible with:  
+    * http://purl.org/dc/terms/modified  
   * [relation](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsrelation) is backward compatible with:  
     * http://purl.org/dc/terms/relation  
   * [source](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermssource) is backward compatible with:  
@@ -107,6 +109,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3handle  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
+  * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch) is backward compatible with:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is backward compatible with:  
@@ -513,6 +518,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### dcterms:modified  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/modified  
 ### dcterms:relation  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/relation  
@@ -797,6 +805,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### ual:ingestBatch  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
 ### ual:nnaFile  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
