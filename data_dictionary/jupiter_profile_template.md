@@ -30,100 +30,20 @@ This model describes the Jupiter project proposed data model and its use cases.
     jupiter:Community a rdfs:Class .
   ```
 
-| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
-|------------------|------------------------|------------------|------------------------|------------------|
-| description      | `dcterms:description`  | MUST             | Literal                | {1,1}            |
-| title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
-| has member       | `pcdm:hasMember`       | MUST             | `jupiter:Collection`   | {1,n}            |
-| label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
-
-
-
 ### [`jupiter:Collection < pcdm:Collection`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_collection.md) (works:Collection)
   ```turtle
     jupiter:Collection a rdfs:Class .
   ```
-
-| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
-|------------------|------------------------|------------------|------------------------|------------------|
-| description      | `dcterms:description`  | MAY              | Literal                | {0,1}            |
-| title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
-| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Community`    | {1,1}            |
-| has member       | `pcdm:hasMember`       | SHOULD           | `jupiter:Item`         | {0,n}            |
-| label            | `rdfs:label`           | MAY              | Literal                | {1,1}            |
-
-
 
 ### [`jupiter:Item (Generic) < pcdm:Object`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_generic.md) (works:Work)
   ```turtle
     jupiter:Item a rdfs:Class .
   ```
 
-| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
-|------------------|------------------------|------------------|------------------------|------------------|
-| creator          | `dc:creator`           | MUST             | Literal                | {1,n}            |
-| contributor      | `dc:contributor`       | MAY              | Literal                | {0,n}            |
-| depositor        | `ual:depositor`        | MAY              | Literal                | {0,1}            |
-| type             | `dcterms:type`         | MUST             | uri                    | {1,1}            |
-| status           | `bibo:status`          | MAY              | auto                   | {0,n}            |
-| subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
-| temporal         | `dcterms:temporal`     | MAY              | Literal                | {0,n}            |
-| spatial          | `dcterms:spatial`      | MAY              | Literal                | {0,n}            |
-| created          | `dcterms:created`      | MAY              | Literal                | {0,1}            |
-| title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
-| alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
-| identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,1}            |
-| ark              | `ual:ark`              | MAY              | Literal                | {0,1}            |
-| fedora 3 uuid    | `ual:fedora3UUID`      | MAY              | Literal                | {0,1}            |
-| fedora 3 handle  | `ual:fedora3Handle`    | MAY              | Literal                | {0,1}            |
-| northern north america filename | `ual:nnaFile` | MAY        | Literal                | {0,1}            |
-| northern north america item id | `ual:nnaItem` | MAY         | Literal                | {0,1}            |
-| language         | `dcterms:language`     | MUST             | uri                    | [1,n}            |
-| isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
-| rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
-| license          | `dcterms:license`      | MAY              | uri                    | {0,1}            |
-| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
-| has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Item`(pcdm:object)        | {0,n}           |
-| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Item`(pcdm:object)     | {0,n}         |
-
 ### [`jupiter:Item (Thesis) < pcdm:Object`](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md) (works:Work)
   ```turtle
     jupiter:Item a rdfs:Class .
   ```
-
-| Field            | Predicate              | Recommendation   | Expected Value         | Obligation       |
-|------------------|------------------------|------------------|------------------------|------------------|
-| type             | `dcterms:type`         | MUST             | Literal                | {1,1}            |
-| institution      | `ual:institution`      | MUST             | Literal                | {1,1}            |
-| dissertant       | `ual:dissertant`       | MUST             | Literal                | {1,1}            |
-| supervisor       | `ual:supervisor`       | MUST             | Literal                | {1,n}            |
-| committee member | `ual:committeeMember`  | MUST             | Literal                | {1,n}            |
-| department       | `ual:department`       | MUST             | Literal                | {1,n}            |
-| subject          | `dc:subject`           | MUST             | Literal                | {1,n}            |
-| specialization   | `ual:specialization`   | MAY              | Literal                | {0,1}            |
-| dateSubmitted    | `dcterms:dateSubmitted`| MUST             | Date                   | {1,1}            |
-| dateAccepted     | `dcterms:dateAccepted` | MUST             | Date                   | {1,1}            |
-| graduationdate   | `ual:graduationdate`   | MUST             | Date                   | {1,1}            |
-| title            | `dcterms:title`        | MUST             | Literal                | {1,1}            |
-| alternative      | `dcterms:alternative`  | MAY              | Literal                | {0,n}            |
-| degree           | `bibo:degree`          | MUST             | Literal                | {1,1}            |
-| thesislevel      | `ual:thesislevel`      | MUST             | Literal                | {1,1}            |
-| identifier       | `dcterms:identifier`   | MAY              | Literal                | {0,n}            |
-| unicorn          | `ual:unicorn`          | MAY              | Literal                | {0,n}            |
-| fedora3uuid      | `ual:fedora3UUID`      | MAY              | Literal                | {0,n}            |
-| fedora3handle    | `ual:fedora3Handle`    | MAY              | Literal                | {0,n}            |
-| proquest         | `ual:proquest`         | MAY              | Literal                | {0,1}            |
-| digital object identifier | `prism:doi`   | MUST             | Literal                | {1,1}            |
-| abstract         | `dcterms:abstract`     | MUST             | Literal                | {1,1}            |
-| language         | `dcterms:language`     | MUST             | uri                    | [1,n}            |
-| isVersionOf      | `dcterms:isVersionOf`  | MAY              | Literal                | {0,1}            |
-| rights           | `dc:rights`            | MUST             | Literal                | {1,1}            |
-| member of        | `pcdm:memberOf`        | MUST             | `jupiter:Collection`   | {1,n}            |
-| has member       | `pcdm:hasMember`       | MUST             | `jupiter:FileSet`      | {1,n}            |
-| has related object | `pcdm:hasRelatedObject` | MAY             | `jupiter:Item`(pcdm:object)        | {0,n}            |
-| Related Object Of | `pcdm:relatedObjectOf` | MAY              | `jupiter:Item`(pcdm:object)     | {0,n}         |
 
 ### `jupiter:FileSet < pcdm:Object`
   ```turtle

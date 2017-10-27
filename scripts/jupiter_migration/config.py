@@ -1,7 +1,12 @@
+# mappings
 sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
-sparql_mig_dev = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/era-test/sparql"
-sparql_mig_test = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"
-sparql_mig_simple = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"
+sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results2/sparql"
+# choose a transformation source:
+# sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"  # dev, 1 hour to transform
+# sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"  # complex objects, 10 minute tranfsformation
+sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  # one of each object type
+
+# object types to transform (comment out those you wish to skip)
 types = [
 	"collection",
 	"community",
@@ -15,6 +20,8 @@ types = [
 	"contentFileset",
 	"characterizationFile"
 	]
+
+# prefix dictionary
 mig_ns = [
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
 	{"prefix": "rdfs", "uri": "http://www.w3.org/2000/01/rdf-schema#"},
@@ -49,19 +56,21 @@ mig_ns = [
 	{"prefix": "schema", "uri": "http://schema.org/"},
 	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"}
 ]
+
+# transformation mappings
 vocabs = {
 	"language": [
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/ukr",
-			"mapping": []
+			"mapping": ["Ukrainian"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/jpn",
-			"mapping": []
+			"mapping": ["Japanese"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/ger",
-			"mapping": []
+			"mapping": ["German"]
 		},
 		{
 			"uri": "http://terms.library.ualberta.ca/other",
@@ -69,11 +78,11 @@ vocabs = {
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/ita",
-			"mapping": []
+			"mapping": ["Italian"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/rus",
-			"mapping": []
+			"mapping": ["Russian"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/zxx",
@@ -89,11 +98,11 @@ vocabs = {
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/por",
-			"mapping": []
+			"mapping": ["Portuguese"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/zho",
-			"mapping": []
+			"mapping": ["Chinese"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/vie",
@@ -101,7 +110,7 @@ vocabs = {
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/ipk",
-			"mapping": []
+			"mapping": ["Inupiaq"]
 		},
 		{
 			"uri": "http://id.loc.gov/vocabulary/iso639-2/spa",
@@ -111,59 +120,55 @@ vocabs = {
 	"license": [
 		{
 			"uri": "http://creativecommons.org/licenses/by/4.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution License", "Attribution 4.0 International", "http://creativecommons.org/licenses/by/4.0/"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nc/3.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution-Non-Commercial 3.0 Unported"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-sa/4.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution-ShareAlike 4.0 International", "http://creativecommons.org/licenses/by-sa/4.0/", "Attribution-ShareAlike 4.0 International"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nc/4.0/",
-			"mapping": []
-		},
-		{
-			"uri": "http://creativecommons.org/licenses/by-nd/3.0/",
-			"mapping": []
+			"mapping": ["Attribution-NonCommercial 4.0 International", "http://creativecommons.org/licenses/by-nc/4.0/"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by/3.0/",
-			"mapping": []
+			"mapping": ["Attribution 3.0 International", "Creative Commons Attribution 3.0 Unported"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-			"mapping": []
+			"mapping": ["http://creativecommons.org/licenses/by-nc-nd/4.0/", "Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International", "Attribution-NonCommercial-NoDerivatives 4.0 International", "Attribution-NonCommercial-NoDervis 4.0 International", "Attribution-non-commercial-No-Derivs 4.0 International", "Attribution-NonCommerical-NoDerivs 4.0 International"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-sa/3.0/",
-			"mapping": []
-		},
-		{
-			"uri": "http://creativecommons.org/publicdomain/zero/1.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution-ShareAlike 3.0 Unported"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nd/4.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution-NoDerivs 4.0 International", "http://creativecommons.org/licenses/by-nd/4.0/"]
 		},
 		{
 			"uri": "http://creativecommons.org/publicdomain/mark/1.0/",
-			"mapping": []
+			"mapping": ["http://creativecommons.org/publicdomain/mark/1.0/"]
 		},
 		{
-			"uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
-			"mapping": []
+			"uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+			"mapping": ["http://creativecommons.org/publicdomain/zero/1.0/", "CC0 1.0 Universal"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-			"mapping": []
+			"mapping": ["http://creativecommons.org/licenses/by-nc-sa/4.0/"]
 		},
 		{
 			"uri": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
-			"mapping": []
+			"mapping": ["Creative Commons Attribution-Non-Commercial-No Derivatives 3.0 Unported"]
+		},
+		{
+			"uri": "http://creativecommons.org/licenses/by-nc-sa/2.5/ca/",
+			"mapping": ["Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Canada"]
 		}
 	],
 	"type": [

@@ -79,6 +79,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/isVersionOf  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage) is backward compatible with:  
     * http://purl.org/dc/terms/language  
+  * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsmodified) is backward compatible with:  
+    * http://purl.org/dc/terms/modified  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle) is backward compatible with:  
     * http://purl.org/dc/terms/title  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree) is backward compatible with:  
@@ -99,6 +101,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is backward compatible with:  
     * http://terms.library.ualberta.ca/date/graduationdate  
+  * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch) is backward compatible with:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
   * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/proquest  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization) is backward compatible with:  
@@ -441,6 +446,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * sort:  
     * false  
+### dcterms:modified  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/modified  
 ### dcterms:title  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/title  
@@ -649,6 +657,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * sort:  
     * false  
+### ual:ingestBatch  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
 ### ual:proquest  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/proquest  

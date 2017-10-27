@@ -25,7 +25,7 @@
 
     <xsl:template match="/">
 
-        <xsl:text>typeOfEntity&#09;authorizedFormOfName&#09;datesOfExistence&#09;history&#09;biogHist&#09;XML file&#xa;</xsl:text>
+        <xsl:text>typeOfEntity&#09;authorizedFormOfName&#09;datesOfExistence&#09;history&#09;nameEntry-part&#09;biogHist&#09;XML file&#xa;</xsl:text>
         <xsl:choose>
             <xsl:when test="unparsed-text-available($doc)">
                 <xsl:variable name="tsv" select="unparsed-text($doc)"/>
@@ -34,8 +34,18 @@
                     <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
                     <xsl:variable name="Aname"
                         select="translate($lineItems[2], ',\.)(:;?-_{}[]$%', '')"/>
-                    <xsl:variable name="Aname1" select="replace($Aname, $pPat, '')"/>
-                    <xsl:variable name="Aname2" select="replace($Aname1, $pRep, '')"/>
+                    <xsl:variable name="Aname" select="translate($lineItems[2], ',\.)(:;?-_{}[]$%', '')"/>
+                    <xsl:variable name="Aname" select="replace($Aname, $pPat, '')"/>
+                    <xsl:variable name="Aname" select="replace($Aname, $pRep, '')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname, 'University of Alberta\s?', '')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(in+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(the+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(of+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(on+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(at+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(and+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s(or+)\s', ' ')"/>
+                    <xsl:variable name="Aname1" select="replace($Aname1, '\s', '')"/>
                     <xsl:value-of select="$lineItems[1]"/>
                     <xsl:text>&#09;</xsl:text>
                     <xsl:value-of select="$lineItems[2]"/>
@@ -49,9 +59,20 @@
                         <xsl:variable name="name1" select="translate($name, ',\.)(:;?-_{}[]$%', '')"/>
                         <xsl:variable name="name2" select="replace($name1, $pPat, '')"/>
                         <xsl:variable name="name3" select="replace($name2, $pRep, '')"/>
+                        <xsl:variable name="name1" select="replace($name, 'University of Alberta\s?', '')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(in+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(the+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(of+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(on+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(at+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(and+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s(or+)\s', ' ')"/>
+                        <xsl:variable name="name1" select="replace($name1, '\s', '')"/>
                         <xsl:variable name="boghist" select="../../description/biogHist/p"/>
                         <xsl:choose>
-                            <xsl:when test="$name3 = $Aname2">
+                            <xsl:when test="$name = $Aname or $name1 = $Aname1">
+                                <xsl:value-of select="$name3"/>
+                                <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$boghist"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="replace(base-uri(), 'file:/home/mparedes/main-metadata.git/metadata-wrangling/archives/aor-ualberta-archives/', '')"/>

@@ -22,55 +22,35 @@
 
     <xsl:param name="pPat">"</xsl:param>
     <xsl:param name="pRep">\\"</xsl:param>
-    <xsl:variable name="stop-words" as="element()*">
-        <Item>of</Item>
-        <Item>the</Item>
-        <Item>in</Item>
-        <Item>on</Item>
-    </xsl:variable>
     
     <xsl:template match="/">
         <xsl:text>typeOfEntity&#09;authorizedFormOfName&#09;nameEntry-part&#09;datesOfExistence&#09;history&#09;biogHist&#09;XML file&#xa;</xsl:text>
         <xsl:for-each select="$docs//nameEntry">
-            <xsl:variable name="name" select="part"/>
-            <xsl:variable name="name" select="translate($name, ',\.)(:;?-_{}[]$%', '')"/>
-            <xsl:variable name="name" select="replace($name, $pPat, '')"/>
-            <xsl:variable name="name" select="replace($name, $pRep, '')"/>
-            <xsl:variable name="name1" select="replace($name, 'University of Alberta\s?', '')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(in+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(the+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(of+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(on+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(at+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(and+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s(or+)\s', ' ')"/>
-            <xsl:variable name="name1" select="replace($name1, '\s', '')"/>
+            <xsl:variable name="file" select="replace(base-uri(), 'file:/home/mparedes/main-metadata.git/metadata-wrangling/archives/aor-ualberta-archives/', '')"/>
+            <xsl:variable name="name" select="tokenize(replace($file, '.xml', ''), '-')"/>
+            <xsl:value-of select="$name[1]"/>
+            <xsl:text>&#xa;</xsl:text>
 <!--            <xsl:value-of select="$name"/>
             <xsl:value-of select="$name1"/>
             <xsl:text>&#xa;</xsl:text>-->
             <xsl:variable name="boghist" select="../../description/biogHist/p"/>
-            <xsl:variable name="file" select="replace(base-uri(), 'file:/home/mparedes/main-metadata.git/metadata-wrangling/archives/aor-ualberta-archives/', '')"/>
+            
             <xsl:choose>
                 <xsl:when test="unparsed-text-available($doc)">
                     <xsl:variable name="tsv" select="unparsed-text($doc)"/>
                     <xsl:variable name="lines" select="tokenize($tsv, '&#xa;')" as="xs:string+"/>
                     <xsl:for-each select="$lines[position() &gt; 1]">
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
-                        <xsl:variable name="Aname" select="translate($lineItems[2], ',\.)(:;?-_{}[]$%', '')"/>
+                        <xsl:variable name="Aname" select="translate($lineItems[2], '', '')"/>
                         <xsl:variable name="Aname" select="replace($Aname, $pPat, '')"/>
                         <xsl:variable name="Aname" select="replace($Aname, $pRep, '')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname, 'University of Alberta\s?', '')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(in+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(the+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(of+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(on+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(at+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(and+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s(or+)\s', ' ')"/>
-                        <xsl:variable name="Aname1" select="replace($Aname1, '\s', '')"/>
-                        <xsl:choose>
-                            <xsl:when test="$name = $Aname or $name1 = $Aname1">
-                                <xsl:value-of select="$lineItems[1]"/>
+                        <xsl:variable name="Aname" select="tokenize($Aname, ',')"/>
+                        <xsl:value-of select="$Aname[1]"/>
+                        <xsl:text>&#xa;</xsl:text>
+                        <!--<xsl:choose>
+                            <xsl:when test="$name[1] = $Aname[1]">
+                                <xsl:value-of select="$name"/>
+                                <!-\-<xsl:value-of select="$lineItems[1]"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$lineItems[2]"/>
                                 <xsl:text>&#09;</xsl:text>
@@ -83,9 +63,9 @@
                                 <xsl:value-of select="$boghist"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$file"/>
-                                <xsl:text>&#xa;</xsl:text>
+                                <xsl:text>&#xa;</xsl:text>-\->
                             </xsl:when>
-                        </xsl:choose>                       
+                        </xsl:choose> -->                      
                     </xsl:for-each>
                 </xsl:when>
             </xsl:choose>

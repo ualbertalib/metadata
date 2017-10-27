@@ -30,7 +30,8 @@ def PrintException():
 	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
 
 
-def cleanOutputs(types):
+def cleanOutputs(types, sparqlResults):
+	print('deleting queries')
 	for the_file in os.listdir('cache/'):
 		file_path = os.path.join('cache/', the_file)
 		try:
@@ -38,6 +39,7 @@ def cleanOutputs(types):
 				os.unlink(file_path)
 		except Exception as e:
 			print(e)
+	print('deleting results')
 	for ptype in types:
 		folder = 'results/%s' % (ptype)
 		if not os.path.exists(folder):
@@ -49,7 +51,8 @@ def cleanOutputs(types):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
-	sparqlResults = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/results/sparql")
+	print('deleting triplestore results backup')
+	sparqlResults = SPARQLWrapper(sparqlResults)
 	sparqlResults.setMethod('POST')
 	query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
 	sparqlResults.setReturnFormat(JSON)
