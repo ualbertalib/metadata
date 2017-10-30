@@ -31,7 +31,7 @@ def PrintException():
 
 
 def cleanOutputs(types, sparqlResults):
-	print('deleting queries')
+	print('deleting local queries')
 	for the_file in os.listdir('cache/'):
 		file_path = os.path.join('cache/', the_file)
 		try:
@@ -39,7 +39,7 @@ def cleanOutputs(types, sparqlResults):
 				os.unlink(file_path)
 		except Exception as e:
 			print(e)
-	print('deleting results')
+	print('deleting local results')
 	for ptype in types:
 		folder = 'results/%s' % (ptype)
 		if not os.path.exists(folder):
@@ -51,7 +51,7 @@ def cleanOutputs(types, sparqlResults):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
-	print('deleting triplestore results backup')
+	print('deleting remote results at %s' % (sparqlResults))
 	sparqlResults = SPARQLWrapper(sparqlResults)
 	sparqlResults.setMethod('POST')
 	query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"

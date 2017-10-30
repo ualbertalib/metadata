@@ -1,14 +1,14 @@
-from config import sparqlTerms, mig_ns, vocabs, types, sparqlData, sparqlResults
-from SPARQLWrapper import JSON, SPARQLWrapper
+from config import types, sparqlTerms, sparqlData, sparqlResults, mig_ns, vocabs
 from utilities import PrintException, cleanOutputs
-import re
-import os
 import concurrent.futures
-import json
-import requests
 import time
 from datetime import datetime
+import os
+from SPARQLWrapper import JSON, SPARQLWrapper
 from rdflib import URIRef, Literal, Graph
+import re
+import json
+import requests
 
 
 def main():
@@ -49,38 +49,7 @@ def parellelTransform(queryObject, group):
     DTO = Data(queryObject.queries[group], group, queryObject.sparqlData, sparqlTerms, queryObject)  # query, group, object
     DTO.transformData()
     DTO.resultsToTriplestore()
-
-
-class QueryFactory():
-    @staticmethod
-    def getMigrationQuery(objectType, sparqlData):
-        """ returns a specified query object depending on the type passed in"""
-        if objectType == "collection":
-            return Collection(sparqlData)
-        elif objectType == "community":
-            return Community(sparqlData)
-        elif objectType == "thesis":
-            return Thesis(sparqlData)
-        elif objectType == "generic":
-            return Generic(sparqlData)
-        elif objectType == "era1statsFile":
-            return era1statsFile(sparqlData)
-        elif objectType == "era1statsFileset":
-            return era1statsFileset(sparqlData)
-        elif objectType == "fedora3foxmlFile":
-            return fedora3foxmlFile(sparqlData)
-        elif objectType == "fedora3foxmlFileset":
-            return fedora3foxmlFileset(sparqlData)
-        elif objectType == "contentFile":
-            return contentFile(sparqlData)
-        elif objectType == "contentFileset":
-            return contentFileset(sparqlData)
-        elif objectType == "characterizationFile":
-            return characterizationFile(sparqlData)
-        elif objectType == "characterizationFileset":
-            return characterizationFileset(sparqlData)
-        else:
-            return None
+    return None
 
 
 class TransformationFactory():
@@ -111,8 +80,73 @@ class TransformationFactory():
             return [triple]
 
 
-# ##  QUERY BUILDER
-# ##### Pulls current mappings from triplestore, dynamically builds queries in managable sizes
+class QueryFactory():
+    @staticmethod
+    def getMigrationQuery(objectType, sparqlData):
+        """ returns a specified query object depending on the type passed in"""
+        if objectType == "collection":
+            return Collection(sparqlData)
+        elif objectType == "community":
+            return Community(sparqlData)
+        elif objectType == "thesis":
+            return Thesis(sparqlData)
+        elif objectType == "generic":
+            return Generic(sparqlData)
+        elif objectType == "file":
+            return File(sparqlData)
+        elif objectType == "relatedObject":
+            return Related_Object(sparqlData)
+        else:
+            return None
+
+
+class Data(object):
+    def __init__(self, query, group, sparqlData, sparqlTerms, queryObject):
+        self.q = query
+        self.prefixes = queryObject.prefixes
+        self.group = group
+        self.sparqlData = sparqlData
+        self.sparqlTerms = sparqlTerms
+        self.output = []
+        self.graph = Graph()
+        self.objectType = queryObject.objectType
+        self.directory = "results/{0}/".format(self.objectType)
+        self.filename = "results/{0}/{1}.nt".format(self.objectType, group)
+        if not os.path.exists(self.directory):
+            os.makedirs(self.directory)
+
+    def transformData(self):
+        self.sparqlData.setReturnFormat(JSON)
+        self.sparqlData.setQuery("{} {} {}".format(self.q['prefix'], self.q['construct'], self.q['where']))
+        # queries a batch of resources from this particular "group"
+        results = self.sparqlData.query().convert()['results']['bindings']
+        # iterates over each resource and performs transformations
+        for result in results:
+            result = TransformationFactory().getTransformation(result, self.objectType)
+            if isinstance(result, list):
+                for triple in result:
+                    s = URIRef(triple['subject']['value'])
+                    p = URIRef(triple['predicate']['value'])
+                    try:
+                        if triple['object']['type'] == 'uri':
+                            if "http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/" in triple['object']['value']:
+                                triple['object']['value'] = triple['object']['value'].replace('http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')
+                            if 'NOID' in triple['object']['value']:
+                                triple['object']['value'] = triple['object']['value'].replace('NOID', triple['object']['value'].split('/')[10])
+                            o = URIRef(triple['object']['value'])
+                        else:
+                            o = Literal(triple['object']['value'])
+                        self.graph.add((s, p, o))
+                    except:
+                        PrintException()
+        self.graph.serialize(destination=self.filename, format='nt')
+
+    def resultsToTriplestore(self):
+        headers = {'Content-Type': 'text/turtle'}
+        requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
+
+
+"""Pulls current mappings from triplestore, dynamically builds queries in managable sizes"""
 
 
 class Query(object):
@@ -639,8 +673,7 @@ class Thesis(Query):
         self.writeQueries()
 
 
-# ##  DATA TRANSPORT OBJECTS
-# ##### Runs a query, sends data to get transformed, saves data to appropriate file
+"""TRANSFORMATION functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved."""
 
 
 class Data(object):
@@ -874,6 +907,7 @@ class Transformation():
             }
         )
         return self.output
+
 
 
 if __name__ == "__main__":
