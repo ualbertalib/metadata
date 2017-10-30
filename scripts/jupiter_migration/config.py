@@ -51,7 +51,8 @@ mig_ns = [
 	{"prefix": "schema", "uri": "http://schema.org/"},
 	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"},
 	{"prefix": "use", "uri": "http://pcdm.org/use#"},
-	{"prefix": "ebucore", "uri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"}
+	{"prefix": "ebucore", "uri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"},
+	{"prefix": "ore", "uri": "http://www.openarchives.org/ore/terms/"},
 ]
 
 # transformation mappings

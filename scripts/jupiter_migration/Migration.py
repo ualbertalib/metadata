@@ -240,7 +240,7 @@ class Collection(Query):
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['collection']['prefix'] = self.prefixes
-            self.queries['collection']['construct'] = construct
+            self.queries['collection']['construct'] = construct + "}"
             self.queries['collection']['where'] = """{} . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
         self.writeQueries()
 
@@ -265,92 +265,8 @@ class Community(Query):
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['community']['prefix'] = self.prefixes
-            self.queries['community']['construct'] = construct 
+            self.queries['community']['construct'] = construct + "}"
             self.queries['community']['where'] = """{} . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
-        self.writeQueries()
-
-
-class File(Query):
-    def __init__(self, sparqlData, objectType, filterType):
-        self.construct = """CONSTRUCT {
-            ?file rdf:type ldp:NonRDFSource;
-            rdf:type pcdm:File ;
-            pcdm:fileOf ?fileset ;
-            iana:describedby ?fixty ;
-            iana:describedby ?fcr ;
-            fedora:hasParent ?fileset ;
-            ?predicate ?object
-        }"""
-        self.where = """WHERE {{
-            ?resource rdf:type ldp:NonRDFSource .
-            FILTER ( strEnds(str(?resource), '{0}') && """.format(self.filterType)
-        self.select = """SELECT distinct ?resource WHERE {{ ?resource rdf:type ldp:NonRDFSource . FILTER ( strEnds(str(?resource), '{0}') )}}""".format(self.filterType)
-        super().__init__(self.objectType, self.sparqlData)
-
-    def generateQueries(self):
-        self.getSplitBy()
-        for group in self.splitBy.keys():
-            self.queries[group] = """{0} {1} {2} strStarts(str(?resource), '{3}') ) .
-                ?resource ?predicate ?object .
-                FILTER (
-                    !contains(str(?predicate), 'http://www.iana.org/assignments/relation/') &&
-                    !contains(str(?predicate), 'http://fedora.info/definitions/v4/repository#hasFixityService') &&
-                    !contains(str(?predicate), 'http://fedora.info/definitions/v4/repository#hasParent') && str(?object)!=''
-                ) .
-                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) .
-                BIND(URI(CONCAT(str(?jupiterResource), '/file')) AS ?file) .
-                BIND(URI(CONCAT(str(?jupiterResource), '/fileset')) AS ?fileset) .
-                BIND(URI(CONCAT(str(?jupiterResource), '/file/fcr:fixity')) AS ?fixity) .
-                BIND(URI(CONCAT(str(?jupiterResource), '/file/fcr:metadata')) AS ?fcr)
-            }}""".format(self.prefixes, self.construct, self.where, self.splitBy[group])
-        self.writeQueries()
-
-
-class Fileset(Query):
-    def __init__(self, sparqlData, objectType, filterType):
-        self.construct = """CONSTRUCT {{ ?parent pcdm:hasRelatedObject ?relatedObject .
-            ?fileset rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type pcdm:Object ;
-            rdf:type works:FileSet ;
-            rdf:type ldp:Container ;
-            rdf:type ldp:RDFSource ;
-            pcdm:hasFile ?file ;
-            pcdm:isMemberOf ?relatedObject ;
-            fedora:hasParent ?relatedObject .
-            ?relatedObject pcdm:relatedObjectOf ?parent ;
-            rdf:type ual:{0} ;
-            rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type pcdm:Object ;
-            rdf:type works:Work ;
-            rdf:type ldp:Container ;
-            rdf:type ldp:RDFSource ;
-            pcdm:hasMember ?fileset ;
-            fedora:hasParent ?parent ;
-            ?predicate ?object
-        }}""".format(self.filterType)
-        self.where = "WHERE {{ ?resource rdf:type fedora:NonRdfSourceDescription . FILTER ( strEnds(str(?resource), '{0}/fcr:metadata') && ".format(self.filterType)
-        self.select = "SELECT distinct ?resource WHERE {{?resource rdf:type fedora:NonRdfSourceDescription . FILTER ( strEnds(str(?resource), '{0}/fcr:metadata') ) }}".format(self.filterType)
-        super().__init__(self.objectType, self.sparqlData)
-
-    def generateQueries(self):
-        self.getSplitBy()
-        for group in self.splitBy.keys():
-            self.queries[group] = """{0} {1} {2} strStarts(str(?resource), '{3}')) .
-                ?resource ?predicate ?object .
-                FILTER (
-                    !contains(str(?predicate), 'http://www.iana.org/assignments/relation/') &&
-                    !contains(str(?predicate), 'http://fedora.info/definitions/v4/repository#hasFixityService') &&
-                    !contains(str(?predicate), 'http://fedora.info/definitions/v4/repository#hasParent') &&
-                    !contains(str(?predicate), 'http://fedora.info/definitions/v4/repository#hasVersions') && str(?object)!=''
-                ) .
-                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) .
-                BIND(URI(REPLACE(STR(?jupiterResource), '/{4}/fcr:metadata', '/fileset')) AS ?fileset) .
-                BIND(URI(REPLACE(STR(?jupiterResource), '/{5}/fcr:metadata', '/file')) AS ?file) .
-                BIND(URI(REPLACE(STR(?jupiterResource), '/{6}/fcr:metadata', '')) AS ?parent) .
-                BIND(URI(REPLACE(STR(?jupiterResource), '/fcr:metadata', '/relatedObject')) AS ?relatedObject)
-            }}""".format(self.prefixes, self.construct, self.where, self.splitBy[group], self.filterType, self.filterType, self.filterType)
         self.writeQueries()
 
 
@@ -359,14 +275,245 @@ class Generic(Query):
         self.objectType = 'generic'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
-            ?jupiterResource dcterm:available ?available ;
-            dcterm:accessRights ?visibility;
+            ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
+            dcterm:available ?available ;
+            dcterm:accessRights ?visibility ;
             rdf:type works:Work;
             rdf:type pcdm:Object ;
             bibo:owner ?owner ;
             acl:embargoHistory ?history ;
-            acl:visibilityAfterEmbargo ?visAfter ;
-            pcdm:hasRelatedObject ?jupiterRelatedObject ;
+            acl:visibilityAfterEmbargo ?visAfter"""
+        self.where = []
+        self.select = """SELECT distinct ?resource WHERE {
+            ?resource info:hasModel 'GenericFile'^^xsd:string ;
+            dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string)
+        }"""
+        super().__init__(self.objectType, sparqlData)
+
+    def generateQueries(self):
+        self.getSplitBy()
+        for group in self.splitBy.keys():
+            self.queries[group] = {}
+            # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+            where = """WHERE {{
+                ?resource info:hasModel 'GenericFile'^^xsd:string ;
+                dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string) .
+                FILTER (contains(str(?resource), '{}'))""".format(self.splitBy[group])
+            construct = self.construct
+            for pair in self.mapping:
+                construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                where = """ {0} .
+                            OPTIONAL {{
+                                ?resource <{1}> ?{2} .
+                                FILTER (str(?{3})!='')
+                            }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            # customize the where clause to include triples that aren't in the mappings
+            self.queries[group]['prefix'] = self.prefixes
+            self.queries[group]['construct'] = construct + " }"
+            self.queries[group]['where'] = """{} .
+                OPTIONAL {{ ?permission webacl:accessTo ?resource ;
+                    webacl:mode webacl:Write ;
+                webacl:agent ?owner }} .
+                OPTIONAL {{ ?resource acl:hasEmbargo ?embargo .
+                    OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
+                    OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
+                    OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
+                }}
+                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
+            }}""".format(where)
+        self.writeQueries()
+
+
+class Thesis(Query):
+    def __init__(self, sparqlData):
+        self.objectType = 'thesis'
+        self.construct = """CONSTRUCT {
+            ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
+            dcterm:available ?available ;
+            dcterm:accessRights ?visibility; rdf:type works:Work ;
+            rdf:type pcdm:Object ;
+            rdf:type bibo:Thesis; bibo:owner ?owner ;
+            acl:embargoHistory ?history ;
+            acl:visibilityAfterEmbargo ?visAfter"""
+        self.where = []
+        self.select = """SELECT distinct ?resource WHERE {
+            ?resource info:hasModel 'GenericFile'^^xsd:string ;
+            dcterm:type 'Thesis'^^xsd:string
+        }"""
+        super().__init__(self.objectType, sparqlData)
+
+
+    def generateQueries(self):
+        self.getSplitBy()
+        for group in self.splitBy.keys():
+            self.queries[group] = {}
+            where = """WHERE {{ ?resource info:hasModel 'GenericFile'^^xsd:string ;
+                dcterm:type 'Thesis'^^xsd:string .
+                FILTER (contains(str(?resource), '{0}'))""".format(self.splitBy[group])
+            construct = self.construct
+            for pair in self.mapping:
+                construct = "{0} ; <{1}> ?{2}".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            self.queries[group]['prefix'] = self.prefixes
+            self.queries[group]['construct'] = construct + " }"
+            self.queries[group]['where'] = """{} .
+                OPTIONAL {{
+                    ?permission webacl:accessTo ?resource ;
+                    webacl:mode webacl:Read ;
+                    webacl:agent ?visibility
+                }} .
+                OPTIONAL {{
+                    ?permission webacl:accessTo ?resource ;
+                    webacl:mode webacl:Write ;
+                    webacl:agent ?owner
+                }} .
+                OPTIONAL {{
+                    ?resource acl:hasEmbargo ?embargo .
+                    OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
+                    OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
+                    OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
+                }} .
+                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
+            }}""".format(where)
+        self.writeQueries()
+
+
+class File(Query):
+    """ direct members: content and characterization"""
+    def __init__(self, sparqlData):
+        self.objectType = 'file'
+        # custom construct clause to capture unmapped triples
+        self.construct = """CONSTRUCT {
+            ?jupiterResource pcdm:hasMember ?directFileset ;
+            iana:first ?proxy .
+            ?proxy ore:proxyIn ?jupiterResource ;
+            ore:proxyFor ?directFileset ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type ore:Proxy ;
+            rdf:type ldp:Container ;
+            rdf:type ldp:RDFSource ;
+            info:hasModel 'ActiveFedora::Aggregation::Proxy' .
+            ?directFileset info:hasModel 'IRFileSet' ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type pcdm:Object ;
+            rdf:type works:FileSet ;
+            rdf:type ldp:Container ;
+            rdf:type ldp:RDFSource ;
+            pcdm:hasFile ?directFile ;
+            pcdm:isMemberOf ?jupiterResource ;
+            fedora:hasParent ?jupiterResource ;
+            ldp:contains ?directFiles ;
+            ldp:membershipResource ?directFiles .
+            ?directFiles info:hasModel 'ActiveFedora::DirectContainer' ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type ldp:DirectContainer ;
+            rdf:type ldp:RDFSource ;
+            fedora:created ?fedoraCreated ;
+            fedora:lastModified ?fedoraLastModified ;
+            fedora:createdBy ?fedoraCreatedBy ;
+            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
+            fedora:writable ?directFedoraWritable ;
+            ldp:hasMemberRelation pcdm:hasFile ;
+            ldp:contains ?directFile .
+            ?directFile info:hasModel 'File' ;
+            rdf:type ldp:NonRDFSource ;
+            rdf:type fedora:Binary ;
+            rdf:type fedora:Resource ;
+            rdf:type pcdm:File ;
+            rdf:type use:OriginalFile ;
+            rdf:type pcdm:File ;
+            pcdm:fileOf ?directFileset ;
+            iana:describedby ?directFileFCR ;
+            pcdm:isMemberOf ?directFileset ;
+            fedora:hasParent ?directFiles ;
+            fedora:hasFixityService ?directFileFixity ;
+            ebucore:filename ?directOriginalName ;
+            ebucore:hasMimeType ?directMimeType ;
+            premis:hasMessageDigest ?directFedoraDigest ;
+            premis:hasSize ?directSize ;
+            fedora:created ?fedoraCreated ;
+            fedora:lastModified ?fedoraLastModified ;
+            fedora:createdBy ?fedoraCreatedBy ;
+            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
+            fedora:writable ?directFedoraWritable ;
+            rdf:type ?directRdfType ;
+            fedora:mixinTypes ?directFileMixins .
+            ?directFileFCR rdf:type ?directFCRRrdf ;
+            iana:describes ?directFile ;
+            fedora:hasVersions ?directFileVersions ;
+            fedora:uuid ?directFileUUID ;
+            fedora:mixinTypes ?directFileFCRMixins ;
+            fedora:primaryType ?primaryType ;
+            rdf:type ?directFCRRDFType ;
+            fedora:created ?fedoraCreated ;
+            fedora:lastModified ?fedoraLastModified ;
+            fedora:createdBy ?fedoraCreatedBy ;
+            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
+            fedora:writable ?directFedoraWritable ."""
+        self.select = """SELECT distinct ?resource WHERE {
+            ?resource info:hasModel 'GenericFile'^^xsd:string
+        }"""
+        super().__init__(self.objectType, sparqlData)
+
+    def generateQueries(self):
+        self.getSplitBy()
+        order = {1: 'first', 2: 'last'}
+        proxyNum = 1
+        for fileType in ['content', 'characterization']:
+            print('building queries from {} objects'.format(fileType))
+            for group in self.splitBy.keys():
+                self.queries[group] = {}
+                # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+                where = """WHERE {{
+                    ?directMember rdf:type fedora:Binary .
+                    FILTER (STRSTARTS(str(?directMember), '{}')) .
+                    FILTER (STRENDS(str(?directMember), '{}'))""".format(self.splitBy[group], fileType)
+                # customize the where clause to include triples that aren't in the mappings
+                self.queries[group]['prefix'] = self.prefixes
+                self.queries[group]['construct'] = self.construct + "?jupiterResource iana:%s ?proxy }" % (order[proxyNum])
+                self.queries[group]['where'] = """{} .
+                        OPTIONAL {{ ?directMember fedora:created ?directFedoraCreated . FILTER (str(?directFedoraCreated) != '') }} .
+                        OPTIONAL {{ ?directMember fedora:createdBy ?directFedoraCreatedBy . FILTER (str(?irectFedoraCreatedBy) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:lastModified ?directFedoraLastModified . FILTER (str(?directFedoraModified) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:lastModifiedBy ?directFedoraLastModifiedBy . FILTER (str(?directFedoraModifiedBy) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:writable ?directFedoraWritable . FILTER (str(?directFedoraWritable) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:uuid ?directFedoraUUID . FILTER (str(?directFedoraUUID) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:digest ?directFedoraDigest . FILTER (str(?directFedoraDigest) != '')}} .
+                        OPTIONAL {{ ?directMember rdf:type ?directRdfType . FILTER (str(?directRdfType) != '')}} .
+                        OPTIONAL {{ ?directMember premis:hasSize ?directSize . FILTER (str(?directSize) != '')}} .
+                        OPTIONAL {{ ?directMember premis:hasOriginalName ?directOriginalName . FILTER (str(?directOriginalName) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:mimeType ?directMimeType . FILTER (str(?directMimeType) != '')}} .
+                        OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
+                        BIND(URI(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterDirectMember)
+                        BIND(URI(CONCAT(STR(?directMember), '/fileset')) AS ?directFileset) .
+                        BIND(URI(CONCAT(STR(?directMember), '/files')) AS ?directFiles) .
+                        BIND(URI(CONCAT(STR(?directMember), '/member_of_collections')) AS ?directMemberOfCollections) .
+                        BIND(URI(CONCAT(STR(?directFiles), CONCAT('/', 'NOID'))) AS ?directFile) .
+                        BIND(URI(CONCAT(STR(?directFiles), '/NOID/fcr:metadata', '')) AS ?directFileFCR) .
+                        BIND(URI(CONCAT(STR(?directFiles), '/NOID/fcr:fixity', '')) AS ?directFileFixity) .
+                        BIND(URI(CONCAT(STR(?directFiles), '/NOID/fcr:versions', '')) AS ?directFileVersions) .
+                        OPTIONAL {{ ?directFileFCR rdf:type ?directFCRRDFType . FILTER (str(?directFCRRDFType) != '')}} .
+                        OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileUUID . FILTER (str(?directFileUUID) != '')}} .
+                        OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
+                        OPTIONAL {{ ?directFileFCR fedora:primaryType ?directPrimaryType . FILTER (str(?directPrimaryType) != '')}} .
+                        BIND(URI(CONCAT(str(?directMember), '/proxy{}')) AS ?proxy)
+                        BIND(URI(replace(str(?directMember), '{}/', '')) AS ?resource)
+                        BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
+                    }}""".format(where, fileType, proxyNum)
+            self.writeQueries()
+            proxyNum = proxyNum + 1
+
+
+class Related_Object(Query):
+    """ related members: content and characterization"""
+    def __init__(self, sparqlData):
+        self.objectType = 'relatedObject'
+        # custom construct clause to capture unmapped triples
+        self.construct = """CONSTRUCT {
+            ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject ;
             ldp:contains ?jupiterRelatedObject ;
             pcdm:hasMember ?jupiterRelatedObject .
             ?jupiterRelatedObject info:hasModel 'IRItem' ;
@@ -385,6 +532,14 @@ class Generic(Query):
             fedora:hasParent ?jupiterResource ;
             ldp:contains ?files ;
             ldp:membershipResource ?files .
+            ?proxy ore:proxyIn ?jupiterRelatedObject ;
+            ore:proxyFor ?relatedFileset ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type ore:Proxy ;
+            rdf:type ldp:Container ;
+            rdf:type ldp:RDFSource ;
+            info:hasModel 'ActiveFedora::Aggregation::Proxy' .
             ?relatedFileset info:hasModel 'IRFileSet' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
@@ -444,281 +599,62 @@ class Generic(Query):
             fedora:lastModified ?fedoraLastModified ;
             fedora:createdBy ?fedoraCreatedBy ;
             fedora:lastModifiedBy ?fedoraLastModifiedBy ;
-            fedora:writable ?relatedFedoraWritable .
-            ?jupiterResource pcdm:hasMember ?directFileset .
-            ?directFileset info:hasModel 'IRFileSet' ;
-            rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type pcdm:Object ;
-            rdf:type works:FileSet ;
-            rdf:type ldp:Container ;
-            rdf:type ldp:RDFSource ;
-            pcdm:hasFile ?directFile ;
-            pcdm:isMemberOf ?jupiterResource ;
-            fedora:hasParent ?jupiterResource ;
-            ldp:contains ?directFiles ;
-            ldp:membershipResource ?directFiles .
-            ?directFiles info:hasModel 'ActiveFedora::DirectContainer' ;
-            rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type ldp:DirectContainer ;
-            rdf:type ldp:RDFSource ;
-            fedora:created ?fedoraCreated ;
-            fedora:lastModified ?fedoraLastModified ;
-            fedora:createdBy ?fedoraCreatedBy ;
-            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
-            fedora:writable ?directFedoraWritable ;
-            ldp:hasMemberRelation pcdm:hasFile ;
-            ldp:contains ?directFile .
-            ?directFile info:hasModel 'File' ;
-            rdf:type ldp:NonRDFSource ;
-            rdf:type fedora:Binary ;
-            rdf:type fedora:Resource ;
-            rdf:type pcdm:File ;
-            rdf:type use:OriginalFile ;
-            rdf:type pcdm:File ;
-            pcdm:fileOf ?directFileset ;
-            iana:describedby ?directFileFCR ;
-            pcdm:isMemberOf ?directFileset ;
-            fedora:hasParent ?directFiles ;
-            fedora:hasFixityService ?directFileFixity ;
-            ebucore:filename ?directOriginalName ;
-            ebucore:hasMimeType ?directMimeType ;
-            premis:hasMessageDigest ?directFedoraDigest ;
-            premis:hasSize ?directSize ;
-            fedora:created ?fedoraCreated ;
-            fedora:lastModified ?fedoraLastModified ;
-            fedora:createdBy ?fedoraCreatedBy ;
-            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
-            fedora:writable ?directFedoraWritable ;
-            rdf:type ?directRdfType ;
-            fedora:mixinTypes ?directFileMixins .
-            ?directFileFCR rdf:type ?directFCRRrdf ;
-            iana:describes ?directFile ;
-            fedora:hasVersions ?directFileVersions ;
-            fedora:uuid ?directFileUUID ;
-            fedora:mixinTypes ?directFileFCRMixins ;
-            fedora:primaryType ?primaryType ;
-            rdf:type ?directFCRRDFType ;
-            fedora:created ?fedoraCreated ;
-            fedora:lastModified ?fedoraLastModified ;
-            fedora:createdBy ?fedoraCreatedBy ;
-            fedora:lastModifiedBy ?fedoraLastModifiedBy ;
-            fedora:writable ?directFedoraWritable .
-            ?jupiterResource info:hasModel 'IRItem'^^xsd:string
-            """
-        self.where = []
+            fedora:writable ?relatedFedoraWritable . """
         self.select = """SELECT distinct ?resource WHERE {
-            ?resource info:hasModel 'GenericFile'^^xsd:string ;
-            dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string)
+            ?resource info:hasModel 'GenericFile'^^xsd:string
         }"""
         super().__init__(self.objectType, sparqlData)
 
     def generateQueries(self):
         self.getSplitBy()
-        for group in self.splitBy.keys():
-            self.queries[group] = {}
-            # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
-            where = """WHERE {{
-                ?resource info:hasModel 'GenericFile'^^xsd:string ;
-                dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string) .
-                FILTER (contains(str(?resource), '{}'))""".format(self.splitBy[group])
-            construct = self.construct
-            for pair in self.mapping:
-                construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                where = """ {0} .
-                            OPTIONAL {{
-                                ?resource <{1}> ?{2} .
-                                FILTER (str(?{3})!='')
-                            }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-            # customize the where clause to include triples that aren't in the mappings
-            self.queries[group]['prefix'] = self.prefixes
-            self.queries[group]['construct'] = construct + " }"
-            self.queries[group]['where'] = """{} . 
-                OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
-                    webacl:mode webacl:Read ;
-                    webacl:agent ?visibility
-                }} .
-                OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
-                    webacl:mode webacl:Write ;
-                    webacl:agent ?owner
-                }} .
-                OPTIONAL {{
-                    ?resource acl:hasEmbargo ?embargo .
-                    OPTIONAL {{
-                        ?embargo acl:embargoReleaseDate ?available
-                    }} .
-                    OPTIONAL {{
-                        ?embargo acl:embargoHistory ?history
-                    }} .
-                    OPTIONAL {{
-                        ?embargo acl:visibilityAfterEmbargo ?visAfter
-                    }}
-                }} .
-                OPTIONAL {{
-                    ?resource ldp:contains ?relatedObject . 
-                    FILTER (
-                        STRENDS(str(?relatedObject), 'era1stats') || STRENDS(str(?relatedObject), 'fedora3foxml')
-                    ) .
+        order = {1: 'first', 2: 'last'}
+        proxyNum = 1
+        for fileType in ['fedora3foxml', 'era1stats']:
+            print('building queries from {} objects'.format(fileType))
+            for group in self.splitBy.keys():
+                self.queries[group] = {}
+                # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+                where = """WHERE {{
+                    ?relatedObject rdf:type fedora:Binary .
+                    FILTER (STRSTARTS(str(?relatedObject), '{}')) .
+                    FILTER (STRENDS(str(?relatedObject), '{}'))""".format(self.splitBy[group], fileType)
+                # customize the where clause to include triples that aren't in the mappings
+                self.queries[group]['prefix'] = self.prefixes
+                self.queries[group]['construct'] = self.construct + "?jupiterResource iana:%s ?proxy }" % (order[proxyNum])
+                self.queries[group]['where'] = """{} .
+                    OPTIONAL {{ ?relatedObject fedora:created ?relatedFedoraCreated . FILTER (str(?relatedFedoraCreated) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:createdBy ?relatedFedoraCreatedBy . FILTER (str(?relatedFedoraCreatedBy) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:lastModified ?relatedFedoraLastModified . FILTER (str(?relatedFedoraLastModified) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:lastModifiedBy ?relatedFedoraLastModifiedBy . FILTER (str(?relatedFedoraLastModifiedBy) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:writable ?relatedFedoraWritable . FILTER (str(?relatedFedoraWritable) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:uuid ?relatedFedoraUUID . FILTER (str(?relatedFedoraUUID) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:digest ?relatedFedoraDigest . FILTER (str(?relatedFedoraDigest) != '') }} .
+                    OPTIONAL {{ ?relatedObject rdf:type ?relatedRdfType . FILTER (str(?relatedRdfType) != '') }} .
+                    OPTIONAL {{ ?relatedObject premis:hasSize ?relatedSize . FILTER (str(?relatedSize) != '') }} .
+                    OPTIONAL {{ ?relatedObject premis:hasOriginalName ?relatedOriginalName . FILTER (str(?relatedOriginalName) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:mimeType ?relatedMimeType . FILTER (str(?relatedMimeType) != '') }} .
+                    OPTIONAL {{ ?relatedObject fedora:mixinTypes ?relatedFileMixins . FILTER (str(?relatedFileMixins) != '') }} .
                     BIND(URI(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterRelatedObject)
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:created ?relatedFedoraCreated }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:createdBy ?relatedFedoraCreatedBy }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:lastModified ?relatedFedoraLastModified }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:lastModifiedBy ?relatedFedoraLastModifiedBy }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:writable ?relatedFedoraWritable }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:uuid ?relatedFedoraUUID }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:digest ?relatedFedoraDigest }} .
-                    OPTIONAL {{ ?jupiterRelatedObject rdf:type ?relatedRdfType }} .
-                    OPTIONAL {{ ?jupiterRelatedObject premis:hasSize ?relatedSize }} .
-                    OPTIONAL {{ ?jupiterRelatedObject premis:hasOriginalName ?relatedOriginalName }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:mimeType ?relatedMimeType }} .
-                    OPTIONAL {{ ?jupiterRelatedObject fedora:mixinTypes ?relatedFileMixins }} .
-                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/files')) AS ?relatedFiles) .
-                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/member_of_collections')) AS ?relatedMemberOfCollections) .
-                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/fileset')) AS ?relatedFileset) .
-                    BIND(URI(CONCAT(STR(?relatedfiles), CONCAT('/', 'NOID'))) AS ?relatedFile) .
-                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:metadata', '')) AS ?relatedFileFCR) .
-                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:fixity', '')) AS ?relatedFileFixity) .
-                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:versions', '')) AS ?relatedFileVersions) .
-                    OPTIONAL {{ ?relatedFileFCR rdf:type ?relatedFCRRDFType }} .
-                    OPTIONAL {{ ?relatedFileFCR fedora:uuid ?relatedFileUUID }} .
-                    OPTIONAL {{ ?relatedFileFCR fedora:mixinTypes ?relatedFileFCRMixins }} .
-                    OPTIONAL {{ ?relatedFileFCR fedora:primaryType ?primaryType }} .
-                }} .
-                OPTIONAL {{
-                    ?resource ldp:contains ?directMember .
-                    FILTER (
-                        STRENDS(str(?directMember), 'characterization') || STRENDS(str(?directMember), 'content')
-                    ) .
-                    BIND(URI(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterDirectMember)
-                    OPTIONAL {{ ?jupiterDirectMember fedora:created ?directFedoraCreated }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:createdBy ?directFedoraCreatedBy }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:lastModified ?directFedoraLastModified }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:lastModifiedBy ?directFedoraLastModifiedBy }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:writable ?directFedoraWritable }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:uuid ?directFedoraUUID }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:digest ?directFedoraDigest }} .
-                    OPTIONAL {{ ?jupiterDirectMember rdf:type ?directRdfType }} .
-                    OPTIONAL {{ ?jupiterDirectMember premis:hasSize ?directSize }} .
-                    OPTIONAL {{ ?jupiterDirectMember premis:hasOriginalName ?directOriginalName }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:mimeType ?directMimeType }} .
-                    OPTIONAL {{ ?jupiterDirectMember fedora:mixinTypes ?directFileMixins }} .
-                    BIND(URI(CONCAT(STR(?jupiterDirectMember), '/fileset')) AS ?directFileset) .
-                    BIND(URI(CONCAT(STR(?jupiterDirectMember), '/files')) AS ?directFiles) .
-                    BIND(URI(CONCAT(STR(?jupiterDirectMember), '/member_of_collections')) AS ?directMemberOfCollections) .
-                    BIND(URI(CONCAT(STR(?directFiles), CONCAT('/', 'NOID'))) AS ?directFile) .
-                    BIND(URI(CONCAT(STR(?directFile), '/fcr:metadata', '')) AS ?directFileFCR) .
-                    BIND(URI(CONCAT(STR(?directFile), '/fcr:fixity', '')) AS ?directFileFixity) .
-                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:versions', '')) AS ?directFileVersions) .
-                    OPTIONAL {{ ?directFileFCR rdf:type ?directFCRRDFType }} .
-                    OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileUUID }} .
-                    OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins }} .
-                    OPTIONAL {{ ?directFileFCR fedora:primaryType ?directPrimaryType }} .
-                }} .
-                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
-            }}""".format(where)
-        self.writeQueries()
-
-
-
-class Thesis(Query):
-    def __init__(self, sparqlData):
-        self.objectType = 'thesis'
-        self.construct = """CONSTRUCT {
-            ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            dcterm:available ?available ;
-            dcterm:accessRights ?visibility; rdf:type works:Work ;
-            rdf:type pcdm:Object ;
-            rdf:type bibo:Thesis; bibo:owner ?owner ;
-            acl:embargoHistory ?history ;
-            acl:visibilityAfterEmbargo ?visAfter"""
-        self.where = []
-        self.select = """SELECT distinct ?resource WHERE {
-            ?resource info:hasModel 'GenericFile'^^xsd:string ;
-            dcterm:type 'Thesis'^^xsd:string
-        }"""
-        super().__init__(self.objectType, sparqlData)
-
-    def generateQueries(self):
-        self.getSplitBy()
-        for group in self.splitBy.keys():
-            where = """WHERE {{ ?resource info:hasModel 'GenericFile'^^xsd:string ;
-                dcterm:type 'Thesis'^^xsd:string .
-                FILTER (contains(str(?resource), '{0}'))""".format(self.splitBy[group])
-            construct = self.construct
-            for pair in self.mapping:
-                construct = "{0} ; <{1}> ?{2}".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-            self.queries[group] = """{0} {1} }} {2} .
-                OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
-                    webacl:mode webacl:Read ;
-                    webacl:agent ?visibility
-                }} .
-                OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
-                    webacl:mode webacl:Write ;
-                    webacl:agent ?owner
-                }} .
-                OPTIONAL {{
-                    ?resource acl:hasEmbargo ?embargo .
-                    OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
-                    OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
-                    OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
-                }} .
-                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
-            }}""".format(self.prefixes, construct, where)
-        self.writeQueries()
+                    BIND(URI(CONCAT(STR(?relatedObject), '/files')) AS ?relatedFiles) .
+                    BIND(URI(CONCAT(STR(?relatedObject), '/member_of_collections')) AS ?relatedMemberOfCollections) .
+                    BIND(URI(CONCAT(STR(?relatedObject), '/fileset')) AS ?relatedFileset) .
+                    BIND(URI(CONCAT(STR(?relatedFiles), CONCAT('/', 'NOID'))) AS ?relatedFile) .
+                    BIND(URI(CONCAT(STR(?relatedFiles), '/NOID/fcr:metadata', '')) AS ?relatedFileFCR) .
+                    BIND(URI(CONCAT(STR(?relatedFiles), '/NOID/fcr:fixity', '')) AS ?relatedFileFixity) .
+                    BIND(URI(CONCAT(STR(?relatedFiles), '/NOID/fcr:versions', '')) AS ?relatedFileVersions) .
+                    OPTIONAL {{ ?relatedFileFCR rdf:type ?relatedFCRRDFType . FILTER (str(?relatedFCRRDFType) != '') }} .
+                    OPTIONAL {{ ?relatedFileFCR fedora:uuid ?relatedFileUUID . FILTER (str(?relatedFileUUID) != '') }} .
+                    OPTIONAL {{ ?relatedFileFCR fedora:mixinTypes ?relatedFileFCRMixins . FILTER (str(?relatedFileFCRMixins) != '') }} .
+                    OPTIONAL {{ ?relatedFileFCR fedora:primaryType ?primaryType . FILTER (str(?primaryType) != '') }} .
+                    BIND(URI(CONCAT(str(?relatedObject), '/proxy{}')) AS ?proxy)
+                    BIND(URI(replace(str(?relatedObject), '{}/', '')) AS ?resource)
+                    BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
+                    }}""".format(where, fileType, proxyNum)
+            self.writeQueries()
+            proxyNum = proxyNum + 1
 
 
 """TRANSFORMATION functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved."""
-
-
-class Data(object):
-    def __init__(self, query, group, sparqlData, sparqlTerms, queryObject):
-        self.q = query
-        self.prefixes = queryObject.prefixes
-        self.group = group
-        self.sparqlData = sparqlData
-        self.sparqlTerms = sparqlTerms
-        self.output = []
-        self.graph = Graph()
-        self.objectType = queryObject.objectType
-        self.directory = "results/{0}/".format(self.objectType)
-        self.filename = "results/{0}/{1}.nt".format(self.objectType, group)
-        if not os.path.exists(self.directory):
-            os.makedirs(self.directory)
-
-    def transformData(self):
-        self.sparqlData.setReturnFormat(JSON)
-        self.sparqlData.setQuery("{} {} {}".format(self.q['prefix'], self.q['construct'], self.q['where']))
-        # queries a batch of resources from this particular "group"
-        results = self.sparqlData.query().convert()['results']['bindings']
-        # iterates over each resource and performs transformations
-        for result in results:
-            result = TransformationFactory().getTransformation(result, self.objectType)
-            if isinstance(result, list):
-                for triple in result:
-                    s = URIRef(triple['subject']['value'])
-                    p = URIRef(triple['predicate']['value'])
-                    if triple['object']['type'] == 'uri':
-                        if "http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/" in triple['object']['type']:
-                            triple['object']['type'] = triple['object']['type'].replace('http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')
-                        o = URIRef(triple['object']['value'])
-                    else:
-                        o = Literal(triple['object']['value'])
-                    self.graph.add((s, p, o))
-        self.graph.serialize(destination=self.filename, format='nt')
-
-    def resultsToTriplestore(self):
-        headers = {'Content-Type': 'text/turtle'}
-        requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
-
-
-# ##  TRANSFORMATIONS
-# #### functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved.
 
 class Transformation():
 
