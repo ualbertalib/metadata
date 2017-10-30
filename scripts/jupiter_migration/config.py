@@ -1,6 +1,6 @@
 # mappings
 sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
-sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results2/sparql"
+sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results/sparql"
 # choose a transformation source:
 # sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"  # dev, 1 hour to transform
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"  # complex objects, 10 minute tranfsformation
@@ -12,13 +12,8 @@ types = [
 	"community",
 	"generic",
 	"thesis",
-	"era1statsFile",
-	"era1statsFileset",
-	"fedora3foxmlFile",
-	"fedora3foxmlFileset",
-	"contentFile",
-	"contentFileset",
-	"characterizationFile"
+	"file",
+	"relatedObject"
 	]
 
 # prefix dictionary
