@@ -49,7 +49,9 @@ mig_ns = [
 	{"prefix": "naf", "uri": "http://id.loc.gov/authorities/names/"},
 	{"prefix": "swrc", "uri": "http://ontoware.org/swrc/ontology#"},
 	{"prefix": "schema", "uri": "http://schema.org/"},
-	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"}
+	{"prefix": "ldp", "uri": "http://www.w3.org/ns/ldp#"},
+	{"prefix": "use", "uri": "http://pcdm.org/use#"},
+	{"prefix": "ebucore", "uri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"}
 ]
 
 # transformation mappings
