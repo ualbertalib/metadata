@@ -18,43 +18,6 @@ class Profiler(object):
 			self.__createProfile()
 			sys.stdout = old_stdout
 
-
-	def __createSS(self):
-		try:
-			profileSheet = {}
-			valueSheet = {}
-			# gets the entire graph for this particular profile type
-			query = "PREFIX ual: <http://terms.library.ualberta.ca/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {GRAPH ual:%s {?property ?annotation ?value} }" % (self.ptype)
-			sparql.setReturnFormat(JSON)
-			sparql.setQuery(query)
-			results = sparql.query().convert()
-			for result in results['results']['bindings']:
-				# turn the property into a column
-				if result['property']['value'] not in profileSheet.keys():
-					# add this property as a row (as a list)
-					profileSheet[result['property']['value']] = {}
-				# if these are values, we are creating a separate mapping sheet
-				if result['annotation']['value'] == 'http://terms.library.ualberta.ca/acceptedValue':
-						query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ual: <http://terms.library.ualberta.ca/> SELECT * WHERE { GRAPH ual:instances { <%s> rdfs:label ?label ; ual:onForm ?onForm } }" % (result['value']['value'])
-						sparql.setQuery(query)
-						annotations = sparql.query().convert()
-						for annotation in annotations['results']['bindings']:
-							profile[result['property']['value']]['acceptedValues'].append({'uri': result['value']['value'], 'onForm': annotation['onForm']['value'], 'label': annotation['label']['value']})
-				elif result['annotation']['value'] in profile[result['property']['value']]:
-					profile[result['property']['value']][result['annotation']['value']].append(result['value']['value'])
-				else:
-					profile[result['property']['value']][result['annotation']['value']] = []
-					profile[result['property']['value']][result['annotation']['value']].append(result['value']['value'])
-
-			directory = "data_dictionary/profiles/%s/" % (self.ptype)
-			if not os.path.exists(directory):
-				os.makedirs(directory)
-			filename = directory + 'profile.json'
-			with open(filename, 'w+') as p:
-				json.dump(profile, p, sort_keys=True, indent=4)
-		except:
-			PrintException()		
-
 	def __createJSON(self):
 		try:
 			profile = {}
