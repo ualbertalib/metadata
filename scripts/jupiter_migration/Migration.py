@@ -12,6 +12,9 @@ import requests
 
 
 def main():
+    """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata), 
+    creates a set of subqueries for each of these types, then cues threads to run each of these subqueries as a job. The migration outout is saved to
+    the results folder and to a triplestore. The subqueries are cached in the cache folder. Custom settings can be modified in config.py."""
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     print('cleaning the cache')
     cleanOutputs(types, sparqlResults)
@@ -48,7 +51,7 @@ def main():
 def parellelTransform(queryObject, group):
     DTO = Data(queryObject.queries[group], group, queryObject.sparqlData, sparqlTerms, queryObject)  # query, group, object
     DTO.transformData()
-    DTO.resultsToTriplestore()
+    # DTO.resultsToTriplestore()
     return None
 
 
@@ -125,7 +128,6 @@ class Data(object):
             result = TransformationFactory().getTransformation(result, self.objectType)
             if isinstance(result, list):
                 for triple in result:
-                    s = URIRef(triple['subject']['value'])
                     p = URIRef(triple['predicate']['value'])
                     try:
                         if triple['object']['type'] == 'uri':
@@ -136,6 +138,14 @@ class Data(object):
                             o = URIRef(triple['object']['value'])
                         else:
                             o = Literal(triple['object']['value'])
+                        if triple['subject']['type'] == 'uri':
+                            if "http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/" in triple['subject']['value']:
+                                triple['subject']['value'] = triple['subject']['value'].replace('http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')
+                            if 'NOID' in triple['object']['value']:
+                                triple['subject']['value'] = triple['subject']['value'].replace('NOID', triple['subject']['value'].split('/')[10])
+                            s = URIRef(triple['subject']['value'])
+                        else:
+                            o = Literal(triple['subject']['value'])
                         self.graph.add((s, p, o))
                     except:
                         PrintException()

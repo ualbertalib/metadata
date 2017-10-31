@@ -68,6 +68,35 @@
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://terms.library.ualberta.ca/identifiers/hasCollectionId",
             "http://fedora.info/definitions/v4/repository#hasParent"
+        ],
+        "http://terms.library.ualberta.ca/comment": [
+            "can only take a ual:Community uri",
+            "can only take a pcdm:collection uri",
+            "collection inheritance"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "uri"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/search": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
         ]
     },
     "http://prismstandard.org/namespaces/basic/3.0/doi": {
@@ -140,7 +169,7 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
-            ""
+            "http://purl.org/dc/elements/1.1/creator"
         ],
         "http://terms.library.ualberta.ca/onForm": [
             "true"
@@ -322,7 +351,7 @@
             "http://purl.org/dc/terms/alternative"
         ],
         "http://terms.library.ualberta.ca/comments": [
-            "what about this one?"
+            ""
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
@@ -349,13 +378,13 @@
             "alternative title"
         ],
         "http://terms.library.ualberta.ca/repeat": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/required": [
             "false"
         ],
         "http://terms.library.ualberta.ca/searchable": [
-            ""
+            "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
             "false"
@@ -370,6 +399,9 @@
     "http://purl.org/dc/terms/created": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/created"
+        ],
+        "http://terms.library.ualberta.ca/comment": [
+            "only a 4 digit year (yyyy) is required, although any kind of fuzzy date can be accomodated, provided a 4 digit year can be extracted"
         ],
         "http://terms.library.ualberta.ca/comments": [
             ""
@@ -405,7 +437,7 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/searchable": [
-            ""
+            "false"
         ],
         "http://terms.library.ualberta.ca/sort": [
             "true"
@@ -775,7 +807,7 @@
             "license information"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
             ""
@@ -930,7 +962,7 @@
             "place"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
             "http://purl.org/dc/elements/1.1/Subject"
@@ -980,7 +1012,7 @@
             "time"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
             "http://purl.org/dc/elements/1.1/Subject"
@@ -1563,6 +1595,11 @@
         ],
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://terms.library.ualberta.ca/sort_year": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/identifiers/year_created"
         ]
     },
     "http://terms.library.ualberta.ca/unicorn": {
