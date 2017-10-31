@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="doc" select="collection('../../metadata-wrangling/BIBFRAME/UADATA-BIBFRAME-Segmented/?select=*Seg-10.xml;recurse=yes')"/>
+    <xsl:variable name="doc" select="collection('../../metadata-wrangling/BIBFRAME/CompData/?select=2015*.xml;recurse=yes')"/>
 
     <xsl:template match="/">
         <xsl:for-each select="$doc//bf:Agent[@rdf:about]">

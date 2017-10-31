@@ -28,8 +28,9 @@
         <xsl:for-each select="$docs//nameEntry">
             <xsl:variable name="file" select="replace(base-uri(), 'file:/home/mparedes/main-metadata.git/metadata-wrangling/archives/aor-ualberta-archives/', '')"/>
             <xsl:variable name="name" select="tokenize(replace($file, '.xml', ''), '-')"/>
-            <xsl:value-of select="$name[1]"/>
-            <xsl:text>&#xa;</xsl:text>
+            <xsl:variable name="name1" select="part"/>
+<!--            <xsl:value-of select="$name[1]"/>
+            <xsl:text>&#xa;</xsl:text>-->
 <!--            <xsl:value-of select="$name"/>
             <xsl:value-of select="$name1"/>
             <xsl:text>&#xa;</xsl:text>-->
@@ -41,20 +42,19 @@
                     <xsl:variable name="lines" select="tokenize($tsv, '&#xa;')" as="xs:string+"/>
                     <xsl:for-each select="$lines[position() &gt; 1]">
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
-                        <xsl:variable name="Aname" select="translate($lineItems[2], '', '')"/>
+                        <xsl:variable name="Aname" select="$lineItems[2]"/>
                         <xsl:variable name="Aname" select="replace($Aname, $pPat, '')"/>
                         <xsl:variable name="Aname" select="replace($Aname, $pRep, '')"/>
                         <xsl:variable name="Aname" select="tokenize($Aname, ',')"/>
-                        <xsl:value-of select="$Aname[1]"/>
-                        <xsl:text>&#xa;</xsl:text>
-                        <!--<xsl:choose>
-                            <xsl:when test="$name[1] = $Aname[1]">
-                                <xsl:value-of select="$name"/>
-                                <!-\-<xsl:value-of select="$lineItems[1]"/>
+<!--                        <xsl:value-of select="$Aname[2][1]"/>
+                        <xsl:text>&#xa;</xsl:text>-->
+                        <xsl:choose>
+                            <xsl:when test="lower-case($Aname[1]) = $name[1] and starts-with(normalize-space(($Aname[2])), normalize-space(lower-case($name[2])))">
+                                <xsl:value-of select="$lineItems[1]"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$lineItems[2]"/>
                                 <xsl:text>&#09;</xsl:text>
-                                <xsl:value-of select="$name"/>
+                                <xsl:value-of select="$name1"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$lineItems[3]"/>
                                 <xsl:text>&#09;</xsl:text>
@@ -63,9 +63,9 @@
                                 <xsl:value-of select="$boghist"/>
                                 <xsl:text>&#09;</xsl:text>
                                 <xsl:value-of select="$file"/>
-                                <xsl:text>&#xa;</xsl:text>-\->
+                                <xsl:text>&#xa;</xsl:text>
                             </xsl:when>
-                        </xsl:choose> -->                      
+                        </xsl:choose>                       
                     </xsl:for-each>
                 </xsl:when>
             </xsl:choose>

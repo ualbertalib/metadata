@@ -9,7 +9,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:param name="doc" select="'file:///home/mparedes/metadata_work/MARC/UA/names/VIAF/UADATA-names_11_VIAF.tsv'"/>
+    <xsl:param name="doc" select="'file:///home/mparedes/main-metadata.git/metadata-wrangling/BIBFRAME/CompData/2015-viaf.tsv'"/>
 
     <xsl:param name="rdf"
         select="'file:///home/mparedes/metadata_work/MARC/1985Imprint-BIBFRAME-2/merged-file.xml'"/>
