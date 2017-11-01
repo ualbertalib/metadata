@@ -145,6 +145,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) indexes as:  
     * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+### onForm  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
 ### repeat  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
@@ -171,7 +176,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
-  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
@@ -199,14 +203,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * institution  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### pcdm:memberOf  
@@ -224,12 +227,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * onForm:  
     * false  
-    * True  
+    * true  
   * repeat:  
     * true  
   * required:  
     * true  
-    * True  
   * search:  
     * true  
   * sort:  
@@ -251,14 +253,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * digital object identifier  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * search:  
     * false  
   * sort:  
@@ -278,14 +279,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * rights  
   * repeat:  
     * true  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### dc:subject  
@@ -303,14 +303,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * subject  
   * repeat:  
     * true  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### dcterms:abstract  
@@ -328,14 +327,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/description  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * abstract  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * search:  
     * true  
   * sort:  
@@ -353,14 +351,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * alternative title  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### dcterms:dateAccepted  
@@ -376,14 +372,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * date accepted  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### dcterms:dateSubmitted  
@@ -399,14 +394,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * date submitted  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### dcterms:identifier  
@@ -424,14 +418,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * identifier  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### dcterms:isVersionOf  
@@ -449,14 +441,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * is version of  
   * repeat:  
     * true  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### dcterms:language  
@@ -475,14 +465,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * language  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### dcterms:modified  
@@ -501,14 +490,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * True  
+    * true  
   * propertyName:  
     * title  
   * repeat:  
     * false  
   * required:  
     * true  
-    * True  
   * search:  
     * true  
   * sort:  
@@ -528,14 +516,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * degree  
   * repeat:  
     * false  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### scholar:relativePath  
@@ -556,14 +543,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/elements/1.1/Contributor  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * commitee member  
   * repeat:  
     * true  
   * required:  
+    * false  
     * true  
-    * False  
 ### ual:department  
   * backwardCompatibleWith:  
     * http://vivoweb.org/ontology/core#AcademicDepartment  
@@ -579,14 +565,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * department  
   * repeat:  
     * true  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### ual:depositor  
@@ -604,14 +589,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * depositor  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### ual:dissertant  
@@ -629,14 +612,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/elements/1.1/Creator  
   * onForm:  
     * false  
-    * True  
+    * true  
   * propertyName:  
     * dissertant  
   * repeat:  
     * false  
   * required:  
     * true  
-    * True  
   * search:  
     * true  
 ### ual:fedora3Handle  
@@ -654,14 +636,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * fedora 3 handle  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### ual:fedora3UUID  
@@ -679,14 +659,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * fedora 3 uuid  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### ual:graduationDate  
@@ -706,14 +684,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/created  
   * onForm:  
     * false  
-    * True  
+    * true  
   * propertyName:  
     * graduation date  
   * repeat:  
     * false  
   * required:  
     * true  
-    * True  
   * sort:  
     * true  
 ### ual:ingestBatch  
@@ -735,14 +712,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * proquest  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### ual:sort_year  
@@ -763,14 +738,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * specialization  
   * repeat:  
     * true  
   * required:  
+    * false  
     * true  
-    * False  
   * sort:  
     * false  
 ### ual:supervisor  
@@ -788,14 +762,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * supervisor  
   * repeat:  
     * true  
   * required:  
-    * true  
-    * False  
+    * false  
   * search:  
     * false  
 ### ual:thesisLevel  
@@ -813,14 +785,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * thesis level  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### ual:unicorn  
@@ -838,14 +808,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
-    * False  
   * propertyName:  
     * unicorn  
   * repeat:  
     * false  
   * required:  
     * false  
-    * False  
   * sort:  
     * false  
 ### rdf:type  
