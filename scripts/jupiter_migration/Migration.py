@@ -454,6 +454,12 @@ class File(Query):
             ?directFileFCR rdf:type ?directFCRRrdf ;
             iana:describes ?directFile ;
             fedora:hasVersions ?directFileVersions ;
+
+
+            ### WHY 
+
+
+
             fedora:uuid ?directFileUUID ;
             fedora:mixinTypes ?directFileFCRMixins ;
             fedora:primaryType ?primaryType ;
@@ -692,6 +698,9 @@ class Transformation():
                         }
                     }
                 )
+
+            # "other" labels can be changed to specific languages manually.
+
         return self.output
 
     def rights(self, triple, objectType):

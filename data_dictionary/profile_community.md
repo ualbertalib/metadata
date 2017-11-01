@@ -62,21 +62,21 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/description  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle) is backward compatible with:  
     * http://purl.org/dc/terms/title  
-  * [http://terms.library.library.ca/fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#http//terms.library.library.ca/fedora3uuid) is backward compatible with:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
-    * http://terms.library.library.ca/identifiers/fedora3uuid  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
+    * http://terms.library.library.ca/identifiers/fedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
-### indexAs  
 ### onForm  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
 ### required  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
 ### searchable  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
@@ -129,7 +129,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * repeat:  
     * false  
   * required:  
-    * false  
+    * true  
   * sort:  
     * false  
 ### dcterms:title  
@@ -159,10 +159,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * sort:  
     * true  
-### http://terms.library.library.ca/fedora3UUID  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
-    * http://terms.library.library.ca/identifiers/fedora3uuid  
 ### ual:depositor  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dpt  
@@ -186,6 +182,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### ual:fedora3UUID  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
+    * http://terms.library.library.ca/identifiers/fedora3uuid  
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
