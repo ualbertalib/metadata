@@ -56,7 +56,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### backwardCompatibleWith  
   * [hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmhasmember) is backward compatible with:  
     * info:fedora/fedora-system:def/relations-external#hasCollectionMember  
-  * [isMemberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmismemberof) is backward compatible with:  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator) is backward compatible with:  
@@ -73,13 +73,18 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### onForm  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### required  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### search  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
 ### searchable  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### sort  
@@ -90,10 +95,28 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### pcdm:hasMember  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/relations-external#hasCollectionMember  
-### pcdm:isMemberOf  
+### pcdm:memberOf  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
+  * comment:  
+    * indicates community inheritence  
+  * dataType:  
+    * uri  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
 ### dc:creator  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/creator  

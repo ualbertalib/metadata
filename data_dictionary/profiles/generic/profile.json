@@ -68,6 +68,33 @@
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://fedora.info/definitions/v4/repository#hasParent",
             "http://terms.library.ualberta.ca/identifiers/hasCollectionId"
+        ],
+        "http://terms.library.ualberta.ca/comment": [
+            "indicates collection inheritance"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "uri"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/search": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
         ]
     },
     "http://prismstandard.org/namespaces/basic/3.0/doi": {
@@ -132,6 +159,9 @@
         ],
         "http://terms.library.ualberta.ca/facet": [
             "true"
+        ],
+        "http://terms.library.ualberta.ca/indexAs": [
+            "http://purl.org/dc/elements/1.1/creator"
         ],
         "http://terms.library.ualberta.ca/onForm": [
             "true"
@@ -301,10 +331,13 @@
             "alternative title"
         ],
         "http://terms.library.ualberta.ca/repeat": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/required": [
             "false"
+        ],
+        "http://terms.library.ualberta.ca/search": [
+            "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
             "false"
@@ -536,7 +569,7 @@
             "license information"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/onForm": [
             "true"
@@ -661,7 +694,7 @@
             "place"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
             "http://purl.org/dc/elements/1.1/Subject"
@@ -702,7 +735,7 @@
             "time"
         ],
         "http://terms.library.ualberta.ca/facet": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/indexAs": [
             "http://purl.org/dc/elements/1.1/Subject"
@@ -1086,6 +1119,11 @@
         ],
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://terms.library.ualberta.ca/sort_year": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/year_created"
         ]
     },
     "http://terms.library.ualberta.ca/unicorn": {
