@@ -66,6 +66,7 @@ profileDefinitions = [
 	{"term": "propertyName", "def": "an informal name for describing the property"},
 	{"term": "repeat", "def": "can this property occur more than once? (boolean)"},
 	{"term": "required", "def": "is the property required to have a value? (boolean)"},
+	{"term": "search", "def": "is this property searchable in Jupiter? (boolean)"},
 	{"term": "sort", "def": "is this property sortable in SOLR? (boolean)"},
 	{"term": "tokenize", "def": "is this property tokenized in SOLR? (boolean)"}
 ]

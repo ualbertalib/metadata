@@ -30,7 +30,15 @@ def PrintException():
 	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
 
 
-def cleanOutputs(types, sparqlResults):
+def cleanOutputs(sparqlResults):
+	types = [
+		"collection",
+		"community",
+		"generic",
+		"thesis",
+		"file",
+		"relatedObject"
+	]
 	print('deleting local queries')
 	for the_file in os.listdir('cache/'):
 		file_path = os.path.join('cache/', the_file)
@@ -51,11 +59,11 @@ def cleanOutputs(types, sparqlResults):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
-	print('deleting remote results at %s' % (sparqlResults))
-	sparqlResults = SPARQLWrapper(sparqlResults)
-	sparqlResults.setMethod('POST')
-	query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
-	sparqlResults.setReturnFormat(JSON)
-	sparqlResults.setQuery(query)
-	sparqlResults.query()
+	#print('deleting remote results at %s' % (sparqlResults))
+	#sparqlResults = SPARQLWrapper(sparqlResults)
+	#sparqlResults.setMethod('POST')
+	#query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
+	#sparqlResults.setReturnFormat(JSON)
+	#sparqlResults.setQuery(query)
+	#sparqlResults.query()
 
