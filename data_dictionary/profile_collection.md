@@ -49,6 +49,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **propertyName** an informal name for describing the property  
    **repeat** can this property occur more than once? (boolean)  
    **required** is the property required to have a value? (boolean)  
+   **search** is this property searchable in Jupiter? (boolean)  
    **sort** is this property sortable in SOLR? (boolean)  
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
@@ -85,7 +86,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
-### searchable  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
 ### sort  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
@@ -184,7 +184,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * true  

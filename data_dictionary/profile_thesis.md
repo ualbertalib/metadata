@@ -49,6 +49,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **propertyName** an informal name for describing the property  
    **repeat** can this property occur more than once? (boolean)  
    **required** is the property required to have a value? (boolean)  
+   **search** is this property searchable in Jupiter? (boolean)  
    **sort** is this property sortable in SOLR? (boolean)  
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
@@ -139,12 +140,15 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### indexAs  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) indexes as:  
     * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
-  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember) indexes as:  
-    * [Contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) indexes as:  
     * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) indexes as:  
     * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+### onForm  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
 ### repeat  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
@@ -171,10 +175,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
-  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
-### searchable  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
@@ -186,6 +188,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 ### swrc:institution  
   * values displayed on form:  
+    * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dgg  
   * dataType:  
@@ -223,6 +226,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * onForm:  
     * false  
+    * true  
   * repeat:  
     * true  
   * required:  
@@ -254,7 +258,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * false  
   * sort:  
     * false  
@@ -325,7 +329,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * false  
@@ -440,6 +444,17 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:language  
   * values displayed on form:  
+    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
+    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
+    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
+    * **Other language** (http://terms.library.ualberta.ca/other)  
+    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
+    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+    * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+    * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/language  
   * dataType:  
@@ -478,13 +493,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * onForm:  
     * false  
+    * true  
   * propertyName:  
     * title  
   * repeat:  
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * true  
@@ -525,8 +541,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * displayLabel:  
     * examining committee member and department  
-  * indexAs:  
-    * http://purl.org/dc/elements/1.1/Contributor  
   * onForm:  
     * false  
   * propertyName:  
@@ -595,14 +609,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * indexAs:  
     * http://purl.org/dc/elements/1.1/Creator  
   * onForm:  
-    * false  
+    * true  
   * propertyName:  
     * dissertant  
   * repeat:  
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
 ### ual:fedora3Handle  
   * backwardCompatibleWith:  
@@ -667,6 +681,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/created  
   * onForm:  
     * false  
+    * true  
   * propertyName:  
     * graduation date  
   * repeat:  
@@ -748,7 +763,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * repeat:  
     * true  
   * required:  
-    * true  
+    * false  
   * search:  
     * false  
 ### ual:thesisLevel  

@@ -131,7 +131,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "false"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -213,7 +213,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -295,7 +295,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -418,7 +418,7 @@
         "http://terms.library.ualberta.ca/required": [
             "false"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -510,7 +510,78 @@
         ]
     },
     "http://purl.org/dc/terms/language": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "Ukranian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
+            },
+            {
+                "label": "Japanese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
+            },
+            {
+                "label": "German",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
+            },
+            {
+                "label": "Other language",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/other"
+            },
+            {
+                "label": "Italian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
+            },
+            {
+                "label": "Russian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
+            },
+            {
+                "label": "No linguistic content",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
+            },
+            {
+                "label": "English",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/eng"
+            },
+            {
+                "label": "French",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/fre"
+            },
+            {
+                "label": "Portuguese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/por"
+            },
+            {
+                "label": "Chinese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zho"
+            },
+            {
+                "label": "Vietnamese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/vie"
+            },
+            {
+                "label": "Inupiaq",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ipk"
+            },
+            {
+                "label": "Spanish",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/language"
         ],
@@ -549,7 +620,78 @@
         ]
     },
     "http://purl.org/dc/terms/license": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "Attribution 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by-nc/3.0/"
+            },
+            {
+                "label": "Attribution-ShareAlike 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by-sa/4.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by-nc/4.0/"
+            },
+            {
+                "label": "Attribution-NoDerivs 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by-nd/3.0/"
+            },
+            {
+                "label": "Attribution 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by/3.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+            },
+            {
+                "label": "Attribution-ShareAlike 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            {
+                "label": "CC0 1.0 Universal",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/publicdomain/zero/1.0/"
+            },
+            {
+                "label": "Attribution-NoDerivatives 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by-nd/4.0/"
+            },
+            {
+                "label": "Public Domain Mark 1.0",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/publicdomain/mark/1.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial-ShareAlike 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial-ShareAlike 4.0 International",
+                "onForm": "true",
+                "uri": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
+            {
+                "label": "Attribution-NonCommercial-NoDerivs 3.0 Unported",
+                "onForm": "false",
+                "uri": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/license"
         ],
@@ -787,7 +929,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -798,7 +940,63 @@
         ]
     },
     "http://purl.org/dc/terms/type": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "Article",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Article"
+            },
+            {
+                "label": "Book",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Book"
+            },
+            {
+                "label": "Chapter",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Chapter"
+            },
+            {
+                "label": "Image",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Image"
+            },
+            {
+                "label": "Report",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/Report"
+            },
+            {
+                "label": "Research Material",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/researchMaterial"
+            },
+            {
+                "label": "Conference Paper",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#ConferencePaper"
+            },
+            {
+                "label": "Conference Poster",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#ConferencePoster"
+            },
+            {
+                "label": "Dataset",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#Dataset"
+            },
+            {
+                "label": "Review",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#Review"
+            },
+            {
+                "label": "Learning Object",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/learningObject"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/type"
         ],
@@ -837,7 +1035,33 @@
         ]
     },
     "http://purl.org/ontology/bibo/status": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "unpublished",
+                "onForm": "false",
+                "uri": "http://purl.org/ontology/bibo/status#unpublished"
+            },
+            {
+                "label": "published",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/status#published"
+            },
+            {
+                "label": "draft",
+                "onForm": "true",
+                "uri": "http://purl.org/ontology/bibo/status#draft"
+            },
+            {
+                "label": "submitted",
+                "onForm": "true",
+                "uri": "http://vivoweb.org/ontology/core#submitted"
+            },
+            {
+                "label": "accepted",
+                "onForm": "false",
+                "uri": "http://purl.org/ontology/bibo/status#accepted"
+            }
+        ],
         "http://terms.library.ualberta.ca/comments": [
             "'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'"
         ],

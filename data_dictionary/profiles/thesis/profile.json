@@ -55,7 +55,13 @@
         ]
     },
     "http://ontoware.org/swrc/ontology#institution": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "University of Alberta",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/authorities/names/n79058482"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://id.loc.gov/vocabulary/relators/dgg"
         ],
@@ -112,7 +118,8 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "false",
+            "true"
         ],
         "http://terms.library.ualberta.ca/repeat": [
             "true"
@@ -161,7 +168,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "false"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -278,7 +285,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -470,7 +477,78 @@
         ]
     },
     "http://purl.org/dc/terms/language": {
-        "acceptedValues": [],
+        "acceptedValues": [
+            {
+                "label": "Ukranian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
+            },
+            {
+                "label": "Japanese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
+            },
+            {
+                "label": "German",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
+            },
+            {
+                "label": "Other language",
+                "onForm": "true",
+                "uri": "http://terms.library.ualberta.ca/other"
+            },
+            {
+                "label": "Italian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
+            },
+            {
+                "label": "Russian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
+            },
+            {
+                "label": "No linguistic content",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
+            },
+            {
+                "label": "English",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/eng"
+            },
+            {
+                "label": "French",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/fre"
+            },
+            {
+                "label": "Portuguese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/por"
+            },
+            {
+                "label": "Chinese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zho"
+            },
+            {
+                "label": "Vietnamese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/vie"
+            },
+            {
+                "label": "Inupiaq",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ipk"
+            },
+            {
+                "label": "Spanish",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/language"
         ],
@@ -530,7 +608,8 @@
             "false"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "false",
+            "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
             "title"
@@ -541,7 +620,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
@@ -609,9 +688,6 @@
         ],
         "http://terms.library.ualberta.ca/displayLabel": [
             "examining committee member and department"
-        ],
-        "http://terms.library.ualberta.ca/indexAs": [
-            "http://purl.org/dc/elements/1.1/Contributor"
         ],
         "http://terms.library.ualberta.ca/onForm": [
             "false"
@@ -725,7 +801,7 @@
             "http://purl.org/dc/elements/1.1/Creator"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
             "dissertant"
@@ -736,7 +812,7 @@
         "http://terms.library.ualberta.ca/required": [
             "true"
         ],
-        "http://terms.library.ualberta.ca/searchable": [
+        "http://terms.library.ualberta.ca/search": [
             "true"
         ],
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
@@ -842,7 +918,8 @@
             "http://purl.org/dc/terms/created"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "false",
+            "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
             "graduation date"
@@ -976,7 +1053,7 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/required": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/search": [
             "false"
@@ -1062,9 +1139,12 @@
         ]
     },
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-        "acceptedValues": [],
         "acceptedValues": [
-            "http://purl.org/ontology/bibo/Thesis"
+            {
+                "label": "Thesis",
+                "onForm": "False",
+                "uri": "http://purl.org/ontology/bibo/Thesis"
+            }
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "auto"

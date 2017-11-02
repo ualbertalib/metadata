@@ -49,6 +49,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **propertyName** an informal name for describing the property  
    **repeat** can this property occur more than once? (boolean)  
    **required** is the property required to have a value? (boolean)  
+   **search** is this property searchable in Jupiter? (boolean)  
    **sort** is this property sortable in SOLR? (boolean)  
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
@@ -199,11 +200,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof  )  
-  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
-  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
-### searchable  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### sort  
@@ -257,7 +257,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * false  
   * sort:  
     * false  
@@ -307,7 +307,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * false  
@@ -357,7 +357,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * false  
@@ -432,7 +432,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * false  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * false  
@@ -488,6 +488,17 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:language  
   * values displayed on form:  
+    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
+    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
+    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
+    * **Other language** (http://terms.library.ualberta.ca/other)  
+    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
+    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+    * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+    * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/language  
   * dataType:  
@@ -512,6 +523,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:license  
   * values displayed on form:  
+    * **Attribution 4.0 International** (http://creativecommons.org/licenses/by/4.0/)  
+    * **Attribution-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-sa/4.0/)  
+    * **Attribution-NonCommercial 4.0 International** (http://creativecommons.org/licenses/by-nc/4.0/)  
+    * **Attribution-NonCommercial-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nc-nd/4.0/)  
+    * **CC0 1.0 Universal** (http://creativecommons.org/publicdomain/zero/1.0/)  
+    * **Attribution-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nd/4.0/)  
+    * **Public Domain Mark 1.0** (http://creativecommons.org/publicdomain/mark/1.0/)  
+    * **Attribution-NonCommercial-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-nc-sa/4.0/)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/license  
   * comments:  
@@ -658,12 +677,23 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * true  
-  * searchable:  
+  * search:  
     * true  
   * sort:  
     * true  
 ### dcterms:type  
   * values displayed on form:  
+    * **Article** (http://purl.org/ontology/bibo/Article)  
+    * **Book** (http://purl.org/ontology/bibo/Book)  
+    * **Chapter** (http://purl.org/ontology/bibo/Chapter)  
+    * **Image** (http://purl.org/ontology/bibo/Image)  
+    * **Report** (http://purl.org/ontology/bibo/Report)  
+    * **Research Material** (http://terms.library.ualberta.ca/researchMaterial)  
+    * **Conference Paper** (http://vivoweb.org/ontology/core#ConferencePaper)  
+    * **Conference Poster** (http://vivoweb.org/ontology/core#ConferencePoster)  
+    * **Dataset** (http://vivoweb.org/ontology/core#Dataset)  
+    * **Review** (http://vivoweb.org/ontology/core#Review)  
+    * **Learning Object** (http://terms.library.ualberta.ca/learningObject)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/type  
   * dataType:  
@@ -688,6 +718,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### bibo:status  
   * values displayed on form:  
+    * **published** (http://purl.org/ontology/bibo/status#published)  
+    * **draft** (http://purl.org/ontology/bibo/status#draft)  
+    * **submitted** (http://vivoweb.org/ontology/core#submitted)  
   * comments:  
     * 'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'  
   * dataType:  
