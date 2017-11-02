@@ -185,7 +185,8 @@ def google_generate():
           				"editors": {
             				"users": [
               					"danoosh@ualberta.ca",
-              					#"zschoenb@ualberta.ca"
+              					"zschoenb@ualberta.ca",
+              					"sharon.farnel@ualberta.ca"
             				]
           				}
         			}

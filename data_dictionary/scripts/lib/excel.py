@@ -2,7 +2,7 @@ import os
 import json
 import openpyxl
 from openpyxl import Workbook
-from config import namespaces
+from config import namespaces, ignore
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font, Alignment
 
@@ -24,7 +24,12 @@ class Excel:
             index = 1
             startrow = 2
             for i, key in enumerate(data.keys()):
-                sheet['A' + str(i+2)] = key
+                for ig in namespaces:
+                    if ig['uri'] in key:
+                        sheet['A' + str(i+2)] = key.replace(ig['uri'],ig['prefix'] + ' : ')
+                        break
+                    else:
+                        sheet['A' + str(i+2)] = key
                 self.headings = self.getHeadings(data, key)
                 for x, title in enumerate(self.headings):
                     col = get_column_letter(x+2)
