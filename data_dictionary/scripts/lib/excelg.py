@@ -4,7 +4,7 @@ from excel import Excel
 from openpyxl import Workbook
 
 
-def main():
+def excelGen():
     os.remove('../../profiles.xlsx')
     wb = Workbook()
     ws = wb.active
@@ -14,7 +14,7 @@ def main():
     	Excel(profile)
         
 if __name__ == "__main__":
-    main()
+    excelGen()
 
 
 class Excelx:
