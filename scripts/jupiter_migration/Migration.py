@@ -5,11 +5,14 @@ import time
 from datetime import datetime
 import os
 from SPARQLWrapper import JSON, SPARQLWrapper
-from rdflib import URIRef, Literal, Graph
+from rdflib import URIRef, Literal, Graph, Namespace
+from rdflib.namespace import RDF
 import re
 import json
 import requests
-
+import random
+proxyHash = {}
+fileSetTracker = []
 
 def main():
     """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata), 
@@ -53,6 +56,21 @@ def parellelTransform(queryObject, group):
     DTO.transformData()
     # DTO.resultsToTriplestore()
 
+def generatefileSetId():
+    fileSetId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
+    if fileSetId not in fileSetTracker:
+        fileSetTracker.append(fileSetId)
+        return fileSetId
+    else:
+        generatefileSetId()
+
+def generateProxyId(fileSet):
+        proxyId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
+        if proxyId not in proxyHash:
+            proxyHash[fileSet] = proxyId
+            return proxyId
+        else:
+            generateProxyId(fileSet)
 
 class TransformationFactory():
     @staticmethod
@@ -149,26 +167,54 @@ class Data(object):
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
-            
-            if 'relatedObject' in self.objectType:
-                self._order()           
+        if 'file' in self.objectType:
+            for resource, fileSet in self.graph.subject_objects(URIRef("http://pcdm.org/models#hasMember")):
+                self._addProxy(resource, fileSet)
+
+        if len(self.graph)>0:
             self.graph.serialize(destination=self.filename, format='nt')
+
+    def _addProxy(self, resource, fileSet):
+            first = URIRef("http://www.iana.org/assignments/relation/first")
+            last = URIRef("http://www.iana.org/assignments/relation/last")
+            n = URIRef("http://www.iana.org/assignments/relation/next")
+            p = URIRef("http://www.iana.org/assignments/relation/prev")
+            proxyId = generateProxyId(fileSet)
+            proxy = "{}/proxy{}".format(resource, proxyId)   
+            self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyIn"), URIRef(resource)))
+            self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyFor"), URIRef(fileSet)))
+            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Container")))
+            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Resource")))
+            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.openarchives.org/ore/terms/Proxy")))
+            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#Container")))
+            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#RDFSource")))
+            self.graph.add((URIRef(proxy), URIRef("info:fedora/fedora-system:def/model#hasModel"), Literal("ActiveFedora::Aggregation::Proxy")))
+            if "content" in fileSet:
+                if fileSet.replace('content','characterization') in proxyHash:
+                    otherProxy = "{}/proxy{}".format(resource, proxyHash[fileSet.replace('content','characterization')])
+                    self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
+                    self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
+                    self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
+                    self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
+                else:
+                    pass
+            elif "characterization" in fileSet:
+                if fileSet.replace('characterization', 'content') in proxyHash:
+                    otherProxy = "{}/proxy{}".format(resource, proxyHash[fileSet.replace('characterization', 'content')])
+                    self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
+                    self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
+                    self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
+                    self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
+                else:
+                    pass
+            else:
+                pass
+
 
     def resultsToTriplestore(self):
         headers = {'Content-Type': 'text/turtle'}
         requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
 
-    def _order(self):
-        last = URIRef("http://www.iana.org/assignments/relation/last")
-        first = URIRef("http://www.iana.org/assignments/relation/first")
-        nex = URIRef("http://www.iana.org/assignments/relation/next")
-        prev = URIRef("http://www.iana.org/assignments/relation/prev")
-
-        for s in self.graph.subjects():
-            if (first in self.graph.triples( (s, None, None) ) and last in self.graph.triples( (s, None, None) ) ):
-                print('yes')
-            else:
-                print('no')
 
 class Query(object):
     """ Query objects are dynamically generated, and contain SPARQL CONSTRUCT queries with input from the jupiter application profile """
@@ -408,16 +454,7 @@ class File(Query):
         self.objectType = 'file'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
-            ?jupiterResource pcdm:hasMember ?directFileset ;
-            iana:first ?proxy .
-            ?proxy ore:proxyIn ?jupiterResource ;
-            ore:proxyFor ?directFileset ;
-            rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type ore:Proxy ;
-            rdf:type ldp:Container ;
-            rdf:type ldp:RDFSource ;
-            info:hasModel 'ActiveFedora::Aggregation::Proxy' .
+            ?jupiterResource pcdm:hasMember ?directFileset .
             ?directFileset info:hasModel 'IRFileSet' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
@@ -450,7 +487,7 @@ class File(Query):
             rdf:type use:OriginalFile ;
             rdf:type pcdm:File ;
             pcdm:fileOf ?directFileset ;
-            iana:describedby ?directFileFCR ;
+            iana:describedby ?jupiterDirectFileFCR ;
             pcdm:isMemberOf ?directFileset ;
             fedora:hasParent ?directFiles ;
             fedora:hasFixityService ?directFileFixity ;
@@ -465,7 +502,7 @@ class File(Query):
             fedora:writable ?directFedoraWritable ;
             rdf:type ?directRdfType ;
             fedora:mixinTypes ?directFileMixins .
-            ?directFileFCR iana:describes ?directFile ;
+            ?jupiterDirectFileFCR iana:describes ?directFile ;
             fedora:hasVersions ?directFileVersions ;
             fedora:uuid ?directFileFCRUUID ;
             fedora:mixinTypes ?directFileFCRMixins ;
@@ -482,10 +519,10 @@ class File(Query):
 
     def generateQueries(self):
         self.getSplitBy()
-        order = {0: 'first', 1: 'last'}
         for group in self.splitBy.keys():
             self.queries[group] = []
-            for proxyNum, fileType in enumerate(['content', 'characterization']):
+            for fileType in ['content', 'characterization']:
+                filesetId = generatefileSetId()
                 self.queries[group].append({})
                 # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
                 where = """WHERE {{
@@ -494,7 +531,7 @@ class File(Query):
                     FILTER (STRENDS(str(?directMember), '{}'))""".format(self.splitBy[group], fileType)
                 # customize the where clause to include triples that aren't in the mappings
                 self.queries[group][-1]['prefix'] = self.prefixes
-                self.queries[group][-1]['construct'] = self.construct + "?jupiterResource iana:%s ?proxy }" % (order[proxyNum])
+                self.queries[group][-1]['construct'] = self.construct + " }"
                 self.queries[group][-1]['where'] = """{} .
                         OPTIONAL {{ ?directMember fedora:created ?directFedoraCreated . FILTER (str(?directFedoraCreated) != '') }} .
                         OPTIONAL {{ ?directMember fedora:createdBy ?directFedoraCreatedBy . FILTER (str(?irectFedoraCreatedBy) != '')}} .
@@ -510,21 +547,20 @@ class File(Query):
                         OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
                         BIND(STR(replace(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
                         BIND(URI(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterDirectMember)
-                        BIND(URI(CONCAT(STR(?directMember), '/fileset')) AS ?directFileset) .
-                        BIND(URI(CONCAT(STR(?directMember), '/files')) AS ?directFiles) .
-                        BIND(URI(CONCAT(STR(?directMember), '/member_of_collections')) AS ?directMemberOfCollections) .
-                        BIND(URI(CONCAT(STR(?directFiles), CONCAT('/', ?noid))) AS ?directFile) .
-                        BIND(URI(CONCAT(STR(?directFile), '/fcr:metadata')) AS ?directFileFCR) .
+                        BIND(URI(replace(str(?jupiterDirectMember), '{}', '{}')) AS ?jupiterDirectMember) .
+                        BIND(URI(?jupiterDirectMember) AS ?directFileset) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectMember), '/files')) AS ?directFiles) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectFiles), CONCAT('/', ?noid))) AS ?directFile) .
+                        BIND(URI(CONCAT(STR(?directMember), '/fcr:metadata')) AS ?directFileFCR) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectFile), '/fcr:metadata')) AS ?jupiterDirectFileFCR) .
                         BIND(URI(CONCAT(STR(?directFile), '/fcr:fixity')) AS ?directFileFixity) .
                         BIND(URI(CONCAT(STR(?directFile), '/fcr:versions')) AS ?directFileVersions) .
                         OPTIONAL {{ ?directFileFCR rdf:type ?directFileFCRRDFType . FILTER (str(?directFileFCRRDFType) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileFCRUUID . FILTER (str(?directFileFCRUUID) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:primaryType ?directFileFCRPrimaryType . FILTER (str(?directFileFCRPrimaryType) != '')}} .
-                        BIND(URI(CONCAT(str(?directMember), '/{}/proxy{}')) AS ?proxy) .
-                        BIND(URI(replace(str(?directMember), '/{}', '')) AS ?resource) .
-                        BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
-                    }}""".format(where, fileType, fileType, proxyNum, fileType)
+                        BIND(URI(replace(str(?jupiterDirectMember), '/{}', '')) AS ?jupiterResource)
+                    }}""".format(where, fileType, fileType, filesetId, fileType, filesetId, filesetId)
             self.writeQueries()
 
 
@@ -534,8 +570,7 @@ class Related_Object(Query):
         self.objectType = 'relatedObject'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
-            ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject ;
-            ldp:contains ?jupiterRelatedObject .
+            ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject .
             ?jupiterRelatedObject info:hasModel 'IRItem' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
@@ -552,14 +587,6 @@ class Related_Object(Query):
             fedora:hasParent ?jupiterResource ;
             ldp:contains ?files ;
             ldp:membershipResource ?files .
-            ?proxy ore:proxyIn ?jupiterRelatedObject ;
-            ore:proxyFor ?relatedFileset ;
-            rdf:type fedora:Container ;
-            rdf:type fedora:Resource ;
-            rdf:type ore:Proxy ;
-            rdf:type ldp:Container ;
-            rdf:type ldp:RDFSource ;
-            info:hasModel 'ActiveFedora::Aggregation::Proxy' .
             ?relatedFileset info:hasModel 'IRFileSet' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
@@ -608,7 +635,19 @@ class Related_Object(Query):
             fedora:lastModified ?relatedFedoraLastModified ;
             fedora:createdBy ?relatedFedoraCreatedBy ;
             fedora:lastModifiedBy ?relatedFedoraLastModifiedBy ;
-            fedora:writable ?relatedFedoraWritable . """
+            fedora:writable ?relatedFedoraWritable .
+            ?proxy ore:proxyIn ?jupiterRelatedObject ;
+            ore:proxyFor ?relatedFileset ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type ore:Proxy ;
+            rdf:type ldp:Container ;
+            rdf:type ldp:RDFSource ;
+            info:hasModel 'ActiveFedora::Aggregation::Proxy' ;
+            iana:next ?proxy;
+            iana:prev ?proxy .
+            ?jupiterRelatedObject iana:first ?proxy ;
+            iana:last ?proxy ."""
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary
         }"""
@@ -616,10 +655,10 @@ class Related_Object(Query):
 
     def generateQueries(self):
         self.getSplitBy()
-        order = {0: 'first', 1: 'last'}
         for group in self.splitBy.keys():
             self.queries[group] = []
-            for proxyNum, fileType in enumerate(['fedora3foxml', 'era1stats']):
+            for fileType in ['fedora3foxml', 'era1stats']:
+                filesetId = generatefileSetId()
                 self.queries[group].append({})
                 # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
                 where = """WHERE {{
@@ -628,7 +667,7 @@ class Related_Object(Query):
                     FILTER (STRENDS(str(?relatedObject), '{}')) """.format(self.splitBy[group], fileType)
                 # customize the where clause to include triples that aren't in the mappings
                 self.queries[group][-1]['prefix'] = self.prefixes
-                self.queries[group][-1]['construct'] = self.construct + "?relatedObject iana:%s ?proxy }" % (order[proxyNum])
+                self.queries[group][-1]['construct'] = self.construct + " }"
                 self.queries[group][-1]['where'] = """{} .
                     OPTIONAL {{ ?relatedObject fedora:created ?relatedFedoraCreated . FILTER (str(?relatedFedoraCreated) != '') }} .
                     OPTIONAL {{ ?relatedObject fedora:createdBy ?relatedFedoraCreatedBy . FILTER (str(?relatedFedoraCreatedBy) != '') }} .
@@ -645,21 +684,19 @@ class Related_Object(Query):
                     OPTIONAL {{ ?relatedObject fedora:hasParent ?relatedParent }} .
                     BIND(URI(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterRelatedObject)
                     BIND(URI(CONCAT(STR(?relatedObject), '/files')) AS ?relatedFiles) .
-                    BIND(URI(CONCAT(STR(?relatedObject), '/member_of_collections')) AS ?relatedMemberOfCollections) .
-                    BIND(URI(CONCAT(STR(?relatedObject), '/fileset')) AS ?relatedFileset) .
-                    BIND(STR(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/{}/.+/', '')) AS ?noid) .
+                    BIND(STR(replace(replace(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
                     BIND(URI(CONCAT(STR(?relatedFiles), CONCAT('/', ?noid))) AS ?relatedFile) .
                     BIND(URI(CONCAT(STR(?relatedFile), '/fcr:metadata')) AS ?relatedFileFCR) .
                     BIND(URI(CONCAT(STR(?relatedFile), '/fcr:fixity')) AS ?relatedFileFixity) .
-                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:versions')) AS ?relatedFileVersions) .                  
+                    BIND(URI(CONCAT(STR(?relatedFile), '/fcr:versions')) AS ?relatedFileVersions) .
                     OPTIONAL {{ ?relatedFileFCR rdf:type ?relatedFileFCRRDFType . FILTER (str(?relatedFileFCRRDFType) != '') }} .
                     OPTIONAL {{ ?relatedFileFCR fedora:uuid ?relatedFileFCRUUID . FILTER (str(?relatedFileFCRUUID) != '') }} .
                     OPTIONAL {{ ?relatedFileFCR fedora:mixinTypes ?relatedFileFCRMixins . FILTER (str(?relatedFileFCRMixins) != '') }} .
                     OPTIONAL {{ ?relatedFileFCR fedora:primaryType ?relatedFileFCRPrimaryType . FILTER (str(?relatedFileFCRPrimaryType) != '') }} .
-                    BIND(URI(CONCAT(str(?relatedObject), '/{}/proxy{}')) AS ?proxy) .
-                    BIND(URI(replace(str(?relatedObject), '/{}', '')) AS ?resource) .
-                    BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
-                    }}""".format(where, fileType, fileType, proxyNum, fileType)
+                    BIND(URI(replace(str(?jupiterRelatedObject), '/{}', '')) AS ?jupiterResource) .
+                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/{}')) AS ?relatedFileset) .
+                    BIND(URI(CONCAT(str(?jupiterRelatedObject), '/proxy{}')) AS ?proxy) .
+                    }}""".format(where, fileType, fileType, filesetId, generateProxyId(random.choice('0123456789ABCDEF') for i in range(16)))
             self.writeQueries()
 
 
