@@ -77,138 +77,132 @@ def google_generate():
     response = request.execute()
 
     for index in range(0 , length):
-    	sheetId = sheet['sheets'][index]['properties']['sheetId']
+        sheetId = sheet['sheets'][index]['properties']['sheetId']
 
-    	deletesheets = {
-    	"requests": [
-    		{
-      		"deleteSheet": {
-        		"sheetId": sheetId
-      			}
-    		}
-  			]
-    	}
-    	request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=deletesheets)
-    	response = request.execute()
+        deletesheets = {
+            "requests": [
+                {
+                  "deleteSheet": {
+                    "sheetId": sheetId
+                    }
+                }
+            ]
+        }
+        request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=deletesheets)
+        response = request.execute()
 
     wb = Workbook()
     wb = openpyxl.load_workbook('../../profiles.xlsx')
     names = wb.get_sheet_names()
     for sid, sheetName in enumerate(names):
-    	add = {
-    	"requests": [
-    		{
-      		"addSheet": {
-	        	"properties": {
-          		"title": sheetName,
-          		"sheetId" : int(sid + 1)
-        		}
-	      		}
-	    	}
-  			]
-    	}
-    	request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=add)
-    	response = request.execute()
-    	rangeName = str(sheetName+'!A1:AA100')
-    	ws = wb[sheetName]
-    	val = []
-    	final = []
-    	extras = []
-    	for i in range(1, ws.max_row+1):
-    		final.append(val)
-    		val = []  	
-        	for j in range(1, ws.max_column+1):
-        		value = ws.cell(row=i, column=j).value
-        		if value == 'acceptedValues':
-        			extras.append(j)
-        		val.append(value)       
-    	del final[0]
-    	values = final
-    	#print (values)
-    	body = {
-  		'values': values
-    	}
-    	result = service.spreadsheets().values().update(
-    		spreadsheetId=spreadsheetId, range=rangeName,
-    		valueInputOption='USER_ENTERED', body=body).execute()
+        add = {
+            "requests": [
+                {
+                "addSheet": {
+                    "properties": {
+                        "title": sheetName,
+                        "sheetId" : int(sid + 1)
+                    }
+                }
+            }
+            ]
+        }
+        request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=add)
+        response = request.execute()
+        rangeName = str(sheetName+'!A1:AA100')
+        ws = wb[sheetName]
+        val = []
+        final = []
+        extras = []
+        for i in range(1, ws.max_row+1):
+            final.append(val)
+            val = []
+            for j in range(1, ws.max_column+1):
+                value = ws.cell(row=i, column=j).value
+                if value == 'acceptedValues':
+                    extras.append(j)
+                val.append(value)       
+        del final[0]
+        values = final
+        #print (values)
+        body = {
+          'values': values
+        }
+        result = service.spreadsheets().values().update(spreadsheetId=spreadsheetId, range=rangeName, valueInputOption='USER_ENTERED', body=body).execute()
 
-    	resize = {
-  			"requests": [
-    			{
-      			"autoResizeDimensions": {
-        			"dimensions": {
-          				"sheetId": int(sid + 1),
-          				"dimension": "COLUMNS",
-          				"startIndex": 0,
-          				"endIndex": 25
-        				}
-      				}
-    			}
-  			]
-		}
-	request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=resize)
-	response = request.execute()
+        resize = {
+            "requests": [
+                {
+                    "autoResizeDimensions": {
+                        "dimensions": {
+                            "sheetId": int(sid + 1),
+                            "dimension": "COLUMNS",
+                            "startIndex": 0,
+                            "endIndex": 25
+                        }
+                    }
+                }
+            ]
+        }
+        request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=resize)
+        response = request.execute()
 
-    	for z, number in enumerate(extras):
-    		number = number - z 
-    		deleteCols = {
-  				"requests": [
-    				{
-      				"deleteDimension": {
-        				"range": {
-          					"sheetId": int(sid + 1),
-          					"dimension": "COLUMNS",
-          					"startIndex": int(number - 1),
-          					"endIndex": int(number)
-        				}
-      				}
-    			},
-  				],
-				}			
-		request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=deleteCols)
-		response = request.execute()
+        for z, number in enumerate(extras):
+            number = number - z
+            deleteCols = {
+                "requests": [
+                    {
+                        "deleteDimension": {
+                            "range": {
+                                "sheetId": int(sid + 1),
+                                "dimension": "COLUMNS",
+                                "startIndex": int(number - 1),"endIndex": int(number)
+                                }
+                        }
+                    },
+                ],
+            }
+            request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=deleteCols)
+            response = request.execute()
 
-    	protecte = {
-  			"requests": [
-    			{
-      			"addProtectedRange": {
-        			"protectedRange": {
-          				"range": {
-            				"sheetId": int(sid + 1),
-            				"startRowIndex": 0,
-            				"endRowIndex": 99,
-            				"startColumnIndex": 0,
-            				"endColumnIndex": 25,
-          				},
-          				"description": "Protecting DD",
-          				"warningOnly": False,
-          				"editors": {
-            				"users": [
-              					"danoosh@ualberta.ca",
-              					"zschoenb@ualberta.ca",
-              					"sharon.farnel@ualberta.ca"
-            				]
-          				}
-        			}
-      			}
-    		}
-  			]
-		}
-
-	request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=protecte)
-	response = request.execute()
-
-
+        protecte = {
+            "requests": [
+                {
+                    "addProtectedRange": {
+                        "protectedRange": {
+                            "range": {
+                                "sheetId": int(sid + 1),
+                                "startRowIndex": 0,
+                                "endRowIndex": 99,
+                                "startColumnIndex": 0,
+                                "endColumnIndex": 25,
+                            },
+                            "description": "Protecting DD",
+                            "warningOnly": False,
+                            "editors": {
+                                "users": [
+                                    "danoosh@ualberta.ca",
+                                    "zschoenb@ualberta.ca",
+                                    "sharon.farnel@ualberta.ca"
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+        request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=protecte)
+        response = request.execute()
 
     deleteTempSheet = {
-    	"requests": [
-    		{
-      		"deleteSheet": {
-        		"sheetId": "123456"
-      			}
-    		}
-  		]
-    	}
+        "requests": [
+            {
+                "deleteSheet": {
+                    "sheetId": "123456"
+                }
+            }
+        ]
+    }
     request = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheetId, body=deleteTempSheet)
     response = request.execute()
     
