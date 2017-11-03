@@ -1,17 +1,17 @@
 # origin
 sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
 # sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"  # dev, 1 hour to transform
-sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive/sparql"  # complex objects, 10 minute tranfsformation
+sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive2/sparql"  # complex objects, 10 minute tranfsformation
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  # one of each object type
 # destination
 sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results/sparql"
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	#"collection",
-	#"community",
-	#"generic",
-	#"thesis",
+	"collection",
+	"community",
+	"generic",
+	"thesis",
 	"file",
 	"relatedObject"
 	]

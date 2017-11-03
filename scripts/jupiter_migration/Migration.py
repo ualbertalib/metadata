@@ -167,9 +167,6 @@ class Data(object):
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
-        if 'file' in self.objectType:
-            for resource, fileSet in self.graph.subject_objects(URIRef("http://pcdm.org/models#hasMember")):
-                self._addProxy(resource, fileSet)
 
         if len(self.graph)>0:
             self.graph.serialize(destination=self.filename, format='nt')
@@ -179,10 +176,12 @@ class Data(object):
         last = URIRef("http://www.iana.org/assignments/relation/last")
         n = URIRef("http://www.iana.org/assignments/relation/next")
         p = URIRef("http://www.iana.org/assignments/relation/prev")
+        
         if resource in proxyHash:
             otherProxy = "{}/proxy{}".format(resource, proxyHash[resource])
             proxyId = generateProxyId(resource)
             proxy = "{}/proxy{}".format(resource, proxyId)
+            self._createProxy(resource, fileSet, proxy)
             self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
             self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
             self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
@@ -190,14 +189,17 @@ class Data(object):
         else:
             proxyId = generateProxyId(resource)
             proxy = "{}/proxy{}".format(resource, proxyId)
-            self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyIn"), URIRef(resource)))
-            self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyFor"), URIRef(fileSet)))
-            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Container")))
-            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Resource")))
-            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.openarchives.org/ore/terms/Proxy")))
-            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#Container")))
-            self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#RDFSource")))
-            self.graph.add((URIRef(proxy), URIRef("info:fedora/fedora-system:def/model#hasModel"), Literal("ActiveFedora::Aggregation::Proxy")))
+            self._createProxy(resource, fileSet, proxy)
+
+    def _createProxy(self, resource, fileSet, proxy):
+        self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyIn"), URIRef(resource)))
+        self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyFor"), URIRef(fileSet)))
+        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Container")))
+        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Resource")))
+        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.openarchives.org/ore/terms/Proxy")))
+        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#Container")))
+        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#RDFSource")))
+        self.graph.add((URIRef(proxy), URIRef("info:fedora/fedora-system:def/model#hasModel"), Literal("ActiveFedora::Aggregation::Proxy")))
 
     def resultsToTriplestore(self):
         headers = {'Content-Type': 'text/turtle'}
@@ -499,7 +501,19 @@ class File(Query):
             fedora:lastModified ?directFedoraLastModified ;
             fedora:createdBy ?directFedoraCreatedBy ;
             fedora:lastModifiedBy ?directFedoraLastModifiedBy ;
-            fedora:writable ?directFedoraWritable ."""
+            fedora:writable ?directFedoraWritable .
+            ?proxy ore:proxyIn ?jupiterResource ;
+            ore:proxyFor ?jupiterDirectFileset ;
+            rdf:type fedora:Container ;
+            rdf:type fedora:Resource ;
+            rdf:type ore:Proxy ;
+            rdf:type ldp:Container ;
+            rdf:type ldp:RDFSource ;
+            info:hasModel 'ActiveFedora::Aggregation::Proxy' ;
+            iana:next ?proxy;
+            iana:prev ?proxy .
+            ?jupiterResource iana:first ?proxy ;
+            iana:last ?proxy ."""
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary
         }"""
@@ -509,8 +523,9 @@ class File(Query):
         self.getSplitBy()
         for group in self.splitBy.keys():
             self.queries[group] = []
+            filesetId = generatefileSetId()
+            proxyId = generateProxyId(random.choice('0123456789ABCDEF') for i in range(16))
             for fileType in ['content', 'characterization']:
-                filesetId = generatefileSetId()
                 self.queries[group].append({})
                 # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
                 where = """WHERE {{
@@ -545,8 +560,9 @@ class File(Query):
                         OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileFCRUUID . FILTER (str(?directFileFCRUUID) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:primaryType ?directFileFCRPrimaryType . FILTER (str(?directFileFCRPrimaryType) != '')}} .
-                        BIND(URI(replace(str(?jupiterDirectFileset), '/{}', '')) AS ?jupiterResource)
-                    }}""".format(where, fileType, fileType, filesetId, filesetId)
+                        BIND(URI(replace(str(?jupiterDirectFileset), '/{}', '')) AS ?jupiterResource) .
+                        BIND(URI(CONCAT(str(?jupiterResource), '/proxy{}')) AS ?proxy) .
+                    }}""".format(where, fileType, fileType, filesetId, filesetId, proxyId)
             self.writeQueries()
 
 
@@ -570,6 +586,7 @@ class Related_Object(Query):
             fedora:lastModifiedBy ?relatedFedoraLastModifiedBy ;
             fedora:writable ?relatedFedoraWritable ;
             pcdm:hasMember ?relatedFileset ;
+            pcdm:relatedObjectOf ?jupiterResource ;
             fedora:hasParent ?jupiterResource ;
             ldp:contains ?files ;
             ldp:membershipResource ?files .
@@ -583,7 +600,6 @@ class Related_Object(Query):
             pcdm:hasFile ?relatedFile ;
             pcdm:memberOf ?jupiterRelatedObject ;
             fedora:hasParent ?jupiterRelatedObject ;
-            pcdm:relatedObjectOf ?jupiterResource ;
             ldp:contains ?relatedFiles ;
             ldp:membershipResource ?relatedFiles .
             ?relatedFiles info:hasModel 'ActiveFedora::DirectContainer' ;
