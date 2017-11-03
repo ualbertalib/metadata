@@ -64,13 +64,13 @@ def generatefileSetId():
     else:
         generatefileSetId()
 
-def generateProxyId(fileSet):
+def generateProxyId(resource):
         proxyId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
         if proxyId not in proxyHash:
-            proxyHash[fileSet] = proxyId
+            proxyHash[resource] = proxyId
             return proxyId
         else:
-            generateProxyId(fileSet)
+            generateProxyId(resource)
 
 class TransformationFactory():
     @staticmethod
@@ -175,12 +175,21 @@ class Data(object):
             self.graph.serialize(destination=self.filename, format='nt')
 
     def _addProxy(self, resource, fileSet):
-            first = URIRef("http://www.iana.org/assignments/relation/first")
-            last = URIRef("http://www.iana.org/assignments/relation/last")
-            n = URIRef("http://www.iana.org/assignments/relation/next")
-            p = URIRef("http://www.iana.org/assignments/relation/prev")
-            proxyId = generateProxyId(fileSet)
-            proxy = "{}/proxy{}".format(resource, proxyId)   
+        first = URIRef("http://www.iana.org/assignments/relation/first")
+        last = URIRef("http://www.iana.org/assignments/relation/last")
+        n = URIRef("http://www.iana.org/assignments/relation/next")
+        p = URIRef("http://www.iana.org/assignments/relation/prev")
+        if resource in proxyHash:
+            otherProxy = "{}/proxy{}".format(resource, proxyHash[resource])
+            proxyId = generateProxyId(resource)
+            proxy = "{}/proxy{}".format(resource, proxyId)
+            self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
+            self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
+            self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
+            self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
+        else:
+            proxyId = generateProxyId(resource)
+            proxy = "{}/proxy{}".format(resource, proxyId)
             self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyIn"), URIRef(resource)))
             self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyFor"), URIRef(fileSet)))
             self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Container")))
@@ -189,27 +198,6 @@ class Data(object):
             self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#Container")))
             self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#RDFSource")))
             self.graph.add((URIRef(proxy), URIRef("info:fedora/fedora-system:def/model#hasModel"), Literal("ActiveFedora::Aggregation::Proxy")))
-            if "content" in fileSet:
-                if fileSet.replace('content','characterization') in proxyHash:
-                    otherProxy = "{}/proxy{}".format(resource, proxyHash[fileSet.replace('content','characterization')])
-                    self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
-                    self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
-                    self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
-                    self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
-                else:
-                    pass
-            elif "characterization" in fileSet:
-                if fileSet.replace('characterization', 'content') in proxyHash:
-                    otherProxy = "{}/proxy{}".format(resource, proxyHash[fileSet.replace('characterization', 'content')])
-                    self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
-                    self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
-                    self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
-                    self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
-                else:
-                    pass
-            else:
-                pass
-
 
     def resultsToTriplestore(self):
         headers = {'Content-Type': 'text/turtle'}
@@ -463,11 +451,12 @@ class File(Query):
             rdf:type ldp:Container ;
             rdf:type ldp:RDFSource ;
             pcdm:hasFile ?jupiterDirectFile ;
-            pcdm:isMemberOf ?jupiterResource ;
+            pcdm:memberOf ?jupiterResource ;
             fedora:hasParent ?jupiterResource ;
             ldp:contains ?jupiterDirectFiles ;
             ldp:membershipResource ?jupiterDirectFiles .
             ?jupiterDirectFiles info:hasModel 'ActiveFedora::DirectContainer' ;
+            fedora:hasParent ?jupiterDirectFileset ; 
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
             rdf:type ldp:DirectContainer ;
@@ -488,7 +477,6 @@ class File(Query):
             rdf:type pcdm:File ;
             pcdm:fileOf ?jupiterDirectFileset ;
             iana:describedby ?jupiterDirectFileFCR ;
-            pcdm:isMemberOf ?jupiterDirectFileset ;
             fedora:hasParent ?jupiterDirectFiles ;
             fedora:hasFixityService ?directFileFixity ;
             ebucore:filename ?directOriginalName ;
@@ -547,8 +535,8 @@ class File(Query):
                         OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
                         BIND(STR(replace(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
                         BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', '{}')) AS ?jupiterDirectFileset)
-                        BIND(URI(CONCAT(STR(?jupiterDirectFileset), '/files')) AS ?directFiles) .
-                        BIND(URI(CONCAT(STR(?jupiterDirectFileset), CONCAT('/', ?noid))) AS ?jupiterDirectFile) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectFileset), '/files')) AS ?jupiterDirectFiles) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectFiles), CONCAT('/', ?noid))) AS ?jupiterDirectFile) .
                         BIND(URI(CONCAT(STR(?directMember), '/fcr:metadata')) AS ?directFileFCR) .
                         BIND(URI(CONCAT(STR(?jupiterDirectFile), '/fcr:metadata')) AS ?jupiterDirectFileFCR) .
                         BIND(URI(CONCAT(STR(?directFile), '/fcr:fixity')) AS ?directFileFixity) .
@@ -593,7 +581,7 @@ class Related_Object(Query):
             rdf:type ldp:Container ;
             rdf:type ldp:RDFSource ;
             pcdm:hasFile ?relatedFile ;
-            pcdm:isMemberOf ?jupiterRelatedObject ;
+            pcdm:memberOf ?jupiterRelatedObject ;
             fedora:hasParent ?jupiterRelatedObject ;
             pcdm:relatedObjectOf ?jupiterResource ;
             ldp:contains ?relatedFiles ;
@@ -604,7 +592,8 @@ class Related_Object(Query):
             rdf:type ldp:DirectContainer ;
             rdf:type ldp:RDFSource ;
             ldp:hasMemberRelation pcdm:hasFile ;
-            ldp:contains ?relatedFile .
+            ldp:contains ?relatedFile ;
+            fedora:hasParent ?relatedFileset .
             ?relatedFile info:hasModel 'File' ;
             rdf:type ldp:NonRDFSource ;
             rdf:type fedora:Binary ;
@@ -614,7 +603,6 @@ class Related_Object(Query):
             rdf:type pcdm:File ;
             pcdm:fileOf ?relatedFileset ;
             iana:describedby ?relatedFileFCR ;
-            pcdm:isMemberOf ?relatedFileset ;
             fedora:hasParent ?relatedFiles ;
             fedora:hasFixityService ?relatedFileFixity ;
             ebucore:filename ?relatedOriginalName ;
