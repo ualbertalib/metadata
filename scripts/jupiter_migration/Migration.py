@@ -454,20 +454,20 @@ class File(Query):
         self.objectType = 'file'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
-            ?jupiterResource pcdm:hasMember ?directFileset .
-            ?directFileset info:hasModel 'IRFileSet' ;
+            ?jupiterResource pcdm:hasMember ?jupiterDirectFileset .
+            ?jupiterDirectFileset info:hasModel 'IRFileSet' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
             rdf:type pcdm:Object ;
             rdf:type works:FileSet ;
             rdf:type ldp:Container ;
             rdf:type ldp:RDFSource ;
-            pcdm:hasFile ?directFile ;
+            pcdm:hasFile ?jupiterDirectFile ;
             pcdm:isMemberOf ?jupiterResource ;
             fedora:hasParent ?jupiterResource ;
-            ldp:contains ?directFiles ;
-            ldp:membershipResource ?directFiles .
-            ?directFiles info:hasModel 'ActiveFedora::DirectContainer' ;
+            ldp:contains ?jupiterDirectFiles ;
+            ldp:membershipResource ?jupiterDirectFiles .
+            ?jupiterDirectFiles info:hasModel 'ActiveFedora::DirectContainer' ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
             rdf:type ldp:DirectContainer ;
@@ -478,18 +478,18 @@ class File(Query):
             fedora:lastModifiedBy ?fedoraLastModifiedBy ;
             fedora:writable ?directFedoraWritable ;
             ldp:hasMemberRelation pcdm:hasFile ;
-            ldp:contains ?directFile .
-            ?directFile info:hasModel 'File' ;
+            ldp:contains ?jupiterDirectFile .
+            ?jupiterDirectFile info:hasModel 'File' ;
             rdf:type ldp:NonRDFSource ;
             rdf:type fedora:Binary ;
             rdf:type fedora:Resource ;
             rdf:type pcdm:File ;
             rdf:type use:OriginalFile ;
             rdf:type pcdm:File ;
-            pcdm:fileOf ?directFileset ;
+            pcdm:fileOf ?jupiterDirectFileset ;
             iana:describedby ?jupiterDirectFileFCR ;
-            pcdm:isMemberOf ?directFileset ;
-            fedora:hasParent ?directFiles ;
+            pcdm:isMemberOf ?jupiterDirectFileset ;
+            fedora:hasParent ?jupiterDirectFiles ;
             fedora:hasFixityService ?directFileFixity ;
             ebucore:filename ?directOriginalName ;
             ebucore:hasMimeType ?directMimeType ;
@@ -502,7 +502,7 @@ class File(Query):
             fedora:writable ?directFedoraWritable ;
             rdf:type ?directRdfType ;
             fedora:mixinTypes ?directFileMixins .
-            ?jupiterDirectFileFCR iana:describes ?directFile ;
+            ?jupiterDirectFileFCR iana:describes ?jupiterDirectFile ;
             fedora:hasVersions ?directFileVersions ;
             fedora:uuid ?directFileFCRUUID ;
             fedora:mixinTypes ?directFileFCRMixins ;
@@ -546,11 +546,9 @@ class File(Query):
                         OPTIONAL {{ ?directMember fedora:mimeType ?directMimeType . FILTER (str(?directMimeType) != '')}} .
                         OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
                         BIND(STR(replace(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
-                        BIND(URI(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterDirectMember)
-                        BIND(URI(replace(str(?jupiterDirectMember), '{}', '{}')) AS ?jupiterDirectMember) .
-                        BIND(URI(?jupiterDirectMember) AS ?directFileset) .
-                        BIND(URI(CONCAT(STR(?jupiterDirectMember), '/files')) AS ?directFiles) .
-                        BIND(URI(CONCAT(STR(?jupiterDirectFiles), CONCAT('/', ?noid))) AS ?directFile) .
+                        BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', '{}')) AS ?jupiterDirectFileset)
+                        BIND(URI(CONCAT(STR(?jupiterDirectFileset), '/files')) AS ?directFiles) .
+                        BIND(URI(CONCAT(STR(?jupiterDirectFileset), CONCAT('/', ?noid))) AS ?jupiterDirectFile) .
                         BIND(URI(CONCAT(STR(?directMember), '/fcr:metadata')) AS ?directFileFCR) .
                         BIND(URI(CONCAT(STR(?jupiterDirectFile), '/fcr:metadata')) AS ?jupiterDirectFileFCR) .
                         BIND(URI(CONCAT(STR(?directFile), '/fcr:fixity')) AS ?directFileFixity) .
@@ -559,8 +557,8 @@ class File(Query):
                         OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileFCRUUID . FILTER (str(?directFileFCRUUID) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:primaryType ?directFileFCRPrimaryType . FILTER (str(?directFileFCRPrimaryType) != '')}} .
-                        BIND(URI(replace(str(?jupiterDirectMember), '/{}', '')) AS ?jupiterResource)
-                    }}""".format(where, fileType, fileType, filesetId, fileType, filesetId, filesetId)
+                        BIND(URI(replace(str(?jupiterDirectFileset), '/{}', '')) AS ?jupiterResource)
+                    }}""".format(where, fileType, fileType, filesetId, filesetId)
             self.writeQueries()
 
 
