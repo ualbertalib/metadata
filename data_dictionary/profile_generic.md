@@ -56,7 +56,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof) is backward compatible with:  
-    * http://fedora.info/definitions/v4/repository#hasParent  
     * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/doi  
@@ -214,7 +213,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 ### pcdm:memberOf  
   * backwardCompatibleWith:  
-    * http://fedora.info/definitions/v4/repository#hasParent  
     * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
   * comment:  
     * indicates collection inheritance  
