@@ -149,7 +149,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctitle  )  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
   * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdateaccepted  )  
@@ -176,11 +175,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
 ### required  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
-  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctitle  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
-### requred  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#rdftype  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
@@ -311,11 +308,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### dc:title  
-  * onForm:  
-    * true  
-  * required:  
-    * true  
 ### dcterms:abstract  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/abstract  
@@ -500,7 +492,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * facet:  
     * false  
   * onForm:  
-    * false  
     * true  
   * propertyName:  
     * title  
@@ -825,5 +816,5 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * auto  
   * propertyName:  
     * rdf Type  
-  * requred:  
+  * required:  
     * true  
