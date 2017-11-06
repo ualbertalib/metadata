@@ -370,14 +370,17 @@ class Generic(Query):
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"
             self.queries[group][0]['where'] = """{} .
-                OPTIONAL {{ ?permission webacl:accessTo ?resource ;
+                OPTIONAL {{ ?ownership webacl:accessTo ?resource ;
                     webacl:mode webacl:Write ;
-                webacl:agent ?owner }} .
+                    webacl:agent ?owner }} .
+                OPTIONAL {{ ?permission webacl:accessTo ?resource ;
+                    webacl:mode webacl:Read ;
+                    webacl:agent ?visibility }} .
                 OPTIONAL {{ ?resource acl:hasEmbargo ?embargo .
                     OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
                     OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
                     OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
-                }}
+                }} .
                 BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
             }}""".format(where)
         self.writeQueries()
@@ -420,20 +423,20 @@ class Thesis(Query):
                 OPTIONAL {{
                     ?permission webacl:accessTo ?resource ;
                     webacl:mode webacl:Read ;
-                    webacl:agent ?visibility
+                    webacl:agent ?visibility .
                 }} .
                 OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
+                    ?ownership webacl:accessTo ?resource ;
                     webacl:mode webacl:Write ;
-                    webacl:agent ?owner
+                    webacl:agent ?owner .
                 }} .
                 OPTIONAL {{
                     ?resource acl:hasEmbargo ?embargo .
                     OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
                     OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
-                    OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
+                    OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }} .
                 }} .
-                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
+                BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) .
             }}""".format(where)
         self.writeQueries()
 
@@ -515,7 +518,7 @@ class File(Query):
             ?jupiterResource iana:first ?proxy ;
             iana:last ?proxy ."""
         self.select = """SELECT distinct ?resource WHERE {
-            ?resource rdf:type fedora:Binary
+            ?resource rdf:type fedora:Binary .
         }"""
         super().__init__(self.objectType, sparqlData)
 
@@ -651,7 +654,7 @@ class Related_Object(Query):
             ?jupiterRelatedObject iana:first ?proxy ;
             iana:last ?proxy ."""
         self.select = """SELECT distinct ?resource WHERE {
-            ?resource rdf:type fedora:Binary
+            ?resource rdf:type fedora:Binary .
         }"""
         super().__init__(self.objectType, sparqlData)
 
