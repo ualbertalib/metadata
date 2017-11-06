@@ -138,11 +138,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
 ### indexAs  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) indexes as:  
-    * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
+    * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) indexes as:  
-    * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+    * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) indexes as:  
-    * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+    * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermscreated  )  
 ### onForm  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
