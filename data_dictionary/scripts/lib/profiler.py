@@ -91,7 +91,7 @@ class Profiler(object):
 						elif ((annotation in PropertyData) and ('indexAs' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
 							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 							for anno in PropertyData[annotation]:
-								print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
+								print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
 						elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
 								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 								for anno in PropertyData[annotation]:
