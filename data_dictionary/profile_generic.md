@@ -155,11 +155,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
 ### indexAs  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor) indexes as:  
-    * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+    * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  )  
   * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial) indexes as:  
-    * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+    * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcsubject  )  
   * [temporal](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal) indexes as:  
-    * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  )  
+    * [Subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcsubject  )  
 ### onForm  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof  )  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
