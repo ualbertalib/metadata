@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dcterms="http://purl.org/dc/terms/"
     exclude-result-prefixes="xs"
-    version="3.0">
+    version="1.0">
     
     <xsl:output method="text" indent="yes"/>
     
@@ -12,11 +13,11 @@
     <!-- for a list of items *ever* embargoed use:
         <xsl:if test="//*:datastream[@ID='RELS-EXT']//*:embargoedDate"> -->
     
-    <xsl:template match="*">
+    <xsl:template match="/">
         
         <xsl:text>embargoedDate&#09;embargo_deactivation_date&#09;lastModifiedDate&#09;workflowState&#09;visibility&#09;state&#09;graduationdate&#09;title&#09;dissertant&#09;collection&#09;fedora3handle&#09;thesisdeposit_link&#xa;</xsl:text>
         
-        <xsl:for-each select="collection('/home/mparedes/metadata_work/ERA_files/era_dump_complete/era_foxml-2017-06-08/?select=*.xml;recurse=yes')//*:digitalObject">
+        <xsl:for-each select="collection('/home/mparedes/metadata_work/ERA_files/era_dump_complete/era_foxml-2017-11-06/?select=u*.xml;recurse=yes')//*:digitalObject">
             
             <xsl:variable name="visibility_exception">
                 <xsl:choose>
