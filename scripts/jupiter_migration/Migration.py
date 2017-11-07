@@ -167,6 +167,22 @@ class Data(object):
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
+        
+        # ensures that "private" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
+        if ('generic' in self.objectType) or ('thesis' in self.objectType):
+            s_o = {}
+            for s, o in self.graph.subject_objects(URIRef("http://purl.org/dc/terms/accessRights")):
+                if s not in s_o:
+                    s_o[s] = []
+                    s_o[s].append(o)
+                else:
+                    s_o[s].append(o)
+            for so in s_o:
+                if URIRef('http://terms.library.ualberta.ca/private') in s_o[so]:
+                    for permission in s_o[so]:
+                        if URIRef('http://terms.library.ualberta.ca/private') not in permission:
+                            print('removed', (URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), permission) )
+                            self.graph.remove( (URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), permission) )
 
         if len(self.graph)>0:
             self.graph.serialize(destination=self.filename, format='nt')
@@ -273,7 +289,7 @@ class Collection(Query):
     def __init__(self, sparqlData):
         self.objectType = 'collection'
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            rdf:type pcdm:Collection"""
+            rdf:type pcdm:Collection ; ual:hydraNoid ?noid"""
         self.where = ["""WHERE {
             ?resource info:hasModel 'Collection'^^xsd:string .
             OPTIONAL {
@@ -298,7 +314,7 @@ class Collection(Query):
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['collection'][0]['prefix'] = self.prefixes
             self.queries['collection'][0]['construct'] = construct + "}"
-            self.queries['collection'][0]['where'] = """{} . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
+            self.queries['collection'][0]['where'] = """{} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
         self.writeQueries()
 
 
@@ -306,7 +322,7 @@ class Community(Query):
     def __init__(self, sparqlData):
         self.objectType = 'community'
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            rdf:type pcdm:Object; rdf:type ual:Community"""
+            rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid"""
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
             OPTIONAL { ?resource ualids:is_community 'true'^^xsd:boolean } .
             OPTIONAL { ?resource ualid:is_community 'true'^^xsd:boolean } .
@@ -324,7 +340,7 @@ class Community(Query):
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['community'][0]['prefix'] = self.prefixes
             self.queries['community'][0]['construct'] = construct + "}"
-            self.queries['community'][0]['where'] = """{} . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
+            self.queries['community'][0]['where'] = """{}  . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
         self.writeQueries()
 
 
@@ -340,7 +356,8 @@ class Generic(Query):
             rdf:type pcdm:Object ;
             bibo:owner ?owner ;
             acl:embargoHistory ?history ;
-            acl:visibilityAfterEmbargo ?visAfter"""
+            acl:visibilityAfterEmbargo ?visAfter ;
+            ual:hydraNoid ?noid"""
         self.where = []
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
@@ -381,6 +398,7 @@ class Generic(Query):
                     OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
                     OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }}
                 }} .
+                BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) .
                 BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)
             }}""".format(where)
         self.writeQueries()
@@ -392,11 +410,13 @@ class Thesis(Query):
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
             dcterm:available ?available ;
-            dcterm:accessRights ?visibility; rdf:type works:Work ;
+            dcterm:accessRights ?accessRights;
+            rdf:type works:Work ;
             rdf:type pcdm:Object ;
             rdf:type bibo:Thesis; bibo:owner ?owner ;
             acl:embargoHistory ?history ;
-            acl:visibilityAfterEmbargo ?visAfter"""
+            acl:visibilityAfterEmbargo ?visAfter ;
+            ual:hydraNoid ?noid"""
         self.where = []
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
@@ -421,21 +441,23 @@ class Thesis(Query):
             self.queries[group][0]['construct'] = construct + " }"
             self.queries[group][0]['where'] = """{} .
                 OPTIONAL {{
-                    ?permission webacl:accessTo ?resource ;
-                    webacl:mode webacl:Read ;
-                    webacl:agent ?visibility .
-                }} .
-                OPTIONAL {{
                     ?ownership webacl:accessTo ?resource ;
                     webacl:mode webacl:Write ;
                     webacl:agent ?owner .
+                }} .
+                OPTIONAL {{
+                    ?permission webacl:accessTo ?resource ;
+                    webacl:mode webacl:Read ;
+                    webacl:agent ?accessRights .
                 }} .
                 OPTIONAL {{
                     ?resource acl:hasEmbargo ?embargo .
                     OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
                     OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .
                     OPTIONAL {{ ?embargo acl:visibilityAfterEmbargo ?visAfter }} .
+                    OPTIONAL {{ ?embargo acl:visibilityDuringEmbargo ?accessRights }} .
                 }} .
+                BIND(STR(replace(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) .
                 BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) .
             }}""".format(where)
         self.writeQueries()
@@ -461,7 +483,7 @@ class File(Query):
             ldp:contains ?jupiterDirectFiles ;
             ldp:membershipResource ?jupiterDirectFiles .
             ?jupiterDirectFiles info:hasModel 'ActiveFedora::DirectContainer' ;
-            fedora:hasParent ?jupiterDirectFileset ; 
+            fedora:hasParent ?jupiterDirectFileset ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
             rdf:type ldp:DirectContainer ;
