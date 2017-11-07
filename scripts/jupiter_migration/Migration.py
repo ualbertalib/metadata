@@ -167,7 +167,7 @@ class Data(object):
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
-        
+
         # ensures that "private" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
         if ('generic' in self.objectType) or ('thesis' in self.objectType):
             s_o = {}
@@ -179,20 +179,30 @@ class Data(object):
                     s_o[s].append(o)
             for so in s_o:
                 if URIRef('http://terms.library.ualberta.ca/private') in s_o[so]:
-                    for permission in s_o[so]:
-                        if URIRef('http://terms.library.ualberta.ca/private') not in permission:
-                            print('removed', (URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), permission) )
-                            self.graph.remove( (URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), permission) )
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
+                if URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+        results = []
+        
+        # clean up how objects are created (use the data object to store the results)
+        if len(self.graph) > 0:
+            for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
+                results.append(Results(s.split('/')[10]))
+            for r in results:
+                for s, p, o in self.graph.triples((None, None, None)):
+                    if r.name in s:
+                        r.graph.add((s, p, o))
+                self.filename = "results/{0}/{1}.nt".format(self.objectType, r.name)
+                r.graph.serialize(destination=self.filename, format='nt')
 
-        if len(self.graph)>0:
-            self.graph.serialize(destination=self.filename, format='nt')
 
     def _addProxy(self, resource, fileSet):
         first = URIRef("http://www.iana.org/assignments/relation/first")
         last = URIRef("http://www.iana.org/assignments/relation/last")
         n = URIRef("http://www.iana.org/assignments/relation/next")
         p = URIRef("http://www.iana.org/assignments/relation/prev")
-        
+
         if resource in proxyHash:
             otherProxy = "{}/proxy{}".format(resource, proxyHash[resource])
             proxyId = generateProxyId(resource)
@@ -220,6 +230,12 @@ class Data(object):
     def resultsToTriplestore(self):
         headers = {'Content-Type': 'text/turtle'}
         requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
+
+
+class Results(object):
+    def __init__(self, name):
+        self.name = name
+        self.graph = Graph()
 
 
 class Query(object):
