@@ -12,7 +12,7 @@ types = [
 	"community",
 	"generic",
 	"thesis",
-	"file",
+	"technical",
 	"relatedObject"
 	]
 

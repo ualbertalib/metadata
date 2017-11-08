@@ -36,7 +36,7 @@ def cleanOutputs(sparqlResults):
 		"community",
 		"generic",
 		"thesis",
-		"file",
+		"technical",
 		"relatedObject"
 	]
 	print('deleting local queries')

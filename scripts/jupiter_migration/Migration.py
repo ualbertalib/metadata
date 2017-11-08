@@ -112,8 +112,8 @@ class QueryFactory():
             return Thesis(sparqlData)
         elif objectType == "generic":
             return Generic(sparqlData)
-        elif objectType == "file":
-            return File(sparqlData)
+        elif objectType == "technical":
+            return Technical(sparqlData)
         elif objectType == "relatedObject":
             return Related_Object(sparqlData)
         else:
@@ -127,7 +127,7 @@ class Data(object):
         self.group = group
         self.sparqlData = sparqlData
         self.sparqlTerms = sparqlTerms
-        self.output = []
+        self.results = {}
         self.graph = Graph()
         self.objectType = queryObject.objectType
         self.directory = "results/{0}/".format(self.objectType)
@@ -183,18 +183,16 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 if URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
-        results = []
-        
-        # clean up how objects are created (use the data object to store the results)
         if len(self.graph) > 0:
             for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
-                results.append(Results(s.split('/')[10]))
-            for r in results:
+                if s.split('/')[10] not in self.results:
+                    self.results[s.split('/')[10]] = Graph()
+            for r in self.results:
                 for s, p, o in self.graph.triples((None, None, None)):
-                    if r.name in s:
-                        r.graph.add((s, p, o))
-                self.filename = "results/{0}/{1}.nt".format(self.objectType, r.name)
-                r.graph.serialize(destination=self.filename, format='nt')
+                    if r in s:
+                        self.results[r].add((s, p, o))
+                self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
+                self.results[r].serialize(destination=self.filename, format='nt')
 
 
     def _addProxy(self, resource, fileSet):
@@ -232,7 +230,7 @@ class Data(object):
         requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
 
 
-class Results(object):
+class Result(object):
     def __init__(self, name):
         self.name = name
         self.graph = Graph()
@@ -479,10 +477,10 @@ class Thesis(Query):
         self.writeQueries()
 
 
-class File(Query):
+class Technical(Query):
     """ direct members: content and characterization"""
     def __init__(self, sparqlData):
-        self.objectType = 'file'
+        self.objectType = 'technical'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
             ?jupiterResource pcdm:hasMember ?jupiterDirectFileset .
