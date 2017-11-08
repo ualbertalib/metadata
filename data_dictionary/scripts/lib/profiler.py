@@ -4,6 +4,7 @@ import json
 import sys
 import os
 from SPARQLWrapper import JSON
+from datetime import datetime, timedelta
 
 
 class Profiler(object):
@@ -17,6 +18,7 @@ class Profiler(object):
 			sys.stdout = profile_output
 			self.__createProfile()
 			sys.stdout = old_stdout
+		self.__createGithubMessage()
 
 	def __createJSON(self):
 		try:
@@ -114,3 +116,36 @@ class Profiler(object):
 									print("    * %s  " % (v))
 		except:
 			PrintException()
+
+	def __createGithubMessage(self):
+		lines = []
+		dateFilter = datetime.now() - timedelta(days=1)
+		query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?username ?date ?type ?graph ?property ?annotation ?insertion ?deletion where { graph ual:audit { ?event schema:agent ?user ; rdf:type ?type ;	schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL { ?event ual:insertion ?insertion } } } ORDER BY desc(?date)"
+		sparql.setReturnFormat(JSON)
+		sparql.setQuery(query)
+		results = sparql.query().convert()
+		for result in results['results']['bindings']:
+			line = ""
+			date = datetime.strptime(result['date']['value'], "%Y-%m-%d %H:%M:%S")
+			if date > dateFilter:
+				ptype = addPrefixes(result['graph']['value'])
+				predicate = addPrefixes(result['property']['value'])
+				annotation = addPrefixes(result['annotation']['value'])
+				line = """
+{}
+  - change made to profile: '{}',
+  - to the property: '{}',
+  - to the annotation '{}',
+  - the following changes:""".format(date, ptype, predicate, annotation)
+				if ('insertion' in result) and (result['insertion']["value"] != ''):
+					line = """{}
+    - inserted: '{}'""".format(line, addPrefixes(result['insertion']['value']))
+				if ('deletion' in result) and (result['deletion']["value"] != ''):
+					line = """{}
+    - deleted: '{}'""".format(line, addPrefixes(result['deletion']['value']))
+				line = """{}
+
+				""".format(line)
+				lines.append(line)
+		with open('data_dictionary/scripts/lib/message.md', 'w+') as f:
+			f.writelines(lines)

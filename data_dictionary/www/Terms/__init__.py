@@ -160,13 +160,13 @@ def newAnnotation():
 @app.route('/_view')
 def view():
     try:
-        query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?userName ?date ?type ?graph ?property ?annotation ?insertion ?deletion where {graph ual:audit {?event schema:agent ?user ; rdf:type ?type ; schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL {?event ual:insertion ?insertion } . ?user foaf:name ?userName} } ORDER BY desc(?date)"
+        query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?date ?type ?graph ?property ?annotation ?insertion ?deletion where {graph ual:audit {?event schema:agent ?user ; rdf:type ?type ; schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL {?event ual:insertion ?insertion } } } ORDER BY desc(?date)"
         sparql.setMethod('GET')
         sparql.setQuery(query)
         results = sparql.query().convert()
         events = []
         for result in results["results"]["bindings"]:
-            binding = {"user": result['userName']['value'],
+            binding = {#"user": result['userName']['value'], #username isn't working with audit right now. the query needs to be fixed.
                             "date": result['date']['value'],
                             "type": result['type']['value'],
                             "graph": result['graph']["value"],

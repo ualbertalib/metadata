@@ -183,6 +183,7 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 if URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+        #checks to see if this particular query yielded any results
         if len(self.graph) > 0:
             for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
                 if s.split('/')[10] not in self.results:
@@ -193,6 +194,8 @@ class Data(object):
                         self.results[r].add((s, p, o))
                 self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                 self.results[r].serialize(destination=self.filename, format='nt')
+        else:
+            print('query failed to generate results')
 
 
     def _addProxy(self, resource, fileSet):
@@ -200,7 +203,6 @@ class Data(object):
         last = URIRef("http://www.iana.org/assignments/relation/last")
         n = URIRef("http://www.iana.org/assignments/relation/next")
         p = URIRef("http://www.iana.org/assignments/relation/prev")
-
         if resource in proxyHash:
             otherProxy = "{}/proxy{}".format(resource, proxyHash[resource])
             proxyId = generateProxyId(resource)
@@ -228,12 +230,6 @@ class Data(object):
     def resultsToTriplestore(self):
         headers = {'Content-Type': 'text/turtle'}
         requests.post(sparqlResults, data=self.graph.serialize(format='nt'), headers=headers)
-
-
-class Result(object):
-    def __init__(self, name):
-        self.name = name
-        self.graph = Graph()
 
 
 class Query(object):
@@ -268,7 +264,7 @@ class Query(object):
 
     def getSplitBy(self):
         # base query only needs 3 prefixes appended to the "select" statement defined by the object
-        query = "prefix fedora: <http://fedora.info/definitions/v4/repository#> prefix ldp: <http://www.w3.org/ns/ldp#> prefix dcterm: <http://purl.org/dc/terms/> prefix info: <info:fedora/fedora-system:def/model#> prefix ual: <http://terms.library.ualberta.ca/> {0}".format(self.select).replace('\n', '')
+        query = "prefix ualids: <http://terms.library.ualberta.ca/identifiers/> prefix fedora: <http://fedora.info/definitions/v4/repository#> prefix ldp: <http://www.w3.org/ns/ldp#> prefix dcterm: <http://purl.org/dc/terms/> prefix info: <info:fedora/fedora-system:def/model#> prefix ual: <http://terms.library.ualberta.ca/> {0}".format(self.select).replace('\n', '')
         self.sparqlData.setReturnFormat(JSON)
         self.sparqlData.setQuery(query)
         results = self.sparqlData.query().convert()
@@ -375,7 +371,8 @@ class Generic(Query):
         self.where = []
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
-            dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string)
+            dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string) .
+            FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})
         }"""
         super().__init__(self.objectType, sparqlData)
 
@@ -388,7 +385,8 @@ class Generic(Query):
             where = """WHERE {{
                 ?resource info:hasModel 'GenericFile'^^xsd:string ;
                 dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string) .
-                FILTER (contains(str(?resource), '{}'))""".format(self.splitBy[group])
+                FILTER (contains(str(?resource), '{}')) .
+                FILTER (NOT EXISTS {{?resource ualids:remote_resource 'Dataverse'^^xsd:string}})""".format(self.splitBy[group])
             construct = self.construct
             for pair in self.mapping:
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
