@@ -154,6 +154,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * required:  
     * false  
+  * search:  
+    * false  
   * sort:  
     * false  
 ### dcterms:title  

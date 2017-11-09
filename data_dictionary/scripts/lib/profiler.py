@@ -118,7 +118,7 @@ class Profiler(object):
 			PrintException()
 
 	def __createGithubMessage(self):
-		lines = []
+		lines = ["Daily changes made to metadata profiles:"]
 		dateFilter = datetime.now() - timedelta(days=1)
 		query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?username ?date ?type ?graph ?property ?annotation ?insertion ?deletion where { graph ual:audit { ?event schema:agent ?user ; rdf:type ?type ;	schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL { ?event ual:insertion ?insertion } } } ORDER BY desc(?date)"
 		sparql.setReturnFormat(JSON)

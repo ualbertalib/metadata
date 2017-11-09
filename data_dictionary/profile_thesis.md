@@ -121,7 +121,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
   * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree  )  
@@ -146,7 +148,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### onForm  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
-  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
   * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
@@ -181,6 +182,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#rdftype  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
@@ -193,6 +195,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### swrc:institution  
   * values displayed on form:  
     * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
+    * **St. Stephen's College** (http://id.loc.gov/authorities/names/n2009054054)  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dgg  
   * dataType:  
@@ -251,7 +254,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * facet:  
     * false  
   * onForm:  
-    * true  
+    * false  
   * propertyName:  
     * digital object identifier  
   * repeat:  
@@ -306,6 +309,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * required:  
     * false  
+  * search:  
+    * true  
   * sort:  
     * false  
 ### dcterms:abstract  
@@ -316,7 +321,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * definedBy:  
     * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsabstract  
   * display:  
-    * false  
+    * true  
   * displayLabel:  
     * abstract  
   * indexAs:  
@@ -427,7 +432,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * definedBy:  
     * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof  
   * display:  
-    * false  
+    * true  
   * displayLabel:  
     * citation for previous publication  
   * facet:  
