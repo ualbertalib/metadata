@@ -12,6 +12,8 @@
             
             <xsl:value-of select="*:datastreamVersion/@LABEL"/>
             <xsl:text>&#09;</xsl:text>
+            <xsl:value-of select="*:datastreamVersion/@ID"/>
+            <xsl:text>&#09;</xsl:text>
             <xsl:value-of select="replace(base-uri(), 'file:/home/mparedes/metadata_work/ERA_files/post-migration/20171106/2017-11-06_Transfered/', '')"/>
             <xsl:text>&#xa;</xsl:text>
             
