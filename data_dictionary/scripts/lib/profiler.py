@@ -3,14 +3,16 @@ from config import namespaces, profileWelcome, profileDefinitions, sparql, ignor
 import json
 import sys
 import os
-from SPARQLWrapper import JSON
+from SPARQLWrapper import JSON, SPARQLWrapper
 from datetime import datetime, timedelta
+from rdflib import Graph, URIRef, Literal
 
 
 class Profiler(object):
 
 	def __init__(self, ptype):
 		self.ptype = ptype
+		self.__backupTriples()
 		self.__createJSON()
 		filename = "data_dictionary/profile_%s.md" % (self.ptype)  # assumed we are in the root metadata folder
 		old_stdout = sys.stdout
@@ -19,6 +21,24 @@ class Profiler(object):
 			self.__createProfile()
 			sys.stdout = old_stdout
 		self.__createGithubMessage()
+
+
+	def __backupTriples(self):
+		filename = "data_dictionary/profiles/backup.nquads"
+		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+		sparql.setReturnFormat(JSON)
+		query = "construct {graph ?g {?s ?p ?o }} where { graph ?g {?s ?p ?o}}"
+		sparql.setQuery(query)
+		results = sparql.query()
+		graph = Graph()
+		for result in results['results']['bindings']:
+			if result['o']['type'] == 'literal':
+				print('literal')
+				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value'])), URIRef(result['g']['value']))
+			elif result['o']['type'] == 'uri':
+				print('uri')
+				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value'])), URIRef(result['g']['value']))
+		graph.serialize(destination=filename, format='nquads')
 
 	def __createJSON(self):
 		try:
