@@ -1,5 +1,9 @@
 from secret import password, client_id, client_secret
+<<<<<<< HEAD
 from github import Github
+=======
+import PyGithub as Github
+>>>>>>> 07a046970e6d86fc27e7221260c5405a0be9b4b8
 
 git = Github('zschoenb', password)
 org = git.get_organization('ualbertalib')
