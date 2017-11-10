@@ -1,4 +1,12 @@
 Daily changes made to metadata profiles:
+2017-11-10 21:52:22
+  - change made to profile: 'http://206.167.181.123:9999/blazegraph/namespace/terms/collection',
+  - to the property: 'fedora:exportsAs',
+  - to the annotation 'ual:comment',
+  - the following changes:
+    - deleted: 'github test'
+
+				
 2017-11-10 17:06:11
   - change made to profile: 'http://206.167.181.123:9999/blazegraph/namespace/terms/collection',
   - to the property: 'fedora:exportsAs',
@@ -38,6 +46,8 @@ Daily changes made to metadata profiles:
   - the following changes:
     - inserted: 'github test'
 
+<<<<<<< HEAD
+=======
 				
 2017-11-09 18:04:51
   - change made to profile: 'http://206.167.181.123:9999/blazegraph/namespace/terms/thesis',
@@ -154,4 +164,5 @@ Daily changes made to metadata profiles:
   - the following changes:
     - deleted: 'rels:hasCollectionMember'
 
+>>>>>>> master
 				
