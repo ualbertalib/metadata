@@ -1,3 +1,0 @@
-password="c1421f98091fca7548ba6067ff7f7e2f81e45867"
-client_id="dc51dae69420236f23d1"
-client_secret="a23f03e9f1572eb6d85b7faf5787be6f5bbcc62a"
