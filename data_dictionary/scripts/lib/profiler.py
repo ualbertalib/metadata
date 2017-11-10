@@ -27,7 +27,7 @@ class Profiler(object):
 		filename = "data_dictionary/profiles/backup.nquads"
 		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
 		sparql.setReturnFormat(JSON)
-		query = "construct {graph ?g {?s ?p ?o }} where { graph ?g {?s ?p ?o}}"
+		query = "select * where { graph ?g {?s ?p ?o} }"
 		sparql.setQuery(query)
 		results = sparql.query()
 		graph = Graph()
