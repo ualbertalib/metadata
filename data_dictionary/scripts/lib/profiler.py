@@ -29,7 +29,7 @@ class Profiler(object):
 		sparql.setReturnFormat(JSON)
 		query = "select * where { graph ?g {?s ?p ?o} }"
 		sparql.setQuery(query)
-		results = sparql.query()
+		results = sparql.query().convert()
 		graph = Graph()
 		for result in results['results']['bindings']:
 			if result['o']['type'] == 'literal':
