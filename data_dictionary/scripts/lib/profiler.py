@@ -22,21 +22,26 @@ class Profiler(object):
 			sys.stdout = old_stdout
 		self.__createGithubMessage()
 
-
 	def __backupTriples(self):
+		ds = Dataset()
+		graphs = {}
 		filename = "data_dictionary/profiles/backup.nquads"
 		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
 		sparql.setReturnFormat(JSON)
+		query = "select ?g where { graph ?g {} }"
+		sparql.setQuery(query)
+		results = sparql.query().convert()
+		for result in results['results']['bindings']:
+			graphs[result['g']['value']] = ds.graph(URIRef(result['g']['value']))
 		query = "select * where { graph ?g {?s ?p ?o} }"
 		sparql.setQuery(query)
 		results = sparql.query().convert()
-		graph = Dataset()
 		for result in results['results']['bindings']:
 			if result['o']['type'] == 'literal':
-				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value']), URIRef(result['g']['value'])))
+				ds.add((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value']), graphs[result['g']['value']]))
 			elif result['o']['type'] == 'uri':
-				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value']), URIRef(result['g']['value'])))
-		graph.serialize(destination=filename, format='nquads')
+				ds.add((URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value']), graphs[result['g']['value']]))
+		ds.serialize(destination=filename, format='nquads')
 
 	def __createJSON(self):
 		try:
