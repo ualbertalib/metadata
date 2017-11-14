@@ -17,5 +17,5 @@ for triple in dates:
 		elif result['object']['type'] == 'uri':
 			graph.add((URIRef(result['subject']['value']), URIRef(result['predicate']['value']), URIRef(result['object']['value'])))
 graph.serialize(destination='temp.nt', format='nt')
-requests.post(url="http://206.167.181.123:9999/blazegraph/namespace/dates/sparql", files={'file': open('temp.nt', 'rb')}, headers={'Content-Type': 'text/turtle'})
-os.remove('temp.nt')
+#requests.post(url="http://206.167.181.123:9999/blazegraph/namespace/dates/sparql", files={'file': open('temp.nt', 'rb')}, headers={'Content-Type': 'text/turtle'})
+#os.remove('temp.nt')
