@@ -5,7 +5,7 @@ import sys
 import os
 from SPARQLWrapper import JSON, SPARQLWrapper
 from datetime import datetime, timedelta
-from rdflib import Graph, URIRef, Literal, Dataset
+from rdflib import URIRef, Literal, Dataset
 
 
 class Profiler(object):
@@ -36,7 +36,7 @@ class Profiler(object):
 		query = "select * where { graph ?g {?s ?p ?o} }"
 		sparql.setQuery(query)
 		results = sparql.query().convert()
-		for result in results['results']['bindings']:
+		for result in sorted(results['results']['bindings'], key=lambda k: k['o']['value']):
 			if result['o']['type'] == 'literal':
 				ds.add((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value']), graphs[result['g']['value']]))
 			elif result['o']['type'] == 'uri':
