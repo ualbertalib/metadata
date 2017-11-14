@@ -34,10 +34,11 @@ class Profiler(object):
 		for result in results['results']['bindings']:
 			if result['o']['type'] == 'literal':
 				print('literal')
-				graph.addN( ( URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value']) ), URIRef(result['g']['value']) )
+				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value'])), URIRef(result['g']['value'])
+					)
 			elif result['o']['type'] == 'uri':
 				print('uri')
-				graph.addN( ( URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value']) ), URIRef(result['g']['value']) )
+				graph.addN((URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value'])), URIRef(result['g']['value'])
 		graph.serialize(destination=filename, format='nquads')
 
 	def __createJSON(self):
