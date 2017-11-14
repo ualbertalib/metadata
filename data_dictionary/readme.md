@@ -1,4 +1,4 @@
-###### Welcome to the home of the Jupiter Data Dictionary. Here you will discover a set of living documents, supporting documentation, and applicatons, that work together to describe metadata in Jupiter. 
+###### Welcome to the home of the Jupiter Data Dictionary. Here you will discover a set of living documents, supporting documentation, and applications, that work together to describe metadata in Jupiter. 
 
 ###### Consult the [ontology](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md) for high level information -- or "global definitions" -- regarding Jupiter properties and controlled vocabularies. Consult the [pcdm template](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_profile_template.md) for the specific application of PCDM in Jupiter.
 
