@@ -88,6 +88,8 @@ class TransformationFactory():
             return Transformation().type(triple, objectType)
         elif function == "rights":
             return Transformation().rights(triple, objectType)
+        elif function == "subject":
+            return Transformation().subject(triple, objectType)
         elif function == "license":
             return Transformation().license(triple, objectType)
         elif function == "ontologyinstitution":
@@ -745,6 +747,13 @@ class Transformation():
 
     def __init__(self):
         self.output = []
+
+    def subject(self, triple, objectType):
+        """strip whitespaces/periods off front and back & capitalize first letter"""
+        triple['object']['value'] = triple['object']['value'].strip().strip('.')
+        triple['object']['value'] = triple['object']['value'][0].upper() + triple['object']['value'][1:]
+        self.output.append(triple)
+        return self.output
 
     def language(self, triple, objectType):
         # normalize values and convert to URI (consult the "vocabs" variable from the config file (this folder))
