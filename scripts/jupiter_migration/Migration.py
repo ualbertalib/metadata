@@ -947,6 +947,7 @@ class Transformation():
         return self.output
 
     def createdDate(self, subjects, triple, objectType):
+        print('createdDate', triple['subject']['value'])
         self.output.append(
             {
                 'subject': {
@@ -965,6 +966,7 @@ class Transformation():
         return self.output
 
     def gradDate(self, subjects, triple, objectType):
+        print('gradDate', triple['subject']['value'])
         self.output.append(
             {
                 'subject': {
