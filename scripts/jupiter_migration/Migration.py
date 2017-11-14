@@ -1,4 +1,4 @@
-from config import types, sparqlTerms, sparqlData, sparqlResults, mig_ns, vocabs
+from config import types, dates, sparqlTerms, sparqlData, sparqlResults, mig_ns, vocabs
 from utilities import PrintException, cleanOutputs
 import concurrent.futures
 import time
@@ -76,6 +76,11 @@ class TransformationFactory():
     @staticmethod
     def getTransformation(triple, objectType):
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
+        for subjects in dates:
+            if triple['subject']['value'] == subjects['subject'] and function == "    created":
+                return Transformation().createdDate(subjects, triple, objectType)
+            if triple['subject']['value'] == subjects['subject'] and function == "    graduationdate":
+                return Transformation().gradDate(subjects, triple, objectType)
         if function == "accessRights":
             return Transformation().accessRights(triple, objectType)
         elif function == "modelsmemberOf":
@@ -932,6 +937,41 @@ class Transformation():
         )
         return self.output
 
+    def createdDate(self, subjects, triple, objectType):
+        self.output.append(
+            {
+                'subject': {
+                    'value': triple['subject']['value'],
+                    'type': 'uri'
+                },
+                'predicate': {
+                    'value': triple['predicate']['value'],
+                    'type': 'uri'
+                },
+                'object': {
+                    'value': subjects["object"]["value"]
+                }
+            }
+        )
+        return self.output
+
+    def gradDate(self, subjects, triple, objectType):
+        self.output.append(
+            {
+                'subject': {
+                    'value': triple['subject']['value'],
+                    'type': 'uri'
+                },
+                'predicate': {
+                    'value': triple['predicate']['value'],
+                    'type': 'uri'
+                },
+                'object': {
+                    'value': subjects["object"]["value"]
+                }
+            }
+        )
+        return self.output
 
 
 if __name__ == "__main__":
