@@ -77,9 +77,9 @@ class TransformationFactory():
     def getTransformation(triple, objectType):
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
         for subjects in dates:
-            if triple['subject']['value'] == subjects['subject'] and function == "    created":
+            if (subjects['subject'] in triple['subject']['value']) and (function == "created"):
                 return Transformation().createdDate(subjects, triple, objectType)
-            if triple['subject']['value'] == subjects['subject'] and function == "    graduationdate":
+            if (subjects['subject'] in triple['subject']['value']) and (function == "graduationdate"):
                 return Transformation().gradDate(subjects, triple, objectType)
         if function == "accessRights":
             return Transformation().accessRights(triple, objectType)
@@ -397,11 +397,17 @@ class Generic(Query):
             construct = self.construct
             for pair in self.mapping:
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                where = """ {0} .
-                            OPTIONAL {{
-                                ?resource <{1}> ?{2} .
-                                FILTER (str(?{3})!='')
-                            }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                if ("http://purl.org/dc/terms/created" in pair[1]) or ("http://terms.library.ualberta.ca/date/graduationdate" in pair[1]):
+                    where = """ {0} .
+                                OPTIONAL {{
+                                    ?resource <{1}> ?{2} .
+                                }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                else:
+                    where = """ {0} .
+                                OPTIONAL {{
+                                    ?resource <{1}> ?{2} .
+                                    FILTER (str(?{3})!='')
+                                }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))                
             # customize the where clause to include triples that aren't in the mappings
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"
@@ -443,7 +449,6 @@ class Thesis(Query):
         }"""
         super().__init__(self.objectType, sparqlData)
 
-
     def generateQueries(self):
         self.getSplitBy()
         for group in self.splitBy.keys():
@@ -455,7 +460,10 @@ class Thesis(Query):
             construct = self.construct
             for pair in self.mapping:
                 construct = "{0} ; <{1}> ?{2}".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                if ("http://purl.org/dc/terms/created" in pair[1]) or ("http://terms.library.ualberta.ca/date/graduationdate" in pair[1]):
+                    where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                else:
+                    where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"
             self.queries[group][0]['where'] = """{} .
@@ -947,7 +955,6 @@ class Transformation():
         return self.output
 
     def createdDate(self, subjects, triple, objectType):
-        print('createdDate', triple['subject']['value'])
         self.output.append(
             {
                 'subject': {
@@ -959,7 +966,8 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': subjects["object"]["value"]
+                    'value': subjects["object"],
+                    'type': 'date'
                 }
             }
         )
@@ -978,7 +986,8 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': subjects["object"]["value"]
+                    'value': subjects["object"],
+                    'type': 'date'
                 }
             }
         )
