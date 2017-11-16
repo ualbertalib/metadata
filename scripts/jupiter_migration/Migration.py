@@ -103,6 +103,8 @@ class TransformationFactory():
             return Transformation().available(triple, objectType)
         elif function == "aclvisibilityAfterEmbargo":
             return Transformation().aclvisibilityAfterEmbargo(triple, objectType)
+        elif function == "owner":
+            return Transformation().owner(triple, objectType)            
         else:
             return [triple]
 
@@ -935,7 +937,6 @@ class Transformation():
             return self.output
 
     def available(self, triple, objectType):
-        self.output.append(triple)
         self.output.append(
             {
                 'subject': {
@@ -991,6 +992,11 @@ class Transformation():
                 }
             }
         )
+        return self.output
+
+    def owner(self, triple, objectType):
+        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
+        self.output.append(triple)
         return self.output
 
 
