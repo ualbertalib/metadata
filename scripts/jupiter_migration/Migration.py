@@ -308,7 +308,7 @@ class Collection(Query):
     def __init__(self, sparqlData):
         self.objectType = 'collection'
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            rdf:type pcdm:Collection ; ual:hydraNoid ?noid"""
+            rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE {
             ?resource info:hasModel 'Collection'^^xsd:string .
             OPTIONAL {
@@ -333,7 +333,7 @@ class Collection(Query):
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['collection'][0]['prefix'] = self.prefixes
             self.queries['collection'][0]['construct'] = construct + "}"
-            self.queries['collection'][0]['where'] = """{} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
+            self.queries['collection'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
         self.writeQueries()
 
 
@@ -341,7 +341,7 @@ class Community(Query):
     def __init__(self, sparqlData):
         self.objectType = 'community'
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid"""
+            rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
             OPTIONAL { ?resource ualids:is_community 'true'^^xsd:boolean } .
             OPTIONAL { ?resource ualid:is_community 'true'^^xsd:boolean } .
@@ -359,7 +359,7 @@ class Community(Query):
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries['community'][0]['prefix'] = self.prefixes
             self.queries['community'][0]['construct'] = construct + "}"
-            self.queries['community'][0]['where'] = """{}  . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
+            self.queries['community'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
         self.writeQueries()
 
 
@@ -996,6 +996,7 @@ class Transformation():
 
     def owner(self, triple, objectType):
         triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
+        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/group#")
         self.output.append(triple)
         return self.output
 
