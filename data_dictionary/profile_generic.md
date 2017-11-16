@@ -153,6 +153,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
+  * [sort_year](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsort_year  )  
 ### indexAs  
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor) indexes as:  
     * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  )  
@@ -197,6 +198,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
+  * [sort_year](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsort_year  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof  )  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
@@ -208,6 +210,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### sort  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
+  * [sort_year](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsort_year  )  
 
 # Profile by property
 
@@ -893,6 +896,24 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:sort_year  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/year_created  
+  * dataType:  
+    * auto  
+  * display:  
+    * false  
+  * facet:  
+    * true  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Sort Year  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * false  
+  * sort:  
+    * true  
 ### ual:unicorn  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/unicorn  
