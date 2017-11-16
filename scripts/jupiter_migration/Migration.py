@@ -187,7 +187,7 @@ class Data(object):
                 else:
                     s_o[s].append(o)
             for so in s_o:
-                if URIRef('http://terms.library.ualberta.ca/private') in s_o[so]:
+                if URIRef('http://terms.library.ualberta.ca/draft') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 if URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
@@ -931,7 +931,7 @@ class Transformation():
             self.output.append(triple)
             return self.output
         else:
-            triple['object']['value'] = "http://terms.library.ualberta.ca/private"
+            triple['object']['value'] = "http://terms.library.ualberta.ca/draft"
             triple['object']['type'] = 'uri'
             self.output.append(triple)
             return self.output
