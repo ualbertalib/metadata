@@ -86,6 +86,8 @@ class TransformationFactory():
                 return Transformation().gradDate(subjects, triple, objectType)
         if function == "created":
             return Transformation().sortYear(triple, objectType)
+        if function == "graduationdate":
+            return Transformation().sortYear(triple, objectType)
         if function == "accessRights":
             return Transformation().accessRights(triple, objectType)
         elif function == "modelsmemberOf":
@@ -1025,43 +1027,42 @@ class Transformation():
         
     def createdDate(self, subjects, triple, objectType):
         tempTriple = {
-                'subject': {
-                    'value': triple['subject']['value'],
-                    'type': 'uri'
-                },
-                'predicate': {
-                    'value': triple['predicate']['value'],
-                    'type': 'uri'
-                },
-                'object': {
-                    'value': subjects["object"][0],
-                    'type': 'date'
-                }
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': triple['predicate']['value'],
+                'type': 'uri'
+            },
+            'object': {
+                'value': subjects["object"][0],
+                'type': 'date'
             }
+        }
         self.output.append(tempTriple)
         Transformation.sortYear(self, tempTriple, objectType)
         return self.output
 
     def gradDate(self, subjects, triple, objectType):
-        print('gradDate', triple['subject']['value'])
-        self.output.append(
-            {
-                'subject': {
-                    'value': triple['subject']['value'],
-                    'type': 'uri'
-                },
-                'predicate': {
-                    'value': triple['predicate']['value'],
-                    'type': 'uri'
-                },
-                'object': {
-                    'value': subjects["object"],
-                    'type': 'date'
-                }
+        tempTriple = {
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': triple['predicate']['value'],
+                'type': 'uri'
+            },
+            'object': {
+                'value': subjects["object"][0],
+                'type': 'date'
             }
-        )
+        }
+        self.output.append(tempTriple)
+        Transformation.sortYear(self, tempTriple, objectType)
         return self.output
-    
+
     def sortYear(self, triple, objectType):
         self.output.append(
             {
