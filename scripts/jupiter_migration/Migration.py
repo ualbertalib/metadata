@@ -2,7 +2,7 @@ from config import types, dates, sparqlTerms, sparqlData, sparqlResults, mig_ns,
 from utilities import PrintException, cleanOutputs
 import concurrent.futures
 import time
-from datetime import datetime
+from datetime import datetime, date
 import os
 from SPARQLWrapper import JSON, SPARQLWrapper
 from rdflib import URIRef, Literal, Graph, Namespace
@@ -187,10 +187,15 @@ class Data(object):
                 else:
                     s_o[s].append(o)
             for so in s_o:
-                if URIRef('http://terms.library.ualberta.ca/draft') in s_o[so]:
+                if URIRef('http://terms.library.ualberta.ca/embargo') in s_o[so]:
+                    print(URIRef(so), 'should be embargo')
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
-                if URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/draft')))
+                elif URIRef('http://terms.library.ualberta.ca/draft') in s_o[so]:
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
+                elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
         #checks to see if this particular query yielded any results
         if len(self.graph) > 0:
@@ -937,7 +942,9 @@ class Transformation():
             return self.output
 
     def available(self, triple, objectType):
-        self.output.append(
+        if datetime.strptime(re.sub(r"[T].+$", "", triple['object']['value']), "%Y-%m-%d").date() > date.today():
+            print(triple['subject']['value'])
+            self.output.append(
             {
                 'subject': {
                     'value': triple['subject']['value'],
@@ -948,11 +955,12 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': "http://terms.library.ualberta.ca/public",
+                    'value': "http://terms.library.ualberta.ca/embargo",
                     'type': 'uri'
                 }
             }
-        )
+            )
+        self.output.append(triple)
         return self.output
 
     def createdDate(self, subjects, triple, objectType):
