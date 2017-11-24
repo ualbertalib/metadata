@@ -1111,7 +1111,7 @@ class Transformation():
                             'type': 'uri'
                         },
                         'predicate': {
-                            'value': 'http://terms.library.ualberta.ca/date/sort_year',
+                            'value': 'http://terms.library.ualberta.ca/date/sortyear',
                             'type': 'uri'
                         },
                         'object': {
