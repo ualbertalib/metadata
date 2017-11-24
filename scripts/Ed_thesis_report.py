@@ -31,17 +31,17 @@ for i in range(1, sheet1.max_row+1):
 del final1[0] 
 with open('test.tsv', 'a') as file:
 	z = 0
-	file.write("name in catalogue" + "\t" + "title in catalogue" + "\t" + "name in ERA" + "\t" + "title in ERA" + "\t" + "department in catalogue" + "\t" + "department in ERA" + "\t" + "year in catalogue" + "\t" + "year in ERA" + "\t" + "degeree in catalogue" + "\t" + "degree in ERA" + "\n")
+	file.write("name in catalogue" + "\t" + "title in catalogue" + "\t" + "name in ERA" + "\t" + "title in ERA" + "\t" + "department in catalogue" + "\t" + "department in ERA" + "\t" + "year in catalogue" + "\t" + "year in ERA" + "\t" + "degeree in catalogue" + "\t" + "degree in ERA" + "\t" + "microfilm?" + "\n")
 	for i in final:
 		for j in final1:
 			f = 0
 			auth = fuzz.token_sort_ratio(j[2], i[0])
 			title = fuzz.token_sort_ratio(j[4], i[1])
-			if 100 > auth > 90 and 100 > title > 90:
+			if auth > 95 and title > 95:
 				print (j[2] + " " + i[0] + " " + str(auth))
 				z = z + 1
 				f = 1
-				file.write(i[0].encode('utf-8') + "\t" + i[1].encode('utf-8') + "\t" + j[2].encode('utf-8') + "\t" + j[4].encode('utf-8') + "\t" + i[4].encode('utf-8') + "\t" + j[1].encode('utf-8') + "\t" + str(i[2]) + "\t" + str(j[5]) + "\t" + i[3].encode('utf-8') + "\t" + j[3].encode('utf-8') + "\n")
+				file.write(i[0].encode('utf-8') + "\t" + i[1].encode('utf-8') + "\t" + j[2].encode('utf-8') + "\t" + j[4].encode('utf-8') + "\t" + i[5].encode('utf-8') + "\t" + j[1].encode('utf-8') + "\t" + str(i[3]) + "\t" + str(j[5]) + "\t" + i[4].encode('utf-8') + "\t" + j[3].encode('utf-8') + "\t" + str(i[2]) + "\n")
 
 
 				#sheet3['A' + str(z)] = i[0]
@@ -56,7 +56,7 @@ with open('test.tsv', 'a') as file:
 		if f == 0:
 			print(i[0] + " title: " + i[1] + "  ---   " + j[2] + "  title: " + j[4])
 			z = z + 1
-			file.write(i[0].encode('utf-8') + "\t" + i[1].encode('utf-8') + "\t" + "Not in ERA" + "\t" + "Not in ERA" + "\t" + i[4].encode('utf-8') + "\t" + "Not in ERA" + "\t" + str(i[2]) + "\t" + "Not in ERA" + "\t" + i[3].encode('utf-8') + "\t" + "Not in ERA" + "\n")
+			file.write(i[0].encode('utf-8') + "\t" + i[1].encode('utf-8') + "\t" + "Not in ERA" + "\t" + "Not in ERA" + "\t" + i[5].encode('utf-8') + "\t" + "Not in ERA" + "\t" + str(i[3]) + "\t" + "Not in ERA" + "\t" + i[4].encode('utf-8') + "\t" + "Not in ERA" + "\t" + str(i[2]) +"\n")
 		
 
 		#sheet3['A' + str(z)] = i[0]

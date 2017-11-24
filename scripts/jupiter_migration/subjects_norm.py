@@ -26,7 +26,7 @@ def main():
     def hasNumbers(inputString):
         return bool(re.search(r'\d', inputString))
 
-    def levDist(subjects, i):
+    def levDist(subjects, i, ncols):
         for j in range(1, ncols):
             if subjects[i][0] == subjects[0][j]:
                 continue
@@ -44,8 +44,7 @@ def main():
                     subjects[0][i+1] = subject
                     subjects[i+1][0] = subject
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            results = {executor.submit(levDist, subjects, i): i for i in range(1, ncols)}
-
+            results = {executor.submit(levDist, subjects, i, ncols): i for i in range(1, ncols)}
         print ("distance function is done")
         write(subjects, objectType, ncols)
 
@@ -64,7 +63,7 @@ def main():
                             'score': subjects[i][j] 
                             } 
                         )
-        print (subs)
+        #print (subs)
         if objectType == ' ':
             with open('subjects/blank.json', 'a') as out:
                 json.dump(subs, out)
@@ -83,7 +82,6 @@ def main():
             out.close()
         tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         print("time for " + objectType + ":", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
-
             
     for objectType in [' ','null', 'Conference/workshop Poster', 'Conference/workshop Presentation','Book Chapter', 'Dataset', 'Thesis', 'Report', 'Computing Science Technical Report', 'Research Material', 'Review', 'Learning Object', 'Image', 'Structural Engineering Report', 'Book', 'Journal Article (Published)', 'Journal Article (Draft-Submitted)']:
         ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -91,15 +89,15 @@ def main():
         sparql.setMethod("POST")
         sparql.setReturnFormat(JSON)
         if objectType == 'Thesis':
-            for deg in ["", "Doctoral", "Master\\'s"]:
+            for deg in ["", "Doctoral"]: #, "Master\\'s"
                 query = "prefix dcterm: <http://purl.org/dc/terms/> select ?s ?type ?value where {?s dcterm:subject ?value . ?s dcterm:type ?type . ?s <http://terms.library.library.ca/identifiers/thesislevel> ?deg . filter(?deg = '%s' && ?type = '%s')}" % (deg, objectType) 
                 print ("running for: " + deg)
-                matrix(query)
-                                
-            #prefix dcterm: <http://purl.org/dc/terms/> select ?s where {?s dcterm:type ?sub . minus {?s <http://terms.library.library.ca/identifiers/thesislevel> ?lang} filter(?sub = 'Thesis')} 
+                matrix(query)                    
+            query = "prefix dcterm: <http://purl.org/dc/terms/> select ?s ?type ?value where {?s dcterm:subject ?value . ?s dcterm:type ?type  . minus {?s <http://terms.library.library.ca/identifiers/thesislevel> ?deg} filter(?type = 'Thesis')}" 
+            matrix(query)
         else:
             query = "prefix dcterm: <http://purl.org/dc/terms/> select ?s ?type ?value where {?s dcterm:subject ?value . ?s dcterm:type ?type . filter(?type = '%s')}" % (objectType) 
-            matrix(query)
+            matrix(query)     
                
 if __name__ == "__main__":
     main()
