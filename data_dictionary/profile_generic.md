@@ -118,8 +118,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/halpern:nnafile  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/halpern:nnaitem  
-  * [sort_year](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsort_year) is backward compatible with:  
-    * http://terms.library.ualberta.ca/year_created  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype) is backward compatible with:  
@@ -244,7 +242,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * auto  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#prismdoi  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#prismdoi  
   * display:  
     * true  
   * displayLabel:  
@@ -269,7 +267,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccontributor  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  
   * display:  
     * true  
   * displayLabel:  
@@ -294,7 +292,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  
   * display:  
     * true  
   * displayLabel:  
@@ -321,7 +319,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcrights  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcrights  
   * display:  
     * true  
   * displayLabel:  
@@ -344,7 +342,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dcsubject  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  
   * display:  
     * true  
   * displayLabel:  
@@ -371,7 +369,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsalternative  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  
   * display:  
     * true  
   * facet:  
@@ -394,7 +392,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  
   * display:  
     * true  
   * displayLabel:  
@@ -419,7 +417,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  
   * display:  
     * true  
   * displayLabel:  
@@ -448,7 +446,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsidentifier  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  
   * display:  
     * true  
   * facet:  
@@ -471,7 +469,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsisversionof  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof  
   * display:  
     * true  
   * displayLabel:  
@@ -506,7 +504,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * uri  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  
   * display:  
     * true  
   * displayLabel:  
@@ -540,7 +538,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * uri  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslicense  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense  
   * display:  
     * true  
   * displayLabel:  
@@ -568,7 +566,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsrelation  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsrelation  
   * display:  
     * true  
   * displayLabel:  
@@ -593,7 +591,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermslanguage  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  
   * display:  
     * true  
   * displayLabel:  
@@ -616,7 +614,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsspatial  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial  
   * display:  
     * true  
   * displayLabel:  
@@ -641,7 +639,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstemporal  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstemporal  
   * display:  
     * true  
   * displayLabel:  
@@ -666,7 +664,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstitle  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  
   * display:  
     * true  
   * facet:  
@@ -701,7 +699,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * uri  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermstype  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  
   * display:  
     * true  
   * displayLabel:  
@@ -728,7 +726,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * auto  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#bibostatus  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#bibostatus  
   * display:  
     * true  
   * displayLabel:  
@@ -760,7 +758,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualark  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark  
   * display:  
     * false  
   * facet:  
@@ -783,7 +781,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * auto  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualdepositor  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor  
   * display:  
     * false  
   * facet:  
@@ -806,7 +804,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3handle  
+    * https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_generic.md#ualfedora3handle  
   * display:  
     * false  
   * facet:  
@@ -829,7 +827,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualfedora3uuid  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  
   * display:  
     * false  
   * facet:  
@@ -856,7 +854,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnafile  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile  
   * display:  
     * false  
   * facet:  
@@ -879,7 +877,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualnnaitem  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem  
   * display:  
     * false  
   * facet:  
@@ -895,8 +893,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * sort:  
     * false  
 ### ual:sort_year  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/year_created  
   * dataType:  
     * auto  
   * display:  
@@ -923,7 +919,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary#ualunicorn  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn  
   * display:  
     * false  
   * facet:  
