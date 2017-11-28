@@ -69,6 +69,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+  * [http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#http//www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateingested) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -118,7 +120,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  
   * display:  
     * false  
   * facet:  
@@ -139,7 +141,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  
   * display:  
     * true  
   * displayLabel:  
@@ -166,7 +168,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstitle  
   * display:  
     * true  
   * displayLabel:  
@@ -193,7 +195,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * auto  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepositor  
   * display:  
     * false  
   * facet:  
@@ -212,6 +214,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+### http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
