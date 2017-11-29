@@ -101,7 +101,7 @@ Access controls are the mechanism by which users are granted permissions for rea
   * repeat:
     * false
   * required:
-    * trye
+    * true
 
 ### dcterms:available
   * appliesTo:
@@ -114,7 +114,7 @@ Access controls are the mechanism by which users are granted permissions for rea
     * false
   * required:
     * false
-    
+
 # Values
 
 ### ual:authenticated
