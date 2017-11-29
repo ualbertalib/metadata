@@ -1,0 +1,1 @@
+subs = [{"useForm": "directories", "mappings": "directories  ", "score": 92}, {"useForm": "performing arts", "mappings": "performing arts  ", "score": 94}, {"useForm": "petroleum geology of gas reservoir", "mappings": "petroleum geology of shale gas reservoir", "score": 92}]
