@@ -22,6 +22,8 @@ Access controls are the mechanism by which users are granted permissions for rea
      * Jupiter specific instructions for using this property
    * **usedWith**
      * the value can be used with these properties
+   * **repeat**
+     * can this property occur more than once? (boolean)
 
 
 # Table of Contents:
@@ -45,6 +47,8 @@ Access controls are the mechanism by which users are granted permissions for rea
     * acl:embargoHistory
   * comment:
     * describes the circumstances (i.e. date and change in visibility) under which the item was released from embargo
+  * repeat:
+    * false
 
 ### acl:visibilityAfterEmbargo
   * acceptedValues:
@@ -57,6 +61,8 @@ Access controls are the mechanism by which users are granted permissions for rea
     * acl:visibilityAfterEmbargo
   * comment:
     * indicates the visibility of the object after the item is released from embargo
+  * repeat:
+    * false
 
 ### bibo:owner
   * acceptedValues:
@@ -68,6 +74,8 @@ Access controls are the mechanism by which users are granted permissions for rea
     * webacl 'write' group
   * comment:
     * At the point of migration, the "http://projecthydra.org/ns/auth/person#" prefix was stripped leaving only the ualberta email as the owner value. This HydraNorth legacy user value was preserved externally from Jupiter. Upon being ingested into Jupiter, the email was replaced by a unique ID generated from a mysql database containing user information.
+  * repeat:
+    * true
 
 ### dcterms:accessRights
   * acceptedValues:
@@ -84,6 +92,8 @@ Access controls are the mechanism by which users are granted permissions for rea
     * webacl 'read' group
   * comment:
     * indicates the current visibility of the object.
+  * repeat:
+    * false
 
 ### dcterms:available
   * appliesTo:
@@ -92,7 +102,8 @@ Access controls are the mechanism by which users are granted permissions for rea
     * acl:embargoReleaseDate
   * comment:
     * indicates the date upon which the permissions change for an item under embargo ([dcterms:accessRights](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#dctermsaccessrights) takes the value declared in [acl:visibilityAfterEmbargo](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#aclvisibilityafterembargo))
-
+  * repeat:
+    * false
 
 # Values
 
