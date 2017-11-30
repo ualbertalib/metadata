@@ -6,9 +6,9 @@
     
     <xsl:template match="/">
         <xsl:for-each select="//incident">
-            <xsl:value-of select="//description"/>
-            <xsl:text>&#09;</xsl:text>
-            <xsl:value-of select="//systemID"/>
+            <xsl:value-of select="description"/>
+            <xsl:text>------</xsl:text>
+            <xsl:value-of select="replace(systemID, '/home/mparedes/metadata/scripts/jupiter_migration/char/', '')"/>
             <xsl:text>&#xa;</xsl:text>
         </xsl:for-each>
         
