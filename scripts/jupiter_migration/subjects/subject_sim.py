@@ -1,6 +1,7 @@
 from fuzzywuzzy import fuzz
 import re, os, json
 
+#os.chdir("subjects")
 ss = []
 sd = []
 su = []
@@ -22,24 +23,90 @@ for filename in os.listdir(os.getcwd()):
                 su.append(i)
                 ss.append(i["useForm"])
                 sd.append(i["mappings"])
-for i in ss:
-    if i in sv:
+for i in sd:
+    if i in ss:
         continue
     else:
-        temp = i.replace('-- ', '--').replace(' --', '--').replace(' -- ', '--')
+        ss.append(i)
+#print (ss)
+for i in ss:
+    if i.replace(',', '').replace('.', '') in sv:
+        continue
+    else:
+        temp = i.replace('-- ', '--').replace(' --', '--').replace(' -- ', '--').replace('.', '').replace(',', '')
         test1 = i.replace('-- ', ' ').replace(' --', ' ').replace(' -- ', ' ').replace('—', ' ').replace('-', ' ').replace('.', '').replace(',', '')
-        sg = ['no scoe yet']
-        for j in sd:
-            test2 = j.replace('-- ', ' ').replace(' --', ' ').replace(' -- ', ' ').replace('—', ' ').replace('-', ' ').replace('.', '').replace(',', '')
-            mapp = fuzz.ratio(test1, test2)
-            if (len(i) < 10 and int(mapp) < 91) or (len(i) < 20 and int(mapp) < 95) or (len(i) < 30 and int(mapp) < 98) or (len(i) > 29 and int(mapp) < 99):
+        sg = []
+        for j in ss:
+            if j in sv:
                 continue
             else:
-                del sg[0]
-                sv.append(j)
-                sg.append(j)
-        if sg[0] != 'no scoe yet':
-            sa.append({'useForm': temp, 'mappings': sg})
+                if i[-1] == "s" and i[0:-1] == j:
+                    #print (i, j)
+                    sv.append(i)
+                    sv.append(j)
+                    sg.append(j)
+                    sa.append({'useForm': i, 'mappings': sg})
+            
+for i in ss:
+    if i.replace(',', '').replace('.', '') in sv:
+        #print ("first:" + i)
+        continue
+    else:
+        #print ("second: " + i)
+        temp = i.replace('-- ', '--').replace(' --', '--').replace(' -- ', '--').replace('.', '').replace(',', '')
+        test1 = i.replace('-- ', ' ').replace(' --', ' ').replace(' -- ', ' ').replace('—', ' ').replace('-', ' ').replace('.', '').replace(',', '')
+        sg = []
+        for j in ss:
+            if j in sv:
+                continue
+            else:
+                test2 = j.replace('-- ', ' ').replace(' --', ' ').replace(' -- ', ' ').replace('—', ' ').replace('-', ' ').replace('.', '').replace(',', '')
+                mapp = fuzz.ratio(test1, test2)
+                #print (i, j, mapp)
+                if len(i) < 10 and int(mapp) < 91:
+                    continue
+                elif ((len(i) > 9 and len(i) < 20) and int(mapp) < 93):
+                    continue
+                elif ((len(i) > 19 and len(i) < 30) and int(mapp) < 98):
+                    continue
+                elif (len(i) >29 and int(mapp) < 99):
+                    continue
+                elif i == j:
+                    continue
+                else:
+                    sv.append(i)
+                    sv.append(j)
+                    if j not in sg:
+                        sg.append(j)
+        sa.append({'useForm': temp, 'mappings': sg})
+#print (sa)
 with open('subjects1.py', 'a') as out:
-    json.dump(sa, out)
+    out.write('subjects = [')
+    for i in sa:
+        if i['useForm'] != i['mappings']:
+            le = len(i['mappings'])
+            if le != 0:
+                if "—" in i['useForm']:
+                    for z in i['mappings']:
+                        if "--" in z:
+                            temp_map = z.replace('-- ', '--').replace(' --', '--').replace(' -- ', '--')
+                            out.write('{"useForm":' + '"' + temp_map + '",' + '\n')
+                            out.write('"mappings": [')
+                            out.write('"' + i['useForm'] + '", ')
+                            for l, j in enumerate(i['mappings']):
+                                if l < (le-1):
+                                    out.write(', "' + j + '",')
+                                else:
+                                    out.write('"' + j + '"')
+                            out.write(']},' + '\n') 
+                else:
+                    out.write('{"useForm":' + '"' + i['useForm'] + '",' + '\n')
+                    out.write('"mappings": [')
+                    for l, w in enumerate(i['mappings']):
+                        if l < (le-1):
+                            out.write('"' + w + '",')
+                        else:
+                            out.write('"' + w + '"')
+                    out.write(']},' + '\n')
+             #   json.dump(sa, out)
 print ("done")
