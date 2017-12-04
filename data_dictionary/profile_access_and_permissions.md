@@ -30,7 +30,7 @@ Access controls are the mechanism by which users are granted permissions for rea
   * Properties
     * [acl:embargoHistory](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#alcembargoistory)
     * [acl:visibilityAfterEmbargo](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#aclvisibilityafterembargo)
-    * [bibo:owner](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#bibowner)
+    * [bibo:owner](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#biboowner)
     * [dcterms:accessRights](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#dctermsaccessrights)
     * [dcterm:available](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#dctermsavailable)
   * Values
