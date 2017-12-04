@@ -140,6 +140,63 @@ class Profiler(object):
 		except:
 			PrintException()
 
+
+	def __create_oai_profiles(self):
+		for ptype in ["oai_etdms", "oai_pmh"]:
+			try:
+				filename = "data_dictionary/profiles/%s/profile.json" % (ptype)
+				with open(filename, 'r+') as profileData:
+					dataOriginal = json.load(profileData)
+					data = sorted(dataOriginal.items())
+					print('# Jupiter %s Application Profile' % (ptype.title()))
+					print('')
+					print("%s" % (profileWelcome))
+					print('')
+					print('# Namespaces  ')
+					for n in namespaces:
+						if n['uri'] not in ignore:
+							print('**%s:** %s  ' % (n['prefix'], n['uri']))
+					print('')
+					print('# Definitions')
+					print('')
+					for d in profileDefinitions:
+						print('   **%s** %s  ' % (d['term'], d['def']))
+					print('')
+					print('# Profile by annotation')
+					annotations = []
+					display = False
+					for key, value in data:
+						for key in value.keys():
+							annotations.append(key)
+					annotations = sorted(list(set(annotations)))
+					for annotation in annotations:
+						for propertyName, PropertyData in data:
+							if ((annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore))) or (('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
+								display = True
+						if display is True:
+							print('### %s  ' % (removeNS(annotation)))
+							display = False
+						for propertyName, PropertyData in data:
+							if (annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore)):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('mapsToOAI' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
+									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is expressed in OAI as:  " % (removeNS(propertyName), ptype, addPrefixes(propertyName).replace(':', '').lower()))
+									for anno in PropertyData[annotation]:
+										print("    * %s  " % (anno))
+					print('')
+					print('# Profile by property')
+					print('')
+					for propertyName, propertyValue in data:
+						if not any(i in propertyName for i in ignore):
+							print('### %s  ' % (addPrefixes(propertyName)))
+							for annotation, annotationValue in sorted(propertyValue.items()):
+								if annotationValue[0] != '':		
+									print("  * %s:  " % (removeNS(annotation)))
+									for v in annotationValue:
+										print("    * %s  " % (v))
+			except:
+				PrintException()
+
 	def __createGithubMessage(self):
 		lines = ["Daily changes made to metadata profiles:"]
 		dateFilter = datetime.now() - timedelta(days=1)
