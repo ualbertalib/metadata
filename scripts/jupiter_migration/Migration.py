@@ -1,4 +1,4 @@
-from config import types, dates, sparqlTerms, sparqlData, sparqlResults, mig_ns, vocabs
+from config import types, dates, sparqlTerms, sparqlData, sparqlResults, mig_ns, vocabs, subjects
 from utilities import PrintException, cleanOutputs
 import concurrent.futures
 import time
@@ -79,10 +79,10 @@ class TransformationFactory():
     @staticmethod
     def getTransformation(triple, objectType):
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
-        for subjects in dates:
-            if (subjects['subject'] in triple['subject']['value']) and (function == "created"):
+        for date in dates:
+            if (date['subject'] in triple['subject']['value']) and (function == "created"):
                 return Transformation().createdDate(subjects, triple, objectType)
-            if (subjects['subject'] in triple['subject']['value']) and (function == "graduationdate"):
+            if (date['subject'] in triple['subject']['value']) and (function == "graduationdate"):
                 return Transformation().gradDate(subjects, triple, objectType)
         if function == "created":
             return Transformation().sortYear(triple, objectType)
@@ -839,8 +839,25 @@ class Transformation():
         self.output = []
 
     def subject(self, triple, objectType):
+        """map subjects"""
+        for subject in subjects:
+            if (triple['object']['value'] in subject['mappings']):
+                triple = {
+                        'subject': {
+                            'value': triple['subject']['value'],
+                            'type': 'uri'
+                        },
+                        'predicate': {
+                            'value': triple['predicate']['value'],
+                            'type': 'uri'
+                        },
+                        'object': {
+                            'value': subject['useForm'],
+                            'type': 'literal'
+                        }
+                    }
         """strip whitespaces/periods off front and back & capitalize first letter"""
-        triple['object']['value'] = triple['object']['value'].strip().strip('.')
+        triple['object']['value'] = triple['object']['value'].strip().strip('.').replace('-- ', '--').replace(' --', '--').replace(' -- ', '--')
         triple['object']['value'] = triple['object']['value'][0].upper() + triple['object']['value'][1:]
         self.output.append(triple)
         return self.output
