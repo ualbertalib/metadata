@@ -81,7 +81,7 @@ Access controls are the mechanism by which users are granted permissions for rea
   * comment:
     * At the point of migration, the "http://projecthydra.org/ns/auth/person#" prefix was stripped leaving only the ualberta email as the owner value. This HydraNorth legacy user value was preserved externally from Jupiter. Upon being ingested into Jupiter, the email was replaced by a unique ID generated from a mysql database containing user information.
   * repeat:
-    * true
+    * false
   * required:
     * true
 
