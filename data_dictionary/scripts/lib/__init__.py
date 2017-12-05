@@ -11,7 +11,7 @@ def main():
 		sys.stdout = ontology
 		owlDocument().generate()
 	sys.stdout = old_stdout
-	for ptype in ["collection", "community", "generic", "thesis", "oai_pmh", "etd_ms"]:
+	for ptype in ["collection", "community", "generic", "thesis", "oai_pmh", "oai_etdms"]:
 		Profiler(ptype)
 	'''excelGen()
 	google_generate()'''
