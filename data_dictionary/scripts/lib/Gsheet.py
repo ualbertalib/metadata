@@ -92,6 +92,7 @@ def google_generate():
         response = request.execute()
 
     wb = Workbook()
+    #../../profiles.xlsx
     wb = openpyxl.load_workbook('data_dictionary/profiles.xlsx')
     names = wb.get_sheet_names()
     for sid, sheetName in enumerate(names):
