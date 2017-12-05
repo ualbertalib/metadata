@@ -6,11 +6,13 @@ from openpyxl import Workbook
 
 def excelGen():
     os.remove('data_dictionary/profiles.xlsx')
+    #../../profiles.xlsx
     wb = Workbook()
     ws = wb.active
     ws['A1'] = ''
     wb.save('data_dictionary/profiles.xlsx')
-    for profile in ['community', 'collection', 'generic', 'thesis']:
+    #../../profiles.xlsx
+    for profile in ['community', 'collection', 'generic', 'thesis', 'oai_pmh', 'oai_etdms']:
     	Excel(profile)
         
 if __name__ == "__main__":
