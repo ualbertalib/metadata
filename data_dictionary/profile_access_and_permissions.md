@@ -43,6 +43,7 @@ Access controls are the mechanism by which users are granted permissions for rea
 ### acl:embargoHistory
   * appliesTo:
     * thesis
+    * generic
   * backwardCompatibleWith:
     * acl:embargoHistory
   * comment:
@@ -59,6 +60,7 @@ Access controls are the mechanism by which users are granted permissions for rea
     * [ual:public](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md#ualpublic)
   * appliesTo:
     * thesis
+    * generic
   * backwardCompatibleWith:
     * acl:visibilityAfterEmbargo
   * comment:
@@ -106,6 +108,7 @@ Access controls are the mechanism by which users are granted permissions for rea
 ### dcterms:available
   * appliesTo:
     * thesis
+    * generic
   * backwardCompatibleWith:
     * acl:embargoReleaseDate
   * comment:
