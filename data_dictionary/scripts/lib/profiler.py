@@ -77,6 +77,74 @@ class Profiler(object):
 			PrintException()
 
 	def __createProfile(self):
+		if self.ptype in ["oai_etdms", "oai_pmh"]:
+			self.__create_oai_profiles()
+		else:
+			try:
+				filename = "data_dictionary/profiles/%s/profile.json" % (self.ptype)
+				with open(filename, 'r+') as profileData:
+					dataOriginal = json.load(profileData)
+					data = sorted(dataOriginal.items())
+					print('# Jupiter %s Application Profile' % (self.ptype.title()))
+					print('')
+					print("%s" % (profileWelcome))
+					print('')
+					print('# Namespaces  ')
+					for n in namespaces:
+						if n['uri'] not in ignore:
+							print('**%s:** %s  ' % (n['prefix'], n['uri']))
+					print('')
+					print('# Definitions')
+					print('')
+					for d in profileDefinitions:
+						print('   **%s** %s  ' % (d['term'], d['def']))
+					print('')
+					print('# Profile by annotation')
+					annotations = []
+					display = False
+					for key, value in data:
+						for key in value.keys():
+							annotations.append(key)
+					annotations = sorted(list(set(annotations)))
+					for annotation in annotations:
+						for propertyName, PropertyData in data:
+							if ((annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore))) or (('indexAs' in annotation) or ('backwardCompatibleWith' in annotation)):
+								display = True
+						if display is True:
+							print('### %s  ' % (removeNS(annotation)))
+							display = False
+						for propertyName, PropertyData in data:
+							if (annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore)):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('indexAs' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+								for anno in PropertyData[annotation]:
+									print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
+									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+									for anno in PropertyData[annotation]:
+										print("    * %s  " % (anno))
+					print('')
+					print('# Profile by property')
+					print('')
+					for propertyName, propertyValue in data:
+						if not any(i in propertyName for i in ignore):
+							print('### %s  ' % (addPrefixes(propertyName)))
+							for annotation, annotationValue in sorted(propertyValue.items()):
+								if annotation == 'acceptedValues':
+									print("  * values displayed on form:  ")
+									for j in annotationValue:
+										if j['onForm'] == 'true':
+											print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+								elif (annotation != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (annotationValue[0] != ''):		
+									print("  * %s:  " % (removeNS(annotation)))
+									for v in annotationValue:
+										print("    * %s  " % (v))
+			except:
+				PrintException()
+
+
+	def __create_oai_profiles(self):
 		try:
 			filename = "data_dictionary/profiles/%s/profile.json" % (self.ptype)
 			with open(filename, 'r+') as profileData:
@@ -113,12 +181,8 @@ class Profiler(object):
 					for propertyName, PropertyData in data:
 						if (annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore)):
 							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
-						elif ((annotation in PropertyData) and ('indexAs' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
-							for anno in PropertyData[annotation]:
-								print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
-						elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+						elif ((annotation in PropertyData) and ('mapsToOAI' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is expressed in OAI as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 								for anno in PropertyData[annotation]:
 									print("    * %s  " % (anno))
 				print('')
@@ -128,12 +192,7 @@ class Profiler(object):
 					if not any(i in propertyName for i in ignore):
 						print('### %s  ' % (addPrefixes(propertyName)))
 						for annotation, annotationValue in sorted(propertyValue.items()):
-							if annotation == 'acceptedValues':
-								print("  * values displayed on form:  ")
-								for j in annotationValue:
-									if j['onForm'] == 'true':
-										print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-							elif (annotation != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (annotationValue[0] != ''):		
+							if annotationValue[0] != '':		
 								print("  * %s:  " % (removeNS(annotation)))
 								for v in annotationValue:
 									print("    * %s  " % (v))
