@@ -7,6 +7,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **cc:** http://creativecommons.org/ns#  
 **dc:** http://purl.org/dc/elements/1.1/  
 **dcterms:** http://purl.org/dc/terms/  
+**ebu:** http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#  
+**etd_ms:** http://www.ndltd.org/standards/metadata/etdms/1.0/  
 **fabio:** http://purl.org/spar/fabio/  
 **foaf:** http://xmlns.com/foaf/0.1/  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
@@ -69,7 +71,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
-  * [http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#http//www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateingested) is backward compatible with:  
+  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested) is backward compatible with:  
     * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
@@ -214,7 +216,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
-### http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
+### ebu:dateIngested  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  
