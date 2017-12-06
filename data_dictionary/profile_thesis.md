@@ -7,6 +7,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **cc:** http://creativecommons.org/ns#  
 **dc:** http://purl.org/dc/elements/1.1/  
 **dcterms:** http://purl.org/dc/terms/  
+**ebu:** http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#  
+**etd_ms:** http://www.ndltd.org/standards/metadata/etdms/1.0/  
 **fabio:** http://purl.org/spar/fabio/  
 **foaf:** http://xmlns.com/foaf/0.1/  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
@@ -114,7 +116,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/thesis/thesislevel  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
-  * [http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#http//www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateingested) is backward compatible with:  
+  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ebudateingested) is backward compatible with:  
     * info:fedora/fedora-system:def/model#createdDate  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
@@ -834,7 +836,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
+### ebu:dateIngested  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  

@@ -8,6 +8,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **cc:** http://creativecommons.org/ns#  
    **dc:** http://purl.org/dc/elements/1.1/  
    **dcterms:** http://purl.org/dc/terms/  
+   **ebu:** http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#  
+   **etd_ms:** http://www.ndltd.org/standards/metadata/etdms/1.0/  
    **fabio:** http://purl.org/spar/fabio/  
    **fedora:** http://fedora.info/definitions/v4/repository#  
    **foaf:** http://xmlns.com/foaf/0.1/  
