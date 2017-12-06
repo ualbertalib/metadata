@@ -16,6 +16,7 @@ class Excel:
     def generate(self):      
         with open('data_dictionary/profiles/' + self.profile + '/' + 'profile.json') as data_file:
             wb = Workbook()
+            #../..//profiles.xlsx
             wb = openpyxl.load_workbook('data_dictionary/profiles.xlsx')
             self.writeNamespaces(wb)
             sheet1 = wb.create_sheet(title = 'Accepted_Values')
@@ -75,7 +76,7 @@ class Excel:
                         sheet[str(col)+str(i+2)] = "N/A"
             names = wb.get_sheet_names()
             for name in names:
-                if name in ['community', 'collection', 'generic', 'thesis', 'Namespaces', 'Accepted_Values']:
+                if name in ['community', 'collection', 'generic', 'thesis', 'Namespaces', 'Accepted_Values', 'oai_pmh', 'oai_etdms']:
                     continue
                 else:
                     std=wb.get_sheet_by_name(name)
@@ -85,6 +86,7 @@ class Excel:
                 column = get_column_letter(colname)
                 sheet.column_dimensions[column].width = 30.0
             sheet1.column_dimensions["A"].width = 60.0
+            #../../profiles.xlsx
             wb.save('data_dictionary/profiles.xlsx')
             
     def getHeadings(self, data, key):

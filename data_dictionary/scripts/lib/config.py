@@ -18,6 +18,8 @@ namespaces = [
 	{"prefix": "cc", "uri": "http://creativecommons.org/ns#"},
 	{"prefix": "dc", "uri": "http://purl.org/dc/elements/1.1/"},
 	{"prefix": "dcterms", "uri": "http://purl.org/dc/terms/"},
+	{"prefix": "ebu", "uri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"},
+	{"prefix": "etd_ms", "uri": "http://www.ndltd.org/standards/metadata/etdms/1.0/"},
 	{"prefix": "fabio", "uri": "http://purl.org/spar/fabio/"},
 	{"prefix": "fedora", "uri": "http://fedora.info/definitions/v4/repository#"},
 	{"prefix": "foaf", "uri": "http://xmlns.com/foaf/0.1/"},
