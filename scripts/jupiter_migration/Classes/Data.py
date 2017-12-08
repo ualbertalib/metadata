@@ -1,4 +1,4 @@
-from Transformation import TransformationFactory
+from Classes import Transformation
 from utilities import PrintException
 import os
 from SPARQLWrapper import JSON
@@ -8,7 +8,7 @@ import requests
 
 
 class Data(object):
-    def __init__(self, query, group, sparqlData, sparqlTerms, queryObject, uri_generator):
+    def __init__(self, query, group, sparqlData, sparqlTerms, queryObject):
         self.query = query
         self.prefixes = queryObject.prefixes
         self.group = group
@@ -30,7 +30,7 @@ class Data(object):
             results = self.sparqlData.query().convert()['results']['bindings']
             # iterates over each resource and performs transformations
             for result in results:
-                result = TransformationFactory().getTransformation(result, self.objectType)
+                result = Transformation.TransformationFactory().getTransformation(result, self.objectType)
                 if isinstance(result, list):
                     for triple in result:
                         p = URIRef(triple['predicate']['value'])
@@ -87,32 +87,3 @@ class Data(object):
                 self.results[r].serialize(destination=self.filename, format='nt')
         else:
             print('query failed to generate results')
-
-    def _addProxy(self, resource, fileSet):
-        first = URIRef("http://www.iana.org/assignments/relation/first")
-        last = URIRef("http://www.iana.org/assignments/relation/last")
-        n = URIRef("http://www.iana.org/assignments/relation/next")
-        p = URIRef("http://www.iana.org/assignments/relation/prev")
-        if resource in proxyHash:
-            otherProxy = "{}/proxy{}".format(resource, proxyHash[resource])
-            proxyId = generateProxyId(resource)
-            proxy = "{}/proxy{}".format(resource, proxyId)
-            self._createProxy(resource, fileSet, proxy)
-            self.graph.add((URIRef(resource), URIRef(first), URIRef(proxy)))
-            self.graph.add((URIRef(resource), URIRef(last), URIRef(otherProxy)))
-            self.graph.add((URIRef(proxy), URIRef(n), URIRef(otherProxy)))
-            self.graph.add((URIRef(otherProxy), URIRef(p), URIRef(proxy)))
-        else:
-            proxyId = generateProxyId(resource)
-            proxy = "{}/proxy{}".format(resource, proxyId)
-            self._createProxy(resource, fileSet, proxy)
-
-    def _createProxy(self, resource, fileSet, proxy):
-        self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyIn"), URIRef(resource)))
-        self.graph.add((URIRef(proxy), URIRef("http://www.openarchives.org/ore/terms/proxyFor"), URIRef(fileSet)))
-        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Container")))
-        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://fedora.info/definitions/v4/repository#Resource")))
-        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.openarchives.org/ore/terms/Proxy")))
-        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#Container")))
-        self.graph.add((URIRef(proxy), RDF.type, URIRef("http://www.w3.org/ns/ldp#RDFSource")))
-        self.graph.add((URIRef(proxy), URIRef("info:fedora/fedora-system:def/model#hasModel"), Literal("ActiveFedora::Aggregation::Proxy")))

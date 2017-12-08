@@ -1,18 +1,20 @@
-from Classes import *
+import Classes.Data as Data
+import Classes.URI_Generator as URI_Generator
+import Classes.TripleStore as TripleStore
+from Classes.Helper import QueryHelper
+from Classes.Query import QueryFactory
 from config import types, sparqlTerms, sparqlData, sparqlResults
 from utilities import PrintException, cleanOutputs
 import concurrent.futures
 import time
 from datetime import datetime
-import random
-
-
 
 def main():
     """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata),
     creates a set of subqueries for each of these types, then cues threads to run each of these subqueries as a job. The migration outout is saved to
     the results folder and to a triplestore. The subqueries are cached in the cache folder. Custom settings can be modified in config.py."""
-    uri_generator = URI_Generator()
+    tripleStoreData = TripleStore.triple_store(sparqlData, sparqlTerms, sparqlResults)
+    uri_generator = URI_Generator.URI_Generator()
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     print('cleaning the cache')
     cleanOutputs(sparqlResults)
@@ -25,13 +27,17 @@ def main():
     # a queryObject knows its type
     # a cache of queries is recorded, results are sent to a "results" triplestore, and results are stored as n-triples
     for objectType in types:
-        queryObject = QueryFactory.getMigrationQuery(objectType, sparqlData)
-        queryObject.generateQueries()
+        queryObject = QueryHelper(objectType, tripleStoreData)
+        QueryFactory.queryFactory().getMigrationQuery(queryObject)
+        try:
+            queryObject.generateQueries(uri_generator)
+        except Exception:
+            printException()
         print('{0} queries generated'.format(objectType))
         print('{0} queries of {1} objects to be transformed'.format(len(queryObject.queries), objectType))
         i = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            future_to_result = {executor.submit(parellelTransform, queryObject, group, uri_generator): group for group in queryObject.queries.keys()}
+            future_to_result = {executor.submit(parellelTransform, queryObject, group, tripleStoreData): group for group in queryObject.queries.keys()}
             for future in concurrent.futures.as_completed(future_to_result):
                 future_to_result[future]
                 try:
@@ -46,9 +52,10 @@ def main():
     print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
 
-def parellelTransform(queryObject, group, uri_generator):
-    DTO = Data(queryObject.queries[group], group, queryObject.sparqlData, sparqlTerms, queryObject, uri_generator)  # query, group, object
+def parellelTransform(queryObject, group):
+    DTO = Data.Data(queryObject.queries[group], group, queryObject, tripleStoreData)  # query, group, object
     DTO.transformData()
+    # DTO.resultsToTriplestore()
 
 
 if __name__ == "__main__":
