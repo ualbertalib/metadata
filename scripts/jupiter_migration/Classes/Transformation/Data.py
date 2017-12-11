@@ -1,5 +1,5 @@
 from Classes.Transformation import Transformation_Factory
-from utilities import PrintException
+from tools import PrintException
 import os
 from SPARQLWrapper import JSON
 from rdflib import URIRef, Literal, Graph
