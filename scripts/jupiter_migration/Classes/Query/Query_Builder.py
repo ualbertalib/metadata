@@ -66,7 +66,7 @@ class QueryBuilder(object):
 
 class Collection(QueryBuilder):
     def __init__(self, objectType, tripleStoreData, uri_generator):
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE {
             ?resource info:hasModel 'Collection'^^xsd:string .
@@ -98,7 +98,7 @@ class Collection(QueryBuilder):
 
 class Community(QueryBuilder):
     def __init__(self, objectType, tripleStoreData, uri_generator):
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
             OPTIONAL { ?resource ualids:is_community 'true'^^xsd:boolean } .
@@ -252,13 +252,14 @@ class Thesis(QueryBuilder):
     def __init__(self, objectType, tripleStoreData, uri_generator):
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
-            dcterm:available ?available ;
-            dcterm:accessRights ?accessRights;
             rdf:type works:Work ;
             rdf:type pcdm:Object ;
-            rdf:type bibo:Thesis; bibo:owner ?owner ;
+            rdf:type bibo:Thesis; 
+            bibo:owner ?owner ;
             acl:embargoHistory ?history ;
             acl:visibilityAfterEmbargo ?visAfter ;
+            dcterm:available ?available ;
+            dcterm:accessRights ?accessRights;
             ual:hydraNoid ?noid"""
         self.where = []
         self.select = """SELECT distinct ?resource WHERE {
