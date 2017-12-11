@@ -8,12 +8,12 @@ import requests
 
 
 class Data(object):
-    def __init__(self, query, group, sparqlData, sparqlTerms, queryObject):
-        self.query = query
+    def __init__(self, group, queryObject):
+        self.query = queryObject.queries[group]
         self.prefixes = queryObject.prefixes
         self.group = group
-        self.sparqlData = sparqlData
-        self.sparqlTerms = sparqlTerms
+        self.sparqlData = queryObject.sparqlData
+        self.sparqlTerms = queryObject.sparqlTerms
         self.results = {}
         self.graph = Graph()
         self.objectType = queryObject.objectType

@@ -1,7 +1,6 @@
 import Classes.Data as Data
 import Classes.URI_Generator as URI_Generator
 import Classes.TripleStore as TripleStore
-from Classes.Helper import QueryHelper
 from Classes.Query import QueryFactory
 from config import types, sparqlTerms, sparqlData, sparqlResults
 from utilities import PrintException, cleanOutputs
@@ -27,17 +26,12 @@ def main():
     # a queryObject knows its type
     # a cache of queries is recorded, results are sent to a "results" triplestore, and results are stored as n-triples
     for objectType in types:
-        queryObject = QueryHelper(objectType, tripleStoreData)
-        QueryFactory.queryFactory().getMigrationQuery(queryObject)
-        try:
-            queryObject.generateQueries(uri_generator)
-        except Exception:
-            printException()
+        queryObject = QueryFactory.queryFactory().getMigrationQuery(objectType, tripleStoreData, uri_generator)
         print('{0} queries generated'.format(objectType))
         print('{0} queries of {1} objects to be transformed'.format(len(queryObject.queries), objectType))
         i = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            future_to_result = {executor.submit(parellelTransform, queryObject, group, tripleStoreData): group for group in queryObject.queries.keys()}
+            future_to_result = {executor.submit(parellelTransform, group, queryObject): group for group in queryObject.queries.keys()}
             for future in concurrent.futures.as_completed(future_to_result):
                 future_to_result[future]
                 try:
@@ -52,8 +46,8 @@ def main():
     print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
 
-def parellelTransform(queryObject, group):
-    DTO = Data.Data(queryObject.queries[group], group, queryObject, tripleStoreData)  # query, group, object
+def parellelTransform(group, queryObject):
+    DTO = Data.Data(group, queryObject)  # query, group, object
     DTO.transformData()
     # DTO.resultsToTriplestore()
 

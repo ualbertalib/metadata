@@ -1,8 +1,3 @@
-from config import sparqlTerms, mig_ns
-from SPARQLWrapper import JSON, SPARQLWrapper
-from Classes.Query import QueryFactory
-
-import json
 
 
 class QueryHelper(object):
@@ -21,6 +16,10 @@ class QueryHelper(object):
         for ns in mig_ns:
             self.prefixes = self.prefixes + " PREFIX {0}: <{1}> ".format(ns['prefix'], ns['uri'])
         self.getMappings()
+        try:
+            self.generateQueries(uri_generator)
+        except Exception:
+            PrintException()
 
     def getMappings(self):
         if (self.objectType == 'collection') or (self.objectType == 'community') or (self.objectType == 'generic') or (self.objectType == 'thesis'):
