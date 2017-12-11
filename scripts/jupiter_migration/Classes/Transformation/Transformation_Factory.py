@@ -11,9 +11,9 @@ class TransformationFactory():
         for d in dates:
             try:
                 if (d['subject'] in triple['subject']['value']) and (function == "created"):
-                    return Transform().createdDate(subjects, triple, objectType)
+                    return Transform().createdDate(d, triple, objectType)
                 if (d['subject'] in triple['subject']['value']) and (function == "graduationdate"):
-                    return Transform().gradDate(subjects, triple, objectType)
+                    return Transform().gradDate(d, triple, objectType)
             except:
                 PrintException()
         if function == "accessRights":
