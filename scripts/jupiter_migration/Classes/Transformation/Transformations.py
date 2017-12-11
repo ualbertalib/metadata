@@ -222,26 +222,44 @@ class Transform():
         return self.output
 
     def createdDate(self, d, triple, objectType):
-        self.output.append(
-            {
-                'subject': {
-                    'value': triple['subject']['value'],
-                    'type': 'uri'
-                },
-                'predicate': {
-                    'value': triple['predicate']['value'],
-                    'type': 'uri'
-                },
-                'object': {
-                    'value': d["object"],
-                    'type': 'date'
-                }
+        tempTriple = {
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': triple['predicate']['value'],
+                'type': 'uri'
+            },
+            'object': {
+                'value': d["object"][0],
+                'type': 'date'
             }
-        )
+        }
+        self.output.append(tempTriple)
+        Transformation.sortYear(self, tempTriple, objectType)
         return self.output
 
     def gradDate(self, d, triple, objectType):
-        print('gradDate', triple['subject']['value'])
+        tempTriple = {
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': triple['predicate']['value'],
+                'type': 'uri'
+            },
+            'object': {
+                'value': d["object"][0],
+                'type': 'date'
+            }
+        }
+        self.output.append(tempTriple)
+        Transformation.sortYear(self, tempTriple, objectType)
+        return self.output
+
+    def sortYear(self, triple, objectType):
         self.output.append(
             {
                 'subject': {
@@ -253,12 +271,44 @@ class Transform():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': d["object"],
+                    'value': triple['object']['value'],
                     'type': 'date'
                 }
             }
         )
-        return self.output
+        if isinstance(triple['object']['value'], list):
+            text = triple['object']['value'][0].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
+        else:
+            text = triple['object']['value'].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
+        tokens = word_tokenize(text)
+        for n,i in enumerate(tokens):
+            if i == "," :
+                del tokens[n]
+            if i == ")" :
+                del tokens[n]
+            if i == "(" :
+                del tokens[n]
+        years = DateFinder(tokens)
+        trans = years.getyear()
+        if trans != None:
+            for i in trans:
+                self.output.append(
+                    {
+                        'subject': {
+                            'value': triple['subject']['value'],
+                            'type': 'uri'
+                        },
+                        'predicate': {
+                            'value': 'http://terms.library.ualberta.ca/date/sortyear',
+                            'type': 'uri'
+                        },
+                        'object': {
+                            'value': i["year"],
+                            'type': 'date'
+                        }
+                    }
+                )
+            return self.output
 
     def owner(self, triple, objectType):
         triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
