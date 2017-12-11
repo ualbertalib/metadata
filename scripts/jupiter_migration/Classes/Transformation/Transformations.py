@@ -221,7 +221,7 @@ class Transform():
         self.output.append(triple)
         return self.output
 
-    def createdDate(self, date, triple, objectType):
+    def createdDate(self, d, triple, objectType):
         self.output.append(
             {
                 'subject': {
@@ -233,14 +233,14 @@ class Transform():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': date["object"],
+                    'value': d["object"],
                     'type': 'date'
                 }
             }
         )
         return self.output
 
-    def gradDate(self, date, triple, objectType):
+    def gradDate(self, d, triple, objectType):
         print('gradDate', triple['subject']['value'])
         self.output.append(
             {
@@ -253,7 +253,7 @@ class Transform():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': date["object"],
+                    'value': d["object"],
                     'type': 'date'
                 }
             }
