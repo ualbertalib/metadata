@@ -1,6 +1,6 @@
-from Classes.Query.QueryBuilder import *
+from Classes.Query.Query_Builder import *
 
-class queryFactory():
+class QueryFactory():
     @staticmethod
     def getMigrationQuery(objectType, tripleStoreData, uri_generator):
         """ returns a specified query object depending on the type passed in"""

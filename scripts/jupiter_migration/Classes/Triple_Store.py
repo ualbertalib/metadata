@@ -1,4 +1,4 @@
-class triple_store(object):
+class TripleStore(object):
 	def __init__(self, sparqlData, sparqlTerms, sparqlResults):
 		self.sparqlData = sparqlData
 		self.sparqlTerms = sparqlTerms

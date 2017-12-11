@@ -1,7 +1,7 @@
 import Classes.Data as Data
 import Classes.URI_Generator as URI_Generator
-import Classes.TripleStore as TripleStore
-from Classes.Query import QueryFactory
+import Classes.Triple_Store as Triple_Store
+from Classes.Query import Query_Factory
 from config import types, sparqlTerms, sparqlData, sparqlResults
 from utilities import PrintException, cleanOutputs
 import concurrent.futures
@@ -12,8 +12,8 @@ def main():
     """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata),
     creates a set of subqueries for each of these types, then cues threads to run each of these subqueries as a job. The migration outout is saved to
     the results folder and to a triplestore. The subqueries are cached in the cache folder. Custom settings can be modified in config.py."""
-    tripleStoreData = TripleStore.triple_store(sparqlData, sparqlTerms, sparqlResults)
-    uri_generator = URI_Generator.URI_Generator()
+    tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms, sparqlResults)
+    uri_generator = URI_Generator.URIGenerator()
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     print('cleaning the cache')
     cleanOutputs(sparqlResults)
@@ -26,7 +26,7 @@ def main():
     # a queryObject knows its type
     # a cache of queries is recorded, results are sent to a "results" triplestore, and results are stored as n-triples
     for objectType in types:
-        queryObject = QueryFactory.queryFactory().getMigrationQuery(objectType, tripleStoreData, uri_generator)
+        queryObject = Query_Factory.QueryFactory().getMigrationQuery(objectType, tripleStoreData, uri_generator)
         print('{0} queries generated'.format(objectType))
         print('{0} queries of {1} objects to be transformed'.format(len(queryObject.queries), objectType))
         i = 0
