@@ -1,88 +1,11 @@
 import re
-from config import dates, subjects, vocabs
+from config import subjects, vocabs
 from datetime import datetime, date
-from utilities import PrintException
-
-
-class TransformationFactory():
-    @staticmethod
-    def getTransformation(triple, objectType):
-        function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
-        for d in dates:
-            try:
-                if (d['subject'] in triple['subject']['value']) and (function == "created"):
-                    return Transformation().createdDate(subjects, triple, objectType)
-                if (d['subject'] in triple['subject']['value']) and (function == "graduationdate"):
-                    return Transformation().gradDate(subjects, triple, objectType)
-            except:
-                PrintException()
-        if function == "accessRights":
-            try:
-                return Transformation().accessRights(triple, objectType)
-            except:
-                PrintException()
-        elif function == "modelsmemberOf":
-            try:
-                return Transformation().modelsmemberOf(triple, objectType)
-            except:
-                PrintException()
-        elif function == "modelshasMember":
-            try:
-                return Transformation().modelshasMember(triple, objectType)
-            except:
-                PrintException()
-        elif function == "language":
-            try:
-                return Transformation().language(triple, objectType)
-            except:
-                PrintException()
-        elif function == "type":
-            try:
-                return Transformation().type(triple, objectType)
-            except:
-                PrintException()
-        elif function == "rights":
-            try:
-                return Transformation().rights(triple, objectType)
-            except:
-                PrintException()
-        elif function == "subject":
-            try:
-                return Transformation().subject(triple, objectType)
-            except:
-                PrintException()
-        elif function == "license":
-            try:
-                return Transformation().license(triple, objectType)
-            except:
-                PrintException()
-        elif function == "ontologyinstitution":
-            try:
-                return Transformation().institution(triple, objectType)
-            except:
-                PrintException()
-        elif function == "available":
-            try:
-                return Transformation().available(triple, objectType)
-            except:
-                PrintException()
-        elif function == "aclvisibilityAfterEmbargo":
-            try:
-                return Transformation().aclvisibilityAfterEmbargo(triple, objectType)
-            except:
-                PrintException()
-        elif function == "owner":
-            try:
-                return Transformation().owner(triple, objectType)
-            except:
-                PrintException()
-        else:
-            return [triple]
 
 """TRANSFORMATION functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved."""
 
 
-class Transformation():
+class Transform():
 
     def __init__(self):
         self.output = []
@@ -298,30 +221,26 @@ class Transformation():
         self.output.append(triple)
         return self.output
 
-    def createdDate(self, subjects, triple, objectType):
-        try:
-            print(triple)
-            self.output.append(
-                {
-                    'subject': {
-                        'value': triple['subject']['value'],
-                        'type': 'uri'
-                    },
-                    'predicate': {
-                        'value': triple['predicate']['value'],
-                        'type': 'uri'
-                    },
-                    'object': {
-                        'value': subjects["object"],
-                        'type': 'date'
-                    }
+    def createdDate(self, date, triple, objectType):
+        self.output.append(
+            {
+                'subject': {
+                    'value': triple['subject']['value'],
+                    'type': 'uri'
+                },
+                'predicate': {
+                    'value': triple['predicate']['value'],
+                    'type': 'uri'
+                },
+                'object': {
+                    'value': date["object"],
+                    'type': 'date'
                 }
-            )
-        except:
-            PrintException()
+            }
+        )
         return self.output
 
-    def gradDate(self, subjects, triple, objectType):
+    def gradDate(self, date, triple, objectType):
         print('gradDate', triple['subject']['value'])
         self.output.append(
             {
@@ -334,7 +253,7 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': subjects["object"],
+                    'value': date["object"],
                     'type': 'date'
                 }
             }

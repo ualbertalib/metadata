@@ -1,4 +1,4 @@
-from Classes import Transformation
+from Classes.Transformation import Transformation_Factory
 from utilities import PrintException
 import os
 from SPARQLWrapper import JSON
@@ -30,7 +30,7 @@ class Data(object):
             results = self.sparqlData.query().convert()['results']['bindings']
             # iterates over each resource and performs transformations
             for result in results:
-                result = Transformation.TransformationFactory().getTransformation(result, self.objectType)
+                result = Transformation_Factory.TransformationFactory().getTransformation(result, self.objectType)
                 if isinstance(result, list):
                     for triple in result:
                         p = URIRef(triple['predicate']['value'])

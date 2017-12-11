@@ -2,7 +2,7 @@ import random
 from rdflib import URIRef, RDF, Literal
 
 
-class URI_Generator(object):
+class URIGenerator(object):
 
 	def __init__(self):
 		self.proxyHash = {}
