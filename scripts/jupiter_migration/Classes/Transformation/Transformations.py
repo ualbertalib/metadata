@@ -1,5 +1,5 @@
 import re
-from config import subjects, vocabs
+from config import subjects, vocabs, owners
 from datetime import datetime, date
 
 """TRANSFORMATION functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved."""
@@ -263,5 +263,7 @@ class Transform():
     def owner(self, triple, objectType):
         triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
         triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/group#")
+        if triple['object']['value'] in owners:
+            triple['object']['value'] = "eraadmi@ualberta.ca"
         self.output.append(triple)
         return self.output

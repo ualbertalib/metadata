@@ -59,6 +59,15 @@ mig_ns = [
 
 # transformation mappings
 
+owners = ["erahelp@ualberta.ca",
+"registered",
+"piyapong.charoenwattana@ualberta.ca",
+"dit.application.test@ualberta.ca",
+"riedlber@ualberta.ca",
+"era@ualberta.ca",
+"abombak@ualberta.ca"
+]
+
 dates = [{'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/31/97/xm/29/3197xm29d', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1970']},
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/3b/59/19/56/3b591956f', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1970']},
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/3f/46/26/78/3f462678q', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1970']},
