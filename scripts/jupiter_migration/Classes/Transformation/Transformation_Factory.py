@@ -16,6 +16,16 @@ class TransformationFactory():
                     return Transform().gradDate(d, triple, objectType)
             except:
                 PrintException()
+        if function == "created":
+            try:
+                return Transformation().sortYear(triple, objectType)
+            except:
+                PrintException()
+        if function == "graduationdate":
+            try:
+                return Transformation().sortYear(triple, objectType)
+            except:
+                PrintException()
         if function == "accessRights":
             try:
                 return Transform().accessRights(triple, objectType)
