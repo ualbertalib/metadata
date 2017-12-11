@@ -1,6 +1,6 @@
 import re
-from config import dates, subjects
-from utilities import PrintException
+from config import dates
+from tools import PrintException
 from Classes.Transformation.Transformations import Transform
 
 
@@ -18,12 +18,12 @@ class TransformationFactory():
                 PrintException()
         if function == "created":
             try:
-                return Transformation().sortYear(triple, objectType)
+                return Transform().sortYear(triple, objectType)
             except:
                 PrintException()
         if function == "graduationdate":
             try:
-                return Transformation().sortYear(triple, objectType)
+                return Transform().sortYear(triple, objectType)
             except:
                 PrintException()
         if function == "accessRights":

@@ -1,12 +1,13 @@
-import Classes.Data as Data
-import Classes.URI_Generator as URI_Generator
-import Classes.Triple_Store as Triple_Store
+import Classes.Transformation.Data as Data
+import Classes.Utilities.URI_Generator as URI_Generator
+import Classes.Utilities.Triple_Store as Triple_Store
 from Classes.Query import Query_Factory
 from config import types, sparqlTerms, sparqlData, sparqlResults
-from utilities import PrintException, cleanOutputs
+from tools import PrintException, cleanOutputs
 import concurrent.futures
 import time
 from datetime import datetime
+
 
 def main():
     """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata),

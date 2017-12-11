@@ -2,7 +2,6 @@ from config import mig_ns as namespaces
 import linecache
 import sys
 import os
-from SPARQLWrapper import JSON, SPARQLWrapper
 
 
 def addPrefixes(v):
@@ -18,6 +17,7 @@ def removeNS(v):
 	for line in namespaces:
 		if line['uri'] in v:
 			return v.replace(line['uri'], '').replace('/', "_")
+
 
 def PrintException():
 	""" for testing """
@@ -59,11 +59,3 @@ def cleanOutputs(sparqlResults):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
-	#print('deleting remote results at %s' % (sparqlResults))
-	#sparqlResults = SPARQLWrapper(sparqlResults)
-	#sparqlResults.setMethod('POST')
-	#query = "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
-	#sparqlResults.setReturnFormat(JSON)
-	#sparqlResults.setQuery(query)
-	#sparqlResults.query()
-

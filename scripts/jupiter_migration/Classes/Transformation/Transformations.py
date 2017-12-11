@@ -1,7 +1,8 @@
 import re
 from config import subjects, vocabs, owners
 from datetime import datetime, date
-from Classes.DateFinder import DateFinder
+from Classes.Utilities.Date_Finder import DateFinder
+from nltk.tokenize import word_tokenize
 
 """TRANSFORMATION functions for handling data passed over by the data object. Takes a triple, detects what kind of action needs to be taken based on the predicate, sends it to the appropriate function for transformations, then returns it back to the data handler to be saved."""
 
@@ -238,7 +239,7 @@ class Transform():
             }
         }
         self.output.append(tempTriple)
-        Transformation.sortYear(self, tempTriple, objectType)
+        Transform.sortYear(self, tempTriple, objectType)
         return self.output
 
     def gradDate(self, d, triple, objectType):
@@ -257,7 +258,7 @@ class Transform():
             }
         }
         self.output.append(tempTriple)
-        Transformation.sortYear(self, tempTriple, objectType)
+        Transform.sortYear(self, tempTriple, objectType)
         return self.output
 
     def sortYear(self, triple, objectType):
@@ -283,15 +284,15 @@ class Transform():
             text = triple['object']['value'].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
         tokens = word_tokenize(text)
         for n,i in enumerate(tokens):
-            if i == "," :
+            if i == ",":
                 del tokens[n]
-            if i == ")" :
+            if i == ")":
                 del tokens[n]
-            if i == "(" :
+            if i == "(":
                 del tokens[n]
         years = DateFinder(tokens)
         trans = years.getyear()
-        if trans != None:
+        if trans is not None:
             for i in trans:
                 self.output.append(
                     {

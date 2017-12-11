@@ -1,6 +1,6 @@
 import re
 import random
-from utilities import PrintException
+from tools import PrintException
 from config import mig_ns
 from SPARQLWrapper import JSON, SPARQLWrapper
 import json
@@ -25,7 +25,7 @@ class QueryBuilder(object):
         try:
             self.generateQueries(uri_generator)
         except Exception:
-            PrintException()        
+            PrintException()
 
     def generateQueries(self):
         pass
@@ -248,13 +248,14 @@ class Technical(QueryBuilder):
                     }}""".format(where, fileType, fileType, filesetId, filesetId, proxyId)
             self.writeQueries()
 
+
 class Thesis(QueryBuilder):
     def __init__(self, objectType, tripleStoreData, uri_generator):
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
             rdf:type works:Work ;
             rdf:type pcdm:Object ;
-            rdf:type bibo:Thesis; 
+            rdf:type bibo:Thesis;
             bibo:owner ?owner ;
             acl:embargoHistory ?history ;
             acl:visibilityAfterEmbargo ?visAfter ;
@@ -307,6 +308,7 @@ class Thesis(QueryBuilder):
                 BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) .
             }}""".format(where)
         self.writeQueries()
+
 
 class Related_Object(QueryBuilder):
     """ related members: content and characterization"""
@@ -488,7 +490,7 @@ class Generic(QueryBuilder):
                                 OPTIONAL {{
                                     ?resource <{1}> ?{2} .
                                     FILTER (str(?{3})!='')
-                                }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))                
+                                }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             # customize the where clause to include triples that aren't in the mappings
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"

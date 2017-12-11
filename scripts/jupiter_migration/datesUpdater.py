@@ -1,8 +1,6 @@
 from config import dates
 from SPARQLWrapper import JSON, SPARQLWrapper
 from rdflib import URIRef, Literal, Graph
-import requests
-import os
 
 origin = SPARQLWrapper("http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql")
 origin.setReturnFormat(JSON)
