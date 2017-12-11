@@ -78,9 +78,9 @@ class TransformationFactory():
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
         for date in dates:
             if (date['subject'] in triple['subject']['value']) and (function == "created"):
-                return Transformation().createdDate(subjects, triple, objectType)
+                return Transformation().createdDate(date, triple, objectType)
             if (date['subject'] in triple['subject']['value']) and (function == "graduationdate"):
-                return Transformation().gradDate(subjects, triple, objectType)
+                return Transformation().gradDate(date, triple, objectType)
         if function == "accessRights":
             return Transformation().accessRights(triple, objectType)
         elif function == "modelsmemberOf":
@@ -978,7 +978,7 @@ class Transformation():
         self.output.append(triple)
         return self.output
 
-    def createdDate(self, subjects, triple, objectType):
+    def createdDate(self, date, triple, objectType):
         self.output.append(
             {
                 'subject': {
@@ -990,14 +990,14 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': subjects["object"],
+                    'value': date["object"],
                     'type': 'date'
                 }
             }
         )
         return self.output
 
-    def gradDate(self, subjects, triple, objectType):
+    def gradDate(self, date, triple, objectType):
         print('gradDate', triple['subject']['value'])
         self.output.append(
             {
@@ -1010,7 +1010,7 @@ class Transformation():
                     'type': 'uri'
                 },
                 'object': {
-                    'value': subjects["object"],
+                    'value': date["object"],
                     'type': 'date'
                 }
             }
