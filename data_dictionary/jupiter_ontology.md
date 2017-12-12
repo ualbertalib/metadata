@@ -10,14 +10,12 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **dcterms:** http://purl.org/dc/terms/  
    **ebu:** http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#  
    **etd_ms:** http://www.ndltd.org/standards/metadata/etdms/1.0/  
-   **fabio:** http://purl.org/spar/fabio/  
    **fedora:** http://fedora.info/definitions/v4/repository#  
-   **foaf:** http://xmlns.com/foaf/0.1/  
    **iana:** http://www.iana.org/assignments/media-types/  
    **info:** info:fedora/fedora-system:def/model#  
    **lang:** http://id.loc.gov/vocabulary/iso639-2/  
    **mrel:** http://id.loc.gov/vocabulary/relators/  
-   **naf:** http://id.loc.gov/authorities/names/  
+   **lcn:** http://id.loc.gov/authorities/names/  
    **obo:** http://purl.obolibrary.org/obo/  
    **owl:** http://www.w3.org/2002/07/owl#  
    **ore:** http://www.openarchives.org/ore/terms/  
@@ -38,7 +36,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **ualids:** http://terms.library.ualberta.ca/identifiers/  
    **ualrole:** http://terms.library.ualberta.ca/role/  
    **ualthesis:** http://terms.library.ualberta.ca/thesis/  
-   **vivo:** http://vivoweb.org/ontology/core#  
    **webacl:** http://www.w3.org/ns/auth/acl#  
    **works:** http://pcdm.org/works#  
    **vivo:** http://vivoweb.org/ontology/core#  
@@ -131,9 +128,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [bibo:Image](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#biboimage)  
   * [bibo:Report](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#biboreport)  
   * [bibo:Thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibothesis)  
-  * [fabio:DoctoralThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiodoctoralthesis)  
-  * [fabio:MastersThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiomastersthesis)  
-  * [fabio:Thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#fabiothesis)  
+  * [http://purl.org/spar/fabio/DoctoralThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//purl.org/spar/fabio/doctoralthesis)  
+  * [http://purl.org/spar/fabio/MastersThesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//purl.org/spar/fabio/mastersthesis)  
+  * [http://purl.org/spar/fabio/Thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//purl.org/spar/fabio/thesis)  
   * [ual:learningObject](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#uallearningobject)  
   * [ual:researchMaterial](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualresearchmaterial)  
   * [ual:workType](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualworktype)  
@@ -142,7 +139,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [vivo:Dataset](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#vivodataset)  
   * [vivo:Review](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#vivoreview)  
   * [ore:Aggregation](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#oreaggregation)  
-  * [foaf:Organization](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#foaforganization)  
+  * [http://xmlns.com/foaf/0.1/Organization](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//xmlns.com/foaf/0.1/organization)  
 
 ### Values 
   * [http://creativecommons.org/licenses/by-nc-nd/3.0/](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//creativecommons.org/licenses/by-nc-nd/3.0/)  
@@ -159,7 +156,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [http://creativecommons.org/licenses/by/4.0/](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//creativecommons.org/licenses/by/4.0/)  
   * [http://creativecommons.org/publicdomain/mark/1.0/](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//creativecommons.org/publicdomain/mark/1.0/)  
   * [http://creativecommons.org/publicdomain/zero/1.0/](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//creativecommons.org/publicdomain/zero/1.0/)  
-  * [naf:n79058482](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#nafn79058482)  
+  * [lcn:n79058482](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#lcnn79058482)  
   * [lang:eng](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#langeng)  
   * [lang:fre](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#langfre)  
   * [lang:ger](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#langger)  
@@ -1483,7 +1480,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   stable  
 
 ***
-### fabio:DoctoralThesis
+### http://purl.org/spar/fabio/DoctoralThesis
 
    **rdfs:comment**   
   A thesis reporting the research undertaken during a period of graduate study leading to a doctoral degree.  
@@ -1501,7 +1498,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   http://purl.org/spar/fabio/MastersThesis  
 
 ***
-### fabio:MastersThesis
+### http://purl.org/spar/fabio/MastersThesis
 
    **rdfs:comment**   
   A thesis reporting a research project undertaken as part of a graduate course of education leading to a master's degree.  
@@ -1516,7 +1513,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   http://purl.org/spar/fabio/Thesis  
 
 ***
-### fabio:Thesis
+### http://purl.org/spar/fabio/Thesis
 
 ***
 ### ual:learningObject
@@ -1615,7 +1612,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ore:Aggregation
 
 ***
-### foaf:Organization
+### http://xmlns.com/foaf/0.1/Organization
 
    **rdfs:comment**   
   The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.  
@@ -1754,7 +1751,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   CC0 1.0 Universal  
 
 ***
-### naf:n79058482
+### lcn:n79058482
 
    **@type**   
   http://xmlns.com/foaf/0.1/Organization  
