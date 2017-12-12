@@ -2,18 +2,24 @@ import re
 from config import dates
 from tools import PrintException
 from Classes.Transformation.Transformations import Transform
+from Mappings.ThesisGradDate import gradDate
 
 
 class TransformationFactory():
     @staticmethod
     def getTransformation(triple, objectType):
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
+        for grad in gradDate:
+            #TODO: change graduationDate to graduationdate
+            try:
+                if (grad['subject'] in triple['subject']['value']) and (function == "graduationDate"):
+                    return Transformation().gradDate(grad, triple, objectType)
+            except:
+                PrintException()    
         for d in dates:
             try:
                 if (d['subject'] in triple['subject']['value']) and (function == "created"):
                     return Transform().createdDate(d, triple, objectType)
-                if (d['subject'] in triple['subject']['value']) and (function == "graduationdate"):
-                    return Transform().gradDate(d, triple, objectType)
             except:
                 PrintException()
         if function == "created":
@@ -21,7 +27,8 @@ class TransformationFactory():
                 return Transform().sortYear(triple, objectType)
             except:
                 PrintException()
-        if function == "graduationdate":
+        #TODO: change graduationDate to graduationdate
+        if function == "graduationDate":
             try:
                 return Transform().sortYear(triple, objectType)
             except:
