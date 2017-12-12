@@ -3,7 +3,7 @@ sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
 sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_2/sparql"  # dev, 1 hour to transform
 #sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive2/sparql"  # complex objects, 10 minute tranfsformation
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/dates/sparql"  # complex objects, 10 minute tranfsformation
-# sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/simple/sparql"  # one of each object type
+# sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/Thesis-test/sparql"  # one of each object type
 # destination
 sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results/sparql"
 
