@@ -21,10 +21,15 @@ class Backup(object):
 		results = sparql.query().convert()
 		for result in sorted(results['results']['bindings'], key=lambda k: k['o']['value']):
 			if result['o']['type'] == 'literal':
-				print("<%s> <%s> \"%s\" <%s>" % (result['s']['value'], result['p']['value'], re.sub("\"", "\\\"", result['o']['value']), result['g']['value']))
+				if result['s']['value'].startswith('t'):
+					print("_:%s <%s> \"%s\" <%s> ." % (result['s']['value'], result['p']['value'], re.sub("\"", "\\\"", result['o']['value']), result['g']['value']))
+				else:
+					print("<%s> <%s> \"%s\" <%s> ." % (result['s']['value'], result['p']['value'], re.sub("\"", "\\\"", result['o']['value']), result['g']['value']))
 			elif result['o']['type'] == 'uri':
-				print("<%s> <%s> <%s> <%s>" % (result['s']['value'], result['p']['value'], result['o']['value'], result['g']['value']))
-
+				if result['s']['value'].startswith('t'):
+					print("_:%s <%s> <%s> <%s> ." % (result['s']['value'], result['p']['value'], result['o']['value'], result['g']['value']))
+				else:
+					print("<%s> <%s> <%s> <%s> ." % (result['s']['value'], result['p']['value'], result['o']['value'], result['g']['value']))
 
 class Profiler(object):
 
