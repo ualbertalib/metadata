@@ -242,7 +242,7 @@ class Transform():
         Transform.sortYear(self, tempTriple, objectType)
         return self.output
 
-    def gradDate(self, d, triple, objectType):
+    def gradDate(self, grad, triple, objectType):
         tempTriple = {
             'subject': {
                 'value': triple['subject']['value'],
@@ -253,12 +253,12 @@ class Transform():
                 'type': 'uri'
             },
             'object': {
-                'value': d["object"][0],
+                'value': grad["object"][0],
                 'type': 'date'
             }
         }
         self.output.append(tempTriple)
-        Transform.sortYear(self, tempTriple, objectType)
+        Transformation.sortYear(self, tempTriple, objectType)
         return self.output
 
     def sortYear(self, triple, objectType):
