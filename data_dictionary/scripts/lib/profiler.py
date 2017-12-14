@@ -5,14 +5,31 @@ import sys
 import os
 from SPARQLWrapper import JSON, SPARQLWrapper
 from datetime import datetime, timedelta
-from rdflib import URIRef, Literal, Dataset
+import re
+
+
+class Backup(object):
+
+	def __init__(self):
+		self.__backupTriples()
+
+	def __backupTriples(self):
+		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+		sparql.setReturnFormat(JSON)
+		query = "select * where { graph ?g {?s ?p ?o} }"
+		sparql.setQuery(query)
+		results = sparql.query().convert()
+		for result in sorted(results['results']['bindings'], key=lambda k: k['o']['value']):
+			if result['o']['type'] == 'literal':
+				print("<%s> <%s> \"%s\" <%s>" % (result['s']['value'], result['p']['value'], re.sub("\"", "\\\"", result['o']['value']), result['g']['value']))
+			elif result['o']['type'] == 'uri':
+				print("<%s> <%s> <%s> <%s>" % (result['s']['value'], result['p']['value'], result['o']['value'], result['g']['value']))
 
 
 class Profiler(object):
 
 	def __init__(self, ptype):
 		self.ptype = ptype
-		self.__backupTriples()
 		self.__createJSON()
 		filename = "data_dictionary/profile_%s.md" % (self.ptype)  # assumed we are in the root metadata folder
 		old_stdout = sys.stdout
@@ -21,27 +38,6 @@ class Profiler(object):
 			self.__createProfile()
 			sys.stdout = old_stdout
 		self.__createGithubMessage()
-
-	def __backupTriples(self):
-		ds = Dataset()
-		graphs = {}
-		filename = "data_dictionary/profiles/backup.nquads"
-		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
-		sparql.setReturnFormat(JSON)
-		query = "select ?g where { graph ?g {} }"
-		sparql.setQuery(query)
-		results = sparql.query().convert()
-		for result in results['results']['bindings']:
-			graphs[result['g']['value']] = ds.graph(URIRef(result['g']['value']))
-		query = "select * where { graph ?g {?s ?p ?o} }"
-		sparql.setQuery(query)
-		results = sparql.query().convert()
-		for result in sorted(results['results']['bindings'], key=lambda k: k['o']['value']):
-			if result['o']['type'] == 'literal':
-				ds.add((URIRef(result['s']['value']), URIRef(result['p']['value']), Literal(result['o']['value']), graphs[result['g']['value']]))
-			elif result['o']['type'] == 'uri':
-				ds.add((URIRef(result['s']['value']), URIRef(result['p']['value']), URIRef(result['o']['value']), graphs[result['g']['value']]))
-		ds.serialize(destination=filename, format='nquads')
 
 	def __createJSON(self):
 		try:
@@ -136,13 +132,12 @@ class Profiler(object):
 									for j in annotationValue:
 										if j['onForm'] == 'true':
 											print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-								elif (annotation != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (annotationValue[0] != ''):		
+								elif (annotation != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (annotationValue[0] != ''):
 									print("  * %s:  " % (removeNS(annotation)))
 									for v in annotationValue:
 										print("    * %s  " % (v))
 			except:
 				PrintException()
-
 
 	def __create_oai_profiles(self):
 		try:
@@ -192,7 +187,7 @@ class Profiler(object):
 					if not any(i in propertyName for i in ignore):
 						print('### %s  ' % (addPrefixes(propertyName)))
 						for annotation, annotationValue in sorted(propertyValue.items()):
-							if annotationValue[0] != '':		
+							if annotationValue[0] != '':
 								print("  * %s:  " % (removeNS(annotation)))
 								for v in annotationValue:
 									print("    * %s  " % (v))
