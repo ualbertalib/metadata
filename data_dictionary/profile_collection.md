@@ -52,6 +52,16 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **sort** is this property sortable in SOLR? (boolean)  
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
+# Properties (Quick Find)
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor  )  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid  )  
+  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype  )  
+
 # Profile by annotation
 ### backwardCompatibleWith  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  

@@ -99,6 +99,12 @@ class Profiler(object):
 					print('')
 					for d in profileDefinitions:
 						print('   **%s** %s  ' % (d['term'], d['def']))
+
+					print('')
+					print('# Properties (Quick Find)')
+					for propertyName, PropertyData in data:
+						if not any(i in propertyName for i in ignore):
+							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 					print('')
 					print('# Profile by annotation')
 					annotations = []
