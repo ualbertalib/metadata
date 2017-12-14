@@ -11,8 +11,8 @@
  - [oai-pmh](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_oai_pmh.md) 
  - [oai-etdms](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_oai_etdms.md) 
  - [permission and visibility controls](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md)
-
  - most of the profiles are also viewable in an [excel spreadsheet]()
+
 ###### The following JSON docs contain application profile data and are synced daily:
 
  - [collection JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/collection/profile.json)
