@@ -17,6 +17,15 @@ types = [
 	"relatedObject"
 	]
 
+owners = ["erahelp@ualberta.ca",
+"registered",
+"piyapong.charoenwattana@ualberta.ca",
+"dit.application.test@ualberta.ca",
+"riedlber@ualberta.ca",
+"era@ualberta.ca",
+"abombak@ualberta.ca"
+] 
+
 # prefix dictionary
 mig_ns = [
 	{"prefix": "bg", "uri": "http://206.167.181.123:9999/blazegraph/namespace/terms/"},
@@ -2440,6 +2449,21 @@ vocabs = {
 		{
 			"uri": "http://purl.org/spar/fabio/DoctoralThesis",
 			"mapping": ["Doctoral"]
+		}
+	],
+	"status":
+	[
+		{
+			"uri": "http://vivoweb.org/ontology/core#submitted",
+			"mapping": ["Journal Article (Draft-Submitted)"]
+		},
+		{
+			"uri": "http://purl.org/ontology/bibo/status#draft",
+			"mapping": ["Journal Article (Draft-Submitted)"]
+		},
+		{
+			"uri": "http://purl.org/ontology/bibo/status#published",
+			"mapping": ["Journal Article (Published)"]
 		}
 	]
 }

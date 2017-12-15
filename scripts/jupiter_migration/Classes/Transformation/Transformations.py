@@ -163,8 +163,29 @@ class Transform():
                             }
                         }
                     )
-            else:
-                pass
+                else:
+                    pass
+            for vocab in vocabs["status"]:
+                # mint a new triple with the mapped type
+                if triple['object']['value'] in vocab["mapping"]:
+                    self.output.append(
+                        {
+                            'subject': {
+                                'value': triple['subject']['value'],
+                                'type': 'uri'
+                            },
+                            'predicate': {
+                                'value': "http://purl.org/ontology/bibo/status",
+                                'type': 'uri'
+                            },
+                            'object': {
+                                'value': vocab["uri"],
+                                'type': 'uri'
+                            }
+                        }
+                    )
+                else:
+                    pass
         elif (objectType == 'community') or (objectType == 'collection'):
             self.output.append(triple)
         return self.output
