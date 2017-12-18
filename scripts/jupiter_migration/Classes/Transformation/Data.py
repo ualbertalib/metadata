@@ -26,7 +26,8 @@ class Data(object):
         self.sparqlData.setReturnFormat(JSON)
         self.__buildTransformationGraph()
         self.__editVisibility()
-        self.__writeGraphToFile()
+        self.__editOwners()
+        #self.__writeGraphToFile()
         # checks to see if this particular query yielded any results
 
 
@@ -83,6 +84,26 @@ class Data(object):
                 elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
 
+    def __editOwners(self):
+        s_o = {}
+        for s, o in self.graph.subject_objects(URIRef("http://purl.org/ontology/bibo/owner")):
+            if s not in s_o:
+                s_o[s] = []
+                s_o[s].append(o)
+            else:
+                s_o[s].append(o)
+        for so in s_o:
+            if (len(s_o[so]) == 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
+                print("case 1", s_o[so])
+                self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
+            if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
+                print("case 2", s_o[so])
+                self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
+                # do something else to remaining owners
+            if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
+                print("case 3", s_o[so])
+                #do someting else to remaining owners
+
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
             for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
@@ -94,5 +115,3 @@ class Data(object):
                         self.results[r].add((s, p, o))
                 self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                 self.results[r].serialize(destination=self.filename, format='nt')
-        else:
-            print('query failed to generate results')
