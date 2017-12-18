@@ -8,27 +8,23 @@ sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/radioactive2/spar
 sparqlResults = "http://206.167.181.123:9999/blazegraph/namespace/results/sparql"
 
 # object types to transform (comment out those you wish to skip)
-types = [
-	"collection",
+types = ["collection",
 	"community",
 	"generic",
 	"thesis",
 	"technical",
-	"relatedObject"
-	]
+	"relatedObject"]
 
 owners = ["erahelp@ualberta.ca",
-"registered",
-"piyapong.charoenwattana@ualberta.ca",
-"dit.application.test@ualberta.ca",
-"riedlber@ualberta.ca",
-"era@ualberta.ca",
-"abombak@ualberta.ca"
-] 
+	"registered",
+	"piyapong.charoenwattana@ualberta.ca",
+	"dit.application.test@ualberta.ca",
+	"riedlber@ualberta.ca",
+	"era@ualberta.ca",
+	"abombak@ualberta.ca"]
 
 # prefix dictionary
-mig_ns = [
-	{"prefix": "bg", "uri": "http://206.167.181.123:9999/blazegraph/namespace/terms/"},
+mig_ns = [{"prefix": "bg", "uri": "http://206.167.181.123:9999/blazegraph/namespace/terms/"},
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},
 	{"prefix": "rdfs", "uri": "http://www.w3.org/2000/01/rdf-schema#"},
 	{"prefix": "ual", "uri": "http://terms.library.ualberta.ca/"},
