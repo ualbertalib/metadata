@@ -24,6 +24,13 @@ class Data(object):
 
     def transformData(self):
         self.sparqlData.setReturnFormat(JSON)
+        self.__buildTransformationGraph()
+        self.__editVisibility()
+        self.__writeGraphToFile()
+        # checks to see if this particular query yielded any results
+
+
+    def __buildTransformationGraph(self):
         for q in self.query:
             self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))
             # queries a batch of resources from this particular "group"
@@ -55,6 +62,7 @@ class Data(object):
                         except:
                             PrintException()
 
+    def __editVisibility(self):
         # ensures that "draft" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
         if ('generic' in self.objectType) or ('thesis' in self.objectType):
             s_o = {}
@@ -74,7 +82,8 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
-        # checks to see if this particular query yielded any results
+
+    def __writeGraphToFile(self):
         if len(self.graph) > 0:
             for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
                 if s.split('/')[10] not in self.results:
