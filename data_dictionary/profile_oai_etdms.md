@@ -9,11 +9,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **dcterms:** http://purl.org/dc/terms/  
 **ebu:** http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#  
 **etd_ms:** http://www.ndltd.org/standards/metadata/etdms/1.0/  
-**fabio:** http://purl.org/spar/fabio/  
-**foaf:** http://xmlns.com/foaf/0.1/  
 **lang:** http://id.loc.gov/vocabulary/iso639-2/  
 **mrel:** http://id.loc.gov/vocabulary/relators/  
-**naf:** http://id.loc.gov/authorities/names/  
+**lcn:** http://id.loc.gov/authorities/names/  
 **obo:** http://purl.obolibrary.org/obo/  
 **owl:** http://www.w3.org/2002/07/owl#  
 **ore:** http://www.openarchives.org/ore/terms/  
@@ -32,7 +30,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **ualids:** http://terms.library.ualberta.ca/identifiers/  
 **ualrole:** http://terms.library.ualberta.ca/role/  
 **ualthesis:** http://terms.library.ualberta.ca/thesis/  
-**vivo:** http://vivoweb.org/ontology/core#  
 **works:** http://pcdm.org/works#  
 **vivo:** http://vivoweb.org/ontology/core#  
 

@@ -24,6 +24,14 @@ class Data(object):
 
     def transformData(self):
         self.sparqlData.setReturnFormat(JSON)
+        self.__buildTransformationGraph()
+        self.__editVisibility()
+        self.__editOwners()
+        #self.__writeGraphToFile()
+        # checks to see if this particular query yielded any results
+
+
+    def __buildTransformationGraph(self):
         for q in self.query:
             self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))
             # queries a batch of resources from this particular "group"
@@ -55,8 +63,9 @@ class Data(object):
                         except:
                             PrintException()
 
+    def __editVisibility(self):
         # ensures that "draft" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
-        if ('generic' in self.objectType) or ('thesis' in self.objectType):
+        if ('generic' in self.objectType) or ('thesis' in self.objectType) or ('collection' in self.objectType) or ('community' in self.objectType):
             s_o = {}
             for s, o in self.graph.subject_objects(URIRef("http://purl.org/dc/terms/accessRights")):
                 if s not in s_o:
@@ -74,7 +83,27 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
-        # checks to see if this particular query yielded any results
+           #for s, p, o in self.graph.triples((None, URIRef("http://purl.org/dc/terms/accessRights"), None)):
+            #   print(s, p, o)
+
+    def __editOwners(self):
+        s_o = {}
+        for s, o in self.graph.subject_objects(URIRef("http://purl.org/ontology/bibo/owner")):
+            if s not in s_o:
+                s_o[s] = []
+                s_o[s].append(o)
+            else:
+                s_o[s].append(o)
+        for so in s_o:
+            if (len(s_o[so]) == 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
+                self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
+            if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
+                self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
+            if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
+                pass
+                #do someting else to remaining owners
+
+    def __writeGraphToFile(self):
         if len(self.graph) > 0:
             for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
                 if s.split('/')[10] not in self.results:
@@ -85,5 +114,3 @@ class Data(object):
                         self.results[r].add((s, p, o))
                 self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                 self.results[r].serialize(destination=self.filename, format='nt')
-        else:
-            print('query failed to generate results')
