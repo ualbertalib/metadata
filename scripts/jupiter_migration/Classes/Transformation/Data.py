@@ -65,7 +65,7 @@ class Data(object):
 
     def __editVisibility(self):
         # ensures that "draft" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
-        if ('generic' in self.objectType) or ('thesis' in self.objectType):
+        if ('generic' in self.objectType) or ('thesis' in self.objectType) or ('collection' in self.objectType) or ('community' in self.objectType):
             s_o = {}
             for s, o in self.graph.subject_objects(URIRef("http://purl.org/dc/terms/accessRights")):
                 if s not in s_o:
@@ -83,6 +83,8 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+           #for s, p, o in self.graph.triples((None, URIRef("http://purl.org/dc/terms/accessRights"), None)):
+            #   print(s, p, o)
 
     def __editOwners(self):
         s_o = {}
@@ -94,14 +96,11 @@ class Data(object):
                 s_o[s].append(o)
         for so in s_o:
             if (len(s_o[so]) == 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
-                print("case 1", s_o[so])
                 self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
             if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
-                print("case 2", s_o[so])
                 self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
-                # do something else to remaining owners
             if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
-                print("case 3", s_o[so])
+                pass
                 #do someting else to remaining owners
 
     def __writeGraphToFile(self):
