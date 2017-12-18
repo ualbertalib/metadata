@@ -8,7 +8,7 @@ import json
 
 class QueryBuilder(object):
     """ Query objects are dynamically generated, and contain SPARQL CONSTRUCT queries with input from the jupiter application profile """
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         self.mapping = []
         self.objectType = objectType
         self.sparqlTerms = SPARQLWrapper(tripleStoreData.sparqlTerms)  # doesn't need to change (the terms store doesn't change)
@@ -23,7 +23,7 @@ class QueryBuilder(object):
             self.prefixes = self.prefixes + " PREFIX {0}: <{1}> ".format(ns['prefix'], ns['uri'])
         self.getMappings()
         try:
-            self.generateQueries(uri_generator)
+            self.generateQueries()
         except Exception:
             PrintException()
 
@@ -65,7 +65,7 @@ class QueryBuilder(object):
 
 
 class Collection(QueryBuilder):
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE {
@@ -80,9 +80,9 @@ class Collection(QueryBuilder):
                 ?resource ual:is_community 'false'^^xsd:boolean
             }"""]
         self.select = None
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.queries['collection'] = []
         self.queries['collection'].append({})
         for where in self.where:
@@ -97,7 +97,7 @@ class Collection(QueryBuilder):
 
 
 class Community(QueryBuilder):
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
@@ -105,9 +105,9 @@ class Community(QueryBuilder):
             OPTIONAL { ?resource ualid:is_community 'true'^^xsd:boolean } .
             OPTIONAL { ?resource ual:is_community 'true'^^xsd:boolean }"""]
         self.select = None
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.queries['community'] = []
         self.queries['community'].append({})
         for where in self.where:
@@ -123,7 +123,7 @@ class Community(QueryBuilder):
 
 class Technical(QueryBuilder):
     """ direct members: content and characterization"""
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         self.objectType = 'technical'
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
@@ -200,14 +200,12 @@ class Technical(QueryBuilder):
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary .
         }"""
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.getSplitBy()
         for group in self.splitBy.keys():
             self.queries[group] = []
-            filesetId = uri_generator.generatefileSetId()
-            proxyId = uri_generator.generateProxyId(random.choice('0123456789ABCDEF') for i in range(16))
             for fileType in ['content', 'characterization']:
                 self.queries[group].append({})
                 # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
@@ -232,7 +230,7 @@ class Technical(QueryBuilder):
                         OPTIONAL {{ ?directMember fedora:mimeType ?directMimeType . FILTER (str(?directMimeType) != '')}} .
                         OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
                         BIND(STR(replace(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
-                        BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', '{}')) AS ?jupiterDirectFileset)
+                        BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', 'filesetID')) AS ?jupiterDirectFileset)
                         BIND(URI(CONCAT(STR(?jupiterDirectFileset), '/files')) AS ?jupiterDirectFiles) .
                         BIND(URI(CONCAT(STR(?jupiterDirectFiles), CONCAT('/', ?noid))) AS ?jupiterDirectFile) .
                         BIND(URI(CONCAT(STR(?directMember), '/fcr:metadata')) AS ?directFileFCR) .
@@ -243,14 +241,14 @@ class Technical(QueryBuilder):
                         OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileFCRUUID . FILTER (str(?directFileFCRUUID) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:primaryType ?directFileFCRPrimaryType . FILTER (str(?directFileFCRPrimaryType) != '')}} .
-                        BIND(URI(replace(str(?jupiterDirectFileset), '/{}', '')) AS ?jupiterResource) .
-                        BIND(URI(CONCAT(str(?jupiterResource), '/proxy{}')) AS ?proxy) .
-                    }}""".format(where, fileType, fileType, filesetId, filesetId, proxyId)
+                        BIND(URI(replace(str(?jupiterDirectFileset), '/filesetID', '')) AS ?jupiterResource) .
+                        BIND(URI(CONCAT(str(?jupiterResource), '/proxy')) AS ?proxy) .
+                    }}""".format(where, fileType, fileType)
             self.writeQueries()
 
 
 class Thesis(QueryBuilder):
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
             rdf:type works:Work ;
@@ -267,9 +265,9 @@ class Thesis(QueryBuilder):
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
             dcterm:type 'Thesis'^^xsd:string
         }"""
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.getSplitBy()
         for group in self.splitBy.keys():
             self.queries[group] = []
@@ -312,7 +310,7 @@ class Thesis(QueryBuilder):
 
 class Related_Object(QueryBuilder):
     """ related members: content and characterization"""
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
             ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject .
@@ -396,14 +394,13 @@ class Related_Object(QueryBuilder):
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary .
         }"""
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.getSplitBy()
         for group in self.splitBy.keys():
             self.queries[group] = []
             for fileType in ['fedora3foxml', 'era1stats']:
-                filesetId = uri_generator.generatefileSetId()
                 self.queries[group].append({})
                 # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
                 where = """WHERE {{
@@ -439,14 +436,14 @@ class Related_Object(QueryBuilder):
                     OPTIONAL {{ ?relatedFileFCR fedora:mixinTypes ?relatedFileFCRMixins . FILTER (str(?relatedFileFCRMixins) != '') }} .
                     OPTIONAL {{ ?relatedFileFCR fedora:primaryType ?relatedFileFCRPrimaryType . FILTER (str(?relatedFileFCRPrimaryType) != '') }} .
                     BIND(URI(replace(str(?jupiterRelatedObject), '/{}', '')) AS ?jupiterResource) .
-                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/{}')) AS ?relatedFileset) .
-                    BIND(URI(CONCAT(str(?jupiterRelatedObject), '/proxy{}')) AS ?proxy) .
-                    }}""".format(where, fileType, fileType, filesetId, uri_generator.generateProxyId(random.choice('0123456789ABCDEF') for i in range(16)))
+                    BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/filesetID')) AS ?relatedFileset) .
+                    BIND(URI(CONCAT(str(?jupiterRelatedObject), '/proxy')) AS ?proxy) .
+                    }}""".format(where, fileType, fileType)
             self.writeQueries()
 
 
 class Generic(QueryBuilder):
-    def __init__(self, objectType, tripleStoreData, uri_generator):
+    def __init__(self, objectType, tripleStoreData):
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
@@ -464,9 +461,9 @@ class Generic(QueryBuilder):
             dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string) .
             FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})
         }"""
-        super().__init__(objectType, tripleStoreData, uri_generator)
+        super().__init__(objectType, tripleStoreData)
 
-    def generateQueries(self, uri_generator):
+    def generateQueries(self):
         self.getSplitBy()
         for group in self.splitBy.keys():
             self.queries[group] = []

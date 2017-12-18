@@ -6,23 +6,29 @@ class URIGenerator(object):
 
 	def __init__(self):
 		self.proxyHash = {}
-		self.fileSetTracker = []
+		self.fileSetHash = {}
 
-	def generatefileSetId(self):
+	def generatefileSetId(self, resource):
 		fileSetId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
-		if fileSetId not in self.fileSetTracker:
-			self.fileSetTracker.append(fileSetId)
-			return fileSetId
+		if fileSetId not in self.fileSetHash.values():
+			if resource not in self.fileSetHash:
+				self.fileSetHash[resource] = fileSetId
+				return fileSetId
+			else:
+				return(self.fileSetHash[resource])
 		else:
-			self.generatefileSetId()
+			self.generatefileSetId(resource)
 
 	def generateProxyId(self, resource):
-			proxyId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
-			if proxyId not in self.proxyHash:
+		proxyId = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') for i in range(6))
+		if proxyId not in self.proxyHash.values():
+			if resource not in self.proxyHash:
 				self.proxyHash[resource] = proxyId
 				return proxyId
 			else:
-				self.generateProxyId(resource)
+				return(self.proxyHash[resource])
+		else:
+			self.generateProxyId(resource)
 
 	def _addProxy(self, resource, fileSet):
 		first = URIRef("http://www.iana.org/assignments/relation/first")
