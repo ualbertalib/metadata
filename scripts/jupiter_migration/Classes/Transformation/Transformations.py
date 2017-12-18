@@ -334,8 +334,8 @@ class Transform():
             return self.output
 
     def owner(self, triple, objectType):
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/group#")
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/person#", '', triple['object']['value'])
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/group#", '', triple['object']['value'])
         if triple['object']['value'] in owners:
             triple['object']['value'] = "eraadmi@ualberta.ca"
         self.output.append(triple)
