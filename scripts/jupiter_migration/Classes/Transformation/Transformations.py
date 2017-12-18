@@ -163,8 +163,29 @@ class Transform():
                             }
                         }
                     )
-            else:
-                pass
+                else:
+                    pass
+            for vocab in vocabs["status"]:
+                # mint a new triple with the mapped type
+                if triple['object']['value'] in vocab["mapping"]:
+                    self.output.append(
+                        {
+                            'subject': {
+                                'value': triple['subject']['value'],
+                                'type': 'uri'
+                            },
+                            'predicate': {
+                                'value': "http://purl.org/ontology/bibo/status",
+                                'type': 'uri'
+                            },
+                            'object': {
+                                'value': vocab["uri"],
+                                'type': 'uri'
+                            }
+                        }
+                    )
+                else:
+                    pass
         elif (objectType == 'community') or (objectType == 'collection'):
             self.output.append(triple)
         return self.output
@@ -242,7 +263,7 @@ class Transform():
         Transform.sortYear(self, tempTriple, objectType)
         return self.output
 
-    def gradDate(self, d, triple, objectType):
+    def gradDate(self, grad, triple, objectType):
         tempTriple = {
             'subject': {
                 'value': triple['subject']['value'],
@@ -253,12 +274,12 @@ class Transform():
                 'type': 'uri'
             },
             'object': {
-                'value': d["object"][0],
+                'value': grad["object"][0],
                 'type': 'date'
             }
         }
         self.output.append(tempTriple)
-        Transform.sortYear(self, tempTriple, objectType)
+        Transformation.sortYear(self, tempTriple, objectType)
         return self.output
 
     def sortYear(self, triple, objectType):
@@ -313,8 +334,8 @@ class Transform():
             return self.output
 
     def owner(self, triple, objectType):
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/group#")
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/person#", '', triple['object']['value'])
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/group#", '', triple['object']['value'])
         if triple['object']['value'] in owners:
             triple['object']['value'] = "eraadmi@ualberta.ca"
         self.output.append(triple)

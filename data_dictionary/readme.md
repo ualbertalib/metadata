@@ -4,10 +4,14 @@
 
 ###### For application specific (operational) definitions of properties and controlled vocabularies, consult the application profiles. Jupiter items can be broadly categorized as communities, collections, generic items, or thesis items. The application profiles are organized in this way:
 
- - [collection profile](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_collection.md)
- - [community profile](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_community.md)
- - [generic profile](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_generic.md)
- - [thesis profile](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md)
+ - [collection](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_collection.md) 
+ - [community](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_community.md) 
+ - [generic](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_generic.md) 
+ - [thesis](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md) 
+ - [oai-pmh](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_oai_pmh.md) 
+ - [oai-etdms](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_oai_etdms.md) 
+ - [permission and visibility controls](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_access_and_permissions.md)
+ - most of the profiles are also viewable in an [excel spreadsheet]()
 
 ###### The following JSON docs contain application profile data and are synced daily:
 
@@ -15,6 +19,8 @@
  - [community JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/community/profile.json)
  - [generic JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/generic/profile.json)
  - [thesis JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/thesis/profile.json)
+ - [oai-pmh JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/oai_pmh.md)
+ - [oai-etdms JSON](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profiles/oai_etdms.md)
 
 ###### Documents will continually change to reflect evolving practices. The workflow is:
 
