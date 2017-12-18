@@ -40,7 +40,7 @@ def cleanOutputs(sparqlResults):
 		"relatedObject"
 	]
 	_deleteQueries()
-	_deleteResults(types)
+	#_deleteResults(types)
 
 
 def _deleteQueries():
