@@ -39,7 +39,11 @@ def cleanOutputs(sparqlResults):
 		"technical",
 		"relatedObject"
 	]
-	print('deleting local queries')
+	_deleteQueries()
+	#_deleteResults(types)
+
+
+def _deleteQueries():
 	for the_file in os.listdir('cache/'):
 		file_path = os.path.join('cache/', the_file)
 		try:
@@ -47,7 +51,9 @@ def cleanOutputs(sparqlResults):
 				os.unlink(file_path)
 		except Exception as e:
 			print(e)
-	print('deleting local results')
+
+
+def _deleteResults(types):
 	for ptype in types:
 		folder = 'results/%s' % (ptype)
 		if not os.path.exists(folder):
