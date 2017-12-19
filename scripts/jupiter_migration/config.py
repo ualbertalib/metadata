@@ -605,7 +605,8 @@ dates = [{'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/31/97/
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/cr/49/4v/k3/cr494vk366', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['4/2013']},
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/m9/00/nv/18/m900nv184', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1973']},
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/cf/95/jb/93/cf95jb93q', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1973']},
-{'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/m6/13/mx/87/m613mx873', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1984', '11/1974', '1975']},
+{'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/m6/13/mx/87/m613mx873', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1984', '11/1974', '1975']} #Dr. Otto Schaefer Collection
+,
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/28/01/pg/57/2801pg577', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1973']},
 {'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/zs/25/x8/60/zs25x8606', 'predicate': 'http://purl.org/dc/terms/created', 'object': ['1984', '11/1974', '1975']} #Dr. Otto Schaefer Collection
 ,
