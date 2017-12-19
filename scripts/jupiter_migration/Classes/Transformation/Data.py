@@ -42,7 +42,6 @@ class Data(object):
                                 if 'NOID' in triple['object']['value']:
                                     triple['object']['value'] = triple['object']['value'].replace('NOID', triple['object']['value'].split('/')[10])
                                 if "filesetID" in triple['object']['value']:
-                                    print(triple['object']['value'].split('/')[10])
                                     triple['object']['value'] = re.sub('filesetID', uri_generator.generatefileSetId(triple['object']['value'].split('/')[10]), triple['object']['value'])
                                 o = URIRef(triple['object']['value'])
                             else:
@@ -53,7 +52,6 @@ class Data(object):
                                 if 'NOID' in triple['object']['value']:
                                     triple['subject']['value'] = triple['subject']['value'].replace('NOID', triple['subject']['value'].split('/')[10])
                                 if "filesetID" in triple['subject']['value']:
-                                    print(triple['subject']['value'].split('/')[10])
                                     triple['subject']['value'] = re.sub('filesetID', uri_generator.generatefileSetId(triple['subject']['value'].split('/')[10]), triple['subject']['value'])
                                 s = URIRef(triple['subject']['value'])
                             else:
