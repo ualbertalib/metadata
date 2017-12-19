@@ -93,7 +93,7 @@ class TransformationFactory():
                 return Transform().owner(triple, objectType)
             except:
                 PrintException()
-        elif ((function == "last") or (function == "first") or (function == "prev") or (function == "rdfsyntaxnstype") or (function == "hasModel") or (function == "proxyFor") or (function == "proxyIn")) and ((objectType == 'relatedObject') or (objectType == 'technical')):
+        elif ((function == "last") or (function == "first") or (function == "prev") or (function == "rdfsyntaxnstype") or (function == "modelshasModel") or (function == "proxyFor") or (function == "proxyIn")) and ((objectType == 'relatedObject') or (objectType == 'technical')):
             try:
                 return Transform().proxy(triple, objectType, uri_generator)
             except:
