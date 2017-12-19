@@ -201,9 +201,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel  )  
 ### repeat  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
-  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
@@ -319,7 +319,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * propertyName:  
     * rights  
   * repeat:  
-    * true  
+    * false  
   * required:  
     * false  
   * sort:  
@@ -513,7 +513,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * propertyName:  
     * language  
   * repeat:  
-    * false  
+    * true  
   * required:  
     * false  
   * sort:  
@@ -576,7 +576,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualcommiteeember  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualcommiteemember  
   * display:  
     * true  
   * displayLabel:  
