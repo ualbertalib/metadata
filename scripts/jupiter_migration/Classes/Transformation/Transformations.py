@@ -334,9 +334,17 @@ class Transform():
             return self.output
 
     def owner(self, triple, objectType):
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/person#")
-        triple['object']['value'] = triple['subject']['value'].strip("http://projecthydra.org/ns/auth/group#")
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/person#", '', triple['object']['value'])
+        triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/group#", '', triple['object']['value'])
         if triple['object']['value'] in owners:
             triple['object']['value'] = "eraadmi@ualberta.ca"
+        self.output.append(triple)
+        return self.output
+
+    def proxy(self, triple, objectType, uri_generator):
+        if "proxy" in triple['subject']['value']:
+            triple['subject']['value'] = triple['subject']['value'] + uri_generator.generateProxyId('/'.join(triple['subject']['value'].split('/')[0:-1]))
+        if "proxy" in triple['object']['value']:
+            triple['object']['value'] = triple['object']['value'] + uri_generator.generateProxyId('/'.join(triple['object']['value'].split('/')[0:-1]))
         self.output.append(triple)
         return self.output

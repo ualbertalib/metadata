@@ -13,10 +13,9 @@ def main():
     """ main controller: iterates over each object type (generic item metadata, thesis item metadata, and binary-level metadata),
     creates a set of subqueries for each of these types, then cues threads to run each of these subqueries as a job. The migration outout is saved to
     the results folder and to a triplestore. The subqueries are cached in the cache folder. Custom settings can be modified in config.py."""
+    ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms, sparqlResults)
     uri_generator = URI_Generator.URIGenerator()
-    ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    print('cleaning the cache')
     cleanOutputs(sparqlResults)
     # Iterate over every type of object that needs to be migrated.
     # This is the first splitting of the data for migration.
@@ -27,12 +26,12 @@ def main():
     # a queryObject knows its type
     # a cache of queries is recorded, results are sent to a "results" triplestore, and results are stored as n-triples
     for objectType in types:
-        queryObject = Query_Factory.QueryFactory().getMigrationQuery(objectType, tripleStoreData, uri_generator)
+        queryObject = Query_Factory.QueryFactory().getMigrationQuery(objectType, tripleStoreData)
         print('{0} queries generated'.format(objectType))
         print('{0} queries of {1} objects to be transformed'.format(len(queryObject.queries), objectType))
         i = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            future_to_result = {executor.submit(parellelTransform, group, queryObject): group for group in queryObject.queries.keys()}
+            future_to_result = {executor.submit(parellelTransform, group, queryObject, uri_generator): group for group in queryObject.queries.keys()}
             for future in concurrent.futures.as_completed(future_to_result):
                 future_to_result[future]
                 try:
@@ -47,9 +46,9 @@ def main():
     print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
 
-def parellelTransform(group, queryObject):
+def parellelTransform(group, queryObject, UG):
     DTO = Data.Data(group, queryObject)  # query, group, object
-    DTO.transformData()
+    DTO.transformData(UG)
     # DTO.resultsToTriplestore()
 
 
