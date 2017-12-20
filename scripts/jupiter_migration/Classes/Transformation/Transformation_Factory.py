@@ -7,7 +7,7 @@ from Mappings.ThesisGradDate import gradDate
 
 class TransformationFactory():
     @staticmethod
-    def getTransformation(triple, objectType):
+    def getTransformation(triple, objectType, uri_generator):
         function = re.sub(r'[0-9]+', '', triple['predicate']['value'].split('/')[-1].replace('#', '').replace('-', ''))
         for grad in gradDate:
             #TODO: change graduationDate to graduationdate
@@ -93,5 +93,11 @@ class TransformationFactory():
                 return Transform().owner(triple, objectType)
             except:
                 PrintException()
+        elif ((function == "last") or (function == "first") or (function == "prev") or (function == "rdfsyntaxnstype") or (function == "modelhasModel") or (function == "proxyFor") or (function == "proxyIn")) and ((objectType == 'relatedObject') or (objectType == 'technical')):
+            try:
+                return Transform().proxy(triple, objectType, uri_generator)
+            except:
+                PrintException()
         else:
             return [triple]
+
