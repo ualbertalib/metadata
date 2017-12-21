@@ -66,7 +66,7 @@ class QueryBuilder(object):
 
 class Collection(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE {
             ?resource info:hasModel 'Collection'^^xsd:string .
@@ -98,7 +98,7 @@ class Collection(QueryBuilder):
 
 class Community(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRItem'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
             OPTIONAL { ?resource ualids:is_community 'true'^^xsd:boolean } .

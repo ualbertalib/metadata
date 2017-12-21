@@ -34,6 +34,8 @@ class Data(object):
                 result = Transformation_Factory.TransformationFactory().getTransformation(result, self.objectType, uri_generator)
                 if isinstance(result, list):
                     for triple in result:
+                        if self.objectType == 'Collection':
+                            print(triple)
                         p = URIRef(triple['predicate']['value'])
                         try:
                             if triple['object']['type'] == 'uri':
