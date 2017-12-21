@@ -68,17 +68,38 @@ class Collection(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
-        self.where = ["""WHERE {
-            ?resource info:hasModel 'Collection'^^xsd:string .
-            OPTIONAL {
-                ?resource ualids:is_community 'false'^^xsd:boolean
-            } .
-            OPTIONAL {
-                ?resource ualid:is_community 'false'^^xsd:boolean
-            } .
-            OPTIONAL {
-                ?resource ual:is_community 'false'^^xsd:boolean
-            }"""]
+        self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
+                          filter ( not exists
+                            {
+                              ?resource ualids:is_community 'true'^^xsd:string
+                            }
+                          )
+                          filter ( not exists
+                            {
+                              ?resource ualid:is_community 'true'^^xsd:string
+                            }
+                          )
+                          filter ( not exists
+                            {
+                              ?resource ual:is_community 'true'^^xsd:string
+                            }
+                          )
+                          filter ( not exists
+                            {
+                              ?resource ualids:is_community 'true'^^xsd:boolean
+                            }
+                          )
+                          filter ( not exists
+                            {
+                              ?resource ualid:is_community 'true'^^xsd:boolean
+                            }
+                          )
+                          filter ( not exists
+                            {
+                              ?resource ual:is_community 'true'^^xsd:boolean
+                            }
+                          )
+                    """]
         self.select = None
         super().__init__(objectType, tripleStoreData)
 
@@ -100,10 +121,31 @@ class Community(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
-        self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string ;
-            OPTIONAL { ?resource ualids:is_community 'true'^^xsd:boolean } .
-            OPTIONAL { ?resource ualid:is_community 'true'^^xsd:boolean } .
-            OPTIONAL { ?resource ual:is_community 'true'^^xsd:boolean }"""]
+        self.where = ["""WHERE {
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ualids:is_community 'true'^^xsd:string
+                        } UNION
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ualid:is_community 'true'^^xsd:string
+                        } UNION
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ual:is_community 'true'^^xsd:string
+                        } UNION
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ualids:is_community 'true'^^xsd:boolean
+                        } UNION
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ualid:is_community 'true'^^xsd:boolean
+                        } UNION
+                        {
+                          ?resource info:hasModel 'Collection'^^xsd:string .
+                          ?resource ual:is_community 'true'^^xsd:boolean
+                        }"""]
         self.select = None
         super().__init__(objectType, tripleStoreData)
 
