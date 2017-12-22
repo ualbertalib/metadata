@@ -81,9 +81,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor  )  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle  )  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  )  
+  * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualhydranoid  )  
   * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch  )  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile  )  
   * [nnaItem](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnaitem  )  
+  * [path](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualpath  )  
   * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsortyear  )  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn  )  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ebudateingested  )  
@@ -157,6 +159,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ebudateingested) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
@@ -878,6 +881,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * repeat:  
+    * false  
 ### ual:ingestBatch  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/id/ingestbatch  
@@ -928,6 +936,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
+### ual:path  
+  * comments:  
+    * captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf.  
 ### ual:sortYear  
   * dataType:  
     * auto  
@@ -972,6 +983,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ebu:dateIngested  
   * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  
   * backwardCompatibleWith:  
