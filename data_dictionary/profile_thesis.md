@@ -76,7 +76,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle  )  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualhydranoid  )  
   * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch  )  
+  * [path](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualpath  )  
   * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest  )  
   * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
@@ -148,6 +150,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ebudateingested) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
@@ -728,10 +731,18 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * sort:  
     * true  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * repeat:  
+    * false  
 ### ual:ingestBatch  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/id/ingestbatch  
     * http://terms.library.library.ca/identifiers/ingestbatch  
+### ual:path  
+  * comments:  
+    * captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf.  
 ### ual:proquest  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/proquest  
@@ -868,6 +879,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ebu:dateIngested  
   * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  
   * values displayed on form:  
