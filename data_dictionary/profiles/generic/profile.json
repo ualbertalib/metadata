@@ -1257,6 +1257,14 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
+    "http://terms.library.ualberta.ca/hydraNoid": {
+        "http://terms.library.ualberta.ca/comments": [
+            "hydra north legacy noid migrated through script"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ]
+    },
     "http://terms.library.ualberta.ca/ingestBatch": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://terms.library.library.ca/id/ingestbatch",
@@ -1339,6 +1347,11 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
+    "http://terms.library.ualberta.ca/path": {
+        "http://terms.library.ualberta.ca/comments": [
+            "captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf."
+        ]
+    },
     "http://terms.library.ualberta.ca/sortYear": {
         "http://terms.library.ualberta.ca/dataType": [
             "auto"
@@ -1408,6 +1421,7 @@
     },
     "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://fedora.info/definitions/v4/repository#created",
             "info:fedora/fedora-system:def/model#createdDate"
         ]
     },

@@ -53,19 +53,17 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
 # Properties (Quick Find)
-  * [hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#pcdmhasmember  )  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dccreator  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualdepositor  )  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid  )  
+  * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualhydranoid  )  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ebudateingested  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype  )  
 
 # Profile by annotation
 ### backwardCompatibleWith  
-  * [hasMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#pcdmhasmember) is backward compatible with:  
-    * info:fedora/fedora-system:def/relations-external#hasCollectionMember  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dccreator) is backward compatible with:  
     * http://purl.org/dc/terms/creator  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription) is backward compatible with:  
@@ -78,6 +76,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ebudateingested) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
@@ -96,9 +95,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
-### pcdm:hasMember  
-  * backwardCompatibleWith:  
-    * info:fedora/fedora-system:def/relations-external#hasCollectionMember  
 ### dc:creator  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/creator  
@@ -199,8 +195,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * repeat:  
+    * false  
 ### ebu:dateIngested  
   * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
     * info:fedora/fedora-system:def/model#createdDate  
 ### rdf:type  
   * backwardCompatibleWith:  
