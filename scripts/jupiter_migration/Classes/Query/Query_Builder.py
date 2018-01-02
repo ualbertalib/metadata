@@ -77,7 +77,7 @@ class Collection(QueryBuilder):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
-        self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
+        self.where = """WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
                           filter ( not exists
                             {
                               ?resource ualids:is_community 'true'^^xsd:string
@@ -108,7 +108,7 @@ class Collection(QueryBuilder):
                               ?resource ual:is_community 'true'^^xsd:boolean
                             }
                           )
-                    """]
+                    """
         # select statement is only required for IRItems
         self.select = None
         super().__init__(objectType, tripleStoreData)
@@ -117,16 +117,16 @@ class Collection(QueryBuilder):
         """collections do not get grouped. there is only one query belonging to "collection". this is because there are only a few hundred collection objects to migrate"""
         self.queries['collection'] = []
         self.queries['collection'].append({})
-        for where in self.where:
-            # creates a local instance of the construct statement so it can be safely manipulated
-            construct = self.construct
-            # iterate over mappings and insert each mapping as a clause in the query
-            for pair in self.mapping:
-                # original construct clause +  { ?predicate ?objectVariable }
-                # the object needs to have special characters removed to make it a functional variable (the transformation functions are named using the same variables, so this is an important step)
-                construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                # the where is also built similarly: where + {?predicate ?objectvariable}
-                where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+        # creates a local instance of the construct statement so it can be safely manipulated
+        construct = self.construct
+        where = self.where
+        # iterate over mappings and insert each mapping as a clause in the query
+        for pair in self.mapping:
+            # original construct clause +  { ?predicate ?objectVariable }
+            # the object needs to have special characters removed to make it a functional variable (the transformation functions are named using the same variables, so this is an important step)
+            construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            # the where is also built similarly: where + {?predicate ?objectvariable}
+            where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             # the query is built by stringing prefix, construct, and where together, followed by a few extra clauses at the end of the where, which are not available in the migration triplestore.
             self.queries['collection'][0]['prefix'] = self.prefixes
             self.queries['collection'][0]['construct'] = construct + "}"
@@ -143,7 +143,7 @@ class Community(QueryBuilder):
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
-        self.where = ["""WHERE {
+        self.where = """WHERE {
                         {
                           ?resource info:hasModel 'Collection'^^xsd:string .
                           ?resource ualids:is_community 'true'^^xsd:string
@@ -167,29 +167,29 @@ class Community(QueryBuilder):
                         {
                           ?resource info:hasModel 'Collection'^^xsd:string .
                           ?resource ual:is_community 'true'^^xsd:boolean
-                        }"""]
+                        }"""
         # select statement is only required for IRItems 
         self.select = None
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
-    """communities do not get grouped. there is only one query belonging to "community". this is because there are only a few hundred community objects to migrate"""
+        """communities do not get grouped. there is only one query belonging to "community". this is because there are only a few hundred community objects to migrate"""
         self.queries['community'] = []
         self.queries['community'].append({})
-        for where in self.where:
-            # creates a local instance of the construct statement so it can be safely manipulated
-            construct = self.construct
-            # iterate over mappings and insert each mapping as a clause in the query
-            for pair in self.mapping:
-                # original construct clause +  { ?predicate ?objectVariable }
-                construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-                # the where is also built similarly: where + {?predicate ?objectvariable}
-                where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-            # the query is built by stringing prefix, construct, and where together, followed by a few extra clauses at the end of the where, which are not available in the migration triplestore.            
-            self.queries['community'][0]['prefix'] = self.prefixes
-            self.queries['community'][0]['construct'] = construct + "}"
-            # binds permissions, visibility to the where clause, and changes the URI suffix from gillingham to UAT
-            self.queries['community'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
+        # creates a local instance of the construct statement so it can be safely manipulated
+        construct = self.construct
+        where = self.where
+        # iterate over mappings and insert each mapping as a clause in the query
+        for pair in self.mapping:
+            # original construct clause +  { ?predicate ?objectVariable }
+            construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            # the where is also built similarly: where + {?predicate ?objectvariable}
+            where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+        # the query is built by stringing prefix, construct, and where together, followed by a few extra clauses at the end of the where, which are not available in the migration triplestore.            
+        self.queries['community'][0]['prefix'] = self.prefixes
+        self.queries['community'][0]['construct'] = construct + "}"
+        # binds permissions, visibility to the where clause, and changes the URI suffix from gillingham to UAT
+        self.queries['community'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
         # adds this query to the queries record
         self.writeQueries()
 
@@ -209,8 +209,6 @@ class Thesis(QueryBuilder):
             dcterm:available ?available ;
             dcterm:accessRights ?accessRights;
             ual:hydraNoid ?noid"""
-        
-        self.where = []
         # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
@@ -273,7 +271,6 @@ class Generic(QueryBuilder):
             acl:embargoHistory ?history ;
             acl:visibilityAfterEmbargo ?visAfter ;
             ual:hydraNoid ?noid"""
-        self.where = []
         # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
