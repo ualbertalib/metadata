@@ -8,53 +8,59 @@ import json
 
 class QueryBuilder(object):
     """ Query objects are dynamically generated, and contain SPARQL CONSTRUCT queries with input from the jupiter application profile """
-    def __init__(self, objectType, tripleStoreData):
-        self.mapping = []
-        self.objectType = objectType
-        self.sparqlTerms = SPARQLWrapper(tripleStoreData.sparqlTerms)  # doesn't need to change (the terms store doesn't change)
-        self.sparqlData = SPARQLWrapper(tripleStoreData.sparqlData)  # sets the triple store from which to get data (simple, test, or dev)
-        self.sparqlTerms.setMethod("POST")
+    def __init__(self, objectType, tripleStoreData):        
+        self.mapping = [] # holds the mapping between ERA and jupiter
+        self.objectType = objectType # keeps track of the class name (i.e. the type of item being migrated currently)
+        self.sparqlTerms = SPARQLWrapper(tripleStoreData.sparqlTerms)  # the origin for mapping
+        self.sparqlData = SPARQLWrapper(tripleStoreData.sparqlData)  # the origin for migration (test or dev can be set in config)
+        self.sparqlTerms.setMethod("POST") # setting to POST allows for long queries
         self.sparqlData.setMethod("POST")
-        self.queries = {}
-        self.splitBy = {}
-        self.prefixes = ""
-        self.filename = ""
+        self.queries = {} # each query fetches a top-level folder from fedora and is recorded in this variable
+        self.splitBy = {} # the groupings are tracked here
+        self.prefixes = "" # prefixes are generated from the config file
+        self.filename = "" # each object type is saved to a different file under results
         for ns in mig_ns:
-            self.prefixes = self.prefixes + " PREFIX {0}: <{1}> ".format(ns['prefix'], ns['uri'])
-        self.getMappings()
+            self.prefixes = self.prefixes + " PREFIX {0}: <{1}> ".format(ns['prefix'], ns['uri']) # concatenate a prefix from the config file
+        self.getMappings() # get the mappings from the mapping triple store
         try:
-            self.generateQueries()
+            self.generateQueries() # get the queries for this object
         except Exception:
             PrintException()
 
     def generateQueries(self):
+        """every queryBuilder object must have a generateQueries method"""
         pass
 
     def getMappings(self):
-        if (self.objectType == 'collection') or (self.objectType == 'community') or (self.objectType == 'generic') or (self.objectType == 'thesis'):
+        """gets mappings from the mapping triplestore for any IRitem, IRCollection, or IRCommunity. these mappings are owned by the object, and bound to each query when the queryGenerator method is run"""
+        if (self.objectType != 'relatedObject') and (self.objectType != 'technical'):
+            # the terms repo contains a graph for each class/object type (i.e. see profile in data dictionary). most jupiter properties are "backwardCompatibleWith" one ore more ERA legacy properties.
             query = """prefix ual: <http://terms.library.ualberta.ca/> SELECT * WHERE {{ GRAPH ual:{0} {{?newProperty ual:backwardCompatibleWith ?oldProperty}} }}""".format(self.objectType)
+            # run the query
             self.sparqlTerms.setReturnFormat(JSON)
             self.sparqlTerms.setQuery(query)
             results = self.sparqlTerms.query().convert()
             for result in results['results']['bindings']:
+                # append the bindings to the mapping variable for this object
                 self.mapping.append((result['newProperty']['value'], result['oldProperty']['value']))
         else:
             pass
 
     def getSplitBy(self):
-        # base query only needs 3 prefixes appended to the "select" statement defined by the object
+        """the select statement for this particular instance is used to identify all the possible groupings. These will be used to split the queries by group."""
         query = "prefix ualids: <http://terms.library.ualberta.ca/identifiers/> prefix fedora: <http://fedora.info/definitions/v4/repository#> prefix ldp: <http://www.w3.org/ns/ldp#> prefix dcterm: <http://purl.org/dc/terms/> prefix info: <info:fedora/fedora-system:def/model#> prefix ual: <http://terms.library.ualberta.ca/> {0}".format(self.select).replace('\n', '')
         self.sparqlData.setReturnFormat(JSON)
         self.sparqlData.setQuery(query)
         results = self.sparqlData.query().convert()
         # iterate over query results
         for result in results['results']['bindings']:
-            # the group is the two folders at the base of the pair tree, concatenated by an underscore
+            # the group is the first folder at the base of the pair tree
             group = result['resource']['value'].split('/')[6]
-            # assign that parameter by which you want to search to that group
+            # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
             self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
 
     def writeQueries(self):
+        """prepares the query. one per group. saves it to the query variable."""
         for group in self.queries:
             for num, query in enumerate(self.queries[group]):
                 self.queries[group][num]['construct'] = ' '.join(self.queries[group][num]['construct'].replace('\n', ' ').split())
@@ -65,9 +71,12 @@ class QueryBuilder(object):
 
 
 class Collection(QueryBuilder):
+    """This object migrates an IRCollection item"""
     def __init__(self, objectType, tripleStoreData):
+        # the construct variable contains mappings that are not available in the mapping variable
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
+        # the where variable sets the filter for obtaining collection objects.
         self.where = ["""WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
                           filter ( not exists
                             {
@@ -100,27 +109,40 @@ class Collection(QueryBuilder):
                             }
                           )
                     """]
+        # select statement is only required for IRItems
         self.select = None
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
+        """collections do not get grouped. there is only one query belonging to "collection". this is because there are only a few hundred collection objects to migrate"""
         self.queries['collection'] = []
         self.queries['collection'].append({})
         for where in self.where:
+            # creates a local instance of the construct statement so it can be safely manipulated
             construct = self.construct
+            # iterate over mappings and insert each mapping as a clause in the query
             for pair in self.mapping:
+                # original construct clause +  { ?predicate ?objectVariable }
+                # the object needs to have special characters removed to make it a functional variable (the transformation functions are named using the same variables, so this is an important step)
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                # the where is also built similarly: where + {?predicate ?objectvariable}
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            # the query is built by stringing prefix, construct, and where together, followed by a few extra clauses at the end of the where, which are not available in the migration triplestore.
             self.queries['collection'][0]['prefix'] = self.prefixes
             self.queries['collection'][0]['construct'] = construct + "}"
+            # binds permissions, visibility to the where clause, and changes the URI suffix from gillingham to UAT
             self.queries['collection'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource)}}""".format(where)
+        # adds this query to the queries record
         self.writeQueries()
 
 
 class Community(QueryBuilder):
+    """This object migrates an IRCommunity item"""
     def __init__(self, objectType, tripleStoreData):
+        # the construct variable contains mappings that are not available in the mapping variable
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
+        # the where variable sets the filter for obtaining collection objects.
         self.where = ["""WHERE {
                         {
                           ?resource info:hasModel 'Collection'^^xsd:string .
@@ -146,25 +168,36 @@ class Community(QueryBuilder):
                           ?resource info:hasModel 'Collection'^^xsd:string .
                           ?resource ual:is_community 'true'^^xsd:boolean
                         }"""]
+        # select statement is only required for IRItems 
         self.select = None
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
+    """communities do not get grouped. there is only one query belonging to "community". this is because there are only a few hundred community objects to migrate"""
         self.queries['community'] = []
         self.queries['community'].append({})
         for where in self.where:
+            # creates a local instance of the construct statement so it can be safely manipulated
             construct = self.construct
+            # iterate over mappings and insert each mapping as a clause in the query
             for pair in self.mapping:
+                # original construct clause +  { ?predicate ?objectVariable }
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+                # the where is also built similarly: where + {?predicate ?objectvariable}
                 where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }}".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
+            # the query is built by stringing prefix, construct, and where together, followed by a few extra clauses at the end of the where, which are not available in the migration triplestore.            
             self.queries['community'][0]['prefix'] = self.prefixes
             self.queries['community'][0]['construct'] = construct + "}"
+            # binds permissions, visibility to the where clause, and changes the URI suffix from gillingham to UAT
             self.queries['community'][0]['where'] = """{} . OPTIONAL {{ ?permission webacl:accessTo ?resource ; webacl:mode webacl:Read ; webacl:agent ?visibility }} . BIND(STR(replace(replace(STR(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', '',''), '^.+/', '')) AS ?noid) . BIND(URI(replace(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterResource) . }}""".format(where)
+        # adds this query to the queries record
         self.writeQueries()
 
 
 class Thesis(QueryBuilder):
+    """This object migrates an IRThesis (if IRThesis becomes a thing?) item"""
     def __init__(self, objectType, tripleStoreData):
+        # the construct variable contains mappings that are not available in the mapping variable
         self.construct = """CONSTRUCT {
             ?jupiterResource info:hasModel 'IRItem'^^xsd:string ;
             rdf:type works:Work ;
@@ -176,7 +209,9 @@ class Thesis(QueryBuilder):
             dcterm:available ?available ;
             dcterm:accessRights ?accessRights;
             ual:hydraNoid ?noid"""
+        
         self.where = []
+        # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
             dcterm:type 'Thesis'^^xsd:string
@@ -225,6 +260,7 @@ class Thesis(QueryBuilder):
 
 
 class Generic(QueryBuilder):
+    """This object migrates an IRitem (IRGeneric?) item"""
     def __init__(self, objectType, tripleStoreData):
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
@@ -238,6 +274,7 @@ class Generic(QueryBuilder):
             acl:visibilityAfterEmbargo ?visAfter ;
             ual:hydraNoid ?noid"""
         self.where = []
+        # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
             dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string) .
@@ -292,7 +329,7 @@ class Generic(QueryBuilder):
 
 
 class Related_Object(QueryBuilder):
-    """ related members: content and characterization"""
+    """This object migrates foxml and stats objects as related objects"""
     def __init__(self, objectType, tripleStoreData):
         # custom construct clause to capture unmapped triples
         self.construct = """CONSTRUCT {
@@ -374,6 +411,7 @@ class Related_Object(QueryBuilder):
             iana:prev ?proxy .
             ?jupiterRelatedObject iana:first ?proxy ;
             iana:last ?proxy ."""
+        # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary .
         }"""
@@ -427,7 +465,7 @@ class Related_Object(QueryBuilder):
 
 
 class Technical(QueryBuilder):
-    """ direct members: content and characterization"""
+    """This object migrates direct members of an object (content and characterization)"""
     def __init__(self, objectType, tripleStoreData):
         self.objectType = 'technical'
         # custom construct clause to capture unmapped triples
@@ -502,6 +540,7 @@ class Technical(QueryBuilder):
             iana:prev ?proxy .
             ?jupiterResource iana:first ?proxy ;
             iana:last ?proxy ."""
+        # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource rdf:type fedora:Binary .
         }"""
