@@ -217,7 +217,10 @@ class Thesis(QueryBuilder):
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
+        """generic/thesis items are queried by grouping. A query consists of prefixes, construct, and where clauses strung together. The construct and where clauses are built based on the data passed from the mapping variable"""
+        # get the groupings
         self.getSplitBy()
+        # iterate over each group
         for group in self.splitBy.keys():
             self.queries[group] = []
             self.queries[group].append({})
@@ -233,6 +236,7 @@ class Thesis(QueryBuilder):
                     where = " {0} . OPTIONAL {{ ?resource <{1}> ?{2} . FILTER (str(?{3})!='') }} ".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"
+            # old era handled permissions and visibility in a separate object, so there are no mappings directly on the object. they must be hand written and appended here.
             self.queries[group][0]['where'] = """{} .
                 OPTIONAL {{
                     ?ownership webacl:accessTo ?resource ;
@@ -280,11 +284,16 @@ class Generic(QueryBuilder):
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
+        """generic/thesis items are queried by grouping. A query consists of prefixes, construct, and where clauses strung together. The construct and where clauses are built based on the data passed from the mapping variable"""
+        # get the groupings
         self.getSplitBy()
+        # iterate over each group
         for group in self.splitBy.keys():
+            # initialize this specific group as a key in the queries dictionary
             self.queries[group] = []
+            # the query is not saved as entire string, it is saved to a dictionary (and later a json file) seperately as construct, where, and prefixes.
             self.queries[group].append({})
-            # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+            # this where clause defines the filter: GenericFile, not thesis, not dataverse items, and the subject must contain the value in the split group
             where = """WHERE {{
                 ?resource info:hasModel 'GenericFile'^^xsd:string ;
                 dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string) .
@@ -304,9 +313,10 @@ class Generic(QueryBuilder):
                                     ?resource <{1}> ?{2} .
                                     FILTER (str(?{3})!='')
                                 }}""".format(where, pair[1], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')), re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
-            # customize the where clause to include triples that aren't in the mappings
+            
             self.queries[group][0]['prefix'] = self.prefixes
             self.queries[group][0]['construct'] = construct + " }"
+            # old era handled permissions and visibility in a separate object, so there are no mappings directly on the object. they must be hand written and appended here. 
             self.queries[group][0]['where'] = """{} .
                 OPTIONAL {{ ?ownership webacl:accessTo ?resource ;
                     webacl:mode webacl:Write ;
@@ -328,7 +338,7 @@ class Generic(QueryBuilder):
 class Related_Object(QueryBuilder):
     """This object migrates foxml and stats objects as related objects"""
     def __init__(self, objectType, tripleStoreData):
-        # custom construct clause to capture unmapped triples
+        # binaries do not have mappings from old era. this is entirely custom.
         self.construct = """CONSTRUCT {
             ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject .
             ?jupiterRelatedObject info:hasModel 'IRItem' ;
@@ -419,8 +429,9 @@ class Related_Object(QueryBuilder):
         for group in self.splitBy.keys():
             self.queries[group] = []
             for fileType in ['fedora3foxml', 'era1stats']:
+                # the query is not saved as entire string, it is saved to a dictionary (and later a json file) seperately as construct, where, and prefixes.
                 self.queries[group].append({})
-                # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+                # this where clause defines the filter: binary file, the subject must contain the value in the split group and the type of item (foxml or erastats)
                 where = """WHERE {{
                     ?relatedObject rdf:type fedora:Binary .
                     FILTER (STRSTARTS(str(?relatedObject), '{}')) .
@@ -428,6 +439,13 @@ class Related_Object(QueryBuilder):
                 # customize the where clause to include triples that aren't in the mappings
                 self.queries[group][-1]['prefix'] = self.prefixes
                 self.queries[group][-1]['construct'] = self.construct + " }"
+                # the mapping for binaries is handwritten
+                # ?relatedObject is the binary itself (it is related because it is an independent object which is related to the parent object (via PCDM))
+                # OPTIONAL is used so as to include any instance of a property, without disqualifying resources that do not have one
+                # empty properties are filtered out ( != '' )
+                # the paths that are unique to jupiter (more specifically, unique to PCDM) are generated using BIND clauses
+                # essentially, the queries below create variable/property combinations for an object, a fileset, and a file
+                # in subsequent transformations (under the transformation class) "proxy" and "filesetId" are converted to unique alphanumeric hashes
                 self.queries[group][-1]['where'] = """{} .
                     OPTIONAL {{ ?relatedObject fedora:created ?relatedFedoraCreated . FILTER (str(?relatedFedoraCreated) != '') }} .
                     OPTIONAL {{ ?relatedObject fedora:createdBy ?relatedFedoraCreatedBy . FILTER (str(?relatedFedoraCreatedBy) != '') }} .
@@ -465,7 +483,7 @@ class Technical(QueryBuilder):
     """This object migrates direct members of an object (content and characterization)"""
     def __init__(self, objectType, tripleStoreData):
         self.objectType = 'technical'
-        # custom construct clause to capture unmapped triples
+        # custom construct clause. The binary is not mapped before hand. this is totally custom.
         self.construct = """CONSTRUCT {
             ?jupiterResource pcdm:hasMember ?jupiterDirectFileset .
             ?jupiterDirectFileset info:hasModel 'IRFileSet' ;
@@ -544,19 +562,27 @@ class Technical(QueryBuilder):
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
+        # get the groups into which we will split queries
         self.getSplitBy()
         for group in self.splitBy.keys():
+            # the query is not saved as entire string, it is saved to a dictionary (and later a json file) seperately as construct, where, and prefixes.
             self.queries[group] = []
             for fileType in ['content', 'characterization']:
                 self.queries[group].append({})
-                # synthesize a query that fetches a subgroup of resources and constructs a transformed graph from this subgroup
+                # this where clause defines the filter: binary file, the subject must contain the value in the split group and the type of item (content or characterization)
                 where = """WHERE {{
                     ?directMember rdf:type fedora:Binary .
                     FILTER (STRSTARTS(str(?directMember), '{}')) .
                     FILTER (STRENDS(str(?directMember), '{}'))""".format(self.splitBy[group], fileType)
-                # customize the where clause to include triples that aren't in the mappings
                 self.queries[group][-1]['prefix'] = self.prefixes
                 self.queries[group][-1]['construct'] = self.construct + " }"
+                # the mapping for binaries is handwritten
+                # ?directMember is the binary itself (it is direct because it is owned directly as a member of the parent object)
+                # OPTIONAL is used so as to include any instance of a property, without disqualifying resources that do not have one
+                # empty properties are filtered out ( != '' )
+                # the paths that are unique to jupiter (more specifically, unique to PCDM) are generated using BIND clauses
+                # essentially, the queries below create variable/property combinations for an object, a fileset, and a file
+                # in subsequent transformations (under the transformation class) "proxy" and "filesetId" are converted to unique alphanumeric hashes
                 self.queries[group][-1]['where'] = """{} .
                         OPTIONAL {{ ?directMember fedora:created ?directFedoraCreated . FILTER (str(?directFedoraCreated) != '') }} .
                         OPTIONAL {{ ?directMember fedora:createdBy ?directFedoraCreatedBy . FILTER (str(?irectFedoraCreatedBy) != '')}} .
