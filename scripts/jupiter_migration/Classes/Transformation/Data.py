@@ -107,7 +107,7 @@ class Data(object):
                 self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
             if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") in s_o[so]:
                 self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
-            if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
+            if (len(s_o[so]) > 1) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
                 pass
                 # do someting else to remaining owners
 
