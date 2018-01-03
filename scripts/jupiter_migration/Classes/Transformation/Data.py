@@ -7,38 +7,43 @@ import re
 
 
 class Data(object):
+    """the data object performs a query passed into it from the main controller; it passes the results of the query to any necessary transformation methods (transformation class); 
+    it then commits the transformed data to a local graph (an RDFLib object); 
+    when all the results of a query have been transformed and committed to the local graph, the graph then has some transformations performed on it; 
+    the local graph is the committed to a file in the results folder"""
     def __init__(self, group, queryObject):
-        self.query = queryObject.queries[group]
-        self.prefixes = queryObject.prefixes
-        self.group = group
-        self.sparqlData = queryObject.sparqlData
-        self.sparqlTerms = queryObject.sparqlTerms
-        self.results = {}
-        self.graph = Graph()
-        self.objectType = queryObject.objectType
-        self.directory = "results2/{0}/".format(self.objectType)
-        self.filename = "results2/{0}/{1}.nt".format(self.objectType, group)
-        if not os.path.exists(self.directory):
+        self.query = queryObject.queries[group]  # the query for the group 
+        self.prefixes = queryObject.prefixes  # the prefixes for this query
+        self.group = group  # this group folder
+        self.sparqlData = queryObject.sparqlData  # the migration origin
+        self.sparqlTerms = queryObject.sparqlTerms  # the mapping origin
+        self.results = {}  # 
+        self.graph = Graph()  # local graph stores the transformed results. final transformations are performed directly on the graph when context is required (if this then that)
+        self.objectType = queryObject.objectType 
+        self.directory = "results/{0}/".format(self.objectType)
+        self.filename = "results/{0}/{1}.nt".format(self.objectType, group)
+        if not os.path.exists(self.directory):  # if the directory doesn't exist, create it
             os.makedirs(self.directory)
 
     def transformData(self, uri_generator):
         self.sparqlData.setReturnFormat(JSON)
-        # pulls the query to be formed from the query belonging queryObject. Should return a batch of resources from a top level fedora folder.
+        # for each query in the query object, perform query and transform results
         for q in self.query:
-            # set the query
-            self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))
-            # queries a batch of resources from this particular "group"
+            self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where'])) # set the query
             results = self.sparqlData.query().convert()['results']['bindings']
-            # iterates over each resource and performs transformations
+            # iterate over each resource and performs transformations
             for result in results:
+                # for this set of results, perform a transformation
                 result = Transformation_Factory.TransformationFactory().getTransformation(result, self.objectType, uri_generator)
+                # test to see if the post-transformation result is actually a triple (just a QA test)
                 if isinstance(result, list):
+                    # a transformation can return more than one triple (status and dctype, for example)
                     for triple in result:
-                        if self.objectType == 'Collection':
-                            print(triple)
                         p = URIRef(triple['predicate']['value'])
                         try:
+                            # adding triple to the local graph, depends on uri or literal
                             if triple['object']['type'] == 'uri':
+                                # substitute NOID for an actual noid, fileSetId for an actual ID, and replace gillingham with UAT anywhere that we might have failed to do so in the query
                                 if "http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/" in triple['object']['value']:
                                     triple['object']['value'] = triple['object']['value'].replace('http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')
                                 if 'NOID' in triple['object']['value']:
@@ -61,13 +66,14 @@ class Data(object):
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
-            self.__editVisibility()
-            self.__editOwners()
-            self.__writeGraphToFile()
+            self.__editVisibility() # post-transformation transformation on visibility
+            self.__editOwners() # post-transformation transformation on ownership
+            self.__writeGraphToFile() # commit the local graph to a file (aka: 'the end')
 
     def __editVisibility(self):
         # ensures that "draft" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
         if ('generic' in self.objectType) or ('thesis' in self.objectType) or ('collection' in self.objectType) or ('community' in self.objectType):
+            # temporarily stores all contents of the predicate in a dictionary, making it easier to know what is or is not in a graph
             s_o = {}
             for s, o in self.graph.subject_objects(URIRef("http://purl.org/dc/terms/accessRights")):
                 if s not in s_o:
@@ -103,7 +109,7 @@ class Data(object):
                 self.graph.remove((URIRef(so), URIRef("http://purl.org/ontology/bibo/owner"), URIRef("eraadmi@ualberta.ca")))
             if (len(s_o[so]) > 2) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
                 pass
-                #do someting else to remaining owners
+                # do someting else to remaining owners
 
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
