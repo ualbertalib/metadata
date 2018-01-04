@@ -217,9 +217,10 @@
         ]
     },
     "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://fedora.info/definitions/v4/repository#created",
-            "info:fedora/fedora-system:def/model#createdDate"
+        "http://terms.library.ualberta.ca/comments": [
+            "backward compatible with info:fedora/fedora-system:def/model#createdDate",
+            "backward compatible with http://fedora.info/definitions/v4/repository#created",
+            "map first to info:createdDate. if not available, map next to fedora:created"
         ]
     },
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
