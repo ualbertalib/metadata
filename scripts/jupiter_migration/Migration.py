@@ -2,7 +2,7 @@ import Classes.Transformation.Data as Data
 import Classes.Utilities.URI_Generator as URI_Generator
 import Classes.Utilities.Triple_Store as Triple_Store
 from Classes.Query import Query_Factory
-from config import types, sparqlTerms, sparqlData, sparqlResults
+from config import types, sparqlTerms, sparqlData
 from tools import PrintException, cleanOutputs
 import concurrent.futures
 import time
@@ -14,9 +14,9 @@ def main():
     creates a set of subqueries for each of these types, then cues threads to run each of these subqueries as a job. The migration outout is saved to
     the results folder. The subqueries are cached in the cache folder. Custom settings can be modified in config.py."""
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S') # a timestamp for observing the script walltime
-    tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms, sparqlResults) # sets all of the endpoints on one object
+    tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms) # sets all of the endpoints on one object
     uri_generator = URI_Generator.URIGenerator() # an object for handling the creation and management of proxies
-    cleanOutputs(sparqlResults) # erase the contents of the query cache and the results folder
+    cleanOutputs() # erase the contents of the query cache and the results folder
     # Iterate over every type of object that needs to be migrated.
     for objectType in types:
         # the queryFactory getMigrationQuery method returns a query object depending on the type it was passed
