@@ -149,9 +149,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/thesis/thesislevel  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
-  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ebudateingested) is backward compatible with:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
@@ -878,9 +875,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * sort:  
     * false  
 ### ebu:dateIngested  
-  * backwardCompatibleWith:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
+  * comments:  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * values displayed on form:  
   * dataType:  
