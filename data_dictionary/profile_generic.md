@@ -158,9 +158,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/halpern:nnaitem  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
-  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ebudateingested) is backward compatible with:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -246,6 +243,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
+  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### sort  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
@@ -498,6 +496,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * required:  
     * false  
+  * search:  
+    * true  
   * sort:  
     * false  
 ### dcterms:isVersionOf  
@@ -982,9 +982,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * sort:  
     * false  
 ### ebu:dateIngested  
-  * backwardCompatibleWith:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
+  * comments:  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  

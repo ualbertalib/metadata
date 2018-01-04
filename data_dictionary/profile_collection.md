@@ -79,9 +79,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
-  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested) is backward compatible with:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -231,9 +228,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * repeat:  
     * false  
 ### ebu:dateIngested  
-  * backwardCompatibleWith:  
-    * http://fedora.info/definitions/v4/repository#created  
-    * info:fedora/fedora-system:def/model#createdDate  
+  * comments:  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
