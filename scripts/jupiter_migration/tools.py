@@ -30,7 +30,7 @@ def PrintException():
 	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
 
 
-def cleanOutputs(sparqlResults):
+def cleanOutputs():
 	types = [
 		"collection",
 		"community",
