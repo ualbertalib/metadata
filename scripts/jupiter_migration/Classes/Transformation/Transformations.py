@@ -317,7 +317,6 @@ class Transform():
             sortyears = []
             for i in trans:
                 sortyears.append(i['year'])
-            print (sortyears)
             self.output.append(
                 {
                     'subject': {
