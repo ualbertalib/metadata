@@ -597,7 +597,7 @@ class Technical(QueryBuilder):
                         OPTIONAL {{ ?directMember fedora:mimeType ?directMimeType . FILTER (str(?directMimeType) != '')}} .
                         OPTIONAL {{ ?directMember fedora:mixinTypes ?directFileMixins . FILTER (str(?directFileMixins) != '')}} .
                         BIND(STR(replace(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
-                        BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', 'filesetID')) AS ?jupiterDirectFileset)
+                        BIND(URI(replace(replace(str(?directMember), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'), '{}', 'filesetID{}')) AS ?jupiterDirectFileset)
                         BIND(URI(CONCAT(STR(?jupiterDirectFileset), '/files')) AS ?jupiterDirectFiles) .
                         BIND(URI(CONCAT(STR(?jupiterDirectFiles), CONCAT('/', ?noid))) AS ?jupiterDirectFile) .
                         BIND(URI(CONCAT(STR(?directMember), '/fcr:metadata')) AS ?directFileFCR) .
@@ -608,7 +608,7 @@ class Technical(QueryBuilder):
                         OPTIONAL {{ ?directFileFCR fedora:uuid ?directFileFCRUUID . FILTER (str(?directFileFCRUUID) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:mixinTypes ?directFileFCRMixins . FILTER (str(?directFileFCRMixins) != '')}} .
                         OPTIONAL {{ ?directFileFCR fedora:primaryType ?directFileFCRPrimaryType . FILTER (str(?directFileFCRPrimaryType) != '')}} .
-                        BIND(URI(replace(str(?jupiterDirectFileset), '/filesetID', '')) AS ?jupiterResource) .
+                        BIND(URI(replace(str(?jupiterDirectFileset), '/filesetID{}', '')) AS ?jupiterResource) .
                         BIND(URI(CONCAT(str(?jupiterResource), '/proxy')) AS ?proxy) .
-                    }}""".format(where, fileType, fileType)
+                    }}""".format(where, fileType, fileType, fileType, fileType)
             self.writeQueries()
