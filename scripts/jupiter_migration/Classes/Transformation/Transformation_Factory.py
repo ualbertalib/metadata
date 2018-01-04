@@ -3,6 +3,7 @@ from config import dates
 from tools import PrintException
 from Classes.Transformation.Transformations import Transform
 from Mappings.ThesisGradDate import gradDate
+from Mappings.IDs import IDs
 
 
 class TransformationFactory():
@@ -20,6 +21,12 @@ class TransformationFactory():
             try:
                 if (d['subject'] in triple['subject']['value']) and (function == "created"):
                     return Transform().createdDate(d, triple, objectType)
+            except:
+                PrintException()
+        for ids in IDs:
+            try:
+                if (ids['subject'] in triple['subject']['value']) and (function == "description"):
+                    return Transformation().appendID(ids, triple, objectType)
             except:
                 PrintException()
         if function == "created":
