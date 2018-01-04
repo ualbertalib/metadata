@@ -68,6 +68,7 @@ class Data(object):
                             PrintException()
             self.__editVisibility() # post-transformation transformation on visibility
             self.__editOwners() # post-transformation transformation on ownership
+            self.__addEbucore() # checks for one or more date of ingest and converts to ebucore
             self.__writeGraphToFile() # commit the local graph to a file (aka: 'the end')
 
     def __editVisibility(self):
@@ -110,6 +111,18 @@ class Data(object):
             if (len(s_o[so]) > 1) and URIRef("eraadmi@ualberta.ca") not in s_o[so]:
                 pass
                 # do someting else to remaining owners
+
+    def __addEbucore(self):
+        if (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.graph:
+            for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#createdDate")):
+                self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
+                self.graph.remove((s, URIRef("info:fedora/fedora-system:def/model#createdDate"), o))
+                if (s, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
+                    self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), None))
+        elif (None, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
+            for s, o in self.graph.subject_objects(URIRef("http://fedora.info/definitions/v4/repository#created")):
+                self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
+                self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), o))
 
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
