@@ -255,7 +255,7 @@ class Transform():
                 'type': 'uri'
             },
             'object': {
-                'value': d["object"][0],
+                'value': sorted(d["object"], key=str)[0],
                 'type': 'date'
             }
         }
@@ -300,7 +300,7 @@ class Transform():
             }
         )
         if isinstance(triple['object']['value'], list):
-            text = triple['object']['value'][0].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
+            text = sorted(triple['object']['value'], key=str)[0].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
         else:
             text = triple['object']['value'].replace(';', ' ').replace(':', ' ').replace('_', ' ').replace('-', ' ').replace('/', ' ').replace('.', ' ').replace(',', ' ')
         tokens = word_tokenize(text)
@@ -314,24 +314,32 @@ class Transform():
         years = DateFinder(tokens)
         trans = years.getyear()
         if trans is not None:
+            sortyears = []
             for i in trans:
-                self.output.append(
-                    {
-                        'subject': {
-                            'value': triple['subject']['value'],
-                            'type': 'uri'
-                        },
-                        'predicate': {
-                            'value': 'http://terms.library.ualberta.ca/date/sortyear',
-                            'type': 'uri'
-                        },
-                        'object': {
-                            'value': i["year"],
-                            'type': 'date'
-                        }
+                sortyears.append(i['year'])
+            print (sortyears)
+            self.output.append(
+                {
+                    'subject': {
+                        'value': triple['subject']['value'],
+                        'type': 'uri'
+                    },
+                    'predicate': {
+                        'value': 'http://terms.library.ualberta.ca/date/sortyear',
+                        'type': 'uri'
+                    },
+                    'object': {
+                        'value': sorted(sortyears, key=str)[0],
+                        'type': 'date'
                     }
-                )
+                }
+            )
             return self.output
+
+    def appendID(self, ids, triple, objectType):
+        triple['object']['value'] = triple['object']['value'] + ids['object'] 
+        self.output.append(triple)
+        return self.output
 
     def owner(self, triple, objectType):
         triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/person#", '', triple['object']['value'])
