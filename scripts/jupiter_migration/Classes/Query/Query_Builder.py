@@ -55,9 +55,9 @@ class QueryBuilder(object):
         # iterate over query results
         for result in results['results']['bindings']:
             # the group is the first folder at the base of the pair tree
-            group = result['resource']['value'].split('/')[6]
+            group = "{}{}".format(result['resource']['value'].split('/')[6],result['resource']['value'].split('/')[7])
             # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
-            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
+            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:8])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
 
     def writeQueries(self):
         """prepares the query. one per group. saves it to the query variable."""

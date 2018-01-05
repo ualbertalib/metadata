@@ -28,6 +28,7 @@ class Data(object):
     def transformData(self, uri_generator):
         self.sparqlData.setReturnFormat(JSON)
         # for each query in the query object, perform query and transform results
+        # for binaries there are more than one query per group (2 x content/characterization, foxml/era1stats) so we loop over the self.query object
         for q in self.query:
             self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))  # set the query
             results = self.sparqlData.query().convert()['results']['bindings']
@@ -49,7 +50,11 @@ class Data(object):
                                 if 'NOID' in triple['object']['value']:
                                     triple['object']['value'] = triple['object']['value'].replace('NOID', triple['object']['value'].split('/')[10])
                                 if "filesetID" in triple['object']['value']:
-                                    triple['object']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['object']['value'].split('/')[10], triple['object']['value'].split('/')[11])), triple['object']['value'])
+                                    try:
+                                        triple['object']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['object']['value'].split('/')[10], triple['object']['value'].split('/')[11])), triple['object']['value'])
+                                    except:
+                                        print(triple['subject']['value'], triple['object']['value'])
+                                        pass
                                 o = URIRef(triple['object']['value'])
                             else:
                                 o = Literal(triple['object']['value'])
@@ -62,7 +67,8 @@ class Data(object):
                                     try:
                                         triple['subject']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['subject']['value'].split('/')[10], triple['subject']['value'].split('/')[11])), triple['subject']['value'])
                                     except:
-                                        print(triple)
+                                        print(triple['subject']['value'])
+                                        pass
                                 s = URIRef(triple['subject']['value'])
                             else:
                                 o = Literal(triple['subject']['value'])
