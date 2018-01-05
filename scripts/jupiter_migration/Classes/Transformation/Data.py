@@ -29,7 +29,7 @@ class Data(object):
         self.sparqlData.setReturnFormat(JSON)
         # for each query in the query object, perform query and transform results
         for q in self.query:
-            self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where'])) # set the query
+            self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))  # set the query
             results = self.sparqlData.query().convert()['results']['bindings']
             # iterate over each resource and performs transformations
             for result in results:
@@ -59,17 +59,20 @@ class Data(object):
                                 if 'NOID' in triple['object']['value']:
                                     triple['subject']['value'] = triple['subject']['value'].replace('NOID', triple['subject']['value'].split('/')[10])
                                 if "filesetID" in triple['subject']['value']:
-                                    triple['subject']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['subject']['value'].split('/')[10], triple['subject']['value'].split('/')[11])), triple['subject']['value'])
+                                    try:
+                                        triple['subject']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['subject']['value'].split('/')[10], triple['subject']['value'].split('/')[11])), triple['subject']['value'])
+                                    except:
+                                        print(triple)
                                 s = URIRef(triple['subject']['value'])
                             else:
                                 o = Literal(triple['subject']['value'])
                             self.graph.add((s, p, o))
                         except:
                             PrintException()
-            self.__editVisibility() # post-transformation transformation on visibility
-            self.__editOwners() # post-transformation transformation on ownership
-            self.__addEbucore() # checks for one or more date of ingest and converts to ebucore
-            self.__writeGraphToFile() # commit the local graph to a file (aka: 'the end')
+            self.__editVisibility()  # post-transformation transformation on visibility
+            self.__editOwners()  # post-transformation transformation on ownership
+            self.__addEbucore()  # checks for one or more date of ingest and converts to ebucore
+            self.__writeGraphToFile()  # commit the local graph to a file (aka: 'the end')
 
     def __editVisibility(self):
         # ensures that "draft" is not superceded by a more liberal permission, but allows for coexistence of liberal permissions.
