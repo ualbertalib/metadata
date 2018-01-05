@@ -62,7 +62,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
   * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdateaccepted  )  
   * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted  )  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsidentifier  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
   * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsmodified  )  
@@ -108,8 +107,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/dateAccepted  
   * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted) is backward compatible with:  
     * http://purl.org/dc/terms/dateSubmitted  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsidentifier) is backward compatible with:  
-    * http://purl.org/dc/terms/identifier  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof) is backward compatible with:  
     * http://purl.org/dc/terms/isVersionOf  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage) is backward compatible with:  
@@ -430,29 +427,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * propertyName:  
     * date submitted  
-  * repeat:  
-    * false  
-  * required:  
-    * false  
-  * sort:  
-    * false  
-### dcterms:identifier  
-  * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/identifier  
-  * comments:  
-    * often doi, but not always; legacy container for non-doi identifiers (not active in jupiter)  
-  * dataType:  
-    * text  
-  * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsidentifier  
-  * display:  
-    * false  
-  * facet:  
-    * false  
-  * onForm:  
-    * false  
-  * propertyName:  
-    * identifier  
   * repeat:  
     * false  
   * required:  

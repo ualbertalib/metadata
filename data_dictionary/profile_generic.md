@@ -62,7 +62,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense  )  
@@ -111,10 +110,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/created  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription) is backward compatible with:  
     * http://purl.org/dc/terms/description  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier) is backward compatible with:  
-    * http://purl.org/dc/terms/identifier  
-    * http://terms.library.library.ca/identifiers/trid  
-    * http://terms.library.library.ca/identifiers/ser  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof) is backward compatible with:  
     * http://purl.org/dc/terms/isVersionOf  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage) is backward compatible with:  
@@ -170,7 +165,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [license](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslicense  )  
@@ -220,7 +214,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [contributor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccontributor  )  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
   * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dcsubject  )  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsisversionof  )  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermslanguage  )  
   * [spatial](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsspatial  )  
@@ -243,7 +236,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsalternative  )  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsdescription  )  
-  * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermsidentifier  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
 ### sort  
   * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermscreated  )  
@@ -467,33 +459,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * description  
   * repeat:  
     * false  
-  * required:  
-    * false  
-  * search:  
-    * true  
-  * sort:  
-    * false  
-### dcterms:identifier  
-  * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/identifier  
-    * http://terms.library.library.ca/identifiers/trid  
-    * http://terms.library.library.ca/identifiers/ser  
-  * comments:  
-    * often doi, but not always; legacy container for non-doi identifiers (not active in jupiter)  
-  * dataType:  
-    * text  
-  * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsidentifier  
-  * display:  
-    * true  
-  * facet:  
-    * false  
-  * onForm:  
-    * false  
-  * propertyName:  
-    * identifier  
-  * repeat:  
-    * true  
   * required:  
     * false  
   * search:  
