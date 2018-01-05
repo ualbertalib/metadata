@@ -336,7 +336,7 @@ class Transform():
             return self.output
 
     def appendID(self, ids, triple, objectType):
-        triple['object']['value'] = triple['object']['value'] + ids['object'] 
+        triple['object']['value'] = triple['object']['value'] + ids['object'][0] 
         self.output.append(triple)
         return self.output
 

@@ -53,6 +53,7 @@ class Data(object):
                                     try:
                                         triple['object']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['object']['value'].split('/')[10], triple['object']['value'].split('/')[11])), triple['object']['value'])
                                     except:
+                                        print('error assigning filesetid to subject')
                                         print(triple['subject']['value'], triple['object']['value'])
                                         pass
                                 o = URIRef(triple['object']['value'])
@@ -67,6 +68,7 @@ class Data(object):
                                     try:
                                         triple['subject']['value'] = re.sub('filesetID', uri_generator.generatefileSetId("{}{}".format(triple['subject']['value'].split('/')[10], triple['subject']['value'].split('/')[11])), triple['subject']['value'])
                                     except:
+                                        print('error assigning filesetid to subject')
                                         print(triple['subject']['value'])
                                         pass
                                 s = URIRef(triple['subject']['value'])

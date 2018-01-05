@@ -6,12 +6,12 @@ sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gilling
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	"relatedObject",
-	"technical",
 	"collection",
 	"community",
 	"generic",
-	"thesis"
+	"thesis",
+	"relatedObject",
+	"technical"
 	]
 
 owners = ["erahelp@ualberta.ca",

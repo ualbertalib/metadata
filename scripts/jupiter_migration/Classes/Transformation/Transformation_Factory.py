@@ -14,9 +14,9 @@ class TransformationFactory():
             #TODO: change graduationDate to graduationdate
             try:
                 if (grad['subject'] in triple['subject']['value']) and (function == "graduationDate"):
-                    return Transformation().gradDate(grad, triple, objectType)
+                    return Transform().gradDate(grad, triple, objectType)
             except:
-                PrintException()    
+                PrintException()
         for d in dates:
             try:
                 if (d['subject'] in triple['subject']['value']) and (function == "created"):
@@ -26,7 +26,7 @@ class TransformationFactory():
         for ids in IDs:
             try:
                 if (ids['subject'] in triple['subject']['value']) and (function == "description"):
-                    return Transformation().appendID(ids, triple, objectType)
+                    return Transform().appendID(ids, triple, objectType)
             except:
                 PrintException()
         if function == "created":
