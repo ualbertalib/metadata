@@ -3,7 +3,7 @@ from config import dates
 from tools import PrintException
 from Classes.Transformation.Transformations import Transform
 from Mappings.ThesisGradDate import gradDate
-from Mappings.IDs import IDs
+from Mappings.IDs import IDs, IDs_noDesc
 
 
 class TransformationFactory():
@@ -27,6 +27,12 @@ class TransformationFactory():
             try:
                 if (ids['subject'] in triple['subject']['value']) and (function == "description"):
                     return Transform().appendID(ids, triple, objectType)
+            except:
+                PrintException()
+        for ids in IDs_noDesc:
+            try:
+                if (ids['subject'] in triple['subject']['value']) and (function == "modified"):
+                    return Transform().appendID_noDesc(ids, triple, objectType)
             except:
                 PrintException()
         if function == "created":
