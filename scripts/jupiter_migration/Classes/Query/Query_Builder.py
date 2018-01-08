@@ -55,9 +55,14 @@ class QueryBuilder(object):
         # iterate over query results
         for result in results['results']['bindings']:
             # the group is the first folder at the base of the pair tree
-            group = result['resource']['value'].split('/')[6]
+            # if (self.objectType == 'relatedObject') or (self.objectType == 'technical'): 
+            group = "{}{}".format(result['resource']['value'].split('/')[6],result['resource']['value'].split('/')[7])
             # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
-            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
+            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:8])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
+            # else:
+            #group = result['resource']['value'].split('/')[6]
+            # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
+            #self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)                
 
     def writeQueries(self):
         """prepares the query. one per group. saves it to the query variable."""
@@ -74,7 +79,7 @@ class Collection(QueryBuilder):
     """This object migrates an IRCollection item"""
     def __init__(self, objectType, tripleStoreData):
         # the construct variable contains mappings that are not available in the mapping variable
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
         self.where = """WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
@@ -140,7 +145,7 @@ class Community(QueryBuilder):
     """This object migrates an IRCommunity item"""
     def __init__(self, objectType, tripleStoreData):
         # the construct variable contains mappings that are not available in the mapping variable
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner "eraadmi@ualberta.ca" ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ;
             rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
         self.where = """WHERE {

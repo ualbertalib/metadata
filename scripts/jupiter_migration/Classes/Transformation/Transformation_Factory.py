@@ -14,9 +14,9 @@ class TransformationFactory():
             #TODO: change graduationDate to graduationdate
             try:
                 if (grad['subject'] in triple['subject']['value']) and (function == "graduationDate"):
-                    return Transformation().gradDate(grad, triple, objectType)
+                    return Transform().gradDate(grad, triple, objectType)
             except:
-                PrintException()    
+                PrintException()
         for d in dates:
             try:
                 if (d['subject'] in triple['subject']['value']) and (function == "created"):
@@ -26,7 +26,7 @@ class TransformationFactory():
         for ids in IDs:
             try:
                 if (ids['subject'] in triple['subject']['value']) and (function == "description"):
-                    return Transformation().appendID(ids, triple, objectType)
+                    return Transform().appendID(ids, triple, objectType)
             except:
                 PrintException()
         if function == "created":
@@ -100,7 +100,7 @@ class TransformationFactory():
                 return Transform().owner(triple, objectType)
             except:
                 PrintException()
-        elif ((function == "last") or (function == "first") or (function == "prev") or (function == "rdfsyntaxnstype") or (function == "modelhasModel") or (function == "proxyFor") or (function == "proxyIn")) and ((objectType == 'relatedObject') or (objectType == 'technical')):
+        elif ((function == "last") or (function == "first") or (function == "prev") or (function == "next") or (function == "rdfsyntaxnstype") or (function == "modelhasModel") or (function == "proxyFor") or (function == "proxyIn")) and ((objectType == 'relatedObject') or (objectType == 'technical')):
             try:
                 return Transform().proxy(triple, objectType, uri_generator)
             except:
