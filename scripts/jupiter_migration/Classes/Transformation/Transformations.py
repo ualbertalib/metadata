@@ -279,7 +279,7 @@ class Transform():
             }
         }
         self.output.append(tempTriple)
-        Transformation.sortYear(self, tempTriple, objectType)
+        Transform.sortYear(self, tempTriple, objectType)
         return self.output
 
     def sortYear(self, triple, objectType):
