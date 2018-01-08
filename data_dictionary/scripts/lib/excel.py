@@ -16,7 +16,7 @@ class Excel:
     def generate(self):      
         with open('data_dictionary/profiles/' + self.profile + '/' + 'profile.json') as data_file:
             wb = Workbook()
-            #../..//profiles.xlsx
+            #../../profiles.xlsx
             wb = openpyxl.load_workbook('data_dictionary/profiles.xlsx')
             self.writeNamespaces(wb)
             sheet1 = wb.create_sheet(title = 'Accepted_Values')
@@ -36,20 +36,24 @@ class Excel:
                     col = get_column_letter(x+2)
                     sheet[str(col)+str(1)] = title.replace('http://terms.library.ualberta.ca/', '')                    
                     if title in data[key].keys():
+                        cellvalue = []
                         for items in data[key][title]:
-                            sheet[str(col)+str(i+2)] = str(items)
-                        for namespace in namespaces:
-                            # remove namespace uris
-                            if str(namespace['uri']) in str(data[key][title]):
-                                for items in data[key][title]:
-                                    cell = str(items).replace(namespace['uri'], namespace['prefix'] + ' : ')
-                                    sheet[str(col)+str(i+2)] = cell 
+                            flag = False
+                            cellvalue.append(str(items))
+                        string = ""
+                        for l, item in enumerate(cellvalue):
+                            for namespace in namespaces: 
+                                item = str(item).replace(namespace['uri'], namespace['prefix'] + ' : ')
+                            string = string + item
+                            if l != len(cellvalue) - 1:
+                                string =string + " || "
+                        sheet[str(col)+str(i+2)] = str(string)
                         try:
                             if type(data[key][title][0]) is dict:
                                 # this will write the list of accepted values in a multiline cell
                                 '''style = Alignment(wrap_text=True)
                                 celll = sheet[str(col)+str(i+2)]
-                                celll.alignment = styledata[key][title]
+                                celll.alignment = data[key][title]
                                 length = len(data[key][title])
                                 cellvalue = []
                                 for subs in range(0, length-1):
