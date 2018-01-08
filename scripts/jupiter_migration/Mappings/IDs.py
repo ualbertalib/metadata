@@ -303,7 +303,6 @@ IDs = [{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/c5/34/fq/
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/vm/40/xs/98/vm40xs989','object':['TRID-ID TR92-03']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/vm/40/xt/24/vm40xt24q','object':['TRID-ID TR05-30']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/9w/03/24/53/9w032453q','object':['TRID-ID TR05-08']},
-{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bx/92/0f/w8/bx920fw84t','object':['TRID-ID TR100-100']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/f1/88/1n/38/f1881n38g','object':['SER-ID SER79']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/69/69/z2/23/6969z2237','object':['SER-ID SER277']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/22/27/mq/95/2227mq95c','object':['SER-ID SER196']},
@@ -544,7 +543,9 @@ IDs = [{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/c5/34/fq/
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/t4/35/gf/02/t435gf02r','object':['SER-ID SER77']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/h9/89/r3/25/h989r325g','object':['SER-ID SER29']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/h9/89/r4/56/h989r456p','object':['SER-ID SER46']},
-{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/gh/93/h0/25/gh93h0259','object':['SER-ID SER80']},
+{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/gh/93/h0/25/gh93h0259','object':['SER-ID SER80']}]
+
+IDs_noDesc = [{'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bx/92/0f/w8/bx920fw84t','object':['TRID-ID TR100-100']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/c0/r9/67/38/c0r9673837','object':['fsecatalogue: F8886']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/cq/n5/9q/41/cqn59q411x','object':['fsecatalogue: F8886']},
 {'subject':'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/cw/p9/88/j8/cwp988j89c','object':['fsecatalogue: F8886']},

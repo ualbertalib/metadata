@@ -336,8 +336,27 @@ class Transform():
             return self.output
 
     def appendID(self, ids, triple, objectType):
-        triple['object']['value'] = triple['object']['value'] + ids['object'][0] 
+        triple['object']['value'] = triple['object']['value'] + " | " + ids['object'][0] 
         self.output.append(triple)
+        return self.output
+
+    def appendID_noDesc(self, ids, triple, objectType):
+        self.output.append(triple)
+        newTriple = {
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': "http://purl.org/dc/terms/description",
+                'type': 'uri'
+            },
+            'object': {
+                'value': ids['object'][0],
+                'type': 'literal'
+            }
+        }
+        self.output.append(newTriple)
         return self.output
 
     def owner(self, triple, objectType):
