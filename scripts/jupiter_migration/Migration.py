@@ -27,7 +27,7 @@ def main():
         print('{0} queries of {1} objects to be transformed'.format(len(queryObject.queries), objectType))
         i = 0
         # spawn 8 workers, one for each group in the query object. A data object (see parellelTransform) is created for each group. When the 8 are finished, they return for more queries.
-        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
             future_to_result = {executor.submit(parellelTransform, group, queryObject, uri_generator): group for group in queryObject.queries.keys()}
             for future in concurrent.futures.as_completed(future_to_result):
                 future_to_result[future]
