@@ -1,5 +1,5 @@
 sparqlTerms = "http://206.167.181.123:9999/blazegraph/namespace/terms/sparql"
-sparqlData = "http://sheff.library.ualberta.ca:9999/blazegraph/namespace/gillingham_20171222/sparql"  # dev, 1 hour to transform
+sparqlData = "http://localhost:9999/blazegraph/namespace/gillingham_20171222/sparql"  # dev, 1 hour to transform
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/gillingham_20171222/sparql"
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/gillingham_20171222/sparql" 
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/kb/sparql" 

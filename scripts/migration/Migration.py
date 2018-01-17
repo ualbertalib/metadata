@@ -66,7 +66,7 @@ class URIGenerator():
         self.proxyHash = {}
         self. fileSetHash = {}
         sparqlData = SPARQLWrapper(sparqlData)
-        query = """prefix info: <info:fedora/fedora-system:def/model#> select distinct ?resource where {?resource info:hasModel ?model}"""
+        query = """prefix info: <info:fedora/fedora-system:def/model#> select distinct ?resource where {?resource info:hasModel ?model . filter(?model='Collection' || ?model='GenericFile')}"""
         sparqlData.setReturnFormat(JSON)
         sparqlData.setQuery(query)  # set the query
         results = sparqlData.query().convert()
