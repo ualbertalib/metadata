@@ -32,11 +32,11 @@ def PrintException():
 
 def cleanOutputs():
 	types = [
-		#"collection",
-		#"community",
-		#"generic",
-		#"thesis",
-		#"technical",
+		"collection",
+		"community",
+		"generic",
+		"thesis",
+		"technical",
 		"relatedObject"
 	]
 	_deleteQueries()
