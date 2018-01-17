@@ -17,7 +17,8 @@ def main():
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S') # a timestamp for observing the script walltime
     tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms) # sets all of the endpoints on one object
     cleanOutputs() # erase the contents of the query cache and the results folder
-    #URIGenerator(sparqlData)
+    
+    URIGenerator(sparqlData)  # generate new proxies
     f = open('Classes/Utilities/proxies/filesetIds.json', 'r+')
     filesetIds = json.load(f)
     f.close()
@@ -65,7 +66,7 @@ class URIGenerator():
         self.proxyHash = {}
         self. fileSetHash = {}
         sparqlData = SPARQLWrapper(sparqlData)
-        query = """prefix info: <info:fedora/fedora-system:def/model#> select distinct ?resource where {?resource info:hasModel 'GenericFile'^^xsd:string}"""
+        query = """prefix info: <info:fedora/fedora-system:def/model#> select distinct ?resource where {?resource info:hasModel ?model}"""
         sparqlData.setReturnFormat(JSON)
         sparqlData.setQuery(query)  # set the query
         results = sparqlData.query().convert()

@@ -36,7 +36,7 @@ class Data(object):
             self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))  # set the query
             results = self.sparqlData.query().convert()['results']['bindings']
             # iterate over each resource and performs transformations
-            with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
                 future_to_result = {executor.submit(parallelTransform, sparqlResult, self): sparqlResult for sparqlResult in results}
                 for future in concurrent.futures.as_completed(future_to_result):
                     future_to_result[future]
