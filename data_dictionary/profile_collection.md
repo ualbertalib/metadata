@@ -68,6 +68,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator) is backward compatible with:  
     * http://purl.org/dc/terms/creator  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription) is backward compatible with:  
@@ -104,6 +105,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
   * comment:  
     * indicates community inheritence  
   * dataType:  
