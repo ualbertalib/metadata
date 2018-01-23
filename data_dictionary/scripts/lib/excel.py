@@ -14,10 +14,10 @@ class Excel:
         self.generate()
     
     def generate(self):      
-        with open('data_dictionary/profiles/' + self.profile + '/' + 'profile.json') as data_file:
+        with open('../../profiles/' + self.profile + '/' + 'profile.json') as data_file:
             wb = Workbook()
             #../../profiles.xlsx
-            wb = openpyxl.load_workbook('data_dictionary/profiles.xlsx')
+            wb = openpyxl.load_workbook('../../profiles.xlsx')
             self.writeNamespaces(wb)
             sheet1 = wb.create_sheet(title = 'Accepted_Values')
             sheet = wb.create_sheet(title = self.profile)
@@ -91,7 +91,7 @@ class Excel:
                 sheet.column_dimensions[column].width = 30.0
             sheet1.column_dimensions["A"].width = 60.0
             #../../profiles.xlsx
-            wb.save('data_dictionary/profiles.xlsx')
+            wb.save('../../profiles.xlsx')
             
     def getHeadings(self, data, key):
         self.key = key
