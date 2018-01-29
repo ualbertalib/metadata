@@ -381,3 +381,9 @@ class Transform():
                 PrintException()
         self.output.append(triple)
         return self.output
+
+    def restricted(self, collection, triple):
+        triple['object']['value'] = 'true'
+        triple['object']['type'] = 'boolean'
+        self.output.append(triple)
+        return self.output

@@ -4,6 +4,7 @@ from tools import PrintException
 from Classes.Transformation.Transformations import Transform
 from Mappings.ThesisGradDate import gradDate
 from Mappings.IDs import IDs, IDs_noDesc
+from Mappings.RestrictedCollections import restrictedCollections
 
 
 class TransformationFactory():
@@ -33,6 +34,12 @@ class TransformationFactory():
             try:
                 if (ids['subject'] in triple['subject']['value']) and (function == "modified"):
                     return Transform().appendID_noDesc(ids, triple, objectType)
+            except:
+                PrintException()
+        for collection in restrictedCollections:
+            try:
+                if (collection['subject'] in triple['subject']['value']) and (function == "restrictedCollection"):
+                    return Transform().restricted(collection, triple)
             except:
                 PrintException()
         if function == "created":
