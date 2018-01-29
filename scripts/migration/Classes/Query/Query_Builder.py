@@ -78,7 +78,7 @@ class Collection(QueryBuilder):
     """This object migrates an IRCollection item"""
     def __init__(self, objectType, tripleStoreData):
         # the construct variable contains mappings that are not available in the mapping variable
-        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ;
+        self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ; ual:restrictedCollection 'false'^^xsd:boolean ;
             rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
         self.where = """WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
