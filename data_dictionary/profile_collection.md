@@ -60,6 +60,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor  )  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid  )  
   * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualhydranoid  )  
+  * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype  )  
 
@@ -93,6 +94,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### required  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+  * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
@@ -228,6 +230,27 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * comments:  
     * hydra north legacy noid migrated through script  
   * repeat:  
+    * false  
+### ual:restrictedCollection  
+  * comment:  
+    * indicates if collection is restricted  
+  * dataType:  
+    * boolean  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Restricted Collection  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * false  
+  * sort:  
     * false  
 ### ebu:dateIngested  
   * comments:  
