@@ -458,17 +458,17 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:language  
   * values displayed on form:  
-    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
-    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
-    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
-    * **Other language** (http://terms.library.ualberta.ca/other)  
-    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
-    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
     * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
+    * **Other language** (http://terms.library.ualberta.ca/other)  
+    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
+    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
     * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
     * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
-    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
-    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/language  
   * dataType:  
@@ -850,8 +850,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ebu:dateIngested  
   * comments:  
-    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * values displayed on form:  
