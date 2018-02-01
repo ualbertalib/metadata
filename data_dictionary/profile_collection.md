@@ -94,7 +94,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### required  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
-  * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
@@ -233,7 +232,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ual:restrictedCollection  
   * comment:  
-    * indicates if collection is restricted  
+    * indicates if deposit into collection is restricted to admin only  
   * dataType:  
     * boolean  
   * display:  
@@ -247,7 +246,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * repeat:  
     * false  
   * required:  
-    * true  
+    * false  
   * search:  
     * false  
   * sort:  
