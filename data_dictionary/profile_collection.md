@@ -67,9 +67,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by annotation
 ### backwardCompatibleWith  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  
-    * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
     * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/id/belongsToCommunity  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator) is backward compatible with:  
     * http://purl.org/dc/terms/creator  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription) is backward compatible with:  
@@ -79,8 +79,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -104,9 +104,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 ### pcdm:memberOf  
   * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/id/belongsToCommunity  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
     * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/id/belongsToCommunity  
   * comment:  
     * indicates community inheritence  
   * dataType:  
@@ -223,8 +223,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ual:fedora3UUID  
   * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
 ### ual:hydraNoid  
   * comments:  
     * hydra north legacy noid migrated through script  
@@ -253,8 +253,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ebu:dateIngested  
   * comments:  
-    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * backwardCompatibleWith:  

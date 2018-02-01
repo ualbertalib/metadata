@@ -444,19 +444,24 @@
     "http://purl.org/dc/terms/language": {
         "acceptedValues": [
             {
+                "label": "Chinese",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zho"
+            },
+            {
+                "label": "No linguistic content",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
+            },
+            {
+                "label": "Vietnamese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/vie"
+            },
+            {
                 "label": "Ukranian",
                 "onForm": "true",
                 "uri": "http://id.loc.gov/vocabulary/iso639-2/ukr"
-            },
-            {
-                "label": "Japanese",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
-            },
-            {
-                "label": "German",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
             },
             {
                 "label": "Other language",
@@ -464,9 +469,9 @@
                 "uri": "http://terms.library.ualberta.ca/other"
             },
             {
-                "label": "Italian",
+                "label": "Spanish",
                 "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
             },
             {
                 "label": "Russian",
@@ -474,9 +479,24 @@
                 "uri": "http://id.loc.gov/vocabulary/iso639-2/rus"
             },
             {
-                "label": "No linguistic content",
+                "label": "Japanese",
                 "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/zxx"
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/jpn"
+            },
+            {
+                "label": "Portuguese",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/por"
+            },
+            {
+                "label": "Inupiaq",
+                "onForm": "false",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ipk"
+            },
+            {
+                "label": "Italian",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ita"
             },
             {
                 "label": "English",
@@ -489,29 +509,9 @@
                 "uri": "http://id.loc.gov/vocabulary/iso639-2/fre"
             },
             {
-                "label": "Portuguese",
-                "onForm": "false",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/por"
-            },
-            {
-                "label": "Chinese",
+                "label": "German",
                 "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/zho"
-            },
-            {
-                "label": "Vietnamese",
-                "onForm": "false",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/vie"
-            },
-            {
-                "label": "Inupiaq",
-                "onForm": "false",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/ipk"
-            },
-            {
-                "label": "Spanish",
-                "onForm": "true",
-                "uri": "http://id.loc.gov/vocabulary/iso639-2/spa"
+                "uri": "http://id.loc.gov/vocabulary/iso639-2/ger"
             }
         ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
@@ -1140,8 +1140,8 @@
     },
     "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested": {
         "http://terms.library.ualberta.ca/comments": [
-            "backward compatible with info:fedora/fedora-system:def/model#createdDate",
             "backward compatible with http://fedora.info/definitions/v4/repository#created",
+            "backward compatible with info:fedora/fedora-system:def/model#createdDate",
             "map first to info:createdDate. if not available, map next to fedora:created"
         ]
     },
