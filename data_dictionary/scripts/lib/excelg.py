@@ -5,7 +5,7 @@ from openpyxl import Workbook
 
 
 def excelGen():
-    os.remove('../..//profiles.xlsx')
+    os.remove('../../profiles.xlsx')
     #../../profiles.xlsx
     wb = Workbook()
     ws = wb.active
