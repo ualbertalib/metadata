@@ -51,9 +51,9 @@
     },
     "http://pcdm.org/models#memberOf": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://terms.library.ualberta.ca/id/belongsToCommunity",
             "http://terms.library.library.ca/identifiers/belongsToCommunity",
-            "http://terms.library.ualberta.ca/identifiers/belongsToCommunity"
+            "http://terms.library.ualberta.ca/identifiers/belongsToCommunity",
+            "http://terms.library.ualberta.ca/id/belongsToCommunity"
         ],
         "http://terms.library.ualberta.ca/comment": [
             "indicates community inheritence"
@@ -243,8 +243,8 @@
     },
     "http://terms.library.ualberta.ca/fedora3UUID": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://terms.library.ualberta.ca/id/fedora3uuid",
-            "http://terms.library.library.ca/identifiers/fedora3uuid"
+            "http://terms.library.library.ca/identifiers/fedora3uuid",
+            "http://terms.library.ualberta.ca/id/fedora3uuid"
         ]
     },
     "http://terms.library.ualberta.ca/hydraNoid": {
@@ -289,8 +289,8 @@
     },
     "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested": {
         "http://terms.library.ualberta.ca/comments": [
-            "backward compatible with info:fedora/fedora-system:def/model#createdDate",
             "backward compatible with http://fedora.info/definitions/v4/repository#created",
+            "backward compatible with info:fedora/fedora-system:def/model#createdDate",
             "map first to info:createdDate. if not available, map next to fedora:created"
         ]
     },

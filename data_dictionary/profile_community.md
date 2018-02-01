@@ -73,8 +73,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid) is backward compatible with:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -190,8 +190,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ual:fedora3UUID  
   * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
 ### ual:hydraNoid  
   * comments:  
     * hydra north legacy noid migrated through script  
@@ -199,8 +199,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### ebu:dateIngested  
   * comments:  
-    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * backwardCompatibleWith:  

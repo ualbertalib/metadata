@@ -87,8 +87,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/name  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualcommiteemember) is expressed in OAI as:  
-    * role='committeemember'  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
+    * role='committeemember'  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualdepartment) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/discipline  
@@ -99,8 +99,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualspecialization) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualsupervisor) is expressed in OAI as:  
-    * role='advisor'  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
+    * role='advisor'  
   * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualthesislevel) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/level  
@@ -167,8 +167,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/name  
 ### ual:commiteeMember  
   * mapsToOAI:  
-    * role='committeemember'  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
+    * role='committeemember'  
 ### ual:department  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
@@ -186,8 +186,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
 ### ual:supervisor  
   * mapsToOAI:  
-    * role='advisor'  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
+    * role='advisor'  
 ### ual:thesisLevel  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
