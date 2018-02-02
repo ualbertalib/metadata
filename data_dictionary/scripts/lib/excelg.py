@@ -5,12 +5,12 @@ from openpyxl import Workbook
 
 
 def excelGen():
-    os.remove('../../profiles.xlsx')
+    os.remove('data_dictionary/profiles.xlsx')
     #../../profiles.xlsx
     wb = Workbook()
     ws = wb.active
     ws['A1'] = ''
-    wb.save('../../profiles.xlsx')
+    wb.save('data_dictionary/profiles.xlsx')
     #../../profiles.xlsx
     for profile in ['community', 'collection', 'generic', 'thesis', 'oai_pmh', 'oai_etdms']:
     	Excel(profile)
