@@ -72,8 +72,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepositor  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
-  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle  )  
-  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid  )  
+  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle  )  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
   * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualhydranoid  )  
   * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch  )  
@@ -127,9 +127,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://id.loc.gov/vocabulary/relators/dpt  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dis  
-  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle) is backward compatible with:  
+  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3handle  
-  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid) is backward compatible with:  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is backward compatible with:  
     * http://terms.library.ualberta.ca/date/graduationdate  
@@ -631,7 +631,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * true  
   * search:  
     * true  
-### ual:fedora3Handle  
+### ual:fedora3handle  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3handle  
   * comments:  
@@ -647,14 +647,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * onForm:  
     * false  
   * propertyName:  
-    * fedora 3 handle  
+    * fedora 3 Handle  
   * repeat:  
     * false  
   * required:  
     * false  
   * sort:  
     * false  
-### ual:fedora3UUID  
+### ual:fedora3uuid  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * comments:  
