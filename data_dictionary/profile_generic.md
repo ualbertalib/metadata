@@ -244,3 +244,774 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### pcdm:memberOf  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+  * comment:  
+    * indicates collection inheritance  
+  * dataDictionaryLabel:  
+    * http://pcdm.org/models#memberOf  
+  * dataType:  
+    * uri  
+  * display:  
+    * true  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * repeat:  
+    * true  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### prism:doi  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/doi  
+  * comments:  
+    * always doi (currently set to searchable (should this be changed?)  
+  * dataDictionaryLabel:  
+    * http://prismstandard.org/namespaces/basic/3.0/doi  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#prismdoi  
+  * display:  
+    * true  
+  * displayLabel:  
+    * doi  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * digital object identifier  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### dc:contributor  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/contributor  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/contributor  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccontributor  
+  * display:  
+    * true  
+  * displayLabel:  
+    * additional contributors  
+  * facet:  
+    * true  
+  * indexAs:  
+    * http://purl.org/dc/elements/1.1/creator  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * contributor  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dc:creator  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/creator  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/creator  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  
+  * display:  
+    * true  
+  * displayLabel:  
+    * author or creator  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * creator  
+  * repeat:  
+    * true  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dc:rights  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/rights  
+  * comments:  
+    * must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/rights  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcrights  
+  * display:  
+    * true  
+  * displayLabel:  
+    * rights  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * rights  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dc:subject  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/subject  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/subject  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcsubject  
+  * display:  
+    * true  
+  * displayLabel:  
+    * subject/keyword  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * subject  
+  * repeat:  
+    * true  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:alternative  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/alternative  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/alternative  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsalternative  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * alternative title  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:created  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/created  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/created  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermscreated  
+  * display:  
+    * true  
+  * displayLabel:  
+    * date created  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * date created  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * true  
+### dcterms:description  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/description  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/description  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  
+  * display:  
+    * true  
+  * displayLabel:  
+    * description  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * description  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:isVersionOf  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/isVersionOf  
+  * comments:  
+    * relation, source, and isversionof will eventually be mapped together (to some extent)  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/isVersionOf  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsisversionof  
+  * display:  
+    * true  
+  * displayLabel:  
+    * citation for previous publication  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * is version of  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:language  
+  * values displayed on form:  
+    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+    * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
+    * **Other language** (http://terms.library.ualberta.ca/other)  
+    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
+    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
+    * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+    * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/language  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/language  
+  * dataType:  
+    * uri  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslanguage  
+  * display:  
+    * true  
+  * displayLabel:  
+    * language  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * language  
+  * repeat:  
+    * true  
+  * required:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:license  
+  * values displayed on form:  
+    * **Attribution-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nd/4.0/)  
+    * **Public Domain Mark 1.0** (http://creativecommons.org/publicdomain/mark/1.0/)  
+    * **Attribution-NonCommercial 4.0 International** (http://creativecommons.org/licenses/by-nc/4.0/)  
+    * **Attribution-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-sa/4.0/)  
+    * **Attribution 4.0 International** (http://creativecommons.org/licenses/by/4.0/)  
+    * **Attribution-NonCommercial-NoDerivatives 4.0 International** (http://creativecommons.org/licenses/by-nc-nd/4.0/)  
+    * **Attribution-NonCommercial-ShareAlike 4.0 International** (http://creativecommons.org/licenses/by-nc-sa/4.0/)  
+    * **CC0 1.0 Universal** (http://creativecommons.org/publicdomain/zero/1.0/)  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/license  
+  * comments:  
+    * must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/license  
+  * dataType:  
+    * uri  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslicense  
+  * display:  
+    * true  
+  * displayLabel:  
+    * license information  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * license  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:modified  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/modified  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/modified  
+### dcterms:relation  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/relation  
+  * comments:  
+    * relation, source, and isversionof will eventually be mapped together (to some extent)  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/relation  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsrelation  
+  * display:  
+    * true  
+  * displayLabel:  
+    * link to related item  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * relation  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:source  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/source  
+  * comments:  
+    * relation, source, and isversionof will eventually be mapped together (to some extent)  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/source  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslanguage  
+  * display:  
+    * true  
+  * displayLabel:  
+    * source  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * source  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:spatial  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/spatial  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/spatial  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsspatial  
+  * display:  
+    * true  
+  * displayLabel:  
+    * place  
+  * facet:  
+    * false  
+  * indexAs:  
+    * http://purl.org/dc/elements/1.1/Subject  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * spatial coverage  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:temporal  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/temporal  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/temporal  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstemporal  
+  * display:  
+    * true  
+  * displayLabel:  
+    * time  
+  * facet:  
+    * false  
+  * indexAs:  
+    * http://purl.org/dc/elements/1.1/Subject  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * temporal coverage  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:title  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/title  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/title  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstitle  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * title  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * true  
+### dcterms:type  
+  * values displayed on form:  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/type  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/type  
+  * dataType:  
+    * uri  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstype  
+  * display:  
+    * true  
+  * displayLabel:  
+    * type of item  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * type  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * sort:  
+    * false  
+### bibo:status  
+  * values displayed on form:  
+    * **published** (http://purl.org/ontology/bibo/status#published)  
+    * **submitted** (http://vivoweb.org/ontology/core#submitted)  
+    * **draft** (http://purl.org/ontology/bibo/status#draft)  
+  * comments:  
+    * 'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'  
+  * dataDictionaryLabel:  
+    * http://purl.org/ontology/bibo/status  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#bibostatus  
+  * display:  
+    * true  
+  * displayLabel:  
+    * type of item  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * status  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### scholar:onBehalfOf  
+  * backwardCompatibleWith:  
+    * http://scholarsphere.psu.edu/ns#onBehalfOf  
+  * dataDictionaryLabel:  
+    * http://scholarsphere.psu.edu/ns#onBehalfOf  
+### scholar:proxyDepositor  
+  * backwardCompatibleWith:  
+    * http://scholarsphere.psu.edu/ns#proxyDepositor  
+  * dataDictionaryLabel:  
+    * http://scholarsphere.psu.edu/ns#proxyDepositor  
+### scholar:relativePath  
+  * backwardCompatibleWith:  
+    * http://scholarsphere.psu.edu/ns#relativePath  
+  * dataDictionaryLabel:  
+    * http://scholarsphere.psu.edu/ns#relativePath  
+### ual:ark  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/arkid  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/ark  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualark  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * archival resource key id  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:depositor  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * comments:  
+    * legacy property; usage: admin email.  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/depositor  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepositor  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * depositor  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:fedora3handle  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/fedora3handle  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/fedora3handle  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3handle  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * fedora 3 Handle  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:fedora3uuid  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/fedora3uuid  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3uuid  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * fedora 3 uuid  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/hydraNoid  
+  * repeat:  
+    * false  
+### ual:ingestBatch  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/ingestBatch  
+### ual:nnaFile  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/halpern:nnafile  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/nnaFile  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualnnafile  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * northern north america filename  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:nnaItem  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/halpern:nnaitem  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/nnaItem  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualnnaitem  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * northern north america item id  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:path  
+  * comments:  
+    * captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf.  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/path  
+### ual:sortYear  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/sortYear  
+  * dataType:  
+    * auto  
+  * display:  
+    * false  
+  * facet:  
+    * true  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Sort Year  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * false  
+  * sort:  
+    * true  
+### ual:unicorn  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/unicorn  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/unicorn  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualunicorn  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * unicorn  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ebu:dateIngested  
+  * comments:  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * map first to info:createdDate. if not available, map next to fedora:created  
+  * dataDictionaryLabel:  
+    * http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
+### rdf:type  
+  * backwardCompatibleWith:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * dataDictionaryLabel:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
