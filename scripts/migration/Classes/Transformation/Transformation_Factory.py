@@ -1,5 +1,5 @@
 import re
-from config import dates
+from config import dates, dates_no_created 
 from tools import PrintException
 from Classes.Transformation.Transformations import Transform
 from Mappings.ThesisGradDate import gradDate
@@ -34,6 +34,12 @@ class TransformationFactory():
             try:
                 if (ids['subject'] in triple['subject']['value']) and (function == "modified"):
                     return Transform().appendID_noDesc(ids, triple, objectType)
+            except:
+                PrintException()
+        for date in dates_no_created:
+            try:
+                if (date['subject'] in triple['subject']['value']) and (function == "modified"):
+                    return Transform().add_created(date, triple, objectType)
             except:
                 PrintException()
         for collection in restrictedCollections:
