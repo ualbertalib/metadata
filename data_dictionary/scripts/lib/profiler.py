@@ -136,6 +136,10 @@ class Profiler(object):
 					print('')
 					for propertyName, propertyValue in data:
 						if not any(i in propertyName for i in ignore):
+							try:
+								print('### %s  ' % (addPrefixes(propertyName['http://terms.library.ualberta.ca/dataDictionaryLabel'])))
+							except:
+								continue
 							print('### %s  ' % (addPrefixes(propertyName)))
 							for annotation, annotationValue in sorted(propertyValue.items()):
 								if annotation == 'acceptedValues':
