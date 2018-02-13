@@ -51,6 +51,7 @@ class Profiler(object):
 			sparql.setReturnFormat(JSON)
 			sparql.setQuery(query)
 			results = sparql.query().convert()
+			print ('creating JSON')
 			for result in results['results']['bindings']:
 				if result['property']['value'] not in profile.keys():
 					profile[result['property']['value']] = {}
@@ -104,7 +105,7 @@ class Profiler(object):
 					print('# Properties (Quick Find)')
 					for propertyName, PropertyData in data:
 						if not any(i in propertyName for i in ignore):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 					print('')
 					print('# Profile by annotation')
 					annotations = []
@@ -122,13 +123,13 @@ class Profiler(object):
 							display = False
 						for propertyName, PropertyData in data:
 							if (annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore)):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 							elif ((annotation in PropertyData) and ('indexAs' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 								for anno in PropertyData[annotation]:
 									print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
 							elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 									for anno in PropertyData[annotation]:
 										print("    * %s  " % (anno))
 					print('')
@@ -136,11 +137,7 @@ class Profiler(object):
 					print('')
 					for propertyName, propertyValue in data:
 						if not any(i in propertyName for i in ignore):
-							try:
-								print('### %s  ' % (addPrefixes(propertyName['http://terms.library.ualberta.ca/dataDictionaryLabel'])))
-							except:
-								continue
-							print('### %s  ' % (addPrefixes(propertyName)))
+							print('### %s  ' % (addPrefixes(propertyValue['http://terms.library.ualberta.ca/dataDictionaryLabel'][0])))
 							for annotation, annotationValue in sorted(propertyValue.items()):
 								if annotation == 'acceptedValues':
 									print("  * values displayed on form:  ")
