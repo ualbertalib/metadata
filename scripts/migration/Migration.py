@@ -18,7 +18,7 @@ def main():
     tripleStoreData = Triple_Store.TripleStore(sparqlData, sparqlTerms) # sets all of the endpoints on one object
     cleanOutputs() # erase the contents of the query cache and the results folder
     
-    #URIGenerator(sparqlData)  # generate new proxies
+    URIGenerator(sparqlData)  # generate new proxies
     f = open('Classes/Utilities/proxies/filesetIds.json', 'r+')
     filesetIds = json.load(f)
     f.close()

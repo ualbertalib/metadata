@@ -16,7 +16,10 @@ class Transform():
     def subject(self, triple, objectType):
         """map subjects"""
         for subject in subjects:
-            if (triple['object']['value'] in subject['mappings']):
+            #print (triple['subject']['value'], triple['object']['value'])
+            obj = triple['object']['value'].lower()
+            if (obj in subject['mappings']):
+                print ("mapping subjects", triple['subject']['value'], triple['object']['value'], obj, subject['mappings'], subject['useForm'])
                 triple = {
                         'subject': {
                             'value': triple['subject']['value'],
@@ -360,11 +363,32 @@ class Transform():
         self.output.append(newTriple)
         return self.output
 
+    def add_created(self, date, triple, objectType):
+        self.output.append(triple)
+        tempTriple = {
+            'subject': {
+                'value': triple['subject']['value'],
+                'type': 'uri'
+            },
+            'predicate': {
+                'value': "http://purl.org/dc/terms/created",
+                'type': 'uri'
+            },
+            'object': {
+                'value': sorted(date["object"], key=str)[0],
+                'type': 'date'
+            }
+        }
+        self.output.append(tempTriple)
+        Transform.sortYear(self, tempTriple, objectType)
+        return self.output
+
     def owner(self, triple, objectType):
         triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/person#", '', triple['object']['value'])
         triple['object']['value'] = re.sub("http://projecthydra.org/ns/auth/group#", '', triple['object']['value'])
         if triple['object']['value'] in owners:
             triple['object']['value'] = "eraadmi@ualberta.ca"
+        triple['object']['type'] = 'literal'
         self.output.append(triple)
         return self.output
 
