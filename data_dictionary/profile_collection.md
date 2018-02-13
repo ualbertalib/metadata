@@ -58,7 +58,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor  )  
-  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid  )  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid  )  
   * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualhydranoid  )  
   * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested  )  
@@ -78,9 +78,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/title  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
-  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
+    * http://terms.library.ualberta.ca/idfedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
 ### display  
@@ -221,10 +221,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### ual:fedora3UUID  
+### ual:fedora3uuid  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
-    * http://terms.library.ualberta.ca/id/fedora3uuid  
+    * http://terms.library.ualberta.ca/idfedora3uuid  
 ### ual:hydraNoid  
   * comments:  
     * hydra north legacy noid migrated through script  
