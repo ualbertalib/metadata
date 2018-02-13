@@ -102,3 +102,180 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### pcdm:memberOf  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/id/belongsToCommunity  
+  * comment:  
+    * indicates community inheritence  
+  * dataDictionaryLabel:  
+    * http://pcdm.org/models#memberOf  
+  * dataType:  
+    * uri  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dc:creator  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/creator  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/creator  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * creator  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:description  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/description  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/description  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  
+  * display:  
+    * true  
+  * displayLabel:  
+    * description  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * description  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:title  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/title  
+  * comments:  
+    * required for communties  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/title  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstitle  
+  * display:  
+    * true  
+  * displayLabel:  
+    * title  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * title  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * true  
+### ual:depositor  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * comments:  
+    * legacy property; usage: admin email.  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/depositor  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepositor  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * depositor  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:fedora3uuid  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/idfedora3uuid  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/fedora3uuid  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/hydraNoid  
+  * repeat:  
+    * false  
+### ual:restrictedCollection  
+  * comment:  
+    * indicates if deposit into collection is restricted to admin only  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/restrictedCollection  
+  * dataType:  
+    * boolean  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Restricted Collection  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### ebu:dateIngested  
+  * comments:  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * map first to info:createdDate. if not available, map next to fedora:created  
+  * dataDictionaryLabel:  
+    * http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
+### rdf:type  
+  * backwardCompatibleWith:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * dataDictionaryLabel:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
