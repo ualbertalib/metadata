@@ -105,7 +105,7 @@ class Profiler(object):
 					print('# Properties (Quick Find)')
 					for propertyName, PropertyData in data:
 						if not any(i in propertyName for i in ignore):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 					print('')
 					print('# Profile by annotation')
 					annotations = []
@@ -122,32 +122,31 @@ class Profiler(object):
 							print('### %s  ' % (removeNS(annotation)))
 							display = False
 						for propertyName, PropertyData in data:
-							if (annotation in PropertyData) and ('true' in PropertyData[annotation]) and not (any(i in propertyName for i in ignore)):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
-							elif ((annotation in PropertyData) and ('indexAs' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							if (annotation in PropertyData) and ('true' in PropertyData[annotation]):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('indexAs' in annotation)) and (PropertyData[annotation][0] != ''):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 								for anno in PropertyData[annotation]:
-									print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
-							elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation) and not (any(i in propertyName for i in ignore))) and (PropertyData[annotation][0] != ''):
-									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+									print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation)) and (PropertyData[annotation][0] != ''):
+									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 									for anno in PropertyData[annotation]:
 										print("    * %s  " % (anno))
 					print('')
 					print('# Profile by property')
 					print('')
-					for propertyName, propertyValue in data:
-						if not any(i in propertyName for i in ignore):
-							print('### %s  ' % (addPrefixes(propertyValue['http://terms.library.ualberta.ca/dataDictionaryLabel'][0])))
-							for annotation, annotationValue in sorted(propertyValue.items()):
-								if annotation == 'acceptedValues':
-									print("  * values displayed on form:  ")
-									for j in annotationValue:
-										if j['onForm'] == 'true':
-											print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-								elif (annotation != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (annotationValue[0] != ''):
-									print("  * %s:  " % (removeNS(annotation)))
-									for v in annotationValue:
-										print("    * %s  " % (v))
+					for keys, values in data:
+						print('### %s  ' % (addPrefixes(keys)))
+						for key, value in sorted(values.items()):
+							if key == 'acceptedValues':
+								print("  * values displayed on form:  ")
+								for j in value:
+									if j['onForm'] == 'true':
+										print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+							elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value[0] != ''):
+								print("  * %s:  " % (removeNS(key)))
+								for v in value:
+									print("    * %s  " % (v))
 			except:
 				PrintException()
 
