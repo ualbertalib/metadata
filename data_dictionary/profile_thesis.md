@@ -89,6 +89,28 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreated) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
+  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreatedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+  * [digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoradigest) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#digest  
+  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraexportsas) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+  * [hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasfixityservice) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#hasFixityService  
+  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodified) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodifiedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramixintypes) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraprimarytype) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorauuid) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorawritable) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#writable  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dgg  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof) is backward compatible with:  
@@ -146,6 +168,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/thesis/thesislevel  
   * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/unicorn  
+  * [createdDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infocreateddate) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
+  * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infodownloadfilename) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#downloadFilename  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infoispartof) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#isPartOf  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#relsispartof) is backward compatible with:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  
 ### display  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
@@ -171,11 +201,11 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
 ### indexAs  
   * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) indexes as:  
-    * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  )  
+    * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) indexes as:  
-    * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  )  
+    * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
   * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) indexes as:  
-    * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermscreated  )  
+    * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
 ### onForm  
   * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
@@ -224,14 +254,45 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### fedora:created  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
+### fedora:createdBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+### fedora:digest  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#digest  
+### fedora:exportsAs  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+### fedora:hasFixityService  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#hasFixityService  
+### fedora:lastModified  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+### fedora:lastModifiedBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+### fedora:mixinTypes  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+### fedora:primaryType  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+### fedora:uuid  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+### fedora:writable  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#writable  
 ### swrc:institution  
   * values displayed on form:  
     * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
     * **St. Stephen's College** (http://id.loc.gov/authorities/names/n2009054054)  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dgg  
-  * dataDictionaryLabel:  
-    * http://ontoware.org/swrc/ontology#institution  
   * dataType:  
     * auto  
   * definedBy:  
@@ -256,8 +317,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * comment:  
     * indicates collection inheritance  
     * thesis always belong to collection 44558t416  
-  * dataDictionaryLabel:  
-    * http://pcdm.org/models#memberOf  
   * dataType:  
     * uri  
   * display:  
@@ -279,8 +338,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/doi  
   * comments:  
     * always doi (currently set to searchable (should this be changed?)  
-  * dataDictionaryLabel:  
-    * http://prismstandard.org/namespaces/basic/3.0/doi  
   * dataType:  
     * auto  
   * definedBy:  
@@ -306,8 +363,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dc:rights  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/rights  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/rights  
   * dataType:  
     * text  
   * definedBy:  
@@ -331,8 +386,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dc:subject  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/subject  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/subject  
   * dataType:  
     * text  
   * definedBy:  
@@ -357,8 +410,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:abstract  
   * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/abstract  
-  * dataDictionaryLabel:  
     * http://purl.org/dc/terms/abstract  
   * dataType:  
     * text  
@@ -385,8 +436,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dcterms:alternative  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/alternative  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/alternative  
   * dataType:  
     * text  
   * definedBy:  
@@ -407,8 +456,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:dateAccepted  
   * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/dateAccepted  
-  * dataDictionaryLabel:  
     * http://purl.org/dc/terms/dateAccepted  
   * dataType:  
     * auto  
@@ -431,8 +478,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dcterms:dateSubmitted  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/dateSubmitted  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/dateSubmitted  
   * dataType:  
     * auto  
   * definedBy:  
@@ -453,8 +498,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:isVersionOf  
   * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/isVersionOf  
-  * dataDictionaryLabel:  
     * http://purl.org/dc/terms/isVersionOf  
   * dataType:  
     * text  
@@ -491,8 +534,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/language  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/language  
   * dataType:  
     * uri  
   * definedBy:  
@@ -516,12 +557,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dcterms:modified  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/modified  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/modified  
 ### dcterms:title  
   * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/title  
-  * dataDictionaryLabel:  
     * http://purl.org/dc/terms/title  
   * dataType:  
     * text  
@@ -546,8 +583,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### bibo:degree  
   * backwardCompatibleWith:  
     * http://purl.org/ontology/bibo/ThesisDegree  
-  * dataDictionaryLabel:  
-    * http://purl.org/ontology/bibo/degree  
   * dataType:  
     * enumerated text  
   * definedBy:  
@@ -571,13 +606,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### scholar:relativePath  
   * backwardCompatibleWith:  
     * http://scholarsphere.psu.edu/ns#relativePath  
-  * dataDictionaryLabel:  
-    * http://scholarsphere.psu.edu/ns#relativePath  
 ### ual:commiteeMember  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/role/thesiscommitteemember  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/commiteeMember  
   * dataType:  
     * text  
   * definedBy:  
@@ -597,8 +628,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:department  
   * backwardCompatibleWith:  
     * http://vivoweb.org/ontology/core#AcademicDepartment  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/department  
   * dataType:  
     * text  
   * definedBy:  
@@ -624,8 +653,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://id.loc.gov/vocabulary/relators/dpt  
   * comments:  
     * legacy property; usage: admin email.  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/depositor  
   * dataType:  
     * auto  
   * definedBy:  
@@ -647,8 +674,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:dissertant  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dis  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/dissertant  
   * dataType:  
     * text  
   * definedBy:  
@@ -675,7 +700,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * comments:  
     * legacy property  
   * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/fedora3handle  
     * Fedora3Handle  
   * dataType:  
     * text  
@@ -700,8 +724,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * comments:  
     * legacy property  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/fedora3uuid  
   * dataType:  
     * text  
   * definedBy:  
@@ -723,8 +745,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:graduationDate  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/date/graduationdate  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/graduationDate  
   * dataType:  
     * auto  
   * definedBy:  
@@ -750,28 +770,20 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:hydraNoid  
   * comments:  
     * hydra north legacy noid migrated through script  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/hydraNoid  
   * repeat:  
     * false  
 ### ual:ingestBatch  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/id/ingestbatch  
     * http://terms.library.library.ca/identifiers/ingestbatch  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/ingestBatch  
 ### ual:path  
   * comments:  
     * captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf.  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/path  
 ### ual:proquest  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/proquest  
   * comments:  
     * legacy property  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/proquest  
   * dataType:  
     * text  
   * definedBy:  
@@ -791,8 +803,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * sort:  
     * false  
 ### ual:sortYear  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/sortYear  
   * dataType:  
     * auto  
   * display:  
@@ -814,8 +824,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:specialization  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/thesis/specialization  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/specialization  
   * dataType:  
     * text  
   * definedBy:  
@@ -839,8 +847,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:supervisor  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/ths  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/supervisor  
   * dataType:  
     * text  
   * definedBy:  
@@ -864,8 +870,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### ual:thesisLevel  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/thesis/thesislevel  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/thesisLevel  
   * dataType:  
     * uri  
   * definedBy:  
@@ -891,8 +895,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/unicorn  
   * comments:  
     * legacy property  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/unicorn  
   * dataType:  
     * text  
   * definedBy:  
@@ -916,15 +918,23 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * backward compatible with http://fedora.info/definitions/v4/repository#created  
     * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
-  * dataDictionaryLabel:  
-    * http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
 ### rdf:type  
   * values displayed on form:  
-  * dataDictionaryLabel:  
-    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
   * dataType:  
     * auto  
   * propertyName:  
     * rdf Type  
   * required:  
     * true  
+### info:createdDate  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
+### info:downloadFilename  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#downloadFilename  
+### info:isPartOf  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#isPartOf  
+### rels:isPartOf  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  

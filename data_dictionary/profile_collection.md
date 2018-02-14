@@ -66,6 +66,26 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by annotation
 ### backwardCompatibleWith  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoracreated) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
+  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoracreatedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoraexportsas) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+  * [hasParent](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorahasparent) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoralastmodified) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoralastmodifiedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoramixintypes) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoraprimarytype) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorauuid) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorawritable) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#writable  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
     * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
@@ -83,6 +103,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/idfedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * [createdDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#infocreateddate) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
 ### display  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
@@ -102,6 +124,36 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
 # Profile by property
 
+### fedora:created  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
+### fedora:createdBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+### fedora:exportsAs  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+### fedora:hasParent  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+### fedora:lastModified  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+### fedora:lastModifiedBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+### fedora:mixinTypes  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+### fedora:primaryType  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+### fedora:uuid  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+### fedora:writable  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#writable  
 ### pcdm:memberOf  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/identifiers/belongsToCommunity  
@@ -109,8 +161,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/belongsToCommunity  
   * comment:  
     * indicates community inheritence  
-  * dataDictionaryLabel:  
-    * http://pcdm.org/models#memberOf  
   * dataType:  
     * uri  
   * display:  
@@ -130,8 +180,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### dc:creator  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/creator  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/creator  
   * dataType:  
     * text  
   * definedBy:  
@@ -152,8 +200,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
 ### dcterms:description  
   * backwardCompatibleWith:  
-    * http://purl.org/dc/terms/description  
-  * dataDictionaryLabel:  
     * http://purl.org/dc/terms/description  
   * dataType:  
     * text  
@@ -182,8 +228,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/title  
   * comments:  
     * required for communties  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/title  
   * dataType:  
     * text  
   * definedBy:  
@@ -211,8 +255,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://id.loc.gov/vocabulary/relators/dpt  
   * comments:  
     * legacy property; usage: admin email.  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/depositor  
   * dataType:  
     * auto  
   * definedBy:  
@@ -235,20 +277,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
     * http://terms.library.ualberta.ca/idfedora3uuid  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/fedora3uuid  
 ### ual:hydraNoid  
   * comments:  
     * hydra north legacy noid migrated through script  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/hydraNoid  
   * repeat:  
     * false  
 ### ual:restrictedCollection  
   * comment:  
     * indicates if deposit into collection is restricted to admin only  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/restrictedCollection  
   * dataType:  
     * boolean  
   * display:  
@@ -272,10 +308,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * backward compatible with http://fedora.info/definitions/v4/repository#created  
     * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
-  * dataDictionaryLabel:  
-    * http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested  
 ### rdf:type  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
-  * dataDictionaryLabel:  
-    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+### info:createdDate  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
