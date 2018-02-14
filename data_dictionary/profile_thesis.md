@@ -232,7 +232,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
   * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
-  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
 ### required  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
@@ -839,7 +838,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * propertyName:  
     * specialization  
   * repeat:  
-    * true  
+    * false  
   * required:  
     * false  
   * sort:  
