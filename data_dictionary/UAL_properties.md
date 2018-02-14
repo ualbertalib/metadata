@@ -1,6 +1,6 @@
 # University of Alberta Libraries locally maintained properties  
 
-This document list all the URIs that are created and maintained by University of Alberta Libraries (UAL). These properties are created according to the recommendations in [Conventions for RDF](http://www-sop.inria.fr/acacia/personnel/phmartin/RDF/conventions.html) Details about application of these properties and terms are available in application profiles and Jupiter ontology.
+This document list all the URIs that are created and maintained by University of Alberta Libraries (UAL). These properties are created according to the recommendations in [Conventions for RDF](http://www-sop.inria.fr/acacia/personnel/phmartin/RDF/conventions.html) Details about application of these properties and terms are available in application profiles and [Jupiter ontology](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md).
 
 # Namespace
 **ual:** http://terms.library.ualberta.ca/  
