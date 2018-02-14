@@ -9,12 +9,12 @@ sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_201712
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	#"collection",
-	#"community",
+	"collection",
+	"community",
 	"generic",
-	#"thesis",
-	#"relatedObject",
-	#"technical"
+	"thesis",
+	"relatedObject",
+	"technical"
 	]
 
 owners = ["erahelp@ualberta.ca",
