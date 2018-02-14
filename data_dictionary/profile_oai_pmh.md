@@ -69,13 +69,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/elements/1.1/date  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermscreator) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/creator  
-  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsdateaccepted) is expressed in OAI as:  
+  * [dateaccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsdateaccepted) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/date  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsdescription) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/description  
   * [identifier](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsidentifier) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/identifier  
-  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsisversionof) is expressed in OAI as:  
+  * [isversionof](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermsisversionof) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/relation  
   * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#dctermslanguage) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/language  
@@ -97,13 +97,13 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/elements/1.1/type  
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#bibodegree) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/description  
-  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualcommiteemember) is expressed in OAI as:  
+  * [commiteemember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualcommiteemember) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/contributor  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualdepartment) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/publisher  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualdissertant) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/creator  
-  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualfedora3handle) is expressed in OAI as:  
+  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualfedora3handle) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/identifier  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_pmh.md#ualspecialization) is expressed in OAI as:  
     * http://purl.org/dc/elements/1.1/description  
@@ -117,103 +117,161 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### swrc:institution  
   * comments:  
     * concatenate institution and discipline/department contents  
+  * dataDictionaryLabel:  
+    * http://ontoware.org/swrc/ontology#institution  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/publisher  
 ### prism:doi  
+  * dataDictionaryLabel:  
+    * http://prismstandard.org/namespaces/basic/3.0/doi  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/identifier  
 ### dc:contributor  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/contributor  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/contributor  
 ### dc:rights  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/rights  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/rights  
 ### dc:subject  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/elements/1.1/subject  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/subject  
 ### dcterms:abstract  
   * comments:  
     * add prefix in content: 'Abstract: '  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/abstract  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/description  
 ### dcterms:created  
   * comments:  
     * non-theses only  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/created  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/date  
 ### dcterms:creator  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/creator  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/creator  
-### dcterms:dateAccepted  
+### dcterms:dateaccepted  
   * comments:  
     * theses only  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/dateAccepted  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/date  
 ### dcterms:description  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/description  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/description  
 ### dcterms:identifier  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/identifier  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/identifier  
-### dcterms:isVersionOf  
+### dcterms:isversionof  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/isVersionOf  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/relation  
 ### dcterms:language  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/language  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/language  
 ### dcterms:license  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/license  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/rights  
 ### dcterms:modified  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/modified  
   * mapsToOAI:  
     * datestamp  
 ### dcterms:relation  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/relation  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/relation  
 ### dcterms:source  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/source  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/source  
 ### dcterms:spatial  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/spatial  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/subject  
 ### dcterms:temporal  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/temporal  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/subject  
 ### dcterms:title  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/title  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/title  
 ### dcterms:type  
+  * dataDictionaryLabel:  
+    * http://purl.org/dc/terms/type  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/type  
 ### bibo:degree  
   * comments:  
     * add prefix in content: 'Degree: '  
+  * dataDictionaryLabel:  
+    * http://purl.org/ontology/bibo/degree  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/description  
-### ual:commiteeMember  
+### ual:commiteemember  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/commiteeMember  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/contributor  
 ### ual:department  
   * comments:  
     * concatenate institution and discipline/department contents  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/department  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/publisher  
 ### ual:dissertant  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/dissertant  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/creator  
-### ual:fedora3Handle  
+### ual:fedora3handle  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/fedora3Handle  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/identifier  
 ### ual:specialization  
   * comments:  
     * add prefix in content: 'Specialization: '  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/specialization  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/description  
 ### ual:supervisor  
+  * dataDictionaryLabel:  
+    * http://terms.library.ualberta.ca/supervisor  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/contributor  
 ### rdf:type  
   * comments:  
     * only if rdf:type = bibo:thesis  
+  * dataDictionaryLabel:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
   * mapsToOAI:  
     * http://purl.org/dc/elements/1.1/type  
