@@ -1,6 +1,6 @@
 from SPARQLWrapper import SPARQLWrapper
 
-sparql = SPARQLWrapper("http://206.167.181.124:7200/repositories/testdd")
+sparql = SPARQLWrapper("http://206.167.181.124:7200/repositories/era-dd")
 
 ignore = [ 
 	"http://projecthydra.org/ns/auth/acl#",
