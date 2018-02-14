@@ -122,31 +122,31 @@ class Profiler(object):
 							print('### %s  ' % (removeNS(annotation)))
 							display = False
 						for propertyName, PropertyData in data:
-						if (annotation in PropertyData) and ('true' in PropertyData[annotation]):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
-						elif ((annotation in PropertyData) and ('indexAs' in annotation)) and (PropertyData[annotation][0] != ''):
-							print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
-							for anno in PropertyData[annotation]:
-								print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
-						elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation)) and (PropertyData[annotation][0] != ''):
-								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							if (annotation in PropertyData) and ('true' in PropertyData[annotation]):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('indexAs' in annotation)) and (PropertyData[annotation][0] != ''):
+								print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) indexes as:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
 								for anno in PropertyData[annotation]:
-									print("    * %s  " % (anno))
-				print('')
-				print('# Profile by property')
-				print('')
-				for keys, values in data:
-					print('### %s  ' % (addPrefixes(keys)))
-					for key, value in sorted(values.items()):
-						if key == 'acceptedValues':
-							print("  * values displayed on form:  ")
-							for j in value:
-								if j['onForm'] == 'true':
-									print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
-						elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value[0] != ''):					
-							print("  * %s:  " % (removeNS(key)))
-							for v in value:
-								print("    * %s  " % (v))
+									print("    * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#%s  )  " % (removeNS(anno), addPrefixes(anno).replace(':', '').lower()))
+							elif ((annotation in PropertyData) and ('backwardCompatibleWith' in annotation)) and (PropertyData[annotation][0] != ''):
+									print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s) is backward compatible with:  " % (removeNS(propertyName), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))
+									for anno in PropertyData[annotation]:
+										print("    * %s  " % (anno))
+					print('')
+					print('# Profile by property')
+					print('')
+					for keys, values in data:
+						print('### %s  ' % (addPrefixes(keys)))
+						for key, value in sorted(values.items()):
+							if key == 'acceptedValues':
+								print("  * values displayed on form:  ")
+								for j in value:
+									if j['onForm'] == 'true':
+										print('    * **%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+							elif (key != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") and (value[0] != ''):
+								print("  * %s:  " % (removeNS(key)))
+								for v in value:
+									print("    * %s  " % (v))
 			except:
 				PrintException()
 
