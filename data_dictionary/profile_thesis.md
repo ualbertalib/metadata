@@ -53,4 +53,888 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
 # Properties (Quick Find)
-EXCEPTION IN (/home/ubuntu/metadata/data_dictionary/scripts/lib/profiler.py, LINE 108 'print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))'): 'http://terms.library.ualberta.ca/dataDictionaryLabel'
+  * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
+  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdateaccepted  )  
+  * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
+  * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsmodified  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree  )  
+  * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#scholarrelativepath  )  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
+  * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepositor  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle  )  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualhydranoid  )  
+  * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch  )  
+  * [path](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualpath  )  
+  * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest  )  
+  * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
+  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
+  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
+  * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel  )  
+  * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn  )  
+  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ebudateingested  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#rdftype  )  
+
+# Profile by annotation
+### backwardCompatibleWith  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreated) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
+  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoracreatedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+  * [digest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoradigest) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#digest  
+  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraexportsas) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+  * [hasFixityService](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorahasfixityservice) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#hasFixityService  
+  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodified) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoralastmodifiedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoramixintypes) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedoraprimarytype) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorauuid) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#fedorawritable) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#writable  
+  * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution) is backward compatible with:  
+    * http://id.loc.gov/vocabulary/relators/dgg  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof) is backward compatible with:  
+    * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/doi  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights) is backward compatible with:  
+    * http://purl.org/dc/terms/rights  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject) is backward compatible with:  
+    * http://purl.org/dc/terms/subject  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) is backward compatible with:  
+    * http://purl.org/dc/terms/abstract  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative) is backward compatible with:  
+    * http://purl.org/dc/terms/alternative  
+  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdateaccepted) is backward compatible with:  
+    * http://purl.org/dc/terms/dateAccepted  
+  * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted) is backward compatible with:  
+    * http://purl.org/dc/terms/dateSubmitted  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof) is backward compatible with:  
+    * http://purl.org/dc/terms/isVersionOf  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage) is backward compatible with:  
+    * http://purl.org/dc/terms/language  
+  * [modified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsmodified) is backward compatible with:  
+    * http://purl.org/dc/terms/modified  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle) is backward compatible with:  
+    * http://purl.org/dc/terms/title  
+  * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree) is backward compatible with:  
+    * http://purl.org/ontology/bibo/ThesisDegree  
+  * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#scholarrelativepath) is backward compatible with:  
+    * http://scholarsphere.psu.edu/ns#relativePath  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember) is backward compatible with:  
+    * http://terms.library.ualberta.ca/role/thesiscommitteemember  
+  * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment) is backward compatible with:  
+    * http://vivoweb.org/ontology/core#AcademicDepartment  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepositor) is backward compatible with:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) is backward compatible with:  
+    * http://id.loc.gov/vocabulary/relators/dis  
+  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3handle) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/fedora3handle  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualfedora3uuid) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) is backward compatible with:  
+    * http://terms.library.ualberta.ca/date/graduationdate  
+  * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualingestbatch) is backward compatible with:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
+  * [proquest](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualproquest) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/proquest  
+  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization) is backward compatible with:  
+    * http://terms.library.ualberta.ca/thesis/specialization  
+  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor) is backward compatible with:  
+    * http://id.loc.gov/vocabulary/relators/ths  
+  * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel) is backward compatible with:  
+    * http://terms.library.ualberta.ca/thesis/thesislevel  
+  * [unicorn](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualunicorn) is backward compatible with:  
+    * http://terms.library.ualberta.ca/id/unicorn  
+  * [createdDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infocreateddate) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
+  * [downloadFilename](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infodownloadfilename) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#downloadFilename  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#infoispartof) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#isPartOf  
+  * [isPartOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#relsispartof) is backward compatible with:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  
+### display  
+  * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [doi](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#prismdoi  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree  )  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
+  * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
+  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
+  * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel  )  
+### facet  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
+  * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
+### indexAs  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract) indexes as:  
+    * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermsdescription  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant) indexes as:  
+    * [Creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dccreator  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate) indexes as:  
+    * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary#dctermscreated  )  
+### onForm  
+  * [institution](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#swrcinstitution  )  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [rights](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcrights  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
+  * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsalternative  )  
+  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdateaccepted  )  
+  * [dateSubmitted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsdatesubmitted  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
+  * [language](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermslanguage  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#bibodegree  )  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
+  * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
+  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
+  * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualthesislevel  )  
+### repeat  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [isVersionOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsisversionof  )  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualcommiteemember  )  
+  * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdepartment  )  
+  * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualspecialization  )  
+  * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsupervisor  )  
+### required  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#rdftype  )  
+### search  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#pcdmmemberof  )  
+  * [subject](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dcsubject  )  
+  * [abstract](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermsabstract  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualdissertant  )  
+### sort  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#dctermstitle  )  
+  * [graduationDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualgraduationdate  )  
+  * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_thesis.md#ualsortyear  )  
+
+# Profile by property
+
+### fedora:created  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
+### fedora:createdBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+### fedora:digest  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#digest  
+### fedora:exportsAs  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+### fedora:hasFixityService  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#hasFixityService  
+### fedora:lastModified  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+### fedora:lastModifiedBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+### fedora:mixinTypes  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+### fedora:primaryType  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+### fedora:uuid  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+### fedora:writable  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#writable  
+### swrc:institution  
+  * values displayed on form:  
+    * **University of Alberta** (http://id.loc.gov/authorities/names/n79058482)  
+    * **St. Stephen's College** (http://id.loc.gov/authorities/names/n2009054054)  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dgg  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualinstitution  
+  * display:  
+    * true  
+  * displayLabel:  
+    * degree grantor  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * institution  
+  * repeat:  
+    * false  
+  * sort:  
+    * false  
+### pcdm:memberOf  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/identifiers/hasCollectionId  
+  * comment:  
+    * indicates collection inheritance  
+    * thesis always belong to collection 44558t416  
+  * dataType:  
+    * uri  
+  * display:  
+    * true  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * repeat:  
+    * true  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### prism:doi  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/doi  
+  * comments:  
+    * always doi (currently set to searchable (should this be changed?)  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#prismdoi  
+  * display:  
+    * true  
+  * displayLabel:  
+    * doi  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * digital object identifier  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### dc:rights  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/rights  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcrights  
+  * display:  
+    * false  
+  * displayLabel:  
+    * rights  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * rights  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dc:subject  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/subject  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcsubject  
+  * display:  
+    * true  
+  * displayLabel:  
+    * subject/keyword  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * subject  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:abstract  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/abstract  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsabstract  
+  * display:  
+    * true  
+  * displayLabel:  
+    * abstract  
+  * indexAs:  
+    * http://purl.org/dc/terms/description  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * abstract  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dcterms:alternative  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/alternative  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsalternative  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * alternative title  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:dateAccepted  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/dateAccepted  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdateaccepted  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * date accepted  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:dateSubmitted  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/dateSubmitted  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdatesubmitted  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * date submitted  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:isVersionOf  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/isVersionOf  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsisversionof  
+  * display:  
+    * true  
+  * displayLabel:  
+    * citation for previous publication  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * is version of  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:language  
+  * values displayed on form:  
+    * **Chinese** (http://id.loc.gov/vocabulary/iso639-2/zho)  
+    * **No linguistic content** (http://id.loc.gov/vocabulary/iso639-2/zxx)  
+    * **Ukranian** (http://id.loc.gov/vocabulary/iso639-2/ukr)  
+    * **Other language** (http://terms.library.ualberta.ca/other)  
+    * **Spanish** (http://id.loc.gov/vocabulary/iso639-2/spa)  
+    * **Russian** (http://id.loc.gov/vocabulary/iso639-2/rus)  
+    * **Japanese** (http://id.loc.gov/vocabulary/iso639-2/jpn)  
+    * **Italian** (http://id.loc.gov/vocabulary/iso639-2/ita)  
+    * **English** (http://id.loc.gov/vocabulary/iso639-2/eng)  
+    * **French** (http://id.loc.gov/vocabulary/iso639-2/fre)  
+    * **German** (http://id.loc.gov/vocabulary/iso639-2/ger)  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/language  
+  * dataType:  
+    * uri  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslanguage  
+  * display:  
+    * true  
+  * displayLabel:  
+    * language  
+  * facet:  
+    * true  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * language  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:modified  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/modified  
+### dcterms:title  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/title  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstitle  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * title  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * true  
+### bibo:degree  
+  * backwardCompatibleWith:  
+    * http://purl.org/ontology/bibo/ThesisDegree  
+  * dataType:  
+    * enumerated text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#bibodegree  
+  * display:  
+    * true  
+  * displayLabel:  
+    * degree  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * degree  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### scholar:relativePath  
+  * backwardCompatibleWith:  
+    * http://scholarsphere.psu.edu/ns#relativePath  
+### ual:commiteeMember  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/role/thesiscommitteemember  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualcommiteemember  
+  * display:  
+    * true  
+  * displayLabel:  
+    * examining committee member and department  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * commitee member  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+### ual:department  
+  * backwardCompatibleWith:  
+    * http://vivoweb.org/ontology/core#AcademicDepartment  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepartment  
+  * display:  
+    * true  
+  * displayLabel:  
+    * department  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * department  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:depositor  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * comments:  
+    * legacy property; usage: admin email.  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepositor  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * depositor  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:dissertant  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dis  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdissertant  
+  * display:  
+    * true  
+  * displayLabel:  
+    * author or creator  
+  * indexAs:  
+    * http://purl.org/dc/elements/1.1/Creator  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * dissertant  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+### ual:fedora3handle  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/fedora3handle  
+  * comments:  
+    * legacy property  
+  * dataDictionaryLabel:  
+    * Fedora3Handle  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3handle  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * fedora 3 Handle  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:fedora3uuid  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/fedora3uuid  
+  * comments:  
+    * legacy property  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3uuid  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * fedora 3 uuid  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:graduationDate  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/date/graduationdate  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualgraduationdate  
+  * display:  
+    * true  
+  * displayLabel:  
+    * graduation date  
+  * facet:  
+    * false  
+  * indexAs:  
+    * http://purl.org/dc/terms/created  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * graduation date  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * sort:  
+    * true  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * repeat:  
+    * false  
+### ual:ingestBatch  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/id/ingestbatch  
+    * http://terms.library.library.ca/identifiers/ingestbatch  
+### ual:path  
+  * comments:  
+    * captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf.  
+### ual:proquest  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/proquest  
+  * comments:  
+    * legacy property  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualproquest  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * proquest  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:sortYear  
+  * dataType:  
+    * auto  
+  * display:  
+    * false  
+  * facet:  
+    * true  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Sort Year  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * false  
+  * sort:  
+    * true  
+### ual:specialization  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/thesis/specialization  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualspecialization  
+  * display:  
+    * true  
+  * displayLabel:  
+    * specialization  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * specialization  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:supervisor  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/ths  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualsupervisor  
+  * display:  
+    * true  
+  * displayLabel:  
+    * supervisor and department  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * supervisor  
+  * repeat:  
+    * true  
+  * required:  
+    * false  
+  * search:  
+    * false  
+### ual:thesisLevel  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/thesis/thesislevel  
+  * dataType:  
+    * uri  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualthesislevel  
+  * display:  
+    * true  
+  * displayLabel:  
+    * degree level  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * thesis level  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:unicorn  
+  * backwardCompatibleWith:  
+    * http://terms.library.ualberta.ca/id/unicorn  
+  * comments:  
+    * legacy property  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualunicorn  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * unicorn  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ebu:dateIngested  
+  * comments:  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * map first to info:createdDate. if not available, map next to fedora:created  
+### rdf:type  
+  * values displayed on form:  
+  * dataType:  
+    * auto  
+  * propertyName:  
+    * rdf Type  
+  * required:  
+    * true  
+### info:createdDate  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
+### info:downloadFilename  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#downloadFilename  
+### info:isPartOf  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#isPartOf  
+### rels:isPartOf  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/relations-external#isPartOf  

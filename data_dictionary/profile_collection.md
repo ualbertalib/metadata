@@ -53,4 +53,264 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
    **tokenize** is this property tokenized in SOLR? (boolean)  
 
 # Properties (Quick Find)
-EXCEPTION IN (/home/ubuntu/metadata/data_dictionary/scripts/lib/profiler.py, LINE 108 'print("  * [%s](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_%s.md#%s  )  " % (removeNS(PropertyData['http://terms.library.ualberta.ca/dataDictionaryLabel'][0]), self.ptype, addPrefixes(propertyName).replace(':', '').lower()))'): 'http://terms.library.ualberta.ca/dataDictionaryLabel'
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor  )  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid  )  
+  * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualhydranoid  )  
+  * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
+  * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ebudateingested  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype  )  
+
+# Profile by annotation
+### backwardCompatibleWith  
+  * [created](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoracreated) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#created  
+  * [createdBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoracreatedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+  * [exportsAs](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoraexportsas) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+  * [hasParent](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorahasparent) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+  * [lastModified](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoralastmodified) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+  * [lastModifiedBy](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoralastmodifiedby) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+  * [mixinTypes](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoramixintypes) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+  * [primaryType](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedoraprimarytype) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+  * [uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorauuid) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+  * [writable](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#fedorawritable) is backward compatible with:  
+    * http://fedora.info/definitions/v4/repository#writable  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof) is backward compatible with:  
+    * http://terms.library.library.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/id/belongsToCommunity  
+  * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dccreator) is backward compatible with:  
+    * http://purl.org/dc/terms/creator  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription) is backward compatible with:  
+    * http://purl.org/dc/terms/description  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle) is backward compatible with:  
+    * http://purl.org/dc/terms/title  
+  * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualdepositor) is backward compatible with:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualfedora3uuid) is backward compatible with:  
+    * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/idfedora3uuid  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype) is backward compatible with:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * [createdDate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#infocreateddate) is backward compatible with:  
+    * info:fedora/fedora-system:def/model#createdDate  
+### display  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### onForm  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermsdescription  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### required  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### search  
+  * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+### sort  
+  * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+
+# Profile by property
+
+### fedora:created  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#created  
+### fedora:createdBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#createdBy  
+### fedora:exportsAs  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#exportsAs  
+### fedora:hasParent  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#hasParent  
+### fedora:lastModified  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModified  
+### fedora:lastModifiedBy  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#lastModifiedBy  
+### fedora:mixinTypes  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#mixinTypes  
+### fedora:primaryType  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#primaryType  
+### fedora:uuid  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#uuid  
+### fedora:writable  
+  * backwardCompatibleWith:  
+    * http://fedora.info/definitions/v4/repository#writable  
+### pcdm:memberOf  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/identifiers/belongsToCommunity  
+    * http://terms.library.ualberta.ca/id/belongsToCommunity  
+  * comment:  
+    * indicates community inheritence  
+  * dataType:  
+    * uri  
+  * display:  
+    * true  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * false  
+### dc:creator  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/creator  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * creator  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:description  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/description  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription  
+  * display:  
+    * true  
+  * displayLabel:  
+    * description  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * description  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### dcterms:title  
+  * backwardCompatibleWith:  
+    * http://purl.org/dc/terms/title  
+  * comments:  
+    * required for communties  
+  * dataType:  
+    * text  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstitle  
+  * display:  
+    * true  
+  * displayLabel:  
+    * title  
+  * facet:  
+    * false  
+  * onForm:  
+    * true  
+  * propertyName:  
+    * title  
+  * repeat:  
+    * false  
+  * required:  
+    * true  
+  * search:  
+    * true  
+  * sort:  
+    * true  
+### ual:depositor  
+  * backwardCompatibleWith:  
+    * http://id.loc.gov/vocabulary/relators/dpt  
+  * comments:  
+    * legacy property; usage: admin email.  
+  * dataType:  
+    * auto  
+  * definedBy:  
+    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepositor  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * depositor  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * sort:  
+    * false  
+### ual:fedora3uuid  
+  * backwardCompatibleWith:  
+    * http://terms.library.library.ca/identifiers/fedora3uuid  
+    * http://terms.library.ualberta.ca/idfedora3uuid  
+### ual:hydraNoid  
+  * comments:  
+    * hydra north legacy noid migrated through script  
+  * repeat:  
+    * false  
+### ual:restrictedCollection  
+  * comment:  
+    * indicates if deposit into collection is restricted to admin only  
+  * dataType:  
+    * boolean  
+  * display:  
+    * false  
+  * facet:  
+    * false  
+  * onForm:  
+    * false  
+  * propertyName:  
+    * Restricted Collection  
+  * repeat:  
+    * false  
+  * required:  
+    * false  
+  * search:  
+    * false  
+  * sort:  
+    * false  
+### ebu:dateIngested  
+  * comments:  
+    * backward compatible with http://fedora.info/definitions/v4/repository#created  
+    * backward compatible with info:fedora/fedora-system:def/model#createdDate  
+    * map first to info:createdDate. if not available, map next to fedora:created  
+### rdf:type  
+  * backwardCompatibleWith:  
+    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+### info:createdDate  
+  * backwardCompatibleWith:  
+    * info:fedora/fedora-system:def/model#createdDate  
