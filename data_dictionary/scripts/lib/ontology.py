@@ -6,7 +6,7 @@ class owlDocument(object):
 	"""takes ontology.json as input; separates terms, properties, and instances, along with annotations, returning a dict object containing each data set"""
 	def __init__(self):
 		self.output = {'Terms': {}, 'Properties': {}, 'Values': {}}
-		filename = 'data_dictionary/ontologies/Jupiter.json'
+		filename = '../../ontologies/Jupiter.json'
 		with open(filename, 'r') as terms:
 			owlDoc = json.load(terms)
 			# the owl json consists of an self.index for each term, property, or instance
