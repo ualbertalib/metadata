@@ -24,11 +24,6 @@
             "http://fedora.info/definitions/v4/repository#hasFixityService"
         ]
     },
-    "http://fedora.info/definitions/v4/repository#hasVersions": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://fedora.info/definitions/v4/repository#hasVersions"
-        ]
-    },
     "http://fedora.info/definitions/v4/repository#lastModified": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://fedora.info/definitions/v4/repository#lastModified"
@@ -37,11 +32,6 @@
     "http://fedora.info/definitions/v4/repository#lastModifiedBy": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://fedora.info/definitions/v4/repository#lastModifiedBy"
-        ]
-    },
-    "http://fedora.info/definitions/v4/repository#mimeType": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://fedora.info/definitions/v4/repository#mimeType"
         ]
     },
     "http://fedora.info/definitions/v4/repository#mixinTypes": {
@@ -64,12 +54,60 @@
             "http://fedora.info/definitions/v4/repository#writable"
         ]
     },
+    "http://ontoware.org/swrc/ontology#institution": {
+        "acceptedValues": [
+            {
+                "label": "University of Alberta",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/authorities/names/n79058482"
+            },
+            {
+                "label": "St. Stephen's College",
+                "onForm": "true",
+                "uri": "http://id.loc.gov/authorities/names/n2009054054"
+            }
+        ],
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://id.loc.gov/vocabulary/relators/dgg"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "auto"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualinstitution"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "degree grantor"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "institution"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
     "http://pcdm.org/models#memberOf": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://terms.library.ualberta.ca/identifiers/hasCollectionId"
         ],
         "http://terms.library.ualberta.ca/comment": [
-            "indicates collection inheritance"
+            "indicates collection inheritance",
+            "thesis always belong to collection 44558t416"
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "uri"
@@ -128,92 +166,10 @@
             "false"
         ],
         "http://terms.library.ualberta.ca/required": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/search": [
             "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/elements/1.1/contributor": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/contributor"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccontributor"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "additional contributors"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/indexAs": [
-            "http://purl.org/dc/elements/1.1/creator"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "contributor"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/elements/1.1/creator": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/creator"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dccreator"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "author or creator"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "creator"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/search": [
-            "true"
         ],
         "http://terms.library.ualberta.ca/sort": [
             "false"
@@ -226,9 +182,6 @@
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/rights"
         ],
-        "http://terms.library.ualberta.ca/comments": [
-            "must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license"
-        ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
         ],
@@ -236,7 +189,7 @@
             "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dcrights"
         ],
         "http://terms.library.ualberta.ca/display": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/displayLabel": [
             "rights"
@@ -292,7 +245,48 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/required": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/search": [
             "true"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://purl.org/dc/terms/abstract": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://purl.org/dc/terms/abstract"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsabstract"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "abstract"
+        ],
+        "http://terms.library.ualberta.ca/indexAs": [
+            "http://purl.org/dc/terms/description"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "abstract"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
         ],
         "http://terms.library.ualberta.ca/search": [
             "true"
@@ -307,9 +301,6 @@
     "http://purl.org/dc/terms/alternative": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/alternative"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            ""
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
@@ -335,9 +326,6 @@
         "http://terms.library.ualberta.ca/required": [
             "false"
         ],
-        "http://terms.library.ualberta.ca/search": [
-            "true"
-        ],
         "http://terms.library.ualberta.ca/sort": [
             "false"
         ],
@@ -345,62 +333,18 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
-    "http://purl.org/dc/terms/created": {
+    "http://purl.org/dc/terms/dateAccepted": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/created"
+            "http://purl.org/dc/terms/dateAccepted"
         ],
         "http://terms.library.ualberta.ca/dataType": [
-            "text"
+            "auto"
         ],
         "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermscreated"
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdateaccepted"
         ],
         "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "date created"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "date created"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
             "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/search": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "true"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/terms/description": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/description"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdescription"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "description"
         ],
         "http://terms.library.ualberta.ca/facet": [
             "false"
@@ -409,7 +353,7 @@
             "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
-            "description"
+            "date accepted"
         ],
         "http://terms.library.ualberta.ca/repeat": [
             "false"
@@ -417,8 +361,40 @@
         "http://terms.library.ualberta.ca/required": [
             "false"
         ],
-        "http://terms.library.ualberta.ca/search": [
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://purl.org/dc/terms/dateSubmitted": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://purl.org/dc/terms/dateSubmitted"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "auto"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsdatesubmitted"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
             "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "date submitted"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
         ],
         "http://terms.library.ualberta.ca/sort": [
             "false"
@@ -430,9 +406,6 @@
     "http://purl.org/dc/terms/isVersionOf": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/isVersionOf"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "relation, source, and isversionof will eventually be mapped together (to some extent)"
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
@@ -566,119 +539,6 @@
             "language"
         ],
         "http://terms.library.ualberta.ca/repeat": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/terms/license": {
-        "acceptedValues": [
-            {
-                "label": "Attribution-NonCommercial 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by-nc/3.0/"
-            },
-            {
-                "label": "Attribution-NoDerivatives 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by-nd/4.0/"
-            },
-            {
-                "label": "Attribution 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by/3.0/"
-            },
-            {
-                "label": "Attribution-NoDerivs 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by-nd/3.0/"
-            },
-            {
-                "label": "Public Domain Mark 1.0",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/publicdomain/mark/1.0/"
-            },
-            {
-                "label": "Attribution-NonCommercial 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by-nc/4.0/"
-            },
-            {
-                "label": "Attribution-ShareAlike 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by-sa/4.0/"
-            },
-            {
-                "label": "Attribution 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by/4.0/"
-            },
-            {
-                "label": "Attribution-NonCommercial-NoDerivs 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
-            },
-            {
-                "label": "Attribution-NonCommercial-NoDerivatives 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
-            },
-            {
-                "label": "Attribution-NonCommercial-ShareAlike 4.0 International",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
-            },
-            {
-                "label": "Attribution-NonCommercial-ShareAlike 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
-            },
-            {
-                "label": "Attribution-ShareAlike 3.0 Unported",
-                "onForm": "false",
-                "uri": "http://creativecommons.org/licenses/by-sa/3.0/"
-            },
-            {
-                "label": "CC0 1.0 Universal",
-                "onForm": "true",
-                "uri": "http://creativecommons.org/publicdomain/zero/1.0/"
-            }
-        ],
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/license"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "must have at least one of dc:rights or dcterms:license; cannot have both dc:rights and dcterms:license"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "uri"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslicense"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "license information"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "license"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
             "false"
         ],
         "http://terms.library.ualberta.ca/required": [
@@ -694,170 +554,6 @@
     "http://purl.org/dc/terms/modified": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://purl.org/dc/terms/modified"
-        ]
-    },
-    "http://purl.org/dc/terms/relation": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/relation"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "relation, source, and isversionof will eventually be mapped together (to some extent)"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsrelation"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "link to related item"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "relation"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/terms/source": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/source"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "relation, source, and isversionof will eventually be mapped together (to some extent)"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermslanguage"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "source"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "source"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/terms/spatial": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/spatial"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsspatial"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "place"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/indexAs": [
-            "http://purl.org/dc/elements/1.1/Subject"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "spatial coverage"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/dc/terms/temporal": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/temporal"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstemporal"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "time"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/indexAs": [
-            "http://purl.org/dc/elements/1.1/Subject"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "temporal coverage"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
     "http://purl.org/dc/terms/title": {
@@ -898,155 +594,33 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
-    "http://purl.org/dc/terms/type": {
-        "acceptedValues": [
-            {
-                "label": "Report",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/Report"
-            },
-            {
-                "label": "Learning Object",
-                "onForm": "true",
-                "uri": "http://terms.library.ualberta.ca/learningObject"
-            },
-            {
-                "label": "Conference Poster",
-                "onForm": "true",
-                "uri": "http://vivoweb.org/ontology/core#ConferencePoster"
-            },
-            {
-                "label": "Article",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/Article"
-            },
-            {
-                "label": "Image",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/Image"
-            },
-            {
-                "label": "Review",
-                "onForm": "true",
-                "uri": "http://vivoweb.org/ontology/core#Review"
-            },
-            {
-                "label": "Conference Paper",
-                "onForm": "true",
-                "uri": "http://vivoweb.org/ontology/core#ConferencePaper"
-            },
-            {
-                "label": "Chapter",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/Chapter"
-            },
-            {
-                "label": "Dataset",
-                "onForm": "true",
-                "uri": "http://vivoweb.org/ontology/core#Dataset"
-            },
-            {
-                "label": "Book",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/Book"
-            },
-            {
-                "label": "Research Material",
-                "onForm": "true",
-                "uri": "http://terms.library.ualberta.ca/researchMaterial"
-            }
-        ],
+    "http://purl.org/ontology/bibo/degree": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://purl.org/dc/terms/type"
+            "http://purl.org/ontology/bibo/ThesisDegree"
         ],
         "http://terms.library.ualberta.ca/dataType": [
-            "uri"
+            "enumerated text"
         ],
         "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermstype"
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#bibodegree"
         ],
         "http://terms.library.ualberta.ca/display": [
             "true"
         ],
         "http://terms.library.ualberta.ca/displayLabel": [
-            "type of item"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "type"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://purl.org/ontology/bibo/status": {
-        "acceptedValues": [
-            {
-                "label": "unpublished",
-                "onForm": "false",
-                "uri": "http://purl.org/ontology/bibo/status#unpublished"
-            },
-            {
-                "label": "accepted",
-                "onForm": "false",
-                "uri": "http://purl.org/ontology/bibo/status#accepted"
-            },
-            {
-                "label": "published",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/status#published"
-            },
-            {
-                "label": "submitted",
-                "onForm": "true",
-                "uri": "http://vivoweb.org/ontology/core#submitted"
-            },
-            {
-                "label": "draft",
-                "onForm": "true",
-                "uri": "http://purl.org/ontology/bibo/status#draft"
-            }
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "'draft', 'submitted', 'published' to be selected and concatenated on the end of dc:type when dc:type is 'article'"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "auto"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#bibostatus"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "true"
-        ],
-        "http://terms.library.ualberta.ca/displayLabel": [
-            "type of item"
+            "degree"
         ],
         "http://terms.library.ualberta.ca/facet": [
             "false"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
-            "status"
+            "degree"
         ],
         "http://terms.library.ualberta.ca/repeat": [
-            "true"
+            "false"
         ],
         "http://terms.library.ualberta.ca/required": [
             "false"
@@ -1056,16 +630,6 @@
         ],
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://scholarsphere.psu.edu/ns#onBehalfOf": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://scholarsphere.psu.edu/ns#onBehalfOf"
-        ]
-    },
-    "http://scholarsphere.psu.edu/ns#proxyDepositor": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://scholarsphere.psu.edu/ns#proxyDepositor"
         ]
     },
     "http://scholarsphere.psu.edu/ns#relativePath": {
@@ -1073,30 +637,65 @@
             "http://scholarsphere.psu.edu/ns#relativePath"
         ]
     },
-    "http://terms.library.ualberta.ca/ark": {
+    "http://terms.library.ualberta.ca/commiteeMember": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://terms.library.ualberta.ca/id/arkid"
+            "http://terms.library.ualberta.ca/role/thesiscommitteemember"
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
         ],
         "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualark"
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualcommiteemember"
         ],
         "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "examining committee member and department"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "commitee member"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/required": [
             "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://terms.library.ualberta.ca/department": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://vivoweb.org/ontology/core#AcademicDepartment"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdepartment"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "department"
         ],
         "http://terms.library.ualberta.ca/facet": [
             "false"
         ],
         "http://terms.library.ualberta.ca/onForm": [
-            "false"
+            "true"
         ],
         "http://terms.library.ualberta.ca/propertyName": [
-            "archival resource key id"
+            "department"
         ],
         "http://terms.library.ualberta.ca/repeat": [
-            "false"
+            "true"
         ],
         "http://terms.library.ualberta.ca/required": [
             "false"
@@ -1146,12 +745,53 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
+    "http://terms.library.ualberta.ca/dissertant": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://id.loc.gov/vocabulary/relators/dis"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualdissertant"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "author or creator"
+        ],
+        "http://terms.library.ualberta.ca/indexAs": [
+            "http://purl.org/dc/elements/1.1/Creator"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "dissertant"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/search": [
+            "true"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
     "http://terms.library.ualberta.ca/fedora3handle": {
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://terms.library.ualberta.ca/id/fedora3handle"
         ],
         "http://terms.library.ualberta.ca/comments": [
             "legacy property"
+        ],
+        "http://terms.library.ualberta.ca/dataDictionaryLabel": [
+            "Fedora3Handle"
         ],
         "http://terms.library.ualberta.ca/dataType": [
             "text"
@@ -1222,6 +862,47 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
+    "http://terms.library.ualberta.ca/graduationDate": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/date/graduationdate"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "auto"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualgraduationdate"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "graduation date"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/indexAs": [
+            "http://purl.org/dc/terms/created"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "graduation date"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "true"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
     "http://terms.library.ualberta.ca/hydraNoid": {
         "http://terms.library.ualberta.ca/comments": [
             "hydra north legacy noid migrated through script"
@@ -1236,85 +917,47 @@
             "http://terms.library.library.ca/identifiers/ingestbatch"
         ]
     },
-    "http://terms.library.ualberta.ca/nnaFile": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://terms.library.ualberta.ca/id/halpern:nnafile"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "legacy property"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualnnafile"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "northern north america filename"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
-    "http://terms.library.ualberta.ca/nnaItem": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://terms.library.ualberta.ca/id/halpern:nnaitem"
-        ],
-        "http://terms.library.ualberta.ca/comments": [
-            "legacy property"
-        ],
-        "http://terms.library.ualberta.ca/dataType": [
-            "text"
-        ],
-        "http://terms.library.ualberta.ca/definedBy": [
-            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualnnaitem"
-        ],
-        "http://terms.library.ualberta.ca/display": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/facet": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/onForm": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/propertyName": [
-            "northern north america item id"
-        ],
-        "http://terms.library.ualberta.ca/repeat": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/required": [
-            "false"
-        ],
-        "http://terms.library.ualberta.ca/sort": [
-            "false"
-        ],
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-        ]
-    },
     "http://terms.library.ualberta.ca/path": {
         "http://terms.library.ualberta.ca/comments": [
             "captures the community/collection pair to which an object belongs. used for circumventing pcdm:memberOf."
+        ]
+    },
+    "http://terms.library.ualberta.ca/proquest": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/id/proquest"
+        ],
+        "http://terms.library.ualberta.ca/comments": [
+            "legacy property"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualproquest"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "proquest"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
     "http://terms.library.ualberta.ca/sortYear": {
@@ -1344,6 +987,120 @@
         ],
         "http://terms.library.ualberta.ca/sort": [
             "true"
+        ]
+    },
+    "http://terms.library.ualberta.ca/specialization": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/thesis/specialization"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualspecialization"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "specialization"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "specialization"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://terms.library.ualberta.ca/supervisor": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://id.loc.gov/vocabulary/relators/ths"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "text"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualsupervisor"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "supervisor and department"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "supervisor"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/search": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+    },
+    "http://terms.library.ualberta.ca/thesisLevel": {
+        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
+            "http://terms.library.ualberta.ca/thesis/thesislevel"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "uri"
+        ],
+        "http://terms.library.ualberta.ca/definedBy": [
+            "https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualthesislevel"
+        ],
+        "http://terms.library.ualberta.ca/display": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/displayLabel": [
+            "degree level"
+        ],
+        "http://terms.library.ualberta.ca/facet": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/onForm": [
+            "true"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "thesis level"
+        ],
+        "http://terms.library.ualberta.ca/repeat": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "false"
+        ],
+        "http://terms.library.ualberta.ca/sort": [
+            "false"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
         ]
     },
     "http://terms.library.ualberta.ca/unicorn": {
@@ -1391,19 +1148,22 @@
             "map first to info:createdDate. if not available, map next to fedora:created"
         ]
     },
-    "http://www.loc.gov/premis/rdf/v1#hasOriginalName": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://www.loc.gov/premis/rdf/v1#hasOriginalName"
-        ]
-    },
-    "http://www.loc.gov/premis/rdf/v1#hasSize": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://www.loc.gov/premis/rdf/v1#hasSize"
-        ]
-    },
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-        "http://terms.library.ualberta.ca/backwardCompatibleWith": [
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        "acceptedValues": [
+            {
+                "label": "Thesis",
+                "onForm": "False",
+                "uri": "http://purl.org/ontology/bibo/Thesis"
+            }
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "auto"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "rdf Type"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
         ]
     },
     "info:fedora/fedora-system:def/model#createdDate": {

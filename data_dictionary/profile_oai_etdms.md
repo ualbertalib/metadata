@@ -65,7 +65,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsalternative) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/alternativeTitle  
-  * [dateaccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdateaccepted) is expressed in OAI as:  
+  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdateaccepted) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/date  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdescription) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
@@ -86,7 +86,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [degree](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#bibodegree) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/name  
-  * [commiteemember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualcommiteemember) is expressed in OAI as:  
+  * [commiteeMember](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualcommiteemember) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
     * role='committeemember'  
   * [department](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualdepartment) is expressed in OAI as:  
@@ -94,14 +94,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/discipline  
   * [dissertant](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualdissertant) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/creator  
-  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualfedora3handle) is expressed in OAI as:  
+  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualfedora3handle) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/identifier  
   * [specialization](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualspecialization) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
   * [supervisor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualsupervisor) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
     * role='advisor'  
-  * [thesislevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualthesislevel) is expressed in OAI as:  
+  * [thesisLevel](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#ualthesislevel) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/level  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#rdftype) is expressed in OAI as:  
@@ -110,140 +110,90 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 # Profile by property
 
 ### swrc:institution  
-  * dataDictionaryLabel:  
-    * http://ontoware.org/swrc/ontology#institution  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/grantor  
 ### prism:doi  
-  * dataDictionaryLabel:  
-    * http://prismstandard.org/namespaces/basic/3.0/doi  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/identifier  
 ### dc:contributor  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/contributor  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
 ### dc:rights  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/rights  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/rights  
 ### dc:subject  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/elements/1.1/subject  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
 ### dcterms:abstract  
   * comments:  
     * add prefix in content: 'Abstract: '  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/abstract  
   * maptsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
 ### dcterms:alternative  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/alternative  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/alternativeTitle  
-### dcterms:dateaccepted  
+### dcterms:dateAccepted  
   * comments:  
     * theses only  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/dateAccepted  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/date  
 ### dcterms:description  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/description  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
 ### dcterms:identifier  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/identifier  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/identifier  
 ### dcterms:language  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/language  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/language  
 ### dcterms:license  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/license  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/rights  
 ### dcterms:modified  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/modified  
   * mapsToOAI:  
     * datestamp  
 ### dcterms:spatial  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/spatial  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
 ### dcterms:temporal  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/temporal  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
 ### dcterms:title  
-  * dataDictionaryLabel:  
-    * http://purl.org/dc/terms/title  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/title  
 ### bibo:degree  
-  * dataDictionaryLabel:  
-    * http://purl.org/ontology/bibo/degree  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/name  
-### ual:commiteemember  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/commiteeMember  
+### ual:commiteeMember  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
     * role='committeemember'  
 ### ual:department  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/department  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/discipline  
 ### ual:dissertant  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/dissertant  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/creator  
-### ual:fedora3handle  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/fedora3Handle  
+### ual:fedora3Handle  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/identifier  
 ### ual:specialization  
   * comments:  
     * add prefix in content: 'Specialization: '  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/specialization  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
 ### ual:supervisor  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/supervisor  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/contributor  
     * role='advisor'  
-### ual:thesislevel  
-  * dataDictionaryLabel:  
-    * http://terms.library.ualberta.ca/thesisLevel  
+### ual:thesisLevel  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/degree  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/level  
 ### rdf:type  
   * comments:  
     * only if rdf:type = bibo:thesis  
-  * dataDictionaryLabel:  
-    * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
   * mapsToOAI:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/type  
