@@ -328,7 +328,7 @@ class Transform():
                         'type': 'uri'
                     },
                     'predicate': {
-                        'value': 'http://terms.library.ualberta.ca/date/sortyear',
+                        'value': 'http://terms.library.ualberta.ca/sortYear',
                         'type': 'uri'
                     },
                     'object': {
