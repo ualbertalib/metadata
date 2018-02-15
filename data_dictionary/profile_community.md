@@ -57,7 +57,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermsdescription  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#dctermstitle  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualdepositor  )  
-  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid  )  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid  )  
   * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualhydranoid  )  
   * [dateIngested](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ebudateingested  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype  )  
@@ -92,7 +92,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://purl.org/dc/terms/title  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
-  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid) is backward compatible with:  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#rdftype) is backward compatible with:  
@@ -240,7 +240,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### ual:fedora3uuid  
+### ual:fedora3UUID  
   * backwardCompatibleWith:  
     * http://terms.library.library.ca/identifiers/fedora3uuid  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
