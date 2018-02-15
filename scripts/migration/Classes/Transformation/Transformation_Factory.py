@@ -14,7 +14,7 @@ class TransformationFactory():
         for grad in gradDate:
             #TODO: change graduationDate to graduationdate
             try:
-                if (grad['subject'] in triple['subject']['value']) and (function == "graduationdate"):
+                if (grad['subject'] in triple['subject']['value']) and (function == "graduationDate"):
                     return Transform().gradDate(grad, triple, objectType)
             except:
                 PrintException()
@@ -44,7 +44,7 @@ class TransformationFactory():
                 PrintException()
         for collection in restrictedCollections:
             try:
-                if (collection['subject'] in triple['subject']['value']) and (function == "restrictedcollection"):
+                if (collection['subject'] in triple['subject']['value']) and (function == "restrictedCollection"):
                     return Transform().restricted(collection, triple)
             except:
                 PrintException()
@@ -54,7 +54,7 @@ class TransformationFactory():
             except:
                 PrintException()
         #TODO: change graduationDate to graduationdate
-        if function == "graduationdate":
+        if function == "graduationDate":
             try:
                 return Transform().sortYear(triple, objectType)
             except:
@@ -64,12 +64,12 @@ class TransformationFactory():
                 return Transform().accessRights(triple, objectType)
             except:
                 PrintException()
-        elif function == "modelsmemberof":
+        elif function == "modelsmemberOf":
             try:
                 return Transform().modelsmemberOf(triple, objectType)
             except:
                 PrintException()
-        elif function == "modelshasmember":
+        elif function == "modelshasMember":
             try:
                 return Transform().modelshasMember(triple, objectType)
             except:
