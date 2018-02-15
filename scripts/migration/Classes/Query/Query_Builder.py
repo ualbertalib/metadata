@@ -79,7 +79,7 @@ class Collection(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
         # the construct variable contains mappings that are not available in the mapping variable
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCollection'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ; ual:restrictedcollection 'false'^^xsd:boolean ;
-            rdf:type pcdm:Collection ; ual:hydranoid ?noid; dcterm:accessRights ?visibility"""
+            rdf:type pcdm:Collection ; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
         self.where = """WHERE { ?resource info:hasModel 'Collection'^^xsd:string .
                           filter ( not exists
@@ -145,7 +145,7 @@ class Community(QueryBuilder):
     def __init__(self, objectType, tripleStoreData):
         # the construct variable contains mappings that are not available in the mapping variable
         self.construct = """CONSTRUCT { ?jupiterResource info:hasModel 'IRCommunity'^^xsd:string ; bibo:owner 'eraadmi@ualberta.ca' ;
-            rdf:type pcdm:Object; rdf:type ual:Community; ual:hydranoid ?noid; dcterm:accessRights ?visibility"""
+            rdf:type pcdm:Object; rdf:type ual:Community; ual:hydraNoid ?noid; dcterm:accessRights ?visibility"""
         # the where variable sets the filter for obtaining collection objects.
         self.where = """WHERE {
                         {
@@ -171,7 +171,7 @@ class Community(QueryBuilder):
                         {
                           ?resource info:hasModel 'Collection'^^xsd:string .
                           ?resource ual:is_community 'true'^^xsd:boolean
-                        }"""
+                        } FILTER (NOT EXISTS {{?resource dcterm:title 'Dataverse Datasets'^^xsd:string}}) """
         # select statement is only required for IRItems 
         self.select = None
         super().__init__(objectType, tripleStoreData)
@@ -212,7 +212,7 @@ class Thesis(QueryBuilder):
             acl:visibilityAfterEmbargo ?visAfter ;
             dcterm:available ?available ;
             dcterm:accessRights ?accessRights;
-            ual:hydranoid ?noid"""
+            ual:hydraNoid ?noid"""
         # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
@@ -278,7 +278,7 @@ class Generic(QueryBuilder):
             bibo:owner ?owner ;
             acl:embargoHistory ?history ;
             acl:visibilityAfterEmbargo ?visAfter ;
-            ual:hydranoid ?noid"""
+            ual:hydraNoid ?noid"""
         # select statement provides a filter to the splitBy method, which is called by the parent constructor
         self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
