@@ -78,8 +78,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarrelativepath  )  
   * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor  )  
-  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle  )  
-  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  )  
+  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle  )  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  )  
   * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualhydranoid  )  
   * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch  )  
   * [nnaFile](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualnnafile  )  
@@ -166,9 +166,9 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://terms.library.ualberta.ca/id/arkid  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
-  * [fedora3handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is backward compatible with:  
+  * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3handle  
-  * [fedora3uuid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is backward compatible with:  
+  * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid) is backward compatible with:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * [ingestBatch](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualingestbatch) is backward compatible with:  
     * http://terms.library.library.ca/id/ingestbatch  
@@ -877,7 +877,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * false  
   * sort:  
     * false  
-### ual:fedora3handle  
+### ual:fedora3Handle  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3handle  
   * comments:  
@@ -885,7 +885,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3handle  
+    * https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualfedora3handle  
   * display:  
     * false  
   * facet:  
@@ -893,14 +893,14 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * onForm:  
     * false  
   * propertyName:  
-    * fedora 3 Handle  
+    * fedora 3 handle  
   * repeat:  
     * false  
   * required:  
     * false  
   * sort:  
     * false  
-### ual:fedora3uuid  
+### ual:fedora3UUID  
   * backwardCompatibleWith:  
     * http://terms.library.ualberta.ca/id/fedora3uuid  
   * comments:  
@@ -908,7 +908,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * dataType:  
     * text  
   * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualfedora3uuid  
+    * https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualfedora3uuid  
   * display:  
     * false  
   * facet:  
@@ -916,7 +916,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * onForm:  
     * false  
   * propertyName:  
-    * fedora 3 uuid  
+    * fedora 3 UUID  
   * repeat:  
     * false  
   * required:  
