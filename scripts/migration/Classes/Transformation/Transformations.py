@@ -260,7 +260,7 @@ class Transform():
             },
             'object': {
                 'value': sorted(d["object"], key=str)[0],
-                'type': 'date'
+                'type': 'literal'
             }
         }
         self.output.append(tempTriple)
@@ -279,7 +279,7 @@ class Transform():
             },
             'object': {
                 'value': grad["object"][0],
-                'type': 'date'
+                'type': 'literal'
             }
         }
         self.output.append(tempTriple)
@@ -299,7 +299,7 @@ class Transform():
                 },
                 'object': {
                     'value': triple['object']['value'],
-                    'type': 'date'
+                    'type': 'literal'
                 }
             }
         )
@@ -333,11 +333,11 @@ class Transform():
                     },
                     'object': {
                         'value': sorted(sortyears, key=str)[0],
-                        'type': 'date'
+                        'type': 'literal'
                     }
                 }
             )
-            return self.output
+        return self.output
 
     def appendID(self, ids, triple, objectType):
         triple['object']['value'] = triple['object']['value'] + " | " + ids['object'][0] 

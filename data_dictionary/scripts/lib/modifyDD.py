@@ -21,9 +21,9 @@ with open ('modifyDD.txt' , 'w+') as out:
 			objectt = triple['o']['value']
 			sparql = "http://206.167.181.124:7200/repositories/testdd"
 			sparql = SPARQLWrapper(sparql)
-			sparql.setMethod('POST')
+			#sparql.setMethod('POST')
 			if triple['o']['type'] == "uri":
-				query = "INSERT DATA {GRAPH ual:%s {<%s> <%s> <%s>} } ; " % (subgraph, subject, predicate, objectt)
+				query = "INSERT DATA {GRAPH ual:%s {<%s> <%s> <%s>} } " % (subgraph, subject, predicate, objectt)
 			if triple['o']['type'] == "literal":
 				#print (subject, " is a literal")
 				query = 'INSERT DATA {GRAPH ual:%s {<%s> <%s> "%s"} } ; ' % (subgraph, subject, predicate, objectt)
