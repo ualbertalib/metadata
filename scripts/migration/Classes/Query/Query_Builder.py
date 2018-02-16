@@ -302,7 +302,7 @@ class Generic(QueryBuilder):
                 ?resource info:hasModel 'GenericFile'^^xsd:string ;
                 dcterm:type ?type . filter(str(?type) != 'Thesis'^^xsd:string) .
                 FILTER (contains(str(?resource), '{}')) .
-                FILTER (NOT EXISTS {{?resource ualids:remote_resource 'Dataverse'^^xsd:string}})""".format(self.splitBy[group])
+                FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})""".format(self.splitBy[group])
             construct = self.construct
             for pair in self.mapping:
                 construct = "{0} ; <{1}> ?{2} ".format(construct, pair[0], re.sub(r'[0-9]+', '', pair[0].split('/')[-1].replace('#', '').replace('-', '')))
