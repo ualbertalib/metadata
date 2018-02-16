@@ -6,7 +6,6 @@ This document list all the URIs that are created and maintained by University of
 **ual:** http://terms.library.ualberta.ca/  
 
 # Properties
-* ark
 * commiteeMember
 * department
 * depositor
@@ -38,7 +37,6 @@ This document list all the URIs that are created and maintained by University of
 * [hydraNoid](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_community.md#ualhydranoid  ) 
 * [restrictedCollection](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#ualrestrictedcollection  )  
 ### Generic
-* [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark  )  
 * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor  )  
 * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle  )  
 * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  )  
