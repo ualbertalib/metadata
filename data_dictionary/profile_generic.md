@@ -76,7 +76,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [onBehalfOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholaronbehalfof  )  
   * [proxyDepositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarproxydepositor  )  
   * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarrelativepath  )  
-  * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark  )  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor  )  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle  )  
   * [fedora3UUID](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3uuid  )  
@@ -162,8 +161,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://scholarsphere.psu.edu/ns#proxyDepositor  
   * [relativePath](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#scholarrelativepath) is backward compatible with:  
     * http://scholarsphere.psu.edu/ns#relativePath  
-  * [ark](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualark) is backward compatible with:  
-    * http://terms.library.ualberta.ca/id/arkid  
   * [depositor](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualdepositor) is backward compatible with:  
     * http://id.loc.gov/vocabulary/relators/dpt  
   * [fedora3Handle](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualfedora3handle) is backward compatible with:  
@@ -833,27 +830,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### scholar:relativePath  
   * backwardCompatibleWith:  
     * http://scholarsphere.psu.edu/ns#relativePath  
-### ual:ark  
-  * backwardCompatibleWith:  
-    * http://terms.library.ualberta.ca/id/arkid  
-  * dataType:  
-    * text  
-  * definedBy:  
-    * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#ualark  
-  * display:  
-    * false  
-  * facet:  
-    * false  
-  * onForm:  
-    * false  
-  * propertyName:  
-    * archival resource key id  
-  * repeat:  
-    * false  
-  * required:  
-    * false  
-  * sort:  
-    * false  
 ### ual:depositor  
   * backwardCompatibleWith:  
     * http://id.loc.gov/vocabulary/relators/dpt  
