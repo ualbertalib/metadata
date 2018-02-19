@@ -90,7 +90,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [bibo:degree](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibodegree)  
   * [bibo:status](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#bibostatus)  
   * [http://swrc.ontoware.org/ontology#institution](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#http//swrc.ontoware.org/ontology#institution)  
-  * [ual:ark](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualark)  
   * [ual:commiteeMember](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualcommiteemember)  
   * [ual:department](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualdepartment)  
   * [ual:depositor](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/jupiter_ontology.md#ualdepositor)  
@@ -994,18 +993,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 
    **rdfs:range**   
   http://xmlns.com/foaf/0.1/Organization  
-
-***
-### ual:ark
-
-   **rdfs:domain**   
-  http://pcdm.org/works#Work  
-
-   **rdfs:isDefinedBy**   
-  http://terms.library.ualberta.ca  
-
-   **rdfs:label**   
-  Archival Resource Key ID  
 
 ***
 ### ual:commiteeMember
