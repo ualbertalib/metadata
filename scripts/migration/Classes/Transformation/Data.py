@@ -34,16 +34,20 @@ class Data(object):
         # for binaries there are more than one query per group (2 x content/characterization, foxml/era1stats) so we loop over the self.query object
         for q in self.query:
             self.sparqlData.setQuery("{} {} {}".format(q['prefix'], q['construct'], q['where']))  # set the query
-            results = self.sparqlData.query().convert()['results']['bindings']
+            try:
+                results = self.sparqlData.query().convert()['results']['bindings']
             # iterate over each resource and performs transformations
-            with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
-                future_to_result = {executor.submit(parallelTransform, sparqlResult, self): sparqlResult for sparqlResult in results}
-                for future in concurrent.futures.as_completed(future_to_result):
-                    future_to_result[future]
-                    try:
-                        future.result()
-                    except Exception:
-                        PrintException()
+                with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+                    future_to_result = {executor.submit(parallelTransform, sparqlResult, self): sparqlResult for sparqlResult in results}
+                    for future in concurrent.futures.as_completed(future_to_result):
+                        future_to_result[future]
+                        try:
+                            future.result()
+                        except Exception:
+                            PrintException()
+            except Exception:
+                print (q)
+                PrintException()
             self.__editVisibility()  # post-transformation transformation on visibility
             self.__editOwners()  # post-transformation transformation on ownership
             self.__addEbucore()  # checks for one or more date of ingest and converts to ebucore

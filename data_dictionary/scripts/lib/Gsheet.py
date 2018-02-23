@@ -6,7 +6,9 @@ import openpyxl
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font, Alignment
-from apiclient import discovery
+#import apiclient
+#import discovery
+from googleapiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
@@ -93,7 +95,7 @@ def google_generate():
 
     wb = Workbook()
     #../../profiles.xlsx
-    wb = openpyxl.load_workbook('data_dictionary/profiles.xlsx')
+    wb = openpyxl.load_workbook('data_dcitonary/profiles.xlsx')
     names = wb.get_sheet_names()
     for sid, sheetName in enumerate(names):
         add = {
