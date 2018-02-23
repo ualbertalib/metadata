@@ -19,7 +19,7 @@ class Transform():
             #print (triple['subject']['value'], triple['object']['value'])
             obj = triple['object']['value'].lower()
             if (obj in subject['mappings']):
-                print ("mapping subjects", triple['subject']['value'], triple['object']['value'], obj, subject['mappings'], subject['useForm'])
+                #print ("mapping subjects", triple['subject']['value'], triple['object']['value'], obj, subject['mappings'], subject['useForm'])
                 triple = {
                         'subject': {
                             'value': triple['subject']['value'],

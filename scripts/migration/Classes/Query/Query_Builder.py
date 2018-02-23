@@ -328,6 +328,10 @@ class Generic(QueryBuilder):
                 OPTIONAL {{ ?permission webacl:accessTo ?resource ;
                     webacl:mode webacl:Read ;
                     webacl:agent ?visibility }} .
+                OPTIONAL {{ ?permission_write webacl:accessTo ?resource ;
+                    webacl:mode webacl:Write ;
+                    webacl:agent ?visibility . filter (not exists {{?permission_write webacl:accessTo ?resource ;
+                    webacl:mode webacl:Read }})}} .
                 OPTIONAL {{ ?resource acl:hasEmbargo ?embargo .
                     OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
                     OPTIONAL {{ ?embargo acl:embargoHistory ?history }} .

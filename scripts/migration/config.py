@@ -1222,14 +1222,7 @@ dates = [{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1970'], '
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['1950'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bg/25/7f/48/bg257f488'},
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['1950'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/s4/65/5j/16/s4655j16f'},
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2011'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bj/h3/43/s3/bjh343s32q'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}
+{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2011'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bj/h3/43/s3/bjh343s32q'},
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['1968'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b2/n4/9t/16/b2n49t1696'}]
 
 dates_no_created = [{'predicate': 'http://purl.org/dc/terms/created', 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/nz/80/62/50/nz8062502', 'object': ['2016']},
