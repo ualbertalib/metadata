@@ -1,5 +1,5 @@
 sparqlTerms = "http://206.167.181.124:7200/repositories/era-dd"
-sparqlData = "http://localhost:9999/blazegraph/namespace/gillingham_20171222/sparql"  # dev, 1 hour to transform
+sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"  # dev, 1 hour to transform
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/gillingham_20171222/sparql"
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/gillingham_20171222/sparql" 
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/kb/sparql" 
@@ -9,12 +9,12 @@ sparqlData = "http://localhost:9999/blazegraph/namespace/gillingham_20171222/spa
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	"collection",
-	"community",
+	#"collection",
+	#"community",
 	"generic",
-	"thesis",
-	"relatedObject",
-	"technical"
+	#"thesis",
+	#"relatedObject",
+	#"technical"
 	]
 
 owners = ["erahelp@ualberta.ca",
