@@ -61,7 +61,11 @@ class QueryBuilder(object):
             # else:
             group = result['resource']['value'].split('/')[6]
             # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
-            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)                
+            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:7])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)
+        	# use this to run a batch item by item (comment out the three previous lines) 
+            '''group = result['resource']['value'].split('/')[10]
+            # the complete stem i.e "http://gillingham/01" is matched to the group (the stem is what is filtered on in each query, in order to break up queries)
+            self.splitBy[group] = "/".join(result['resource']['value'].split('/')[:10])  # the stem of the resource [0] and the group number by which to save [1] (this is the first digit in the pair tree)'''
 
     def writeQueries(self):
         """prepares the query. one per group. saves it to the query variable."""
@@ -285,6 +289,12 @@ class Generic(QueryBuilder):
             dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string) .
             FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})
         }"""
+        # use this to run one batch item by item (e.g. /b5). comment out the 5 previous lines 
+        '''self.select = """SELECT distinct ?resource WHERE {
+            ?resource info:hasModel 'GenericFile'^^xsd:string ;
+            dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string && contains(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b5')) .
+            FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})
+        }"""'''
         super().__init__(objectType, tripleStoreData)
 
     def generateQueries(self):
