@@ -15,8 +15,8 @@ class Transform():
 
     def subject(self, triple, objectType):
         """map subjects"""
+        #print (triple['subject']['value'], triple['object']['value'])
         for subject in subjects:
-            #print (triple['subject']['value'], triple['object']['value'])
             obj = triple['object']['value'].lower()
             if (obj in subject['mappings']):
                 #print ("mapping subjects", triple['subject']['value'], triple['object']['value'], obj, subject['mappings'], subject['useForm'])
