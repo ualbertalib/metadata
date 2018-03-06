@@ -89,11 +89,12 @@ class TransformationFactory():
                 return Transform().rights(triple, objectType)
             except:
                 PrintException()
-        elif function == "subject":
+        elif function == "subject" and triple['object']['value'] != '':
             try:
                 return Transform().subject(triple, objectType)
             except:
                 PrintException()
+                print (triple['subject']['value'], triple['object']['value'])
         elif function == "license":
             try:
                 return Transform().license(triple, objectType)
