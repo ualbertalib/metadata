@@ -916,6 +916,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
+  * accepted value:  
+    * **bibo:Thesis** (http://purl.org/ontology/bibo/Thesis)  
   * values displayed on form:  
   * dataType:  
     * auto  
