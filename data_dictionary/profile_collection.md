@@ -116,6 +116,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### required  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#rdftype  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#pcdmmemberof  )  
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_collection.md#dctermstitle  )  
@@ -309,8 +310,17 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * backward compatible with info:fedora/fedora-system:def/model#createdDate  
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
+  * accepted value:  
+    * **pcdm:Collection** (http://pcdm.org/models#Collection)  
+  * values displayed on form:  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * dataType:  
+    * auto  
+  * propertyName:  
+    * rdf Type  
+  * required:  
+    * true  
 ### info:createdDate  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#createdDate  

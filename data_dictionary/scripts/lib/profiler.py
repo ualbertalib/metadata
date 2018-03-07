@@ -141,7 +141,7 @@ class Profiler(object):
 							if key == 'acceptedValues' and keys == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
 								print("  * accepted value:  ")
 								for j in value:
-									print('    * **bibo:%s** (%s)  ' % (removeNS(j['label']), j['uri']))
+									print('    * **%s** (%s)  ' % (addPrefixes(j['uri']), j['uri']))
 							if key == 'acceptedValues':
 								print("  * values displayed on form:  ")
 								for j in value:
