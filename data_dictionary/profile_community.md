@@ -257,8 +257,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * accepted value:  
-    * **bibo:Community** (http://terms.library.ualberta.ca/Community)  
-    * **bibo:Object** (http://pcdm.org/models#Object)  
+    * **ual:Community** (http://terms.library.ualberta.ca/Community)  
+    * **pcdm:Object** (http://pcdm.org/models#Object)  
   * values displayed on form:  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
