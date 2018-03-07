@@ -264,6 +264,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * [title](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstitle  )  
   * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dctermstype  )  
   * [sortYear](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#ualsortyear  )  
+  * [type](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#rdftype  )  
 ### search  
   * [memberOf](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#pcdmmemberof  )  
   * [creator](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_generic.md#dccreator  )  
@@ -1011,8 +1012,16 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * backwardCompatibleWith:  
     * http://www.loc.gov/premis/rdf/v1#hasSize  
 ### rdf:type  
+  * accepted value:  
+  * values displayed on form:  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
+  * dataType:  
+    * auto  
+  * propertyName:  
+    * rdf Type  
+  * required:  
+    * true  
 ### info:createdDate  
   * backwardCompatibleWith:  
     * info:fedora/fedora-system:def/model#createdDate  
