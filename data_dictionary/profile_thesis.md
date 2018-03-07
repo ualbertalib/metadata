@@ -918,6 +918,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 ### rdf:type  
   * accepted value:  
     * **bibo:Thesis** (http://purl.org/ontology/bibo/Thesis)  
+    * **bibo:Object** (http://pcdm.org/models#Object)  
+    * **bibo:Work** (http://pcdm.org/works#Work)  
   * values displayed on form:  
   * dataType:  
     * auto  

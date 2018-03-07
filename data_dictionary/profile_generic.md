@@ -1013,6 +1013,8 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.loc.gov/premis/rdf/v1#hasSize  
 ### rdf:type  
   * accepted value:  
+    * **bibo:Object** (http://pcdm.org/models#Object)  
+    * **bibo:Work** (http://pcdm.org/works#Work)  
   * values displayed on form:  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  

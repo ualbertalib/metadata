@@ -311,6 +311,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * map first to info:createdDate. if not available, map next to fedora:created  
 ### rdf:type  
   * accepted value:  
+    * **bibo:Collection** (http://pcdm.org/models#Collection)  
   * values displayed on form:  
   * backwardCompatibleWith:  
     * http://www.w3.org/1999/02/22-rdf-syntax-ns#type  
