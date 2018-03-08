@@ -229,8 +229,29 @@
         ]
     },
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+        "acceptedValues": [
+            {
+                "label": "Community",
+                "onForm": "false",
+                "uri": "http://terms.library.ualberta.ca/Community"
+            },
+            {
+                "label": "Object",
+                "onForm": "false",
+                "uri": "http://pcdm.org/models#Object"
+            }
+        ],
         "http://terms.library.ualberta.ca/backwardCompatibleWith": [
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        ],
+        "http://terms.library.ualberta.ca/dataType": [
+            "auto"
+        ],
+        "http://terms.library.ualberta.ca/propertyName": [
+            "rdf Type"
+        ],
+        "http://terms.library.ualberta.ca/required": [
+            "true"
         ]
     },
     "info:fedora/fedora-system:def/model#createdDate": {

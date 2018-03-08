@@ -138,6 +138,10 @@ class Profiler(object):
 					for keys, values in data:
 						print('### %s  ' % (addPrefixes(keys)))
 						for key, value in sorted(values.items()):
+							if key == 'acceptedValues' and keys == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
+								print("  * accepted value:  ")
+								for j in value:
+									print('    * **%s** (%s)  ' % (addPrefixes(j['uri']), j['uri']))
 							if key == 'acceptedValues':
 								print("  * values displayed on form:  ")
 								for j in value:
