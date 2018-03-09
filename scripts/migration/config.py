@@ -19,6 +19,7 @@ types = [
 
 owners = ["erahelp@ualberta.ca",
 	"registered",
+	"public",
 	"piyapong.charoenwattana@ualberta.ca",
 	"dit.application.test@ualberta.ca",
 	"riedlber@ualberta.ca",
@@ -1423,11 +1424,7 @@ dates = [{'predicate': 'http://purl.org/dc/terms/created', 'object': ['1970'], '
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['2017'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b7/p8/8c/g7/b7p88cg76t'},
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['2017'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b4/t6/4g/n3/b4t64gn36s'},
 {'predicate': 'http://purl.org/dc/terms/created', 'object': ['2017'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/b1/25/79/s4/b12579s448'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2014'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/7s/75/dc/51/7s75dc512'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2018'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bv/m4/0x/r7/bvm40xr78s'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2018'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bv/m4/0x/r7/bvm40xr78s'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2018'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bv/m4/0x/r7/bvm40xr78s'},
-{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2018'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bv/m4/0x/r7/bvm40xr78s'}]
+{'predicate': 'http://purl.org/dc/terms/created', 'object': ['2014'], 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/7s/75/dc/51/7s75dc512'}]
 
 dates_no_created = [{'predicate': 'http://purl.org/dc/terms/created', 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/nz/80/62/50/nz8062502', 'object': ['2016']},
 {'predicate': 'http://purl.org/dc/terms/created', 'subject': 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/18/31/cm/95/1831cm956', 'object': ['2014']},
