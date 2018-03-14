@@ -257,7 +257,11 @@ class Thesis(QueryBuilder):
                     ?permission webacl:accessTo ?resource ;
                     webacl:mode webacl:Read ;
                     webacl:agent ?accessRights .
-                }} .
+                }} . 
+                OPTIONAL {{ ?permission_write webacl:accessTo ?resource ;
+                    webacl:mode webacl:Write ;
+                    webacl:agent ?accessRights . filter (not exists {{?permission_write webacl:accessTo ?resource ;
+                    webacl:mode webacl:Read }})}} .
                 OPTIONAL {{
                     ?resource acl:hasEmbargo ?embargo .
                     OPTIONAL {{ ?embargo acl:embargoReleaseDate ?available }} .
