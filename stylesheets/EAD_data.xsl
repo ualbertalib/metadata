@@ -4,7 +4,7 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
-    <xsl:variable name="docs" select="collection('../metadata-wrangling/BIBFRAME/da?select=*.xml;recurse=yes')"/>
+    <xsl:variable name="docs" select="collection('file:///home/ddavoodi/Projects/metadata/Sam_Steel?select=*.xml;recurse=yes')"/>
     
     <xsl:template match="/">
         <xsl:for-each select="$docs">
