@@ -3,7 +3,8 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import datetime
 import re
 app = Flask(__name__)
-sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+sparql = SPARQLWrapper("http://206.167.181.124:7200/repositories/era-dd")
+supdate = SPARQLWrapper("http://206.167.181.124:7200/repositories/era-dd/statements")
 sparql.setReturnFormat(JSON)
 
 
@@ -78,12 +79,12 @@ def setAnnotations():
         elif ("http" not in nv) and ("http" in ov):
             query = lit1
         # perform the query
-        sparql.setMethod('POST')
-        sparql.setQuery(query)
-        sparql.query()
-        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:ReplaceAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:deletion '%s'; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov, nv)
-        sparql.setQuery(auditQ)
-        sparql.query()
+        supdate.setMethod('POST')
+        supdate.setQuery(query)
+        supdate.query()
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:ReplaceAction ; schema:agent '%s' ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf ual:%s ; schema:targetCollection '%s' ; schema:object '%s' ; ual:deletion '%s'; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov, nv)
+        supdate.setQuery(auditQ)
+        supdate.query()
         # obtains the new value from the graph to ensure the data has changed
         query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> <%s> ?v} }" % (g, p, a)
         sparql.setMethod('GET')
@@ -113,12 +114,12 @@ def delAnnotations():
             query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, ov)
         else:
             query = "PREFIX ual: <http://terms.library.ualberta.ca/> DELETE DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, ov)
-        sparql.setMethod('POST')
-        sparql.setQuery(query)
-        sparql.query()
-        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:DeleteAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:deletion '%s'} }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov)
-        sparql.setQuery(auditQ)
-        sparql.query()       
+        supdate.setMethod('POST')
+        supdate.setQuery(query)
+        supdate.query()
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:DeleteAction ; schema:agent '%s' ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf ual:%s ; schema:targetCollection '%s' ; schema:object '%s' ; ual:deletion '%s'} }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, ov)
+        supdate.setQuery(auditQ)
+        supdate.query()       
         return jsonify(result=None)
     except Exception as e:
         return e
@@ -139,12 +140,12 @@ def newAnnotation():
             query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> <%s> } }" % (g, p, a, nv)
         else:
             query = "PREFIX ual: <http://terms.library.ualberta.ca/> INSERT DATA {GRAPH ual:%s {<%s> <%s> '%s' } }" % (g, p, a, nv)
-        sparql.setMethod('POST')
-        sparql.setQuery(query)
-        sparql.query()
-        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:AddAction ; schema:agent ual:%s ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf <%s> ; schema:targetCollection <%s> ; schema:object <%s> ; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, nv)
-        sparql.setQuery(auditQ)
-        sparql.query()     
+        supdate.setMethod('POST')
+        supdate.setQuery(query)
+        supdate.query()
+        auditQ = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> INSERT DATA { GRAPH ual:audit { _:blanknode a schema:AddAction ; schema:agent '%s' ; schema:endTime '%s'^^xsd:dateTime ; dcterms:isPartOf ual:%s ; schema:targetCollection '%s' ; schema:object '%s' ; ual:insertion '%s' } }" % (u, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), g, p, a, nv)
+        supdate.setQuery(auditQ)
+        supdate.query()     
         query = "PREFIX ual: <http://terms.library.ualberta.ca/> select distinct ?p ?a ?v where {GRAPH ual:%s {<%s> <%s> ?v} }" % (g, p, a)
         sparql.setMethod('GET')
         sparql.setQuery(query)
@@ -160,13 +161,13 @@ def newAnnotation():
 @app.route('/_view')
 def view():
     try:
-        query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?date ?type ?graph ?property ?annotation ?insertion ?deletion where {graph ual:audit {?event schema:agent ?user ; rdf:type ?type ; schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL {?event ual:insertion ?insertion } } } ORDER BY desc(?date)"
+        query = "prefix dcterms: <http://purl.org/dc/terms/> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix schema: <http://schema.org/> prefix ual: <http://terms.library.ualberta.ca/> select ?userName ?date ?type ?graph ?property ?annotation ?insertion ?deletion where {graph ual:audit {?event schema:agent ?userName ; rdf:type ?type ; schema:endTime ?date ; dcterms:isPartOf ?graph ; schema:targetCollection ?property ; schema:object ?annotation . OPTIONAL { ?event ual:deletion ?deletion} . OPTIONAL {?event ual:insertion ?insertion } } } ORDER BY desc(?date)"
         sparql.setMethod('GET')
         sparql.setQuery(query)
         results = sparql.query().convert()
         events = []
         for result in results["results"]["bindings"]:
-            binding = {#"user": result['userName']['value'], #username isn't working with audit right now. the query needs to be fixed.
+            binding = {"user": result['userName']['value'], #username is now working
                             "date": result['date']['value'],
                             "type": result['type']['value'],
                             "graph": result['graph']["value"],
