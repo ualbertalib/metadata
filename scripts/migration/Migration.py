@@ -27,6 +27,8 @@ def main():
     f.close()
     # Iterate over every type of object that needs to be migrated.
     for objectType in types:
+        validator = Set_Validator(objectType, sparqlTerms).generate_validator()
+        print (validator)
         # the queryFactory getMigrationQuery method returns a query object depending on the type it was passed
         # a query object contains all of the queries needed to obtain the data for this type, split into manageably sized groups
         queryObject = Query_Factory.QueryFactory().getMigrationQuery(objectType, tripleStoreData)
@@ -46,7 +48,7 @@ def main():
         #        print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
         for group in queryObject.queries.keys():
-            parallelTransform(group, queryObject, filesetIds, proxies)
+            parallelTransform(group, queryObject, filesetIds, proxies, validator)
             i = i + 1
             print("{0} of {1} {2} queries transformed".format(i, len(queryObject.queries), objectType))
             tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -55,9 +57,9 @@ def main():
         del queryObject
 
 
-def parallelTransform(group, queryObject, filesetIds, proxies):
+def parallelTransform(group, queryObject, filesetIds, proxies, validator):
     """the query object, along with a group, along with the uri generator object, are passed into a data object, where transformations occur and the data is saved"""
-    Data.Data(group, queryObject, filesetIds, proxies).transformData()  # query, group, object
+    Data.Data(group, queryObject, filesetIds, proxies, validator).transformData()  # query, group, object
     # DTO.resultsToTriplestore()
 
 
@@ -93,6 +95,24 @@ class URIGenerator():
                 self.proxyHash[resource] = proxyId
         else:
             self.generateProxyId(resource)
+
+class Set_Validator(object):
+    def __init__(self, objectType, sparqlTerms):
+        self.objectType = objectType
+        self.sparqlTerms = SPARQLWrapper(sparqlTerms)
+        self.validator = []
+        self.query = ""
+        #self.generate_validator()
+
+    def generate_validator(self):
+
+        self.sparqlTerms.setReturnFormat(JSON)
+        self.query = "PREFIX ual: <http://terms.library.ualberta.ca/> select ?predicate where { graph ual:%s { ?predicate ual:required 'true' } }" %(self.objectType)
+        self.sparqlTerms.setQuery(self.query)
+        results = self.sparqlTerms.query().convert()['results']['bindings']
+        for triple in results:
+            self.validator.append(triple['predicate']['value'])
+        return self.validator
 
 
 if __name__ == "__main__":
