@@ -12,7 +12,7 @@ class Data(object):
     it then commits the transformed data to a local graph (an RDFLib object); 
     when all the results of a query have been transformed and committed to the local graph, the graph then has some transformations performed on it; 
     the local graph is the committed to a file in the results folder"""
-    def __init__(self, group, queryObject, filesetIds, proxies):
+    def __init__(self, group, queryObject, filesetIds, proxies, validator):
         self.proxies = proxies
         self.filesetIds = filesetIds
         self.query = queryObject.queries[group]  # the query for the group 
@@ -21,6 +21,7 @@ class Data(object):
         self.sparqlData = queryObject.sparqlData  # the migration origin
         self.sparqlTerms = queryObject.sparqlTerms  # the mapping origin
         self.results = {}  # 
+        self.validator = validator #a list of all requried predicates for objectType
         self.graph = Graph()  # local graph stores the transformed results. final transformations are performed directly on the graph when context is required (if this then that)
         self.objectType = queryObject.objectType 
         self.directory = "results/{0}/".format(self.objectType)
@@ -108,15 +109,27 @@ class Data(object):
 
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
-            for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
-                if s.split('/')[10] not in self.results:
-                    self.results[s.split('/')[10]] = Graph()
-            for r in self.results:
-                for s, p, o in self.graph.triples((None, None, None)):
-                    if r in s:
-                        self.results[r].add((s, p, o))
-                self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
-                self.results[r].serialize(destination=self.filename, format='nt')
+            with oepn('required_predicates_audit.txt', "a") as file:
+                for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
+                    if s.split('/')[10] not in self.results:
+                        self.results[s.split('/')[10]] = Graph()
+                for r in self.results:
+                    for s, p, o in self.graph.triples((None, None, None)):
+                        if r in s:
+                            self.results[r].add((s, p, o))
+                    for v in self.validator: 
+                    #self.validator have the results of all required predicates for the objectType
+                        if (URIRef(s), URIRef(v), None) in self.results[r]:
+                            if self.results[r].value(URIRef(s), URIRef(v)) == '':
+                                file.write("Predicate with no Value: ")
+                                print (URIRef(s))
+                                print (URIRef(v))
+                        else:
+                            print ("The predicate is not in graph")
+                            print (URIRef(s))
+                            print (URIRef(v))
+                    self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
+                    self.results[r].serialize(destination=self.filename, format='nt')
 
 def parallelTransform(result, queryObject):
     # for this set of results, perform a transformation
