@@ -109,12 +109,12 @@ class Data(object):
 
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
-            with open(self.objectType + '_required_predicates_audit.txt', "a") as file:
+            with open('Audit/' + self.objectType + '_required_predicates_missing.txt', 'a') as file1, open('Audit/' + self.objectType + '_required_predicates_empty.txt', 'a') as file2:
                 for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#hasModel")):
                     if s.split('/')[10] not in self.results:
                         self.results[s.split('/')[10]] = Graph()
                 for r in self.results:
-                    uri = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/' + r[0:1] + "/" + r[2:3] + "/" + r[4:5] + "/" + r[6:7] + "/" + r
+                    uri = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/' + r[0:2] + "/" + r[2:4] + "/" + r[4:6] + "/" + r[6:8] + "/" + r
                     for s, p, o in self.graph.triples((None, None, None)):
                         if r in s:
                             self.results[r].add((s, p, o))
@@ -122,9 +122,9 @@ class Data(object):
                     #self.validator have the results of all required predicates for the objectType
                         if (None, URIRef(v), None) in self.results[r]:
                             if self.results[r].value(URIRef(uri), URIRef(v)) == '':
-                                file.write("Predicate with no Value: " + "\t" + uri + "\t" + " | " + v + "\n")
+                                file2.write("Predicate with no Value: " + "\t" + uri + "\t" + " | " + v + "\n")
                         else:
-                            file.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\n")
+                            file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                             #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                     self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                     self.results[r].serialize(destination=self.filename, format='nt')
