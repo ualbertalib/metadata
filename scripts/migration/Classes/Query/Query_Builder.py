@@ -371,6 +371,7 @@ class Related_Object(QueryBuilder):
         self.construct = """CONSTRUCT {
             ?jupiterResource pcdm:hasRelatedObject ?jupiterRelatedObject .
             ?jupiterRelatedObject info:hasModel 'IRItem' ;
+            rdf:type ?file ;
             rdf:type fedora:Container ;
             rdf:type fedora:Resource ;
             rdf:type pcdm:Object ;
@@ -467,7 +468,7 @@ class Related_Object(QueryBuilder):
                     FILTER (STRENDS(str(?relatedObject), '{}')) """.format(self.splitBy[group], fileType)
                 # customize the where clause to include triples that aren't in the mappings
                 self.queries[group][-1]['prefix'] = self.prefixes
-                self.queries[group][-1]['construct'] = self.construct + " }"
+                self.queries[group][-1]['construct'] = self.construct + "}"
                 # the mapping for binaries is handwritten
                 # ?relatedObject is the binary itself (it is related because it is an independent object which is related to the parent object (via PCDM))
                 # OPTIONAL is used so as to include any instance of a property, without disqualifying resources that do not have one
@@ -490,6 +491,7 @@ class Related_Object(QueryBuilder):
                     OPTIONAL {{ ?relatedObject fedora:mixinTypes ?relatedFileMixins . FILTER (str(?relatedFileMixins) != '') }} .
                     OPTIONAL {{ ?relatedObject fedora:hasParent ?relatedParent }} .
                     BIND(URI(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/')) AS ?jupiterRelatedObject)
+                    BIND(ual:{} AS ?file) .
                     BIND(URI(CONCAT(STR(?relatedObject), '/filesetID/files')) AS ?relatedFiles) .
                     BIND(STR(replace(replace(replace(str(?relatedObject), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/', ''),'/{}',''), '^.+/', '')) AS ?noid) .
                     BIND(URI(CONCAT(STR(?relatedFiles), CONCAT('/', ?noid))) AS ?relatedFile) .
@@ -503,7 +505,7 @@ class Related_Object(QueryBuilder):
                     BIND(URI(replace(str(?jupiterRelatedObject), '/{}', '')) AS ?jupiterResource) .
                     BIND(URI(CONCAT(STR(?jupiterRelatedObject), '/filesetID')) AS ?relatedFileset) .
                     BIND(URI(CONCAT(str(?jupiterRelatedObject), '/proxy')) AS ?proxy) .
-                    }}""".format(where, fileType, fileType)
+                    }}""".format(where, fileType, fileType, fileType)
             self.writeQueries()
 
 
