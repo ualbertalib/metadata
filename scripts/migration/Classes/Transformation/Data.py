@@ -96,16 +96,20 @@ class Data(object):
                 # do someting else to remaining owners
 
     def __addEbucore(self):
-        if (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.graph:
-            for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#createdDate")):
-                self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
-                self.graph.remove((s, URIRef("info:fedora/fedora-system:def/model#createdDate"), o))
-                if (s, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
-                    self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), None))
-        elif (None, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
-            for s, o in self.graph.subject_objects(URIRef("http://fedora.info/definitions/v4/repository#created")):
-                self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
-                self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), o))
+        try:
+            if (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.graph:
+                for s, o in self.graph.subject_objects(URIRef("info:fedora/fedora-system:def/model#createdDate")):
+                    self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
+                    self.graph.remove((s, URIRef("info:fedora/fedora-system:def/model#createdDate"), o))
+                    if (s, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
+                        self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), None))
+            elif (None, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.graph:
+                for s, o in self.graph.subject_objects(URIRef("http://fedora.info/definitions/v4/repository#created")):
+                    self.graph.add((s, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), o))
+                    self.graph.remove((s, URIRef("http://fedora.info/definitions/v4/repository#created"), o))
+        except Exception:
+            print (s)
+            PrintException()
 
     def __writeGraphToFile(self):
         if len(self.graph) > 0:
@@ -121,10 +125,11 @@ class Data(object):
                     for v in self.validator: 
                     #self.validator have the results of all required predicates for the objectType
                         if (None, URIRef(v), None) in self.results[r]:
-                            if self.results[r].value(URIRef(uri), URIRef(v)) == '':
+                            if not self.results[r].value(URIRef(uri), URIRef(v)):
                                 file2.write("Predicate with no Value: " + "\t" + uri + "\t" + " | " + v + "\n")
                         else:
-                            file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\n")
+                            access = str(self.results[r].value(URIRef(uri), URIRef("http://purl.org/dc/terms/accessRights")))
+                            file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
                             #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                     self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                     self.results[r].serialize(destination=self.filename, format='nt')
