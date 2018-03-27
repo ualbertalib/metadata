@@ -122,6 +122,30 @@ class Data(object):
                     for s, p, o in self.graph.triples((None, None, None)):
                         if r in s:
                             self.results[r].add((s, p, o))
+                    if self.objectType == "generic" and (None, URIRef("http://purl.org/dc/terms/created"), None) not in self.results[r]:
+                        if (None, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), None) in self.results[r]:
+                            temp_date = self.results[r].value(URIRef(uri), URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"))[0:4] 
+                        elif (None, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.results[r]:
+                            temp_date = self.results[r].value(URIRef(uri), URIRef("http://fedora.info/definitions/v4/repository#created"))[0:4]
+                        elif (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.results[r]:
+                            temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
+                        print (uri, temp_date)
+                        if temp_date:
+                            self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(temp_date+ "-t")))
+                            self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(temp_date)))
+                    elif self.objectType == "generic" and (None, URIRef("http://purl.org/dc/terms/created"), None) in self.results[r]:
+                        if not self.results[r].value(URIRef(uri), URIRef("http://purl.org/dc/terms/created")):
+                            self.results[r].remove((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), None))
+                            if (None, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), None) in self.results[r]:
+                                tmp_date = self.results[r].value(URIRef(uri), URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"))[0:4]
+                            elif (None, URIRef("http://fedora.info/definitions/v4/repository#created"), None) in self.results[r]:
+                                tmp_date = self.results[r].value(URIRef(uri), URIRef("http://fedora.info/definitions/v4/repository#created"))[0:4]
+                            elif (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.results[r]:
+                                temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
+                            print (uri, tmp_date)
+                            if tmp_date:
+                                self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(tmp_date+ "-d")))
+                                self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(tmp_date)))                            
                     for v in self.validator: 
                     #self.validator have the results of all required predicates for the objectType
                         if (None, URIRef(v), None) in self.results[r]:
