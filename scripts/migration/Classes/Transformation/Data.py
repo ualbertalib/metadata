@@ -153,8 +153,11 @@ class Data(object):
                                 file2.write("Predicate with no Value: " + "\t" + uri + "\t" + " | " + v + "\n")
                         else:
                             access = str(self.results[r].value(URIRef(uri), URIRef("http://purl.org/dc/terms/accessRights")))
-                            file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
-                            #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
+                            if (access == "http://terms.library.ualberta.ca/draft" or access == "http://terms.library.ualberta.ca/embargo") and v == "http://prismstandard.org/namespaces/basic/3.0/doi":
+                                pass
+                            else:
+                                file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
+                                #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                     self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                     self.results[r].serialize(destination=self.filename, format='nt')
 
