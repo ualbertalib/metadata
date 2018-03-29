@@ -26,6 +26,11 @@ owners = ["erahelp@ualberta.ca",
 	"era@ualberta.ca",
 	"abombak@ualberta.ca"]
 
+ignore = ["http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bt/43/5g/d1/bt435gd17x"
+		"http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bv/q2/7z/n6/bvq27zn67x"
+		"http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bg/q6/7j/r4/bgq67jr407"
+		"http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/xd/07/gw/97/xd07gw97m"]
+
 # prefix dictionary
 mig_ns = [{"prefix": "bg", "uri": "http://206.167.181.124:7200/repositories/era-dd"},
 	{"prefix": "premis", "uri": "http://www.loc.gov/premis/rdf/v1#"},

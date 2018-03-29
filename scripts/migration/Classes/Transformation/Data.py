@@ -1,6 +1,7 @@
 from Classes.Transformation import Transformation_Factory
 from tools import PrintException
 import os
+from config import ignore
 from SPARQLWrapper import JSON
 from rdflib import URIRef, Literal, Graph
 import re
@@ -120,7 +121,9 @@ class Data(object):
                 for r in self.results:
                     uri = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/' + r[0:2] + "/" + r[2:4] + "/" + r[4:6] + "/" + r[6:8] + "/" + r
                     for s, p, o in self.graph.triples((None, None, None)):
-                        if r in s:
+                        if r in ignore:
+                            pass
+                        elif r in s:
                             self.results[r].add((s, p, o))
                     if self.objectType == "generic" and (None, URIRef("http://purl.org/dc/terms/created"), None) not in self.results[r]:
                         if (None, URIRef("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested"), None) in self.results[r]:
