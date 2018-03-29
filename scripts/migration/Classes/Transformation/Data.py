@@ -1,6 +1,7 @@
 from Classes.Transformation import Transformation_Factory
 from tools import PrintException
 import os
+from ignore import ignore
 from SPARQLWrapper import JSON
 from rdflib import URIRef, Literal, Graph
 import re
@@ -25,9 +26,13 @@ class Data(object):
         self.graph = Graph()  # local graph stores the transformed results. final transformations are performed directly on the graph when context is required (if this then that)
         self.objectType = queryObject.objectType 
         self.directory = "results/{0}/".format(self.objectType)
+        self.directory1 = "results/inJupiter/{0}/".format(self.objectType)
         self.filename = "results/{0}/{1}.nt".format(self.objectType, group)
+        self.filename1 = "results/inJupiter/{0}/{1}.nt".format(self.objectType, group)
         if not os.path.exists(self.directory):  # if the directory doesn't exist, create it
             os.makedirs(self.directory)
+        if not os.path.exists(self.directory1):  # if the directory doesn't exist, create it
+            os.makedirs(self.directory1)
 
     def transformData(self):
         self.sparqlData.setReturnFormat(JSON)
@@ -158,9 +163,13 @@ class Data(object):
                             else:
                                 file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
                                 #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
-                    self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
-                    self.results[r].serialize(destination=self.filename, format='nt')
-
+                    if r not in ignore:
+                        print (r)
+                        self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
+                        self.results[r].serialize(destination=self.filename, format='nt')
+                    else:
+                        self.filename1 = "results/inJupiter/{0}/{1}.nt".format(self.objectType, r)
+                        self.results[r].serialize(destination=self.filename1, format='nt')
 def parallelTransform(result, queryObject):
     # for this set of results, perform a transformation
     result = Transformation_Factory.TransformationFactory().getTransformation(result, queryObject.objectType, queryObject.proxies)
