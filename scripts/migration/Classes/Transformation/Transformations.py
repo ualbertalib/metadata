@@ -376,7 +376,7 @@ class Transform():
             },
             'object': {
                 'value': sorted(date["object"], key=str)[0],
-                'type': 'date'
+                'type': 'literal'
             }
         }
         self.output.append(tempTriple)
