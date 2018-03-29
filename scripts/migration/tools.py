@@ -66,6 +66,17 @@ def _deleteResults(types):
 					os.unlink(file_path)
 			except Exception as e:
 				print(e)
+	for ptype in types:
+		folder = 'results/inJupiter/%s' % (ptype)
+		if not os.path.exists(folder):
+			os.makedirs(folder)
+		for the_file in os.listdir(folder):
+			file_path = os.path.join(folder, the_file)
+			try:
+				if os.path.isfile(file_path):
+					os.unlink(file_path)
+			except Exception as e:
+				print(e)
 
 def _deleteAudit():
 	folder = 'Audit'
