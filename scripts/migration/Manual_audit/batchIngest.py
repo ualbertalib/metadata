@@ -1,7 +1,7 @@
 from SPARQLWrapper import JSON, SPARQLWrapper
 import json
 
-with open("list.txt", "r") as file:
+with open("list_complete.txt", "r") as file:
 	l = []
 	for line in file:
 		if line.replace("\n", "") not in l:
@@ -13,6 +13,7 @@ sparql.setReturnFormat(JSON)
 f = []
 with open("batch_ingested.tsv", "w+") as o:
 	for i in l:
+		# query = "select ?batch where { <%s> <http://fedora.info/definitions/v4/repository#created> ?batch }" %(i) # http://terms.library.library.ca/id/ingestbatch does not exists
 		query = "select ?batch where { <%s> <http://terms.library.library.ca/identifiers/ingestbatch> ?batch . filter(?batch != '') }" %(i) # http://terms.library.library.ca/id/ingestbatch does not exists
 		sparql.setQuery(query)
 		results = sparql.query().convert()['results']['bindings']
