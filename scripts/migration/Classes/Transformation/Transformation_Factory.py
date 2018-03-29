@@ -38,7 +38,7 @@ class TransformationFactory():
                 PrintException()
         for date in dates_no_created:
             try:
-                if (date['subject'] in triple['subject']['value']) and (function == "modified"):
+                if (date['subject'] in triple['subject']['value']) and (function == "title"):
                     return Transform().add_created(date, triple, objectType)
             except:
                 PrintException()
