@@ -2,6 +2,7 @@ from Classes.Transformation import Transformation_Factory
 from tools import PrintException
 import os
 from ignore import ignore
+from error import error
 from SPARQLWrapper import JSON
 from rdflib import URIRef, Literal, Graph
 import re
@@ -136,7 +137,7 @@ class Data(object):
                             temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
                         print (uri, temp_date)
                         if temp_date:
-                            self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(temp_date+ "-t")))
+                            self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(temp_date+ "--")))
                             self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(temp_date)))
                     elif self.objectType == "generic" and (None, URIRef("http://purl.org/dc/terms/created"), None) in self.results[r]:
                         if not self.results[r].value(URIRef(uri), URIRef("http://purl.org/dc/terms/created")):
@@ -149,7 +150,7 @@ class Data(object):
                                 temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
                             print (uri, tmp_date)
                             if tmp_date:
-                                self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(tmp_date+ "-d")))
+                                self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(tmp_date+ "-")))
                                 self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(tmp_date)))                            
                     for v in self.validator: 
                     #self.validator have the results of all required predicates for the objectType
@@ -161,7 +162,10 @@ class Data(object):
                             if (access == "http://terms.library.ualberta.ca/draft" or access == "http://terms.library.ualberta.ca/embargo") and v == "http://prismstandard.org/namespaces/basic/3.0/doi":
                                 pass
                             else:
-                                file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
+                                if r in ignore:
+                                    file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\t" + "Item is in Jupiter" + "\n")
+                                else:
+                                    file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
                                 #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                     if r not in ignore:
                         print (r)
