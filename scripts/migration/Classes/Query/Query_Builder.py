@@ -299,7 +299,7 @@ class Generic(QueryBuilder):
         # opt. use this to run one batch item by item (e.g. /b5). comment out the 5 previous lines 
         '''self.select = """SELECT distinct ?resource WHERE {
             ?resource info:hasModel 'GenericFile'^^xsd:string ;
-            dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string && contains(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/s2/5x/85/czs25x856k')) .
+            dcterm:type ?type . FILTER(str(?type) != 'Thesis'^^xsd:string && contains(str(?resource), 'http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b5')) .
             FILTER (NOT EXISTS {{?resource ualids:remote_resource 'dataverse'^^xsd:string}})
         }"""'''
         super().__init__(objectType, tripleStoreData)
