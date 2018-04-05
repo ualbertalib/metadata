@@ -13,7 +13,7 @@ class DateFinder:
         # print (self.year)
         for n, year in enumerate(self.year):
             self.out.append({'year': '', "grams": {"1-gram": "", "-1-gram": "", "2-gram": "", "-2-gram": "", "3-gram": "", "-3-gram": "", "4-gram": "", "-4-gram": "", "5-gram": "", "-5-gram": ""}})
-            if int(self.word[year]) > 1900 and int(self.word[year]) < 2019:
+            if (int(self.word[year]) > 1900 and int(self.word[year]) < 2019) or (int(self.word[year]) == 1580):
                 # index = self.word.index(year)
                 self.out[n]["year"] = self.word[year]
                 for j in range(1, 6):
