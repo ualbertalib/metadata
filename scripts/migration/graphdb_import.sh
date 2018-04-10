@@ -1,5 +1,5 @@
 #!/bin/bash
-python Migration.py
+#python Migration.py
 var = 0
 
 for folder in 'community' 'collection' 'generic' 'thesis' #'technical' 'relatedObject'
