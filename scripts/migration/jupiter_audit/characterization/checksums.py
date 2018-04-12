@@ -114,6 +114,7 @@ def main():
 					count = {}
 					for i in checksums[key]:
 						weight = 0
+						permission = 'No permission object found'
 						uri = "http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/" + i[0:2] + "/" + i[2:4] + "/" + i[4:6] + "/" + i[6:8] + "/" + i 
 						type = getType(uri)
 						print (i, type)
@@ -125,16 +126,23 @@ def main():
 								generic_v = generic_v + " ?" +j 
 								generic_p = generic_p + " . optional {<" + uri + ">" + " <" + predicate['generic'][j] + ">" + " ?" + j + "}" 
 								predicate_count[j] = "false"
-							query = "prefix info: <info:fedora/fedora-system:def/model#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> SELECT distinct %s where {<%s> info:hasModel 'GenericFile'^^xsd:string %s }" %(generic_v, uri, generic_p)
+							query = "prefix info: <info:fedora/fedora-system:def/model#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> SELECT distinct %s ?agent where {<%s> info:hasModel 'GenericFile'^^xsd:string %s . optional{?perm <http://www.w3.org/ns/auth/acl#accessTo> <%s> ; <http://www.w3.org/ns/auth/acl#mode> <http://www.w3.org/ns/auth/acl#Read> ; <http://www.w3.org/ns/auth/acl#agent> ?agent} }" %(generic_v, uri, generic_p, uri)
 							sparqlData.setQuery(query)
 							results = sparqlData.query().convert()['results']['bindings']
 							for r in results:
+								try:
+									permission = r['agent']['value'].replace("http://projecthydra.org/ns/auth/person#", "").replace("http://projecthydra.org/ns/auth/group#", "")
+								except:
+									print ("no permission for " + i)
 								for v in predicate['generic'].keys():
 									try:
-										value = r[v]['value']
-										weight = weight + 1
-										count[i] = [] 
-										predicate_count[v] = "true"
+										if v == "type" and r[v]['value'] == "null":
+											pass
+										else:
+											value = r[v]['value']
+											weight = weight + 1
+											count[i] = [] 
+											predicate_count[v] = "true"
 									except:
 										pass
 						elif type == "Thesis":
@@ -145,10 +153,14 @@ def main():
 								thesis_v = thesis_v + " ?" +j 
 								thesis_p = thesis_p + " . optional {<" + uri + ">" + " <" + predicate['thesis'][j] + ">" + " ?" + j + "}" 
 								predicate_count[j] = "false"
-							query = "prefix info: <info:fedora/fedora-system:def/model#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> SELECT distinct %s where {<%s> info:hasModel 'GenericFile'^^xsd:string %s }" %(thesis_v, uri, thesis_p)
+							query = "prefix info: <info:fedora/fedora-system:def/model#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> SELECT distinct %s ?agent where {<%s> info:hasModel 'GenericFile'^^xsd:string %s . optional{?perm <http://www.w3.org/ns/auth/acl#accessTo> <%s> ; <http://www.w3.org/ns/auth/acl#mode> <http://www.w3.org/ns/auth/acl#Read> ; <http://www.w3.org/ns/auth/acl#agent> ?agent} }" %(thesis_v, uri, thesis_p, uri)
 							sparqlData.setQuery(query)
 							results = sparqlData.query().convert()['results']['bindings']
 							for r in results:
+								try:
+									permission = r['agent']['value'].replace("http://projecthydra.org/ns/auth/person#", "").replace("http://projecthydra.org/ns/auth/group#", "")
+								except:
+									print ("no permission for " + i)
 								for v in predicate['thesis'].keys():
 									try:
 										value = r[v]['value']
@@ -160,16 +172,22 @@ def main():
 						try:
 							count[i].append(predicate_count)
 							count[i].append(weight)
+							count[i].append(permission)
+							count[i].append(key)
 						except:
 							print (i)
+
 					final.append(count)
-					#print (count)
 					print ("next")
-		print (final)
-		with open ("t.tsv", "w+") as file:
+
+		with open ("Duplicates.tsv", "w+") as file:
+			file.write("NOID" + "\t" + "Predicates" + "\t" "weight" + "\t" "permission" + "\t" "md5checksum" + "\n")
 			for i in final:
 				for j in i.keys():
-					file.write(str(j) + str(i[j]) + "\n")
+					file.write(str(j) + "\t") 
+					for z in i[j]:
+						file.write(str(z) + "\t")
+					file.write("\n")
 				file.write("\n")
 
 	predicate = getPredicates()
