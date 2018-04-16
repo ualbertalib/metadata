@@ -2,7 +2,7 @@ from pymarc import MARCReader
 from pymarc import XmlHandler
 from pymarc import record_to_xml
 from pymarc import XMLWriter
-with open('2015Imprint.mrc', 'rb') as fh:
+with open('PGA-Australiana.mrc', 'rb') as fh:
 	#with open ("test.xml", "a") as out:
 		#out.write('<root>')
 	reader = MARCReader(fh, to_unicode=True, force_utf8=False, utf8_handling='ignore')
