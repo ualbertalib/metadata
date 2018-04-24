@@ -16,17 +16,9 @@ import time
 from datetime import datetime
 
 ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-#subprocess.call(['java', '-jar', 'saxon9he.jar', '-t' '-s:1985eresOrigbf.xml -xsl:names_2.xsl -o:test.tsv'])
-#subprocess.call(["saxon9he.jar", "-o:output.xml", "-s:file.xml", "file.xslt"])
 
-#with open("1985eresOrigbf.xml", "rb") as f:
 xslt = ET.parse("names_2.xsl")
 dom = ET.parse("1985eresOrigbf.xml")
-    #r = dom.xpath('//bf:Agent[@rdf:about]/@rdf:about', namespaces={'bf': 'http://id.loc.gov/ontologies/bibframe/', 'rdf' : 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'})
-    #root = dom.getroot()
-    #for neighbor in root.iter('{http://id.loc.gov/ontologies/bibframe/}Agent'):
-     #   if "{'{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about': 'http://example.org/3825414#Agent100-16'}" in neighbor.attrib:
-      #      print (neighbor.attrib)
 transform = ET.XSLT(xslt)
 newdom = transform(dom)
 l = {}
@@ -174,12 +166,8 @@ for n, i in enumerate(names.keys()):
             scores['LC']['lcid'] = {}
             scores['LC']["lcid"][uriS] = [candidateD, scoreS]
     if len(scores) > 0:
-        #l[i] = []
-        #l[i].append(i.split("\t")[0])
-        #l[key].append(i.split("\t")[1].replace('http://id.loc.gov/ontologies/bibframe/', ''))
         l[i] = scores
 
-#print (l)
 maxs = {}
 for item in l.keys():
     name = item.split('-_-_-')[0]
@@ -236,22 +224,11 @@ with open('test.tsv', "w+") as output:
                         if element.attrib[ku] == uri_key:
                             element.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', LC)
         except:
-            print ("EX")
+            print ("could not find identfier for " + key)
 enhanched.write('output.xml')
 
 tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
 print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
-#transform = ET.XSLT(xslt)
-#newdom = transform(dom) 
-#with open ("test-result.tsv", "r") as oo:
-#    oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
-#    for i in oo:
-#        print (i)'''
-
-'''with open ("test-result.tsv", "r") as oo:
- #   oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
-    for i in oo:
-        print (i)'''
 
 '''if __name__ == '__main__':
     from optparse import OptionParser
