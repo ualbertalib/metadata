@@ -12,8 +12,10 @@ from fuzzywuzzy import fuzz
 import urllib
 import requests
 import json
+import time
+from datetime import datetime
 
-
+ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
 #subprocess.call(['java', '-jar', 'saxon9he.jar', '-t' '-s:1985eresOrigbf.xml -xsl:names_2.xsl -o:test.tsv'])
 #subprocess.call(["saxon9he.jar", "-o:output.xml", "-s:file.xml", "file.xslt"])
 
@@ -35,13 +37,14 @@ for i in str(newdom).split("\n"):
     if i != '':
         name = i.split("\t")[0]
         key = i.split("\t")[-1]
-        type = i.split("\t")[1]
+        type = i.split("\t")[1].replace('http://id.loc.gov/ontologies/bibframe/', '')
         checksum = name + "-_-_-" + type
         if checksum not in names.keys():
             names[checksum] = []
             names[checksum].append(key)
         else:
             names[checksum].append(key)
+print (names)
 for n, i in enumerate(names.keys()):
     name = i.split('-_-_-')[0]
     print (name, n) 
@@ -177,7 +180,7 @@ for n, i in enumerate(names.keys()):
         l[i] = scores
 
 #print (l)
-final = {}
+maxs = {}
 for item in l.keys():
     name = item.split('-_-_-')[0]
     scoreLC = []
@@ -190,22 +193,60 @@ for item in l.keys():
         if 'lcid' in l[item][itr].keys():
             for k in l[item][itr]['lcid'].keys():
                 if l[item][itr]['lcid'][k][-1] > scoreLC[-1]:
-                    scoreLC[0] = k
+                    scoreLC[0] = k.replace('LC|', '').replace(' ', '')
                     scoreLC[1] = l[item][itr]['lcid'][k][-1]
         if 'VIAFID' in l[item][itr].keys():
             for k in l[item][itr]['VIAFID'].keys():
                 if l[item][itr]['VIAFID'][k][-1] > scoreVF[-1]:
                     scoreVF[0] = k
                     scoreVF[1] = l[item][itr]['VIAFID'][k][-1]
-                        
+    if scoreVF[0] != "temp" or scoreLC[0] != "temp":                   
+        maxs[item] = {}
+        if scoreLC[0] != "temp":
+            maxs[item]['LC'] = scoreLC
+        if scoreVF[0] != "temp":
+            maxs[item]['VIAF'] = scoreVF
+final = {}
+for i in maxs.keys():
+    name = i.split('-_-_-')[0]
+    type = i.split('-_-_-')[1]
     final[name] = {}
-    final[name]['LC'] = scoreLC
-    final[name]['VIAF'] = scoreVF
+    final[name]['keys'] = []
+    for keys in names[i]:
+        final[name]['scores'] = maxs[i]
+        final[name]['keys'].append(keys)
+        
 print (len(l))
 print (final)
 print (len(final))
+enhanched = ET.parse("1985eresOrigbf.xml")
+with open('test.tsv', "w+") as output:
+    output.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
+    for key in final.keys():
+        try:
+            LC = 'http://id.loc.gov/authorities/names/' + (final[key]['scores']['LC'][0])
+            VF = 'http://viaf.org/viaf/' + (final[key]['scores']['VIAF'][0])
+            for k in final[key]['keys']:
+                uri_key = k
+                output.write(uri_key + "\t" + VF + "\t" + LC + "\n")
+                r = enhanched.xpath('//bf:Agent[@rdf:about]/@rdf:about', namespaces={'bf': 'http://id.loc.gov/ontologies/bibframe/', 'rdf' : 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'})
+                root = enhanched.getroot()
+                for element in root.iter('{http://id.loc.gov/ontologies/bibframe/}Agent'):
+                    for ku in element.attrib.keys(): 
+                        if element.attrib[ku] == uri_key:
+                            element.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', LC)
+        except:
+            print ("EX")
+enhanched.write('output.xml')
 
-
+tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+#transform = ET.XSLT(xslt)
+#newdom = transform(dom) 
+#with open ("test-result.tsv", "r") as oo:
+#    oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
+#    for i in oo:
+#        print (i)'''
 
 '''with open ("test-result.tsv", "r") as oo:
  #   oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
