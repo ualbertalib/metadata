@@ -14,7 +14,7 @@ class Backup(object):
 		self.__backupTriples()
 
 	def __backupTriples(self):
-		sparql = SPARQLWrapper("http://206.167.181.123:9999/blazegraph/namespace/terms/sparql")
+		sparql = SPARQLWrapper("http://206.167.181.124:7200/repositories/era-dd")
 		sparql.setReturnFormat(JSON)
 		query = "select * where { graph ?g {?s ?p ?o} }"
 		sparql.setQuery(query)
