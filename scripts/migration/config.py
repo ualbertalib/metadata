@@ -1,5 +1,5 @@
 sparqlTerms = "http://206.167.181.124:7200/repositories/era-dd"
-sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/fedoraUpdate_20180410/sparql"  # dev, 1 hour to transform
+sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"  # dev, 1 hour to transform
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/gillingham_20171222/sparql"
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/gillingham_20171222/sparql" 
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/kb/sparql" 
@@ -9,10 +9,10 @@ sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/fedoraUpdate_2018
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	"collection",
-	"community",
+	#"collection",
+	#"community",
 	"generic",
-	"thesis",
+	#"thesis",
 	#"relatedObject",
 	#"technical"
 	]
@@ -2582,7 +2582,7 @@ subjects = [{"useForm":"abstractions",
 {"useForm":"rocky mountains",
 "mappings": ["rocky mountains.","rocky-mountains"]},
 {"useForm":"oil sands",
-"mappings": ["oilsands","oilsands,", "oilsand", "oil sand"]},
+"mappings": ["oilsands", "oil sands,", "oilsand", "oil sand" ,"oil sands", "oil-sands", "oil-sand"]},
 {"useForm":"decision-making",
 "mappings": ["decision making","decision making."]},
 {"useForm":"spatial variablity",
@@ -2828,7 +2828,7 @@ subjects = [{"useForm":"abstractions",
 {"useForm":"tsx venture exchange--periodicals",
 "mappings": ["tsx venture exchange—periodicals", "tsx venture exchange-- periodicals"]},
 {"useForm":"tar sands",
-"mappings": ["tarsands"]},
+"mappings": ["tarsands", "tar sands", "tarsand", "tar sand", "tar-sand", "tar-sands"]},
 {"useForm":"finance--canada--periodicals",
 "mappings": ["finance--canada—periodicals"]},
 {"useForm":"needs assessment",
