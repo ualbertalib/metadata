@@ -288,6 +288,11 @@ class Results():
         return (self.final)
 
 def write(final, file):
+    enhanched = ETree.register_namespace('bf', 'http://id.loc.gov/ontologies/bibframe/')
+    enhanched = ETree.register_namespace('bflc', 'http://id.loc.gov/ontologies/bflc/')
+    enhanched = ETree.register_namespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
+    enhanched = ETree.register_namespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+    enhanched = ETree.register_namespace('madsrdf', 'http://www.loc.gov/mads/rdf/v1#')
     enhanched = ETree.parse(file)
     with open('test.tsv', "w+") as output:
         output.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
