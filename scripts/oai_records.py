@@ -3,7 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 f = open("response", "w")
-base = "http://129.128.67.154:8983/fedora/rest/oai?verb=ListRecords&metadataPrefix=oai_dc"
+base = "http://gillingham2.library.ualberta.ca:8080/fedora/rest/oai?verb=ListRecords&metadataPrefix=oai_dc"
 req = base + '&from=2014-01-01T00:00:00Z&until=2016-12-31T00:00:00Z'
 r = requests.get(req)
 
