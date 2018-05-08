@@ -24,46 +24,50 @@ from datetime import datetime
 
 def main():
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    file = 'uploads/2015eresOrigbf.xml'
-    filename = file.replace('.xml', '').replace('uploads/', '')
-    print ("processing " + filename)
-    log_file = filename.replace('.xml', '') + "-error-logs"
-    output = filename.replace('.xml', '').replace("BIB/", "") + "-enhanced.xml" 
-    clearLogs(log_file)
-    apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
-    query_type = "/authorities/names"
-    bib_object = Bibframe(file, log_file)
-    transformed = bib_object.convert_bibframe()
-    extracted = bib_object.extract_names(transformed)
-    names = extracted[0]
-    all_names = extracted[1]
-    corp_names = extracted[2]
-    print (str(all_names) + " were extrected from " + filename)
-    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
-    l = {}
-    stats = {}
-    for index, item in enumerate(names.keys()):
-        name = item.split('-_-_-')[0]
-        print(index+1, name)
-        l[item] = []
-        for api in apis:
-            if api in stats.keys():
-                pass
-            else:
-                stats[api] = 0
-            result = APIFactory().get_API(name, query_type, api, log_file)
-            if result:
-                l[item].append(result)
-                stats[api] = stats[api] + len(result)
-    results = clean_up(l)
-    result_Object = Results(results, names, file, log_file)
-    result_Object.maximizer()
-    f = result_Object.mapping()
-    eff = get_stat(f, len(names), filename)
-    stats['names-enriched'] = len(f)
-    write(f, file, output, log_file, filename)
-    tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    write_stats(eff, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+    folder = 'uploads'
+    for files in os.listdir(folder):
+        file = os.path.join(folder, files)
+        filename = file.replace('.xml', '').replace('uploads/', '')
+        print ("processing " + filename)
+        log_file = filename.replace('.xml', '') + "-error-logs"
+        output = filename.replace('.xml', '').replace("BIB/", "") + "-enhanced.xml" 
+        clearLogs(log_file)
+        apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+        query_type = "/authorities/names"
+        bib_object = Bibframe(file, log_file)
+        transformed = bib_object.convert_bibframe()
+        extracted = bib_object.extract_names(transformed)
+        names = extracted[0]
+        all_names = extracted[1]
+        corp_names = extracted[2]
+        print (str(all_names) + " were extrected from " + filename)
+        print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
+        l = {}
+        stats = {}
+        for index, item in enumerate(names.keys()):
+            name = item.split('-_-_-')[0]
+            print(index+1, name)
+            l[item] = []
+            for api in apis:
+                if api in stats.keys():
+                    pass
+                else:
+                    stats[api] = 0
+                result = APIFactory().get_API(name, query_type, api, log_file)
+                if result:
+                    l[item].append(result)
+                    stats[api] = stats[api] + len(result)
+        results = clean_up(l)
+        result_Object = Results(results, names, file, log_file)
+        result_Object.maximizer()
+        f = result_Object.mapping()
+        eff = get_stat(f, len(names), filename)
+        stats['names-enriched'] = len(f)
+        write(f, file, output, log_file, filename)
+        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        write_stats(eff, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
     tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
