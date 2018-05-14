@@ -381,7 +381,9 @@ def write(final, file, output, log_file, filename):
         tsv.write("name" + "\t" + "ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
         for key in final.keys():
             name = key.split('-_-_-')[0]
-            try:
+            LC = ''
+            VF = ''
+            try: 
                 if "LC" in final[key]['scores']:
                     LC = 'http://id.loc.gov/authorities/names/' + (final[key]['scores']['LC'][0])
                 if "VIAF" in final[key]['scores'].keys():
@@ -393,11 +395,13 @@ def write(final, file, output, log_file, filename):
                     for element in root.iter('{http://id.loc.gov/ontologies/bibframe/}Agent'):
                         for ku in element.attrib.keys(): 
                             if element.attrib[ku] == uri_key:
-                                element.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', LC)
-                                a = ETree.SubElement(element, 'bf:identifiedBy')
-                                b = ETree.SubElement(a, 'bf:IdentifiedBy')
-                                c = ETree.SubElement(b, 'rdf:value')
-                                c.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', VF)
+                                if LC != '':
+                                    element.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', LC)
+                                if VF != '':
+                                    a = ETree.SubElement(element, 'bf:identifiedBy')
+                                    b = ETree.SubElement(a, 'bf:IdentifiedBy')
+                                    c = ETree.SubElement(b, 'rdf:value')
+                                    c.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', VF)
             except:
                 print ("could not find identfier for " + key)
                 PrintException(log_file, name)
