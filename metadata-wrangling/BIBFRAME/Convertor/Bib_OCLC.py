@@ -12,7 +12,7 @@ import lxml.etree as ET
 import xml.etree.ElementTree as ETree
 from fuzzywuzzy import fuzz
 import urllib
-import requests
+import requests		
 import json
 import time
 from datetime import datetime
@@ -35,10 +35,10 @@ def main():
         name = item.split('-_-_-')[0]
         print(index+1, name)
         l[item] = []
-        for api in apis:
+        '''for api in apis:
             result = APIFactory().get_API(name, query_type, api, log_file)
             if result:
-                l[item].append(result)
+                l[item].append(result)'''
         n = int(len(names[item]['title'])/2)
         for ind in range(0, n): 
             title = names[item]['title'][ind*2]
@@ -100,7 +100,6 @@ class Bibframe():
                                 self.names[checksum]['title'].append(title_key)
         except:
             PrintException(self.log_file, name)
-        print (self.names)
         return self.names
 
 class APIFactory():
@@ -310,26 +309,36 @@ class SearchAPI():
 
     def search_OCLC(self):
         self.scores = {}
-        OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wt=json&wskey=jdfRzYZbLc8HZXFByyyLGrUqTOOmkJOAPi4tAN0E7xI3hgE2xDgwJ7YPtkwM6W3ol5yz0d0JHgE1G2Wa"
-        print (OCLC)
+        OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=1QSLAhHnqyQYTlcnREquxaYmTBEng0FbYgPUwa5clqNAmG1Qe8m0LsqRxh22iTfoi1TGdOMloHfTjzXf"
         try:
-            '''OCLC_result = requests.get(OCLC)
-            OCLC_results = ETree.fromstring(OCLC_result.content)
-            for result in OCLC_results.iter('{http://id.loc.gov/ns/id_service#}entry'):
-                title = result.find('title').text
-                author = result.find('name').text
-                id = result.find('id').text
-                scoreTitle = fuzz.token_sort_ratio(title, self.query_type)
-                if scoreD > self.th:
-                    scoreOCLC = fuzz.token_sort_ratio(author, self.name)
-                    if scoreOCLC > self.th:'''
-            #wid = id.replace('http://worldcat.org/oclc/', '')
-            #workid = "http://experiment.worldcat.org/oclc/" + id + ".jsonld"
-            OCLC_res = requests.get('http://experiment.worldcat.org/oclc/706018734.jsonld').json()
-            print (OCLC_res)
-            self.scores['OCLC'] = {}
-            self.scores['OCLC']['oclcid'] = {}
-            #self.scores['OCLC']["oclcid"][uriD] = [candidateD, scoreD]
+            OCLC_result = requests.get(OCLC).text
+            with open("temp-file.xml", "w") as file:
+            	file.write (OCLC_result)
+            	file.close()
+            	file = ETree.parse("temp-file.xml")
+            	root = file.getroot()
+            	for i in root.iter('{http://www.w3.org/2005/Atom}entry'):
+            		author = i.find('{http://www.w3.org/2005/Atom}author/{http://www.w3.org/2005/Atom}name').text
+            		title = i.find('{http://www.w3.org/2005/Atom}title').text
+            		id = i.find('{http://www.w3.org/2005/Atom}id').text
+            		scoreTitle = fuzz.token_sort_ratio(title, self.query_type)
+            		if scoreTitle > self.th:
+            			scoreOCLC = fuzz.token_sort_ratio(author, self.name)
+            			if scoreOCLC > self.th:
+            				work_id = ''
+            				score = (scoreTitle + scoreOCLC)/2
+            				wid = id.replace('http://worldcat.org/oclc/', '')
+            				workid = "http://experiment.worldcat.org/oclc/" + wid + ".jsonld"
+            				OCLC_res = requests.get(workid).json()
+            				for i in OCLC_res['@graph']:
+            					if 'exampleOfWork' in i.keys():
+            						work_id = i['exampleOfWork']
+            				self.scores['OCLC'] = {}
+            				self.scores['OCLC']['oclcid'] = {}
+            				self.scores['OCLC']["oclcid"]['id'] = [wid, score]
+            				if work_id != '':
+            					print (work_id, title, self.query_type)
+            					self.scores['OCLC']["oclcid"]['work_id'] = [work_id, score]
         except:
                 PrintException(self.log_file, self.name)
         if len(self.scores) > 0:
