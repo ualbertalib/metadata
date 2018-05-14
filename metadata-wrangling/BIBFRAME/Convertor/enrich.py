@@ -490,13 +490,13 @@ def get_stat(f, names, file):
     VIAF_Median = statistics.median(VIAF_Score)
     VIAF_Var = statistics.variance(VIAF_Score)
     VIAF_Std = statistics.stdev(VIAF_Score)
-    plt.hist(LC_Score, 10)
+    '''plt.hist(LC_Score)
     plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
     plt.grid()
     plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
         orientation='portrait')
     plt.clf()
-    plt.hist(VIAF_Score, 10)
+    plt.hist(VIAF_Score)
     plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
     plt.grid()
     plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
@@ -509,7 +509,7 @@ def get_stat(f, names, file):
     plt.legend(prop={'size': 10})
     plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
     plt.savefig(file_path, facecolor='w', edgecolor='w',
-        orientation='portrait')
+        orientation='portrait')'''
     stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
     stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
     return (stat)
