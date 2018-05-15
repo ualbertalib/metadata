@@ -12,7 +12,7 @@ import lxml.etree as ET
 import xml.etree.ElementTree as ETree
 from fuzzywuzzy import fuzz
 import urllib
-import requests		
+import requests
 import json
 import time
 from datetime import datetime
@@ -22,7 +22,7 @@ def main():
     print (file)
     #ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     log_file = file.replace('.xml', '') + "-error-logs"
-    output = file.replace('.xml', '').replace("BIB/", "") + "-enhanced.xml" 
+    output = file.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
     clearLogs(log_file)
     apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
     query_type = "/authorities/names"
@@ -31,14 +31,15 @@ def main():
     names = bib_object.extract_names(transformed)
     print (str(len(names)) + " names were extracted from " + file)
     l = {}
+    print (names)
     for index, item in enumerate(names.keys()):
         name = item.split('-_-_-')[0]
         print(index+1, name)
         l[item] = []
-        '''for api in apis:
+        for api in apis:
             result = APIFactory().get_API(name, query_type, api, log_file)
             if result:
-                l[item].append(result)'''
+                l[item].append(result)
         n = int(len(names[item]['title'])/2)
         for ind in range(0, n): 
             title = names[item]['title'][ind*2]
@@ -46,6 +47,7 @@ def main():
             if result:
                 l[item].append(result)
     results = clean_up(l)
+    print (results)
     result_Object = Results(results, names, file, log_file)
     result_Object.maximizer()
     f = result_Object.mapping()
@@ -313,36 +315,43 @@ class SearchAPI():
         try:
             OCLC_result = requests.get(OCLC).text
             with open("temp-file.xml", "w") as file:
-            	file.write (OCLC_result)
-            	file.close()
-            	file = ETree.parse("temp-file.xml")
-            	root = file.getroot()
-            	for i in root.iter('{http://www.w3.org/2005/Atom}entry'):
-            		author = i.find('{http://www.w3.org/2005/Atom}author/{http://www.w3.org/2005/Atom}name').text
-            		title = i.find('{http://www.w3.org/2005/Atom}title').text
-            		id = i.find('{http://www.w3.org/2005/Atom}id').text
-            		scoreTitle = fuzz.token_sort_ratio(title, self.query_type)
-            		if scoreTitle > self.th:
-            			scoreOCLC = fuzz.token_sort_ratio(author, self.name)
-            			if scoreOCLC > self.th:
-            				work_id = ''
-            				score = (scoreTitle + scoreOCLC)/2
-            				wid = id.replace('http://worldcat.org/oclc/', '')
-            				workid = "http://experiment.worldcat.org/oclc/" + wid + ".jsonld"
-            				OCLC_res = requests.get(workid).json()
-            				for i in OCLC_res['@graph']:
-            					if 'exampleOfWork' in i.keys():
-            						work_id = i['exampleOfWork']
-            				self.scores['OCLC'] = {}
-            				self.scores['OCLC']['oclcid'] = {}
-            				self.scores['OCLC']["oclcid"]['id'] = [wid, score]
-            				if work_id != '':
-            					print (work_id, title, self.query_type)
-            					self.scores['OCLC']["oclcid"]['work_id'] = [work_id, score]
+                file.write(OCLC_result)
+                file.close()
+            file = ETree.parse("temp-file.xml")
+            root = file.getroot()
+            for i in root.iter('{http://www.w3.org/2005/Atom}entry'):
+                author = i.find('{http://www.w3.org/2005/Atom}author/{http://www.w3.org/2005/Atom}name').text
+                title = i.find('{http://www.w3.org/2005/Atom}title').text
+                id = i.find('{http://www.w3.org/2005/Atom}id').text
+                scoreTitle = fuzz.token_sort_ratio(title, self.query_type)
+                if scoreTitle > self.th:
+                    scoreOCLC = fuzz.token_sort_ratio(author, self.name)
+                    if scoreOCLC > self.th:
+                        score = (scoreTitle + scoreOCLC)/2
+                        work_id = ''
+                        wid = id.replace('http://worldcat.org/oclc/', '')
+                        self.scores['OCLC'] = {}
+                        self.scores['OCLC']['oclcid'] = {}
+                        self.scores['OCLC']['oclcid'][wid] = [self.query_type, scoreTitle]
+                        workid = 'http://experiment.worldcat.org/oclc/' + wid + '.jsonld'
+                        OCLC_res = requests.get(workid).json()
+                        for i in OCLC_res['@graph']:
+                            if 'exampleOfWork' in i.keys():
+                                work_id = i['exampleOfWork']
+                        if work_id != '':
+                            self.scores['OCLC']['work_id'] = {}
+                            self.scores['OCLC']['work_id'][work_id] = [self.query_type, score]
+            #find the max for each title
+            '''scores = {}
+            for i in self.scores['OCLC'].keys():
+                for j in self.scores['OCLC'][i].keys():
+                    for z in self.scores['OCLC'][i][j]:
+                        '''
         except:
-                PrintException(self.log_file, self.name)
+            PrintException(self.log_file, self.name)
         if len(self.scores) > 0:
-            return self.scores
+            return (self.scores)
+
 
 class Results():
     def __init__(self, results, names, file, log_file):
@@ -363,6 +372,14 @@ class Results():
                 scoreVF = []
                 scoreVF.append("temp")
                 scoreVF.append(0)
+                scoreOCLC = []
+                scoreOCLC.append("temp")
+                scoreOCLC.append(0)
+                scoreOCLC.append("temp")
+                scoreWID = []
+                scoreWID.append("temp")
+                scoreWID.append(0)
+                scoreWID.append("temp")
                 for itr in self.results[item]:
                     for it in itr.keys():
                         if 'lcid' in itr[it].keys():
@@ -375,14 +392,33 @@ class Results():
                                 if itr[it]['VIAFID'][k][-1] > scoreVF[-1]:
                                     scoreVF[0] = k
                                     scoreVF[1] = itr[it]['VIAFID'][k][-1]
-                if scoreVF[0] != "temp" or scoreLC[0] != "temp":                   
+                        if 'oclcid' in itr[it].keys():
+                            for k in itr[it]['oclcid'].keys():
+                                if itr[it]['oclcid'][k][-1] > scoreOCLC[1]:
+                                    scoreOCLC[0] = k
+                                    scoreOCLC[1] = itr[it]['oclcid'][k][-1]
+                                    scoreOCLC[2] = itr[it]['oclcid'][k][0]
+                        if 'work_id' in itr[it].keys():
+                            for k in itr[it]['work_id'].keys():
+                                if itr[it]['work_id'][k][-1] > scoreWID[1]:
+                                    scoreWID[0] = k
+                                    scoreWID[1] = itr[it]['work_id'][k][-1]
+                                    scoreWID[2] = itr[it]['work_id'][k][0]
+                if scoreVF[0] != "temp" or scoreLC[0] != "temp" or scoreOCLC[0] != "temp" or scoreWID[0] != "temp":                   
                     self.maxs[item] = {}
+                    self.maxs[item]['name'] = {}
+                    self.maxs[item]['title'] = {}  
                     if scoreLC[0] != "temp":
-                        self.maxs[item]['LC'] = scoreLC
+                        self.maxs[item]['name']['LC'] = scoreLC
                     if scoreVF[0] != "temp":
-                        self.maxs[item]['VIAF'] = scoreVF
+                        self.maxs[item]['name']['VIAF'] = scoreVF                  
+                    if scoreOCLC[0] != "temp":
+                        self.maxs[item]['title']['OCLC-ID'] = scoreOCLC
+                    if scoreWID[0] != "temp":
+                        self.maxs[item]['title']['Work-ID'] = scoreWID
         except:
             PrintException(self.log_file, name)
+        print (self.maxs)
         return(self.maxs)
         
     def mapping(self):
@@ -391,12 +427,33 @@ class Results():
                 name = i.split('-_-_-')[0]
                 type = i.split('-_-_-')[1]
                 self.final[name] = {}
-                self.final[name]['keys'] = []
+                self.final[name]['name'] = {}
+                self.final[name]['name']['keys'] = []
                 for keys in self.names[i]['keys']:
-                    self.final[name]['scores'] = self.maxs[i]
-                    self.final[name]['keys'].append(keys)
+                    self.final[name]['name']['scores'] = self.maxs[i]['name']
+                    self.final[name]['name']['keys'].append(keys)
+                '''if 'Work-ID' in self.maxs[i]['title'].keys():
+                    self.final[name]['title'] = {}
+                    print ("workid", name)
+                    for n, title in enumerate(self.names[i]['title']):
+                        print (title, self.maxs[i]['title']['Work-ID'][2])
+                        if title == self.maxs[i]['title']['Work-ID'][2]:
+                            self.final[name]['title'][self.maxs[i]['title']['Work-ID'][0]] = self.names[i]['title'][n+1]'''
+            for i in self.results.keys():
+                for j in self.results[i]:
+                    if 'OCLC' in j.keys():
+                        print (1)
+                        if 'work_id' in j['OCLC']:
+                            print (2)
+                            for key in j['OCLC']['work_id']:
+                                for n, title in enumerate(self.names[i]['title']):
+                                    print (title, j['OCLC']['work_id'][key][0])
+                                    if title == j['OCLC']['work_id'][key][0]:
+                                        self.final[name]['title'][key] = self.names[i]['title'][n+1]
+
+
                     
-            #print (len(self.final))
+            print (self.final)
         except:
             PrintException(self.log_file, name)
         return (self.final)
@@ -415,11 +472,11 @@ def write(final, file, output, log_file):
         for key in final.keys():
             name = key.split('-_-_-')[0]
             try:
-                if "LC" in final[key]['scores']:
-                    LC = 'http://id.loc.gov/authorities/names/' + (final[key]['scores']['LC'][0])
-                if "VIAF" in final[key]['scores'].keys():
-                    VF = 'http://viaf.org/viaf/' + (final[key]['scores']['VIAF'][0])
-                for k in final[key]['keys']:
+                if "LC" in final[key]['name']['scores']:
+                    LC = 'http://id.loc.gov/authorities/names/' + (final[key]['name']['scores']['LC'][0])
+                if "VIAF" in final[key]['name']['scores'].keys():
+                    VF = 'http://viaf.org/viaf/' + (final[key]['name']['scores']['VIAF'][0])
+                for k in final[key]['name']['keys']:
                     uri_key = k
                     tsv.write(uri_key + "\t" + VF + "\t" + LC + "\n")
                     root = enhanched.getroot()
