@@ -30,6 +30,7 @@ def main():
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
+    print (titles)
     print (str(len(names)) + " names were extracted from " + file)
     print (str(len(titles)) + " titles were extracted from " + file)
     enriched_names = {}
@@ -45,24 +46,23 @@ def main():
                 enriched_names[item].append(name_result)
     print ("enriching titles")
     for index, title in enumerate(titles.keys()):
-            print(index+1, title)
+        print(index+1, title)
         for authors in titles[title]['authors']:
             author =  authors.split('-_-_-')[0]
-            key = str(author) + str(title)
+            key = str(author) + "-_-_-" + str(title)
             enriched_titles[key] = []
             title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
-            print (title_result)
+            #print (title_result)
             if title_result:
                 enriched_titles[key].append(title_result)
     name_results = clean_up(enriched_names)
     title_result = clean_up(enriched_titles)
     #print (name_result)
-    print (title_result)
-    result_names_Object = Results(name_results, names, file, log_file)
+    #print (title_result)
+    result_names_Object = Results(name_results, names, file, 'name', log_file)
     result_names_Object.maximizer()
     final_names = result_names_Object.mapping()
-    result_title_Object = Results(name_results, names, file, log_file)
-    result_title_Object.maximizer()
+    result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_title = result_title_Object.mapping()
     write(final_names, final_title, file, output, log_file)
     #tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -366,12 +366,13 @@ class SearchAPI():
 
 
 class Results():
-    def __init__(self, results, names, file, log_file):
+    def __init__(self, results, source, file, type, log_file):
         self.results = results
-        self.names = names
+        self.source = source
         self.file = file
         self.log_file = log_file
         self.final = {}
+        self.type = type 
 
     def maximizer(self):
         self.maxs = {}
@@ -407,18 +408,32 @@ class Results():
         return(self.maxs)
         
     def mapping(self):
-        try:
-            for i in self.maxs.keys():
-                name = i.split('-_-_-')[0]
-                type = i.split('-_-_-')[1]
-                self.final[name] = {}
-                self.final[name]['keys'] = []
-                for keys in self.names[i]['keys']:
-                    self.final[name]['scores'] = self.maxs[i]
-                    self.final[name]['keys'].append(keys)
-        except:
-            PrintException(self.log_file, name)
-        return (self.final)
+        if self.type == 'name':
+            try:
+                for i in self.maxs.keys():
+                    name = i.split('-_-_-')[0]
+                    type = i.split('-_-_-')[1]
+                    self.final[name] = {}
+                    self.final[name]['keys'] = []
+                    for keys in self.source[i]['keys']:
+                        self.final[name]['scores'] = self.maxs[i]
+                        self.final[name]['keys'].append(keys)
+            except:
+                PrintException(self.log_file, name)
+            return (self.final)
+        elif self.type == 'title':
+            try:
+                for i in self.results.keys():
+                    title = i.split('-_-_-')[1]
+                    self.final[title] = {}
+                    self.final[title]['keys'] = []
+                    for keys in self.source[title]['keys']:
+                        self.final[title]['scores'] = self.results[i]
+                        self.final[title]['keys'].append(keys)
+            except:
+                PrintException(self.log_file, name)
+            print (self.final)
+            return (self.final)
 
 def write(final, file, output, log_file):
     clear_files(output)
