@@ -52,19 +52,18 @@ def main():
             key = str(author) + "-_-_-" + str(title)
             enriched_titles[key] = []
             title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
-            #print (title_result)
             if title_result:
                 enriched_titles[key].append(title_result)
     name_results = clean_up(enriched_names)
     title_result = clean_up(enriched_titles)
-    #print (name_result)
-    #print (title_result)
     result_names_Object = Results(name_results, names, file, 'name', log_file)
     result_names_Object.maximizer()
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
-    final_title = result_title_Object.mapping()
-    write(final_names, final_title, file, output, log_file)
+    final_titles = result_title_Object.mapping()
+    print (final_names)
+    print (final_titles)
+    write(final_names, final_titles, file, output, log_file)
     #tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
@@ -425,17 +424,30 @@ class Results():
             try:
                 for i in self.results.keys():
                     title = i.split('-_-_-')[1]
-                    self.final[title] = {}
-                    self.final[title]['keys'] = []
-                    for keys in self.source[title]['keys']:
-                        self.final[title]['scores'] = self.results[i]
-                        self.final[title]['keys'].append(keys)
+                    if 'oclcid' in self.results[i][0]['OCLC'].keys():
+                        oclcid = []
+                        for id in self.results[i][0]['OCLC']['oclcid'].keys():
+                            oclcid.append('http://worldcat.org/oclc/' + id)
+                    if 'work_id' in self.results[i][0]['OCLC'].keys():
+                        work_id = []
+                        for id in self.results[i][0]['OCLC']['work_id'].keys():
+                            work_id.append(id)
+                    if len(oclcid) > 0 or len(work_id) > 0:
+                        ID = {}
+                        if len(oclcid) > 0:
+                            ID['oclcid'] = oclcid
+                        if len(work_id) > 0:
+                            ID['work_id'] = work_id
+                        self.final[title] = {}
+                        self.final[title]['keys'] = []
+                        for keys in self.source[title]['keys']:
+                            self.final[title]['scores'] = ID
+                            self.final[title]['keys'].append(keys)
             except:
                 PrintException(self.log_file, name)
-            print (self.final)
             return (self.final)
 
-def write(final, file, output, log_file):
+def write(final_names, final_titles, file, output, log_file):
     clear_files(output)
     print ('writing ' + output)
     enhanched = ETree.register_namespace('bf', 'http://id.loc.gov/ontologies/bibframe/')
@@ -446,14 +458,14 @@ def write(final, file, output, log_file):
     enhanched = ETree.parse(file)
     with open('URIs.tsv', "a") as tsv:
         tsv.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
-        for key in final.keys():
+        for key in final_names.keys():
             name = key.split('-_-_-')[0]
             try:
-                if "LC" in final[key]['scores']:
-                    LC = 'http://id.loc.gov/authorities/names/' + (final[key]['scores']['LC'][0])
-                if "VIAF" in final[key]['scores'].keys():
-                    VF = 'http://viaf.org/viaf/' + (final[key]['scores']['VIAF'][0])
-                for k in final[key]['keys']:
+                if "LC" in final_names[key]['scores'].keys():
+                    LC = 'http://id.loc.gov/authorities/names/' + (final_names[key]['scores']['LC'][0])
+                if "VIAF" in final_names[key]['scores'].keys():
+                    VF = 'http://viaf.org/viaf/' + (final_names[key]['scores']['VIAF'][0])
+                for k in final_names[key]['keys']:
                     uri_key = k
                     tsv.write(uri_key + "\t" + VF + "\t" + LC + "\n")
                     root = enhanched.getroot()
@@ -467,6 +479,23 @@ def write(final, file, output, log_file):
                                 c.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', VF)
             except:
                 print ("could not find identfier for " + key)
+                PrintException(log_file, name)
+        for title in final_titles.keys():
+            try:
+                if "oclcid" in final_titles[title]['scores'].keys():
+                    OCLC_ID = final_titles[title]['scores']['oclcid'][0]
+                if "work_id" in final_titles[title]['scores'].keys():
+                    work_ID = final_titles[title]['scores']['work_id'][0]
+                for k in final_titles[title]['keys']:
+                    uri_key = k
+                    tsv.write(uri_key + "\t" + OCLC_ID + "\t" + work_ID + "\n")
+                    root = enhanched.getroot()
+                    for element in root.iter('{http://id.loc.gov/ontologies/bibframe/}Work'):
+                        for ku in element.attrib.keys(): 
+                            if uri_key in element.attrib[ku]:
+                                element.set('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about', work_ID)
+            except:
+                print ("could not find identfier for " + title)
                 PrintException(log_file, name)
     enhanched.write("enhanced-files/" + output)
 
