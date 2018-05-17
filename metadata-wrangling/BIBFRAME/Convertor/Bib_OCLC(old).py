@@ -28,43 +28,30 @@ def main():
     query_type = "/authorities/names"
     bib_object = Bibframe(file, log_file)
     transformed = bib_object.convert_bibframe()
-    names = bib_object.extract_names(transformed)[0]
-    titles = bib_object.extract_names(transformed)[1]
-    print (titles)
+    names = bib_object.extract_names(transformed)
     print (str(len(names)) + " names were extracted from " + file)
-    print (str(len(titles)) + " titles were extracted from " + file)
-    enriched_names = {}
-    enriched_titles = {}
-    print ("enriching names")
+    l = {}
+    print (names)
     for index, item in enumerate(names.keys()):
         name = item.split('-_-_-')[0]
         print(index+1, name)
-        enriched_names[item] = []
+        l[item] = []
         for api in apis:
-            name_result = APIFactory().get_API(name, query_type, api, log_file)
-            if name_result:
-                enriched_names[item].append(name_result)
-    print ("enriching titles")
-    for index, title in enumerate(titles.keys()):
-        print(index+1, title)
-        for authors in titles[title]['authors']:
-            author =  authors.split('-_-_-')[0]
-            key = str(author) + "-_-_-" + str(title)
-            enriched_titles[key] = []
-            title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
-            #print (title_result)
-            if title_result:
-                enriched_titles[key].append(title_result)
-    name_results = clean_up(enriched_names)
-    title_result = clean_up(enriched_titles)
-    #print (name_result)
-    #print (title_result)
-    result_names_Object = Results(name_results, names, file, 'name', log_file)
-    result_names_Object.maximizer()
-    final_names = result_names_Object.mapping()
-    result_title_Object = Results(title_result, titles, file, 'title', log_file)
-    final_title = result_title_Object.mapping()
-    write(final_names, final_title, file, output, log_file)
+            result = APIFactory().get_API(name, query_type, api, log_file)
+            if result:
+                l[item].append(result)
+        n = int(len(names[item]['title'])/2)
+        for ind in range(0, n): 
+            title = names[item]['title'][ind*2]
+            result = APIFactory().get_API(name, title, 'search_OCLC', log_file)
+            if result:
+                l[item].append(result)
+    results = clean_up(l)
+    print (results)
+    result_Object = Results(results, names, file, log_file)
+    result_Object.maximizer()
+    f = result_Object.mapping()
+    write(f, file, output, log_file)
     #tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
@@ -85,7 +72,6 @@ class Bibframe():
 
     def extract_names(self, transformed):
         self.names = {}
-        self.titles = {}
         self.transformed = transformed
         try:
             for i in str(self.transformed).split("\n"):
@@ -97,13 +83,6 @@ class Bibframe():
                     if len(i) > 2:
                         title = i[0]
                         title_key = i[1]
-                        if title not in self.titles.keys():
-                            self.titles[title] = {}
-                            self.titles[title]['keys'] = []
-                            self.titles[title]['authors'] = []
-                            self.titles[title]['keys'].append(title_key)
-                        else:
-                            self.titles[title]['keys'].append(title_key)
                         n = int((len(i)-2)/3)
                         for index in range(0, n):
                             name = i[(index*3)+2]
@@ -114,13 +93,16 @@ class Bibframe():
                                 self.names[checksum] = {}
                                 self.names[checksum]["keys"] = []
                                 self.names[checksum]['keys'].append(key)
+                                self.names[checksum]["title"] = []
+                                self.names[checksum]['title'].append(title)
+                                self.names[checksum]['title'].append(title_key)
                             else:
                                 self.names[checksum]['keys'].append(key)
-                            if checksum not in self.titles[title]['authors']:
-                                self.titles[title]['authors'].append(checksum)
+                                self.names[checksum]['title'].append(title)
+                                self.names[checksum]['title'].append(title_key)
         except:
             PrintException(self.log_file, name)
-        return (self.names, self.titles)
+        return self.names
 
 class APIFactory():
     @staticmethod
@@ -359,6 +341,12 @@ class SearchAPI():
                         if work_id != '':
                             self.scores['OCLC']['work_id'] = {}
                             self.scores['OCLC']['work_id'][work_id] = [self.query_type, score]
+            #find the max for each title
+            '''scores = {}
+            for i in self.scores['OCLC'].keys():
+                for j in self.scores['OCLC'][i].keys():
+                    for z in self.scores['OCLC'][i][j]:
+                        '''
         except:
             PrintException(self.log_file, self.name)
         if len(self.scores) > 0:
@@ -366,13 +354,12 @@ class SearchAPI():
 
 
 class Results():
-    def __init__(self, results, source, file, type, log_file):
+    def __init__(self, results, names, file, log_file):
         self.results = results
-        self.source = source
+        self.names = names
         self.file = file
         self.log_file = log_file
         self.final = {}
-        self.type = type 
 
     def maximizer(self):
         self.maxs = {}
@@ -385,6 +372,14 @@ class Results():
                 scoreVF = []
                 scoreVF.append("temp")
                 scoreVF.append(0)
+                scoreOCLC = []
+                scoreOCLC.append("temp")
+                scoreOCLC.append(0)
+                scoreOCLC.append("temp")
+                scoreWID = []
+                scoreWID.append("temp")
+                scoreWID.append(0)
+                scoreWID.append("temp")
                 for itr in self.results[item]:
                     for it in itr.keys():
                         if 'lcid' in itr[it].keys():
@@ -397,43 +392,71 @@ class Results():
                                 if itr[it]['VIAFID'][k][-1] > scoreVF[-1]:
                                     scoreVF[0] = k
                                     scoreVF[1] = itr[it]['VIAFID'][k][-1]
-                if scoreVF[0] != "temp" or scoreLC[0] != "temp":                   
-                    self.maxs[item] = {} 
+                        if 'oclcid' in itr[it].keys():
+                            for k in itr[it]['oclcid'].keys():
+                                if itr[it]['oclcid'][k][-1] > scoreOCLC[1]:
+                                    scoreOCLC[0] = k
+                                    scoreOCLC[1] = itr[it]['oclcid'][k][-1]
+                                    scoreOCLC[2] = itr[it]['oclcid'][k][0]
+                        if 'work_id' in itr[it].keys():
+                            for k in itr[it]['work_id'].keys():
+                                if itr[it]['work_id'][k][-1] > scoreWID[1]:
+                                    scoreWID[0] = k
+                                    scoreWID[1] = itr[it]['work_id'][k][-1]
+                                    scoreWID[2] = itr[it]['work_id'][k][0]
+                if scoreVF[0] != "temp" or scoreLC[0] != "temp" or scoreOCLC[0] != "temp" or scoreWID[0] != "temp":                   
+                    self.maxs[item] = {}
+                    self.maxs[item]['name'] = {}
+                    self.maxs[item]['title'] = {}  
                     if scoreLC[0] != "temp":
-                        self.maxs[item]['LC'] = scoreLC
+                        self.maxs[item]['name']['LC'] = scoreLC
                     if scoreVF[0] != "temp":
-                        self.maxs[item]['VIAF'] = scoreVF                  
+                        self.maxs[item]['name']['VIAF'] = scoreVF                  
+                    if scoreOCLC[0] != "temp":
+                        self.maxs[item]['title']['OCLC-ID'] = scoreOCLC
+                    if scoreWID[0] != "temp":
+                        self.maxs[item]['title']['Work-ID'] = scoreWID
         except:
             PrintException(self.log_file, name)
+        print (self.maxs)
         return(self.maxs)
         
     def mapping(self):
-        if self.type == 'name':
-            try:
-                for i in self.maxs.keys():
-                    name = i.split('-_-_-')[0]
-                    type = i.split('-_-_-')[1]
-                    self.final[name] = {}
-                    self.final[name]['keys'] = []
-                    for keys in self.source[i]['keys']:
-                        self.final[name]['scores'] = self.maxs[i]
-                        self.final[name]['keys'].append(keys)
-            except:
-                PrintException(self.log_file, name)
-            return (self.final)
-        elif self.type == 'title':
-            try:
-                for i in self.results.keys():
-                    title = i.split('-_-_-')[1]
-                    self.final[title] = {}
-                    self.final[title]['keys'] = []
-                    for keys in self.source[title]['keys']:
-                        self.final[title]['scores'] = self.results[i]
-                        self.final[title]['keys'].append(keys)
-            except:
-                PrintException(self.log_file, name)
+        try:
+            for i in self.maxs.keys():
+                name = i.split('-_-_-')[0]
+                type = i.split('-_-_-')[1]
+                self.final[name] = {}
+                self.final[name]['name'] = {}
+                self.final[name]['name']['keys'] = []
+                for keys in self.names[i]['keys']:
+                    self.final[name]['name']['scores'] = self.maxs[i]['name']
+                    self.final[name]['name']['keys'].append(keys)
+                '''if 'Work-ID' in self.maxs[i]['title'].keys():
+                    self.final[name]['title'] = {}
+                    print ("workid", name)
+                    for n, title in enumerate(self.names[i]['title']):
+                        print (title, self.maxs[i]['title']['Work-ID'][2])
+                        if title == self.maxs[i]['title']['Work-ID'][2]:
+                            self.final[name]['title'][self.maxs[i]['title']['Work-ID'][0]] = self.names[i]['title'][n+1]'''
+            for i in self.results.keys():
+                for j in self.results[i]:
+                    if 'OCLC' in j.keys():
+                        print (1)
+                        if 'work_id' in j['OCLC']:
+                            print (2)
+                            for key in j['OCLC']['work_id']:
+                                for n, title in enumerate(self.names[i]['title']):
+                                    print (title, j['OCLC']['work_id'][key][0])
+                                    if title == j['OCLC']['work_id'][key][0]:
+                                        self.final[name]['title'][key] = self.names[i]['title'][n+1]
+
+
+                    
             print (self.final)
-            return (self.final)
+        except:
+            PrintException(self.log_file, name)
+        return (self.final)
 
 def write(final, file, output, log_file):
     clear_files(output)
@@ -449,11 +472,11 @@ def write(final, file, output, log_file):
         for key in final.keys():
             name = key.split('-_-_-')[0]
             try:
-                if "LC" in final[key]['scores']:
-                    LC = 'http://id.loc.gov/authorities/names/' + (final[key]['scores']['LC'][0])
-                if "VIAF" in final[key]['scores'].keys():
-                    VF = 'http://viaf.org/viaf/' + (final[key]['scores']['VIAF'][0])
-                for k in final[key]['keys']:
+                if "LC" in final[key]['name']['scores']:
+                    LC = 'http://id.loc.gov/authorities/names/' + (final[key]['name']['scores']['LC'][0])
+                if "VIAF" in final[key]['name']['scores'].keys():
+                    VF = 'http://viaf.org/viaf/' + (final[key]['name']['scores']['VIAF'][0])
+                for k in final[key]['name']['keys']:
                     uri_key = k
                     tsv.write(uri_key + "\t" + VF + "\t" + LC + "\n")
                     root = enhanched.getroot()
