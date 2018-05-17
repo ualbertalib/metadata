@@ -1,6 +1,11 @@
 import os
 import sys
 import linecache
+import statistics
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+from scipy.stats import norm
 from time import sleep
 from flask import Flask, request, redirect, url_for, send_from_directory, flash, render_template
 from werkzeug.utils import secure_filename
@@ -19,8 +24,9 @@ from datetime import datetime
 
 def main():
     file ='1985eresOrigbf.xml'
-    print (file)
-    #ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    filename = file.replace('.xml', '').replace('uploads/', '')
+    print ("processing " + filename)
+    ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     log_file = file.replace('.xml', '') + "-error-logs"
     output = file.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
     clearLogs(log_file)
@@ -30,20 +36,28 @@ def main():
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
-    print (titles)
-    print (str(len(names)) + " names were extracted from " + file)
+    all_names = bib_object.extract_names(transformed)[2]
+    corp_names = bib_object.extract_names(transformed)[3]
+    print (str(all_names) + " were extrected from " + filename)
+    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
     print (str(len(titles)) + " titles were extracted from " + file)
     enriched_names = {}
     enriched_titles = {}
+    stats = {}
     print ("enriching names")
     for index, item in enumerate(names.keys()):
         name = item.split('-_-_-')[0]
         print(index+1, name)
         enriched_names[item] = []
         for api in apis:
+            if api in stats.keys():
+                pass
+            else:
+                stats[api] = 0
             name_result = APIFactory().get_API(name, query_type, api, log_file)
             if name_result:
                 enriched_names[item].append(name_result)
+                stats[api] = stats[api] + len(name_result)
     print ("enriching titles")
     for index, title in enumerate(titles.keys()):
         print(index+1, title)
@@ -61,11 +75,13 @@ def main():
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    print (final_names)
-    print (final_titles)
-    write(final_names, final_titles, file, output, log_file)
-    #tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+    eff_names = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
+    write(final_names, final_titles, file, output, log_file, filename)
+    tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    write_stats(eff_names, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+    tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
 class Bibframe():
     def __init__(self, file, log_file):
@@ -87,6 +103,8 @@ class Bibframe():
         self.titles = {}
         self.transformed = transformed
         try:
+            count = 0
+            corp_names = 0
             for i in str(self.transformed).split("\n"):
                 if i != '':
                     i = i.split("\t")
@@ -105,11 +123,14 @@ class Bibframe():
                             self.titles[title]['keys'].append(title_key)
                         n = int((len(i)-2)/3)
                         for index in range(0, n):
+                            count += 1
                             name = i[(index*3)+2]
                             key = i[(index*3)+4]
                             type = i[(index*3)+3].replace('http://id.loc.gov/ontologies/bibframe/', '')
                             checksum = name + "-_-_-" + type
                             if checksum not in self.names.keys():
+                                if type != 'Person':
+                                    corp_names += 1
                                 self.names[checksum] = {}
                                 self.names[checksum]["keys"] = []
                                 self.names[checksum]['keys'].append(key)
@@ -119,7 +140,7 @@ class Bibframe():
                                 self.titles[title]['authors'].append(checksum)
         except:
             PrintException(self.log_file, name)
-        return (self.names, self.titles)
+        return (self.names, self.titles, count, corp_names)
 
 class APIFactory():
     @staticmethod
@@ -331,6 +352,7 @@ class SearchAPI():
         OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=1QSLAhHnqyQYTlcnREquxaYmTBEng0FbYgPUwa5clqNAmG1Qe8m0LsqRxh22iTfoi1TGdOMloHfTjzXf"
         try:
             OCLC_result = requests.get(OCLC).text
+            #having issues reading the response object. Write to a file and then read
             with open("temp-file.xml", "w") as file:
                 file.write(OCLC_result)
                 file.close()
@@ -428,10 +450,12 @@ class Results():
                         oclcid = []
                         for id in self.results[i][0]['OCLC']['oclcid'].keys():
                             oclcid.append('http://worldcat.org/oclc/' + id)
+                            oclcid.append(self.results[i][0]['OCLC']['oclcid'][id][1])
                     if 'work_id' in self.results[i][0]['OCLC'].keys():
                         work_id = []
                         for id in self.results[i][0]['OCLC']['work_id'].keys():
                             work_id.append(id)
+                            work_id.append(self.results[i][0]['OCLC']['work_id'][id][1])
                     if len(oclcid) > 0 or len(work_id) > 0:
                         ID = {}
                         if len(oclcid) > 0:
@@ -447,7 +471,7 @@ class Results():
                 PrintException(self.log_file, name)
             return (self.final)
 
-def write(final_names, final_titles, file, output, log_file):
+def write(final_names, final_titles, file, output, log_file, filename):
     clear_files(output)
     print ('writing ' + output)
     enhanched = ETree.register_namespace('bf', 'http://id.loc.gov/ontologies/bibframe/')
@@ -456,7 +480,8 @@ def write(final_names, final_titles, file, output, log_file):
     enhanched = ETree.register_namespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
     enhanched = ETree.register_namespace('madsrdf', 'http://www.loc.gov/mads/rdf/v1#')
     enhanched = ETree.parse(file)
-    with open('URIs.tsv', "a") as tsv:
+    clear_TSV(filename)
+    with open('TSVs/URIs-' + filename + '.tsv', "a") as tsv:
         tsv.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
         for key in final_names.keys():
             name = key.split('-_-_-')[0]
@@ -539,6 +564,126 @@ def clear_files(output):
             os.unlink(file_path)
     except Exception as e:
         print(e)
+
+def clear_TSV(filename):
+    folder = 'TSVs'
+    file = 'URIs-' + filename + '.tsv'
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+    file_path = os.path.join(folder, file)
+    try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+    except Exception as e:
+        print(e)
+
+def get_stat(final_names, names, final_titles, titles, file):
+    folder = 'Diagrams'
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+    file_path = os.path.join(folder, file)
+    try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+    except Exception as e:
+        print(e)
+    stat = {}
+    LC = 0
+    VIAF = 0
+    oclcid = 0
+    work_id = 0
+    LC_Score = []
+    VIAF_Score = []
+    oclcid_Score = []
+    work_id_Score = []
+    for i in final_names.keys():
+        if "LC" in final_names[i]['scores'].keys():
+            LC_Score.append(final_names[i]['scores']['LC'][1])
+            LC += 1
+        if "VIAF" in final_names[i]['scores'].keys():
+            VIAF_Score.append(final_names[i]['scores']['VIAF'][1])
+            VIAF += 1
+    LC_Avg = statistics.mean(LC_Score)
+    LC_Median = statistics.median(LC_Score)
+    LC_Var = statistics.variance(LC_Score)
+    LC_Std = statistics.stdev(LC_Score)
+    VIAF_Avg = statistics.mean(VIAF_Score)
+    VIAF_Median = statistics.median(VIAF_Score)
+    VIAF_Var = statistics.variance(VIAF_Score)
+    VIAF_Std = statistics.stdev(VIAF_Score)
+    '''plt.hist(LC_Score)
+    plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
+    plt.grid()
+    plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
+        orientation='portrait')
+    plt.clf()
+    plt.hist(VIAF_Score)
+    plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
+    plt.grid()
+    plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
+        orientation='portrait')
+    plt.clf()
+    colors = ['red', 'green']
+    labels = ['LC-IDs', 'VIAF-IDs']
+    x_multi = [LC_Score, VIAF_Score]
+    plt.hist(x_multi, 10, normed=1, histtype='bar', color=colors, label=labels)
+    plt.legend(prop={'size': 10})
+    plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
+    plt.savefig(file_path, facecolor='w', edgecolor='w',
+        orientation='portrait')'''
+    stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
+    stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
+    for i in final_titles.keys():
+        if 'work_id' in final_titles[i]['scores']:
+            work_id_Score.append(final_titles[i]['scores']['work_id'][1])
+            work_id += 1
+        if 'oclcid' in final_titles[i]['scores']:
+            oclcid_Score.append(final_titles[i]['scores']['oclcid'][1])
+            oclcid += 1
+    oclcid_Avg = statistics.mean(oclcid_Score)
+    oclcid_Median = statistics.median(oclcid_Score)
+    oclcid_Var = statistics.variance(oclcid_Score)
+    oclcid_Std = statistics.stdev(oclcid_Score)
+    work_id_Avg = statistics.mean(work_id_Score)
+    work_id_Median = statistics.median(work_id_Score)
+    work_id_Var = statistics.variance(work_id_Score)
+    work_id_Std = statistics.stdev(work_id_Score)
+    stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
+    stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
+    return (stat)
+
+def write_stats(eff, stats, filename, names, all_names, corp_names, tf):
+    file = filename + "-stats.tsv"
+    if not os.path.exists("Stats"):
+        os.makedirs("Stats")
+    file_path = os.path.join("Stats", file)
+    try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+    except Exception as e:
+        print(e)
+    with open("Stats/" + file, "w+") as stat:
+        stat.write(file + " was processed in " + str(tf) + "\n\n")
+        stat.write(str(all_names) + " names were extracted from " +filename + "\n" + str(names) + " unique names " + " --- " + str(names - int(corp_names)) + " Personal names and " + str(corp_names) + " Corporate names" + "\n" + "\n")
+        stat.write("API searched" +"\t" + "hits" + "\t" + "hit_rate" +"\n")
+        for i in stats.keys():
+            stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
+        stat.write("\n" + "\n")
+        stat.write('LC_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+        for i in eff["LC"]:
+            stat.write(str(i) + "\t")
+        stat.write("\n" + "\n")
+        stat.write('VIAF_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+        for i in eff["VIAF"]:
+            stat.write(str(i) + "\t")
+        stat.write("\n" + "\n")
+        stat.write('work_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+        for i in eff["work_id"]:
+            stat.write(str(i) + "\t")
+        stat.write("\n" + "\n")
+        stat.write('oclc_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+        for i in eff["oclcid"]:
+            stat.write(str(i) + "\t")
 
 if __name__ == "__main__":
     main()
