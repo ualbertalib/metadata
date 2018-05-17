@@ -23,63 +23,67 @@ import time
 from datetime import datetime
 
 def main():
-    file ='1985eresOrigbf.xml'
-    filename = file.replace('.xml', '').replace('uploads/', '')
-    print ("processing " + filename)
-    ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    log_file = file.replace('.xml', '') + "-error-logs"
-    output = file.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
-    clearLogs(log_file)
-    apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
-    query_type = "/authorities/names"
-    bib_object = Bibframe(file, log_file)
-    transformed = bib_object.convert_bibframe()
-    names = bib_object.extract_names(transformed)[0]
-    titles = bib_object.extract_names(transformed)[1]
-    all_names = bib_object.extract_names(transformed)[2]
-    corp_names = bib_object.extract_names(transformed)[3]
-    print (str(all_names) + " were extrected from " + filename)
-    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
-    print (str(len(titles)) + " titles were extracted from " + file)
-    enriched_names = {}
-    enriched_titles = {}
-    stats = {}
-    print ("enriching names")
-    for index, item in enumerate(names.keys()):
-        name = item.split('-_-_-')[0]
-        print(index+1, name)
-        enriched_names[item] = []
-        for api in apis:
-            if api in stats.keys():
-                pass
-            else:
-                stats[api] = 0
-            name_result = APIFactory().get_API(name, query_type, api, log_file)
-            if name_result:
-                enriched_names[item].append(name_result)
-                stats[api] = stats[api] + len(name_result)
-    print ("enriching titles")
-    for index, title in enumerate(titles.keys()):
-        print(index+1, title)
-        for authors in titles[title]['authors']:
-            author =  authors.split('-_-_-')[0]
-            key = str(author) + "-_-_-" + str(title)
-            enriched_titles[key] = []
-            title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
-            if title_result:
-                enriched_titles[key].append(title_result)
-    name_results = clean_up(enriched_names)
-    title_result = clean_up(enriched_titles)
-    result_names_Object = Results(name_results, names, file, 'name', log_file)
-    result_names_Object.maximizer()
-    final_names = result_names_Object.mapping()
-    result_title_Object = Results(title_result, titles, file, 'title', log_file)
-    final_titles = result_title_Object.mapping()
-    eff_names = get_stat(final_names, len(names), final_titles, len(titles), filename)
-    stats['names-enriched'] = len(final_names)
-    write(final_names, final_titles, file, output, log_file, filename)
-    tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    write_stats(eff_names, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+    folder = 'uploads'
+    for files in os.listdir(folder):
+        file = os.path.join(folder, files)
+        filename = file.replace('.xml', '').replace('uploads/', '')
+        print ("processing " + filename)
+        ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        log_file = filename.replace('.xml', '') + "-error-logs"
+        output = filename.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
+        clearLogs(log_file)
+        apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+        query_type = "/authorities/names"
+        bib_object = Bibframe(file, log_file)
+        transformed = bib_object.convert_bibframe()
+        names = bib_object.extract_names(transformed)[0]
+        titles = bib_object.extract_names(transformed)[1]
+        all_names = bib_object.extract_names(transformed)[2]
+        corp_names = bib_object.extract_names(transformed)[3]
+        print (str(all_names) + " were extrected from " + filename)
+        print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
+        print (str(len(titles)) + " titles were extracted from " + filename)
+        enriched_names = {}
+        enriched_titles = {}
+        stats = {}
+        print ("enriching names")
+        for index, item in enumerate(names.keys()):
+            name = item.split('-_-_-')[0]
+            print(index+1, name)
+            enriched_names[item] = []
+            for api in apis:
+                if api in stats.keys():
+                    pass
+                else:
+                    stats[api] = 0
+                name_result = APIFactory().get_API(name, query_type, api, log_file)
+                if name_result:
+                    enriched_names[item].append(name_result)
+                    stats[api] = stats[api] + len(name_result)
+        print ("enriching titles")
+        for index, title in enumerate(titles.keys()):
+            print(index+1, title)
+            for authors in titles[title]['authors']:
+                author =  authors.split('-_-_-')[0]
+                key = str(author) + "-_-_-" + str(title)
+                enriched_titles[key] = []
+                title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
+                if title_result:
+                    enriched_titles[key].append(title_result)
+        name_results = clean_up(enriched_names)
+        title_result = clean_up(enriched_titles)
+        result_names_Object = Results(name_results, names, file, 'name', log_file)
+        result_names_Object.maximizer()
+        final_names = result_names_Object.mapping()
+        result_title_Object = Results(title_result, titles, file, 'title', log_file)
+        final_titles = result_title_Object.mapping()
+        eff_names = get_stat(final_names, len(names), final_titles, len(titles), filename)
+        stats['names-enriched'] = len(final_names)
+        write(final_names, final_titles, file, output, log_file, filename)
+        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        write_stats(eff_names, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
     tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
@@ -483,6 +487,7 @@ def write(final_names, final_titles, file, output, log_file, filename):
     clear_TSV(filename)
     with open('TSVs/URIs-' + filename + '.tsv', "a") as tsv:
         tsv.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
+        print ("writing enriched names")
         for key in final_names.keys():
             name = key.split('-_-_-')[0]
             try:
@@ -505,6 +510,7 @@ def write(final_names, final_titles, file, output, log_file, filename):
             except:
                 print ("could not find identfier for " + key)
                 PrintException(log_file, name)
+        print ("writing enriched titles")
         for title in final_titles.keys():
             try:
                 if "oclcid" in final_titles[title]['scores'].keys():
@@ -611,7 +617,7 @@ def get_stat(final_names, names, final_titles, titles, file):
     VIAF_Median = statistics.median(VIAF_Score)
     VIAF_Var = statistics.variance(VIAF_Score)
     VIAF_Std = statistics.stdev(VIAF_Score)
-    '''plt.hist(LC_Score)
+    plt.hist(LC_Score)
     plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
     plt.grid()
     plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
@@ -630,7 +636,7 @@ def get_stat(final_names, names, final_titles, titles, file):
     plt.legend(prop={'size': 10})
     plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
     plt.savefig(file_path, facecolor='w', edgecolor='w',
-        orientation='portrait')'''
+        orientation='portrait')
     stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
     stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
     for i in final_titles.keys():
@@ -648,6 +654,18 @@ def get_stat(final_names, names, final_titles, titles, file):
     work_id_Median = statistics.median(work_id_Score)
     work_id_Var = statistics.variance(work_id_Score)
     work_id_Std = statistics.stdev(work_id_Score)
+    plt.hist(work_id_Score)
+    plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
+    plt.grid()
+    plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
+        orientation='portrait')
+    plt.clf()
+    plt.hist(oclcid_Score)
+    plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
+    plt.grid()
+    plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
+        orientation='portrait')
+    plt.clf()
     stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
     stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
