@@ -23,8 +23,10 @@ import time
 from datetime import datetime
 
 def main():
+    tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     folder = 'uploads'
     for files in os.listdir(folder):
+        tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         file = os.path.join(folder, files)
         filename = file.replace('.xml', '').replace('uploads/', '')
         print ("processing " + filename)
@@ -77,15 +79,18 @@ def main():
         final_names = result_names_Object.mapping()
         result_title_Object = Results(title_result, titles, file, 'title', log_file)
         final_titles = result_title_Object.mapping()
-        eff_names = get_stat(final_names, len(names), final_titles, len(titles), filename)
+        eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
         stats['names-enriched'] = len(final_names)
+        tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write(final_names, final_titles, file, output, log_file, filename)
-        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        write_stats(eff_names, stats, filename, len(names), all_names, corp_names, datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
-        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
-    tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+        tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
+        file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
+        write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+        print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
+    tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
+    print("walltime:", process_time)
 
 class Bibframe():
     def __init__(self, file, log_file):
@@ -670,7 +675,7 @@ def get_stat(final_names, names, final_titles, titles, file):
     stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
 
-def write_stats(eff, stats, filename, names, all_names, corp_names, tf):
+def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
     file = filename + "-stats.tsv"
     if not os.path.exists("Stats"):
         os.makedirs("Stats")
@@ -681,8 +686,9 @@ def write_stats(eff, stats, filename, names, all_names, corp_names, tf):
     except Exception as e:
         print(e)
     with open("Stats/" + file, "w+") as stat:
-        stat.write(file + " was processed in " + str(tf) + "\n\n")
-        stat.write(str(all_names) + " names were extracted from " +filename + "\n" + str(names) + " unique names " + " --- " + str(names - int(corp_names)) + " Personal names and " + str(corp_names) + " Corporate names" + "\n" + "\n")
+        stat.write(file + " was processed in " + str(process_time) + " write back to file in " + str(write_time) +"\n\n")
+        stat.write(str(all_names) + " names were extracted from " +filename + "\n" + str(names) + " unique names " + " --- " + str(names - int(corp_names)) + " Personal names and " + str(corp_names) + " Corporate names" + "\n")
+        stat.write(str(titles) + " titles were extracted from " + filename + "\n\n")
         stat.write("API searched" +"\t" + "hits" + "\t" + "hit_rate" +"\n")
         for i in stats.keys():
             stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
