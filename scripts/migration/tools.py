@@ -1,5 +1,6 @@
 from config import mig_ns as namespaces
 from datetime import datetime
+import pickle
 import time
 import requests
 import linecache
@@ -101,5 +102,7 @@ def get_Jupiter_noids():
 	for item in response['response']['docs']:
 		if item['hydra_noid_ssim'] not in noids:
 			noids.append(item['hydra_noid_ssim'][0])
+	with open('Jupiter_noids.pickle', 'wb') as Jupiter_noids:
+		pickle.dump(noids, Jupiter_noids)
 
 	return (noids)
