@@ -2,7 +2,7 @@ import Classes.Transformation.Data as Data
 import Classes.Utilities.Triple_Store as Triple_Store
 from Classes.Query import Query_Factory
 from config import types, sparqlTerms, sparqlData
-from tools import PrintException, cleanOutputs
+from tools import PrintException, cleanOutputs, get_Jupiter_noids
 import concurrent.futures
 import time
 from datetime import datetime
@@ -26,6 +26,8 @@ def main():
     proxies = json.load(f)
     f.close()
     # Iterate over every type of object that needs to be migrated.
+    #get all items in Jupiter as of today
+    Jupiter_noids = get_Jupiter_noids()
     for objectType in types:
         validator = Set_Validator(objectType, sparqlTerms).generate_validator()
         print (validator)
@@ -48,7 +50,7 @@ def main():
         #        print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
 
         for group in queryObject.queries.keys():
-            parallelTransform(group, queryObject, filesetIds, proxies, validator)
+            parallelTransform(group, queryObject, filesetIds, proxies, validator, Jupiter_noids)
             i = i + 1
             print("{0} of {1} {2} queries transformed".format(i, len(queryObject.queries), objectType))
             tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -57,9 +59,9 @@ def main():
         del queryObject
 
 
-def parallelTransform(group, queryObject, filesetIds, proxies, validator):
+def parallelTransform(group, queryObject, filesetIds, proxies, validator, Jupiter_noids):
     """the query object, along with a group, along with the uri generator object, are passed into a data object, where transformations occur and the data is saved"""
-    Data.Data(group, queryObject, filesetIds, proxies, validator).transformData()  # query, group, object
+    Data.Data(group, queryObject, filesetIds, proxies, validator, Jupiter_noids).transformData()  # query, group, object
     # DTO.resultsToTriplestore()
 
 
