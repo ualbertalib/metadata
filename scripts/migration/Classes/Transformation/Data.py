@@ -14,7 +14,7 @@ class Data(object):
     it then commits the transformed data to a local graph (an RDFLib object); 
     when all the results of a query have been transformed and committed to the local graph, the graph then has some transformations performed on it; 
     the local graph is the committed to a file in the results folder"""
-    def __init__(self, group, queryObject, filesetIds, proxies, validator):
+    def __init__(self, group, queryObject, filesetIds, proxies, validator, Jupiter_noids):
         self.proxies = proxies
         self.filesetIds = filesetIds
         self.query = queryObject.queries[group]  # the query for the group 
@@ -24,6 +24,7 @@ class Data(object):
         self.sparqlTerms = queryObject.sparqlTerms  # the mapping origin
         self.results = {}  # 
         self.validator = validator #a list of all requried predicates for objectType
+        self.Jupiter_noids = Jupiter_noids #all items in Jupiter as of now
         self.graph = Graph()  # local graph stores the transformed results. final transformations are performed directly on the graph when context is required (if this then that)
         self.objectType = queryObject.objectType 
         self.directory = "results/{0}/".format(self.objectType)
@@ -76,8 +77,8 @@ class Data(object):
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/draft')))
-                elif URIRef('http://terms.library.ualberta.ca/draft') in s_o[so]:
-                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
+                elif URIRef('http://terms.library.ualberta.ca/public') in s_o[so]:
+                    self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/draft')))
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/authenticated')))
                 elif URIRef('http://terms.library.ualberta.ca/authenticated') in s_o[so]:
                     self.graph.remove((URIRef(so), URIRef("http://purl.org/dc/terms/accessRights"), URIRef('http://terms.library.ualberta.ca/public')))
@@ -135,7 +136,6 @@ class Data(object):
                             temp_date = self.results[r].value(URIRef(uri), URIRef("http://fedora.info/definitions/v4/repository#created"))[0:4]
                         elif (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.results[r]:
                             temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
-                        print (uri, temp_date)
                         if temp_date:
                             self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(temp_date+ "--")))
                             self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(temp_date)))
@@ -148,7 +148,6 @@ class Data(object):
                                 tmp_date = self.results[r].value(URIRef(uri), URIRef("http://fedora.info/definitions/v4/repository#created"))[0:4]
                             elif (None, URIRef("info:fedora/fedora-system:def/model#createdDate"), None) in self.results[r]:
                                 temp_date = self.results[r].value(URIRef(uri), URIRef("info:fedora/fedora-system:def/model#createdDate"))[0:4]
-                            print (uri, tmp_date)
                             if tmp_date:
                                 self.results[r].add((URIRef(uri), URIRef("http://purl.org/dc/terms/created"), Literal(tmp_date+ "-")))
                                 self.results[r].add((URIRef(uri), URIRef("http://terms.library.ualberta.ca/sortYear"), Literal(tmp_date)))                            
@@ -162,12 +161,12 @@ class Data(object):
                             if (access == "http://terms.library.ualberta.ca/draft" or access == "http://terms.library.ualberta.ca/embargo") and v == "http://prismstandard.org/namespaces/basic/3.0/doi":
                                 pass
                             else:
-                                if r in ignore:
+                                if r in self.Jupiter_noids:
                                     file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\t" + "Item is in Jupiter" + "\n")
                                 else:
                                     file1.write ("Predicate is not in graph: " + "\t" + uri + "\t" + " | " + v + "\t" + access + "\n")
                                 #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
-                    if r not in ignore:
+                    if r not in self.Jupiter_noids:
                         print (r)
                         self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
                         self.results[r].serialize(destination=self.filename, format='nt')
