@@ -1,8 +1,6 @@
 from Classes.Transformation import Transformation_Factory
 from tools import PrintException
 import os
-from ignore import ignore
-from error import error
 from SPARQLWrapper import JSON
 from rdflib import URIRef, Literal, Graph
 import re
