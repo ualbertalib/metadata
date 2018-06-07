@@ -3,16 +3,16 @@
 import requests
 import xml.etree.ElementTree as ET
 
-base = "http://@gillingham2.library.ualberta.ca:8080/fedora/rest/oai?verb=ListRecords"
-query = "&metadataPrefix=oai_etdms"
-ns = {'OAI-PMH':'http://www.openarchives.org/OAI/2.0/'}
+base = "http://avalon.library.ualberta.ca:8080/fedora/objects?terms=*&pid=true&resultFormat=xml&maxResults=100"
+query = ""
+ns = {'foxml':'http://www.fedora.info/definitions/1/0/types/'}
 name = 0
 while True:
     # setup
     request_url = base + query
     response = requests.get(request_url)
     treeElement = ET.fromstring(response.content)
-    elements = treeElement.findall(".//OAI-PMH:resumptionToken", ns)
+    elements = treeElement.findall(".//foxml:token", ns)
     # actions
     # exit gracefully if no elements are returned
     if len(elements) == 0:
@@ -25,4 +25,4 @@ while True:
     if token == "":
         break
     # proxima ronda
-    query = "&resumptionToken=" + token
+    query = "&sessionToken=" + token
