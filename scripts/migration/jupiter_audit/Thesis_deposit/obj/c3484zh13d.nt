@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a5/97/dc/f8/a597dcf8-1254-45df-8d5e-0ef6e37124fa> ;
+	model:createdDate "2016-03-14T21:37:18.013Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Allam _Nermin_201603_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Brodie, Janine (Political Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mahdavi, Mojtaba (Political Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Aitken,Rob (Political Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Momani, Bessma (Political Science)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Allam, Nermin. 2014. âThe Representation of Women in The New York Timesâ Coverage of the Egyptian January 25th Uprising: The âEvenâ Veiled Women Participated Rhetoric and Subtle Orientalist Stereotype.â Sociology of Islam Special Issue: Contemporary Social Movements in the Middle East and Beyond (5). doi:10.1163/22131418-00101001.Allam, Nermin. \"What Holds Next? The Politics Of Disappointment\". London School of Economics and Political Science Middle East Blog. N.p., 2015. Web. 14 Mar. 2016."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2016"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2016-10-29T08:18:14.639Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:20:38.144Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Arab Spring"^^<http://www.w3.org/2001/XMLSchema#string> , "Egypt"^^<http://www.w3.org/2001/XMLSchema#string> , "Women"^^<http://www.w3.org/2001/XMLSchema#string> , "Social Movements"^^<http://www.w3.org/2001/XMLSchema#string> , "National Struggles"^^<http://www.w3.org/2001/XMLSchema#string> , "Framing"^^<http://www.w3.org/2001/XMLSchema#string> , "Political Opportunities"^^<http://www.w3.org/2001/XMLSchema#string> , "Politics of Dissappointment"^^<http://www.w3.org/2001/XMLSchema#string> , "State Feminism"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2016-03-16T20:30:16.678Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.42751"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2016-06"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "dbff37b7-2d60-46c5-a9d4-a290ebffd81a"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:ff4555e9-93b3-4985-912b-f29f5f0fe074"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2016-03-16T11:31:21Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c9/p2/90/97/c9p2909719> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "nermin@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2016-03-16T14:30:04Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Popular and scholarly accounts emphasize the absence of gender issues in women's framing of their participation during the 2011 Egyptian uprising. In this dissertation, I interrogate the collective action frame adopted by women at the time of the uprising to elucidate how gender featured in the framing of their participation and the impact of this framing on women's activism and engagement. The data for this project draws upon 103 interviews with female protestors and activists, leaders of womenâ²s rights organizations, and Tawakkol Kerman, the Nobel Laureate and Yemeni activist. Data is also gathered from public transcripts as well as secondary literature published in English and Arabic on the topic. Espousing a political process approach, I highlight how female protestors oriented their messages in relation to the existent opportunities and constraints during the uprising. That is, they distanced themselves from the discourse of women's rights in the framing of their participation as the former has been the pet project of the ruling regimes in Egypt and associated with Western reform agendas. This framing, I argued, temporally concealed differences and inequalities that had traditionally obscured womenâ²s participation in politics. By offering a gender analysis of these early interactions, the dissertation contributes to explaining the nature and implications of their gender dynamics. It recovers womenâ²s voices in the writing of history and opens up new ways of understanding the Egyptian uprising."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Whose Rights? Understanding Womenâs Engagement in the 2011 Egyptian Uprising"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/fedora3foxml> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/characterization> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/thumbnail> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/48/4z/h1/c3484zh13d/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

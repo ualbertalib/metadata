@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/g8/4m/m7/c8g84mm761> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a8/82/d6/88/a882d688-8ba2-47a0-b5ce-e1b9b29d4665> ;
+	model:createdDate "2017-12-07T22:17:16.342Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Sun Luxin 201712 PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Lemieux, Joanne (Biochemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "MacMillan, Andrew (Biochemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Haze, Bart (Medical Microbiology and Immunology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Pascal, John (Biochemistry, University of Montreal)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:36:02.66Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:24:10.93Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "BRCA1 BRCT"^^<http://www.w3.org/2001/XMLSchema#string> , "TopBP1 BRCT4/5"^^<http://www.w3.org/2001/XMLSchema#string> , "MDC1"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-13T20:55:08.875Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44584"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "04d85c52-e424-4f28-b789-daa05d26cc3c"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:2e907e46-c4a9-4900-b72f-e0cf9f9ce3d7"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-07T15:17:16Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/w1/2z/57/czw12z575z> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "luxin@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-13T13:55:08Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The BRCT domain family is a group of proteins that is primarily involved in the regulation of DNA replication, cell cycle checkpoint activation, DNA damage repair, and many other DNA damage responses (DDR). Mutations in BRCT proteins often result in genomic instability, one of the leading sources of many human diseases including cancers. My thesis focuses on two important BRCT family proteins: Breast cancer associated proteins 1 (BRCA1) and Topoisomerase II Î² Binding Protein 1 (TopBP1).  BRCA1 is a well-known tumor suppressor protein that acts mainly in the homologous recombination (HR) pathway which repairs the DNA double-strand breaks (DSB) in cells. Mutations in BRCA1 have been found to associate with elevated risk of hereditary breast and ovarian cancers in humans. However, over 95% of sporadic breast and ovarian cancer patients carry wide-type BRCA1, making them less susceptible to DNA damaging cancer therapy. Since interaction between BRCA1 BRCTs and many phosphorylated protein partners are critical for the function of BRCA1 in DDR, including the proper activation of HR, inhibitors of BRCA1 BRCTs have great potential as chemotherapeutic agents. Unfortunately, the development of these inhibitors has been very challenging. While the shallow protein interface of BRCA1 BRCTs makes it difficult to stabilize any small molecule inhibitors, the strong dependency on the phosphate-binding pocket of BRCA1 makes the preservation of active phosphate on peptide inhibitors a major technical barrier. Here, I have successfully verified the first nonphosphopeptide inhibitor of BRCA1 BRCTs and solved the crystal structure of this inhibitor in complex with BRCA1 BRCTs. My study reveals new structural features that can be included to guide the development of BRCA1 BRCTs inhibitors. It also provides the structural basis that supports the possibility of phosphorylation-independent interaction between DNA PKcs and BRCA1 BRCTs.   TopBP1, on the other hand, is an important scaffold protein that mediates many protein-protein interactions (PPIs) involved in DNA replication stress signaling, cell cycle checkpoint activation, and DNA damage response via its ATR activation domain (AAD) and nine BRCT domains. In particular, the BRCT5 from the internal tandem repeats (BRCT4/5) of TopBP1 has been found to play critical roles in the recruitment of TopBP1 to the sites of DNA damage and replication stress. Several DNA damage-associated proteins have been suggested to interact with the TopBP1 BRCT5 domain in a phosphorylation-dependent manner. My study has been focusing on the interactions between TopBP1 BRCT4/5 and two of these proteins, the mediator of DNA damage checkpoint protein 1 (MDC1) and the Bloom syndrome, Rec Q helicase like protein (BLM). Consistent with the existing structural model of TopBP1 BRCT4/5 in complex with MDC1 SDT repeat peptide, my mutagenesis study of TopBP1 BRCT5 has validated that TopBP1 engages MDC1 mainly through electrostatic interactions. The interaction with MDC1 is largely induced by TopBP1 dimerization. On the contrary, my structural and functional study of TopBP1/ BLM interaction shows that TopBP1 BRCT5 engages BLM through a higher affinity, monomer-based interaction. The orientation of BLM peptide on the peptide interface of TopBP1 BRCT5 is opposite to the one observed in MDC1 peptide. I have proved that the interaction between BLM and TopBP1 is highly dependent on phosphorylation of Ser304 of BLM, not pSer338. Additional hydrophobic interactions are crucial for stabilizing the TopBP1/BLM complex while electrostatic interactions only play a supportive role. Since a similar interaction has also been observed between Rad4TopBP1 BRCT1/2 and Crb253BP1 in S. Pombe, I propose the interaction between TopBP1 BRCT5 and 53BP1 likely adopted this mechanism as well. Together, my studies of BRCA1 and TopBP1 further demonstrate the structural diversity of BRCT domain architecture. The structural insights revealed by my research can be used as a guideline for not only the modeling of other PPIs but also the development of synthetic compounds with therapeutic potential for DNA damaging cancer therapy."^^<http://www.w3.org/2001/XMLSchema#string> , "The BRCT domain family is a group of proteins that is primarily involved in the regulation of DNA replication, cell cycle checkpoint activation, DNA damage repair, and many other DNA damage responses (DDR). Mutations in BRCT proteins often result in genomic instability, one of the leading sources of many human diseases including cancers. My thesis focuses on two important BRCT family proteins: Breast cancer associated proteins 1 (BRCA1) and Topoisomerase II Î² Binding Protein 1 (TopBP1).  BRCA1 is a well-known tumor suppressor protein that acts mainly in the homologous recombination (HR) pathway which repairs the DNA double-strand breaks (DSB) in cells. Mutations in BRCA1 have been found to associate with elevated risk of hereditary breast and ovarian cancers in humans. However, over 95% of sporadic breast and ovarian cancer patients carry wide-type BRCA1, making them less susceptible to DNA damaging cancer therapy. Since interaction between BRCA1 BRCTs and many phosphorylated protein partners are critical for the function of BRCA1 in DDR, including the proper activation of HR, inhibitors of BRCA1 BRCTs have great potential as chemotherapeutic agents. Unfortunately, the development of these inhibitors has been very challenging. While the shallow protein interface of BRCA1 BRCTs makes it difficult to stabilize any small molecule inhibitors, the strong dependency on the phosphate-binding pocket of BRCA1 makes the preservation of active phosphate on peptide inhibitors a major technical barrier. Here, I have successfully verified the first nonphosphopeptide inhibitor of BRCA1 BRCTs and solved the crystal structure of this inhibitor in complex with BRCA1 BRCTs. My study reveals new structural features that can be included to guide the development of BRCA1 BRCTs inhibitors. It also provides the structural basis that supports the possibility of phosphorylation-independent interaction between DNA PKcs and BRCA1 BRCTs.   TopBP1, on the other hand, is an important scaffold protein that mediates many protein-protein interactions (PPIs) involved in DNA replication stress signaling, cell cycle checkpoint activation, and DNA damage response via its ATR activation domain (AAD) and nine BRCT domains. In particular, the BRCT5 from the internal tandem repeats (BRCT4/5) of TopBP1 has been found to play critical roles in the recruitment of TopBP1 to the sites of DNA damage and replication stress. Several DNA damage-associated proteins have been suggested to interact with the TopBP1 BRCT5 domain in a phosphorylation-dependent manner. My study has been focusing on the interactions between TopBP1 BRCT4/5 and two of these proteins, the mediator of DNA damage checkpoint protein 1 (MDC1) and the Bloom syndrome, Rec Q helicase like protein (BLM). Consistent with the existing structural model of TopBP1 BRCT4/5 in complex with MDC1 SDT repeat peptide, my mutagenesis study of TopBP1 BRCT5 has validated that TopBP1 engages MDC1 mainly through electrostatic interactions. The interaction with MDC1 is largely induced by TopBP1 dimerization. On the contrary, my structural and functional study of TopBP1/ BLM interaction shows that TopBP1 BRCT5 engages BLM through a higher affinity, monomer-based interaction. The orientation of BLM peptide on the peptide interface of TopBP1 BRCT5 is opposite to the one observed in MDC1 peptide. I have proved that the interaction between BLM and TopBP1 is highly dependent on phosphorylation of Ser304 of BLM, not pSer338. Additional hydrophobic interactions are crucial for stabilizing the TopBP1/BLM complex while electrostatic interactions only play a supportive role. Since a similar interaction has also been observed between Rad4TopBP1 BRCT1/2 and Crb253BP1 in S. Pombe, I propose the interaction between TopBP1 BRCT5 and 53BP1 likely adopted this mechanism as well. Together, my studies of BRCA1 and TopBP1 further demonstrate the structural diversity of BRCT domain architecture. The structural insights revealed by my research can be used as a guideline for not only the modeling of other PPIs but also the development of synthetic compounds with therapeutic potential for DNA damaging cancer therapy."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Involvement of BRCT Family Proteins in DNA Damage Response"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/g8/4m/m7/c8g84mm761/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/g8/4m/m7/c8g84mm761/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/g8/4m/m7/c8g84mm761/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/g8/4m/m7/c8g84mm761/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

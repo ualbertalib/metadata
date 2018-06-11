@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc554> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2017-02-20T12:22:51.921Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/27/40/36/2a/2740362a-6cd6-4a9c-a7db-ad8c6649d621> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Hoseinzadeh Hejazi_Sayed Alireza_201702_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Kuznicki, Steven (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Rajendran, Arvind (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Zeng, Hongbo (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hashisho, Zaher (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Pini, Ronny (Chemical Engineering, Imperial College London, U.K.)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "S. A. Hosseinzadeh Hejazi, A. Rajendran, J. A. Sawada, and S. M. Kuznicki, âDynamic Column Breakthrough and Process Studies of High-Purity Oxygen Production Using Silver-Exchanged Titanosilicatesâ, Industrial and Engineering Chemistry Research, vol. 55, issue 20, 5993-6005."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:50:36.078Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:44:31.151Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "PSA"^^<http://www.w3.org/2001/XMLSchema#string> , "oxygen purification"^^<http://www.w3.org/2001/XMLSchema#string> , "adsorption"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-02-22T18:21:57.596Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Chemical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.43746"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2017-06:Spring 2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "fdc4132f-8fdf-4add-9bd5-3a946cfe0171"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:71edd0d1-8b89-4cd2-9821-4a640ec9b008"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-02-21T14:09:38Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc11p> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "hoseinza@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-02-22T11:21:56Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "High-purity oxygen above 99.0% is required in many medical and industrial applications such as the pharmaceutical and aerospace applications. Due to the similar physical properties of oxygen and argon, this separation is very challenging. Adsorption separation techniques are more preferable to conventional cryogenic distillation of O2/Ar for small and medium scale applications as they offer more favorable process economics. However, very few commercial adsorbents offer the ability to separate O2 and Ar. Silver-exchanged titanosilicates (Ag-ETS-10) have shown the potential to separate these gases based on their thermodynamic affinities. This opens up the possibility of developing processes for high purity O2 separations. In the second chapter of this study, adsorption isotherms of O2, Ar, and N2 on Ag-ETS-10 extrudates were measured using the volumetric technique and described using a Langmuir isotherm. The large-scale performance of the adsorbent was verified by measuring single, binary, and ternary breakthrough profiles using a laboratory scale dynamic column breakthrough apparatus, which was designed and constructed as a part of this study. These profiles were modeled by writing mass and energy balances that were discretized in space and solved in MATLAB using the finite volume technique. The model could predict the experimental profiles to a high level of precision. In the third chapter, a detailed study on the mass transfer dynamics of oxygen separation using Ag-ETS-10 was conducted. The effect of flow rate, temperature, pressure, and particle size on the breakthrough profiles of N2, O2, and Ar was studied. Influence of different mass transfer resistances and hydrodynamics of the separation were investigated based on these experimental results using fundamentals of mass transfer which confirmed the fast mass transfer nature of Ag-ETS-10. In the fourth chapter, various vacuum swing adsorption (VSA) cycle configurations including the simple Skarstrom cycle and more complicated 6-step VSA cycles were simulated using mathematical models. A mixture of 95.0%/5.0% O2/Ar was considered in the simulations and a rigorous multi-objective optimization was conducted to maximize O2 purity and recovery. The simulations predicted 27.3% recovery for a product with 99.5% purity for a 6-step cycle with pressure equalization (PE) and light product pressurization (LPP) steps. The recovery for the same level of purity was improved significantly to 91.7% by implementing a heavy product pressurization (HPP) step. The effect of bed length on O2 purity and recovery and the comparison of VSA with pressure swing adsorption (PSA) and pressure-vacuum swing adsorption (PVSA) for high-purity O2 production were also presented. Rigorous multi-objective optimizations were conducted to maximize oxygen productivity and minimize energy consumption of the VSA cycles, while meeting different purity constraints, and significant improvement in the performance indicators was obtained through process optimization. In Chapters 4 and 5, the simple 3-step and Skarstrom cycle experiments with 95.0%/5.0% O2/Ar and dry air as the feed were performed. In order to verify the cycle simulations, values of experimental purity and recovery at cyclic steady state, transitional concentration and axial temperature profiles were compared with the modeling predictions. Moreover, in the fifth chapter, the cycles discussed in Chapter 4 were further explored by comparing single-stage and dual-stage VSA processes in terms of total energy consumption and O2 productivity of the whole process including the N2 removal stage. The simulations predicted 82.0% recovery for a product with 99.5% purity for a 6-step cycle with PE and HPP and dry air feed stream. The effect of bed length and nitrogen content in the feed on the performance indicators was also studied. Operating conditions for various cycle configurations were optimized through non-dominated sorting genetic algorithm technique to achieve lower total energy consumption and higher overall productivity and the Pareto fronts were compared against each other in order to choose the best possible design. The results indicated that the single-stage 6-step cycle with PE and HPP presents a better performance compared to the other single-stage and dual-stage approaches. A simple graphical scheduling study was also conducted in order to calculate the number of columns required for a continuous process using the better performing configurations."^^<http://www.w3.org/2001/XMLSchema#string> , "High-purity oxygen above 99.0% is required in many medical and industrial applications such as the pharmaceutical and aerospace applications. Due to the similar physical properties of oxygen and argon, this separation is very challenging. Adsorption separation techniques are more preferable to conventional cryogenic distillation of O2/Ar for small and medium scale applications as they offer more favorable process economics. However, very few commercial adsorbents offer the ability to separate O2 and Ar. Silver-exchanged titanosilicates (Ag-ETS-10) have shown the potential to separate these gases based on their thermodynamic affinities. This opens up the possibility of developing processes for high purity O2 separations. In the second chapter of this study, adsorption isotherms of O2, Ar, and N2 on Ag-ETS-10 extrudates were measured using the volumetric technique and described using a Langmuir isotherm. The large-scale performance of the adsorbent was verified by measuring single, binary, and ternary breakthrough profiles using a laboratory scale dynamic column breakthrough apparatus, which was designed and constructed as a part of this study. These profiles were modeled by writing mass and energy balances that were discretized in space and solved in MATLAB using the finite volume technique. The model could predict the experimental profiles to a high level of precision. In the third chapter, a detailed study on the mass transfer dynamics of oxygen separation using Ag-ETS-10 was conducted. The effect of flow rate, temperature, pressure, and particle size on the breakthrough profiles of N2, O2, and Ar was studied. Influence of different mass transfer resistances and hydrodynamics of the separation were investigated based on these experimental results using fundamentals of mass transfer which confirmed the fast mass transfer nature of Ag-ETS-10. In the fourth chapter, various vacuum swing adsorption (VSA) cycle configurations including the simple Skarstrom cycle and more complicated 6-step VSA cycles were simulated using mathematical models. A mixture of 95.0%/5.0% O2/Ar was considered in the simulations and a rigorous multi-objective optimization was conducted to maximize O2 purity and recovery. The simulations predicted 27.3% recovery for a product with 99.5% purity for a 6-step cycle with pressure equalization (PE) and light product pressurization (LPP) steps. The recovery for the same level of purity was improved significantly to 91.7% by implementing a heavy product pressurization (HPP) step. The effect of bed length on O2 purity and recovery and the comparison of VSA with pressure swing adsorption (PSA) and pressure-vacuum swing adsorption (PVSA) for high-purity O2 production were also presented. Rigorous multi-objective optimizations were conducted to maximize oxygen productivity and minimize energy consumption of the VSA cycles, while meeting different purity constraints, and significant improvement in the performance indicators was obtained through process optimization. In Chapters 4 and 5, the simple 3-step and Skarstrom cycle experiments with 95.0%/5.0% O2/Ar and dry air as the feed were performed. In order to verify the cycle simulations, values of experimental purity and recovery at cyclic steady state, transitional concentration and axial temperature profiles were compared with the modeling predictions. Moreover, in the fifth chapter, the cycles discussed in Chapter 4 were further explored by comparing single-stage and dual-stage VSA processes in terms of total energy consumption and O2 productivity of the whole process including the N2 removal stage. The simulations predicted 82.0% recovery for a product with 99.5% purity for a 6-step cycle with PE and HPP and dry air feed stream. The effect of bed length and nitrogen content in the feed on the performance indicators was also studied. Operating conditions for various cycle configurations were optimized through non-dominated sorting genetic algorithm technique to achieve lower total energy consumption and higher overall productivity and the Pareto fronts were compared against each other in order to choose the best possible design. The results indicated that the single-stage 6-step cycle with PE and HPP presents a better performance compared to the other single-stage and dual-stage approaches. A simple graphical scheduling study was also conducted in order to calculate the number of columns required for a continuous process using the better performing configurations."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "High-purity Oxygen Production using Silver-exchanged Titanosilicates (Ag-ETS-10)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc554/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc554/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc554/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc554/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

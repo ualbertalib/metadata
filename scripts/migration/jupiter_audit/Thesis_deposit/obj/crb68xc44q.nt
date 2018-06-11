@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/f6/c2/f2/72/f6c2f272-d067-48af-ab7c-59123f9c133a> ;
+	model:createdDate "2017-10-05T05:06:05.861Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Caldo_KristianMark_P_201710_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Kav, Nat (Agricultural, Food and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Wu, Jianping (Agricultural, Food and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Jacobs, Rene (Agricultural, Food and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> , "Durrett, Timothy (Biochemistry, Kansas State University)"^^<http://www.w3.org/2001/XMLSchema#string> , "GÃ¤nzle, Michael (Agricultural, Food and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Caldo KMP, Greer MS, Chen G, LemieuxMJ, Weselake RJ. (2015) Purification and properties of Brassica napus diacylglycerol acyltransferase 1. FEBS Letters 589: 773â778.Caldo KMP, Acedo JZ, Panigrahi R, Vederas JC, Weselake RJ, Lemieux MJ. (2017) Diacylglycerol acyltransferase 1 is regulated by its N-terminal domain in response to allosteric effectors. Plant Physiology 175: 667â680"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:54:37.832Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:49:45.86Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "DGAT1"^^<http://www.w3.org/2001/XMLSchema#string> , "regulatory domain"^^<http://www.w3.org/2001/XMLSchema#string> , "triacylglycerol biosynthesis"^^<http://www.w3.org/2001/XMLSchema#string> , "allosteric regulation"^^<http://www.w3.org/2001/XMLSchema#string> , "intrinsically disordered region"^^<http://www.w3.org/2001/XMLSchema#string> , "SnRK1 phosphorylation"^^<http://www.w3.org/2001/XMLSchema#string> , "phosphatidate activation"^^<http://www.w3.org/2001/XMLSchema#string> , "NMR structure"^^<http://www.w3.org/2001/XMLSchema#string> , "membrane protein purification"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-10-31T15:11:17.558Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Plant Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44547"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "f53a896f-d0eb-4c31-8dc9-62d3404d0840"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:855baa43-4330-4146-98d7-9f844c83db73"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-10-25T12:44:18Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c6/h4/40/t0/c6h440t04m> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "kmpcaldo@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-10-31T09:11:16Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Diacylglycerol acyltransferase 1 (DGAT1) is an integral membrane enzyme catalyzing the final and committed step in acyl-CoA-dependent triacylglycerol (TAG) biosynthesis. Previous metabolic control analysis showed that DGAT1 plays a substantial role in modulating the flow of carbon into seed oil in Brassica napus. In B. napus and many other organisms, DGAT1 has been used as a biotechnological tool to boost oil accumulation. Despite its key role in primary metabolism and biotechnological importance, no detailed structure-function information is available on the enzyme. This doctoral thesis aimed to shed light on the mechanism of action and regulation of DGAT1 by employing various techniques in molecular biology, and protein and lipid biochemistry. The first part of this dissertation involved the development of a purification protocol for recombinant B. napus DGAT1 (BnaDGAT1) produced in Saccharomyces cerevisiae. The optimized protocol included solubilization of membrane-bound BnaDGAT1 in n-dodecyl-Î²-D-maltopyranoside micelles (DDM), cobalt affinity chromatography, and size-exclusion chromatography. BnaDGAT1 was eluted mainly as a dimer from the last chromatographic step. The purified enzyme was well-folded, intact, and active and utilized acyl-CoAs which represent the major fatty acids in canola-type B. napus seed oil.  In the second part of this dissertation, the hydrophilic N-terminal domain of BnaDGAT1 was identified as the enzymeâs regulatory domain that is not essential for catalysis. This regulatory domain has an intrinsically disordered region (IDR) and a folded segment. The IDR exhibited an autoinhibitory function and appeared to facilitate positive cooperativity through dimerization. The folded segment has an allosteric site for acyl-CoA/CoA. Acyl-CoA, a substrate of the enzyme, was found to serve as a homotropic allosteric activator. On the other hand, CoA was identified as a non-competitive feedback inhibitor through interaction with the same allosteric site. The three-dimensional solution structure of the allosteric site and the amino acid residues interacting with CoA were elucidated, revealing details on this important regulatory element for allosteric regulation.  In the third part of this dissertation, the purified enzyme in DDM micelles was lipidated and subjected to detailed kinetic analysis. Purified and lipidated BnaDGAT1 exhibited hyperbolic and sigmoidal responses to increasing concentrations of 1, 2-diacyl-sn-glycerol and acyl-CoA, respectively. Phosphatidate  (PA) was identified as a feedforward activator of BnaDGAT1. The presence of PA may have facilitated the transition of the enzyme into the more active state that is also desensitized to substrate inhibition. PA may also relieve possible autoinhibition of BnaDGAT1 brought about by the N-terminal region. Furthermore, BnaDGAT1 was found to be a substrate of the sucrose non-fermenting kinase 1, which can phosphorylate the enzyme and convert it to a less active form. Based on these findings, an enzyme model is proposed illustrating the biochemical regulation of BnaDGAT1 through the aforementioned mechanisms."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Biochemical Regulation of Brassica napus Diacylglycerol Acyltransferase 1"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc44q/fcr:export?format=jcr/xml> .

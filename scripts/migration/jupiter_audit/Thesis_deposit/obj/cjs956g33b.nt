@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/s9/56/g3/cjs956g33b> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2017-12-14T21:36:07.496Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/e9/d3/00/28/e9d30028-e826-4f33-a1cb-04835019d869> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Serrano_Jesus_A_201712_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Yutaka, Yasui (School of Public Health)"^^<http://www.w3.org/2001/XMLSchema#string> , "Osornio-Vargas, Alvaro (Pediatrics)"^^<http://www.w3.org/2001/XMLSchema#string> , "Villeneuve, Paul (Health Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Sentil Senthilselvan (School of Public Health)"^^<http://www.w3.org/2001/XMLSchema#string> , "Marie O'Neill (School of Public Health)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:25:03.749Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:17:57.859Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "air pollution epidemiology"^^<http://www.w3.org/2001/XMLSchema#string> , "adverse birth outcomes"^^<http://www.w3.org/2001/XMLSchema#string> , "environmental epidemiology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-22T19:00:50.457Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Epidemiology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44624"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "cbf2e88a-d229-45d7-a4d7-93bb82bbd192"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:f47e208c-7bc3-43ea-87ed-7150ae17e537"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-21T08:38:12Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c2/f7/5r/85/c2f75r854s> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "JESUSSERRANO@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-22T12:00:49Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Background  Adverse birth outcomes (ABOs) are major causes of neonatal death and future adverse health outcomes. Gaps still exist in understanding the local distribution of maternal and social risk factors for ABOs, and the effect of air pollutant mixtures derived from industrial activities on pregnancy outcomes in Alberta. Objectives  (1) To assess the prevalence of ABOs in Alberta, Canada and the relative contribution of associated known maternal risk factors and area-level socioeconomic status; (2) To characterize exposure to air pollutant mixtures from industrial emissions in Alberta and describe their associations with preterm birth (PTB) and small for gestational age (SGA).  Methods  For the first objective: I conducted a prevalence study of PTB, SGA and low birth weight at term (LBWT) using data from all singleton live births occurred in Alberta from 2006 to 2012. Birth records were provided by the Alberta Perinatal Health Program. Data included the postal code of residence at the time of birth and 21 maternal risk factors for ABOs. I used a Canadian area-level socioeconomic status index (SES-index) as a proxy for neighborhood socioeconomic status. Standardized prevalence ratios (age-adjusted and smoothed by an empirical Bayes approach) at small area level were estimated to locate areas of low, medium and high-ABO occurrence. The contribution of risk factors in the high-ratio areas were identified by their corresponding attributable fraction (AF).    For the second objective: I used industrial-facilitiesâ emissions into the air from the Canadian National Pollutant Release Inventory. I profiled the mixtures based on the proportional content of ten broader chemical classes (NO2, SO2, CO, PM, VOCs, PAHs, metals, other inorganics, other organics and nitrosamines/ethers/alcohols) in the individual emissions by applying cluster analysis. I used proximity (10-km buffer) of the maternal postal codes to the sources of the mixtures to assign exposure. I used multivariable logistic regression for estimating the associations of the group of mixtures with SGA, spontaneous PTB (sPTB) and induced PTB (iPTB) adjusted maternal covariates and the SES-index.    Main results A total of 330,957 births was analyzed. The period prevalence of: PTB ranged from 4.4% to 10.9%; SGA ranged from 5.4% to 15.2%, and LBWT ranged from 0.8% to 3.8%. The higher prevalence of ABOs was observed in urban locations. The key risk factors for spontaneous-PTB were: past-preterm (AF=18%), smoking during pregnancy (AF=15%), bleeding after the 20th week (AF=11%), low SES-index (AF=9%), substance use during pregnancy (AF=5%), and gestational diabetes (AF=4%). For induced-PTB: gestational hypertension (AF=19%), past preterm (12%), proteinuria (10%), and smoking during pregnancy (6%). For SGA: low SES-index (AF=12%), smoking during pregnancy (AF=6%), and gestational hypertension (AF=4%). For LBWT: low SES-index (AF=16%), smoking during pregnancy (AF=10%), and gestational hypertension (AF=7%).  A total of 6,259 facilities overall emitting 133 chemicals were classified into nine groups of mixtures based on the predominant chemical class (the chemical class with â¥ 60% of the proportional content) in the emissions: NO2-mixtures, CO-mixtures, SO2-mixtures, PM-mixtures, VOCs-mixtures, Metals-mixtures, Other inorganics-mixtures, Other organics-mixtures, and Heterogeneous-mixtures. Mixtures with a high proportional content of gases were common and densely present across the province; whereas mixtures with a high proportional content of VOCs, Metals-, Other organics- and Other inorganic- were scarce but associated with ABOs. The VOCs-mixtures increased the odds of SGA by 37% (95% CI: 11-69%). Metals-mixtures, other inorganic-mixtures, and other organic-mixtures increased the odds of iPTB by 17% (95% CI: 5-30%), 17% (95% CI: 6-28%), and 24% (95% CI: 9-41%), respectively. Heterogeneous-mixtures increased the odds of spontaneous PTB by 36% (95%CI: 13-63%).    Conclusions The areas with the highest prevalence of ABO were mainly urban. Low SES-index, smoking during pregnancy and gestational hypertension were the common main contributors of ABOs. Mixtures with a significant content of volatile organic compounds, metals, other toxic organic and inorganic substances were associated with preterm birth and small for gestational age. These results may motivate and justify further research in studying the health effects of mixtures of chemicals released into the air by industrial sources. Finally, our results suggest that other unmeasured factors and their interactions should be investigated to better understand the occurrence of adverse birth outcomes in Alberta."^^<http://www.w3.org/2001/XMLSchema#string> , "Background  Adverse birth outcomes (ABOs) are major causes of neonatal death and future adverse health outcomes. Gaps still exist in understanding the local distribution of maternal and social risk factors for ABOs, and the effect of air pollutant mixtures derived from industrial activities on pregnancy outcomes in Alberta. Objectives  (1) To assess the prevalence of ABOs in Alberta, Canada and the relative contribution of associated known maternal risk factors and area-level socioeconomic status; (2) To characterize exposure to air pollutant mixtures from industrial emissions in Alberta and describe their associations with preterm birth (PTB) and small for gestational age (SGA).  Methods  For the first objective: I conducted a prevalence study of PTB, SGA and low birth weight at term (LBWT) using data from all singleton live births occurred in Alberta from 2006 to 2012. Birth records were provided by the Alberta Perinatal Health Program. Data included the postal code of residence at the time of birth and 21 maternal risk factors for ABOs. I used a Canadian area-level socioeconomic status index (SES-index) as a proxy for neighborhood socioeconomic status. Standardized prevalence ratios (age-adjusted and smoothed by an empirical Bayes approach) at small area level were estimated to locate areas of low, medium and high-ABO occurrence. The contribution of risk factors in the high-ratio areas were identified by their corresponding attributable fraction (AF).    For the second objective: I used industrial-facilitiesâ emissions into the air from the Canadian National Pollutant Release Inventory. I profiled the mixtures based on the proportional content of ten broader chemical classes (NO2, SO2, CO, PM, VOCs, PAHs, metals, other inorganics, other organics and nitrosamines/ethers/alcohols) in the individual emissions by applying cluster analysis. I used proximity (10-km buffer) of the maternal postal codes to the sources of the mixtures to assign exposure. I used multivariable logistic regression for estimating the associations of the group of mixtures with SGA, spontaneous PTB (sPTB) and induced PTB (iPTB) adjusted maternal covariates and the SES-index.    Main results A total of 330,957 births was analyzed. The period prevalence of: PTB ranged from 4.4% to 10.9%; SGA ranged from 5.4% to 15.2%, and LBWT ranged from 0.8% to 3.8%. The higher prevalence of ABOs was observed in urban locations. The key risk factors for spontaneous-PTB were: past-preterm (AF=18%), smoking during pregnancy (AF=15%), bleeding after the 20th week (AF=11%), low SES-index (AF=9%), substance use during pregnancy (AF=5%), and gestational diabetes (AF=4%). For induced-PTB: gestational hypertension (AF=19%), past preterm (12%), proteinuria (10%), and smoking during pregnancy (6%). For SGA: low SES-index (AF=12%), smoking during pregnancy (AF=6%), and gestational hypertension (AF=4%). For LBWT: low SES-index (AF=16%), smoking during pregnancy (AF=10%), and gestational hypertension (AF=7%).  A total of 6,259 facilities overall emitting 133 chemicals were classified into nine groups of mixtures based on the predominant chemical class (the chemical class with â¥ 60% of the proportional content) in the emissions: NO2-mixtures, CO-mixtures, SO2-mixtures, PM-mixtures, VOCs-mixtures, Metals-mixtures, Other inorganics-mixtures, Other organics-mixtures, and Heterogeneous-mixtures. Mixtures with a high proportional content of gases were common and densely present across the province; whereas mixtures with a high proportional content of VOCs, Metals-, Other organics- and Other inorganic- were scarce but associated with ABOs. The VOCs-mixtures increased the odds of SGA by 37% (95% CI: 11-69%). Metals-mixtures, other inorganic-mixtures, and other organic-mixtures increased the odds of iPTB by 17% (95% CI: 5-30%), 17% (95% CI: 6-28%), and 24% (95% CI: 9-41%), respectively. Heterogeneous-mixtures increased the odds of spontaneous PTB by 36% (95%CI: 13-63%).    Conclusions The areas with the highest prevalence of ABO were mainly urban. Low SES-index, smoking during pregnancy and gestational hypertension were the common main contributors of ABOs. Mixtures with a significant content of volatile organic compounds, metals, other toxic organic and inorganic substances were associated with preterm birth and small for gestational age. These results may motivate and justify further research in studying the health effects of mixtures of chemicals released into the air by industrial sources. Finally, our results suggest that other unmeasured factors and their interactions should be investigated to better understand the occurrence of adverse birth outcomes in Alberta."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Profiling industrial air-pollutant mixtures and their associations with preterm birth and small for gestational age in Alberta, Canada"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/s9/56/g3/cjs956g33b/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/s9/56/g3/cjs956g33b/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/s9/56/g3/cjs956g33b/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/s9/56/g3/cjs956g33b/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

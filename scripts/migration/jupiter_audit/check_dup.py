@@ -27,4 +27,3 @@ with open("test_1.tsv", "w+") as o:
 				if re['s']['value'] not in l:
 					o.write(re['s']['value'] + "\t" + i + "\t" + r['title']['value'].replace('"', '') + "\n")
 print (len(f))'''
-

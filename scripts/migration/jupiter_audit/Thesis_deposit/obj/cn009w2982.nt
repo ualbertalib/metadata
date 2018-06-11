@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b2/82/22/28/b2822228-3c88-4df8-a075-80b24e716531> ;
+	model:createdDate "2018-01-07T18:11:49.248Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Barnes_Nairn_E_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Mendez, Patricio F. (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Seetharaman, Sridhar (George S. Ansell Department of Metallurgical and Materials Engineering, Colorado School of Mines, Golden, CO, USA)"^^<http://www.w3.org/2001/XMLSchema#string> , "Li, Leijun (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Li, Dongyang (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Kotecki, Damian (Damian Kotecki Welding Consultants)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:09:26.497Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:10:11.08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Chromium Carbide Overlays"^^<http://www.w3.org/2001/XMLSchema#string> , "Solidification Theory"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-15T18:54:50.419Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Materials Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44667"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "b66ac88a-3200-42a1-ae0e-d1edbd2d3bd9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:dda56af1-4fe1-49c2-95b5-c4f8a5ce9848"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-13T22:53:02Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cp/84/18/n7/cp8418n77n> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "nebarnes@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-15T11:54:49Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "A growth model for the primary M7C3 carbides and an investigation of microstructural features in chromium carbide weld overlays are presented. The overall goal of this work is to increase the level of understanding concerning the development of microstructure, enabling a scientific method of predicting carbide morphology, microstructural features, and overlay properties. Existing knowledge of how various features in chromium carbide overlays stems from research developed concerning white and grey cast irons. The knowledge from cast irons cannot be applied to overlays in a meaningful way due to the rapid cooling associated with welding. Industrially, chromium carbide overlays are not currently adaptable for different wear environments and often alloying is used to alter carbide morphology to improve wear life, which carries a large cost. This work will increase the level of understanding surrounding chromium carbide weld overlays, enabling tailored microstructure based on a deeper level of understanding.   Several microstructural features of chromium carbide weld overlays have been investigated. Previous work is inconsistent in identifying the morphology of the primary M7C3 carbides and certain studies had identified two distinct microstructures for the carbides: blades and rods. A 3D microstructural reconstruction completed showed that the apparently distinct morphologies are in fact hexagonal prismatic carbide rods that appear different based on varying sectioning planes. Large anomalous features in the microstructure of chromium carbide overlays were investigated for the first time. Through microhardness testing, Auger electron spectroscopy, electron backscatter diffraction, and energy dispersive x-ray spectroscopy the features were identified as unmelted powder granules that survived the thermal cycle. Lower heat inputs were found to result in higher volume fractions of the unmelted powder granules. The powder granules were shown to be a distinct composition of the same orthorhombic M7C3 phase as the primary carbides. These powder granules serve as the main source of chromium and carbon necessary for primary carbide solidification and although they have a high hardness, large volume fraction of these unmelted granules will deplete the overlay of chromium and carbon and lower the volume fraction of primary carbides significantly.  The diffusion-controlled longitudinal growth of the primary M7C3 needles was quantified by direct observation for the first time and a growth model considering the carbide tip as a mass point sink was generated. The developed model predicts an rapid initial transient period followed by steady state growth. The transient portion of growth is assumed to occur below the surface of the melt. The developed model was found to match closely to in-situ observations performed on a high-temperature confocal scanning laser microscope. Deviation from the proposed growth model coincides with the observation of soft impingement from other carbides growing within the melt. The carbides locally deplete the solute ahead of the advancing interface causing an abrupt arrest in growth. The transverse growth of the carbides was found to be slow (two orders of magnitude lower than the longitudinal growth) suggesting interface controlled growth and negligible mass flux affecting the local solute concentration. The longitudinal growth was found to be highly dependant on the carbide radius. A study was performed using a thermal-control substrate to determine the effect of cooling rate on carbide size and showed that carbide size decreases with increased cooling rates. Combining the knowledge of the effect of cooling rate with the growth model enables understanding and prediction of carbide morphology. Additionally, the growth model should be applicable to other carbides with similar features.   The results of this work serve to bring a deeper understanding to chromium carbide overlays. In particular, the development and affirmation of a growth model describing the diffusion-controlled growth of faceted primary carbide needles enables a greater control over the final microstructure and properties of the overlay."^^<http://www.w3.org/2001/XMLSchema#string> , "A growth model for the primary M7C3 carbides and an investigation of microstructural features in chromium carbide weld overlays are presented. The overall goal of this work is to increase the level of understanding concerning the development of microstructure, enabling a scientific method of predicting carbide morphology, microstructural features, and overlay properties. Existing knowledge of how various features in chromium carbide overlays stems from research developed concerning white and grey cast irons. The knowledge from cast irons cannot be applied to overlays in a meaningful way due to the rapid cooling associated with welding. Industrially, chromium carbide overlays are not currently adaptable for different wear environments and often alloying is used to alter carbide morphology to improve wear life, which carries a large cost. This work will increase the level of understanding surrounding chromium carbide weld overlays, enabling tailored microstructure based on a deeper level of understanding.   Several microstructural features of chromium carbide weld overlays have been investigated. Previous work is inconsistent in identifying the morphology of the primary M7C3 carbides and certain studies had identified two distinct microstructures for the carbides: blades and rods. A 3D microstructural reconstruction completed showed that the apparently distinct morphologies are in fact hexagonal prismatic carbide rods that appear different based on varying sectioning planes. Large anomalous features in the microstructure of chromium carbide overlays were investigated for the first time. Through microhardness testing, Auger electron spectroscopy, electron backscatter diffraction, and energy dispersive x-ray spectroscopy the features were identified as unmelted powder granules that survived the thermal cycle. Lower heat inputs were found to result in higher volume fractions of the unmelted powder granules. The powder granules were shown to be a distinct composition of the same orthorhombic M7C3 phase as the primary carbides. These powder granules serve as the main source of chromium and carbon necessary for primary carbide solidification and although they have a high hardness, large volume fraction of these unmelted granules will deplete the overlay of chromium and carbon and lower the volume fraction of primary carbides significantly.  The diffusion-controlled longitudinal growth of the primary M7C3 needles was quantified by direct observation for the first time and a growth model considering the carbide tip as a mass point sink was generated. The developed model predicts an rapid initial transient period followed by steady state growth. The transient portion of growth is assumed to occur below the surface of the melt. The developed model was found to match closely to in-situ observations performed on a high-temperature confocal scanning laser microscope. Deviation from the proposed growth model coincides with the observation of soft impingement from other carbides growing within the melt. The carbides locally deplete the solute ahead of the advancing interface causing an abrupt arrest in growth. The transverse growth of the carbides was found to be slow (two orders of magnitude lower than the longitudinal growth) suggesting interface controlled growth and negligible mass flux affecting the local solute concentration. The longitudinal growth was found to be highly dependant on the carbide radius. A study was performed using a thermal-control substrate to determine the effect of cooling rate on carbide size and showed that carbide size decreases with increased cooling rates. Combining the knowledge of the effect of cooling rate with the growth model enables understanding and prediction of carbide morphology. Additionally, the growth model should be applicable to other carbides with similar features.   The results of this work serve to bring a deeper understanding to chromium carbide overlays. In particular, the development and affirmation of a growth model describing the diffusion-controlled growth of faceted primary carbide needles enables a greater control over the final microstructure and properties of the overlay."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Solidification Theory and Optimization of Chromium Carbide Overlays"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w2982/fcr:export?format=jcr/xml> .

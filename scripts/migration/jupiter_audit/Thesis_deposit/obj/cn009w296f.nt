@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w296f> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/2b/20/cc/ad/2b20ccad-db15-4c86-8b27-407b61235155> ;
+	model:createdDate "2018-01-13T10:11:08.423Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Van Malsen_Jacqueline_R_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Compton, Sharon M. (Medical Sciences, Dental Hygiene)"^^<http://www.w3.org/2001/XMLSchema#string> , "Amin, Maryam (Medical Sciences, Dentistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Farmer, Anna (Agricultural, Food and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "VanMalsen J, Compton SMC, âEffectiveness of early pediatric dental homes: A scoping review,â Journal of the Canadian Dental Hygienists Association. 2017; 51(1):23-9."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:41:50.818Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:31:57.018Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "dental home"^^<http://www.w3.org/2001/XMLSchema#string> , "infant"^^<http://www.w3.org/2001/XMLSchema#string> , "toddler"^^<http://www.w3.org/2001/XMLSchema#string> , "interpretive description"^^<http://www.w3.org/2001/XMLSchema#string> , "pediatric oral health"^^<http://www.w3.org/2001/XMLSchema#string> , "infant oral health care"^^<http://www.w3.org/2001/XMLSchema#string> , "early childhood caries"^^<http://www.w3.org/2001/XMLSchema#string> , "dental caries"^^<http://www.w3.org/2001/XMLSchema#string> , "dental hygiene education"^^<http://www.w3.org/2001/XMLSchema#string> , "dental education"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-22T18:36:10.242Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44710"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "b8260b21-7808-406a-bf78-71c8ed1d956c"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:487e8606-21ed-4d21-bef3-8b5a8ec2de84"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-18T16:41:33Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/b4/94/90/cfb494904n> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "jvanmals@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T11:36:09Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Early childhood caries is recognized as a preventable disease which has considerable systemic health and economic consequences. It has been described as the most common chronic childhood disease. Initiating oral health care early in the life course for infants and toddlers is an important recognized mechanism to mitigate risk for developing early childhood caries. The Canadian Dental Association issued a position statement in 2005 recommending that children have their first dental assessment no later than age one; however, uptake of this practice standard within the dental community has been limited. Continuity of care, which is also essential, can be facilitated by establishing a dental home. The dental home is a model of care where comprehensive care is continuously available and is delivered in a family-centered way. Understanding facilitating factors utilized by dental practitioners who have successfully integrated infant and toddler oral health into their practice is an important underpinning to develop strategies to improve uptake of infant-toddler dental homes. The purpose of this study was to explore factors that influence dental practitionersâ provision of infant-toddler dental homes and to develop recommendations to improve uptake within Alberta, Canada based on perspectives of dentists and dental hygienists who currently provide oral health care to the infant-toddler cohort. This study relied on an interpretive descriptive methodology and an ecological theoretical framework. Practitioners across Alberta were eligible for participation if they held an active practice license and if they routinely provided a dental home for children under 18 months of age. Individual interviews were conducted with 13 dental practitioners including pediatric dentists, general dentists, and dental hygienists who met these criteria. Data was collected and analyzed concurrently using the constant comparative method.   Thematic analysis led to four interconnected themes which influence practitioners in provision of infant-toddler oral health care including: 1) Practitioner; 2) Practice; 3) Profession; and 4) Population. Study findings include practitioner comfort in treating infants and toddlers, having education and training in infant and toddler oral health care, adequate remuneration and insurance coverage for preventive oral health procedures, and increased interprofessional awareness of the infant-toddler dental home. Study findings were interpreted in the context of current literature to develop recommendations to advance uptake of infant-toddler dental homes in Alberta.  While it is recognized that improved uptake will be evolutionary and involve a continuum of implementation processes, the following recommendations are put forward as initial steps based on the belief that they will promote the desired outcomes: review and amendment of accreditation requirements through the Commission of Dental Accreditation of Canada to include infants and toddlers in dental and dental hygiene curriculum; inclusion of clinical experience in provision of infant-toddler oral health in undergraduate dental and dental hygiene education to develop studentsâ comfort and competence in providing treatment for this cohort; removal of age restrictions for preventive fluoride therapies through publicly-funded dental programs; expansion of provincial dental and dental hygiene practitioner directories through the Alberta Dental Association and College and the College of Registered Dental Hygienists of Alberta to identify practitioners who are providers of infant-toddler dental homes; and concurrently funding research to expand the body of knowledge related to infant-toddler oral health. These strategies offer a model to advance uptake of infant-toddler dental homes and improve the oral health of children in Alberta."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Factors Facilitating Dental Practitioners in the Provision of Infant and Toddler Dental Homes in Alberta: An Interpretive Description"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w296f/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w296f/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w296f/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/00/9w/29/cn009w296f/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

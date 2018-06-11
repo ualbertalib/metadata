@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/82/78/cf/86/8278cf86-0fce-4246-94d0-166b85008de6> ;
+	model:createdDate "2018-01-19T19:48:42.662Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Mader_Caitlin_E_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Luong, Lien (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Acorn, John (Renewable Resources)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:10:59.46Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:12:29.359Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Coccophagus gossypariae"^^<http://www.w3.org/2001/XMLSchema#string> , "Eriococcus spurius"^^<http://www.w3.org/2001/XMLSchema#string> , "Gossyparia spuria"^^<http://www.w3.org/2001/XMLSchema#string> , "European elm scale"^^<http://www.w3.org/2001/XMLSchema#string> , "American elm"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-23T20:27:39.521Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Forest Biology and Management"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44711"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "2c8d525b-eae2-44e1-83f4-024e3d29d06b"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:e66d9d5e-1f94-4b9e-b257-15802862f46f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-19T12:48:42Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r146f> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T11:43:09Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The American elm (Ulmus americana) is a valuable component of urban forests in Alberta. In many Alberta municipalities, the health of these trees is being heavily impacted by the invasive scale insect Eriococcus spurius (Hemiptera: Eriococcidae). Biological control of scales using hymenopteran parasitoids can be an effective replacement or addition to control using chemical insecticides. However, no effective biological control agent has been found for E. spurius. This project investigates the life history and host interactions of Coccophagus gossypariae (Hymenoptera: Aphelinidae), a parasitoid wasp that was discovered parasitizing E. spurius in Calgary. Field studies took place at 46 sites in Calgary during 2015, and 44 of the same sites in 2016. At each site, I conducted repeated-measures sampling every two weeks for eight rounds in 2015, and 5 rounds in 2016. At each site and sampling round, I collected three types of samples: Adult C. gossypariae that had emerged from their hosts and had been caught in mesh traps over the preceding two weeks; first instar E. spurius nymphs that had been caught on sticky traps over the preceding two weeks; and live adult scale insects, which I later dissected in the laboratory for fecundity and parasitism data. I used various combinations of the resulting datasets, along with climate data and urban forest inventory data supplied by the City of Calgary to answer different questions in three investigative chapters. The chapters 2-4 each provide a different area of focus in better understanding this tri-trophic system. In the first chapter, I undertook basic investigations of C. gossypariae life history traits. I found that it is well established throughout Calgary, and accounts for 98% of the parasitism of E. spurius. Parasitism rates varied greatly between sites, ranging from 6.8% to 81.0%. I recorded a sex ratio of 7% males, and a strong avoidance of superparasitism. In the second chapter, I adopted a much broader focus, conducting spatial analyses on how urban landscape factors influence E. spurius populations. I found that the amount of impermeable surfaces within 10 m from a tree, and the number of other elm trees upwind of it are both positively associated with higher E. spurius densities. Finally, I examine how E. spurius and C. gossypariae interact over the course of the season, comparing their relative phenologies, and the effects of parasitism on E. spurius reproduction. I found that E. spurius have already finished reproduction before the point in the season when the majority of parasitism-induced mortality occurs.   Because E. spurius adults will not live to reproduce again, most mortality induced by C. gossypariae emergence after reproduction will have little impact on its hostâs population. However, E. spurius that are parasitized by C. gossypariae produce significantly fewer eggs than those that are not. I conclude that if C. gossypariae has any suppressive effects on its host`s population, it is likely due to fecundity effects, rather than mortality effects. I did not, however, document any influence of C. gossypariae parasitism on changes in E. spurius population. This study provides some first steps for future work on whether C. gossypariae can be used in biological control of E. spurius."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Ecology and life history of Coccophagus gossypariae (Hymenoptera: Aphelinidae), a parasitoid of Eriococcus spurius (Hemiptera: Eriococcidae)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/z4/0k/t2/c1z40kt287/fcr:export?format=jcr/xml> .

@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/0b/f1/6c/bb/0bf16cbb-c478-4dc9-8a8a-942ec3619d25> ;
+	model:createdDate "2018-02-15T23:44:10.105Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Noamani_Alireza_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Rouhani, Hossein (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Vette, Albert H. (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Raboud, Donald (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Sadrzadeh, Mohtada (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:02:06.474Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:00:07.189Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Inverse dynamics"^^<http://www.w3.org/2001/XMLSchema#string> , "Joint moments"^^<http://www.w3.org/2001/XMLSchema#string> , "Multi-segment model"^^<http://www.w3.org/2001/XMLSchema#string> , "Optimization"^^<http://www.w3.org/2001/XMLSchema#string> , "Trunk kinetics"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-21T18:27:04.754Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44778"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e9aafcaf-9687-4244-ac4c-f28a2852881e"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:b78c0e76-2600-40a1-acad-b6813dcd12c8"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-20T10:47:29Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cg/73/2d/94/cg732d949c> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-02-21T07:56:57Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Evaluating several pathological conditions such as low-back pain, scoliosis, herniated discs, and postural stability after spinal cord injury or chronic stroke requires a deep understanding of the inter-spinal interactions. Assessing the kinetics of the human head-arms-trunk (HAT) could provide useful information for clinical assessment during various motor tasks, and for designing prevention and rehabilitation strategies. Mathematical techniques such as linked-segment models of the HAT along with an inverse dynamics approach can be used to calculate the inter-segmental moments. Several studies have investigated the lumbosacral joint moment using a single-segment model of the trunk during different movements. However, methods for calculating joint moments at different levels of the spinal column have rarely been investigated. This is due to the fact that joint moment estimation using an inverse dynamics approach requires accurate estimation of the individual-specific body segment parameters (BSPs) of each segment, which is technically challenging for the multi-segment HAT due to the high inter-participant variability of these parameters for HAT segments. Moreover, this approach is prone to experimental errors due to inaccuracies in kinematic data induced by soft tissue artifacts and force plate measurement errors. As a result, a methodology to estimate joint moments at different levels of the spinal column after minimizing above-mentioned inaccuracies is of great significance.  The objective of this thesis was to propose a methodology for accurate assessment of the three-dimensional (3D) inter-vertebral moments using a multi-segment HAT model via compensating errors in motion data, ground interaction force measurements, and BSPs estimation for the HAT segments. Using the proposed methodology, this study also aimed to provide, for the first time, the inter-vertebral moment patterns during multi-directional trunk-bending motions using a multi-segment HAT model.  First, this study presented a nonlinear, multi-step, optimization-based, non-invasive method for estimating individual-specific BSPs and center of pressure offsets for calculating joint moments in a seven-segment HAT model. The collected motion data of eleven non-disabled individuals participating in a seated trunk-bending experiment in the anterior direction were used. Initial estimates of the BSPs were adopted from cadaveric data and scaled for each individual. Two inverse dynamics approaches were used. Accurate inputs are expected to result in the same values for the net joint moment via both inverse dynamics approaches. Since scaling induces inaccuracies in the estimation of the BSPs, the inverse dynamics approaches were expected to result in different values for the net joint moments. Therefore, a set of BSPs and center of pressure offsets, that minimize the difference between the results of the two approaches, are expected to be more accurate compared to those which result in significantly larger differences. Our proposed method estimated the individual-specific BSPs and the center of pressure offsets that minimized the difference between the net joint moment calculated via both inverse dynamics approaches at all inter-segmental levels. The obtained results indicated that the proposed method significantly reduced the difference (p < 0.01) in the net joint moment estimation by 77.6 % (average among participants). The proposed method enabled more accurate estimation of individual-specific BSPs, and consequently more accurate assessment of the 3D kinetics of a multi-segment HAT model.  Second, this study presented a procedure for estimating joint moments at different inter-segmental levels during multi-directional trunk-bending motion after compensating two major sources of error: inaccuracy of individual-specific BSPs and soft tissue artifacts. The collected motion data of eleven non-disabled individuals participating in a seated trunk-bending experiment in five different directions and for three different speeds were used. We compensated for the errors in the motion data due to soft tissue artifacts based on a previously introduced technique. The effect of joint level, trunk-bending direction, and movement speed on the inter-segmental moments were investigated. The results showed significant effects (p < 0.01) of joint-level, bending-direction, as well as an interaction effect between joint-level and bending-direction. Moreover, we observed significant effects of joint-level and trunk-bending direction as well as their interaction effect on the net joint moment errors induced due to soft tissue artifacts. The results of this study reflected complex, task-specific patterns for the 3D inter-segmental moments at different joint-levels, which cannot be studied using single-segment models or without such error compensations."^^<http://www.w3.org/2001/XMLSchema#string> , "Evaluating several pathological conditions such as low-back pain, scoliosis, herniated discs, and postural stability after spinal cord injury or chronic stroke requires a deep understanding of the inter-spinal interactions. Assessing the kinetics of the human head-arms-trunk (HAT) could provide useful information for clinical assessment during various motor tasks, and for designing prevention and rehabilitation strategies. Mathematical techniques such as linked-segment models of the HAT along with an inverse dynamics approach can be used to calculate the inter-segmental moments. Several studies have investigated the lumbosacral joint moment using a single-segment model of the trunk during different movements. However, methods for calculating joint moments at different levels of the spinal column have rarely been investigated. This is due to the fact that joint moment estimation using an inverse dynamics approach requires accurate estimation of the individual-specific body segment parameters (BSPs) of each segment, which is technically challenging for the multi-segment HAT due to the high inter-participant variability of these parameters for HAT segments. Moreover, this approach is prone to experimental errors due to inaccuracies in kinematic data induced by soft tissue artifacts and force plate measurement errors. As a result, a methodology to estimate joint moments at different levels of the spinal column after minimizing above-mentioned inaccuracies is of great significance.  The objective of this thesis was to propose a methodology for accurate assessment of the three-dimensional (3D) inter-vertebral moments using a multi-segment HAT model via compensating errors in motion data, ground interaction force measurements, and BSPs estimation for the HAT segments. Using the proposed methodology, this study also aimed to provide, for the first time, the inter-vertebral moment patterns during multi-directional trunk-bending motions using a multi-segment HAT model.  First, this study presented a nonlinear, multi-step, optimization-based, non-invasive method for estimating individual-specific BSPs and center of pressure offsets for calculating joint moments in a seven-segment HAT model. The collected motion data of eleven non-disabled individuals participating in a seated trunk-bending experiment in the anterior direction were used. Initial estimates of the BSPs were adopted from cadaveric data and scaled for each individual. Two inverse dynamics approaches were used. Accurate inputs are expected to result in the same values for the net joint moment via both inverse dynamics approaches. Since scaling induces inaccuracies in the estimation of the BSPs, the inverse dynamics approaches were expected to result in different values for the net joint moments. Therefore, a set of BSPs and center of pressure offsets, that minimize the difference between the results of the two approaches, are expected to be more accurate compared to those which result in significantly larger differences. Our proposed method estimated the individual-specific BSPs and the center of pressure offsets that minimized the difference between the net joint moment calculated via both inverse dynamics approaches at all inter-segmental levels. The obtained results indicated that the proposed method significantly reduced the difference (p < 0.01) in the net joint moment estimation by 77.6 % (average among participants). The proposed method enabled more accurate estimation of individual-specific BSPs, and consequently more accurate assessment of the 3D kinetics of a multi-segment HAT model.  Second, this study presented a procedure for estimating joint moments at different inter-segmental levels during multi-directional trunk-bending motion after compensating two major sources of error: inaccuracy of individual-specific BSPs and soft tissue artifacts. The collected motion data of eleven non-disabled individuals participating in a seated trunk-bending experiment in five different directions and for three different speeds were used. We compensated for the errors in the motion data due to soft tissue artifacts based on a previously introduced technique. The effect of joint level, trunk-bending direction, and movement speed on the inter-segmental moments were investigated. The results showed significant effects (p < 0.01) of joint-level, bending-direction, as well as an interaction effect between joint-level and bending-direction. Moreover, we observed significant effects of joint-level and trunk-bending direction as well as their interaction effect on the net joint moment errors induced due to soft tissue artifacts. The results of this study reflected complex, task-specific patterns for the 3D inter-segmental moments at different joint-levels, which cannot be studied using single-segment models or without such error compensations."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Assessment of Human Trunk Kinetics Using a Multi-Segment Model: An Approach to Minimize the Propagation of Experimental Errors"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/r4/6r/14/cqr46r1426/fcr:export?format=jcr/xml> .

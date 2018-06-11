@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/20/cdn39x208p> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2018-01-19T22:17:14.888Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/fe/0e/da/0e/fe0eda0e-e5b8-4ebb-bda7-46cb16de9d6a> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Shaban_Sadek_M Ali_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Ahmed Qureshi (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Carlos Lange (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Jaime Wong (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Sina Ghaemi (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:18:51.485Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:16:26.48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "polymer additives"^^<http://www.w3.org/2001/XMLSchema#string> , "Drag reduction"^^<http://www.w3.org/2001/XMLSchema#string> , "Turbulent channel flow"^^<http://www.w3.org/2001/XMLSchema#string> , "PIV"^^<http://www.w3.org/2001/XMLSchema#string> , "PTV"^^<http://www.w3.org/2001/XMLSchema#string> , "Shake the Box"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-02T15:37:09.807Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44748"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "08765370-963e-401f-9cb5-aea0eeda351b"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:f0d55663-7101-4ebe-92ae-45d05d5e4f68"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-30T14:51:06Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c9/w0/32/36/c9w0323600> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "Shaban@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-02-02T08:37:08Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The addition of a minute amount of long-chain polymer molecules to a turbulent flow can cause a significant reduction of skin-friction drag in both internal and external flows. The explanation of interaction between polymers and turbulence remains the most difficult area of polymer flow phenomena, although a considerable research has been carried out in this field. Time-resolved, two-dimensional particle Image velocimetry (PIV) and three-dimensional particle tracking velocimetry (PTV) based on the âShake-the-boxâ method are employed to investigate turbulent structures of Newtonian and non-Newtonian polymeric channel flow. Characterization of polymer effects on the turbulent flow and detailed rheological measurements, including shear viscosity, extensional viscosity and relaxation time, are carried out. The Reynolds number of the current investigation is 20,000 based on channel height and properties of pure water. The experimental investigations of the polymer flow are carried out over various concentrations of polymer solution, including dilute polymer solutions and shear thinning polymer solutions. The maximum drag reduction, âVirk's asymptoteâ, is also obtained. In comparison to Newtonian fluid (water), the measurements showed a significant modification of the near-wall turbulence structure of the polymeric solutions: The viscous sublayer and buffer layer thickens; and the log-region is shifted upwards toward higher velocities while it remains essentially parallel to water in dilute polymer solutions. In the case of shear thinning polymers with drag reduction, the profiles in the log-layer are not only shifted upward, but also have a higher slope than that of water and dilute polymer solutions. With respect to the Reynolds stresses, a monotonic decrease is observed as a function of drag reduction. The Reynolds shear stress is close to zero in shear thinning flows, especially at maximum drag reduction. The power spectral density (PSD) of streamwise and wall normal velocity fluctuations in the buffer and log-layer showed a reduction over all frequencies. The reduction in the energy intensity increases as drag reduction increases and the significant reduction is observed at high frequencies, implying large reduction in the small eddies. The quadrant analysis indicated a significant attenuation of ejection and sweep events compared with water flow, consistent with a large reduction in production of turbulence kinetic energy in polymeric flows. Polymer dynamics in channel flow is investigated through the deformation tensor along the Lagrangian trajectories, which is used to identify the role of extensional viscosity within the flow. The results showed that the main contribution to the elongation deformation comes from streamwise strain rate fluctuations while a larger contribution is observed in the buffer layer. Resistance of molecules to strong elongational deformation results in a significant increase in extensional viscosity in the buffer layer. The PSD of the streamwise, wall-normal and shear strain rate fluctuations for polymeric flows from Lagrangian method are suppressed compared with water flow and the magnitude of reduction increases with increasing drag reduction. In addition, the reduction in energy intensity in streamwise and shear strain rate fluctuations are higher in the buffer layer while the reduction in energy intensity in wall-normal strain fluctuations is almost the same in the buffer and log layer."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Experimental investigation of drag reduction by polymer additives in a turbulent channel flow"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/20/cdn39x208p/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/20/cdn39x208p/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/20/cdn39x208p/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/20/cdn39x208p/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

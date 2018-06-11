@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2015-10-06T04:17:33.3Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/db/d1/be/12/dbd1be12-309a-4a8f-8e60-5b5c1fc4e41e> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Li_Zhendong_201509_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Charles Lucy, Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> , "Robert Campbell, Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> , "Todd Lowry, Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> , "Derek Wilson, Department of Chemistry, York University"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "âCombining Percolator with X!Tandem for Accurate and Sensitive Peptide Identification.â Xu, M.; Li, Z.; Li, L. J. Proteome Res. 2013, 12, 3026-3033âChemical-Vapor-Assisted Electrospray Ionization for Increasing Analyte Signals in Electrospray Ionization Mass Spectrometry.â Li, Z.; Li, L. Anal. Chem. 2014, 86, 331-335"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2015"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2016-10-29T06:34:19.413Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:11:54.477Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Mass Spectrometry"^^<http://www.w3.org/2001/XMLSchema#string> , "Metabolomics"^^<http://www.w3.org/2001/XMLSchema#string> , "Proteomics"^^<http://www.w3.org/2001/XMLSchema#string> , "Nano-LC"^^<http://www.w3.org/2001/XMLSchema#string> , "Spectral Library"^^<http://www.w3.org/2001/XMLSchema#string> , "X!Tandem Percolator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2015-10-16T16:25:31.402Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.42460"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2016-06"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "85ef3a8d-9409-4c64-8036-441d50528dcb"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:10098e64-c187-4233-963a-a75b732b997b"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2015-10-14T21:12:41Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/g6/4t/m5/czg64tm518> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "zhendong@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2015-10-16T10:25:28Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The simultaneous quantification of all biological molecules, from metabolites to proteins, holds the key to discovering molecular signatures that can diagnose diseases before irreversible damages have occurred in the body.  Recent advances in the field of liquid chromatography coupled mass spectrometry (LC-MS) have fueled the development of two fields pursuing disease diagnosis: metabolomics, the study of metabolites; and proteomics, the study of proteins. Prior to LC-MS, it was difficult to quantify more than several metabolites or proteins in a single analysis; now, thousands of molecules can be monitored in a single LC-MS assay, making it possible to detect minute abundance patterns that are characteristic of diseases. The key for metabolomics and proteomics is sensitivity and efficient processing of large amounts of data. The goal of my research was to improve LC-MS based methodology for the detection of both metabolites and proteins. For method development in proteomics, my thesis focused on two areas: improvements to a database search engine used to identify peptides, and increased peptide ion intensity by introducing chemical vapours. Firstly, by implementing a machine learning algorithm that better distinguishes correct and incorrect peptide identifications from database searching results, more valid peptide were recovered in proteomic experiments. Next, vapours of various chemicals were introduced to the source region of a mass spectrometer; both the absolute ion intensities and number of peptide detected were increased.  In the field of metabolomics, my work focused on solving the problem of unknown identification and improving sensitivity of chemical-isotope-labeling (CIL) metabolomics. With thousands of unknown metabolites being measured in every metabolomic experiment, confident high-throughput identification is required. A high-quality human metabolite reference tandem MS spectral library was created for 800 compounds. The data in this library has higher resolution and higher accuracy than any other available library; therefore, LC-MS identification can be more confident. Reversed phase retention time information was also added to this library, which helps to distinguish isomers and further improve identification confidence.  Lastly, nanoliter flow rate LC-MS was optimized for the analysis of CIL metabolomics. CIL metabolomics, is a metabolite labeling strategy that uses stable isotope encoded labeling to improve quantification by LC-MS. The labels used in this technique already improved sensitivity of metabolite detection; however, when samples are limited or dilute, more sensitive instrumentation is needed. By reducing the flow rate and column dimensions, sensitivity of LC-MS was improved, and more metabolites can be detected per sample."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Advancement of LC-MS Based Proteomic and Metabolomic Techniques"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/fedora3foxml> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/characterization> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/thumbnail> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/s4/5q/89/c8s45q894q/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
