@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/96/02/11/cj9602112s> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2017-12-16T02:47:07.93Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/bf/d9/fa/80/bfd9fa80-3b98-47c9-b17a-eaffaccb5c93> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Estuka_Fadwa_M A_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Salmon, John (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Khabbazian, Majid (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:47:21.807Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:39:52.912Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:modified "2017-12-22T21:15:45.884Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Data Record Extraction and Alignment"^^<http://www.w3.org/2001/XMLSchema#string> , "Web Information Extraction"^^<http://www.w3.org/2001/XMLSchema#string> , "Data Records"^^<http://www.w3.org/2001/XMLSchema#string> , "Data Items"^^<http://www.w3.org/2001/XMLSchema#string> , "Visual Extraction System"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:specialization "Software Engineering and Intelligent Systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44631"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "34affc91-9080-45f9-926d-9f543e2108ed"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:5f94707b-d6f0-4b16-9c3b-bcaa1c7286c7"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-22T14:08:05Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cr/b6/8x/c4/crb68xc451> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "estuka@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-22T14:15:45Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Database-driven Websites and the amount of data stored in their databases are enormously growing. Web databases retrieve relevant information in response to usersâ queries; the retrieved information is encoded in dynamically generated Web pages in the form of structured data records. Identifying and extracting retrieved data records is a fundamental task for many applications, such as competitive intelligence and comparison shopping. This task is challenging due to the complex underlying structure of such Web pages and the existence of irrelevant information. Numerous approaches have been introduced to address this problem, but most of them are HTML-dependent solutions which may no longer be functional with the continuous development of HTML. Although, few vision-based techniques have been built upon the visual presentation of Web page objects, various issues exist that inhibit their performance. To overcome this, we propose a novel visual approach, i.e., programming-language-independent, for automatically extracting structured Web data. The proposed approach makes full use of the natural human tendency of visual object perception and the Gestalt laws of grouping. The extraction system consists of two tasks: (1) data record extraction where we apply three of the Gestalt laws (i.e., laws of continuity, proximity, and similarity) which are used to group the adjacently aligned visually similar data records on a Web page; and (2) data item extraction and alignment where we employ the Gestalt law of similarity which is utilized to group the visually identical data items. Our experiments upon large-scale test sets show that the proposed system is highly effective, and outperforms the two state-of-art vision-based approaches, ViDE and rExtractor. The experiments produce an average F-1 score of 86.68%, which is approximately 57% and 37% better than that of ViDE and rExtractor, respectively; and an average F-1 score of 86.21%, which is approximately 38% better than that of ViDE, for data record extraction and data item extraction, respectively."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "A Pure Visual Approach for Automatically Extracting and Aligning Structured Web Data"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/96/02/11/cj9602112s/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/96/02/11/cj9602112s/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/96/02/11/cj9602112s/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/96/02/11/cj9602112s/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

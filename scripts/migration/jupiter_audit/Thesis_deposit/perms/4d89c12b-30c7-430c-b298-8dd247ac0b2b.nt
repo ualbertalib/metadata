@@ -1,0 +1,64 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/4d/89/c1/2b/4d89c12b-30c7-430c-b298-8dd247ac0b2b> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	webacl:accessTo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/k5/1v/h2/czk51vh264> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "215d642f-7941-4c49-8747-32ef19e25460"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T22:12:48.663Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:lastModified "2018-06-05T22:12:48.663Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	webacl:mode webacl:Write ;
+	model:hasModel "Hydra::AccessControls::Permission"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	webacl:agent <http://projecthydra.org/ns/auth/person#sinajalali@hydranorth.ca> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/4d/89/c1/2b/4d89c12b-30c7-430c-b298-8dd247ac0b2b/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/4d/89/c1/2b/4d89c12b-30c7-430c-b298-8dd247ac0b2b> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/4d/89/c1/2b/4d89c12b-30c7-430c-b298-8dd247ac0b2b/fcr:export?format=jcr/xml> .

@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b650d> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/06/ad/a6/25/06ada625-d13e-4822-9445-f198160375db> ;
+	model:createdDate "2018-01-19T21:10:02.832Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Law_Lauren_KP_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Dr. James Cahill, Department of Biological Sciences"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Suzanne Tank, Department of Biological Sciences"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. David Hik, Department of Biological Sciences"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:45:43.907Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:37:30.378Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "glass sponges"^^<http://www.w3.org/2001/XMLSchema#string> , "sponge reefs"^^<http://www.w3.org/2001/XMLSchema#string> , "glass sponge reefs"^^<http://www.w3.org/2001/XMLSchema#string> , "Hecate Strait"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-31T17:42:00.172Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Ecology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44741"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "755060b7-6d51-4a6e-82fa-0993107c18dc"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:56ac6181-664a-4e9f-9490-a541a155ad5a"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-25T21:23:24Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cw/w7/2b/b9/cww72bb979> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "laurenl@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-31T10:41:59Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Reefs of glass sponges (Porifera, Hexactinellida) off western Canada were recently established as a marine protected area (MPA), however effective management and monitoring of this MPA is hindered by a lack of baseline data about reef distributions and biodiversity. MPA boundaries were established around reef polygons mapped using multibeam acoustics. Multibeam technology does not differentiate between live, dead, and buried portions of sponges. To ground-truth past multibeam mapping, a remote operated vehicle (ROV) was used to conduct fine-scale photographic surveys at three reef sites in the Hecate Strait, British Columbia. I performed semivariogram analyses and spatial interpolations to produce maps of reef distributions. The relationship between glass sponges and associated megafauna (> 2 cm) was analyzed from ROV images. Polygons mapped by multibeam acoustics represented the densest areas of sponge with ~10% of live and dead sponges found outside these polygons, while the remaining area was bare substrate (i.e. buried sponge or patches of mud). Glass sponges were patchily distributed in the reefs and spatially dependent at 28 to 36 meters. Although total megafauna density was significantly higher in the presence of glass sponges, glass sponges did not correlate with an increase in all taxa. Megafauna associations in the reefs occurred at a taxon-specific level and sponge reef structural complexity was found to be an important influence on reef community structure. The reefs also hosted numerous non-reef forming sponges, which until now have been previously overlooked. Molecular analyses and taxonomic classification were used to identify multiple encrusting sponges in the reefs, of which one was a new cryptic sponge in the genus Desmacella. This study garnered baseline data for Fisheries and Oceans Canada to improve their capacity for monitoring changes in the status and health of sponge reef ecosystems in Canada."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Distribution, biodiversity, and function of glass sponge reefs in the Hecate Strait, British Columbia, Canada"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b650d/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b650d/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b650d/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b650d/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

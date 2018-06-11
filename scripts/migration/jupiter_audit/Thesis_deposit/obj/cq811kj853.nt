@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/6d/a6/16/31/6da61631-6ace-4eee-a333-d9ca678acee6> ;
+	model:createdDate "2016-01-22T20:37:42.183Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Githaka_John_M_201601_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Nabi, Robert Ivan (Cellular & Physiological Sciences, University of British Columbia)"^^<http://www.w3.org/2001/XMLSchema#string> , "Febbraio, Maria (Dentistry, University of Alberta)"^^<http://www.w3.org/2001/XMLSchema#string> , "Fernandez-Patron, Carlos (Biochemistry, University of Alberta)"^^<http://www.w3.org/2001/XMLSchema#string> , "Goping, Ing Swie (Biochemistry, University of Alberta)"^^<http://www.w3.org/2001/XMLSchema#string> , "Touret, Nicolas (Biochemistry, University of Alberta)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2016"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2016-10-29T06:37:14.65Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:14:45.775Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Receptor nanoclusters"^^<http://www.w3.org/2001/XMLSchema#string> , "Membrane nanodomain"^^<http://www.w3.org/2001/XMLSchema#string> , "Actin cortex"^^<http://www.w3.org/2001/XMLSchema#string> , "Signal transduction"^^<http://www.w3.org/2001/XMLSchema#string> , "Super-resolution microscopy"^^<http://www.w3.org/2001/XMLSchema#string> , "Src family kinase"^^<http://www.w3.org/2001/XMLSchema#string> , "CD36"^^<http://www.w3.org/2001/XMLSchema#string> , "Angiogenesis"^^<http://www.w3.org/2001/XMLSchema#string> , "Endocytosis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2016-01-27T21:27:46.269Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.42670"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2016-06"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "47347f5f-6862-4638-8dfe-d4a17a9f35b8"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:17e1c2e7-d250-452c-a0b3-cd177d549573"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2016-01-25T15:11:49Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cv/x0/21/f7/cvx021f752> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "maringa@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2016-01-27T14:27:35Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The plasma membrane is a dynamic lipid bilayer that surrounds the cell, embedded with different plasma membrane proteins, aiding communication between the inside and outside of the cells. Its functions are achieved through an intricate organization of lipid-lipid, lipid-protein and protein-protein interactions in this environment. An emerging organizational feature of plasma membrane-associated receptor proteins is nanoclustering, although the mechanisms leading to this nanoclustering and its functional consequences for signaling remain largely unknown. We sought to investigate the plasma membrane organization of the clustering-responsive receptor CD36 and its endocytosis in endothelial cells (ECs).  During tumorigenesis, thrombospondin-1 (TSP-1), an endogenous extracellular matrix anti-angiogenic factor, is down-regulated. TSP-1 inhibits angiogenesis through binding to its receptor, CD36, and subsequent activation of Fyn, a Src family kinase (SFK), leading to ECs apoptosis.  The binding of a monoclonal mouse anti-CD36 immunoglobulin M (IgM) to CD36, mimicking a multivalent ligand, similarly induces ECs apoptosis while divalent monoclonal mouse anti-CD36 immunoglobulin G (IgG) does not, suggesting that CD36 clustering is important in the initiation of TSP-1-CD36-Fyn signaling. Following signal transduction, the ligand-receptor is internalized within the cells. The characterization of the organization of CD36 into multimeric complexes upon TSP-1 binding, the factors that regulate it and the endocytic pathway through which CD36 internalizes TSP-1 in ECs are investigated here.  To assess the spatial organization of CD36 and its effector, Fyn, upon TSP-1 stimulation, we used biochemical and both conventional and super-resolution imaging techniques, combined with quantitative image analysis. We found that a substantial fraction of unligated CD36 at rest exists in clusters that are enriched with Fyn at all times. Upon TSP-1 stimulation, CD36 clustering is enhanced with the optimal clustering occurring at 10 minutes, forming larger, more compact clusters, leading to Fyn activation.  The spatio-temporal organization of pre-existing CD36 clusters as well as Fyn is highly dependent on actin and lipid rafts. Disruption of actin or lipid rafts abrogated TSP-1âs ability to enhance CD36 clusters, resulting in inhibition of Fyn activation. Our analysis deciphered a correlation between CD36 cluster size and actin, suggesting growth of the clusters along actin which enables Fyn activation. Following 10 minutes of TSP-1 stimulation, CD36-TSP-1 internalization occurs. To explore the endocytic mechanism involved and its kinetics, we resorted to antibody labelling and acid washes to follow the internalized receptors. CD36 endocytosis was through the clathrin-independent carrier, GPI-enriched early endosomal compartments pathway (CLIC/GEEC pathway). This internalization was through polymorphous tubules and was dependent on dynamin, actin, cholesterol and Cdc42.  These observations demonstrate a role for nanoclustering in priming receptors for signaling by retaining their downstream effectors in close proximity, ready to signal upon ligand binding and consequent cluster reorganization. The internalization of CD36 through the CLIC/GEEC pathway also opens a new paradigm of cell type specific receptor internalization, as other endocytic mechanisms in different cell types have been characterized for CD36 endocytosis. These observations will also allow future investigation of the role of TSP-1-CD36 endosomes on the TSP-1-CD36-Fyn signaling pathway in ECs. The new insights unraveled in this study will play a key role in providing clues to design effective and better-targeted TSP-1 based anti-angiogenic compounds."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Plasma Membrane Organization and Endocytosis of CD36 in Human Microvascular Endothelial Cells"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/fedora3foxml> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/characterization> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/thumbnail> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/j8/cq811kj853/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/02/9p/52/cz029p522n> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/af/ec/5a/aa/afec5aaa-1509-483f-8f9f-2792f3cf540d> ;
+	model:createdDate "2018-01-09T22:32:07.153Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Shoute_Gem_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Tsui, Ying (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Cadien, Kenneth (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Brett, Michael (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Datta, Suman (Electrical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:58:29.274Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:55:05.138Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "thin-film transistor"^^<http://www.w3.org/2001/XMLSchema#string> , "capacitance"^^<http://www.w3.org/2001/XMLSchema#string> , "tunneling"^^<http://www.w3.org/2001/XMLSchema#string> , "flexible"^^<http://www.w3.org/2001/XMLSchema#string> , "metal oxide"^^<http://www.w3.org/2001/XMLSchema#string> , "fractal inductor"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-15T14:59:45.189Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Solid-State Electronics"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44663"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "c13f9e5e-92e9-4375-8412-2409cfc08f1f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:9eebe3ff-11cd-49a1-a8ae-67fd9eefa31f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-13T00:41:46Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cs/n0/09/z2/csn009z28k> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "shoute@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-15T07:59:44Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Thin-film technology continues to evolve as it finds new technological spaces to fulfill that will inevitably lead to an increased integration between society and technology. The aims of this research are to push beyond the limits of thin film electronics to enable a new era of flexible innovation. First, a self-oscillating energy harvesting boosting circuit was designed to understand the demands of a flexible circuit used in this prospective application. The electrical elements of the circuit which would practically and fundamentally inhibit its realization was closely examined and investigated. In particular, these were the inductor and the transistor. The problem of the inductor was approached by developing a design technique that will allow for an increased inductance without increasing its effective occupied area. The theoretical and realized workings of a fractal loop inductor is developed in this work.  Another major problem to address was the transistor. Before exploring the transistor, a fundamental component of the thin-film transistor (TFT) was investigated: the metal-oxide-semiconductor (MOS) structure, the region where the channel is formed. It is shown in this work that, unlike in bulk semiconductor MOS structures, for ultrathin active layers that are used in TFTs, traditional capacitance-voltage (CV) modeling does not accurately capture measured behavior. In order to do so, the assumption that the thickness of semiconductor is greater than the theoretical depletion width must be cast aside because it does not hold true for very thin-films. At ultra-thin dimensions, the geometry of the film plays a crucial part in the observed output CV behavior. Starting from the SchrÃ¶dinger-Poisson self-consistent model, modifications from the traditional CV extraction methods were made that included both incorporating non-uniform dopant concentration and changes in the charge centroid within the semiconductor active film. The development of the model was crucial in estimating the behavior of the MOS interface for more complex structures that were required to increase the performance of a novel TFT architecture explored here.  An exploration of a novel TFT architecture was required because TFTs have been fundamentally limited to low power applications due to its reliance on unipolar current transport and thus far have only played the role of a simple switch in its commercial realization. In order to integrate TFTs in high fidelity circuits, its power handling capabilities must be improved by utilizing bipolar current transport which itself cannot be achieved conventionally in thin-film materials. As a proof-of-principle, we demonstrated a bipolar tunneling junction thin-film transistor (TJT) achieved with hole-assisted enhanced electron tunneling in a thin metal/HfO2/n-ZnO/p-Si tri-heterojunction modulated by a two-dimensional (2D) referred base. We began with initially exploring the nature of the enhanced tunneling current observed by combining the modified CV model with the SchrÃ¶dinger-Poisson transfer matrix method. Unlike in previous MOS tunneling models that investigated polysilicon gates, the MOS structure that made up the tunneling emitter used a true metal. The model developed was adapted to take this account. It was found that the hole-assisted enhanced tunneling current was a result of an effective barrier thinning of the barrier oxide layer. This itself was a direct result of the probabilistic distribution of the tunneling electrons at metal penetrating the oxide due to the presence of holes at the inverted semiconductor. A basic compact model for the TJT was also developed to predict the output of a well-behaved prototype and was experimentally supported. The resulting electrical characteristics of the device include a maximum current density of at least 45 mAâmm-1 at 3 V up to 115 mAâmm-1 at 10 V, the combination thereof currently unmatched by modern TFTs."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Enabling Flexible Electronics: Demonstration of the Tunneling Junction Transistor (TJT) and Flexible Circuit Elements"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/02/9p/52/cz029p522n/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/02/9p/52/cz029p522n/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/02/9p/52/cz029p522n/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/02/9p/52/cz029p522n/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

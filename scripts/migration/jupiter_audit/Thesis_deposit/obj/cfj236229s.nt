@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2015-12-22T00:49:01.692Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/f5/5b/9e/fc/f55b9efc-b915-4a52-9699-496b91ec6473> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "KhanlariLarimi_Moein_201512_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Peter Popkowski Leszczyc (Faculty of Business)"^^<http://www.w3.org/2001/XMLSchema#string> , "Yu Ma (Faculty of Business)"^^<http://www.w3.org/2001/XMLSchema#string> , "Baohung Sun (Cheung Kong Graduate School of Business)"^^<http://www.w3.org/2001/XMLSchema#string> , "Ray Patterson (University of Calgary)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2015"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2016-10-29T07:02:12.049Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:35:30.42Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "extended service contracts"^^<http://www.w3.org/2001/XMLSchema#string> , "extended warranties"^^<http://www.w3.org/2001/XMLSchema#string> , "brand equity"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2015-12-23T16:06:20.156Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Marketing"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.42542"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2016-06"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e9f845cd-f63b-48ed-b793-608a99137ba9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:4e235400-e588-4d8c-b0f7-eb1d68c7c618"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2015-12-22T10:07:50Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/r0/74/v4/c3r074v476> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "moeinkhan@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2015-12-23T09:06:08Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "People buy extended service contracts (ESCs) or extended warranties for their purchased products to protect them against break-down or failure beyond the duration or coverage of base manufacturer warranties. In this thesis, I study two factors that affect ESC purchase decisions, namely brand equity and ESC information availability strategies.  In essay 1, I study an important dependency between product and ESC purchase decisions by investigating the association between brand equity and ESC purchase likelihood. I conceptualize two potential effects of brand equity on ESC purchase decisions. On the one hand, higher brand equity might be associated with higher product value for buyers. This additional value comes from positive brand associations in addition to a productâs utilitarian or monetary value. Higher value is in turn associated with a higher likelihood of insuring products, and people might be more likely to purchase ESCs for products with higher brand equity. I refer to this as the value effect. On the other hand, higher brand equity might be correlated with higher perceived product reliability or quality, which implies that people might be less likely to purchase ESCs for products with higher brand equity. I refer to this as the reliability effect. Empirical analysis of a scanner panel data set and a stated choice survey provide evidence for the dominance of the value effect over the reliability effect, resulting in an overall positive association between brand equity and ESC purchase likelihood. This finding is consistent with findings in the insurance literature that generally find a stronger impact of the extent of loss than the probability of loss on insurance purchase decisions.  In essay 2, I study the effect of simultaneous vs. delayed ESC information availability strategies on shoppersâ product and ESC purchase decisions. In the simultaneous strategy, ESC information is displayed alongside product information while in the delayed strategy, ESC information is provided subsequent to shoppersâ product purchase decision during the checkout. We draw from theory to propose that shoppers in the simultaneous scenario might experience a heightened perceived risk or need for insurance, which would influence their risk-handling strategies. Our analysis of stated choice data provides evidence that shoppers in the simultaneous scenario adopt additional risk-handling strategies. In this scenario, we observe a combination of effects that could be attributed to two distinctive response patterns. On the one hand, we observe lower sensitivity to ESC prices combined with buying ESCs for higher quality products (i.e. a reparative ESC-focused risk reduction strategy), while on the other hand, we observe a lower ESC purchase likelihood along with lower sensitivity to product prices (i.e. a preventative product-focused risk reduction strategy). These effects are consistent with expected patterns of behavior for consumers with high vs. low levels of risk or loss aversion. These patterns suggest that people in the simultaneous scenario might respond to a heightened need for insurance by undergoing a reparative ESC-focused mindset, a preventative product-focused mind-set, or a combination of both mindsets. These essays contribute new insights to the burgeoning literature on ESCs in marketing."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Essays on Extended Service Contract Purchase Decisions"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/fedora3foxml> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/characterization> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/thumbnail> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/j2/36/22/cfj236229s/fcr:export?format=jcr/xml> .

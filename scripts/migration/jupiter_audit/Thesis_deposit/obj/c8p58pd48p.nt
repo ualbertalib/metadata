@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/p5/8p/d4/c8p58pd48p> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2018-01-09T02:01:12.543Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/76/b9/9e/bf/76b99ebf-e92a-40cc-9c8a-b2853347f948> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Guo_Yujia_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Nouri, Alireza (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dehghanpour, Hassan (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Nobes, David (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:42:52.688Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:33:24.765Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:modified "2018-01-22T15:10:42.92Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Slotted liner"^^<http://www.w3.org/2001/XMLSchema#string> , "Sand Control"^^<http://www.w3.org/2001/XMLSchema#string> , "SAGD"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:specialization "Petroleum Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44703"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "aa4112d1-319b-421e-b0c4-ac2034db45ff"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:4a0bd859-ef16-4c87-a9b7-8027c37c0099"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-20T23:46:35Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cv/t1/50/j7/cvt150j767> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "yg3@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T08:10:40Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Steam Assisted Gravity Drainage (SAGD) is a thermal recovery technology currently employed to extract heavy oil and high viscosity bitumen from Alberta oil sands. Due to the unconsolidated nature of oil sands, SAGD wells are prone to producing sand, hence, requiring sand control devices to prevent sanding during oil production. Slotted liners are a prominent sand control technique, which have been extensively used in Albertaâs SAGD wells to avoid sand production problems. The design of the slots must allow free flow of fines and clays through the slots and the porous medium around the well, with minimal plugging.  In SAGD operations, a large volume of high-pressure steam is injected into the reservoir to mobilize the bitumen by reducing its viscosity. Considering the unconsolidated nature of the reservoir, the continuous injection of high-pressure, high-temperature steam into the formation results in a complex spatial alteration of the in-situ stress state and the geomechanical properties within the reservoir, which in turn impacts the reservoir permeability and porosity. In near-wellbore region, the initial stresses are nearly zero and as the SAGD chamber grows, the stresses tend to build up due to the thermal expansion of the formation. In addition, melting of the bitumen and subsequent loss of the bonding between the grains leads to the collapse of the gap between the oil sand and sand control liner over time. The result will be the buildup of effective stresses and gradual compaction of the oil sands around the liner.  The focus of this study is to improve the understanding of the effect of near-liner effective stress on the sanding and flow performance of the slotted liner over the life cycle of the well through physical model testing. Another aim is to study how the design criteria for slotted liners in SAGD are affected by the liner stress.  Large-scale unconsolidated sand is packed on a multi-slot coupon and is subjected to several stress conditions corresponding to the evolving stress conditions during the life cycle of a SAGD producer. Cumulative produced sand is measured at the end of testing as an indicator for the sand control performance. Retained permeability is calculated by pressure differentials across the close-to-coupon zone and considered as a measure of screen flow performance. Fines/clay concentration along the sand pack is also measured after the test to investigate the fines migration, a phenomenon which is the main reason for reduced wellbore productivity. Experimental results show that the liner performance is significantly affected by the normal stress loaded on the liner. Experimental observations indicate sand pack compaction by the increase of effective stress around the liner leading to a lower porosity and permeability. The situation near the liner is further complicated by the fines accumulation that results in pore plugging and further permeability reduction.  When it comes to sanding, however, higher stresses help stabilize the sand bridges behind the slots, leading to less sand production.  In addition to investigating the effect of stresses, the current study employs multi-slot coupons to examine the role of slot width and slot density on the liner performance as well. According to the experimental observations, increasing slot width generally reduces the possibility of pore plugging caused by fines migration. However, there is a limit for slot aperture beyond which the plugging is not reduced any further and only higher level of sanding occurs.   As for the design criteria, the lower and upper bounds of the slot are governed by plugging and sand production, respectively. Considering the stress effect on plugging and sanding, testing data indicates that both the lower and upper bounds should shift to larger slot apertures. Test measurements also indicate that beside the slot width, the slot density also influences the level of plugging and sand production and must be included in the design criteria."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Effect of Stress Build-up around SAGD Wellbores on the Slotted Liner Performance"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/p5/8p/d4/c8p58pd48p/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/p5/8p/d4/c8p58pd48p/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/p5/8p/d4/c8p58pd48p/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c8/p5/8p/d4/c8p58pd48p/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

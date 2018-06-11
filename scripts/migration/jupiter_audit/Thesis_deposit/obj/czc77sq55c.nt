@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2018-01-09T22:18:32.595Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/3a/fe/99/7b/3afe997b-d617-4a0f-b294-2c4f05e5ae8f> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Ma_Zhiwei_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Leung, Juliana (Department of Civil & Environmental Engineering, School of Mining & Petroleum Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Li, Huazhou (Department of Civil & Environmental Engineering, School of Mining & Petroleum Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Boisvert, Jeff (Department of Civil & Environmental Engineering, School of Mining & Petroleum Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Prasad, Vinay (Department of Chemical and Materials)"^^<http://www.w3.org/2001/XMLSchema#string> , "Torabi, Farshid (Petroleum Systems Engineering, University of Regina)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Ma, Z., Leung, J. Y., Zanon, S. D. J, & Dzurman, P. (2015), Practical implementation of knowledge-based approaches for steam-assisted gravity drainage production analysis, Expert Systems with Applications, 42(21), 7326-7343.Ma, Z., Leung, J. Y., & Zanon, S. D. (2017), Practical data mining and artificial neural network modeling for SAGD production analysis, Journal of Energy Resources Technology, 139(3), 032909.Ma, Z., Leung, J. Y., & Zanon, S. D. J. Integration of artificial intelligence and production data analysis for shale heterogeneity characterization in steam-assisted gravity-drainage reservoirs, Journal of Petroleum Science and Engineering, 163, 139-155."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:34:42.853Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:22:31.185Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Steam-Assisted Gravity Drainage (SAGD)"^^<http://www.w3.org/2001/XMLSchema#string> , "Data-Driven Modeling"^^<http://www.w3.org/2001/XMLSchema#string> , "Production Analysis"^^<http://www.w3.org/2001/XMLSchema#string> , "Heterogeneities Characterization"^^<http://www.w3.org/2001/XMLSchema#string> , "Shale Barrier"^^<http://www.w3.org/2001/XMLSchema#string> , "Lean Zone"^^<http://www.w3.org/2001/XMLSchema#string> , "Artificial Neural Network (ANN)"^^<http://www.w3.org/2001/XMLSchema#string> , "Reservoir Simulation"^^<http://www.w3.org/2001/XMLSchema#string> , "Reservoir Heterogeneities"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-15T17:53:49.453Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Petroleum Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44665"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "bafdd969-a95d-454b-8669-cf591f6e6158"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:29b4d775-cb84-42db-8398-3cb2159ba071"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-11T10:07:05Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/ct/t4/4p/n4/ctt44pn43h> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "zma2@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-15T10:53:48Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Steam-assisted gravity drainage (SAGD) technique has been widely adopted for heavy oil production. However, SAGD performance is strongly affected by reservoir heterogeneities, such as shale barriers and lean zones, as they are often detrimental to SAGD production efficiency. Therefore, it is necessary to characterize such reservoir heterogeneities for practical SAGD operations. Conventional characterization workflows, which entail construction of prior reservoir models, numerical flow simulation, and history-matching process, have some apparent limitations, such as high computational demands, as well as the involvement of numerous assumptions and simplifications regarding the underlying physical processes. In addition, the rapidly increasing volumes of SAGD field data from public domains provide fundamental information pertinent to reservoir properties and production characteristics. It is of great interest to propose a feasible SAGD analysis alternative that is capable of utilizing these field data for production analysis and heterogeneities characterization. Data-driven modeling techniques, which involve data analytics and implementation of artificial intelligence (AI) methods for capturing internal structures and non-linear relationships among data, are customized here to address this challenge.  This thesis will develop a set of workflows suitable for prediction of SAGD production performance and inference of heterogeneities by means of data analytics and production data analysis. First, through a comprehensive analysis of field data, a workflow is developed to forecast SAGD production. Data-driven models are built as a proxy model of reservoir simulation process to approximate the forward relationship between SAGD production and reservoir parameters. The forecast performances of these trained models are shown to be both reliable and satisfactory. Next, a series of synthetic SAGD models based on typical Athabasca oil reservoir properties and operating conditions is constructed. Heterogeneities are modeled by randomly sampling distribution, volume, and orientation of shale barriers and lean zones from several probability distributions inferred from field data, and are superposed to the base homogenous models. Many parameterization schemes are investigated to extract input and output parameters from production time-series data and heterogeneous configurations, respectively. Data-driven models are constructed to approximate the inverse relationship between reservoir characteristics and production data, thus to infer the complex reservoir heterogeneities stemmed from shale barriers and lean zones. The developed models can reliably estimate the relevant shale and lean zone parameters and the associated uncertainties. The proposed methods facilitate the selection of an ensemble of reservoir models that are consistent with the production history of the true models.  In the thesis, data-driven models are constructed used artificial neural network (ANN). Techniques such as principal component analysis, clustering analysis, and wavelet transform are employed to process the data and to improve the model robustness. The outcomes would improve our ability to infer uncertain reservoir heterogeneities from SAGD production data. It offers a complementary tool for extracting additional information from field data and incorporating data-driven models into existing simulation and history-matching workflows. The developed workflow can potentially be extended to analyze other engineering datasets derived from various sources and integrated directly into existing reservoir management and decision-making routines."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Practical Integration of Data-Driven Models for Production Analysis and Inference of Reservoir Heterogeneities in SAGD Operations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/c7/7s/q5/czc77sq55c/fcr:export?format=jcr/xml> .

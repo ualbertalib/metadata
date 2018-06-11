@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2018-02-10T22:17:38.04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/79/30/b6/67/7930b667-c1fa-4010-bb4f-601cc0c53e86> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Gumfekar_Sarang_P_201802_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Morbidelli, Massimo (Department of Chemistry and Applied Biosciences, ETH, Zurich, Switzerland)"^^<http://www.w3.org/2001/XMLSchema#string> , "Nazemifard, Neda (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Liu, Qi (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Rajendran, Arvind (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "De Klerk, Arno (Chemical and Materials Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "S. P. Gumfekar and J. B. P. Soares, âA novel hydrophobically-modified polyelectrolyte for enhanced dewatering of clay suspensionâ Chemosphere, vol. 194, pp. 422â431, 2018S. P. Gumfekar, T. R. Rooney, R. A. Hutchinson, J. B. P. Soares, âDewatering Oils Sands Tailings with Degradable Polymer Flocculantsâ, ACS Applied Materials & Interfaces, 9 (41), 36290-36300, 2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:38:43.794Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:27:48.794Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Dewatering"^^<http://www.w3.org/2001/XMLSchema#string> , "Flocculation"^^<http://www.w3.org/2001/XMLSchema#string> , "Mature fine tailings"^^<http://www.w3.org/2001/XMLSchema#string> , "Free radical polymerization"^^<http://www.w3.org/2001/XMLSchema#string> , "Polyelectrolyte"^^<http://www.w3.org/2001/XMLSchema#string> , "Thermosensitive polymer"^^<http://www.w3.org/2001/XMLSchema#string> , "Hydrophobic modification"^^<http://www.w3.org/2001/XMLSchema#string> , "Hydrolyticallyvdegradable polymer"^^<http://www.w3.org/2001/XMLSchema#string> , "Cationic flocculants"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-15T21:45:59.134Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Chemical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44766"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "df3df38c-d994-465a-8d30-73d7fbbc89b5"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:38ad96f6-f0fa-4430-bece-fddbb6fe0943"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-13T20:41:01Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cc/f9/5j/c0/ccf95jc09b> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-02-14T11:44:36Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Certain areas of oil sands in Canada are mined and processed for bitumen production using hot water processes that produce a slurry waste, referred to as tailings. Sand particles in tailings quickly settle and produce mature fine tailings (MFT), which are stored in large tailing ponds. Currently, tailing ponds occupy approximately 200 km2 and the long-term storage of tailings in these ponds poses a serious environmental liability. Advances in existing tailings management technologies are necessary for the sustainability of oil sands industry.  One of the major operational and environmental challenges that the oil sands industry faces is how to effectively dewater MFT and strengthen the resulting deposits, so that the land can be reclaimed. Basically, this challenge may be addressed by enhancing the settling rate of solids in MFT, improving the dewaterability of the sediments, and recovering the water under industrially acceptable conditions. Research in this area has explored technologies such as composite tailings (CT), polymer-assisted flocculation, centrifugation, and freeze-thaw. Polymer-assisted flocculation is a promising technology to enhance settling rate, dewaterability, and water recovery, since the molecular structure of polymers can be changed to meet different application criteria. Unfortunately, existing commercial flocculants still lack the prerequisites to specifically address the issues associated with MFT treatment.  In this work, we synthesized three main types of flocculants: i) hydrophobically-modified anionic terpolymers, ii) hydrophobically-modified cationic terpolymers, and iii) hydrolytically-degradable cationic polymers. The first polymer was used to flocculate kaolin suspensions, which is the most common type of clay in MFT, and the terpolymer composition was optimized based on its flocculation performance. The composition of second terpolymer was designed considering binary comonomer reactivity ratios, and used to flocculate MFT. The first two flocculants contained hydrophobic groups resulting from the incorporation of a hydrophobic comonomer. The third flocculant was designed to become hydrophobic upon hydrolytic degradation, and was used to dewater and densify MFT.  The main objective of this research was to develop a methodology to design multifunctional polymers specifically suited to flocculate and dewater MFT, taking into account its surface properties and water chemistry. To achieve this goal, we investigated flocculants containing several functional monomers, molecular weights, anionicity/cationicity, hydrophobicity, and degradability. Operational parameters such as MFT dilution (solids content) and flocculant dosage were also studied.  Flocculation performance was evaluated in terms of MFT settling rate, capillary suction time (dewaterability) of sediments, supernatant clarity, and floc formation ability. It would be ill-advised to make a general recommendation for âbest-flocculantâ because the performance requirements of a flocculant may differ among oil operators. However, this work offers a rational methodology to systematically design flocculants considering the requirements of a given system. Systematically designed flocculants for MFT certainly offer more functionality than using conventional polymers that are used to treat other wastewater."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Multifunctional Water-Soluble Polymers for Dewatering of Oil Sands Tailings"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/13/8j/f1/c5138jf194/fcr:export?format=jcr/xml> .

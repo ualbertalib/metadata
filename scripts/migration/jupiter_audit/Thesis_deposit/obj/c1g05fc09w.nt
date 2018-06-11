@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c0/c1g05fc09w> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a1/e9/b9/8b/a1e9b98b-d136-4d14-b225-cdfd6972921b> ;
+	model:createdDate "2018-01-17T00:49:27.474Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Meng_Fanchi_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Kurgan, Lukasz (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Reformat, Marek (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Han, Jie (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dick, Scott (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Kihara, Daisuke (Biology & Computer Science)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Meng, F., V.N. Uversky, and L. Kurgan, Comprehensive review of methods for prediction of intrinsic disorder and its molecular functions. Cellular and Molecular Life Sciences, 2017. 74(17): p. 3069-3090Meng, F., V. Uversky, and L. Kurgan, Computational Prediction of Intrinsic Disorder in Proteins, in Dunn BM, (Ed.), Current Protocols in Protein Science. 2017, 88:2.16.1â2.16.14, John Wiley & Sons, Inc.Meng, F., et al., Unstructural biology of the dengue virus proteins. FEBS Journal, 2015. 282(17): p. 3368-3394Meng, F. and L. Kurgan, DFLpred: High-throughput prediction of disordered flexible linker regions in protein sequences. Bioinformatics, 2016. 32(12): p. i341-i350Meng, F. and L. Kurgan, DMRpred: High-throughput prediction of disordered moonlighting regions in protein sequences"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:17:30.665Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:16:08.513Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "machine learning"^^<http://www.w3.org/2001/XMLSchema#string> , "logistic regression"^^<http://www.w3.org/2001/XMLSchema#string> , "random forest"^^<http://www.w3.org/2001/XMLSchema#string> , "protein"^^<http://www.w3.org/2001/XMLSchema#string> , "intrinsically disordered protein"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-18T18:32:29.33Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Software Engineering and Intelligent Systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44687"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "60dcf60c-b573-445b-afd1-ac66a25254d1"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:ef9d5389-2be6-4d13-b4ab-8f8aa9bc77ce"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-16T17:52:03Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/ct/t4/4p/n4/ctt44pn44t> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "fanchi@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-18T11:32:28Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Intrinsically disordered regions (IDRs) in proteins lack stable three dimensional structure under physiological conditions. IDRs are prevalent in nature, functionally important, and difficult to characterize experimentally due to their unstructuredness. As a result, many computational methods have been developed to detect IDRs from protein sequences in the past forty years. However, the annotations of functions of IDRs lag behind the rapidly accumulating number of newly discovered proteins since they remain largely determined via time-consuming and costly experiments. Sequence alignment (SA) and existing predictors of functions of IDRs provide a way to characterize functions of IDRs. However, SA is only applicable when the protein under study shares sufficiently high sequence similarity with annotated homologous sequences, and existing predictors cover only a small portion of all functions of IDRs. We use SA and existing predictors to characterize functions of IDRs in human dengue virus, and we use this project to investigate the ability of these approaches to determine functions of IDRs. Results show that SA is able to find certain functions that are related to IDRs, but it under predicts the number of IDRs that carry out given functions. Moreover, existing predictors of functions of IDRs only cover protein-binding functions, and do not cover other types of functions. To this end, we address the prediction of the most prevalent function that does not involve binding and cannot be predicted by current predictors, i.e., the disordered flexible linkers (DFLs). DFLs are IDRs that serve as flexible linkers/spacers in multi-domain proteins or between structured constituents in domains. We conceptualized, developed and empirically assessed a first-of-its-kind sequence-based predictor of DFLs, DFLpred. DFLpred uses a set of empirically selected features that quantify propensities to form certain secondary structures, disordered regions and structured regions, which are processed by a fast linear model. DFLpred secures area under the ROC curve (AUC) equal 0.715, is significantly better than the existing alternatives, and it is fast enough to be used on the whole proteome scale. We also address the prediction of IDRs that carry out multiple functions, i.e., disordered moonlighting regions (DMRs). We conceptualized, designed and empirically evaluated a first-of-its-kind sequence based predictor of DMRs, DMRpred. We developed novel amino acid indices that quantify propensities for functions relevant to DMRs and used evolutionary conservation, putative solvent accessibility and intrinsic disorder derived from the input sequence to build a rich profile that is suitable to accurately predict DMRs. We processed this profile to derive innovative features that are input into a Random Forest model to generate the predictions. DMRpred secures AUC = 0.86 and accuracy = 82%. We demonstrate that these results are significantly better than the results from alternative methods. DMRpred is fast and can finish a prediction for a protein of typical length of about 500 residues in less than one minute. We provide convenient webservers to make DFLpred and DMRpred available to the research community. To sum up, motivated by the drawbacks of the current computational approaches for the functional characterization of IDRs, we contribute two novel methods that provide accurate predictions of important functional types of IDRs."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Fast and accurate computational prediction of functions of intrinsic disorder in proteins"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c0/c1g05fc09w/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c0/c1g05fc09w/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c0/c1g05fc09w/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c0/c1g05fc09w/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/x5/1h/j6/c4x51hj673> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2018-01-25T23:13:43.023Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/10/18/7a/d2/10187ad2-2ef1-43cb-ae4b-5318c9a6cb71> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Choi_Min_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Decorby, Ray (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Adeeb, Samer (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Chapter 3 has been published as M. Choi; R. Zemp. \"Relative Microvascular Pressure Sensing\" Proc. SPIE 9708, Photons Plus Ultrasound: Imaging and Sensing 2016; 97081D (2016); doi: 10.1117/12.2213607Chapter 4 has been published as M. Choi; R. Zemp. \"Compression-tracking photoacoustic perfusion and microvascular pressure measurements\", Proc. SPIE 10064, Photons Plus Ultrasound: Imaging and Sensing 2017; 100643R (2017); doi: 10.1117/12.2253287Chapter 5 has been published as M. Choi; A. M. J. Shapiro; R. Zemp. \"Tissue perfusion rate estimation with compression-based photoacoustic-ultrasound imaging\", Journal of Biomedical Optics 23.01 (2018) p.1-8 ISSN: 1560-2281, DOI: 10.1117/1.JBO.23.1.016010."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:09:00.682Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:09:37.244Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Hemodynamic"^^<http://www.w3.org/2001/XMLSchema#string> , "Photoacoustic Imaging"^^<http://www.w3.org/2001/XMLSchema#string> , "Perfusion"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-31T21:39:22.335Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Biomedical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44744"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "f9712761-19f1-4bec-ba8b-6b7a138c4d7c"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:dcb97e08-6190-423b-bd62-244661687fb8"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-25T16:16:21Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/v9/35/33/cnv9353355> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "mchoi3@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-31T14:39:21Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Being able to characterize and assess hemodynamics in patients is regarded as essential in understanding vascular and tissue health for diagnostic purposes. There are many parameters associated with hemodynamics such as intravascular pressure, flow rates and perfusion rates, which are important in conditions such as atherosclerosis, ulcers, ischemia, and cancer. Standardized clinical methods have been established to assess some of these properties. Nevertheless, there are limitations to these techniques. Specifically, there are no suitable noninvasive methods to measure blood pressure in small vessels nor to assess the status of perfusion of microvasculature in deep tissues without contrast agents. This thesis introduces methods of using photoacoustic-ultrasound dual imaging technique to provide a label-free and non-invasive method to quantify blood pressures in micro-vessels and re-perfusion rates in subsurface tissue regions. When a compressive force is applied to a section of an arm of a patient, the cross-sectional lumen area of vessels decrease as the force increases eventually causing them to collapse. The change in the area is detected by photoacoustic imaging and the applied pressure is measured synchronously. The internal pressure is estimated by fitting the detected area and pressure onto a mathematical model. The extent of the modelâs use is further investigated by fitting the model to a data obtained from simulations of finite element models of thick-walled tube and a human arm. Additional mathematical models, one derived from constitutive equations and another modified from the original fitting model are also used to fit the models to a simulated data for comparisons and to find the extent of their applicability with different loading processes. We also show methods to estimate re-perfusion rates through photoacoustic-ultrasound dual imaging. To maintain the region of interest where re-perfusion is being tracked, the amount of displacement during compression is estimated by ultrasound displacement tracking algorithm. This is used to show the estimation of re-perfusion rates for tissues in the subsurface regions. This thesis aims to introduce and investigate these estimation methods that may have potential application for diagnostic purposes."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Estimation of Blood Pressure and Perfusion Rates with Ultrasound and Photoacoustic Imaging"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/x5/1h/j6/c4x51hj673/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/x5/1h/j6/c4x51hj673/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/x5/1h/j6/c4x51hj673/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c4/x5/1h/j6/c4x51hj673/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

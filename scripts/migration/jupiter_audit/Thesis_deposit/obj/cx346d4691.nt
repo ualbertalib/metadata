@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2017-12-21T21:53:28.043Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/47/2f/b5/dd/472fb5dd-ccc1-4b09-b210-62492faefd70> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Pennetta de Oliveira_Leonardo_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Zeng, Hongbo (Chemical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Liu, Qi (Chemical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Soares, Joao B.P (Chemical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Narain, Ravin (Chemical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:22:43.9Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:06:49.923Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:modified "2017-12-21T21:59:33.029Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "chitosan"^^<http://www.w3.org/2001/XMLSchema#string> , "flocculants"^^<http://www.w3.org/2001/XMLSchema#string> , "tailings"^^<http://www.w3.org/2001/XMLSchema#string> , "dewater"^^<http://www.w3.org/2001/XMLSchema#string> , "polyacrylamide"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:specialization "Chemical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44617"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "4857853a-89f4-49d5-948a-9aaa61d00792"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:06876f07-c4df-471e-9775-6d65d16ba8c2"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-21T14:53:27Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b1662> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "loliveir@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-21T14:59:32Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Bitumen has been extensively extracted from oil sands through the Clark Hot Water Extraction (CHWE) process. This extraction process uses hot water and alkaline conditions to remove bitumen from oil sands ores. The tailings produced by this process are mixtures of sand, clays, residual bitumen, and salts in alkaline aqueous medium. The mining industry is currently facing increasing challenges to reduce tailings production and to reclaim the land already occupied by legacy tailing ponds.  Tailings are disposed in open pits that are called tailing ponds, which are toxic for the environment and use large areas that are difficult to reclaim. Synthetic flocculants have been used to dewater mature fine tailings (MFT), which are the denser tailings produced by the bitumen extraction process. Unfortunately, there is no current technology that can effectively dewater MFT to the desired minimum levels of 70 wt.% solids content because commercial flocculants still retain considerable amounts of water in the sediments. Mature fine tailings need to be dewatered to reduce the environmental impact caused by oil sands extraction. Polymer flocculants are commonly used to accelerate this process. Biopolymers such as chitosan have been used to treat different types of wastewater, but not MFT. This work investigates the use of chitosan-based flocculants as an alternative to dewater MFT, due to their ability to retain less water in the sediments and their lower toxicity.  In this work, we modified chitosan, a naturally occurring biopolymer, with 3-chloro-2-hydroxypropyl trimethylammonium chloride (Chito-CTA), and also grafted polyacrylamide (PAM) to chitosan (Chito-g-PAM). We compared the dewatering performance of these two flocculants with that of a commercial cationic polyacrylamide (C-PAM). Chito-CTA and Chito-g-PAM flocculated tailings at rates of 18.27 m/h and 20.72 m/h, respectively. The dewatering ability of Chito-CTA and Chito-g-PAM, measured in terms of capillary suction time, was below 10 seconds, whereas the value for C-PAM was 82.3 seconds at optimum dosage. The turbidity of the supernatant obtained after flocculation with Chito-CTA or Chito-g-PAM was below 10 NTU, while C-PAM produced turbid supernatants. We also studied the effect of flocculant microstructure on the specific resistance to filtration of the sediments. Chito-g-PAM produced sediments with the lowest resistance, 2.99Ã1012 m/kg, while C-PAMâs sediments had a much higher resistance of 40.26Ã1012 m/kg. We also used focussed beam reflectance measurement (FBRM) technique to determine floc size evolution, floc stability, and time required to induce floc formation. Our results indicate that chitosan-based polymers may be successfully used to treat oil sands mature fine tailings."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Chitosan-Based Flocculants for Mature Fine Tailings Treatment"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/34/6d/46/cx346d4691/fcr:export?format=jcr/xml> .

@@ -166,7 +166,7 @@ class Data(object):
                                 #file.write("Predicate is not in the object graph: " + "\t" + uri + "\t" + " | " + v + "\n")
                     if r not in self.Jupiter_noids:
                         print (r)
-                        self.filename = "results/{0}/{1}.nt".format(self.objectType, r)
+                        self.filename = "results/notInJupiter/{0}/{1}.nt".format(self.objectType, r)
                         self.results[r].serialize(destination=self.filename, format='nt')
                     else:
                         self.filename1 = "results/inJupiter/{0}/{1}.nt".format(self.objectType, r)

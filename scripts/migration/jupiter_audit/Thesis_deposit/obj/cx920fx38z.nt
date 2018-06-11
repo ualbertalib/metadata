@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/08/78/5a/af/08785aaf-b184-449f-9330-ab65749a9fe1> ;
+	model:createdDate "2017-10-27T21:18:32.414Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Masele_Frank_M_201710_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Garvie-Lok, Sandra (Anthropology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Harrington, Lesley (Anthropology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Losey, Robert (Anthropology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Murray, Alison (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Morin, Eugene (Anthropology, Trent University) - external examiner"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:30:14.951Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:16:47.602Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Middle Stone Age"^^<http://www.w3.org/2001/XMLSchema#string> , "Paleolithic"^^<http://www.w3.org/2001/XMLSchema#string> , "Zooarchaeology"^^<http://www.w3.org/2001/XMLSchema#string> , "Hunting"^^<http://www.w3.org/2001/XMLSchema#string> , "Scavenging"^^<http://www.w3.org/2001/XMLSchema#string> , "Modern Human Origins"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-10-31T22:01:02.441Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44549"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "d6a83f68-fb58-4de0-92ac-3f479a25be73"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:1b34bbfc-76b2-4c06-85a4-66a5f6d014d9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-10-30T13:44:50Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c7/h1/49/q3/c7h149q33x> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-10-31T14:25:59Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The nature of Middle Stone Age (MSA) hominin foraging ecology in Africa is still hotly debated. In particular, MSA people have been portrayed as ineffective hunters of large-sized, prime-adults, and dangerous animals. They are rather seen as passive scavengers of carnivore-defleshed carcasses only to enjoy surviving scraps of meat and bone marrow. This study examined MSA hominin foraging economy at the Loiyangalani open-air site and Magubike rockshelter in Tanzania within the broad concept of the emergence of modern human behaviour. The taphonomy of the faunal assemblages was initially evaluated, followed by a zooarchaeological interpretation of the results guided by the diet breadth and published experimental and ethnoarchaeological datasets. Multivariate taphonomic analyses implicate MSA hominins as a key agent in the modification and accumulation of the faunal assemblages and carnivore played a marginal role.  MSA hominins exploited a broad spectrum of species, but bovids were the most abundant. They also included suids, that are dangerous prey, and equids, but both are present in relatively small proportions. MSA hominins mainly foraged on large-sized animals (size 3-4 bovids) and prime-aged adults and these were the key sources of meat and marrow. Overall, there appears to be a greater focus on medium-sized ungulates (size 3 bovids). Frequently hunted prey also included size 4 bovids. The proportions of prime-adults are above 70% at both sites. Small-sized (size 1-2 bovids) animals were also exploited to maximize the foraging net return rates, but only in relatively small quantities. These were added to the broadening diet breadth especially when encounters with the large-sized (size 3-4 bovids) animals over the landscape declined. Fish, tortoises, and birds also supplemented the optimal diet. There is also clear evidence that fish and tortoises were exploited at Loiyangalani. A general characteristic noted at both sites is the rarity of the cranial and lower limb bones. Regarding the intensity of carcasses processing, there is also evidence at both sites that MSA hominins transported and processed complete or relatively complete carcasses. The overall incidence of cut marks is 10% and 8% in the Loiyangalani and Magubike faunal assemblages respectively. The majority of the cut-marked elements are the high meat and marrow-bearing long bones. The facts that sharp-edged flakes constitute considerable portions of the MSA lithic assemblage at both sites certainly were used in the manipulation of the meat-bearing bones. The percentages of cut marks and percussion marks on long bone midshafts also fall within the range of variation documented in experimental studies replicating hominin primary (early) access to fully-fleshed carcasses. The axial elements and the midshaft sections of the upper limb bones (ULB) and the intermediate limb bones (ILB) that commonly preserve no scraps of meat after consumption by carnivores, bear more cut marks than tooth marks. Carnivore tooth marks are incredibly rare and only at approximately 6% and 1.5% in the Loiyangalani and Magubike faunal assemblage respectively. The percentages of tooth marks on long bone midshafts indicate that carnivores had the secondary (late) intervention to the bone fragments discarded at the sites. The new findings from Loiyangalani site and Magubike support the view that scavenging was not the main mode of prey procurement."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Middle Stone Age Hominin Foraging Ecology in Tanzania: An Archaeozoological Study of the Loiyangalani Open-Air Site and Magubike Rockshelter"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/92/0f/x3/cx920fx38z/fcr:export?format=jcr/xml> .

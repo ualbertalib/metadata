@@ -1,0 +1,100 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	model:createdDate "2017-11-29T19:38:20.298Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c9/bb/7a/6d/c9bb7a6d-68e5-4f5a-ada5-62cf70e9ef00> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Robinne_FrancoisNicolas_201711_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Dr. Mike D. Flannigan (Renewable Resources)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Marc-AndrÃ© Parisien (Canadian Forest Service)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Carol Miller (Aldo Leopold Wilderness Research Institute)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Robert Grant (Renewable Resources)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Uldis Silins (Renewable Resources)"^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Alicia Kinoshita (San Diego State University)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Robinne, F.-N.; Miller, C.; Parisien, M.-A.; Emelko, M.B.; Bladon, K.D.; Silins, U.; Flannigan, M. A Global Index for Mapping the Exposure of Water Resources to Wildfire. Forests 2016, 7, 22Robinne, F.-N., Bladon, K.D., Miller, C., Parisien, M.-A., Mathieu, J., and Flannigan, M.D. 2018. A spatial evaluation of global wildfire-water risks to human and natural systems. Sci. Total Environ. 610â611: 1193â1206. Elsevier B.V. doi:10.1016/j.scitotenv.2017.08.112.Robinne, F., Parisien, M.-A., and Flannigan, M.D. 2016. Anthropogenic influence on wildfire activity in Alberta, Canada. Int. J. Wildl. Fire 25: 1131â1143."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:51:22.466Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:45:25.116Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:modified "2017-12-12T22:27:21.008Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "wildfire"^^<http://www.w3.org/2001/XMLSchema#string> , "water security"^^<http://www.w3.org/2001/XMLSchema#string> , "global change"^^<http://www.w3.org/2001/XMLSchema#string> , "DPSIR framework"^^<http://www.w3.org/2001/XMLSchema#string> , "natural hazard"^^<http://www.w3.org/2001/XMLSchema#string> , "fire risk"^^<http://www.w3.org/2001/XMLSchema#string> , "global scale"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:specialization "Forest biology and management"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44582"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "6d273d8a-70e8-453f-84c1-121c38d322c4"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:775176ed-0e56-49aa-8a00-3ff1c69498ab"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-07T09:09:46Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc139> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "robinne@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-12T15:27:20Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Water security is one of the main paradigms presently shaping global water governance. At its very core, water security aims at preserving freshwater resources from any form of risk, natural or human-caused, that could imperil or further delay the stability and the sustainability of societies and ecosystems. The adoption of the Sustainable Development Goals has acknowledged this paradigm as a key avenue towards the alleviation of poverty, the promotion of gender equality, the universal access to sanitation, and the protection of natural environments. However, reaching a universal water secure state, a harsh endeavor in itself, has been further complicated by the pervasive effects of global environmental change, among which widespread climate anomalies and population growth represent the main hurdles. The instability caused by environmental change has led to the emergence of risk situations that have never been encountered before and for which global analysis tools and governance strategies have yet to be designed.  Wildland fires are one of the most important natural drivers of vegetation dynamics at the surface of the globe. In many parts of the world, global environmental change has led to more conducive fire weather patterns combined with a higher ignition frequency due to landscape anthropization. This situation has increased the occurrence, extent, and severity of catastrophic wildfires in many areas critical for the provision of surface freshwater supplies to downstream human and natural communities. Although fire-caused alterations of the hydrological cycle have been recognized for a long time, the upsurge of extensive and severe blazes in many basinsâ headwaters has shed light on the exposure of downstream populations and aquatic ecosystems to post-fire hydrogeomorphic hazards, such as floods or nutrient pollution. Exposed assets are therefore made vulnerable to harmful consequences such as the degradation of environmental flows, the disruption of the drinking-water supply, or the destruction of infrastructures. The emergence of wildfire-related risks to freshwater resources is thus becoming a new challenge to add to the long list of threats to water security, and solving this issue will not be done without innovative research efforts.  The research presented hereafter offers the first global exploration of wildfire risks to water security. The resulting work offers three main outcomes. First, it widens the water security paradigm by demonstrating the growing danger that wildfires represent to the freshwater supply. Secondly, it provides an efficient and highly flexible risk analysis framework to researchers, managers, and policy-makers involved in the resolution of water security matters and the design of disaster risk reduction strategies. Finally, it proposes a reflection on the deleterious, though often overlooked, emerging effects of global environmental change affecting the interactions between fire activity and the hydrologic cycle. This work will hopefully help to better guide global water governance by acknowledging the extensive and potentially dangerous effects of wildfires on socio-hydrological systems."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "More people, more fire, less water: exploring wildfire risks to water security in a changing world"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z/fedora3foxml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z> fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c0/v8/38/10/c0v838108z/fcr:export?format=jcr/xml> .

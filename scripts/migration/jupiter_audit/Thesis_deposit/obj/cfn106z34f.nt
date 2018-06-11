@@ -1,0 +1,99 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/n1/06/z3/cfn106z34f> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a9/80/f2/88/a980f288-9455-4835-96e2-44164974ea45> ;
+	model:createdDate "2018-01-19T21:16:44.891Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Gregoris_Amanda_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Cooke, Janice EK (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hall, Jocelyn C (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Scarpella, Enrico (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Harris, Neil (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:35:51.585Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:23:55.227Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "white spruce"^^<http://www.w3.org/2001/XMLSchema#string> , "picea glauca"^^<http://www.w3.org/2001/XMLSchema#string> , "winter dormancy"^^<http://www.w3.org/2001/XMLSchema#string> , "bud formation"^^<http://www.w3.org/2001/XMLSchema#string> , "bud development"^^<http://www.w3.org/2001/XMLSchema#string> , "MADS-box"^^<http://www.w3.org/2001/XMLSchema#string> , "SHORT VEGETATIVE PHASE"^^<http://www.w3.org/2001/XMLSchema#string> , "AGAMOUS-LIKE 24"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-22T20:37:13.186Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Plant Biology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44715"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "66f6c949-ebe8-4450-9a2d-4334121b3ba9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:2e61ef4e-1139-44e1-be52-d210a432777a"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-19T14:16:44Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/ck/35/69/48/ck3569487s> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "gregoris@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T13:37:12Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "An important part of the annual growth cycle of white spruce (Picea glauca [Moench.] Voss; Pg) trees is the transition from active growth to dormancy, which confers protection against the potentially destructive environmental elements of winter.  Terminal bud formation and cessation of meristemic growth is a precursor to dormancy induction.  Environmental cues, such as photoperiod, temperature, water stress and phytohormones influence the progression of bud development and growth cessation.  In angiosperms, SHORT VEGETATIVE PHASE (SVP) genes have been implicated in the control of bud formation, growth cessation and dormancy induction.  However, the roles of SVP-like genes in white spruce and other conifers have yet to be investigated in this context. We identified a suite of white spruce genes with sequence similarity to SVP genes and explored whether these genes have a role in bud formation.  To determine the white spruce genes that are mostly closely related to angiosperm SVP and SVP-like genes, we constructed a phylogenetic tree using nucleotide and deduced amino acid sequences from a range of land plants.  This analysis showed that seven white spruce genes form a sister clade with both SVP-like sequences and the closely related AGAMOUS-LIKE 24-like (AGL24-like) sequences from angiosperm species.  Based on this evolutionary relationship, we have called these white spruce genes PgSVP/AGL24-like (PgSAL).  Transcriptional profiling revealed that the seven PgSAL genes plus the more distantly related GQ03118_H14 exhibited three major expression patterns, with five of the seven PgSAL genes showing declining expression at later time points.  Based on transcriptional data, the genes that are most likely to be involved in regulating bud formation and/or growth cessation are PgSAL1, PgSAL2, PgSAL3, PgSAL4, and PgSAL5. Based on these expression profiles, we selected two PgSAL genes for further functional characterization through identifying factors that regulate their expression.  We targeted the promoter sequences of PgSAL1 and PgSAL5 to identify potential upstream regulators.  In silico characterization revealed potential transcription factor binding sites in the PgSAL1 and putative PgSAL5 promoters that may be regulated by environmental cues associated with bud formation and growth cessation, such as low temperatures, light, water stress and hormones (abscisic acid, ethylene, cytokinin, gibberellins and auxin).  DNA-protein interactions as determined by yeast one-hybrid revealed that the promoter of PgSAL1 gene showed interactions consistent with a function in the bud formation pathways conserved with the angiosperm photoperiodic pathway.  The putative PgSAL5 promoter is regulated by factors that suggest a role outside of bud formation, based on the angiosperm model.  Both the PgSAL1 and putative PgSAL5 promoters were regulated by transcription factors that participate in regulatory networks of low temperature, the abscisic acid response, plant defense and/or secondary growth.   A subset of transcription factor binding sites suggest that PgSAL1 and PgSAL5 could be regulated by the defense pathway, which may indicate novel roles for these genes outside of the phase transition from active growth to dormancy.   We demonstrate that white spruce SAL genes are homologous to angiosperm SVP and AGL24 genes, and propose that a subset of these genes have roles in the bud formation processes that precede winter dormancy based on expression patterns and associated upstream regulatory pathways, in addition to possible functions outside of bud formation."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Defining roles for SHORT VEGETATIVE PHASE/AGAMOUS-LIKE 24-like (SAL) genes in the activity-dormancy transitions of white spruce (Picea glauca) terminal buds"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/n1/06/z3/cfn106z34f/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/n1/06/z3/cfn106z34f/fedora3foxml> ;
+	fedora:exportsAs <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/n1/06/z3/cfn106z34f/fcr:export?format=jcr/xml> .
+
+<http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/n1/06/z3/cfn106z34f/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
