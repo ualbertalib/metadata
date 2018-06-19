@@ -109,6 +109,8 @@ def main():
 			filename.add((s, URIRef('http://purl.org/dc/terms/accessRights'), URIRef('http://terms.library.ualberta.ca/public')))
 			#add depositor triple
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/depositor'), Literal('era@ualberta.ca')))
+			#add Internet Archives ID
+			filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
 		output = "out/%s.nt" %(uu_id)
 		filename.serialize(destination=output, format='nt')
 		
