@@ -3,6 +3,9 @@ from os import listdir
 from os.path import isfile, join
 import pymarc
 import json
+import time
+from datetime import datetime
+import requests
 from rdflib import Graph, URIRef, Literal
 import uuid
 
@@ -66,19 +69,14 @@ def main():
 				dat = get_institution(record, data, filename)
 				dat = get_date(record, data, filename)
 				dat = get_level(record, data, filename, mapp)[0]
-				# iterate over all desired fields (each one represents one of the arrays in fieldData)
 				write(dat[filename], output)
 	print(dat)
-	#for key in dat.keys():
-		#print(dat[key]['level'])
 
-	#print (m)
-
-	g = Graph()
+	uuids = get_Jupiter_noids()
 
 	for item in dat.keys():
 		#generate a random UUID
-		uu_id = str(uuid.uuid4())
+		uu_id = generate_uuid(uuids)
 		s = URIRef('%s/%s/%s/%s/%s/%s' %(fedora, uu_id[0:2], uu_id[2:4], uu_id[4:6], uu_id[6:8], uu_id))
 		filename = s[0:10]
 		#create a Graph for the item
@@ -113,10 +111,6 @@ def main():
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
 		output = "out/%s.nt" %(uu_id)
 		filename.serialize(destination=output, format='nt')
-		
-
-
-
 
 def get_subjects(record, data, filename):
 	for fieldNum in ['600', '610', '650', '651']:
@@ -207,12 +201,30 @@ def get_level(record, data, filename, mapp):
 								data[filename]['level'].append(subfield[1])
 
 	return(data, mapp)
+
 def write(dat, output):
 	for subject in dat['subject']:
 			dat['subject'][subject] = '--'.join(dat['subject'][subject])
-	#dat.append(dat)
 	return(dat)
 
+
+def get_Jupiter_noids():
+	response = requests.get('http://solrcloud.library.ualberta.ca:8080/solr/jupiter/select?fl=id&fq=has_model_ssim:("IRCommunity" OR "IRCollection" OR "IRItem" OR "IRThesis")&indent=on&q=id:*&rows=10000&wt=json').json()
+	jupiter_items = response['response']['numFound']
+	print ('As of %s there are %s items in Jupiter' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), jupiter_items))
+	uuids = []
+	for item in response['response']['docs']:
+		if item['id'] not in uuids:
+			uuids.append(item['id'])
+
+	return (uuids)
+
+def generate_uuid(uuids):
+	uu_id = str(uuid.uuid4())
+	if uu_id not in uuids:
+		return (uu_id)
+	else:
+		generate_uuid(uuids)
 
 if __name__ == "__main__":
 	main()
