@@ -3,6 +3,8 @@ from os import listdir
 from os.path import isfile, join
 import pymarc
 import json
+from rdflib import Graph, URIRef, Literal
+import uuid
 
 thesisLevel = [
 	{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
@@ -12,6 +14,29 @@ thesisLevel = [
 	{"uri": "http://purl.org/spar/fabio/DoctoralThesis",
 	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"]}]
 
+Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
+	"mapping": ["title"]},
+	{"uri": "http://terms.library.ualberta.ca/graduationDate",
+	"mapping": ["graduation_date"]},
+	{"uri": "http://terms.library.ualberta.ca/dissertant",
+	"mapping": ["dissertant"]},
+	{"uri": "http://terms.library.ualberta.ca/department",
+	"mapping": ["department"]},
+	{"uri": "http://ontoware.org/swrc/ontology#institution",
+	"mapping": ["institution"]},
+	{"uri": "http://terms.library.ualberta.ca/thesisLevel",
+	"mapping": ["level"]},
+	{"uri": "http://purl.org/dc/elements/1.1/subject",
+	"mapping": ["subject"]}]
+
+institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
+	"mapping": ["University of Alberta", "U of A"]},
+	{"uri": "http://id.loc.gov/authorities/names/n2009054054",
+	"mapping": ["St. Stephen's College"]}]
+
+fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
+collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
+
 
 def main():
 	mypath = "/home/danydvd/git/remote/metadata/scripts/ia/files/xml/"
@@ -20,6 +45,7 @@ def main():
 	mapp = []
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
+			filename = filename.replace('_marc.xml', '')
 			reader = pymarc.marcxml.parse_xml_to_array(xml)
 			# a place to store the fieldData
 			data[filename] = {
@@ -42,11 +68,52 @@ def main():
 				dat = get_level(record, data, filename, mapp)[0]
 				# iterate over all desired fields (each one represents one of the arrays in fieldData)
 				write(dat[filename], output)
-	print((dat))
+	print(dat)
 	#for key in dat.keys():
 		#print(dat[key]['level'])
 
 	#print (m)
+
+	g = Graph()
+
+	for item in dat.keys():
+		#generate a random UUID
+		uu_id = str(uuid.uuid4())
+		s = URIRef('%s/%s/%s/%s/%s/%s' %(fedora, uu_id[0:2], uu_id[2:4], uu_id[4:6], uu_id[6:8], uu_id))
+		filename = s[0:10]
+		#create a Graph for the item
+		filename = Graph()
+		for key in dat[item].keys():
+			for mapp in Jupiter_predicates:
+				if key in mapp["mapping"]:
+					p = URIRef(mapp["uri"])
+			if isinstance(dat[item][key], list) and len(dat[item][key]) > 0:
+				obj = dat[item][key][0]
+				for mapp in institution:
+					if obj in mapp['mapping']:
+						obj = mapp["uri"]
+				if 'http://' in obj:
+					o = URIRef(obj)
+				else:
+					o = Literal(obj)
+				filename.add((s, p, o))
+			elif isinstance(dat[item][key], dict):
+				for k in dat[item][key].keys():
+					o = Literal(dat[item][key][k])
+					filename.add((s, p, o))
+			#add Model
+			filename.add((s, URIRef('info:fedora/fedora-system:def/model#hasModel'), Literal('IRThesis')))
+			#add collection triple
+			filename.add((s, URIRef('http://pcdm.org/models#memberOf'), URIRef(collection)))
+			#add accessRights
+			filename.add((s, URIRef('http://purl.org/dc/terms/accessRights'), URIRef('http://terms.library.ualberta.ca/public')))
+			#add depositor triple
+			filename.add((s, URIRef('http://terms.library.ualberta.ca/depositor'), Literal('era@ualberta.ca')))
+		output = "out/%s.nt" %(uu_id)
+		filename.serialize(destination=output, format='nt')
+		
+
+
 
 
 def get_subjects(record, data, filename):
@@ -75,7 +142,7 @@ def get_title(record, data, filename):
 	return(data)
 
 def get_author(record, data, filename):
-	for fieldNum in ['245', '100', '110']:
+	for fieldNum in ['100', '110', '245']:
 		# if the desired field exists in this marc record, access it
 		if fieldNum in record:
 			# iterate over the subfield in this field
@@ -84,9 +151,9 @@ def get_author(record, data, filename):
 					if (subfield[0] == 'a' or subfield[0] == 'b') and (fieldNum == '100' or fieldNum == '110'):
 					# append this subfield value to the correct field data in the record bucket
 						data[filename]['dissertant'].append(subfield[1].replace('.', ''))
-					'''if len(data[filename]['dissertant']) == 0:
-						if (subfield[0] == 'c') and (fieldNum == '245'):
-							data[filename]['dissertant'].append(subfield[1].replace('.', ''))'''
+				if len(data[filename]['dissertant']) == 0:
+					if (subfield[0] == 'c') and (fieldNum == '245'):
+						data[filename]['dissertant'].append(subfield[1].replace('.', ''))
 	return(data)
 
 def get_institution(record, data, filename):
