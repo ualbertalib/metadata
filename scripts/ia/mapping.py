@@ -29,6 +29,8 @@ Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
 	"mapping": ["institution"]},
 	{"uri": "http://terms.library.ualberta.ca/thesisLevel",
 	"mapping": ["level"]},
+	{"uri": "http://purl.org/ontology/bibo/ThesisDegree",
+	"mapping": ["degree"]},
 	{"uri": "http://purl.org/dc/elements/1.1/subject",
 	"mapping": ["subject"]}]
 
@@ -59,6 +61,7 @@ def main():
 						'department': [],
 						'institution': [],
 						'level': [],
+						'degree': [],
 						'abstract': []
 						}
 
@@ -191,14 +194,18 @@ def get_level(record, data, filename, mapp):
 						if subfield[0] == 'a':
 							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
 							level = re.sub(r'[0-9]+', '', level)
+							#generate thesis level mapping
 							#if level not in mapp:
 							#	mapp.append(level)
 							for i in thesisLevel:
 								if level in i['mapping']: 
 									data[filename]['level'].append(i['uri'])
+									data[filename]['degree'].append(i['uri'])
 									break
 							if len(data[filename]['level']) == 0:
 								data[filename]['level'].append(subfield[1])
+							if len(data[filename]['degree']) == 0:
+								data[filename]['degree'].append(subfield[1])
 
 	return(data, mapp)
 
