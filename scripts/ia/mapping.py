@@ -322,7 +322,7 @@ def write(dat, output):
 							#print ('1', level)
 							#generate thesis level mapping
 							#if level not in mapp:
-							#	mapp.append(level)
+							#mapp.append(level)
 							for i in thesisLevel:
 								#if the mapping exists use the uri
 								if level in i['mapping']: 
