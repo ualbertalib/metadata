@@ -61,6 +61,7 @@ def main():
 	output = []
 	data = {}
 	mapp = []
+	uuids = get_Jupiter_noids()
 	departments = get_department()
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
@@ -90,10 +91,6 @@ def main():
 				dat = get_level(record, data, filename)
 				if len(dat[filename]['degree']) == 0:
 					dat = get_degree(record, data, filename, dep, departments)
-				write(dat[filename], output)
-	#print(m)
-
-	uuids = get_Jupiter_noids()
 
 	for item in dat.keys():
 		#generate a random UUID
@@ -128,9 +125,11 @@ def main():
 			filename.add((s, URIRef('http://purl.org/dc/terms/accessRights'), URIRef('http://terms.library.ualberta.ca/public')))
 			#add depositor triple
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/depositor'), Literal('era@ualberta.ca')))
+			#add license triple
+			filename.add((s, URIRef('http://purl.org/dc/elements/1.1/rights'), Literal('This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law.')))
 			#add Internet Archives ID
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
-		output = "out/%s.nt" %(uu_id)
+		output = "out/%s.nt" %(item)
 		filename.serialize(destination=output, format='nt')
 
 def get_subjects(record, data, filename):
@@ -216,7 +215,7 @@ def get_level(record, data, filename):
 						if subfield[0] == 'a':
 							#remove extra text from the subfield 
 							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
-							level = re.sub(r'[0-9]+', '', level)
+							level = re.sub(r'[0-9]+', '', level).lstrip()
 							#print ('1', level)
 							#generate thesis level mapping
 							#if level not in mapp:
@@ -258,6 +257,8 @@ def get_degree(record, data, filename, department, departments):
 															degree = departments[key][n]
 															data[filename]['degree'].append(degree)
 															break
+							if len(data[filename]['degree']) == 0:
+								data[filename]['degree'].append(subfield[1])
 
 	return(data)
 
@@ -271,15 +272,8 @@ def get_notes(record, data, filename):
 					#appending the date field (graduation date)
 						if subfield[0] == 'a':
 							if 'for the degree of' in subfield[1]:
-								data[filename]['degree'].append(subfield[1].split('for the degree of ')[1])
-
+								data[filename]['degree'].append((subfield[1].split('for the degree of ')[1]).split(',')[0])
 	return(data)
-
-def write(dat, output):
-	for subject in dat['subject']:
-			dat['subject'][subject] = '--'.join(dat['subject'][subject])
-	return(dat)
-
 
 def get_Jupiter_noids():
 	#query Jupiter solr for all UUIDs (community, collection, Item and thesis)
