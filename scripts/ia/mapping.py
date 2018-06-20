@@ -9,12 +9,22 @@ import requests
 from rdflib import Graph, URIRef, Literal
 import uuid
 
-thesisLevel = [
-	{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
+degree_level = [{'useForm': "Bachelor of Science",
+	'mapping': ['B. Sc.', 'B.Sc.', 'BSc.', 'B.S.', 'BS']},
+	{'useForm': "Bachelor of Education",
+	'mapping': ['B. Ed.', 'B.Ed.', 'BEd.']},
+	{'useForm': "Master of Science",
+	'mapping': ['M. Sc.', 'M.Sc.', 'MSc.', 'M.S.']},
+	{'useForm': "Master of Arts",
+	'mapping': ['M. A.', 'M.A.', 'MA.', 'M.A']},
+	{'useForm': "Doctoral of Philosophy",
+	'mapping': ["Doctoral", "Ph.D.", "Ph. D.", "PhD"]}]
+
+thesisLevel = [{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
 	"mapping": ["B.Ed.", "B. Ed.", "B. Div.", "B.Div.", "B.D."],
 	"useForm": "Bachelor"},
 	{"uri": "http://purl.org/spar/fabio/MastersThesis",
-	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.A.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.'],
+	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.'],
 	"useForm": "Master"},
 	{"uri": "http://purl.org/spar/fabio/DoctoralThesis",
 	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"],
@@ -71,15 +81,17 @@ def main():
 
 			for record in reader:
 				dat = get_subjects(record, data, filename)
+				dat = get_notes(record, data, filename)
 				dat = get_title(record, data, filename)
 				dat = get_author(record, data, filename)
 				dat = get_institution(record, data, filename)[0]
 				dep = get_institution(record, data, filename)[1]
 				dat = get_date(record, data, filename)
-				dat = get_level(record, data, filename, dep, departments, mapp)[0]
-				m = get_level(record, data, filename, dep, departments, mapp)[1]
+				dat = get_level(record, data, filename)
+				if len(dat[filename]['degree']) == 0:
+					dat = get_degree(record, data, filename, dep, departments)
 				write(dat[filename], output)
-	print(m)
+	#print(m)
 
 	uuids = get_Jupiter_noids()
 
@@ -193,7 +205,7 @@ def get_date(record, data, filename):
 							data[filename]['graduation_date'].append(subfield[1])
 	return(data)
 
-def get_level(record, data, filename, department, departments, mapp):
+def get_level(record, data, filename):
 	for fieldNum in ['502']:
 		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
@@ -207,32 +219,61 @@ def get_level(record, data, filename, department, departments, mapp):
 							level = re.sub(r'[0-9]+', '', level)
 							#print ('1', level)
 							#generate thesis level mapping
-							if level not in mapp:
-								mapp.append(level)
+							#if level not in mapp:
+							#	mapp.append(level)
 							for i in thesisLevel:
 								#if the mapping exists use the uri
 								if level in i['mapping']: 
 									data[filename]['level'].append(i['uri'])
-									if department != '':
-										#print ('2', department)
-										for key in departments.keys():
-											if department in key:
-										#		print ("3", key)
-												for n, deg in enumerate(departments[key]):
-													if i['useForm'] in deg:
-														degree = departments[key][n]
-														data[filename]['degree'].append(degree)
-														print (degree, level, department)
-														break
-										#degree = i['useForm'] + department.replace('Faculty of ', '').replace('Dept of ', '').replace('Department of ', '').replace('College of ', '')
-									else:
-										data[filename]['level'].append(i['useForm'])
-									break
-								#if the mapping does not exist use the original text
 							if len(data[filename]['level']) == 0:
 								data[filename]['level'].append(subfield[1])
 
-	return(data, mapp)
+	return(data)
+
+def get_degree(record, data, filename, department, departments):
+	for fieldNum in ['502']:
+		#if the desired field exists in this marc record, access it
+		if fieldNum in record:
+			#iterate over the subfield in this field
+			for field in record.get_fields(fieldNum):
+				for subfield in field:
+					# append this subfield value to the correct field data in the record bucket
+						if subfield[0] == 'a' or  subfield[0] == 'b':
+							#remove extra text from the subfield 
+							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
+							level = re.sub(r'[0-9]+', '', level).lstrip()
+							for i in degree_level:
+								if level in i['mapping']:
+									data[filename]['degree'].append(i['useForm'])
+									break
+							if len(data[filename]['degree']) == 0:
+								for i in thesisLevel:
+									#if the mapping exists use the uri
+									if level in i['mapping']: 
+										if department != '':
+											for key in departments.keys():
+												if department in key:
+													for n, deg in enumerate(departments[key]):
+														if i['useForm'] in deg:
+															degree = departments[key][n]
+															data[filename]['degree'].append(degree)
+															break
+
+	return(data)
+
+def get_notes(record, data, filename):
+	for fieldNum in ["500"]:
+		#if the desired field exists in this marc record, access it
+		if fieldNum in record:
+			#iterate over the subfield in this field
+			for field in record.get_fields(fieldNum):
+				for subfield in field:
+					#appending the date field (graduation date)
+						if subfield[0] == 'a':
+							if 'for the degree of' in subfield[1]:
+								data[filename]['degree'].append(subfield[1].split('for the degree of ')[1])
+
+	return(data)
 
 def write(dat, output):
 	for subject in dat['subject']:
