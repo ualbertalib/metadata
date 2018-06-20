@@ -11,11 +11,14 @@ import uuid
 
 thesisLevel = [
 	{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
-	"mapping": ["B.Ed.", "B. Ed.", "B. Div.", "B.Div.", "B.D."]},
+	"mapping": ["B.Ed.", "B. Ed.", "B. Div.", "B.Div.", "B.D."],
+	"useForm": "Bachelor"},
 	{"uri": "http://purl.org/spar/fabio/MastersThesis",
-	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.A.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.']},
+	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.A.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.'],
+	"useForm": "Master"},
 	{"uri": "http://purl.org/spar/fabio/DoctoralThesis",
-	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"]}]
+	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"],
+	"useForm": "Doctoral"}]
 
 Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
 	"mapping": ["title"]},
@@ -48,6 +51,7 @@ def main():
 	output = []
 	data = {}
 	mapp = []
+	departments = get_department()
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
 			filename = filename.replace('_marc.xml', '')
@@ -69,11 +73,13 @@ def main():
 				dat = get_subjects(record, data, filename)
 				dat = get_title(record, data, filename)
 				dat = get_author(record, data, filename)
-				dat = get_institution(record, data, filename)
+				dat = get_institution(record, data, filename)[0]
+				dep = get_institution(record, data, filename)[1]
 				dat = get_date(record, data, filename)
-				dat = get_level(record, data, filename, mapp)[0]
+				dat = get_level(record, data, filename, dep, departments, mapp)[0]
+				m = get_level(record, data, filename, dep, departments, mapp)[1]
 				write(dat[filename], output)
-	print(dat)
+	print(m)
 
 	uuids = get_Jupiter_noids()
 
@@ -142,70 +148,89 @@ def get_title(record, data, filename):
 
 def get_author(record, data, filename):
 	for fieldNum in ['100', '110', '245']:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for field in record.get_fields(fieldNum):	
 				for subfield in field:
 					if (subfield[0] == 'a' or subfield[0] == 'b') and (fieldNum == '100' or fieldNum == '110'):
-					# append this subfield value to the correct field data in the record bucket
+					#append the dissertant value
 						data[filename]['dissertant'].append(subfield[1].replace('.', ''))
+				#if the value could not be found in 100 or 110 then access it from the 245$c
 				if len(data[filename]['dissertant']) == 0:
 					if (subfield[0] == 'c') and (fieldNum == '245'):
 						data[filename]['dissertant'].append(subfield[1].replace('.', ''))
 	return(data)
 
 def get_institution(record, data, filename):
+	department = ''
 	for fieldNum in ['710']:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for field in record.get_fields(fieldNum):	
 				for subfield in field:
 					if subfield[0] == 'b':
-					# append this subfield value to the correct field data in the record bucket
+					#append the department
+						department = subfield[1].replace('Dept', 'Department').replace('.', '')
 						data[filename]['department'].append(subfield[1].replace('.', ''))
+					#append the institution 
 					if subfield[0] == 'a':
 						if subfield[1] not in data[filename]['institution']:
 							data[filename]['institution'].append(subfield[1].replace('.', ''))
 
-	return(data)	
+	return(data, department)	
 
 def get_date(record, data, filename):
 	for fieldNum in ['260', "264"]:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for field in record.get_fields(fieldNum):
 				for subfield in field:
-					# append this subfield value to the correct field data in the record bucket
+					#appending the date field (graduation date)
 						if subfield[0] == 'c':
 							data[filename]['graduation_date'].append(subfield[1])
 	return(data)
 
-def get_level(record, data, filename, mapp):
+def get_level(record, data, filename, department, departments, mapp):
 	for fieldNum in ['502']:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for field in record.get_fields(fieldNum):
 				for subfield in field:
 					# append this subfield value to the correct field data in the record bucket
 						if subfield[0] == 'a':
+							#remove extra text from the subfield 
 							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
 							level = re.sub(r'[0-9]+', '', level)
+							#print ('1', level)
 							#generate thesis level mapping
-							#if level not in mapp:
-							#	mapp.append(level)
+							if level not in mapp:
+								mapp.append(level)
 							for i in thesisLevel:
+								#if the mapping exists use the uri
 								if level in i['mapping']: 
 									data[filename]['level'].append(i['uri'])
-									data[filename]['degree'].append(i['uri'])
+									if department != '':
+										#print ('2', department)
+										for key in departments.keys():
+											if department in key:
+										#		print ("3", key)
+												for n, deg in enumerate(departments[key]):
+													if i['useForm'] in deg:
+														degree = departments[key][n]
+														data[filename]['degree'].append(degree)
+														print (degree, level, department)
+														break
+										#degree = i['useForm'] + department.replace('Faculty of ', '').replace('Dept of ', '').replace('Department of ', '').replace('College of ', '')
+									else:
+										data[filename]['level'].append(i['useForm'])
 									break
+								#if the mapping does not exist use the original text
 							if len(data[filename]['level']) == 0:
 								data[filename]['level'].append(subfield[1])
-							if len(data[filename]['degree']) == 0:
-								data[filename]['degree'].append(subfield[1])
 
 	return(data, mapp)
 
@@ -216,6 +241,7 @@ def write(dat, output):
 
 
 def get_Jupiter_noids():
+	#query Jupiter solr for all UUIDs (community, collection, Item and thesis)
 	response = requests.get('http://solrcloud.library.ualberta.ca:8080/solr/jupiter/select?fl=id&fq=has_model_ssim:("IRCommunity" OR "IRCollection" OR "IRItem" OR "IRThesis")&indent=on&q=id:*&rows=10000&wt=json').json()
 	jupiter_items = response['response']['numFound']
 	print ('As of %s there are %s items in Jupiter' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), jupiter_items))
@@ -227,11 +253,26 @@ def get_Jupiter_noids():
 	return (uuids)
 
 def generate_uuid(uuids):
+	#if the UUID exists in Jupiter, generate a new one
 	uu_id = str(uuid.uuid4())
 	if uu_id not in uuids:
 		return (uu_id)
 	else:
 		generate_uuid(uuids)
+
+def get_department():
+	department_levels = {}
+	response = requests.get('http://solrcloud.library.ualberta.ca:8080/solr/jupiter/select?fl=departments_tesim AND degree_ssim&fq=degree_ssim:[* TO *] AND departments_tesim:[* TO *]&indent=on&q=id:*&rows=10000&wt=json').json()
+	jupiter_items = response['response']['numFound']
+	for item in response['response']['docs']:
+		if item['departments_tesim'][0] not in department_levels.keys():
+			department_levels[item['departments_tesim'][0]] = []
+			department_levels[item['departments_tesim'][0]].append(item['degree_ssim'][0])
+		else:
+			if item['degree_ssim'][0] not in department_levels[item['departments_tesim'][0]]:
+				department_levels[item['departments_tesim'][0]].append(item['degree_ssim'][0])
+
+	return(department_levels)
 
 if __name__ == "__main__":
 	main()
