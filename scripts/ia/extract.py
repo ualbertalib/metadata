@@ -61,12 +61,14 @@ with open('overlaps.json', 'w') as over:
 with open('IA_only.json', 'w') as IAonly:
 	json.dump(IA_only, IAonly)
 
+print (len(IA_only), len(overlaps))
+
 os.chdir('files/')
-for itemid in IA_only.keys():
-	print ('downloading' + str(itemid))
+for index, itemid in enumerate(IA_only.keys()):
+	print (str(index) + ' of ' + str(len(IA_only)) + ' downloading' + str(itemid))
 	item = internetarchive.get_item(itemid)
-	marc = item.get_file(itemid + '_marc.xml')
+	marx = item.get_file(itemid + '_marc.xml')
 	meta = item.get_file(itemid + '_meta.xml')
-	print (marc)
-	#marc.download()
+	marc = item.get_file(itemid + '_meta.mrc')
+	marc.download()
 	#meta.download()
