@@ -23,7 +23,7 @@ def pull_NOIDs():
 	results = sparqlData.query().convert()['results']['bindings']
 	for triple in results:
 		ERA_IDs[triple['id']['value']] = triple['item']['value']
-	print ('As of %s there are %s Legacy thesis in triplestore' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), len(ERA_IDs)))
+	print ('As of %s there are %s thesis with unicorn in triplestore' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), len(ERA_IDs)))
 	#write to file
 	with open('ERA_IDs.json', 'w') as ERA:
 		json.dump(ERA_IDs, ERA)
@@ -91,6 +91,8 @@ def download(IA_only, file_type, work_dir):
 				file = item.get_file(itemid + '_meta.mrc')
 			elif i == 'xml':
 				file = item.get_file(itemid + '_marc.xml')
+			elif i == 'txt':
+				file = item.get_file(itemid + '_djvu.txt')
 			else:
 				file = item.get_file(itemid + '_meta.xml')
 			file.download()

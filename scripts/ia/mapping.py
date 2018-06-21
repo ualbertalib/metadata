@@ -13,7 +13,7 @@ import uuid
 
 work_dir = getcwd() 
 #download files that are not in Jupiter form Ineternet Archives
-#get_files(work_dir)
+get_files(work_dir)
 chdir(work_dir)
 
 def main():

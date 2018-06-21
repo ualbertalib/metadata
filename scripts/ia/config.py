@@ -41,9 +41,11 @@ institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
 	{"uri": "http://id.loc.gov/authorities/names/n2009054054",
 	"mapping": ["St. Stephen's College"]}]
 
-file_type = ['xml',
-	'marc',
-	'meta'
+file_type = [
+	#'xml',
+	#'marc',
+	#'meta',
+	'txt'
 	]
 sparql = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"
 IA_access = {'s3': {'access': 'C9khuFEwAKAj5Y5X', 'secret': '8s5NsWQzx1wTKfAd'}}
