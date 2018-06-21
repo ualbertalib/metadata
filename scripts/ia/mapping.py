@@ -1,74 +1,32 @@
 import re
-from os import listdir
-from os.path import isfile, join
+from os import listdir, getcwd, chdir, makedirs
+from os.path import isfile, join, exists
 import pymarc
 import json
 import time
 from datetime import datetime
 import requests
+from extract import get_files
 from rdflib import Graph, URIRef, Literal
+from config import degree_level, thesisLevel, Jupiter_predicates, institution, mypath, fedora, collection
 import uuid
 
-degree_level = [{'useForm': "Bachelor of Science",
-	'mapping': ['B. Sc.', 'B.Sc.', 'BSc.', 'B.S.', 'BS']},
-	{'useForm': "Bachelor of Education",
-	'mapping': ['B. Ed.', 'B.Ed.', 'BEd.']},
-	{'useForm': "Master of Science",
-	'mapping': ['M. Sc.', 'M.Sc.', 'MSc.', 'M.S.']},
-	{'useForm': "Master of Arts",
-	'mapping': ['M. A.', 'M.A.', 'MA.', 'M.A']},
-	{'useForm': "Doctoral of Philosophy",
-	'mapping': ["Doctoral", "Ph.D.", "Ph. D.", "PhD"]}]
-
-thesisLevel = [{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
-	"mapping": ["B.Ed.", "B. Ed.", "B. Div.", "B.Div.", "B.D."],
-	"useForm": "Bachelor"},
-	{"uri": "http://purl.org/spar/fabio/MastersThesis",
-	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.'],
-	"useForm": "Master"},
-	{"uri": "http://purl.org/spar/fabio/DoctoralThesis",
-	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"],
-	"useForm": "Doctoral"}]
-
-Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
-	"mapping": ["title"]},
-	{"uri": "http://terms.library.ualberta.ca/graduationDate",
-	"mapping": ["graduation_date"]},
-	{"uri": "http://terms.library.ualberta.ca/dissertant",
-	"mapping": ["dissertant"]},
-	{"uri": "http://terms.library.ualberta.ca/department",
-	"mapping": ["department"]},
-	{"uri": "http://ontoware.org/swrc/ontology#institution",
-	"mapping": ["institution"]},
-	{"uri": "http://terms.library.ualberta.ca/thesisLevel",
-	"mapping": ["level"]},
-	{"uri": "http://purl.org/ontology/bibo/ThesisDegree",
-	"mapping": ["degree"]},
-	{"uri": "http://purl.org/dc/elements/1.1/subject",
-	"mapping": ["subject"]}]
-
-institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
-	"mapping": ["University of Alberta", "U of A"]},
-	{"uri": "http://id.loc.gov/authorities/names/n2009054054",
-	"mapping": ["St. Stephen's College"]}]
-
-fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
-collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
+work_dir = getcwd() 
+#download files that are not in Jupiter form Ineternet Archives
+get_files(work_dir)
+chdir(work_dir)
 
 def main():
-	mypath = "/home/danydvd/git/remote/metadata/scripts/ia/files/xml/"
 	output = []
 	data = {}
 	mapp = []
-	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
-		with open(join(mypath, filename), 'rb') as xml:
 	uuids = get_Jupiter_noids()
 	departments = get_department()
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
 			filename = filename.replace('_marc.xml', '')
 			reader = pymarc.marcxml.parse_xml_to_array(xml)
-			# a place to store the fieldData
+			#a place to store the fieldData
 			data[filename] = {
 						'title': [],
 						'subject': {},
@@ -80,7 +38,7 @@ def main():
 						'degree': [],
 						'abstract': []
 						}
-
+			#get requried fields form each record
 			for record in reader:
 				dat = get_notes(record, data, filename)
 				dat = get_title(record, data, filename)
@@ -91,7 +49,7 @@ def main():
 				dat = get_level(record, data, filename)
 				if len(dat[filename]['degree']) == 0:
 					dat = get_degree(record, data, filename, dep, departments)
-
+	#create triples and write to file
 	for item in dat.keys():
 		#generate a random UUID
 		uu_id = generate_uuid(uuids)
@@ -129,31 +87,34 @@ def main():
 			filename.add((s, URIRef('http://purl.org/dc/elements/1.1/rights'), Literal('This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law.')))
 			#add Internet Archives ID
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
-		output = "out/%s.nt" %(item)
+		folder = 'triples'
+		output = "%s/%s.nt" %(folder, item)
+		if not exists(folder):
+			makedirs(folder)
 		filename.serialize(destination=output, format='nt')
 
 def get_subjects(record, data, filename):
 	for fieldNum in ['600', '610', '650', '651']:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for i, field in enumerate(record.get_fields(fieldNum)):	
 				sub = 'subject' + str(i+1)
 				data[filename]['subject'][sub] = []
 				for subfield in field:
-					# append this subfield value to the correct field data in the record bucket
+					#append this subfield value to the correct field data in the record bucket
 					data[filename]['subject'][sub].append(subfield[1].replace('.', ''))
 	return(data)
 
 def get_title(record, data, filename):
 	for fieldNum in ['245', '246']:
-		# if the desired field exists in this marc record, access it
+		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
-			# iterate over the subfield in this field
+			#iterate over the subfield in this field
 			for field in record.get_fields(fieldNum):	
 				for subfield in field:
 					if subfield[0] == 'a' or subfield[0] == 'b':
-					# append this subfield value to the correct field data in the record bucket
+					#append this subfield value to the correct field data in the record bucket
 						data[filename]['title'].append(subfield[1].replace('.', ''))
 	return(data)
 
@@ -190,7 +151,7 @@ def get_institution(record, data, filename):
 						if subfield[1] not in data[filename]['institution']:
 							data[filename]['institution'].append(subfield[1].replace('.', ''))
 
-	return(data)	
+	return(data, department)	
 
 def get_date(record, data, filename):
 	for fieldNum in ['260', "264"]:
