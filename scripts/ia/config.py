@@ -50,3 +50,12 @@ IA_access = {'s3': {'access': 'C9khuFEwAKAj5Y5X', 'secret': '8s5NsWQzx1wTKfAd'}}
 mypath = "/home/danydvd/git/remote/metadata/scripts/ia/files/xml/"
 fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
 collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
+
+def PrintException():
+	exc_type, exc_obj, tb = sys.exc_info()
+	f = tb.tb_frame
+	lineno = tb.tb_lineno
+	filename = f.f_code.co_filename
+	linecache.checkcache(filename)
+	line = linecache.getline(filename, lineno, f.f_globals)
+	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
