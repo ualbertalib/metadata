@@ -3,16 +3,6 @@ from os import listdir
 from os.path import isfile, join
 import pymarc
 import json
-<<<<<<< HEAD
-
-thesisLevel = [
-	{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
-	"mapping": ["B.Ed.", "B. Ed.", "B. Div.", "B.Div.", "B.D."]},
-	{"uri": "http://purl.org/spar/fabio/MastersThesis",
-	"mapping": ["Master's", 'Master', 'M. Sc.', 'M.A.', 'M.Ed.', 'M.A.', 'M.Sc.', 'M.A', 'M.Sc. ', 'M. Ed.', 'MSc.', 'M.S. ', 'M.S.']},
-	{"uri": "http://purl.org/spar/fabio/DoctoralThesis",
-	"mapping": ["Doctoral", "Ph.D.", "Ph. D.", "PhD"]}]
-=======
 import time
 from datetime import datetime
 import requests
@@ -64,24 +54,19 @@ institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
 
 fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
 collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
->>>>>>> IA-legacy-theses
-
 
 def main():
 	mypath = "/home/danydvd/git/remote/metadata/scripts/ia/files/xml/"
 	output = []
 	data = {}
 	mapp = []
-<<<<<<< HEAD
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
-=======
 	uuids = get_Jupiter_noids()
 	departments = get_department()
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		with open(join(mypath, filename), 'rb') as xml:
 			filename = filename.replace('_marc.xml', '')
->>>>>>> IA-legacy-theses
 			reader = pymarc.marcxml.parse_xml_to_array(xml)
 			# a place to store the fieldData
 			data[filename] = {
@@ -92,30 +77,11 @@ def main():
 						'department': [],
 						'institution': [],
 						'level': [],
-<<<<<<< HEAD
-=======
 						'degree': [],
->>>>>>> IA-legacy-theses
 						'abstract': []
 						}
 
 			for record in reader:
-				dat = get_subjects(record, data, filename)
-<<<<<<< HEAD
-				dat = get_title(record, data, filename)
-				dat = get_author(record, data, filename)
-				dat = get_institution(record, data, filename)
-				dat = get_date(record, data, filename)
-				dat = get_level(record, data, filename, mapp)[0]
-
-				write(dat[filename], output)
-	print((dat))
- 	#for key in dat.keys():
-		#print(dat[key]['level'])
-
-	#print (m)
-
-=======
 				dat = get_notes(record, data, filename)
 				dat = get_title(record, data, filename)
 				dat = get_author(record, data, filename)
@@ -165,7 +131,6 @@ def main():
 			filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
 		output = "out/%s.nt" %(item)
 		filename.serialize(destination=output, format='nt')
->>>>>>> IA-legacy-theses
 
 def get_subjects(record, data, filename):
 	for fieldNum in ['600', '610', '650', '651']:
@@ -193,32 +158,6 @@ def get_title(record, data, filename):
 	return(data)
 
 def get_author(record, data, filename):
-<<<<<<< HEAD
-	for fieldNum in ['245', '100', '110']:
-		# if the desired field exists in this marc record, access it
-		if fieldNum in record:
-			# iterate over the subfield in this field
-			for field in record.get_fields(fieldNum):	
-				for subfield in field:
-					if (subfield[0] == 'a' or subfield[0] == 'b') and (fieldNum == '100' or fieldNum == '110'):
-					# append this subfield value to the correct field data in the record bucket
-						data[filename]['dissertant'].append(subfield[1].replace('.', ''))
-					'''if len(data[filename]['dissertant']) == 0:
-						if (subfield[0] == 'c') and (fieldNum == '245'):
-							data[filename]['dissertant'].append(subfield[1].replace('.', ''))'''
-	return(data)
-
-def get_institution(record, data, filename):
-	for fieldNum in ['710']:
-		# if the desired field exists in this marc record, access it
-		if fieldNum in record:
-			# iterate over the subfield in this field
-			for field in record.get_fields(fieldNum):	
-				for subfield in field:
-					if subfield[0] == 'b':
-					# append this subfield value to the correct field data in the record bucket
-						data[filename]['department'].append(subfield[1].replace('.', ''))
-=======
 	for fieldNum in ['100', '110', '245']:
 		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
@@ -247,24 +186,11 @@ def get_institution(record, data, filename):
 						department = subfield[1].replace('Dept', 'Department').replace('.', '')
 						data[filename]['department'].append(subfield[1].replace('.', ''))
 					#append the institution 
->>>>>>> IA-legacy-theses
 					if subfield[0] == 'a':
 						if subfield[1] not in data[filename]['institution']:
 							data[filename]['institution'].append(subfield[1].replace('.', ''))
 
-<<<<<<< HEAD
 	return(data)	
-
-def get_date(record, data, filename):
-	for fieldNum in ['260', "264"]:
-		# if the desired field exists in this marc record, access it
-		if fieldNum in record:
-			# iterate over the subfield in this field
-			for field in record.get_fields(fieldNum):
-				for subfield in field:
-					# append this subfield value to the correct field data in the record bucket
-=======
-	return(data, department)	
 
 def get_date(record, data, filename):
 	for fieldNum in ['260', "264"]:
@@ -274,48 +200,19 @@ def get_date(record, data, filename):
 			for field in record.get_fields(fieldNum):
 				for subfield in field:
 					#appending the date field (graduation date)
->>>>>>> IA-legacy-theses
 						if subfield[0] == 'c':
 							data[filename]['graduation_date'].append(subfield[1])
 	return(data)
 
-<<<<<<< HEAD
-def get_level(record, data, filename, mapp):
-	for fieldNum in ['502']:
-		# if the desired field exists in this marc record, access it
-		if fieldNum in record:
-			# iterate over the subfield in this field
-=======
 def get_level(record, data, filename):
 	for fieldNum in ['502']:
 		#if the desired field exists in this marc record, access it
 		if fieldNum in record:
 			#iterate over the subfield in this field
->>>>>>> IA-legacy-theses
 			for field in record.get_fields(fieldNum):
 				for subfield in field:
 					# append this subfield value to the correct field data in the record bucket
 						if subfield[0] == 'a':
-<<<<<<< HEAD
-							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
-							level = re.sub(r'[0-9]+', '', level)
-							#if level not in mapp:
-							#	mapp.append(level)
-							for i in thesisLevel:
-								if level in i['mapping']: 
-									data[filename]['level'].append(i['uri'])
-									break
-							if len(data[filename]['level']) == 0:
-								data[filename]['level'].append(subfield[1])
-
-	return(data, mapp)
-def write(dat, output):
-	for subject in dat['subject']:
-			dat['subject'][subject] = '--'.join(dat['subject'][subject])
-	#dat.append(dat)
-	return(dat)
-
-=======
 							#remove extra text from the subfield 
 							level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
 							level = re.sub(r'[0-9]+', '', level).lstrip()
@@ -411,7 +308,6 @@ def get_department():
 				department_levels[item['departments_tesim'][0]].append(item['degree_ssim'][0])
 
 	return(department_levels)
->>>>>>> IA-legacy-theses
 
 if __name__ == "__main__":
 	main()
