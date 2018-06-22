@@ -33,7 +33,11 @@ with open("out.txt", "w+") as file:
 		sparql.setQuery(q)
 		result = sparql.query().convert()['results']['bindings']
 		for re in result:
+<<<<<<< HEAD
+			response = head(re['resource']['value'].replace('gillingham', 'mycombe2'), headers=headers, auth=('fedoraAdmin', 'HN4di2015'))
+=======
 			response = head(re['resource']['value'].replace('gillingham', 'mycombe2'), headers=headers, auth=('username', 'password'))
+>>>>>>> master
 			if str(response) != '<Response [200]>':
 				file.write(re['resource']['value'].replace('gillingham', 'mycombe2') + "\t" + str(response) + "\n")
 		tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')

@@ -1,5 +1,9 @@
 sparqlTerms = "http://206.167.181.124:7200/repositories/era-dd"
+<<<<<<< HEAD
+sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/Thesis_deposit_Jun112018/sparql"  # dev, 1 hour to transform
+=======
 sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/Thesis_deposit_Jun132018/sparql"  # dev, 1 hour to transform
+>>>>>>> master
 # sparqlData = "http://206.167.181.123:9999/blazegraph/namespace/gillingham_20171222/sparql"
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/gillingham_20171222/sparql" 
 # sparqlData = "http://127.0.0.1:9999/blazegraph/namespace/kb/sparql" 
