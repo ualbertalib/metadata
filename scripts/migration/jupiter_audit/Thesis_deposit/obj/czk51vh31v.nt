@@ -46,6 +46,40 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/k5/1v/h3/czk51vh31v> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2017-10-24T19:41:32.724Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/fe/ec/b1/d0/feecb1d0-20a0-44e6-b95d-67362d80a4cb> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Schafer_Haley_L_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Wilson, Ward (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hendry, Michael (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Sego, David (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Schafer, H.L. and Beier, N.A. 2017. Development of Soil Freezing Characteristic Curves for Fluid Fine Tailings using TDR. In Proceedings of the 70th Canadian Geotechnical Conference, Ottawa, Ontario, 1-4 October 2017."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T21:38:19.277Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T23:21:21.098Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "SWCC"^^<http://www.w3.org/2001/XMLSchema#string> , "SFCC"^^<http://www.w3.org/2001/XMLSchema#string> , "Tailings"^^<http://www.w3.org/2001/XMLSchema#string> , "Unsaturated"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-30T23:04:52.339Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Geoenvironmental Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44545"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e3767299-a7e2-43b3-8adc-17d00d82013b"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:ff92248a-f86c-4344-a5ec-0b6f405b8470"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-10-24T13:41:32Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cb/g2/57/f5/cbg257f527> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "Schafer_Haley_L_201801_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -86,6 +120,7 @@
 	dcterms:dateSubmitted "2017-10-24T13:41:32Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cw/w7/2b/c0/cww72bc00w> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -93,7 +128,16 @@
 	dcterms:dateAccepted "2017-10-30T13:29:37Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
+	dcterms:abstract "The study investigated the feasibility of using the soil freezing characteristic curve (SFCC) to estimate the soil water characteristic curve (SWCC) in mine waste tailings as an alternative to traditional SWCC testing.  Traditional SWCC tests are challenging and time-consuming to conduct, taking anywhere from weeks to months to complete a single test.  In contrast, a SFCC tests takes days to complete, which is a huge advantage over a traditional SWCC.  An experimental method and apparatus was developed to measure the SFCC.  The experimental method involved using a resistance temperature detector (RTD) to measure the temperature and time domain reflectometry (TDR) to determine the unfrozen water content of the soil.  SFCC testing was performed on a variety of materials with different GSDs, including Devon silt, copper tailings, sand tailings, gold tailings, and oil sands tailings.  The SFCC was used to estimate the SWCC and the results were compared to SWCCs measured using traditional methods.   The experimental method produced repeatable and reliable results.  The results showed that the SWCC could be estimated from the SFCC for tailings from metal mines (gold tailings and copper tailings) with a high portion of sand and a small amount of clay.  The SFCC was not able to estimate the SWCC for oil sands tailings.  This is attributed to the high clay content, adsorbed water, and the high initial water content of the tailings.  It is recommended that the SWCC be conducted in conjunction with a shrinkage test to determine the shrinkage curve, or that the shrinkage curve be estimated.  This method is highly promising as a screening tool to rapidly test a wide variety of tailings to determine which should have additional traditional SWCC testing.  Issues were encountered with the TDR calibration as it was conducted under unfrozen conditions and applied to frozen conditions.  As a result, it is recommended that the TDR calibration be conducted under frozen conditions using a secondary method such as Nuclear Magnetic Resonance (NMR)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Freezing Characteristics of Mine Waste Tailings and their Relation to Unsaturated Soil Properties"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/k5/1v/h3/czk51vh31v/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cz/k5/1v/h3/czk51vh31v/fedora3foxml> .

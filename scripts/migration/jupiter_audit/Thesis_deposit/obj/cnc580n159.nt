@@ -46,6 +46,40 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/c5/80/n1/cnc580n159> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2017-12-09T03:01:21.174Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/6e/06/33/b8/6e0633b8-7f7c-49ef-89cc-703d9fc3e31e> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "FallahiArezodar_Fatemeh_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Adeeb, Samer (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "El-Rich, Marwan (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Duke, Kajsa (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Gul, Mustafa (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cqz20st053"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:28:36.778Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-05T22:14:28.266Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Nucleus Size"^^<http://www.w3.org/2001/XMLSchema#string> , "Nucleus Position"^^<http://www.w3.org/2001/XMLSchema#string> , "FSU L4-L5"^^<http://www.w3.org/2001/XMLSchema#string> , "FEM"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-12T20:59:36.219Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Structural Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44580"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "01199411-446d-43df-9d93-c85e11f537e0"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:16b472af-9218-4d42-9133-20c0250a4b7f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-08T20:01:21Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cd/b7/8t/c5/cdb78tc59c> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "fallahia@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "FallahiArezodar_Fatemeh_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -86,14 +120,25 @@
 	dcterms:dateSubmitted "2017-12-08T20:01:21Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cb/c3/86/j7/cbc386j701> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:dateAccepted "2017-12-12T13:59:35Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
+	dcterms:abstract "The response of the lumbar spine to mechanical load, a major contributing factor in Low Back Pain (LBP), depends on the geometry of the spinal structures. As nucleus size and position vary among individuals, along the spine, and with aging, understanding the effects of inter-individual variation of the nucleus geometry on the mechanical behavior of spine is very important and can be very useful in LBP assessment. Numerical studies can provide insights on the effect of these variations on the mechanical response of the spine. This study aimed to determine the variations of the size and position of the nucleus pulposus with respect to the disc in the lumbar level L4-L5 of 24 individuals using their MR images and to investigate the effects of these variations on the mechanical response of the Functional Spinal Unit (FSU) L4-L5 to various load combinations using the finite element (FE) method. The MR images of the subjects were used to reconstruct the 3D geometries of the lumbar L4-L5 disc. The proportion of the nucleus cross-sectional area to the whole disc for all subjects was found between 31% and 57% and the nucleus centroid was located between 1.67 mm anteriorly and 3.26 mm posteriorly with respect to the disc center. Based on these results and the previous FE studies and histological findings, five FE models of the FSU L4-L5 with distinct sizes and positions of the nucleus were developed. The models were subjected to 10Nm moments in all anatomic planes with or without a 500N follower load (FL) as well as moment with direction varying gradually by about 15áµ between anatomical planes combined with FL.  The intradiscal pressure (IDP) in nucleus pulposus, the annular fibers strain, and the intervertebral rotation (IVR) predicted by the FE models were compared. The IDP was significantly influenced by the variations in size and position of the nucleus under pure moment. Adding FL attenuated these effects on IDP.  The maximum strain location and magnitude in the annular fibers were sensitive to the position and size of the nucleus. Maximum of the fibers strain and nucleus size were directly proportional under FL and flexion as well as FL and extension. However, by shifting the nucleus position toward the posterior side of the disc, the maximum fibers strain increased under FL and flexion while a drop was obtained under FL and extension.  Result showed that the nucleus size and position had slight effects on IVR. The FSU with the large nucleus compared to one with the small nucleus as well as the FSU with the anterior position of the nucleus compared to one with the posterior position of the nucleus demonstrated stiffer behaviour.  This study demonstrated that the geometrical variations of the nucleus size and position influence the mechanical response of the L4-L5 FSU but the significance of these effects was dependent on the loading scenario. It is speculated that including the fluid phase in disc modeling, analyzing the whole lumbar spine, and applying in-vivo loading would reveal more remarkable effects."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Effects of Nucleus Size and Position on the Response of the Lumbar Functional Spinal Unit L4-L5 to Complex Loading: Finite Element Analysis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/c5/80/n1/cnc580n159/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cn/c5/80/n1/cnc580n159/fedora3foxml> ;
