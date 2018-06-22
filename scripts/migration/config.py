@@ -13,8 +13,8 @@ sparqlData = "http://206.167.181.124:9999/blazegraph/namespace/Thesis_deposit_Ju
 
 # object types to transform (comment out those you wish to skip)
 types = [
-	#"collection",
-	#"community",
+	"collection",
+	"community",
 	"generic",
 	"thesis",
 	#"relatedObject",
