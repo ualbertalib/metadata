@@ -46,6 +46,7 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/f4/62/59/c3f4625955> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2017-12-15T23:23:57.755Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
 	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/d3/f8/99/fc/d3f899fc-db46-4f8d-9b4f-fae0794138e1> ;
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "Mehrabi_Mehrtash_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -78,6 +79,48 @@
 	marcrel:dpt "mehrtash@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Mehrabi_Mehrtash_201712_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "M. Mehrabi and M. Ardakani, âOn minimum distance of locally repairable codes,â in IEEE 15th Canadian Workshop on Information Theory (CWIT 2017), Quebec city, Canada, Jun. 2017, pp. 36â40.M. Mehrabi, M. Ardakani and M. Khabbazian, ''Minimizing the Update Complexity of Facebook Hdfs-raid Locally Repairable Code,'' in IEEE 86th Vehicular Technology Conference (VTC Fall), Toronto, Canada, Sep. 2017.M. Mehrabi, M. Shahabinejad, M. Ardakani and M. Khabbazian, ''Improving the Update Complexity of Locally Repairable Codes,'' submitted to IEEE Transaction on Communications, Aug. 2017."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "Erasure coding"^^<http://www.w3.org/2001/XMLSchema#string> , "Update complexity"^^<http://www.w3.org/2001/XMLSchema#string> , "Locally repairable codes"^^<http://www.w3.org/2001/XMLSchema#string> , "Distributed storage systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-22T18:06:36.289Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "4727696a-d29e-4a51-8a0c-ad7beaaa4382"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:3554796a-44b0-40eb-8256-6c19c7d65e71"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Ardakani, Masoud (ECE)"^^<http://www.w3.org/2001/XMLSchema#string> , "Khabbazian, Majid (ECE)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Electrical and Computer Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "mehrtash@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Distributed and cloud storage systems are used to reliably store large-scale data. Erasure codes have been recently proposed and used in real-world distributed and cloud storage systems such as Google File System, Microsoft Azure Storage, and Facebook HDFS-RAID, for reliable data storage. Conventional erasure codes, however, are not suitable for distributed storage systems, as they cause significant repair bandwidth and disk I/O. As a solution, a class of erasure codes called locally repairable codes (LRCs) have been proposed. Using LRCs repairing a failed storage nodes requires access to only a small number of available nodes. This property of LRCs results in a relatively low bandwidth and disk I/O operations for repairing a failed node. In this thesis, we study update complexity of LRCs. Update complexity of an erasure code is a measure of the computation, I/O and networking costs associated with updating an information block in a distributed storage system. LRCs with low update complexities are desirable. In this thesis, we derive lower bounds on update complexity of an important class of LRCs. Then, we propose a new set of LRCs, and, using the bound, we show that our designed codes have either optimal or near-optimal update complexities. Interestingly, our proposed codes improve update complexity without sacrificing important code parameters such as minimum distance, rate, or locality."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Improving the Update Complexity of Locally Repairable Linear Block Codes in Distributed Storage Systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/d3/f8/99/fc/d3f899fc-db46-4f8d-9b4f-fae0794138e1> ;
+	ualrole:thesiscommitteemember "Liang, Hao (ECE)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mousavi, Pedram (ECE)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cs7526c98k"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:37:37.652Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-12T20:22:06.324Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Communications"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44618"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Mehrabi, Mehrtash"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-20T15:53:16Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cf/t8/48/r1/cft848r19k> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -85,12 +128,16 @@
 	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	dcterms:abstract "Distributed and cloud storage systems are used to reliably store large-scale data. Erasure codes have been recently proposed and used in real-world distributed and cloud storage systems such as Google File System, Microsoft Azure Storage, and Facebook HDFS-RAID, for reliable data storage. Conventional erasure codes, however, are not suitable for distributed storage systems, as they cause significant repair bandwidth and disk I/O. As a solution, a class of erasure codes called locally repairable codes (LRCs) have been proposed. Using LRCs repairing a failed storage nodes requires access to only a small number of available nodes. This property of LRCs results in a relatively low bandwidth and disk I/O operations for repairing a failed node. In this thesis, we study update complexity of LRCs. Update complexity of an erasure code is a measure of the computation, I/O and networking costs associated with updating an information block in a distributed storage system. LRCs with low update complexities are desirable. In this thesis, we derive lower bounds on update complexity of an important class of LRCs. Then, we propose a new set of LRCs, and, using the bound, we show that our designed codes have either optimal or near-optimal update complexities. Interestingly, our proposed codes improve update complexity without sacrificing important code parameters such as minimum distance, rate, or locality."^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:title "Improving the Update Complexity of Locally Repairable Linear Block Codes in Distributed Storage Systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/f4/62/59/c3f4625955/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c3/f4/62/59/c3f4625955/fedora3foxml> .

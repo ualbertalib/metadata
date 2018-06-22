@@ -5,5 +5,9 @@ for folder in 'http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/44/55/8
 
 
 do
+<<<<<<< HEAD
 	curl -u "fedoraAdmin:HN4di2015" -H "Content-type:application/n-triples" -X GET $folder >> collections.nt
+=======
+	curl -u "username:password" -H "Content-type:application/n-triples" -X GET $folder >> collections.nt
+>>>>>>> master
 done

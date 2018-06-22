@@ -45,11 +45,15 @@
 
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cg/73/2d/94/cg732d947r> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+<<<<<<< HEAD
 	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a6/81/22/0f/a681220f-afbf-4394-9924-2da19881fd7b> ;
+=======
+>>>>>>> master
 	model:createdDate "2018-01-15T23:14:33.553Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "Speer_Connor_P_201802_MSc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	ualrole:thesiscommitteemember "Koch, Bob (Department of Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Olfert, Jason (Department of Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -78,12 +82,52 @@
 	marcrel:dpt "cspeer@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-21T15:12:59.791Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Stirling engine"^^<http://www.w3.org/2001/XMLSchema#string> , "minimum thermal source temperature"^^<http://www.w3.org/2001/XMLSchema#string> , "thermodynamic modeling"^^<http://www.w3.org/2001/XMLSchema#string> , "low grade heat recovery,"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "d4f13d83-87cc-47da-a338-fc2e67dc8ba0"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:db3b7dc2-8075-4852-a142-41cd5f7e8a47"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Nobes, David S (Department of Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Mechanical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "cspeer@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "An experimental study has been executed with two main objectives. The applicability of the second order modeling approach for low thermal source temperature Stirling engines was assessed, and modifications to improve the low thermal source temperature performance of an ST05G-CNC Stirling engine were studied. A test rig was fabricated, which featured a modified ST05G-CNC Stirling engine equipped with instrumentation to measure gas and coolant temperatures, gas pressures, output torque, crankshaft position, and coolant flow rate. Novel aspects of the test rig include high speed buffer pressure measurements, and separation of the water jacket into two independent zones. A second order mathematical model was assembled drawing from the literature. The model could use either the ideal isothermal model or the ideal adiabatic model as a reference cycle. Imperfect heat transfer, regenerator enthalpy loss, flow friction, mechanical friction, appendix gap loss, and conduction loss were calculated based on the reference cycle results. It was shown that the two reference cycles studied give increasingly similar results as the thermal source temperature declines. Three modifications to the engine were tested experimentally: The piston diameter was decreased from 85 mm to 44 mm, the crankcase volume was increased from 3.20 L to 7.83 L, and the dead volume of the working space was reduced from 0.877 L to 0.745 L. All together the modifications reduced the minimum thermal source temperature from 242 Â°C to 145 Â°C, with a constant thermal sink temperature of 21 Â°C. The reduced piston diameter and increased crankcase volume were shown experimentally to increase the shaft power of the engine at low thermal source temperatures by reducing forced work and crankcase gas spring hysteresis. The reduction in dead volume had an immeasurable influence on the shaft power, but shifted some heat rejection duty from the connecting pipe and power cylinder water jackets to the cooler water jacket. Agreement between experimental results and model predictions was evaluated individually for sub-components of the mathematical model. Correspondence between predicted and measured indicator diagrams was found to worsen with decreasing thermal source temperature. The trend was attributed to the greater influence of losses neglected by the reference cycles at lower thermal source temperatures. Since all other components of the model rely on the reference cycle for their input parameters, the implications of reference cycle errors are far-reaching. Neglect of losses in the reference cycle simulation is fundamental to the second order modeling approach. The validity of this assumption has been shown to break down as thermal source temperature declines. With consideration of the experimental data, replacement of the heater head was recommended as a means of reducing the minimum thermal source temperature further. By replacing the heater with something similar to the current cooler, low thermal source temperature performance could be improved by reducing temperature drop between the thermal source and the engine working fluid, and by reducing conduction loss."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Modifications to Reduce the Minimum Thermal Source Temperature of the ST05G-CNC Stirling Engine"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/a6/81/22/0f/a681220f-afbf-4394-9924-2da19881fd7b> ;
+	ualrole:thesiscommitteemember "Koch, Bob (Department of Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Olfert, Jason (Department of Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cs7526c98k"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:08:48.699Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-12T20:40:39.33Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44781"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Speer, Connor P"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-21T07:46:28Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/t3/4s/k1/c5t34sk169> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:dateAccepted "2018-02-21T08:12:59Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	dcterms:abstract "An experimental study has been executed with two main objectives. The applicability of the second order modeling approach for low thermal source temperature Stirling engines was assessed, and modifications to improve the low thermal source temperature performance of an ST05G-CNC Stirling engine were studied. A test rig was fabricated, which featured a modified ST05G-CNC Stirling engine equipped with instrumentation to measure gas and coolant temperatures, gas pressures, output torque, crankshaft position, and coolant flow rate. Novel aspects of the test rig include high speed buffer pressure measurements, and separation of the water jacket into two independent zones. A second order mathematical model was assembled drawing from the literature. The model could use either the ideal isothermal model or the ideal adiabatic model as a reference cycle. Imperfect heat transfer, regenerator enthalpy loss, flow friction, mechanical friction, appendix gap loss, and conduction loss were calculated based on the reference cycle results. It was shown that the two reference cycles studied give increasingly similar results as the thermal source temperature declines. Three modifications to the engine were tested experimentally: The piston diameter was decreased from 85 mm to 44 mm, the crankcase volume was increased from 3.20 L to 7.83 L, and the dead volume of the working space was reduced from 0.877 L to 0.745 L. All together the modifications reduced the minimum thermal source temperature from 242 Â°C to 145 Â°C, with a constant thermal sink temperature of 21 Â°C. The reduced piston diameter and increased crankcase volume were shown experimentally to increase the shaft power of the engine at low thermal source temperatures by reducing forced work and crankcase gas spring hysteresis. The reduction in dead volume had an immeasurable influence on the shaft power, but shifted some heat rejection duty from the connecting pipe and power cylinder water jackets to the cooler water jacket. Agreement between experimental results and model predictions was evaluated individually for sub-components of the mathematical model. Correspondence between predicted and measured indicator diagrams was found to worsen with decreasing thermal source temperature. The trend was attributed to the greater influence of losses neglected by the reference cycles at lower thermal source temperatures. Since all other components of the model rely on the reference cycle for their input parameters, the implications of reference cycle errors are far-reaching. Neglect of losses in the reference cycle simulation is fundamental to the second order modeling approach. The validity of this assumption has been shown to break down as thermal source temperature declines. With consideration of the experimental data, replacement of the heater head was recommended as a means of reducing the minimum thermal source temperature further. By replacing the heater with something similar to the current cooler, low thermal source temperature performance could be improved by reducing temperature drop between the thermal source and the engine working fluid, and by reducing conduction loss."^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:title "Modifications to Reduce the Minimum Thermal Source Temperature of the ST05G-CNC Stirling Engine"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -91,6 +135,10 @@
 	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cg/73/2d/94/cg732d947r/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cg/73/2d/94/cg732d947r/fedora3foxml> .

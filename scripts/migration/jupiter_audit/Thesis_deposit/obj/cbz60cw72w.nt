@@ -46,6 +46,7 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cb/z6/0c/w7/cbz60cw72w> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2018-01-23T10:53:50.544Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
 	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/64/bc/83/4464bc83-bc4e-49cd-b5ab-345fce108c05> ;
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "thesis.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -78,12 +79,55 @@
 	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "thesis.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "PICO"^^<http://www.w3.org/2001/XMLSchema#string> , "PICO-60"^^<http://www.w3.org/2001/XMLSchema#string> , "dark matter"^^<http://www.w3.org/2001/XMLSchema#string> , "Spin dependent dark matter"^^<http://www.w3.org/2001/XMLSchema#string> , "PICO60"^^<http://www.w3.org/2001/XMLSchema#string> , "C3F8"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-01T20:44:45.029Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "f761c65e-2364-42ee-b92a-4749c4f71f80"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:f60bd45f-28f0-4416-bad8-9e63933abc8a"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Krauss, Carsten (Physics)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Physics"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The PICO-60 experiment was a bubble chamber for the search of Weakly Interacting Massive Particle (WIMP) dark matter. The previous run of PICO-60, conducted in 2013, was limited in sensitivity by background events that were most likely caused by particulate contamination and the buffer liquid. These backgrounds have been eliminated in the PICO-60 data presented in this thesis. Significant upgrades to the optics system enabled a new analysis leading to a larger fiducial volume and improved exposure. A new method to measure the temperature inside the PICO-60 vessel, which is otherwise impossible to instrument, was devised but not fully verified.   The data presented in this thesis shows that the PICO-60 bubble chamber runs stably at low threshold down to 2.45 keV and the ability to discriminate nuclear recoil events from alpha background events remains unchanged. A dark matter search was performed with 51.96 kg of C3F8 at nucleation threshold energies of 3.29 keV and 2.45 keV. No dark matter candidate events were observed in the 3.29 keV data and three candidate events were recorded in the 2.45 keV data. PICO-60 established a world-leading upper limit on the spin-dependent WIMP-proton cross section of 3.15*10^-41 cm^2 for a WIMP mass of 31.6 GeV from the 3.3 keV dataset."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "PICO-60: A Dark Matter Search Experiment with C3F8 in a Bubble Chamber"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/44/64/bc/83/4464bc83-bc4e-49cd-b5ab-345fce108c05> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Grant, Darren (Physics)"^^<http://www.w3.org/2001/XMLSchema#string> , "Pogosian, Dmitri (Physics)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mann, Ian (Physics)"^^<http://www.w3.org/2001/XMLSchema#string> , "Ragan, Kenneth (Physics, McGill University)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cs7526c98k"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T18:28:35.358Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-12T20:44:31.338Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44746"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Mitra, Pitam"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-01T12:12:08Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c5/x2/1t/g0/c5x21tg037> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:dateAccepted "2018-02-01T13:38:25Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	dcterms:abstract "The PICO-60 experiment was a bubble chamber for the search of Weakly Interacting Massive Particle (WIMP) dark matter. The previous run of PICO-60, conducted in 2013, was limited in sensitivity by background events that were most likely caused by particulate contamination and the buffer liquid. These backgrounds have been eliminated in the PICO-60 data presented in this thesis. Significant upgrades to the optics system enabled a new analysis leading to a larger fiducial volume and improved exposure. A new method to measure the temperature inside the PICO-60 vessel, which is otherwise impossible to instrument, was devised but not fully verified.   The data presented in this thesis shows that the PICO-60 bubble chamber runs stably at low threshold down to 2.45 keV and the ability to discriminate nuclear recoil events from alpha background events remains unchanged. A dark matter search was performed with 51.96 kg of C3F8 at nucleation threshold energies of 3.29 keV and 2.45 keV. No dark matter candidate events were observed in the 3.29 keV data and three candidate events were recorded in the 2.45 keV data. PICO-60 established a world-leading upper limit on the spin-dependent WIMP-proton cross section of 3.15*10^-41 cm^2 for a WIMP mass of 31.6 GeV from the 3.3 keV dataset."^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:title "PICO-60: A Dark Matter Search Experiment with C3F8 in a Bubble Chamber"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -91,6 +135,10 @@
 	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cb/z6/0c/w7/cbz60cw72w/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cb/z6/0c/w7/cbz60cw72w/fedora3foxml> ;

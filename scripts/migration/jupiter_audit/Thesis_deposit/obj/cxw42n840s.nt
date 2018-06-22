@@ -46,6 +46,7 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/w4/2n/84/cxw42n840s> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2018-02-09T04:14:10.022Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
 	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b4/56/c2/eb/b456c2eb-f8ea-4a9c-8616-841a0f2e86a3> ;
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "Li_Lei_201802_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -78,6 +79,48 @@
 	marcrel:dpt "lli7@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Li_Lei_201802_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Li, Lei, Yongsheng Ma, and Carlos F Lange. 2017. âCFD Expert System for Steam Simulation.â In Proceedings of the 25th Annual Conference of the Computational Fluid Dynamics Society of Canada. Windsor, Canada: CFD Society of Canada.Li, Lei, Carlos F Lange, and Yongsheng Ma. 2017. âAssociation of Design and Computational Fluid Dynamics Simulation Intent in Flow Control Product Optimization.â Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture: 0954405417697352. doi:10.1177/0954405417697352.Li, Lei, Carlos F Lange, and Yongsheng Ma. 2016. âCFD Modelling of Outflow Control Device Applied in Steam Assisted Gravity Drainage.â In Proceedings of the 24th Annual Conference of the Computational Fluid Dynamics Society of Canada. Kelowna, Canada: CFD Society of Canada.Li, Lei, and Yongsheng Ma. 2016. âCAD/CAE Associative Features for Cyclic Fluid Control Effect Modeling.â Computer-Aided Design and Applications 13(2): 208â20. doi:10.1080/16864360.2015.1084190.Li, Lei, Yongsheng Ma, and Carlos F Lange. 2016. âAssociation of Design and Simulation Intent in CAD/CFD Integration.â Procedia CIRP 56: 1â6. doi:10.1016/j.procir.2016.10.006."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-16T22:05:34.77Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "CAD/CFD integration"^^<http://www.w3.org/2001/XMLSchema#string> , "Design optimization"^^<http://www.w3.org/2001/XMLSchema#string> , "Multiple-view feature modeling"^^<http://www.w3.org/2001/XMLSchema#string> , "Artificial intelligence"^^<http://www.w3.org/2001/XMLSchema#string> , "Design and simulation intent"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e76831cc-1570-48a9-b82b-664497649255"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:4e07697c-d340-494b-a2d6-1f48819f53d3"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Ma, Yongsheng (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Lange, Carlos F (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Mechanical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "lli7@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Computational fluid dynamics (CFD) has been extensively used for fluid flow simulation and thus, guiding the flow control device design. However, CFD simulation requires explicit geometry input and complicated solver setup, which is a barrier in case of the cyclic CAD/CFD integrated design process. So far, tedious human interventions are inevitable to fill the gap. To fix this issue, this research proposes a theoretical framework where the CFD solver setup can be intelligently assisted by the simulation intent capture. Five innovative feature concepts are proposed. The fluid functional feature is used to capture the design intent while the fluid physics feature and dynamic physics feature present the simulation intent. The inter-feature associations are established by CAE boundary features and effect features. These feature concepts are defined based on the need of CAD/CFD integration and intelligent CFD solver functions for steam simulation. A prototype software tool has been developed for intelligent CAD/CFD integration, where the design intent and CFD simulation intent are associated seamlessly. An outflow control device (OCD) model, used in the steam assisted gravity drainage (SAGD) process, is studied by applying this prototype, and the target performance of this design is effectively reflected and virtually improved. The optimization result is further validated by a realistic OCD model from the industry, which confirms the software tool can provide design guidance for better steam even distribution. Therefore, it proves that the proposed method is capable of supporting complex design optimization in practice."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "CAD/CFD Integration System for Flow Control Product Optimization"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/b4/56/c2/eb/b456c2eb-f8ea-4a9c-8616-841a0f2e86a3> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Peng, Qingjin (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Li, Huazhou (Petroleum Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Ahmad, Rafiq (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Lange, Carlos F (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Ma, Yongsheng (Mechanical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cs7526c98k"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:43:52.06Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-12T20:25:47.167Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44774"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Li, Lei"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-15T11:32:57Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cj/38/60/75/cj38607547> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -85,12 +128,16 @@
 	dcterms:dateAccepted "2018-02-16T15:05:32Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	dcterms:abstract "Computational fluid dynamics (CFD) has been extensively used for fluid flow simulation and thus, guiding the flow control device design. However, CFD simulation requires explicit geometry input and complicated solver setup, which is a barrier in case of the cyclic CAD/CFD integrated design process. So far, tedious human interventions are inevitable to fill the gap. To fix this issue, this research proposes a theoretical framework where the CFD solver setup can be intelligently assisted by the simulation intent capture. Five innovative feature concepts are proposed. The fluid functional feature is used to capture the design intent while the fluid physics feature and dynamic physics feature present the simulation intent. The inter-feature associations are established by CAE boundary features and effect features. These feature concepts are defined based on the need of CAD/CFD integration and intelligent CFD solver functions for steam simulation. A prototype software tool has been developed for intelligent CAD/CFD integration, where the design intent and CFD simulation intent are associated seamlessly. An outflow control device (OCD) model, used in the steam assisted gravity drainage (SAGD) process, is studied by applying this prototype, and the target performance of this design is effectively reflected and virtually improved. The optimization result is further validated by a realistic OCD model from the industry, which confirms the software tool can provide design guidance for better steam even distribution. Therefore, it proves that the proposed method is capable of supporting complex design optimization in practice."^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:title "CAD/CFD Integration System for Flow Control Product Optimization"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/w4/2n/84/cxw42n840s/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cx/w4/2n/84/cxw42n840s/fedora3foxml> .

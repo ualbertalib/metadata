@@ -46,6 +46,7 @@
 
 <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c6/w9/24/c3/c6w924c30c> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
 	model:createdDate "2017-12-13T01:37:20.272Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<<<<<<< HEAD
 	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/75/de/8b/10/75de8b10-bb42-40d7-9a68-31829ded31dc> ;
 	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	model:downloadFilename "Dissertation-Lei Zhang_PDFA.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -78,12 +79,55 @@
 	marcrel:dpt "lz14@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:downloadFilename "Dissertation-Lei Zhang_PDFA.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "Path Integration"^^<http://www.w3.org/2001/XMLSchema#string> , "Landmarks"^^<http://www.w3.org/2001/XMLSchema#string> , "Heading"^^<http://www.w3.org/2001/XMLSchema#string> , "Position"^^<http://www.w3.org/2001/XMLSchema#string> , "Homing"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-19T16:39:59.731Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "4aa5c9cf-3017-474a-9907-f04734dc9a62"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:0e5073da-01ed-44b8-a4de-683357101290"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Mou, Weimin (Psychology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Psychology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "lz14@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "People use landmarks and the path integration cues to return to the origin of the route (i.e., home). This homing behavior is believed to be better when people can access both cues than when they can only access either cue, because two separate homing estimations are combined to reduce homing variability. This belief reflects a popular theory that two cues directly interact in the homing estimations (homing hypothesis). In contrast, we believe that two cues interact in the positioning (heading/position) estimations that are then used to determine the home locations (positioning hypothesis). Two studies were conducted to differentiate between the two hypotheses by investigating the cue interaction of positioning estimations and homing estimations, when people walked in a small-scale environment, and when people drove in a large-scale environment. The study in Chapter 2 demonstrated that when people walked a two-leg path, they combined the path integration cues and landmarks to determine their heading (and position) estimations, but not homing estimations, in all path configurations. Furthermore, people used the heading and position estimations after cue interaction to determine their homing estimations. The study in Chapter 3 further suggests that path integration cues and landmarks could compete for the positioning estimations when people drove in a virtual city. In sum, our work has demonstrated that the path integration cues and landmarks interact in positioning estimations, regardless of locomotion modes and landmark types. People use the positioning estimations after interaction to guide their homing."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "The Interaction of Path Integration Cues and Landmarks in Positioning Estimations During Human Spatial Navigation in Small- and Large-scale Environment"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/75/de/8b/10/75de8b10-bb42-40d7-9a68-31829ded31dc> ;
+	ualrole:thesiscommitteemember "Singhal, Anthony (Psychology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mathewson, Kyle (Psychology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Chapman, Craig (Physical Education and Recreation)"^^<http://www.w3.org/2001/XMLSchema#string> , "Kelly, Jonathan (Psychology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cs7526c98k"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-06-05T17:25:24.08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-06-12T20:15:12.317Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44599"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Zhang, Lei"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-19T09:30:43Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/cv/11/8r/f2/cv118rf23w> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
 	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:dateAccepted "2017-12-19T09:39:58Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<<<<<<< HEAD
 	dcterms:abstract "People use landmarks and the path integration cues to return to the origin of the route (i.e., home). This homing behavior is believed to be better when people can access both cues than when they can only access either cue, because two separate homing estimations are combined to reduce homing variability. This belief reflects a popular theory that two cues directly interact in the homing estimations (homing hypothesis). In contrast, we believe that two cues interact in the positioning (heading/position) estimations that are then used to determine the home locations (positioning hypothesis). Two studies were conducted to differentiate between the two hypotheses by investigating the cue interaction of positioning estimations and homing estimations, when people walked in a small-scale environment, and when people drove in a large-scale environment. The study in Chapter 2 demonstrated that when people walked a two-leg path, they combined the path integration cues and landmarks to determine their heading (and position) estimations, but not homing estimations, in all path configurations. Furthermore, people used the heading and position estimations after cue interaction to determine their homing estimations. The study in Chapter 3 further suggests that path integration cues and landmarks could compete for the positioning estimations when people drove in a virtual city. In sum, our work has demonstrated that the path integration cues and landmarks interact in positioning estimations, regardless of locomotion modes and landmark types. People use the positioning estimations after interaction to guide their homing."^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -91,6 +135,10 @@
 	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+=======
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+>>>>>>> master
 	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	fedora:hasParent <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod> ;
 	ldp:contains <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c6/w9/24/c3/c6w924c30c/content> , <http://gillingham.library.ualberta.ca:8080/fedora/rest/prod/c6/w9/24/c3/c6w924c30c/fedora3foxml> .
