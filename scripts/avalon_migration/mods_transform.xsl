@@ -48,6 +48,11 @@
    <xsl:template match="//*:physicalDescription[not(*)]"/>
    
    
+   <xsl:template match="//*:note">
+      <xsl:call-template name="noteCleanup"/>
+   </xsl:template>
+   
+   
    <!--<xsl:template match="//*:genre">
       <xsl:copy copy-namespaces="yes">
          <xsl:call-template name="genreCleanup"/>
