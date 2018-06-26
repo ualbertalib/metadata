@@ -9,8 +9,11 @@
             <xsl:when test="matches(.,',$')">
                 <xsl:value-of select="normalize-space(replace(.,',$',''))"/>
             </xsl:when>
+            <xsl:when test="matches(.,'[A-Za-z]+,[A-Za-z]+')">
+                <xsl:value-of select="normalize-space(replace(.,'([A-Za-z]+,)([A-Za-z]+)','$1 $2'))"/>
+            </xsl:when>
             <xsl:when test="matches(.,'^The ')">
-                <xsl:value-of select="normalize-space(replace(.,'^(The) (.*)','$2, $1'))"/>
+                <xsl:value-of select="normalize-space(replace(.,'^(The )(.*)','$2'))"/>
             </xsl:when>
             <xsl:when test="matches(.,'^St\s')">
                 <xsl:value-of select="normalize-space(replace(.,'St\s','St. '))"/>
@@ -48,7 +51,7 @@
             <xsl:when test="matches(.,'Hyo Young')">
                 <xsl:value-of select="normalize-space(replace(.,'Hyo Young','Hyo-Young'))"/>
             </xsl:when>
-            <xsl:when test="matches(.,'(Scott-Hoyt,Janet)|(Hoyt, Janet Scott)')">
+            <xsl:when test="matches(.,'(Scott Hoyt, Janet)|(Scott-Hoyt,Janet)|(Hoyt, Janet Scott)')">
                 <xsl:value-of select="normalize-space(replace(.,'.+','Scott-Hoyt, Janet'))"/>
             </xsl:when>
             <xsl:when test="text()='McNally, Michael'">
@@ -60,7 +63,7 @@
             <xsl:when test="contains(.,'University of Alberta Stage Bands')">
                 <xsl:value-of select="normalize-space(replace(.,'Bands','Band'))"/>
             </xsl:when>
-            <xsl:when test="matches(.,'(Ariel Calderon)|(Kathie Leitch)|(Libby Smith)|(Lisa Andrews)|(Lito Azocar)|(Marianne Elder)|(Muriel Affleck)|(Peter Mallaney)|(Sergio Contreras)|(Tomonori Sugiyama)|(Uday Ramdas)')">
+            <xsl:when test="matches(.,'(Ariel Calderon)|(Kathie Leitch)|(Libby Smith)|(Lisa Andrews)|(Lito Azocar)|(Marianne Elder)|(Muriel Affleck)|(Peter Mallaney)|(Sergio Contreras)|(Tomonori Sugiyama)|(Uday Ramdas)|(Janet Scott)')">
                 <xsl:value-of select="normalize-space(replace(.,'(\w+)\s(\w+)','$2, $1'))"/>
             </xsl:when>
             <xsl:otherwise>
@@ -97,14 +100,26 @@
     
     <xsl:template name="licenseCleanup">
         <xsl:choose>
-            <xsl:when test="//*:note[not(//*:accessCondition)]">
-                <xsl:copy-of select="*:note/text()[contains(.,'This audiovisual content is being provided solely for educational use and research')]"/>
-            </xsl:when>
             <xsl:when test="contains(.,'Access restricted to authorized users and institutions.')"/>
             <xsl:when test="contains(.,'User_Defined_Rights_Statement')"/>
-            <xsl:when test="contains(.,'Custom text')"/>
+            <xsl:when test="matches(.,'.ustom .ext')"/>
             <xsl:otherwise>
                 <xsl:copy-of select="normalize-space(text())"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    
+    <xsl:template name="noteCleanup">
+        <xsl:choose>
+            <xsl:when test="//*:note[not(//*:accessCondition)]">
+                <xsl:element name="accessCondition">
+                    <xsl:attribute name="type">use and reproduction</xsl:attribute>
+                    <xsl:copy-of select="*:note/text()[matches(.,'(for educational use and research)|(terms of use)','ix')]"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy copy-namespaces="yes"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
