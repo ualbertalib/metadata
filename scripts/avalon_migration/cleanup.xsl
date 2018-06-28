@@ -4,6 +4,8 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    <xsl:include href="mappings.xsl"/>
+    
     <xsl:template name="nameCleanup">
         <xsl:choose>
             <xsl:when test="matches(.,',$')">
@@ -103,25 +105,19 @@
             <xsl:when test="contains(.,'Access restricted to authorized users and institutions.')"/>
             <xsl:when test="contains(.,'User_Defined_Rights_Statement')"/>
             <xsl:when test="matches(.,'.ustom .ext')"/>
+            <!--<xsl:when test="*:accessCondition[@type='use and reproduction'][matches(.,'Attribution-NonCommercial 4.0 International')][preceding-sibling::accessCondition[@type='license']]"/>-->
             <xsl:otherwise>
-                <xsl:copy-of select="normalize-space(text())"/>
+                <xsl:call-template name="licenseURIs"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
     
     <xsl:template name="noteCleanup">
-        <xsl:choose>
-            <xsl:when test="//*:note[not(//*:accessCondition)]">
-                <xsl:element name="accessCondition">
-                    <xsl:attribute name="type">use and reproduction</xsl:attribute>
-                    <xsl:copy-of select="*:note/text()[matches(.,'(for educational use and research)|(terms of use)','ix')]"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:copy copy-namespaces="yes"/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:element name="accessCondition" namespace="http://www.loc.gov/mods/v3">
+            <xsl:attribute name="type">use and reproduction</xsl:attribute>
+            <xsl:value-of select="normalize-space()"/>
+        </xsl:element>
     </xsl:template>
     
     

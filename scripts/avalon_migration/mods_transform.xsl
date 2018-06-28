@@ -9,7 +9,7 @@
    version="2.0">
    
    <xsl:output method="xml" encoding="UTF-8" indent="no"/>
-   <xsl:include href="mappings.xsl"/>
+   <xsl:include href="cleanup.xsl"/>
    
    
    <xsl:template match="@*|node()">
@@ -38,17 +38,15 @@
    
    
    <xsl:template match="//*:accessCondition">
-      <xsl:element name="accessCondition" namespace="http://www.loc.gov/mods/v3">
-         <xsl:attribute name="type">use and reproduction</xsl:attribute>
-         <xsl:call-template name="licenseURIs"/>
-      </xsl:element>      
+      <xsl:call-template name="licenseCleanup"/>            
    </xsl:template>
    
+   <xsl:template match="//*:accessCondition[@type='use and reproduction' and text()='Attribution-NonCommercial 4.0 International']" priority="3"/> <!-- added separately for priority -->
    
    <xsl:template match="//*:physicalDescription[not(*)]"/>
    
    
-   <xsl:template match="//*:note">
+   <xsl:template match="//*:note[matches(.,'(for educational use and research)|(terms of use)','i') and not(//*:accessCondition)]">
       <xsl:call-template name="noteCleanup"/>
    </xsl:template>
    
