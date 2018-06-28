@@ -32,9 +32,14 @@ echo "Getting Avalon mods records"
 xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_mods/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/datastreams/descMetadata/content' < MediaObject_pids.txt
 rm id.xml
 
+#remove and add gitignore or dummy file
+#send example of visibility record
 
 echo "Transforming records"
 #run xslt(s)
+cd ~/metadata
+java -jar /opt/SaxonHE9-8-0-12J/saxon9he.jar -s:scripts/avalon_migration/original_mods -o:scripts/avalon_migration/transformed/ -xsl:scripts/avalon_migration/mods_transform.xsl 
+echo "Transformation successful"
 
 echo "Committing to Avalon Migration repository"
 #add, commit and push to repo working branch
