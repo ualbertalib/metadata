@@ -22,7 +22,7 @@ done
 # python3 ./get_query.py
 # python3 ./get_list.py
 # echo "Getting Avalon records"
-# xargs -I wget --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
+# xargs -I wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
 
 
 ##### Use when getting mods records #####
@@ -37,8 +37,8 @@ rm id.xml
 
 echo "Transforming records"
 #run xslt(s)
-cd ~/metadata
-java -jar /opt/SaxonHE9-8-0-12J/saxon9he.jar -s:scripts/avalon_migration/original_mods -o:scripts/avalon_migration/transformed/ -xsl:scripts/avalon_migration/mods_transform.xsl 
+# cd ~/metadata
+java -jar saxon9he.jar -s:original_mods -o:transformed/ -xsl:mods_transform.xsl 
 echo "Transformation successful"
 
 echo "Committing to Avalon Migration repository"
