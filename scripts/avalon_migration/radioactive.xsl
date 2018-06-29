@@ -9,43 +9,43 @@
     <xsl:output method="xml" indent="yes"/>
     
     <xsl:template match="@*|node()">
-        <xsl:copy>
+        <xsl:copy copy-namespaces="yes">
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
     
     
-    <xsl:template match="mods/*">
+    <xsl:template match="*:title | *:namePart | *:publisher | *:extent | *:topic | *:temporal | *:geographic | *:abstract | *:accessCondition | *:tableOfContents | *:note">
         <xsl:variable name="namesake">
             <xsl:value-of select="local-name()"/>
         </xsl:variable>
-        <xsl:copy>
+        <xsl:copy copy-namespaces="yes">
             <xsl:apply-templates select="@*"/>
-            <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1)"/>
-            <!-- Turn on to include text node -->
-            <!--<xsl:value-of select="concat(local-name(),../dcterms:type/substring(text(),1,3),'$',./text())"/>-->            
+            <xsl:choose>
+                <xsl:when test="local-name()='namePart'">
+                    <xsl:variable name="role">
+                        <xsl:value-of select="parent::*//*:roleTerm[@type='text']"/>
+                    </xsl:variable>
+                    <xsl:value-of select="concat($role,count(parent::*/preceding-sibling::*[local-name()='name'][//*:roleTerm[@type='text' and text()=$role]])+1)"/>
+                </xsl:when>
+                <xsl:when test="local-name()='abstract' or local-name()='accessCondition' or local-name()='tableOfContents' or local-name()='note'">
+                    <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1,'$',./text())"/>
+                </xsl:when>
+                <xsl:when test="local-name()='publisher'">
+                    <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1)"/>
+                </xsl:when>
+                <xsl:when test="parent::*[local-name()='subject']">
+                    <xsl:value-of select="concat(local-name(),count(parent::*/preceding-sibling::*/*[local-name()=$namesake])+1)"/>
+                </xsl:when>
+            </xsl:choose>
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="*:genre" priority="2">
-        <xsl:copy-of select="."/>
-    </xsl:template>
     
-    <xsl:template match="*:language" priority="2">
+    <!-- title | publisher | extent | topic | temporal | geographic
+        <xsl:template match="*:genre | *:language | *:dateIssued | *:dateCreated  | *:name" priority="2">
         <xsl:copy-of select="."/>
-    </xsl:template>
-    
-    <xsl:template match="*:roleTerm" priority="2">
-        <xsl:copy-of select="."/>
-    </xsl:template>
-    
-    <xsl:template match="*:dateIssued" priority="2">
-        <xsl:copy-of select="."/>
-    </xsl:template>
-    
-    <xsl:template match="*:dateCreated" priority="2">
-        <xsl:copy-of select="."/>
-    </xsl:template>
+    </xsl:template>-->
     
     <!-- change dates
         createdDate - //foxml:property[@NAME="info:fedora/fedora-system:def/model#createdDate"]/@VALUE
