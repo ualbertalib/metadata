@@ -41,7 +41,7 @@ This python package was generated to address issue [#326](https://github.com/ual
    ```deactivate```
 
 ## Proccess workflow
-Runnig the script will query the ERA triplestore for all thesis with a "unicorn" and will generate list "ERA_IDs.json". Then it will search University of Alberta/Theses and Dissertation collection in Internet Archives and extracts objects that has either ```call_number``` or ```catkey```. Internet Archive ids for items that have either of these will be saved to "IA_IDs.json". 
+Running the script will query the ERA triplestore for all thesis with a "unicorn" and will generate list "ERA_IDs.json". Then it will search [University of Alberta/Theses and Dissertation](https://archive.org/details/ualberta_theses) collection in Internet Archives and extracts objects that has either ```call_number``` or ```catkey```. Internet Archive ids for items that have either of these will be saved to "IA_IDs.json". 
 
 The two list are then compared and two new lists are generated:
 
@@ -62,4 +62,4 @@ All the required field (according to [Jupiter Data Dictionary](https://github.co
    - thesis level
    - degree
    
-A UUID is generated randomly (will cross check with all the UUIDs in Jupiter to make sure it is unique) for each item and then all data is saved inot a N-triple file.
+A UUID is generated randomly (will cross check with all UUIDs in Jupiter to make sure it is unique) for each item and then all data is saved as triples (predicates are created according to [Jupiter Data Dictionary](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md))into a N-triple file.
