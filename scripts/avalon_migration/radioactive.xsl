@@ -26,12 +26,12 @@
                     <xsl:variable name="role">
                         <xsl:value-of select="parent::*//*:roleTerm[@type='text']"/>
                     </xsl:variable>
-                    <xsl:value-of select="concat($role,count(parent::*/preceding-sibling::*[local-name()='name'][//*:roleTerm[@type='text' and text()=$role]])+1)"/>
+                    <xsl:value-of select="concat($role,count(parent::*/preceding-sibling::*[local-name()='name'][descendant::*:roleTerm[@type='text' and text()=$role]])+1)"/>
                 </xsl:when>
                 <xsl:when test="local-name()='abstract' or local-name()='accessCondition' or local-name()='tableOfContents' or local-name()='note'">
-                    <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1,'$',./text())"/>
+                    <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1,'$   ',./text())"/>
                 </xsl:when>
-                <xsl:when test="local-name()='publisher'">
+                <xsl:when test="local-name()='publisher' or local-name()='extent' or local-name()='title'">
                     <xsl:value-of select="concat(local-name(),count(preceding-sibling::*[local-name()=$namesake])+1)"/>
                 </xsl:when>
                 <xsl:when test="parent::*[local-name()='subject']">
