@@ -28,7 +28,7 @@ This python package was generated to address issue [#326](https://github.com/ual
    
 - install required modules:
    
-   ```pip install -r requriement.txt```
+   ```pip install -r requirements.txt```
    
 - configure config.py at [line 44](https://github.com/ualbertalib/metadata/blob/50ba76cbc4bf82500025ecdf849537980d0c39d0/scripts/ia/legacy_Thesis/config.py#L44) to download the desired file type(s) from Internet Archives:
    
