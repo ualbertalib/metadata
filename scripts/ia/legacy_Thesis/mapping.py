@@ -12,7 +12,7 @@ from config import degree_level, thesisLevel, Jupiter_predicates, institution, m
 import uuid
 
 work_dir = getcwd() 
-#download files that are not in Jupiter form Ineternet Archives
+#download files that are not in Jupiter (and have catkey) form Ineternet Archives
 get_files(work_dir)
 chdir(work_dir)
 
@@ -20,7 +20,7 @@ def main():
 	output = []
 	data = {}
 	mapp = []
-	uuids = get_Jupiter_noids()
+	uuids = get_Jupiter_UUIDs()
 	departments = get_department()
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		try:
@@ -199,7 +199,7 @@ def get_level(record, data, filename):
 								level = subfield[1].split('--')[0].replace('Thesis', '').replace('(', '').replace(')', '').replace('University of Alberta', '').replace('-', '').lstrip()
 								level = re.sub(r'[0-9]+', '', level).lstrip()
 								#print ('1', level)
-								#generate thesis level mapping
+								##generate thesis level mapping##
 								#if level not in mapp:
 								#mapp.append(level)
 								for i in thesisLevel:
@@ -228,11 +228,12 @@ def get_degree(record, data, filename, department, departments):
 								level = re.sub(r'[0-9]+', '', level).lstrip()
 								for i in degree_level:
 									if level in i['mapping']:
+										#if the mapping exists use the useForm
 										data[filename]['degree'].append(i['useForm'])
 										break
+								#If degree was not in mappings, use the degree levels for the deparment
 								if len(data[filename]['degree']) == 0:
 									for i in thesisLevel:
-										#if the mapping exists use the uri
 										if level in i['mapping']: 
 											if department != '':
 												for key in departments.keys():
@@ -265,7 +266,7 @@ def get_notes(record, data, filename):
 			PrintException()
 	return(data)
 
-def get_Jupiter_noids():
+def get_Jupiter_UUIDs():
 	#query Jupiter solr for all UUIDs (community, collection, Item and thesis)
 	try:
 		response = requests.get('http://solrcloud.library.ualberta.ca:8080/solr/jupiter/select?fl=id&fq=has_model_ssim:("IRCommunity" OR "IRCollection" OR "IRItem" OR "IRThesis")&indent=on&q=id:*&rows=10000&wt=json').json()
