@@ -59,6 +59,7 @@ def main():
 			uu_id = generate_uuid(uuids)
 			s = URIRef('%s/%s/%s/%s/%s/%s' %(fedora, uu_id[0:2], uu_id[2:4], uu_id[4:6], uu_id[6:8], uu_id))
 			filename = s[0:10]
+			download_link = "https://ia800101.us.archive.org/11/items/%s/%s.pdf" %(item, item)
 			#create a Graph for the item
 			filename = Graph()
 			for key in dat[item].keys():
@@ -90,7 +91,7 @@ def main():
 				#add license triple
 				filename.add((s, URIRef('http://purl.org/dc/elements/1.1/rights'), Literal('This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law.')))
 				#add Internet Archives ID
-				filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(item)))
+				filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(download_link)))
 			folder = 'triples'
 			output = "%s/%s.nt" %(folder, item)
 			if not exists(folder):
@@ -180,7 +181,9 @@ def get_date(record, data, filename):
 					for subfield in field:
 						#appending the date field (graduation date)
 							if subfield[0] == 'c':
-								data[filename]['graduation_date'].append(subfield[1])
+								date = re.search('^\d{4}$', subfield[1])
+								print (date)
+								data[filename]['graduation_date'].append(date)
 		except:
 			PrintException()
 	return(data)
