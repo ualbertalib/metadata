@@ -1,11 +1,13 @@
-import os
+from os import listdir, getcwd, chdir, makedirs
+from os.path import isfile, join, exists
 import time
 from datetime import datetime
+from IA_only import ids
 import json
 import requests
 import internetarchive
 from SPARQLWrapper import SPARQLWrapper, JSON
-from config import sparql, IA_access, file_type
+from config import sparql, IA_access, file_type, PrintException
 from internetarchive import get_session
 
 def get_files(work_dir):
@@ -80,23 +82,26 @@ def generate_overlap_list(ERA_IDs, IA_IDs):
 
 def download(IA_only, file_type, work_dir):
 	for i in file_type:
-		folder = 'files/%s' %(i)
-		if not os.path.exists(folder):
-			os.makedirs(folder)
-		os.chdir('files/%s' %(i))
+		filetype = i.replace('_marc.', '').replace('_meta.', '').replace('_djvu.', '').replace('.', '')
+		print (filetype)
+		print ('getting %s files' %(filetype))
+		folder = 'files/%s' %(filetype)
+		if not exists(folder):
+			makedirs(folder)
+		chdir(folder)
 		for index, itemid in enumerate(IA_only.keys()):
-			print (str(index+1) + ' of ' + str(len(IA_only)) + ' downloading ' + str(itemid) + ' -- format: ' + str(i))
-			item = internetarchive.get_item(itemid)
-			if i == 'marc':
-				file = item.get_file(itemid + '_meta.mrc')
-			elif i == 'xml':
-				file = item.get_file(itemid + '_marc.xml')
-			elif i == 'txt':
-				file = item.get_file(itemid + '_djvu.txt')
+			filename = itemid + i
+			if isfile(filename):
+				print ('%s of type %s is in folder -- skipping download' %(itemid, filetype))
 			else:
-				file = item.get_file(itemid + '_meta.xml')
-			file.download()
-		os.chdir(work_dir)
+				print (str(index+1) + ' of ' + str(len(IA_only)) + ' downloading ' + str(itemid) + ' -- format: ' + str(filetype))
+				item = internetarchive.get_item(itemid)
+				file = item.get_file(itemid + i)
+				try:
+					file.download()
+				except:
+					PrintException()
+		chdir(work_dir)
 			
 if __name__ == "__main__":
 	get_files()

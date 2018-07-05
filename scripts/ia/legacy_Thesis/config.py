@@ -1,3 +1,6 @@
+import sys
+import linecache
+
 degree_level = [{'useForm': "Bachelor of Science",
 	'mapping': ['B. Sc.', 'B.Sc.', 'BSc.', 'B.S.', 'BS']},
 	{'useForm': "Bachelor of Education",
@@ -45,11 +48,11 @@ file_type = [
 	'_marc.xml',
 	'_meta.mrc',
 	'_djvu.txt',
-	'pdf'
+	'.pdf'
 	]
 sparql = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"
 IA_access = {'s3': {'access': 'C9khuFEwAKAj5Y5X', 'secret': '8s5NsWQzx1wTKfAd'}}
-mypath = "/home/danydvd/git/remote/metadata/scripts/ia/files/xml/"
+mypath = "/home/danydvd/git/remote/metadata/scripts/ia/legacy_Thesis/files/xml/"
 fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
 collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
 

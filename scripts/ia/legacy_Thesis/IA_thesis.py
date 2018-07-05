@@ -13,7 +13,7 @@ import uuid
 
 work_dir = getcwd() 
 #download files that are not in Jupiter (and have catkey) form Ineternet Archives
-get_files(work_dir)
+#get_files(work_dir)
 chdir(work_dir)
 
 def main():
@@ -44,12 +44,14 @@ def main():
 					dat = get_notes(record, data, filename)
 					dat = get_title(record, data, filename)
 					dat = get_author(record, data, filename)
+					dat = get_subjects(record, data, filename)
 					dat = get_institution(record, data, filename)[0]
 					dep = get_institution(record, data, filename)[1]
 					dat = get_date(record, data, filename)
 					dat = get_level(record, data, filename)
 					if len(dat[filename]['degree']) == 0:
 						dat = get_degree(record, data, filename, dep, departments)
+			#print (data)
 		except:
 			PrintException()
 	#create triples and write to file
@@ -68,6 +70,7 @@ def main():
 						p = URIRef(mapp["uri"])
 				if isinstance(dat[item][key], list) and len(dat[item][key]) > 0:
 					obj = dat[item][key][0]
+					#print (obj)
 					for mapp in institution:
 						if obj in mapp['mapping']:
 							obj = mapp["uri"]
@@ -181,9 +184,7 @@ def get_date(record, data, filename):
 					for subfield in field:
 						#appending the date field (graduation date)
 							if subfield[0] == 'c':
-								date = re.search('^\d{4}$', subfield[1])
-								print (date)
-								data[filename]['graduation_date'].append(date)
+								data[filename]['graduation_date'].append(subfield[1])
 		except:
 			PrintException()
 	return(data)
