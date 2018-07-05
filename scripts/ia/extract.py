@@ -1,4 +1,5 @@
-import os
+from os import listdir, getcwd, chdir, makedirs
+from os.path import isfile, join, exists
 import time
 from datetime import datetime
 import json
@@ -37,9 +38,10 @@ def search_IA():
 	'C9khuFEwAKAj5Y5X'
 	#search IA/ualberta thesis collection
 	search = internetarchive.search_items('collection:ualberta_theses')
+	print (type(search))
 	print ('As of %s there are %s items in thesis collection of Internet Archives' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), len(search)))
 	IA_IDs = {}
-	for i, result in enumerate(search):
+	for i, result in enumerate(search[:20]):
 	    itemid = result['identifier']
 	    print ('searching metadata in item %s of %s -- item ID: %s' %(i+1, len(search), itemid))
 	    #search for call_numbers
@@ -48,9 +50,9 @@ def search_IA():
 	    if 'result' not in r.keys():
 	    	#if field call_number was not found, search for catkey
 	    	q = 'http://archive.org/metadata/' + itemid + '/metadata/caltkey'
-	    	r = requests.get(q).json()
+	    	'''r = requests.get(q).json()
 	    	if 'result' in r.keys():
-	    		IA_IDs[r['result']] = itemid
+	    		IA_IDs[r['result']] = itemid'''
 	    else:
 	    	IA_IDs[r['result']] = itemid
 	#write to file
@@ -80,25 +82,22 @@ def generate_overlap_list(ERA_IDs, IA_IDs):
 
 def download(IA_only, file_type, work_dir):
 	for i in file_type:
-		folder = 'files/%s' %(i)
-		if not os.path.exists(folder):
-			os.makedirs(folder)
-		os.chdir('files/%s' %(i))
+		type = i.replace('_marc.', '').replace('_meta.', '').replace('_djvu.', '')
+		print ('downloading %s files') %(type)
+		folder = 'files/%s' %(type)
+		if not exists(folder):
+			makedirs(folder)
+		chdir(folder)
 		for index, itemid in enumerate(IA_only.keys()):
-			print (str(index+1) + ' of ' + str(len(IA_only)) + ' downloading ' + str(itemid) + ' -- format: ' + str(i))
-			item = internetarchive.get_item(itemid)
-			if i == 'marc':
-				file = item.get_file(itemid + '_meta.mrc')
-			elif i == 'xml':
-				file = item.get_file(itemid + '_marc.xml')
-			elif i == 'txt':
-				file = item.get_file(itemid + '_djvu.txt')
-			elif i == 'pdf':
-				file = item.get_file(itemid + 'pdf')
+			filename = itemid + i
+			if isfile(filename):
+				print ('%s of type %s is in the folder -- skiping download') %(itemid, type)
 			else:
-				file = item.get_file(itemid + '_meta.xml')
-			file.download()
-		os.chdir(work_dir)
+				print (str(index+1) + ' of ' + str(len(IA_only)) + ' downloading ' + str(itemid) + ' -- format: ' + str(type))
+				item = internetarchive.get_item(itemid)
+				file = item.get_file(filename)
+				file.download()
+		chdir(work_dir)
 			
 if __name__ == "__main__":
 	get_files()
