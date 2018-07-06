@@ -39,21 +39,29 @@ def search_IA():
 	#search IA/ualberta thesis collection
 	search = internetarchive.search_items('collection:ualberta_theses')
 	print ('As of %s there are %s items in thesis collection of Internet Archives' % (datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'), len(search)))
+	json_file = open('IA_only.json')
+	json_str = json_file.read()
+	json_data = json.loads(json_str)
+	print ('%s items of %s are already downloaded -- Skipping metadata search for these items' %(len(json_data), len(search)))
 	IA_IDs = {}
 	for i, result in enumerate(search):
 	    itemid = result['identifier']
-	    print ('searching metadata in item %s of %s -- item ID: %s' %(i+1, len(search), itemid))
-	    #search for call_numbers
-	    q = 'http://archive.org/metadata/' + itemid + '/metadata/call_number'
-	    r = requests.get(q).json()
-	    if 'result' not in r.keys():
-	    	#if field call_number was not found, search for catkey
-	    	q = 'http://archive.org/metadata/' + itemid + '/metadata/caltkey'
-	    	r = requests.get(q).json()
-	    	if 'result' in r.keys():
-	    		IA_IDs[r['result']] = itemid
+	    if itemid in json_data.keys():
+	    	print ('skipping metadata search for %s' %(itemid))
+	    	IA_IDs[json_data[itemid]] = itemid
 	    else:
-	    	IA_IDs[r['result']] = itemid
+		    print ('searching metadata in item %s of %s -- item ID: %s' %(i+1, len(search), itemid))
+		    #search for call_numbers
+		    q = 'http://archive.org/metadata/' + itemid + '/metadata/call_number'
+		    r = requests.get(q).json()
+		    if 'result' not in r.keys():
+		    	#if field call_number was not found, search for catkey
+		    	q = 'http://archive.org/metadata/' + itemid + '/metadata/caltkey'
+		    	r = requests.get(q).json()
+		    	if 'result' in r.keys():
+		    		IA_IDs[r['result']] = itemid
+		    else:
+		    	IA_IDs[r['result']] = itemid
 	#write to file
 	with open('IA_IDs.json', 'w') as IA:
 		json.dump(IA_IDs, IA)
