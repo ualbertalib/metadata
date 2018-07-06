@@ -2,7 +2,6 @@ from os import listdir, getcwd, chdir, makedirs
 from os.path import isfile, join, exists
 import time
 from datetime import datetime
-from IA_only import ids
 import json
 import requests
 import internetarchive
