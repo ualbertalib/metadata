@@ -13,7 +13,7 @@ import uuid
 
 work_dir = getcwd() 
 #download files that are not in Jupiter (and have catkey) form Ineternet Archives
-#get_files(work_dir)
+get_files(work_dir)
 chdir(work_dir)
 
 def main():
@@ -32,6 +32,7 @@ def main():
 							'title': [],
 							'subject': {},
 							'graduation_date': [],
+							'sortYear': [],
 							'dissertant': [],
 							'department': [],
 							'institution': [],
@@ -190,6 +191,12 @@ def get_date(record, data, filename):
 								if date[-1] == '-':
 									date = date.replace('-', '0')
 								data[filename]['graduation_date'].append(date)
+								sortYear = re.search('\d{4}$', date)
+								if sortYear:
+									data[filename]['sortYear'].append(sortYear.group(0))
+								else:
+									sortYear = re.search('\d{4}$', date.split('-')[0])
+									data[filename]['sortYear'].append(sortYear.group(0))
 		except:
 			PrintException()
 	return(data)
