@@ -36,6 +36,8 @@ Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
 	"mapping": ["level"]},
 	{"uri": "http://purl.org/ontology/bibo/ThesisDegree",
 	"mapping": ["degree"]},
+	{"uri": "http://terms.library.ualberta.ca/unicorn",
+	"mapping": ["unicorn"]},
 	{"uri": "http://purl.org/dc/elements/1.1/subject",
 	"mapping": ["subject"]}]
 
