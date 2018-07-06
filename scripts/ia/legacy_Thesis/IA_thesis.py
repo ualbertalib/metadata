@@ -13,7 +13,7 @@ import uuid
 
 work_dir = getcwd() 
 #download files that are not in Jupiter (and have catkey) form Ineternet Archives
-get_files(work_dir)
+#get_files(work_dir)
 chdir(work_dir)
 
 def main():
@@ -37,6 +37,7 @@ def main():
 							'institution': [],
 							'level': [],
 							'degree': [],
+							'unicorn': [],
 							'abstract': []
 							}
 				#get requried fields form each record
@@ -48,6 +49,7 @@ def main():
 					dat = get_institution(record, data, filename)[0]
 					dep = get_institution(record, data, filename)[1]
 					dat = get_date(record, data, filename)
+					dat = get_unicorn(record, data, filename)
 					dat = get_level(record, data, filename)
 					if len(dat[filename]['degree']) == 0:
 						dat = get_degree(record, data, filename, dep, departments)
@@ -185,6 +187,19 @@ def get_date(record, data, filename):
 						#appending the date field (graduation date)
 							if subfield[0] == 'c':
 								data[filename]['graduation_date'].append(subfield[1])
+		except:
+			PrintException()
+	return(data)
+
+def get_unicorn(record, data, filename):
+	for fieldNum in ['001']:
+		#if the desired field exists in this marc record, access it
+		try:
+			if fieldNum in record:
+				#iterate over the subfield in this field
+				for field in record.get_fields(fieldNum):
+					#appending the date field (unicorn)
+					data[filename]['unicorn'].append(str(field).replace('=001  ', ''))
 		except:
 			PrintException()
 	return(data)
