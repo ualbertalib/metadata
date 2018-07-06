@@ -186,7 +186,10 @@ def get_date(record, data, filename):
 					for subfield in field:
 						#appending the date field (graduation date)
 							if subfield[0] == 'c':
-								data[filename]['graduation_date'].append(subfield[1])
+								date = re.sub(r'[\[/\]/\./\?]+', '', subfield[1])
+								if date[-1] == '-':
+									date = date.replace('-', '0')
+								data[filename]['graduation_date'].append(date)
 		except:
 			PrintException()
 	return(data)
