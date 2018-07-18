@@ -28,8 +28,12 @@ def main():
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #import your OCLC develpoer key
     wskey = keys['OCLC-wskey'][0]
-    convert_marc()
-    folder = 'uploads'
+    #convert .mrc to MARC/XML
+    Marc_XML = MARC_XML()
+    Marc_XML.convert_marc()
+    BIBFRAME = XML_BIBFRAME()
+    BIBFRAME.convert_to_BIBFRAME()
+    folder = 'BIBFRAME'
     for files in os.listdir(folder):
         tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         file = os.path.join(folder, files)
@@ -97,44 +101,51 @@ def main():
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
     print("walltime:", process_time)
 
-def convert_marc():
-    for files in os.listdir(folder):
-        with open(files, "rb") as marc_file:
-            ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-            reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
-            files = []
-            for i, record in enumerate(reader):
-                print ("converting record number " + str(i) + " to XML")
-                if record.title():
-                    ti = record.title()
-                    ti = ti.replace("/", "")
-                    ti = ti.replace(" ", "_")
-                    ti = ti[0:50]
-                    writer = XMLWriter(open('processed/' + ti + '.xml','wb'))
-                    writer.write(record)
-                    writer.close()
-                    files.append(ti)
-                else:
-                    writer = XMLWriter(open('processed/' + 'unknownTitle' + str(i) + '.xml','wb'))
-                    files.append('unknownTitle' + str(i))
-            marc_file.close()
-            #print (file + " was successfully converted to XML")
-            xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
-            tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-            #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
-            for i, file in enumerate(files):
-                #print ("start processing record number " + str(i))
-                #print ("starting BIBFRAME transformation")
-                f = "processed/" + file + ".xml"
-                dom = ET.parse(f)
-                transform = ET.XSLT(xslt)
-                newdom = transform(dom)
-                if not os.path.exists("BIB"):
-                    os.makedirs("BIB")
-                with open ("BIB/" + file + ".xml", "w+") as oo:
-                    oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
-                #print ("starting enrichment process")
-                main("BIB/" + file + ".xml")
+class MARC_XML():
+    def __init__(self):
+        source = 'marc'
+        folder = 'MARC_XML'
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+
+    def convert_marc_xml(self):
+        for index, files in enumerate(os.listdir(self.source)):
+            with open(files, "rb") as marc_file:
+                ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+                reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
+                for i, record in enumerate(reader):
+                    print ("converting record number " + str(i) + " of file number " + str(index) + " to XML")
+                    if record.title():
+                        ti = record.title()
+                        ti = ti.replace("/", "")
+                        ti = ti.replace(" ", "_")
+                        ti = ti[0:50]
+                        writer = XMLWriter(open(self.folder + ti + '.xml','wb'))
+                        writer.write(record)
+                        writer.close()
+                    else:
+                        writer = XMLWriter(open(self.folder + 'unknownTitle' + str(i) + '.xml','wb'))
+                marc_file.close()
+
+class XML_BIBFRAME():
+    def __init__(self):
+        source = 'MARC_XML'
+        folder = 'BIBFRAME'
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        self.xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
+                
+    def convert_to_BIBFRAME(self)
+        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+        for i, files in enumerate(os.listdir(self.source)):
+            #print ("start processing record number " + str(i))
+            #print ("starting BIBFRAME transformation")
+            dom = ET.parse(files)
+            transform = ET.XSLT(xslt)
+            newdom = transform(dom)
+            with open (folder + file + ".xml", "w+") as oo:
+                oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
 
 class Bibframe():
     def __init__(self, file, log_file):
