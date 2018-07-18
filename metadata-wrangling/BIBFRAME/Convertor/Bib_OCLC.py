@@ -27,17 +27,17 @@ def main():
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #import your OCLC develpoer key
-    wskey = keys['OCLC-wskey'][0]
+    
     #convert .mrc to MARC/XML
     Marc_XML = MARC_XML()
-    Marc_XML.convert_marc()
+    Marc_XML.convert_marc_xml()
     BIBFRAME = XML_BIBFRAME()
     BIBFRAME.convert_to_BIBFRAME()
     folder = 'BIBFRAME'
     for files in os.listdir(folder):
         tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         file = os.path.join(folder, files)
-        filename = file.replace('.xml', '').replace('uploads/', '')
+        filename = file.replace('.xml', '').replace('BIBFRAME/', '')
         print ("processing " + filename)
         ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         log_file = filename.replace('.xml', '') + "-error-logs"
@@ -88,14 +88,14 @@ def main():
         final_names = result_names_Object.mapping()
         result_title_Object = Results(title_result, titles, file, 'title', log_file)
         final_titles = result_title_Object.mapping()
-        eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-        stats['names-enriched'] = len(final_names)
+        #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+        #stats['names-enriched'] = len(final_names)
         tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write(final_names, final_titles, file, output, log_file, filename)
         tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
         file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-        write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+        #write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
         print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
     tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
@@ -103,48 +103,52 @@ def main():
 
 class MARC_XML():
     def __init__(self):
-        source = 'marc'
-        folder = 'MARC_XML'
-        if not os.path.exists(folder):
-            os.makedirs(folder)
+        self.source = 'marc'
+        self.folder = 'MARC_XML'
+        if not os.path.exists(self.folder):
+            os.makedirs(self.folder)
 
     def convert_marc_xml(self):
         for index, files in enumerate(os.listdir(self.source)):
-            with open(files, "rb") as marc_file:
+            file = os.path.join(self.source, files)
+            output = os.path.join(self.folder, '')
+            with open(file, "rb") as marc_file:
                 ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
                 reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
                 for i, record in enumerate(reader):
-                    print ("converting record number " + str(i) + " of file number " + str(index) + " to XML")
+                    print ("converting record number " + str(i) + " of file number " + str(index+1) + " to XML")
                     if record.title():
                         ti = record.title()
                         ti = ti.replace("/", "")
                         ti = ti.replace(" ", "_")
                         ti = ti[0:50]
-                        writer = XMLWriter(open(self.folder + ti + '.xml','wb'))
+                        writer = XMLWriter(open(output + ti + '.xml','wb'))
                         writer.write(record)
                         writer.close()
                     else:
-                        writer = XMLWriter(open(self.folder + 'unknownTitle' + str(i) + '.xml','wb'))
+                        writer = XMLWriter(open(output + 'unknownTitle' + str(i) + '.xml','wb'))
                 marc_file.close()
 
 class XML_BIBFRAME():
     def __init__(self):
-        source = 'MARC_XML'
-        folder = 'BIBFRAME'
-        if not os.path.exists(folder):
-            os.makedirs(folder)
+        self.source = 'MARC_XML'
+        self.folder = 'BIBFRAME'
+        if not os.path.exists(self.folder):
+            os.makedirs(self.folder)
         self.xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
                 
-    def convert_to_BIBFRAME(self)
+    def convert_to_BIBFRAME(self):
         tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
         for i, files in enumerate(os.listdir(self.source)):
-            #print ("start processing record number " + str(i))
+            file = os.path.join(self.source, files)
+            output = os.path.join(self.folder, '')
+            print ("start processing record number " + str(i+1))
             #print ("starting BIBFRAME transformation")
-            dom = ET.parse(files)
-            transform = ET.XSLT(xslt)
+            dom = ET.parse(file)
+            transform = ET.XSLT(self.xslt)
             newdom = transform(dom)
-            with open (folder + file + ".xml", "w+") as oo:
+            with open (output + files + ".xml", "w+") as oo:
                 oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
 
 class Bibframe():
@@ -413,6 +417,7 @@ class SearchAPI():
 
     def search_OCLC(self):
         self.scores = {}
+        wskey = keys['OCLC-wskey'][0]
         OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=%s" %(wskey)
         try:
             OCLC_result = requests.get(OCLC).text
@@ -669,36 +674,46 @@ def get_stat(final_names, names, final_titles, titles, file):
         if "VIAF" in final_names[i]['scores'].keys():
             VIAF_Score.append(final_names[i]['scores']['VIAF'][1])
             VIAF += 1
-    LC_Avg = statistics.mean(LC_Score)
-    LC_Median = statistics.median(LC_Score)
-    LC_Var = statistics.variance(LC_Score)
-    LC_Std = statistics.stdev(LC_Score)
-    VIAF_Avg = statistics.mean(VIAF_Score)
-    VIAF_Median = statistics.median(VIAF_Score)
-    VIAF_Var = statistics.variance(VIAF_Score)
-    VIAF_Std = statistics.stdev(VIAF_Score)
-    plt.hist(LC_Score)
-    plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
-    plt.grid()
-    plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
-        orientation='portrait')
-    plt.clf()
-    plt.hist(VIAF_Score)
-    plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
-    plt.grid()
-    plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
-        orientation='portrait')
-    plt.clf()
-    colors = ['red', 'green']
+    if len(LC_Score) > 0:
+        LC_Avg = statistics.mean(LC_Score)
+        LC_Median = statistics.median(LC_Score)
+        if len(LC_Score) > 1:
+            LC_Var = statistics.variance(LC_Score)
+            LC_Std = statistics.stdev(LC_Score)
+        else:
+            LC_Var = 'N/A'
+            LC_Std = 'N/A'
+        '''plt.hist(LC_Score)
+        plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
+        plt.grid()
+        plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
+            orientation='portrait')
+        plt.clf()'''
+        stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
+    if len(VIAF_Score) > 0:
+        VIAF_Avg = statistics.mean(VIAF_Score)
+        VIAF_Median = statistics.median(VIAF_Score)
+        if len(VIAF_Score) > 1:
+            VIAF_Var = statistics.variance(VIAF_Score)
+            VIAF_Std = statistics.stdev(VIAF_Score)
+        else:
+            VIAF_Var = 'N/A'
+            VIAF_Std = 'N/A'
+        '''plt.hist(VIAF_Score)
+        plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
+        plt.grid()
+        plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
+            orientation='portrait')
+        plt.clf()'''
+        stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
+    '''colors = ['red', 'green']
     labels = ['LC-IDs', 'VIAF-IDs']
     x_multi = [LC_Score, VIAF_Score]
     plt.hist(x_multi, 10, normed=1, histtype='bar', color=colors, label=labels)
     plt.legend(prop={'size': 10})
     plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
     plt.savefig(file_path, facecolor='w', edgecolor='w',
-        orientation='portrait')
-    stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
-    stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
+        orientation='portrait')'''
     for i in final_titles.keys():
         if 'work_id' in final_titles[i]['scores']:
             work_id_Score.append(final_titles[i]['scores']['work_id'][1])
@@ -706,28 +721,38 @@ def get_stat(final_names, names, final_titles, titles, file):
         if 'oclcid' in final_titles[i]['scores']:
             oclcid_Score.append(final_titles[i]['scores']['oclcid'][1])
             oclcid += 1
-    oclcid_Avg = statistics.mean(oclcid_Score)
-    oclcid_Median = statistics.median(oclcid_Score)
-    oclcid_Var = statistics.variance(oclcid_Score)
-    oclcid_Std = statistics.stdev(oclcid_Score)
-    work_id_Avg = statistics.mean(work_id_Score)
-    work_id_Median = statistics.median(work_id_Score)
-    work_id_Var = statistics.variance(work_id_Score)
-    work_id_Std = statistics.stdev(work_id_Score)
-    plt.hist(work_id_Score)
-    plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
-    plt.grid()
-    plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
-        orientation='portrait')
-    plt.clf()
-    plt.hist(oclcid_Score)
-    plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
-    plt.grid()
-    plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
-        orientation='portrait')
-    plt.clf()
-    stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
-    stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
+    if len(oclcid_Score) > 0:
+        oclcid_Avg = statistics.mean(oclcid_Score)
+        oclcid_Median = statistics.median(oclcid_Score)
+        if len(oclcid_Score) > 1:
+            oclcid_Var = statistics.variance(oclcid_Score)
+            oclcid_Std = statistics.stdev(oclcid_Score)
+        else:
+            oclcid_Var = 'N/A'
+            oclcid_Std = 'N/A'
+        '''plt.hist(work_id_Score)
+        plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
+        plt.grid()
+        plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
+            orientation='portrait')
+        plt.clf()'''
+    if len(work_id_Score) > 0:
+        work_id_Avg = statistics.mean(work_id_Score)
+        work_id_Median = statistics.median(work_id_Score)
+        if len(work_id_Score) > 1:
+            work_id_Var = statistics.variance(work_id_Score)
+            work_id_Std = statistics.stdev(work_id_Score)
+        else:
+            work_id_Var = 'N/A'
+            work_id_Std = 'N/A'
+        '''plt.hist(oclcid_Score)
+        plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
+        plt.grid()
+        plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
+            orientation='portrait')
+        plt.clf()'''
+        stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
+        stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
 
 def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
@@ -748,21 +773,25 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
         for i in stats.keys():
             stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
         stat.write("\n" + "\n")
-        stat.write('LC_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
-        for i in eff["LC"]:
-            stat.write(str(i) + "\t")
-        stat.write("\n" + "\n")
-        stat.write('VIAF_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
-        for i in eff["VIAF"]:
-            stat.write(str(i) + "\t")
-        stat.write("\n" + "\n")
-        stat.write('work_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
-        for i in eff["work_id"]:
-            stat.write(str(i) + "\t")
-        stat.write("\n" + "\n")
-        stat.write('oclc_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
-        for i in eff["oclcid"]:
-            stat.write(str(i) + "\t")
+        if 'LC' in eff.keys():
+            stat.write('LC_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+            for i in eff["LC"]:
+                stat.write(str(i) + "\t")
+            stat.write("\n" + "\n")
+        if 'VIAF_ID' in eff.keys():
+            stat.write('VIAF_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+            for i in eff["VIAF"]:
+                stat.write(str(i) + "\t")
+            stat.write("\n" + "\n")
+        if 'work_id' in eff.keys():
+            stat.write('work_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+            for i in eff["work_id"]:
+                stat.write(str(i) + "\t")
+            stat.write("\n" + "\n")
+        if 'oclc_id' in eff.keys():
+            stat.write('oclc_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
+            for i in eff["oclcid"]:
+                stat.write(str(i) + "\t")
 
 if __name__ == "__main__":
     main()
