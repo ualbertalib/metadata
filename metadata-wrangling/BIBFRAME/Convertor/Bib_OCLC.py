@@ -25,15 +25,15 @@ from datetime import datetime
 
 def main():
     #proccess start time
-    tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    #import your OCLC develpoer key
-    
+    tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')    
     #convert .mrc to MARC/XML
     Marc_XML = MARC_XML()
     Marc_XML.convert_marc_xml()
+    #convert MARC/XML to BIBFRAME
     BIBFRAME = XML_BIBFRAME()
     BIBFRAME.convert_to_BIBFRAME()
     folder = 'BIBFRAME'
+    #iterate over BIBFRAME files
     for files in os.listdir(folder):
         tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         file = os.path.join(folder, files)
@@ -43,35 +43,44 @@ def main():
         log_file = filename.replace('.xml', '') + "-error-logs"
         output = filename.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
         clearLogs(log_file)
+        # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
         apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+        #this is needed for LC APIs
         query_type = "/authorities/names"
+        # extracting names and titles from BIBFRAME
         bib_object = Bibframe(file, log_file)
         transformed = bib_object.convert_bibframe()
         names = bib_object.extract_names(transformed)[0]
         titles = bib_object.extract_names(transformed)[1]
+        #getting corp names (for stat report)
         all_names = bib_object.extract_names(transformed)[2]
         corp_names = bib_object.extract_names(transformed)[3]
         print (str(all_names) + " were extrected from " + filename)
         print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
         print (str(len(titles)) + " titles were extracted from " + filename)
+        #dictionaries for storing URIs (names and titles) and stats
         enriched_names = {}
         enriched_titles = {}
         stats = {}
         print ("enriching names")
+        # iterate over the name dictionary 
         for index, item in enumerate(names.keys()):
             name = item.split('-_-_-')[0]
             print(index+1, name)
             enriched_names[item] = []
             for api in apis:
+                #check if the stat for the API already exists
                 if api in stats.keys():
                     pass
                 else:
                     stats[api] = 0
+                # getting the API method
                 name_result = APIFactory().get_API(name, query_type, api, log_file)
                 if name_result:
                     enriched_names[item].append(name_result)
                     stats[api] = stats[api] + len(name_result)
         print ("enriching titles")
+        # iterate over the title dictionary
         for index, title in enumerate(titles.keys()):
             print(index+1, title)
             for authors in titles[title]['authors']:
@@ -81,8 +90,10 @@ def main():
                 title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
                 if title_result:
                     enriched_titles[key].append(title_result)
+        # getting rid of unwanted things
         name_results = clean_up(enriched_names)
         title_result = clean_up(enriched_titles)
+        # get the best URI each API (highest score) and storing it in final_names and final_titles
         result_names_Object = Results(name_results, names, file, 'name', log_file)
         result_names_Object.maximizer()
         final_names = result_names_Object.mapping()
@@ -91,6 +102,7 @@ def main():
         #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
         #stats['names-enriched'] = len(final_names)
         tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+        #write back the URIs to the BIBFRAME file
         write(final_names, final_titles, file, output, log_file, filename)
         tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
@@ -417,6 +429,7 @@ class SearchAPI():
 
     def search_OCLC(self):
         self.scores = {}
+        #import your OCLC develpoer key
         wskey = keys['OCLC-wskey'][0]
         OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=%s" %(wskey)
         try:
