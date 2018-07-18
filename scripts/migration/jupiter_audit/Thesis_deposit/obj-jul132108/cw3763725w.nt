@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cw/37/63/72/cw3763725w> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-19T17:56:28.711Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Akgun_Burcin_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Akgun, B.; Hall, D. G. Fast and Tight Boronate Formation for âClickâ Bioorthogonal Conjugation. Angew. Chem. Int. Ed. 2016, 55, 3909â3913.Akgun, B.; Li, C.; Hao, Y.; Lambkin, G.; Derda, R.; Hall, D. G. Synergic âClickâ Boronate/Thiosemicarbazone System for Fast and Irreversible Bioorthogonal Conjugation in Live Cells. J. Am. Chem. Soc. 2017, 139, 14285â14291."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "boronic ester"^^<http://www.w3.org/2001/XMLSchema#string> , "bioorthogonal chemistry"^^<http://www.w3.org/2001/XMLSchema#string> , "protein"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-22T22:44:48.653Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "4346ef8a-d920-433e-ba5d-237bfba2f083"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:c5c84ce3-6151-4fd5-aadb-eab6a2e86697"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Hall, Dennis (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "akgun@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "The development of rapid and bioorthogonal chemical reactions has expanded greatly the utility of bioconjugation chemistry in the service of site-selective protein labeling, even allowing molecular imaging in live cells or animals. âClickâ chemistry is particularly desirable due to its fast reactivity in an aqueous environment at low concentrations (< 100 Î¼M), with high yields and selectivity without any side products. Although a number of click reactions were developed for this purpose, many are associated with drawbacks and limitations that justify the development of alternative systems for both single- or dual-labeling applications. To address these challenges, this thesis presents novel bioorthogonal tools based on a âclickâ boronic ester formation, which is attractive due to the synthetic accessibility of boronic acids and diols, their low toxicity and fast kinetics in catalyst-free conditions. Chapter 1 summarizes progress made in the use of boronic acids in bioorthogonal chemistry to enable site-selective labeling of proteins and compares these bioorthogonal reactions with the most commonly applied bioorthogonal reactions. Chapter 2 describes a new âclickâ bioorthogonal reaction system, which was devised to enable the fast ligation of conjugatable derivatives of the rigid cyclic diol (nopoldiol) and a carefully optimized boronic acid partner (2-methyl-5-carboxymethyl-phenylboronic acid) with a rate constant of 8 M-1s-1 as measured by NMR spectroscopy. Using NMR and fluorescence spectroscopy studies, the resulting boronates were found to form reversibly within minutes at low micromolar concentration, providing submicromolar equilibrium dissociation constants. Efficient protein conjugation under physiological conditions was successfully demonstrated with model proteins, thioredoxin (Trx) and albumin, and characterized using mass spectrometry and gel electrophoresis.  Boronic ester formation is a fast dehydrative process; however, it is intrinsically reversible in an aqueous medium. Also, fluorogenic reactions have been invaluable tools in bioorthogonal chemistry since these reactions allow the visualization of biomolecules without the need to remove the excess unreacted probes. In Chapter 3, early efforts toward designing an irreversible and fluorogenic boronic ester formation are summarized. Even though attempts towards a fluorogenic boronic ester system were unsuccessful, an irreversible synergic system based on two bifunctional reagents, a thiosemicarbazide-functionalized nopoldiol and an 2-acetylarylboronic acid was developed. Both reagents were shown to be chemically stable and non-toxic to HEK293T cells at concentrations as high as 50 Î¼M. The resulting boronate/thiosemicarbazone adduct is a medium sized ring that forms rapidly and irreversibly without any catalyst at low Î¼M concentrations, in neutral buffer, with a rate constant of 9 M-1s-1 as measured by NMR spectroscopy. Control experiments in the presence of competing boronic acids showed no cross-over side-products and confirmed the stability and lack of reversibility of the boronate/thiosemicarbazone conjugates. Moreover, formation of the conjugates is not affected by the presence of biological diols like fructose, glucose and catechol, and the thiosemicarbazide-functionalized nopoldiol is inert to aldehyde electrophiles of the sort found on protein-bound glyoxylyl units. The suitability of this system in the cell-surface labeling of live cells was demonstrated using a SNAP-tag approach to install the boronic acid reagent onto the extracellular domain of Beta-2 adrenergic receptor in HEK293T cells, followed by incubation with the optimal thiosemicarbazide-functionalized nopoldiol reagent labeled with a fluorescein dye. Successful visualization by fluorescence microscopy was possible with a reagent concentration as low as 10 Î¼M, thus confirming the potential of this system in biological applications.  In Chapter 4, efforts to discover a reactive peptide tag toward 2-acetylarylboronic acid via both imine and boronate formation, are summarized. Replacing one of the bioorthogonal handles could be achieved by expressing and installing it as a short, non-invasive peptide tag on a protein of interest (POI). In order to discover the reactive peptide, the phage display platform with a serine-terminated library of over 108 heptapeptides was employed in collaboration with the Laboratory of Prof. Ratmir Derda. Some peptide hits were selected and synthesized; however, using ESI-MS and NMR analyses, those conjugation studies of peptides with 2-acetylbenzeneboronic acid confirmed that the desired ligation was not observed."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Boronic Esters as Bioorthogonal Probes in Site-Selective Labeling of Proteins"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/b3/76/ba/c4/b376bac4-0da6-4beb-91f0-6666099d3041> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Hall, Dennis (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Serpe, Michael (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Gao, Jianmin (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "West, Frederick (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Derda, Ratmir (Department of Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:55:12.713Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:55:16.597Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44723"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Akgun, Burcin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-22T14:43:40Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ch/x1/1x/f7/chx11xf71g> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T15:44:48Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cw/37/63/72/cw3763725w/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cw/37/63/72/cw3763725w/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cw/37/63/72/cw3763725w/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

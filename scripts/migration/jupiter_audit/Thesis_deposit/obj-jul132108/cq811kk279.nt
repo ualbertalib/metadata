@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/k2/cq811kk279> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-14T21:12:15.049Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Feng_Mengmeng_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Feng, M.; Betti, M. Transepithelial transport efficiency of bovine collagen hydrolysates in a human Caco-2 cell line model. Food Chem. 2017, 224, 242â250.Feng, M.; Betti, M. Both PepT1 and GLUT intestinal transporters are utilized by a novel glycopeptide Pro-Hyp-CONH-GlcN."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-18T21:05:04.515Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "glycopeptide"^^<http://www.w3.org/2001/XMLSchema#string> , "collagen peptide"^^<http://www.w3.org/2001/XMLSchema#string> , "skin fibroblast"^^<http://www.w3.org/2001/XMLSchema#string> , "Caco-2 cell"^^<http://www.w3.org/2001/XMLSchema#string> , "hyaluronic acid"^^<http://www.w3.org/2001/XMLSchema#string> , "bioavailability"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e300d921-4f92-4350-9535-175164555eb9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:4eaf7f75-44f0-411a-9a9a-ab451afc6dfc"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Betti, Mirko"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Agricultural, Food, and Nutritional Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "mfeng3@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Collagen hydrolysates (CH) are emerging health supplements associated with a growing body of evidence indicating that they may positively influence skin conditions, promote joint and bone health, and even ameliorate hypertension and type 2 diabetes. The biological effects of CH, however, are limited by their low bioavailability. This thesis was committed to improving the bioavailability of CH and collagen-derived peptides, and, interested in elucidating the effects they have on the human dermal fibroblast. The strategy of the first part of the thesis focused on facilitating the absorption of CH by reducing the molecular weight (MW) through enzymatic hydrolysis, as documented in study 1. A practical and efficient method was developed to extract collagen from extremely tough and highly cross-linked bovine hide. This was achieved by a pretreatment with alkaline conditioning, and an extraction process using acetic acid and pepsin. The final product was highly pure and pepsin-acetic acid soluble collagen. The combination of two commercial enzymes, Alcalase and Flavourzyme, was determined to be the best treatment to hydrolyze the collagen generating over 80% of peptides with MW lower than 2 kDa. The in vitro absorption experiment using a human intestinal Caco-2 cell model revealed the positive correlation between a lower MW and a higher transepithelial transport of CH.  In addition to the first part which was in an effort to increase the effective proportion of CH that can be absorbed, the second part of the thesis focused on introducing other absorption pathways through chemical modification of collagen-derived peptides, which is summarized in study 2 and study 3. A novel glycopeptide was synthesized from a model collagen peptide Pro-Hyp by conjugating with an amino sugar glucosamine (GlcN). After purification and MW identification, the glycopeptide was clarified to be an amide derivative by nuclear magnetic resonance spectroscopy, i.e. Pro-Hyp-CONH-GlcN. Later, the glycopeptide was subjected to simulated gastrointestinal digestion and Caco-2 cell transport. It showed a desirable enzymatic stability (~90% remaining) with superior permeability compared to its parent peptide Pro-Hyp (Papp 2.82 Ã10-6 cm/s vs. 1.45 Ã10-6 cm/s). The improvement was achieved by introducing the activity of an extra transport pathway - GLUTs; GlcN moiety in the glycopeptide molecule was structurally comparable to the free GlcN, which makes the glycopetide transported similarly as GlcN. Study 3 investigated effects of the glycopeptide on human dermal fibroblasts, the primary resident cells that account for skin function, and cells mainly affected by health benefits of CH. Interestingly, the glycopeptide activated the proliferation of fibroblasts to 1.5-fold of untreated control. This activity was similar with its parent collagen peptide, so was the performance in stimulating the hyaluronic acid (HA) biosynthesis. The effective concentration of both the collagen peptide and the glycopeptide for the stimulation was revealed to be 200 nmol/ml, representing a physiologicall evel observed in animal studies. The underlying mechanisms were linked to their ability in arresting more cells in the DNA synthesis phase for the cell growth stimulation, and in up-regulating the transcription of hyaluronan synthase genes that encode HA synthesis. This doctoral project provides strategies and a foundation for future research to improve the bioavailability of collagen protein hydrolysates by reducing MW through enzymatic hydrolysis. Also, the chemical modification by glycosylation represents a novel approach to facilitate intestinal absorption of collagen-derived bioactive peptides."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Improving the bioavailability of collagen-derived peptides: studies in cell culture models"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/27/7d/26/d9/277d26d9-26ee-4ca1-8fab-063941ba5289> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Aluko, Rotimi (Human Nutritional Sciences, University of Manitoba)"^^<http://www.w3.org/2001/XMLSchema#string> , "Lavasanifar, Afsaneh (Pharmacy and Pharmaceutical Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Pietrasik, Zbigniew (Alberta Agriculture and Forestry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Chen, Lingyun (Agricultural, Food, and Nutritional Science)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:51:36.237Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:51:39.732Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Food Science and Technology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44689"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Feng, Mengmeng"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-17T11:19:27Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cr/j4/30/50/crj4305042> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-18T14:05:04Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/k2/cq811kk279/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/k2/cq811kk279/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cq/81/1k/k2/cq811kk279/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

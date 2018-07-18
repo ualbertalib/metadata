@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cs/n0/09/z3/csn009z339> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-22T18:28:42.333Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Lehmann_Thomas_D_201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "T. Lehmann, C. Rossa, N. Usmani, R. Sloboda, and M. Tavakoli, \"A virtual sensor for needle deflection estimation during soft-tissue needle insertion,\" in Proceedings of the 2015 IEEE International Conference on Robotics and Automation, 2015, pp. 1217â1222.T. Lehmann, C. Rossa, N. Usmani, R. S. Sloboda, and M. Tavakoli, \"A Real-time estimator for needle deflection during insertion into soft tissue based on adaptive modeling of needle-tissue interactions,\" IEEE/ASME Transactions on Mechatronics, vol. 21, no. 6, pp. 2601â2612, 2016.T. Lehmann, C. Rossa, R. Sloboda, N. Usmani, and M. Tavakoli, \"Needle path control during insertion in soft tissue using a force-sensor-based deflection estimator,\" in Proceedings of the 2016 IEEE International Conference on Advanced Intelligent Mechatronics, 2016, pp. 1174â1179.T. Lehmann, R. Sloboda, N. Usmani and M. Tavakoli, \"HumanâMachine Collaboration Modalities for Semi-Automated Needle Insertion Into Soft Tissue,\" in IEEE Robotics and Automation Letters, vol. 3, no. 1, pp. 477-483, 2018T. Lehmann, C. Rossa, N. Usmani, R. Sloboda, and M. Tavakoli, \"Deflection modeling for a needle actuated by lateral force and axial rotation during insertion in soft phantom tissue,\" Mechatronics, vol. 48, pp. 42â53, 2017.T. Lehmann, C. Rossa, N. Usmani, R. Sloboda, and M. Tavakoli, \"Intraoperative Tissue Youngâs Modulus Identification During Needle Insertion Using a Laterally Actuated Needle,\" IEEE Transactions on Instrumentation and Measurement, vol. 67, no. 2, pp. 371â381, 2018."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "Needle Steering"^^<http://www.w3.org/2001/XMLSchema#string> , "Needle Insertion"^^<http://www.w3.org/2001/XMLSchema#string> , "Sensing"^^<http://www.w3.org/2001/XMLSchema#string> , "Medical Robotics"^^<http://www.w3.org/2001/XMLSchema#string> , "Actuation"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-22T22:23:12.393Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "a838c36a-cc7d-472d-bf2c-70d756268fd9"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:3ce31f19-835b-43f6-b0a2-110b76653f18"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Mahdi Tavakoli (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Ron Sloboda (Oncology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Electrical and Computer Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "lehmannt86@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Needle insertion is a minimally invasive intervention for procedures involving drug delivery, biopsy, and radiation therapy. In the prominent radiation therapy procedure prostate brachytherapy, rice grain sized radioactive seeds are introduced into soft tissue via needles in and around the prostate to treat cancerous cells. To ensure an effective distribution of radiation, the seeds need to be distributed according to a pre-calculated plan, which is difficult to achieve as needles deflect from the ideal, straight trajectory. The needle deflection can be manually corrected by the surgeon based on training and intuition through intermittent axial rotation or lateral force application. In order to support the surgeon in guiding the needle towards a straight trajectory, robotic assistance can be used. In order to steer a flexible needle towards a defined target, ultrasound-image-based needle localization is commonly used for needle tip position feedback. Acquiring and processing of ultrasound images, however, significantly limits the control sampling rate. As an alternative, this work proposes a real-time estimator for needle deflection during insertion based on shear force and bending moment measured at the needle base by a force/torque sensor that does not require implicit knowledge of tissue properties and could replace image-based deflection measurement. The estimator is based on an adaptive quasi-static mechanics-based model for needle-tissue interactions. The model's estimation performance is evaluated and experimentally compared by carrying out insertion experiments into homogeneous phantom and non-homogeneous biological tissues. The estimator maintains an adequate estimation accuracy up to a high insertion depth, as confirmed by insertion experiments into phantom and biological tissue samples. The proposed deflection estimator is subsequently applied to needle steering. The needle tip trajectory obtained during insertion from the estimator is used to parameterize a kinematic bicycle model. The bicycle model is then used to predict the needle tip trajectory and the ideal depth at which to rotate the needle to reach a desired target.  Experimental results show that the method accurately predicts the needle tip trajectory and the ideal rotation depth. In the second part of this thesis, a novel needle actuation method is proposed based on a technique used manually by surgeons to steer the needle. A point force is applied laterally onto the needle near its entry point into tissue during insertion in order to manipulate the needle deflection. As a first step to examine how lateral needle actuation can enhance and complement steering, an experimental needle insertion study is carried out. The results show that lateral actuation further reduces needle deflection at the final insertion depth in a way that is not possible with only one intermittent axial needle rotation. In order to facilitate model-based automatic control, an energy-based needle deflection model that can account for lateral actuation and intermittent axial needle rotation is subsequently developed. Experimental model validation shows a small error of approximately 0.5-2~mm between measured and estimated needle tip deflection. Moreover, a simulation study using the developed deflection model further highlights the potential for and limitations of needle deflection reduction. Consequently, a model-based steering approach is devised that steers the needle in real-time based on a pre-planned trajectory optimized for needle placement as desired in prostate brachytherapy. It is experimentally shown that the needle deflection can be significantly reduced with only lateral needle actuation as steering input such that the needle tip trajectory during insertion remains close to the pre-planned trajectory. The above proposed energy-based deflection model requires the tissue Young's modulus as parameter input. Therefore, in the final chapter of this thesis, an intraoperative method for the identification of tissue Youngâs modulus using lateral needle actuation is proposed. The needle-tissue system's response to lateral force is observed and the tissue Youngâs modulus is then identified based on the energy stored in the needle-tissue system. Experimental studies are presented to confirm the relatively good accuracy of the identified tissue Youngâs modulus when compared to an independent measurement."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Novel Deflection Sensing and Actuation Methods for Needle Steering in Soft Tissue"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/41/ff/5e/07/41ff5e07-9905-4663-8661-736f56a189e0> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Alan Lynch (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Qing Zhao (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Javad Dargahi (Mechanical and Industrial Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:51:21.552Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:51:25.427Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Biomedical Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44721"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Lehmann, Thomas D"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-22T14:03:44Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cn/k3/22/f0/cnk322f00r> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T15:23:11Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cs/n0/09/z3/csn009z339/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cs/n0/09/z3/csn009z339/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cs/n0/09/z3/csn009z339/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

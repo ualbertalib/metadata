@@ -1,0 +1,103 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/22/7m/q3/c2227mq36p> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2017-12-21T01:13:36.473Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Han_Wei_201712_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Wei Han and Liang Li, 2015, âMatrix Effect on Chemical Isotope Labeling and Its Implication in Metabolomic Sample Preparation for Quantitative Metabolomicsâ, Metabolomics, 11, 1733-1742.Wei Han, Shraddha Sapkota, Richard Camicioli, Roger A. Dixon, Liang Li, 2017, âProfiling Novel Metabolic Biomarkers for Parkinsonâs Disease Using In-depth Metabolomic Analysisâ, Movement Disorders, 32, 1710-1728.Weifeng Shen, Wei Han, Yunong Li, Zhiqi Meng, Leiming Cai and Liang Li, 2016, âDevelopment of Chemical Isotope Labeling Liquid Chromatography Mass Spectrometry for Silkworm Hemolymph Metabolomicsâ, Anal. Chim. Acta. 942, 1-11."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-22T18:15:03.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Chemical isotope labeling"^^<http://www.w3.org/2001/XMLSchema#string> , "Blood metabolomics"^^<http://www.w3.org/2001/XMLSchema#string> , "Biomarker discovery"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "6391138a-1647-4779-be16-8b0ca9fe5243"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:aa986b81-fe01-4b1c-91a3-b8c5f0deacf1"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Li, Liang (Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "weihanua@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Blood-metabolite-based biomarkers are useful for the early-stage diagnosis, accurate prognostic prediction and personalized treatment of various diseases. Blood contains a massive number of metabolites that can potentially become biomarkers, but the metabolome coverage of current analytical techniques remains insufficient. Considering that traditional liquid chromatography-mass spectrometry (LC-MS) platforms are limited by the low metabolome coverage and quantification accuracy, our lab has developed the high-performance chemical isotope labeling (CIL) LC-MS platform which can significantly increase the metabolome coverage and efficiently overcome the detection variability. In general, blood biomarker discovery is susceptible to experimental interferences and biological variations. To improve the reliability of metabolomics discoveries, large sample sizes and time-resolved analysis are highly desirable.  Towards these challenges, the major part of my thesis focuses on assessing and minimizing the experimental and biological variations that could interfere with biomarker discoveries. With the CIL LC-MS platform, experimental variations have been largely overcome and biological variability carefully evaluated. The establishment of a serum metabolome database can facilitate future studies, and the high-coverage analysis of one microliter finger blood opens new vistas for biomarker discovery and environmental exposure assessment. The major motivation of this thesis is to consider the time factor in blood metabolomics, and the reported technical improvement has made time-dependent metabolomics possible at a minimal cost. Additionally, to demonstrate the benefits of adding the time dimension to the study design, we report a cohort study for the diagnosis and prognosis of Parkinsonâs disease and an intervention study for the exposure assessment of DDT, which is a banned pesticide and an endocrine disruptor. Overall, this thesis work has demonstrated enhanced analytical performance for blood biomarker discovery, and high-quality biomarkers come from well-designed experiments, careful sample handling, high-performance analysis platforms, and a solid understanding of data analysis principles."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Development of Blood Metabolomics for Biomarker Discovery Using Chemical Isotope Labeling and Liquid Chromatography-Mass Spectrometry"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/57/e1/5e/5d/57e15e5d-224e-4d25-9fec-b78645da3ef1> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Vederas, John (Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "McCreery, Richard (Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mar, Arthur (Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "El-Aneed, Anas (College of Pharmacy and Nutrition, University of Saskatchewan)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:54:21.136Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:54:24.485Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44620"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Han, Wei"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-20T18:13:36Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/n4/9t/22/c2n49t227r> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-22T11:15:03Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/22/7m/q3/c2227mq36p/content> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/22/7m/q3/c2227mq36p/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/22/7m/q3/c2227mq36p> fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c2/22/7m/q3/c2227mq36p/fcr:export?format=jcr/xml> .

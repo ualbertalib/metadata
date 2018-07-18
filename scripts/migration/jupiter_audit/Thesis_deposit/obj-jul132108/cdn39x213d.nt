@@ -1,0 +1,103 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/21/cdn39x213d> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-02-07T18:31:50.696Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Thesis_Mohammad_Najafi_pdfa.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Mohammad Najafi, Mojtaba Sharifi, Kim Adams, Mahdi Tavakoli, \"Robotic Assistance for Children With Cerebral Palsy Based on Learning From Tele-cooperative Demonstration\", International Journal of Intelligent Robotics and Applications, 2016.Mohammad Najafi, Kim Adams, Mahdi Tavakoli,Â \"Robotic Learning From Demonstration of Therapist's Time-Varying Assistance to a Patient in Trajectory-Following Tasks\", IEEE-RAS-EMBS International Conference on Rehabilitation Robotics, London, UK, July 2017.Â "^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-15T21:34:36.347Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Potential Field"^^<http://www.w3.org/2001/XMLSchema#string> , "Gaussian Mixture Model"^^<http://www.w3.org/2001/XMLSchema#string> , "Robotic Assistance"^^<http://www.w3.org/2001/XMLSchema#string> , "Learning from Demonstration"^^<http://www.w3.org/2001/XMLSchema#string> , "Motion Learning"^^<http://www.w3.org/2001/XMLSchema#string> , "Cerebral Palsy"^^<http://www.w3.org/2001/XMLSchema#string> , "Gaussian Mixture Regression"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Master of Science"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "8e09d3f1-4837-4ead-9492-741ce49d251a"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:b2da76ee-5aa0-48cf-af83-ed76dffdac49"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Adams, Kim (Rehabilitation Medicine)"^^<http://www.w3.org/2001/XMLSchema#string> , "Tavakoli, Mahdi (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Electrical and Computer Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eraadmi@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Physical interaction with the environment and object manipulation play an important role in the development of children's cognitive and perceptual skills. For children who have severe physical impairments, one of the biggest concerns is the loss of opportunities for play. Robots can be used to build function so children can independently engage in activities (e.g., rehabilitation robots), or to compensate for function (e.g., assistive robots). The main focus of this thesis is development, analysis and implementation of user-friendly Learning from Demonstration frameworks that teach the robots the required task-specific assistance by a few demonstrations from an expert helper (in rehabilitation scenarios it could be a therapist helping a patient, at home it could be a parent or sibling helping a child), and eliminate the requirement for manual robot programming. The terms therapist and patient will be used throughout this thesis but the robotic assistance can apply to both rehabilitation and compensation robots.    The proposed learning from demonstration frameworks in this paper consists of three phases: 1) Demonstration phase: The therapist interacts with the patient and provides the required assistance to the robot to perform and complete the task successfully for one or more trials; 2) Learning phase: Machine learning algorithms model the assistance provided by the therapist and program the robot controllers accordingly to provide the same encoded assistance to the patient in the therapist's absence; and 3) Robotic assistance phase: The robotic system independently provides the learned assistance to the patient, with an interactive mechanism to regulate human-robot cooperation.    In this thesis, the task is considered as point-to-point motion (also called reaching motion) primitives which are the building blocks for most of our daily activities. Two class of learning from demonstration frameworks have been proposed in this thesis that uses either time-indexed or position-indexed approaches to learn and reproduce the assistance in a point-to-point motion task.     In the proposed Time-indexed learning from demonstration framework, the demonstrated trajectories with their corresponding time-index in multiple demonstrations are captured by a Gaussian mixture model, which is a probabilistic model that represents the data with finite Gaussian probability density functions. In the reproduction phase, in each time instance, the expected position is extracted from the learned Gaussian mixture model, using Gaussian mixture regression. Then using the introduced tangential-normal impedance controller the robotic system assists the patient to follow the trajectory at the demonstrated velocity of the therapist. In the other case, by proposing a Tangential-normal varying-impedance controller (TNVIC), the robotic manipulator not only follows the demonstrated motion but also mimics the therapist's interaction impedance during the assistive intervention. The feasibility and efficacy of these frameworks are validated through experiments conducted involving a 2D play environment.  In the proposed Position-indexed learning from demonstration framework, by utilizing the modified non-parametric potential field function, the therapist's motion, impedance behavior, and interaction force (assistance/resistance) with the patient are encapsulated in each position time-independently, tangent and normal to the demonstrated trajectory. The potential field function is learned via a convex optimization algorithm. In the reproduction phase, the robot provides the patient with the same level of interaction force provided by the therapist in each position. Also, a position-indexed velocity field controller with a variable dissipative field actively regulates the level of patient's deviation from the velocity observed in the demonstration phase. The efficacy, advantages, and stability of the proposed framework are evaluated in three different experimental scenarios involving both position-based and impedance-based point-to-point motion tasks in a 2D play environment."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Learning Therapist's Intervention from Demonstration: Application for Robotic Assistance to Children with  Cerebral Palsy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/f7/96/b0/af/f796b0af-ef3f-40bb-a44f-e94a2f99ed00> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Khazaei, Hamzeh (Electrical and Computer Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Pilarski, Patrick (Medicine, Faculty of Medicine and Dentistry)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:54:47.571Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:54:51.96Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Control Systems"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44763"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Najafi, Mohammad"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-09T20:05:35Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/94/07/x7/c79407x72v> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-02-13T15:37:37Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Master's"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/21/cdn39x213d/content> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/21/cdn39x213d/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/21/cdn39x213d> fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cd/n3/9x/21/cdn39x213d/fcr:export?format=jcr/xml> .
