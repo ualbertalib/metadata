@@ -1,0 +1,103 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b168p> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2017-01-12T23:44:21.511Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Roodpeyma_Maedeh_201701_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "Modelling"^^<http://www.w3.org/2001/XMLSchema#string> , "Carbon dioxide"^^<http://www.w3.org/2001/XMLSchema#string> , "Drill cuttings"^^<http://www.w3.org/2001/XMLSchema#string> , "Supercritical Fluid Extraction"^^<http://www.w3.org/2001/XMLSchema#string> , "Process control"^^<http://www.w3.org/2001/XMLSchema#string> , "Hydrocarbons"^^<http://www.w3.org/2001/XMLSchema#string> , "Pilot scale continuous process"^^<http://www.w3.org/2001/XMLSchema#string> , "Solids treatment"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-01-17T18:35:17.424Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "d0466f6c-9f1c-40c9-bae2-d706defe65eb"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:5d2d708f-5404-4bf3-8e20-957a9a6f1f6f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Stiver, Warren (School of Engineering, University of Guelph)"^^<http://www.w3.org/2001/XMLSchema#string> , "Guigard, Selma (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Civil and Environmental Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "maedeh@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "In this thesis, the feasibility and operation of a continuous pilot scale supercritical fluid extraction (SFE) process for treatment of oil-contaminated solids, specifically drill cuttings, was investigated. For this purpose, a continuous pilot scale SFE process, the first of its kind, was designed, built, commissioned and operated. An important part in demonstrating operability of this process was controlling key variables, in particular pressure and slurry level in the extraction vessel. To conduct control studies, a hydrodynamic model based on first principle equations was developed, implemented, verified and validated for the continuous SFE process. The developed hydrodynamic model is capable of predicting pressure and slurry level inside the extraction vessel. The model was used towards designing model-based pressure controllers and comparing controller performances. The model was also used for exploring an approach (i.e. the pulse test approach) for measuring and controlling slurry level in the extraction vessel. Pressure control was successfully achieved in the extraction vessel of the pilot scale SFE process by applying a feedback loop with PI control. Both manually tuned and model-based PI controllers were tested and satisfactory pressure control was obtained for both cases. Promising results were also obtained for slurry level measurement and control in the extraction vessel in the modelling framework by applying the pulse test approach. Additional experiments are required to be conducted on the pilot scale SFE process to further evaluate the pulse test approach. Overall, the results of the thesis demonstrate the feasibility of this continuous process for the treatment of drill cuttings (i.e. extracting oil from the slurried solids). The obtained results are valuable for future upgrades towards commercializing this unique SFE process and for development of this process for the extraction of other compounds from contaminated solids."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Development, Modelling and Control of a Continuous Pilot Scale Supercritical Fluid Extraction Process"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/53/0d/3b/fd/530d3bfd-c154-4c2c-9525-020d6394bd66> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Stiver, Warren (School of Engineering, University of Guelph)"^^<http://www.w3.org/2001/XMLSchema#string> , "Charpentier, Paul (Department of Chemical and Biochemical Engineering, Western University)"^^<http://www.w3.org/2001/XMLSchema#string> , "Chen, Tongwen (Electrical Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Yu, Tong (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> , "Guigard, Selma (Civil and Environmental Engineering)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:51:52.065Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:51:55.535Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Environmental Engineering"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.43636"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Roodpeyma, Maedeh"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2017-06:Spring 2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-01-13T05:27:10Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cf/18/81/m5/cf1881m55b> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-01-17T11:35:16Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b168p/content> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b168p/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b168p> fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ck/64/3b/16/ck643b168p/fcr:export?format=jcr/xml> .

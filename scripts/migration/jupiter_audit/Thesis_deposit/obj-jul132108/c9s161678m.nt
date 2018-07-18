@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c9/s1/61/67/c9s161678m> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-30T20:46:42.23Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Herman_Emily_K_201802_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Gentekaki E, Curtis BA, Stairs CW, KlimeÅ¡ V, EliÃ¡Å¡ M, Salas-Leiva DE, Herman EK, Eme L, Arias MC, Henrissat B, Hilliou F, Klute MJ, Suga H, Malik SB, Pightling AW, Kolisko M, Rachubinski RA, Schlacht A, Soanes DM, Tsaousis AD, Archibald JM, Ball SG, Dacks JB, Clark CG, van der Giezen M, Roger AJ (2017) Extreme genome diversity in the hyper-prevalent parasitic eukaryote Blastocystis. PLOS Biology 15(9): e2003769.Herman E, Siegesmund MA, Bottery MJ, van Aerle R, Shather MM, Caler E, Dacks JB, and van der Giezen M. (2017). Membrane trafficking modulation during Entamoeba encystation. Scientific Reports 7:12854Read BA, Kegel J, Klute MJ, Kuo A, Lefebvre SC, Maumus F, Mayer C, Miller J, Monier A, Salamov A, Young J, Aguilar M, Claverie JM, Frickenhaus S, Gonzalez K, Herman EK, Lin YC, Napier J, Ogata H, Sarno AF, Shmutz J, Schroeder D, de Vargas C, Verret F, von Dassow P, Valentin K, Van de Peer Y, Wheeler G; Emiliania huxleyi Annotation Consortium, Dacks JB, Delwiche CF, Dyhrman ST, GlÃ¶ckner G, John U, Richards T, Worden AZ, Zhang X, Grigoriev IV. (2013) Pan genome of the phytoplankton Emiliania underpins its global distribution. Nature 499:209-213.Lee LJY, Klute MK, Herman EK, Read B, and Dacks JB. (2015) Losses, Expansions, and Novel Subunit Discovery of Adaptor Protein Complexes in Haptophyte Algae. Protist 166:585-597.Herman EK, Greninger AL, Visvesvara, GS, Marciano-Cabral F, Dacks JB, and Chiu CY. (2013) The mitochondrial genome and a 60-kb nuclear DNA segment from Naegleria fowleri, the causative agent of primary amoebic meningoencephalitis. Journal of Eukaryotic Microbiology 60:179-91."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "Eukaryote"^^<http://www.w3.org/2001/XMLSchema#string> , "Membrane-trafficking"^^<http://www.w3.org/2001/XMLSchema#string> , "Evolution"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-02-08T16:28:27.518Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "b560108d-6b45-4b09-bc59-5e0b30167582"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:7604b670-3c4e-48f8-acd7-9204abc064f6"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Dacks, Joel B. (Cell Biology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Cell Biology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "eherman@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Single-celled organisms represent the majority of eukaryotic diversity. Recent advances in sequencing technologies have been critical for understanding the evolutionary biology and cell biology of microbial eukaryotes. Comparative genomic analyses have shown that many genes that underlie fundamental eukaryotic features (e.g. membrane trafficking, cytoskeleton) are conserved across the diversity of eukaryotes, suggesting that they have also maintained a similar function. However, many microbial eukaryotes have specialized lifestyles or behaviours, the evolutionary pressures of which may be observed in changes to gene content in a lineage; in either gene family expansion, divergence, or loss. Building on analyses of gene presence and absence, gene expression changes in relation to a specific cellular behaviour gives even more insight into the underlying cell biology of that process.  The focus of this thesis is the membrane trafficking system, specifically the cellular machinery that underlies intracellular transport, endocytosis, and exocytosis. In the first Results chapter, comparative genomics is used to identify membrane trafficking components in three related organisms, one of which is free-living, while the other two are gut-associated endobionts and/or parasites. The purpose was to determine whether host-association contributes to sculpting of the trafficking system, as is the case in other eukaryotic parasites. In the second Results chapter, comparative genomics and transcriptomics are used to study how membrane trafficking underlies the process of encystation in the gut pathogens Entamoeba invadens and E. histolytica, which is critical for pathogenesis. The third results chapter looks at the biology of a unique behaviour in the haptophyte lineage: the secretion of large organic or calcium carbonate scales. Again, both comparative genomics and transcriptomics are used to understand how the membrane trafficking system contributes to this extensive secretory process.  The last Results chapter takes a whole-genome approach to understanding pathogenesis in the free-living neuropathogenic amoeba Naegleria fowleri, as compared with its harmless relative, Naegleria gruberi. The purpose of comparative genomics and transcriptomics of N. fowleri and N. gruberi was primarily to identify pathogenicity factors. Although no single factor was identified that fully explains the difference in pathogenicity between the two Naegleria spp., two major outcomes were achieved. First, this analysis has generated a comprehensive look at the cell biology of N. fowleri during host infection. Secondly, it has produced a list of dozens of potential pathogenicity factors that can now be experimentally tested. An example of how in silico analyses can support functional work concludes this chapter, where evidence of a Golgi body in N. gruberi is shown for the first time. These âomics analyses have contributed significantly to understanding the biology of these lineages. They highlight patterns of retention, loss, and expansion of membrane trafficking machinery that may be related to unusual trafficking pathways or even novel organelles. They also allowed for comparisons of gene complement and expression between different lineages that have similar lifestyles, for example gut-associated parasites or endobionts (Entamoeba spp. and Blastocystis sp., Proteromonas lacertae), or organisms with a heavy secretory load (haptophytes and Entamoeba sp.). Common to all three transcriptomic analyses is the finding that transcriptional responses are complex, often involving differential regulation of paralogous genes.  The data presented here have paved the way for future functional work in microbial eukaryotes, improving our depth of knowledge of membrane trafficking function in eukaryotes, and allowing us to fully appreciate unique cell biology in ecologically and medically relevant organisms."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Understanding the evolution of the membrane trafficking system in diverse eukaryotes through comparative genomics and transcriptomics"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/3d/df/8b/b9/3ddf8bb9-e3bf-4b25-b7f2-eab56e74a97a> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Carlton, Jane (Microbiology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Eitzen, Gary (Cell Biology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Mason, Andrew (Medicine)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hazes, Bart (Medical Microbiology & Immunology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:52:19.934Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:52:23.645Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44755"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Herman, Emily K"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-02-01T16:12:45Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cz/89/0r/t7/cz890rt728> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-02-08T09:28:26Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c9/s1/61/67/c9s161678m/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c9/s1/61/67/c9s161678m/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c9/s1/61/67/c9s161678m/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

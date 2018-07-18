@@ -1,0 +1,103 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc167> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2017-12-06T18:48:47.689Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Struthers Montford_Kelly_S_201712.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2017"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2017-12-14T18:57:08.701Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "settler colonialism"^^<http://www.w3.org/2001/XMLSchema#string> , "legal ontologies"^^<http://www.w3.org/2001/XMLSchema#string> , "political ontology"^^<http://www.w3.org/2001/XMLSchema#string> , "agricultural power"^^<http://www.w3.org/2001/XMLSchema#string> , "food law"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "e9a7021b-e503-4108-ad1f-a428b1f67986"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:64e6cfea-c3b3-4bef-ae26-2601519116d5"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Taylor, ChloÃ« (Women's and Gender Studies)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hogeveen, Bryan (Sociology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Sociology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "kstruthe@ualberta.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "In this dissertation, I develop a theoretical account of agricultural power in the settler colonial contexts of Canada and the United States. By analyzing archival, historical, and legal documents, I argue that the imposition of animal agriculture not only functioned as a method of settler territorialization, but also relied on and reproduced western humanist ontologies of food, humans, animals, and land in these spaces. These ontologies are not objective accounts of reality but are contingent expressions of power that continue to shape alimentary norms and food law. Agricultural power is not constrained to the location of the farm, but is strategically deployed in various registers to re-secure animal-based ontologies of food.  Based on an analysis of proposed food legislation and legal cases seeking to enjoin the use of the terms milk, meat, and eggs on plant-based food labels, I show that agricultural power works via law to reproduce ârealâ food as only animal-based. I then argue that agricultural power and its concurrent ontologies of food and animals continues to shape new meat technologies despite the absenting of the animal from its production methods. In-vitro meat represents a modified form of agricultural power where its target shifts from the location of the animal body to the animal cell. Agricultural power is then a mobile and shifting constellation of relations variously deployed through legal and cultural institutions to reproduce animal-based ontologies of food. Regardless of its point of application, the property status of nonhuman animals is foundational to its exercise. Despite my critiques of the food ontologies produced and sustained by agricultural power, I argue that it remains a useful political project to ontologize food as a means of cultivating ethical relations between humans, animals, and the more than human world. To this end, I introduce a contextual ontological veganism premised on a distinction between edibility and food, and where human and animal interests are weighed equally. In this sense, someone or something that is edible should only be ontologized as food based on an evaluation of the relations that produced this item and that are constituted through its consumption. Given how law and agricultural power co-articulate to ontologize animals as property, I propose that this food politics be structured by a non-anthropocentric legal subjectivity of beingness for nonhuman animals where they exist neither as property nor as persons, but are recognized as vulnerable, embodied, and relational (Deckha forthcoming). In so doing, the contextual ontological veganism outlined in this dissertation has legal, ontological, and ethical implications for how we understand ourselves and for how we relate to others through eating."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Agricultural Power: Politicized Ontologies of Food, Life, and Law in Settler Colonial Spaces"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/7d/76/e3/a9/7d76e3a9-2c26-4973-a90c-49e521c461c0> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Braun, Robyn (Sociology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Hamilton, Sue (English and Film Studies)"^^<http://www.w3.org/2001/XMLSchema#string> , "Oksala, Johanna (Social Science & Cultural Studies, Pratt Institute)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:52:03.941Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:52:07.325Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44586"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Struthers Montford, Kelly S"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2017-12-12T08:37:02Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cx/w4/2n/84/cxw42n846n> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2017-12-14T11:57:08Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc167/content> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc167/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc167> fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c1/g0/5f/c1/c1g05fc167/fcr:export?format=jcr/xml> .

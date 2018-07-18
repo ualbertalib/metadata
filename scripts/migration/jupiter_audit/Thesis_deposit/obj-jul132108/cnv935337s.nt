@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cn/v9/35/33/cnv935337s> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-04T07:38:59.878Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Bramucci_Anna_R_201801.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Bramucci, A.R., Labeeuw, L., Mayers, T., Saby, J., and R. J. Case. 2015. A small volume bioassay to assess bacterial-phytoplankton co-culture using WATER-pulse-amplitude-modulated (WATER-PAM) fluorometry. Journal of Visual Experimentation. 97. doi:10.3791/52455."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-22T18:32:55.234Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "roseobacter"^^<http://www.w3.org/2001/XMLSchema#string> , "coccolithophore"^^<http://www.w3.org/2001/XMLSchema#string> , "type four secretion system"^^<http://www.w3.org/2001/XMLSchema#string> , "programmed cell death"^^<http://www.w3.org/2001/XMLSchema#string> , "Phaeobacter inhibens"^^<http://www.w3.org/2001/XMLSchema#string> , "Emiliania huxleyi"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "5225eb8a-fcba-40b3-a57c-a295fbaee247"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:a5a3a33e-9b1f-4dba-82e3-92f023f5efb4"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Case, Rebecca (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Biological Sciences"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "annabramucci@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Among phytoplankton, coccolithophores are the main calcifiers, taking up inorganic carbon and calcium to make delicate calcite scales called: coccoliths. The model coccolithophore, Emiliania huxleyi, is the most ubiquitous extant species. E. huxleyi is a species complex with three morphologically distinct cell types: calcifying diploid, non-calcifying haploid, and non-calcifying diploid. E. huxleyi has a bloomâbust lifestyle in which the dominant calcifying cells rapidly form expansive blooms (>100,000 km2), then precipitously collapse. Rapid coccolithophore bloom collapse is commonly attributed to highly specific E. huxleyi viruses (EhVs), while the potential bacterial pathogens are frequently overlooked. Coccolithophore blooms are surrounded with bacteria and have a notably strong correlation with several members of the roseobacter clade. The frequent co-occurrence of roseobacters with algae has been attributed to several shared phenotypic traits such as: chemotaxis toward and metabolism of algal exudates, rapid surface colonization, and their repertoire of secretion systems, which are all postulated to enhance roseobacter-algal interactions. Roseobacters also produce a myriad of chemical signals (antibiotics, vitamins, algicides, etc.) that likely accumulate to functional concentrations within the algal phycosphereâthe area immediately surrounding an algal cell, suggesting the potential for complex chemical interactions with algal hosts. In fact, several roseobacters, including Phaeobacter inhibens, interact directly with E. huxleyi, but a mechanistic understanding of this interaction has not been established. To further investigate the mechanism of this P. inhibensâcoccolithophore interaction I developed a miniaturized microtiter plate assay to rapidly screen algal photosynthetic health, cell counts, and a suite of other desired parameters. Using this bioassay, I discovered that P. inhibens has a dynamic biphasic interaction with its algal host, initially interacting beneficially, and then switching into a deadly pathogen. This switch was initially attributed to the process of E. huxleyi aging, during which the alga releases a signaling molecule called p-coumaric acid (pCA). In response to pCA, P. inhibens produces bioactive algicides called roseobacticides, which directly kill a representative strain of the non-calcifying diploid E. huxleyi cell type. Given the rapid way in which roseobacticides induce algal death, they were implicated as the key bacterial bioactives responsible for killing E. huxleyi. However, the efficacy of roseobacticides on the dominant calcifying and haploid flagellated strains has not yet been tested. The central goal of this thesis is to elucidate the mechanism of the pathogenic interaction between P. inhibens and its coccolithophore host E. huxleyi. This was first done by testing representative members of the three E. huxleyi cell types (calcifying diploid, non-calcifying haploid, and non-calcifying diploid) in co-culture with the pathogen P. inhibens. Surprisingly, P. inhibens is a selective pathogen, killing the tested calcifying and haploid flagellated strains, but not killing several tested non-calcifying diploid strains. Additionally, the implicated roseobacticides were not lethal to either of the sensitive E. huxleyi cell types (calcifying or haploid), suggesting that an alternate virulence factor was responsible for P. inhibens pathogenesis. The viral pathogen of E. huxleyi kills its algal host by hijacking algal metabolic pathways and producing bioactive viral-glycosphingolipids (vGSLs), which induce algal programmed cell death (PCD). This pathogenic interaction is a highly sophisticated viral manipulation of algal metabolic and death pathways, and it was hypothesized that the bacterial pathogen might also manipulate algal PCD networks to induce host death. I next established (using biochemical, morphological, and physiological parameters) that P. inhibens initiates algal apoptosis-like PCD (AL-PCD) in the calcifying E. huxleyi cell type. This is the first time a marine bacterial pathogen has been shown to induce AL-PCD of an algal host. To further describe the mechanism of this interaction I obtained transposon mutants in various genes in the P. inhibens type IV secretion system (T4SS) and established that several mutants in the genes required for a functional T4SS were avirulent to the algal host. This is the first time a functional effector T4SS has been demonstrated to be required for roseobacter pathogenesis of an algal host. Together, these findings strengthen our current understanding of how marine pathogens manipulate and kill algal host cells by demonstrating both a required bacterial effector T4SS as well as the manner in which the algal host undergoes rapid AL-PCD."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Exploring the pathogenic interaction of marine roseobacter Phaeobacter inhibens  and its coccolithophore host Emiliania huxleyi"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/98/47/59/f3/984759f3-c010-4db8-96e4-be578440fe54> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Lang, Andrew (Biology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Stein, Lisa (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Tank, Suzanne (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "St. Louis, Vincent (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:54:00.931Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:54:04.464Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization "Ecology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44709"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Bramucci, Anna R"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-19T07:45:45Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd16k> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-22T11:32:54Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cn/v9/35/33/cnv935337s/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cn/v9/35/33/cnv935337s/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cn/v9/35/33/cnv935337s/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

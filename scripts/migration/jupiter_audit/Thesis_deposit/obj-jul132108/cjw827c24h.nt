@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cj/w8/27/c2/cjw827c24h> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-23T20:29:30.246Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Islam_Muhammad_Amirul_ 201801_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Islam, M. A.; Purkait, T. K.; Veinot, J. G. C., Chloride Surface Terminated Silicon Nanocrystal Mediated Synthesis of Poly(3-hexylthiophene), J. Am. Chem. Soc., 2014, 136, 15130â15133.Islam, M. A.; Purkait, T. K.; Mobarok, M. H.; HÓ§ehlein, I. M. D.; Sinelnikov, R.; Iqbal, M.; Azulay, D.; Balberg, I.; Millo, O.; Rieger, B.; Veinot, J. G. C., Grafting Poly(3-hexylthiophene) from Silicon Nanocrystal Surfaces: Synthesis and Properties of a Functional Hybrid Material with Direct Interfacial Contact, Angew. Chem. Int. Ed. 2016, 55, 7393â7397.Islam, M. A.; Mobarok, M. H.; Sinelnikov, R.; Purkait, T. K.; Veinot, J. G. C., Phosphorus Pentachloride Initiated Functionalization of Silicon Nanocrystals, Langmuir, 2017, 33, 8766â8773."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-31T20:24:58.372Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "Functionalization"^^<http://www.w3.org/2001/XMLSchema#string> , "Hybrid materials"^^<http://www.w3.org/2001/XMLSchema#string> , "Photoluminescence"^^<http://www.w3.org/2001/XMLSchema#string> , "Phosphorus pentachloride"^^<http://www.w3.org/2001/XMLSchema#string> , "Surface chemistry"^^<http://www.w3.org/2001/XMLSchema#string> , "Poly(3-hexylthiophene)"^^<http://www.w3.org/2001/XMLSchema#string> , "Silicon nanocrystal"^^<http://www.w3.org/2001/XMLSchema#string> , "Quantum yield"^^<http://www.w3.org/2001/XMLSchema#string> , "Interfaces"^^<http://www.w3.org/2001/XMLSchema#string> , "Catalysis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "44c5f090-78df-4c21-b200-4ab5c355bfe4"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:f0d5719b-44cd-4e0c-a7d9-76395e361ed3"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Dr. Jonathan Veinot, Department of Chemistry."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Department of Chemistry"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "MAmirul28@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Quantum dots (QDs) have drawn substantial attention in multidisciplinary research in science, technology, and biomedicine during the last three decades. However, the toxicity of heavy metals and the depleting earth abundance of some elements common to QDs have prompted the development of alternative non-toxic and abundant QDs. To date, silicon nanocrystals (SiNCs) have shown promise as a safer and a readily available alternative to common QDs partly because silicon is abundant, non-toxic, and the workhorse material in electronic devices. However, controlling SiNC surface chemistry remains an important challenge to the widening of the scope of their applications in optoelectronics, catalysis, bioimaging, and drug delivery. This thesis will present attempts to tailor SiNC surface chemistry in a targeted fashion to facilitate applications. Chapter 1 will present the fundamentals of QDs highlighting the current state of SiNC research including a brief summary of material synthesis, surface modification, physicochemical properties, and prototype applications. Chapter 2 describes the exploration of the Lewis acidic nature of chloride-terminated SiNCs (Cl-SiNCs), chloride-terminated silicon wafers (Cl-SiWF), and silicon tetrachloride (SiCl4) for the synthesis of poly (3-hexylthiophene) (P3HT) via oxidative coupling of 5-chloromagnesio-2-bromo-3-hexylthiophene monomer. This study provides an insight into the reactivity of the silicon-based species that can potentially be applied for the synthesis of valuable materials. The details of the synthesis, characterization, and optical properties of SiNC and P3HT hybrid functional material (HFM) is described in Chapter 3. This study demonstrates an effective procedure for grafting conducting polymers from semiconductor SiNCs with direct interfacial contact and provides a valuable understanding of the benefits of this attachment on the optoelectronic properties of the resulting HFM. Chapter 4 presents a study of reactivity of hydride-terminated SiNCs (H-SiNCs) with phosphorus pentachloride (PCl5) and the subsequent functionalization of SiNCs with alkenes/alkynes at room temperature. This investigation offers a straightforward method for the efficient functionalization of SiNCs exhibiting minimal surface oxidation and impressively high photoluminescence quantum yield that are essential for their optoelectronic applications. Finally, Chapter 5 describes a summary of the experimental chapters and some future directions related to SiNC surface modifications for targeted applications in optoelectronics, catalysis, bioimaging, and drug delivery."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Using Surface Chemistry to Facilitate Silicon Nanocrystal Applications"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/ab/90/38/08/ab903808-f1fa-407b-85bb-96ae79a4a667> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Dr. Arthur Mar, Department of Chemistry, University of Alberta."^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. James Harynuk, Department of Chemistry, University of Alberta."^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Jillian M. Buriak, Department of Chemistry, University of Alberta.."^^<http://www.w3.org/2001/XMLSchema#string> , "Dr. Mark T. Swihart, Department of Chemical and Biological Engineering, University of Buffalo."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:55:45.457Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:55:49.282Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44742"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Islam, Muhammad Amirul"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-30T15:33:15Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cv/69/2t/66/cv692t668v> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-31T13:24:56Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cj/w8/27/c2/cjw827c24h/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cj/w8/27/c2/cjw827c24h/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cj/w8/27/c2/cjw827c24h/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

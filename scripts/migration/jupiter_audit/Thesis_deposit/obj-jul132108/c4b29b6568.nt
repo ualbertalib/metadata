@@ -1,0 +1,102 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b6568> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-09T03:19:42.485Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "revised Thesis-Jiaying Liu_clean-submit-2 kc.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Jiaying Liu, Jingguang Li, Yongning Wu, Yunfeng Zhao, Fengji Luo, Shuming Li, Lin Yang, Elham K. Moez, Irina Dinu, Jonathan W. Martin. Bisphenol A metabolites and bisphenol S in paired maternal and cord serum. Environ. Sci. Technol. 2017, 51(4), 2456-2463Jiaying Liu, Jonathan W. Martin. Prolonged exposure to bisphenol A from single dermal contact events. Environ. Sci. Technol. 2017, 51(17), 9940-9949"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-17T15:24:36.36Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:subject "BPA alternatives"^^<http://www.w3.org/2001/XMLSchema#string> , "bisphenol A"^^<http://www.w3.org/2001/XMLSchema#string> , "dermal exposure"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "fef79425-47f3-4131-8e24-0def33484c1b"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:05dab462-28c7-49a9-919d-012fdb67f167"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Jonathan W. Martin, Department of Laboratory Medicine and Pathology"^^<http://www.w3.org/2001/XMLSchema#string> , "Irina Dinu, School of Public Health"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Medical Sciences-Laboratory Medicine and Pathology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "jiaying9@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Bisphenol A (BPA) is an endocrine disruptor widely used in plastics and thermal receipt paper, and frequently detectable in human biofluids. Human studies have shown associations between maternal BPA exposure and developmental effects in children. BPA-alternatives, including bisphenol S (BPS) and bisphenol F (BPF) have now been widely used, yet study on these alternatives remains limited.  In order to evaluate the in utero exposure of BPA metabolites and alternatives, the major BPA metabolites and BPA-alternatives were quantified in 61 pairs of maternal and cord sera from Chinese participants. Total BPS was only detectable in 4 maternal and 7 cord sera, indicating low exposure for this population. Total BPA metabolites in cord serum were significantly higher than in maternal serum. Unlike in oral exposure studies where BPA-glucuronide is the major BPA metabolite, here BPA-sulfate was the dominant metabolite, in both maternal and cord sera. To evaluate the pharmacokinetics of dermal BPA absorption, six male participants handled receipts containing isotope-labeled BPA-d16 for 5 min, followed by hand-washing 2 hrs later. Urine (0-48 hrs) and serum (0-7.5 hrs) were monitored for free and total BPA-d16. One week later, participants took a dietary administration with monitoring as above. One participant repeated the dermal administration with extended sample monitoring. After dietary exposure, urine total BPA-d16 peaked within 5 hrs and quickly cleared within 24 hrs. After dermal exposure, urine concentrations only peaked after 15-34 hrs, cumulative excretion increased linearly for 2 days, and urinary total BPA-d16 was detectable after 1 week. In follow up dermal exposure, the participant showed linear cumulative excretion over 5 days, detected urinary total BPA-d16 after 9 days, and detected serum free BPA-d16 after 1 and 2 days. The proportions of urinary free BPA-d16 following dermal exposure (range: 1.6 - 2.9% of total BPA-d16) were much higher than in the dietary exposure (range: 0.4 - 1.0%). To examine the exposure and sources of BPA and BPA alternatives among pregnant women, free and total BPA, BPS and BPF were measured in 467 second trimester maternal urine samples, and in 455 paired samples collected 3 months postpartum. Free BPA, BPS and BPF were detectable in <2% of second trimester maternal samples. Nevertheless, maximum concentrations (Cmax) of free BPS and BPF were detected in samples with the highest total BPS and BPF respectively, and the proportion of free bisphenols was always <1%. Geometric mean total BPA in second trimester urine and postpartum urine was 5-7 times higher than total BPS. However, Cmax of total BPA pre- and post-partum (44 ng/mL, 55 ng/mL) was much lower than Cmax for total BPS (240 ng/mL, 72 ng/mL) or BPF (390 ng/mL, 120 ng/mL) The Cmax of estimated 24hr intake of BPS (14 nmol/kg BW/d) and BPF in 1% of women (21-30 nmol/kg BW/d) approached and even exceeded the tolerable daily intake of BPA (18 nmol/kg BW/d). Consumption of canned food, particularly canned meat, was associated with higher urinary total BPA, but not associated with urinary BPS.  To examine the effects of maternal BPA and BPS exposure on subsequent child neurodevelopment at two years of age, neurodevelopment was assessed by the Bayley-III scales (n=394), and behavioural syndromes were evaluated using the Child Behaviour Checklist (CBCL) (n=358). Potential confounders include neurotoxic metals and maternal nutrient status/intake in pregnancy. After adjusting for covariates, increasing BPA exposure was associated with poorer Social Emotional in boys and more behavioural problems in all children, with aggressive behaviour and externalizing problems mainly observed in girls. Higher maternal status of methyl donors (folate, vitamin B12 and choline) lessened the adverse effects of BPA exposure on CBCL scores. Higher BPS exposure was associated with lower Motor scores for girls only, more sleep problems in all children and more aggressive behaviours in girls.  Based on the results in this dissertation, I concluded that: the human fetus and pregnant mother have unique exposure to BPA metabolites; a single dermal contact could lead to prolonged BPA exposure and less detoxification compared to the oral pathway; canned food is a dominant exposure source for BPA, and dermal exposure should be evaluated for BPS; both BPA and BPS have sex-specific effects on child development and behaviour, while higher intake of methyl donors in pregnancy counteracted some adverse effects of BPA."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Exposure, Placental Transfer, and Neurodevelopmental Effects of Bisphenol A (BPA) and BPA-Alternatives"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/60/5f/f4/ca/605ff4ca-5b9e-46fb-8a04-ab24572c9c7c> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Catherine J. Field, Department of Agricultural, Food & Nutritional Science"^^<http://www.w3.org/2001/XMLSchema#string> , "Deborah Dewey, Departments of Paediatrics and Community Health Sciences and Owerko Centre at the Alberta Childrenâs Hospital Research Institute, University of Calgary"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:50:09.553Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:50:12.799Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44674"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Liu, Jiaying"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-15T16:19:41Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/cz/31/6q/20/cz316q203j> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-17T08:24:34Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b6568/content> ;
+	fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b6568/fcr:export?format=jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c4/b2/9b/65/c4b29b6568/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .

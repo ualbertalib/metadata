@@ -1,0 +1,103 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix nt: <http://www.jcp.org/jcr/nt/1.0> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydragroup: <http://projecthydra.org/ns/auth/group#> .
+@prefix hydraacl: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns003: <ns002:> .
+@prefix ns002: <model:> .
+@prefix ualname: <http://terms.library.ualberta.ca/name/> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ns001: <AASM::Persistence::ActiveFedoraPersistence::> .
+@prefix mode: <http://www.modeshape.org/1.0> .
+@prefix oai: <http://www.openarchives.org/OAI/2.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <info:fedora/fedora-system:def/model#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix fedoraconfig: <http://fedora.info/definitions/v4/config#> .
+@prefix mix: <http://www.jcp.org/jcr/mix/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix authz: <http://fedora.info/definitions/v4/authorization#> .
+@prefix relsext: <info:fedora/fedora-system:def/relations-external#> .
+@prefix image: <http://www.modeshape.org/images/1.0> .
+@prefix sv: <http://www.jcp.org/jcr/sv/1.0> .
+@prefix test: <info:fedora/test/> .
+@prefix ualterms: <http://terms.library.ualberta.ca/> .
+@prefix ualid: <http://terms.library.ualberta.ca/id/> .
+@prefix uatermsid: <http://terms.library.library.ca/identifiers/> .
+@prefix ualplace: <http://terms.library.ualberta.ca/place/> .
+@prefix scholarsphere: <http://scholarsphere.psu.edu/ns#> .
+@prefix ualsubj: <http://terms.library.ualberta.ca/subject/> .
+@prefix ualdate: <http://terms.library.ualberta.ca/date/> .
+@prefix ualrole: <http://terms.library.ualberta.ca/role/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fedora: <http://fedora.info/definitions/v4/repository#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix ualthesis: <http://terms.library.ualberta.ca/thesis/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix webacl: <http://www.w3.org/ns/auth/acl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix oaiid: <http://www.openarchives.org/OAI/2.0/oai-identifier> .
+@prefix ualidentifier: <http://terms.library.ualberta.ca/identifiers/> .
+@prefix ualtitle: <http://terms.library.ualberta.ca/title/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd158> a ldp:RDFSource , ldp:Container , <http://www.jcp.org/jcr/nt/1.0folder> , <http://www.jcp.org/jcr/nt/1.0hierarchyNode> , <http://www.jcp.org/jcr/nt/1.0base> , <http://www.jcp.org/jcr/mix/1.0created> , fedora:Container , fedora:Resource , fedora:Resource , <http://www.jcp.org/jcr/mix/1.0created> , <http://www.jcp.org/jcr/mix/1.0lastModified> , <http://www.jcp.org/jcr/mix/1.0referenceable> ;
+	fedora:lastModifiedBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:createdDate "2018-01-08T19:17:48.909Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	model:downloadFilename "Liu_Yanna_20180115_PhD.pdf"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:proquest ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:isVersionOf "Y. Liu, A.S. Pereira, S. Beesoon, R. Vestergren, U. Berger, G.W. Olsen, A. Glynn, J.W. Martin. Environ Int, 2015, 75, 215-22Y. Liu, A.S. Pereira, J.W. Martin. Anal Chem, 2015, 87, (8), 4260-8."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:year_created "2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:subject "PCBs"^^<http://www.w3.org/2001/XMLSchema#string> , "Orbitrap MS"^^<http://www.w3.org/2001/XMLSchema#string> , "Unknown Halogenated Contaminants"^^<http://www.w3.org/2001/XMLSchema#string> , "PFOS isomers/Enantiomers"^^<http://www.w3.org/2001/XMLSchema#string> , "PFASs"^^<http://www.w3.org/2001/XMLSchema#string> , "Non-target Discovery"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:modified "2018-01-19T22:22:43.695Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	marcrel:dgg "University of Alberta"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	bibo:ThesisDegree "Doctor of Philosophy"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:uuid "479cf9eb-ecb3-48b6-83fc-bb61e268cf31"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for the purpose of private, scholarly or scientific research. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3uuid "uuid:0c5a8907-c054-4f29-a081-5db866df95fe"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:ths "Martin, Jonathan W. (Laboratory Medicine and Pathology)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:ser ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	vivo:AcademicDepartment "Medical Sciences-Laboratory Medicine and Pathology"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:trid ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dpt "yanna1@hydranorth.ca"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:mixinTypes "fedora:Container"^^<http://www.w3.org/2001/XMLSchema#string> , "fedora:Resource"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:abstract "Poly- and per-fluoroalkyl substances (PFASs) are a vast group of environmental contaminants that have been used for almost 70 years and are now ubiquitously distributed around the world. The perfluoroalkyl chain imparts environmental persistence, and long-chain perfluorinated acids are of special concerns due to their high bioaccumulation potentials and associated toxicities. Since the year 2000, there has been a global trend towards restricting long-chain perfluorinated acids and their precursors while shifting to alternative fluorinated chemicals, thus humans and wildlife are now exposed to traditional PFASs and a growing list of alternative PFASs. This thesis addresses questions of current and future PFAS exposure by investigating: (1) how is human exposure to perfluoroctanesulfonate (PFOS) changing over time, and what is the relative contribution from PFOS precursors (PreFOS), and (2) what unknown legacy or alternative PFASs are also emitted to the environment, and can any of these accumulate in organisms?       PFOS is among the most prominent PFAS in the environment and is the dominant PFAS in human serum. Chapter 2 explored the temporal trends of PFOS concentrations in human serum (U.S. and Sweden), and included a close examination of its isomer and enantiomer profiles which were hypothesized to serve as biomarkers of exposure to PreFOS. Despite decreasing PFOS concentrations, isomer and enantiomer profiles suggest that the relative importance of PreFOS exposure is increasing for the Swedish population. In the U.S., the profiles further suggest that males and older people have relatively more PreFOS exposure than females and younger people. This study highlights many unknowns about the pathways leading to PFOS exposure, and suggests that unknown PreFOS molecules are important contributors to human body burdens.       In Chapter 3, I developed and applied a powerful method for discovery of unknown PFASs in water. Using a wastewater sample collected from a fluorochemical industrial park in China, a sensitive and fast non-target PFAS discovery method featuring âin-source fragmentation flaggingâ was developed on an HPLC-Orbitrap MS system. The non-target method revealed 5 new homologous classes of PFASs in the wastewater (Chapter 3), and 10 new classes in pooled fish samples from two locations in China (Chapter 4). Most discovered PFASs were long chain (i.e. with 8-17 carbon atoms) poly/perfluoroalkyl sulfonates with hydrogen substitution, or with ether, double bond or carbonyl structures, probably reflecting the major alternative structures that are being produced today in China; now one of the major PFAS manufacturing centers in the world. Additionally, 3 classes of chlorine-substituted poly/perfluoroalkyl acids and 2 classes of poly/perfluoroalkyl amines were discovered (Chapter 3 and Chapter 4). Chlorine substitution of the perfluoroalkyl chain likely increases the bioaccumulation potential, and amines are a general concern due to their genotoxicity. It is unclear whether these new substances are historically emitted PFASs, or contemporary alternatives still in production, but larger-scale monitoring studies and relevant toxicological tests should be followed for these newly discovered PFASs to better understand their risks.      In Chapter 5, I extended the non-target methodology to analysis of polar bear serum for fluorinated and chlorinated contaminants by introduction of a sample preparation step based on stir-bar sorptive extraction. The purpose was to increase sensitivity for organohalogen discovery while minimizing endogenous interferences, and the method performed well for a range of polar and ionic analytes. In pooled polar bear serum (Beaufort Sea and Western Hudson Bay), I discovered a wide variety of polar chlorinated contaminants and four homologous classes of poly/perfluorinated sulfonates. Among the discoveries were 7 classes of polychlorinated biphenyl (PCB metabolites), 2 of which are entirely novel, and 5 of which are reported for the first time in polar bears. These discoveries may explain missing âmass balancesâ in previous effects-directed analyses of polar bear serum contamination, and demonstrate the power of non-target analytical chemistry for improving characterization of exposomes and of the environmental fate of chemicals."^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:title "Target Monitoring and Non-target Discovery of Halogenated Contaminants  in Water, Wildlife and Humans"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:type "Thesis"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:hasCollection "Theses and Dissertations"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:relation ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	hydraacl:hasEmbargo <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/21/1c/bc/99/211cbc99-2a85-4e0f-98e1-3bb40c1780d0> ;
+	ualidentifier:hasCollectionId "44558t416"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualrole:thesiscommitteemember "Harynuk, James (Chemistry)"^^<http://www.w3.org/2001/XMLSchema#string> , "St. Louis, Vincent (Biological Sciences)"^^<http://www.w3.org/2001/XMLSchema#string> , "Le, Xiao-chun (Chris) (Laboratory Medicine and Pathology)"^^<http://www.w3.org/2001/XMLSchema#string> , "Reiner, Eric (Chemistry, University of Toronto)"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:unicorn ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:createdBy "bypassAdmin"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualidentifier:ingestbatch "cmk61rh64f"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:created "2018-07-13T19:50:41.537Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	fedora:lastModified "2018-07-13T19:50:45.109Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	ualthesis:specialization ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualid:fedora3handle "http://hdl.handle.net/10402/era.44699"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	marcrel:dis "Liu, Yanna"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualdate:graduationdate "2018-06:Spring 2018"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:license "I am required to use/link to a publisher's license"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	model:hasModel "GenericFile"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateSubmitted "2018-01-17T22:07:01Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	relsext:isPartOf <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c5/m6/0q/s4/c5m60qs468> ;
+	fedora:primaryType "nt:folder"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:created ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<AASM::Persistence::ActiveFedoraPersistence::AASMTermsaasmstate> "not_available"^^<http://www.w3.org/2001/XMLSchema#token> ;
+	ualidentifier:belongsToCommunity "44558r66n"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:description ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:dateAccepted "2018-01-19T15:22:42Z"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:language "English"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dcterms:source ""^^<http://www.w3.org/2001/XMLSchema#string> ;
+	ualthesis:thesislevel "Doctoral"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	fedora:writable "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	fedora:hasParent <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod> ;
+	ldp:contains <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd158/content> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd158/fcr:export?format=jcr/xml> dc:format <http://fedora.info/definitions/v4/repository#jcr/xml> .
+
+<http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd158> fedora:exportsAs <http://mycombe2.library.ualberta.ca:8080/fedora/rest/prod/c7/s7/5d/d1/c7s75dd158/fcr:export?format=jcr/xml> .
