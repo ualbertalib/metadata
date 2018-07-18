@@ -1,5 +1,6 @@
 import os
 import sys
+from Passwords import keys
 import linecache
 import statistics
 import numpy as np
@@ -23,7 +24,11 @@ import time
 from datetime import datetime
 
 def main():
+    #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    #import your OCLC develpoer key
+    wskey = keys['OCLC-wskey'][0]
+    convert_marc()
     folder = 'uploads'
     for files in os.listdir(folder):
         tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -91,6 +96,45 @@ def main():
     tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
     print("walltime:", process_time)
+
+def convert_marc():
+    for files in os.listdir(folder):
+        with open(files, "rb") as marc_file:
+            ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+            reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
+            files = []
+            for i, record in enumerate(reader):
+                print ("converting record number " + str(i) + " to XML")
+                if record.title():
+                    ti = record.title()
+                    ti = ti.replace("/", "")
+                    ti = ti.replace(" ", "_")
+                    ti = ti[0:50]
+                    writer = XMLWriter(open('processed/' + ti + '.xml','wb'))
+                    writer.write(record)
+                    writer.close()
+                    files.append(ti)
+                else:
+                    writer = XMLWriter(open('processed/' + 'unknownTitle' + str(i) + '.xml','wb'))
+                    files.append('unknownTitle' + str(i))
+            marc_file.close()
+            #print (file + " was successfully converted to XML")
+            xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
+            tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+            #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+            for i, file in enumerate(files):
+                #print ("start processing record number " + str(i))
+                #print ("starting BIBFRAME transformation")
+                f = "processed/" + file + ".xml"
+                dom = ET.parse(f)
+                transform = ET.XSLT(xslt)
+                newdom = transform(dom)
+                if not os.path.exists("BIB"):
+                    os.makedirs("BIB")
+                with open ("BIB/" + file + ".xml", "w+") as oo:
+                    oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
+                #print ("starting enrichment process")
+                main("BIB/" + file + ".xml")
 
 class Bibframe():
     def __init__(self, file, log_file):
@@ -358,7 +402,7 @@ class SearchAPI():
 
     def search_OCLC(self):
         self.scores = {}
-        OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=1QSLAhHnqyQYTlcnREquxaYmTBEng0FbYgPUwa5clqNAmG1Qe8m0LsqRxh22iTfoi1TGdOMloHfTjzXf"
+        OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=%s" %(wskey)
         try:
             OCLC_result = requests.get(OCLC).text
             #having issues reading the response object. Write to a file and then read
