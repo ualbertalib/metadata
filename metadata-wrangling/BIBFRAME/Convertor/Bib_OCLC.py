@@ -29,19 +29,16 @@ def main():
     #convert .mrc to MARC/XML
     Marc_XML = MARC_XML()
     Marc_XML.convert_marc_xml()
-    #convert MARC/XML to BIBFRAME
-    BIBFRAME = XML_BIBFRAME()
-    BIBFRAME.convert_to_BIBFRAME()
-    folder = 'BIBFRAME'
+    folder = 'Processing'
     #iterate over BIBFRAME files
     for files in os.listdir(folder):
         tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         file = os.path.join(folder, files)
-        filename = file.replace('.xml', '').replace('BIBFRAME/', '')
+        filename = files.replace('.xml', '')
         print ("processing " + filename)
         ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        log_file = filename.replace('.xml', '') + "-error-logs"
-        output = filename.replace('.xml', '').replace("BIB/", "") + "-enhanced-test.xml" 
+        log_file = str(filename) + "-error-logs"
+        output = str(filename) + "-enhanced-test.xml" 
         clearLogs(log_file)
         # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
         apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
@@ -121,6 +118,7 @@ class MARC_XML():
             os.makedirs(self.folder)
 
     def convert_marc_xml(self):
+        BIBFRAME = XML_BIBFRAME()
         for index, files in enumerate(os.listdir(self.source)):
             file = os.path.join(self.source, files)
             output = os.path.join(self.folder, '')
@@ -140,13 +138,19 @@ class MARC_XML():
                     else:
                         writer = XMLWriter(open(output + 'unknownTitle' + str(i) + '.xml','wb'))
                 marc_file.close()
+            #convert MARC/XML to BIBFRAME
+            BIBFRAME.convert_to_BIBFRAME()
+            BIBFRAME.merger(files)
 
 class XML_BIBFRAME():
     def __init__(self):
         self.source = 'MARC_XML'
         self.folder = 'BIBFRAME'
+        self.processing = 'Processing'
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
+        if not os.path.exists(self.processing):
+            os.makedirs(self.processing)
         self.xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
                 
     def convert_to_BIBFRAME(self):
@@ -162,6 +166,20 @@ class XML_BIBFRAME():
             newdom = transform(dom)
             with open (output + files + ".xml", "w+") as oo:
                 oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
+
+    def merger(self, master_file):
+        master_file = str(master_file.split('.')[0]) + '.xml'
+        output = os.path.join(self.processing, master_file)
+        with open(output, "w+") as merged_file:
+            merged_file.write('<root>')
+            for i, files in enumerate(os.listdir(self.folder)):
+                file = os.path.join(self.folder, files)
+                with open(file, 'r') as source:
+                    for lines in source:
+                        merged_file.write(lines)
+                    source.close()
+            merged_file.write('</root>')
+            merged_file.close()
 
 class Bibframe():
     def __init__(self, file, log_file):

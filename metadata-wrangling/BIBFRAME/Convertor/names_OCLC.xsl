@@ -10,7 +10,7 @@
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
 
-    <xsl:template match="/">
+    <xsl:template match="*">
         <xsl:for-each select="rdf:RDF/bf:Work[@rdf:about]">
             <xsl:value-of select="bf:title[1]/bf:Title/rdfs:label"/>
             <xsl:text>&#09;</xsl:text>
