@@ -27,8 +27,12 @@ def main():
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')    
     #convert .mrc to MARC/XML
+    ### if you need to process the BIBFRAME files only (no processing of .mrc or MARC/XML)
+    ### comment out the next two lines and copy the BIBFRAME file in folder "Processing"
     Marc_XML = MARC_XML()
     Marc_XML.convert_marc_xml()
+    if not os.path.exists('Processing'):
+            os.makedirs('Processing')
     folder = 'Processing'
     #iterate over BIBFRAME files
     for files in os.listdir(folder):
@@ -52,7 +56,7 @@ def main():
         #getting corp names (for stat report)
         all_names = bib_object.extract_names(transformed)[2]
         corp_names = bib_object.extract_names(transformed)[3]
-        print (str(all_names) + " were extrected from " + filename)
+        print (str(all_names) + " names were extrected from " + filename)
         print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
         print (str(len(titles)) + " titles were extracted from " + filename)
         #dictionaries for storing URIs (names and titles) and stats
@@ -96,15 +100,15 @@ def main():
         final_names = result_names_Object.mapping()
         result_title_Object = Results(title_result, titles, file, 'title', log_file)
         final_titles = result_title_Object.mapping()
-        #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-        #stats['names-enriched'] = len(final_names)
+        eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+        stats['names-enriched'] = len(final_names)
         tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         #write back the URIs to the BIBFRAME file
         write(final_names, final_titles, file, output, log_file, filename)
         tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
         file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-        #write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+        write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
         print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
     tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
@@ -118,15 +122,19 @@ class MARC_XML():
             os.makedirs(self.folder)
 
     def convert_marc_xml(self):
-        BIBFRAME = XML_BIBFRAME()
         for index, files in enumerate(os.listdir(self.source)):
+            subfolder_name = '%s_%s' %(files.split('.')[0], datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
+            sufolder = os.path.join(self.folder, subfolder_name)
+            if not os.path.exists(sufolder):
+                os.makedirs(sufolder)
+            #create the BIBFRAME converter object
+            BIBFRAME = XML_BIBFRAME(subfolder_name)
             file = os.path.join(self.source, files)
-            output = os.path.join(self.folder, '')
+            output = os.path.join(sufolder, '')
             with open(file, "rb") as marc_file:
-                ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
                 reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
                 for i, record in enumerate(reader):
-                    print ("converting record number " + str(i) + " of file number " + str(index+1) + " to XML")
+                    print ("converting record number %s of file number %s to XML" %(str(i), str(index+1)))
                     if record.title():
                         ti = record.title()
                         ti = ti.replace("/", "")
@@ -139,41 +147,44 @@ class MARC_XML():
                         writer = XMLWriter(open(output + 'unknownTitle' + str(i) + '.xml','wb'))
                 marc_file.close()
             #convert MARC/XML to BIBFRAME
-            BIBFRAME.convert_to_BIBFRAME()
-            BIBFRAME.merger(files)
+            BIBFRAME.convert_to_BIBFRAME(i)
+            BIBFRAME.merger()
 
 class XML_BIBFRAME():
-    def __init__(self):
-        self.source = 'MARC_XML'
+    def __init__(self, master_file):
         self.folder = 'BIBFRAME'
+        self.master_file = master_file
+        self.source = 'MARC_XML/%s' %(self.master_file)
         self.processing = 'Processing'
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
         if not os.path.exists(self.processing):
             os.makedirs(self.processing)
+        self.subfolder = os.path.join(self.folder, self.master_file)
+        if not os.path.exists(self.subfolder):
+            os.makedirs(self.subfolder)
         self.xslt = ET.parse("marc2bibframe2-master/xsl/marc2bibframe2.xsl")
                 
-    def convert_to_BIBFRAME(self):
-        tf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        #print("walltime:", datetime.strptime(tf, '%H:%M:%S') - datetime.strptime(ts, '%H:%M:%S'))
+    def convert_to_BIBFRAME(self, number_of_records):
         for i, files in enumerate(os.listdir(self.source)):
             file = os.path.join(self.source, files)
-            output = os.path.join(self.folder, '')
-            print ("start processing record number " + str(i+1))
-            #print ("starting BIBFRAME transformation")
-            dom = ET.parse(file)
-            transform = ET.XSLT(self.xslt)
-            newdom = transform(dom)
-            with open (output + files + ".xml", "w+") as oo:
-                oo.write(str(newdom).replace('<?xml version="1.0"?>', ''))
+            if os.path.isfile(file):
+                output = os.path.join(self.subfolder, '')
+                print ("Transforming record number %s of %s to BIBFRAME"  %(str(i+1), str(number_of_records)))
+                dom = ET.parse(file)
+                transform = ET.XSLT(self.xslt)
+                newdom = transform(dom)
+                with open (output + files + ".xml", "w+") as BIBFRAME_file:
+                    BIBFRAME_file.write(str(newdom).replace('<?xml version="1.0"?>', ''))
+                    BIBFRAME_file.close()
 
-    def merger(self, master_file):
-        master_file = str(master_file.split('.')[0]) + '.xml'
+    def merger(self):
+        master_file = str(self.master_file) + '.xml'
         output = os.path.join(self.processing, master_file)
         with open(output, "w+") as merged_file:
             merged_file.write('<root>')
-            for i, files in enumerate(os.listdir(self.folder)):
-                file = os.path.join(self.folder, files)
+            for i, files in enumerate(os.listdir(self.subfolder)):
+                file = os.path.join(self.subfolder, files)
                 with open(file, 'r') as source:
                     for lines in source:
                         merged_file.write(lines)
@@ -452,7 +463,7 @@ class SearchAPI():
         OCLC = "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?q=" + self.query_type + "&wskey=%s" %(wskey)
         try:
             OCLC_result = requests.get(OCLC).text
-            #having issues reading the response object. Write to a file and then read
+            #having issues reading the response object. Work around: Write to a file and then read
             with open("temp-file.xml", "w") as file:
                 file.write(OCLC_result)
                 file.close()
@@ -714,12 +725,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             LC_Var = 'N/A'
             LC_Std = 'N/A'
-        '''plt.hist(LC_Score)
+        plt.hist(LC_Score)
         plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
         plt.grid()
         plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
             orientation='portrait')
-        plt.clf()'''
+        plt.clf()
         stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
     if len(VIAF_Score) > 0:
         VIAF_Avg = statistics.mean(VIAF_Score)
@@ -730,21 +741,21 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             VIAF_Var = 'N/A'
             VIAF_Std = 'N/A'
-        '''plt.hist(VIAF_Score)
+        plt.hist(VIAF_Score)
         plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
         plt.grid()
         plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
             orientation='portrait')
-        plt.clf()'''
+        plt.clf()
         stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
-    '''colors = ['red', 'green']
+    colors = ['red', 'green']
     labels = ['LC-IDs', 'VIAF-IDs']
     x_multi = [LC_Score, VIAF_Score]
     plt.hist(x_multi, 10, normed=1, histtype='bar', color=colors, label=labels)
     plt.legend(prop={'size': 10})
     plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
     plt.savefig(file_path, facecolor='w', edgecolor='w',
-        orientation='portrait')'''
+        orientation='portrait')
     for i in final_titles.keys():
         if 'work_id' in final_titles[i]['scores']:
             work_id_Score.append(final_titles[i]['scores']['work_id'][1])
@@ -761,12 +772,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             oclcid_Var = 'N/A'
             oclcid_Std = 'N/A'
-        '''plt.hist(work_id_Score)
+        plt.hist(work_id_Score)
         plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
         plt.grid()
         plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
             orientation='portrait')
-        plt.clf()'''
+        plt.clf()
     if len(work_id_Score) > 0:
         work_id_Avg = statistics.mean(work_id_Score)
         work_id_Median = statistics.median(work_id_Score)
@@ -776,12 +787,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             work_id_Var = 'N/A'
             work_id_Std = 'N/A'
-        '''plt.hist(oclcid_Score)
+        plt.hist(oclcid_Score)
         plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
         plt.grid()
         plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
             orientation='portrait')
-        plt.clf()'''
+        plt.clf()
         stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
         stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
@@ -809,7 +820,7 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
             for i in eff["LC"]:
                 stat.write(str(i) + "\t")
             stat.write("\n" + "\n")
-        if 'VIAF_ID' in eff.keys():
+        if 'VIAF' in eff.keys():
             stat.write('VIAF_ID' + '\n' + "names enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
             for i in eff["VIAF"]:
                 stat.write(str(i) + "\t")
@@ -819,7 +830,7 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
             for i in eff["work_id"]:
                 stat.write(str(i) + "\t")
             stat.write("\n" + "\n")
-        if 'oclc_id' in eff.keys():
+        if 'oclcid' in eff.keys():
             stat.write('oclc_id' + '\n' + "titles enriched" + "\t" + "average matching score" + "\t" + "median matching score" + "\t" + "variance of matching score" + "\t" + "standard-div of matching score" + "\t" + "hit rate" + "\n")
             for i in eff["oclcid"]:
                 stat.write(str(i) + "\t")
