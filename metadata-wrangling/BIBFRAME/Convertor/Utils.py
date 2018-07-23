@@ -11,7 +11,8 @@ def clean_up(l):
     return l
 
 def PrintException(log_file, error):
-    with open ("results/logs/" + log_file, 'a') as logs:
+    log = 'results/%s/logs/log_file' %(log_file.replace('-error-logs', ''))
+    with open (log) as logs:
         exc_type, exc_obj, tb = sys.exc_info()
         f = tb.tb_frame
         lineno = tb.tb_lineno
@@ -22,8 +23,8 @@ def PrintException(log_file, error):
         logs.write("EXCEPTION IN (%s, LINE %s '%s'): %s name: %s" % (filename, lineno, line.strip(), exc_obj, error))
         logs.write("\n")
 
-def clearLogs(log_file):
-    folder = 'results/logs'
+def clearLogs(log_file, filename):
+    folder = 'results/%s/logs' %(filename)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, log_file)
@@ -34,7 +35,7 @@ def clearLogs(log_file):
         print(e)
 
 def clear_files(output):
-    folder = 'results/enhanced-files'
+    folder = 'results/%s/enhanced-files' %(output)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, output)
@@ -45,7 +46,7 @@ def clear_files(output):
         print(e)
 
 def clear_TSV(filename):
-    folder = 'results/TSVs'
+    folder = 'results/%s/TSVs' %(filename)
     file = 'URIs-' + filename + '.tsv'
     if not os.path.exists(folder):
         os.makedirs(folder)
