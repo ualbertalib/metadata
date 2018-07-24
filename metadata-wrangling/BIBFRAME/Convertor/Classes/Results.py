@@ -2,7 +2,9 @@ from Utils import PrintException
 
 class Results():
     def __init__(self, results, source, file, type, log_file):
+        # hold the dict for names and title when initiated
         self.results = results
+        # hold the original naems or titles dict
         self.source = source
         self.file = file
         self.log_file = log_file
@@ -10,16 +12,22 @@ class Results():
         self.type = type 
 
     def maximizer(self):
+        # a dict for storing the maximum score for each API (only for VF and LC)
         self.maxs = {}
         try:
+            # iterate over the results dict 
             for item in self.results.keys():
+                # extract the name from the key
                 name = item.split('-_-_-')[0]
                 scoreLC = []
+                # adding temp values as a place holder for wmpty values
+                # will be removed at the end of this process
                 scoreLC.append("temp")
                 scoreLC.append(0)
                 scoreVF = []
                 scoreVF.append("temp")
                 scoreVF.append(0)
+                # for each name find the URI with maximun score for VOAF and LC
                 for itr in self.results[item]:
                     for it in itr.keys():
                         if 'lcid' in itr[it].keys():
@@ -34,6 +42,7 @@ class Results():
                                     scoreVF[1] = itr[it]['VIAFID'][k][-1]
                 if scoreVF[0] != "temp" or scoreLC[0] != "temp":                   
                     self.maxs[item] = {} 
+                    # removing the temp place holders
                     if scoreLC[0] != "temp":
                         self.maxs[item]['LC'] = scoreLC
                     if scoreVF[0] != "temp":
@@ -43,8 +52,11 @@ class Results():
         return(self.maxs)
         
     def mapping(self):
+        # extracing names (and name_type) 
         if self.type == 'name':
             try:
+                # map the names in maxs dict with the original names dict (source)
+                # and add the name,key,score combination to the final dict
                 for i in self.maxs.keys():
                     name = i.split('-_-_-')[0]
                     type = i.split('-_-_-')[1]
