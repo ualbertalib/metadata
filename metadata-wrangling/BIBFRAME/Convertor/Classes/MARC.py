@@ -7,13 +7,17 @@ from datetime import datetime
 
 class MARC_XML():
     def __init__(self):
+        # folder to store .mrc files
         self.source = 'marc'
+        # folder to store MARC/XML files
         self.folder = 'MARC_XML'
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
 
     def convert_marc_xml(self):
+        # for each .marc file in the "marc" folder, convert marc to MARC/XML and then to BIBFRAME
         for index, files in enumerate(os.listdir(self.source)):
+            # for each .mrc file create a sub-folder based on timestamp to store converted MARC/XML files
             subfolder_name = '%s_%s' %(files.split('.')[0], datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
             sufolder = os.path.join(self.folder, subfolder_name)
             if not os.path.exists(sufolder):
@@ -39,4 +43,5 @@ class MARC_XML():
                 marc_file.close()
             #convert MARC/XML to BIBFRAME
             BIBFRAME.convert_to_BIBFRAME(i)
+            # merge the BIBFRAME files into one (per the master MARC file) for ease of processing
             BIBFRAME.merger()

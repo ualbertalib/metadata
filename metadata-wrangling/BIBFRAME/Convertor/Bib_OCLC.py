@@ -67,8 +67,10 @@ def main():
                     stats[api] = 0
                 # getting the API method
                 name_result = APIFactory().get_API(name, query_type, api, log_file)
+                # if the results are not empty, append to "enriched_names" dictionary the result using the api name as key
                 if name_result:
                     enriched_names[item].append(name_result)
+                    # add number of results to be used latter in stats report
                     stats[api] = stats[api] + len(name_result)
         print ("enriching titles")
         # iterate over the title dictionary
