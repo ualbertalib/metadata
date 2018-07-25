@@ -60,3 +60,9 @@ The process then starts working on the MARC/XML files and convert them into BIBF
 
 For better performance and results, all individual BIBFRAMEs associated with master_file as merged into a single BIBFRAME file. From this point onward the enrichment process takes place. All names (bf:Agent in BIBFRAME) and titles (bf:title in BIBFRAME) are extracted from the merged-file using an xslt script. The process retrieve URIs from the specifics APIs and write them back into the BIBFRAM file.
 
+## Using BIBFRAME.xml as source file
+- Make sure that a folder named "BIBFRAME" exists in the root directory.
+- Paste all the BIBFRAME files in the "BIBFRAME" folder.
+- Run enrich.py
+
+   ```python enrich_BIB.py```
