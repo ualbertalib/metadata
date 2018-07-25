@@ -2,6 +2,7 @@ from Utils import PrintException
 from fuzzywuzzy import fuzz
 import urllib
 import requests
+# change this to import your personal OCLC wskey
 from Passwords import keys
 import xml.etree.ElementTree as ETree
 import json
