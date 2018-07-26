@@ -4,6 +4,7 @@ from Classes.MARC import MARC_XML
 from Classes.Bibframe import Bibframe
 from Classes.APIFactory import APIFactory
 from Classes.Results import Results
+from Classes.BIB_builder import BIB_builder
 from Utils import clean_up, PrintException, clearLogs, clear_files, clear_TSV, delete_temp, clear_processing
 import matplotlib.pyplot as plt
 from scipy import stats
@@ -23,6 +24,8 @@ def main():
     clear_processing()
     Marc_XML = MARC_XML()
     Marc_XML.convert_marc_xml()
+    BIBFRAME = BIB_builder()
+    BIBFRAME.merger()
     folder = 'Processing'
     #iterate over BIBFRAME files
     for files in os.listdir(folder):
