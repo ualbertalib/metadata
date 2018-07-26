@@ -4,7 +4,7 @@ import lxml.etree as ET
 
 class XML_BIBFRAME():
     def __init__(self, master_file):
-        self.folder = 'BIBFRAME'
+        self.folder = 'converted_BIBFRAME'
         self.master_file = master_file
         self.source = 'MARC_XML/%s' %(self.master_file)
         self.processing = 'Processing'

@@ -8,7 +8,7 @@ from datetime import datetime
 class MARC_XML():
     def __init__(self):
         # folder to store .mrc files
-        self.source = 'marc'
+        self.source = 'source/marc'
         # folder to store MARC/XML files
         self.folder = 'MARC_XML'
         if not os.path.exists(self.folder):
