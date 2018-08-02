@@ -34,7 +34,7 @@ def main():
 			title = row['title']
 			subject = row['subject'].split('|')
 			dateCreated = row['dateCreated']
-			rights = row['rights']
+			rights = row['rights'].replace('© ', '')
 			language = row['language']
 			spatial = row['spatial'].split('|')
 			if file in creators.keys():
