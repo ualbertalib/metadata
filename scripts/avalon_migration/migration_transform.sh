@@ -53,5 +53,5 @@ date=$(date +%Y%m%d)
 name="-avalon-mods.zip"
 filename=$date$name
 #zip folder with today's date
-zip -r $filename transformed
-echo "Transformation complete, files compressed into" $filename
+zip -r migration_packages/$filename transformed
+echo "Transformation complete, files compressed into migration_packages/" $filename

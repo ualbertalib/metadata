@@ -42,11 +42,14 @@
    </xsl:template>
    
    <xsl:template match="//*:accessCondition[@type='use and reproduction' and text()='Attribution-NonCommercial 4.0 International']" priority="3"/> <!-- added separately for priority -->
+   <xsl:template match="recordIdentifier[@source='Fedora' and contains(.,'$conhallitems')]" priority="3">
+      
+   </xsl:template> <!-- added separately for priority -->
    
    <xsl:template match="//*:physicalDescription[not(*)]"/>
    
    
-   <xsl:template match="//*:note[matches(.,'(for educational use and research)|(terms of use)','i') and not(//*:accessCondition)]">
+   <xsl:template match="//*:note[matches(.,'(content is being provided solely for educational use and research)|(terms of use)','i')]" priority="5">
       <xsl:call-template name="noteCleanup"/>
    </xsl:template>
    
