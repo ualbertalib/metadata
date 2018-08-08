@@ -764,11 +764,10 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
   * values displayed on form:  
     * **Report** (http://purl.org/ontology/bibo/Report)  
     * **Learning Object** (http://terms.library.ualberta.ca/learningObject)  
-    * **Conference Poster** (http://vivoweb.org/ontology/core#ConferencePoster)  
+    * **Conference/Workshop Poster** (http://vivoweb.org/ontology/core#ConferencePoster)  
     * **Article** (http://purl.org/ontology/bibo/Article)  
     * **Image** (http://purl.org/ontology/bibo/Image)  
     * **Review** (http://vivoweb.org/ontology/core#Review)  
-    * **Conference Paper** (http://vivoweb.org/ontology/core#ConferencePaper)  
     * **Chapter** (http://purl.org/ontology/bibo/Chapter)  
     * **Dataset** (http://vivoweb.org/ontology/core#Dataset)  
     * **Book** (http://purl.org/ontology/bibo/Book)  
