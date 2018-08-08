@@ -772,6 +772,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * **Dataset** (http://vivoweb.org/ontology/core#Dataset)  
     * **Book** (http://purl.org/ontology/bibo/Book)  
     * **Research Material** (http://terms.library.ualberta.ca/researchMaterial)  
+    * **Conference/Workshop Presentation** (http://vivoweb.org/ontology/core#Presentation)  
   * backwardCompatibleWith:  
     * http://purl.org/dc/terms/type  
   * dataType:  
