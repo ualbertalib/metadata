@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple File Upload</title>
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'Webapp/css/bootstrap.min.css' %}" type = "text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  	<body class = "body">
+    <div class="container-fluid" >
+      <h1 class="text-center">Linked Data Enrichment</h1>
+        <div class="navbar-header"> 
+
+        <div class="dropdown">
+          <button class="btn btn-primary" name='users' type="button">
+            START
+          </button>
+          <div class="file-format">
+          	{% block content %}
+    		{% endblock %}
+          </div>
+
+    
+  </body>
+  <script type="text/javascript" src ="{% static 'Webapp/js/script.js' %}">
+  </script>
+</html>
