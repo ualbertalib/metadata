@@ -5,6 +5,7 @@ from django.views.generic.edit import DeleteView
 from Webapp.models import Document
 from Webapp.forms import DocumentForm
 import os
+from .Code.enrich import main
 
 
 def index(request):
@@ -51,3 +52,6 @@ def deleteRecord(request,id =None):
 def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
+def processing(request):
+	main()
+	return render(request, 'webapp/processing.html')

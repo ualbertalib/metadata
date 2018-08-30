@@ -1,33 +1,40 @@
 {% extends 'webapp/base.html' %}
 
 {% block content %}
-    <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
-  </form>
+  <button class="btn btn-primary" name='users' type="button">START</button>
+  <div class="file-format">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+      </form>
 
-  {% if documents %}
-    <br><br>
-    <p>Uploaded files:</p>
-    <table class="table table-hover" class="table table-bordered" style="width:100%">
-      <tr>
-        <th></th>
-        <th>Filename</th>
-        <th>Uploaded at</th>
-        <th></th>
-      </tr>
-      {% for obj in documents %}
-        <tr>
-          <td><input type="checkbox" name="vehicle" value="{{ obj.document.name }}"></td>
-          <td><a href="{{ obj.document.url }}">{{ obj.document.name }}</a></td>
-          <td><small>{{ obj.uploaded_at }}</small></td>
-          <td><form action="{% url 'record-d' id=obj.id  %}" method="POST">
-    {% csrf_token %}
-    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
-  </form></td>
-        </tr>
-      {% endfor %}
-    </table>
-  {% endif %}
+      {% if documents %}
+        <br><br>
+        <p>Uploaded files:</p>
+        <table class="table table-hover" class="table table-bordered" style="width:100%">
+          <tr>
+            <th></th>
+            <th>Filename</th>
+            <th>Uploaded at</th>
+            <th></th>
+          </tr>
+          {% for obj in documents %}
+            <tr>
+              <td><input type="checkbox" name="vehicle" value="{{ obj.document.name }}"></td>
+              <td><a href="{{ obj.document.url }}">{{ obj.document.name }}</a></td>
+              <td><small>{{ obj.uploaded_at }}</small></td>
+              <td><form action="{% url 'record-d' id=obj.id  %}" method="POST">
+        {% csrf_token %}
+        <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
+      </form></td>
+            </tr>
+          {% endfor %}
+        </table>
+        <form action="{% url 'processing' %}" method="POST">
+        {% csrf_token %}
+          <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
+        </form>
+    {% endif %}
+  </div>
 {% endblock %}
