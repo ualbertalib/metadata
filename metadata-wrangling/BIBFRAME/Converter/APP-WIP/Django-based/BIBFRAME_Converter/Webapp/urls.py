@@ -24,5 +24,5 @@ urlpatterns = [
     url(r'^record-d/(?P<id>\d+)/$', views.deleteRecord, name='record-d'),
     url(r'^deleted/$', views.deleted, name='deleted'),
     url(r'^processing/$', views.processing, name='processing'),
-    url(r'^$', views.model_form_upload, name='model_form_upload')
+    url(r'^uploaded/(?P<id>\d+)/$', views.model_form_upload, name='model_form_upload')
 ]

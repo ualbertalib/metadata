@@ -11,7 +11,7 @@ class MARC_XML():
         # folder to store .mrc files
         cwd = getcwd()
         print (cwd)
-        self.source = 'Webapp/source'
+        self.source = 'Webapp/source/MARC'
         # folder to store MARC/XML files
         self.folder = 'Webapp/MARC_XML'
         if not os.path.exists(self.folder):

@@ -6,7 +6,7 @@ from datetime import datetime
 class BIB_builder():
     def __init__(self):
         # folder to store BIBFRAME files
-        self.source = 'Webapp/BIBFRAME'
+        self.source = 'Webapp/source/BIBFRAME'
         # processing folder
         self.folder = 'Webapp/Processing'
         if not os.path.exists(self.folder):

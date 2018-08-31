@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 	$(function() {
 		$(".file-format").hide();
+		$(".bib_form").hide();
+		$(".marc_form").hide();
 	});
 
     $(function() {
@@ -9,4 +11,26 @@ $(document).ready(function(){
 			$(".file-format").toggle();
 		});
 	});
+
+	 $(function() {
+		$('.marc').click(function() {
+			if($('.marc').is(':checked')) {
+				$(".marc_form").show();
+				$(".bib_form").hide();
+			}
+		});
+	});
+
+	 $(function() {
+		$('.bib').click(function() {
+			if($('.bib').is(':checked')) {
+				$(".bib_form").show();
+				$(".marc_form").hide();
+			}
+		});
+	});
+
+	 $('#isAgeSelected').click(function() {
+    $("#txtAge").toggle(this.checked);
+});
 });
