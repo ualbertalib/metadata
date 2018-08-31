@@ -15,8 +15,8 @@ $(document).ready(function(){
 	 $(function() {
 		$('.marc').click(function() {
 			if($('.marc').is(':checked')) {
-				$(".marc_form").show();
-				$(".bib_form").hide();
+				$(".marc_form").slideDown();
+				$(".bib_form").slideUp();
 			}
 		});
 	});
@@ -24,8 +24,8 @@ $(document).ready(function(){
 	 $(function() {
 		$('.bib').click(function() {
 			if($('.bib').is(':checked')) {
-				$(".bib_form").show();
-				$(".marc_form").hide();
+				$(".bib_form").slideDown();
+				$(".marc_form").slideUp();
 			}
 		});
 	});

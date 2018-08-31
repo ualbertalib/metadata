@@ -3,7 +3,7 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
 from Webapp.models import Bib_Document, Marc_Document
-from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm
+from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm
 import os
 from .Code.enrich import main
 
@@ -32,23 +32,55 @@ def index(request):
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
 
-def deleteRecord(request,id =None):
-    object = Document.objects.get(id=id)
-    file = str(object.document)
-    object.delete()
-    folder = 'Webapp/source'
-    file_path = os.path.join(folder, file)
-    print (file_path)
-    try:
-        if os.path.isfile(file_path):
-        	os.unlink(file_path)
-    except Exception as e:
-        print(e)
-    return redirect('deleted')
+def deleteRecord(request, id =None, format=None):
+	print (request)
+	print (format)
+	folder = 'Webapp/source'
+	if format == "mrc":
+		object = Marc_Document.objects.get(id=id)
+		file = str(object.document)
+		object.delete()
+		file_path = os.path.join(folder, file)
+		try:
+			if os.path.isfile(file_path):
+				os.unlink(file_path)
+		except Exception as e:
+			print(e)
+	if format == "bib":
+		object = Bib_Document.objects.get(id=id)
+		file = str(object.document)
+		object.delete()
+		file_path = os.path.join(folder, file)
+		try:
+			if os.path.isfile(file_path):
+				os.unlink(file_path)
+		except Exception as e:
+			print(e)
+	return redirect('deleted')
 
 def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processing(request):
-	main()
-	return render(request, 'webapp/processing.html')
+	bib_documents = Bib_Document.objects.all()
+	marc_documents = Marc_Document.objects.all()
+	#main()
+	return render(request, 'webapp/processing.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents})
+
+def start(request):
+	files = {}
+	bib_documents = Bib_Document.objects.all()
+	marc_documents = Marc_Document.objects.all()
+	form = CheckForm(request.POST or None)
+	file_dict = dict(request.POST.lists())
+	for item in file_dict['file_selected']:
+		try:
+			object = Marc_Document.objects.get(document=item)
+		except:
+			object = Bib_Document.objects.get(document=item)
+		Type = object.file_type
+		Desc = object.description
+		files[item] = []
+		files[item].append(Type)
+		files[item].append(Desc)
+	return render(request, 'webapp/processing.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'files': files})

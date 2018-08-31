@@ -13,4 +13,6 @@ class Bib_DocumentForm(forms.ModelForm):
 	class Meta:
 		model = Bib_Document
 		fields = ('description', 'document',)
-        
+
+class CheckForm(forms.Form):
+    checked = forms.BooleanField(required=False)
