@@ -22,8 +22,8 @@ from django.conf.urls import url
 urlpatterns = [
     url(r'^$', views.index, name="index"),
     url(r'^record-d/(?P<id>\d+)(?P<format>[a-zA-Z]{3})$', views.deleteRecord, name='record-d'),
+    url(r'^stop/(?P<id>[a-zA-Z]+)$', views.stop, name='stop'),
     url(r'^deleted/$', views.deleted, name='deleted'),
     url(r'^processing/$', views.processing, name='processing'),
-    url(r'^start/$', views.start, name='start'),
     url(r'^uploaded/(?P<id>\d+)/$', views.model_form_upload, name='model_form_upload')
 ]

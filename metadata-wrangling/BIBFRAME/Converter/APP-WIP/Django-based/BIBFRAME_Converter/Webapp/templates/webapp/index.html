@@ -32,11 +32,13 @@
       {% if marc_documents or bib_documents %}
         <br><br>
         <p>Uploaded files:</p>
+        <form action="{% url 'processing' %}" method="POST">
         <table class="table table-hover" class="table table-bordered" style="width:100%">
           <tr>
             <th></th>
             <th>Filename</th>
             <th>Type</th>
+            <th>Description</th>
             <th>Uploaded at</th>
             <th></th>
           </tr>
@@ -45,6 +47,7 @@
               <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
               <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceMARC }}</a></td>
               <td>{{ obj.file_type }}</td>
+              <td>{{ obj.description }}</td>
               <td><small>{{ obj.uploaded_at }}</small></td>
               <td><form action="{% url 'record-d' id=obj.id  format='mrc'%}" method="POST">
                   {% csrf_token %}
@@ -57,6 +60,7 @@
               <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
               <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceBIB }}</a></td>
               <td>{{ obj.file_type }}</td>
+              <td>{{ obj.description }}</td>
               <td><small>{{ obj.uploaded_at }}</small></td>
               <td><form action="{% url 'record-d' id=obj.id  format='bib' %}" method="POST">
                   {% csrf_token %}
@@ -65,9 +69,7 @@
             </tr>
           {% endfor %}
         </table>
-        <form action="{% url 'processing' %}" method="POST">
-        {% csrf_token %}
-          <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
+        <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
         </form>
     {% endif %}
   </div>

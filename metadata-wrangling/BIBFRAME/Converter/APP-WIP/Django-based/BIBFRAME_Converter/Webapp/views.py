@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
-from Webapp.models import Bib_Document, Marc_Document
+from Webapp.models import Bib_Document, Marc_Document, Processing
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm
 import os
 from .Code.enrich import main
@@ -62,12 +62,6 @@ def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processing(request):
-	bib_documents = Bib_Document.objects.all()
-	marc_documents = Marc_Document.objects.all()
-	#main()
-	return render(request, 'webapp/processing.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents})
-
-def start(request):
 	files = {}
 	bib_documents = Bib_Document.objects.all()
 	marc_documents = Marc_Document.objects.all()
@@ -84,3 +78,6 @@ def start(request):
 		files[item].append(Type)
 		files[item].append(Desc)
 	return render(request, 'webapp/processing.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'files': files})
+
+def stop(request, id =None, format=None):
+	return render(request, 'webapp/stop.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'files': files})

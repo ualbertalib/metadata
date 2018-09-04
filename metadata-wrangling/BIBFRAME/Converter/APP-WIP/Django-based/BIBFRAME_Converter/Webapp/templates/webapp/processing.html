@@ -1,61 +1,33 @@
 {% extends 'webapp/base.html' %}
 {% load replace %}
 {% block content %}
-<h3>Files available for processing:</h3>
-
-<form action="{% url 'start' %}" method="POST">
-<table class="table table-hover" style="width:100%">
-          <tr>
-            <th></th>
-            <th>Filename</th>
-            <th>Type</th>
-            <th>Uploaded at</th>
-          </tr>
-          {% for obj in marc_documents %}
-            <tr>
-              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td>{{ obj.document.name|replaceMARC }}</a></td>
-              <td>{{ obj.file_type }}</td>
-              <td><small>{{ obj.uploaded_at }}</small></td>
-            </tr>
-          {% endfor %}
-          {% for obj in bib_documents %}
-            <tr>
-              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td>{{ obj.document.name|replaceBIB }}</a></td>
-              <td>{{ obj.file_type }}</td>
-              <td><small>{{ obj.uploaded_at }}</small></td>
-            </tr>
-          {% endfor %}
-        </table>
-        {% csrf_token %}
-          <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
-        </form>
-
-        <br>
-        {% if files %}
-        	<div>
-        		<h4>Files currently being processed:</h4>
-        		<table class="table table-hover">
-        			<tr>
-        				<th>Filename</th>
-        				<th>Type</th>
-        				<th>Description</th>
-        				<th>Progress</th>
-        			</tr>
-		        		{% for i, j in files.items %}
-        			<tr>
-		        			<td>{{ i|replaceMARC|replaceBIB }}</td>
-		        			{% for values in j %}
-		        				<td>{{ values }}</td>
-		        			{% endfor %}
-		        			
-        			</tr>
-		        		{% endfor %}
-        		</table>
-        	</div>
-        	
-        {% endif %}
+{% if files %}
+	<div>
+		<h3>Files currently being processed:</h3>
+		<table class="table table-hover">
+			<tr>
+				<th>Filename</th>
+				<th>Type</th>
+				<th>Description</th>
+				<th>Progress</th>
+				<th></th>
+			</tr>
+        		{% for i, j in files.items %}
+			<tr>
+        			<td>{{ i|replaceMARC|replaceBIB }}</td>
+        			{% for values in j %}
+        				<td>{{ values }}</td>
+        			{% endfor %}
+        			<td><form action="{% url 'stop' id='test' %}" method="POST">
+                  {% csrf_token %}
+                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to stop processing {{ obj.document.url }}?')"/>
+                </form></td>
+			</tr>
+        		{% endfor %}
+		</table>
+	</div>
+	
+{% endif %}
 
 <p><a href="{% url 'index' %}">Return to home</a></p>
 {% endblock %}
