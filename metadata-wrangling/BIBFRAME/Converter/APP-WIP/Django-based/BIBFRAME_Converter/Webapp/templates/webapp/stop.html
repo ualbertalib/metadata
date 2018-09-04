@@ -1,8 +1,11 @@
 {% extends 'webapp/base.html' %}
 {% load replace %}
 {% block content %}
-{% if files %}
-	
-
-<p><a href="{% url 'index' %}">Return to home</a></p>
+<div class="container">
+ <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> The process was terminated.
+  </div>
+  <p><a href="{% url 'processing' %}">Return to processing page</a></p>
+</div>
 {% endblock %}

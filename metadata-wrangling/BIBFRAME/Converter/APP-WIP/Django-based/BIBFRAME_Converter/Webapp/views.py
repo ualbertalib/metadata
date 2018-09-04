@@ -32,52 +32,61 @@ def index(request):
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
 
-def deleteRecord(request, id =None, format=None):
-	print (request)
-	print (format)
+def deleteMARC(request, id =None):
 	folder = 'Webapp/source'
-	if format == "mrc":
-		object = Marc_Document.objects.get(id=id)
-		file = str(object.document)
-		object.delete()
-		file_path = os.path.join(folder, file)
-		try:
-			if os.path.isfile(file_path):
-				os.unlink(file_path)
-		except Exception as e:
-			print(e)
-	if format == "bib":
-		object = Bib_Document.objects.get(id=id)
-		file = str(object.document)
-		object.delete()
-		file_path = os.path.join(folder, file)
-		try:
-			if os.path.isfile(file_path):
-				os.unlink(file_path)
-		except Exception as e:
-			print(e)
+	object = Marc_Document.objects.get(id=id)
+	file = str(object.document)
+	object.delete()
+	file_path = os.path.join(folder, file)
+	try:
+		if os.path.isfile(file_path):
+			os.unlink(file_path)
+	except Exception as e:
+		print(e)
+	return redirect('deleted')
+
+def deleteBIB(request, id =None):
+	folder = 'Webapp/source'
+	object = Bib_Document.objects.get(id=id)
+	file = str(object.document)
+	object.delete()
+	file_path = os.path.join(folder, file)
+	try:
+		if os.path.isfile(file_path):
+			os.unlink(file_path)
+	except Exception as e:
+		print(e)
 	return redirect('deleted')
 
 def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processing(request):
-	files = {}
-	bib_documents = Bib_Document.objects.all()
-	marc_documents = Marc_Document.objects.all()
+	processing_docs = Processing.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
-	for item in file_dict['file_selected']:
-		try:
-			object = Marc_Document.objects.get(document=item)
-		except:
-			object = Bib_Document.objects.get(document=item)
-		Type = object.file_type
-		Desc = object.description
-		files[item] = []
-		files[item].append(Type)
-		files[item].append(Desc)
-	return render(request, 'webapp/processing.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'files': files})
+	if 'file_selected' in file_dict.keys():
+		for item in file_dict['file_selected']:
+			try:
+				object = Marc_Document.objects.get(document=item)
+			except:
+				object = Bib_Document.objects.get(document=item)
+			add_process = Processing(description=object.description, 
+					name=str(object.document), 
+					uploaded_at=object.uploaded_at,
+					file_format=object.file_format,
+					file_type=object.file_type) 
+			try:
+				add_process.save()
+			except:
+				return redirect('processing_duplicate')
+				break
+	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
 
-def stop(request, id =None, format=None):
-	return render(request, 'webapp/stop.html', { 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'files': files})
+def processing_duplicate(request):
+	return render(request, 'webapp/processing_duplicate.html')
+
+def stop(request, id =None):
+	object = Processing.objects.get(id=id)
+	object.delete()
+	return render(request, 'webapp/stop.html')

@@ -18,6 +18,9 @@ class Bib_Document(models.Model):
 class Processing(models.Model):
     description = models.CharField(max_length=255, blank=True)
     name = models.CharField(max_length=255, blank=True)
-    uploaded_at = models.DateTimeField(auto_now_add=True)
-    file_format = models.CharField(max_length=5, default='.xml',)
-    file_type = models.CharField(max_length=15,  default='BIBFRAME Data',)
+    uploaded_at = models.DateTimeField(auto_now_add=False)
+    file_format = models.CharField(max_length=5,default='.xml')
+    file_type = models.CharField(max_length=155,default='BIBFRAME Data')
+    start_time = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        unique_together = ["name", "uploaded_at", "file_type", "description"]

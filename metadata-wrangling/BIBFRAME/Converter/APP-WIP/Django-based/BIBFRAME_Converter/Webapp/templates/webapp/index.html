@@ -1,14 +1,15 @@
 {% extends 'webapp/base.html' %}
 {% load replace %}
 {% block content %}
-  <button class="btn btn-primary" name='users' type="button">START</button>
+<br>
+  <br>
   <div class="file-format">
-    <h4 class= "blockquote text-center">Select your file type</h4>
-    <div class= "list-group">
-      <label class="container">NARC (.mrc)
+    <h4 class= "text-center">Select your file type</h4>
+    <div class= "list-group list-group-flush">
+      <label class="list-group-item" id="marc_select">NARC <span class="badge badge-primary">.mrc</span>
         <input class="marc" type="radio" name="file_format">
       </label>
-      <label class="container">BIBFRAME (.xml)
+      <label class="list-group-item" id=bib_select>BIBFRAME <span class="badge badge-primary">.xml</span>
         <input class="bib" type="radio" name="file_format">
       </label>
       </div>
@@ -30,9 +31,9 @@
       </div>
 
       {% if marc_documents or bib_documents %}
-        <br><br>
-        <p>Uploaded files:</p>
-        <form action="{% url 'processing' %}" method="POST">
+        <br><br><hr>
+        <h4>Uploaded files:</h4>
+        <form action="{% url 'index' %}" method="POST">
         <table class="table table-hover" class="table table-bordered" style="width:100%">
           <tr>
             <th></th>
@@ -42,19 +43,6 @@
             <th>Uploaded at</th>
             <th></th>
           </tr>
-          {% for obj in marc_documents %}
-            <tr>
-              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceMARC }}</a></td>
-              <td>{{ obj.file_type }}</td>
-              <td>{{ obj.description }}</td>
-              <td><small>{{ obj.uploaded_at }}</small></td>
-              <td><form action="{% url 'record-d' id=obj.id  format='mrc'%}" method="POST">
-                  {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
-                </form></td>
-            </tr>
-          {% endfor %}
           {% for obj in bib_documents %}
             <tr>
               <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
@@ -62,7 +50,20 @@
               <td>{{ obj.file_type }}</td>
               <td>{{ obj.description }}</td>
               <td><small>{{ obj.uploaded_at }}</small></td>
-              <td><form action="{% url 'record-d' id=obj.id  format='bib' %}" method="POST">
+              <td><form action="{% url 'bib-deleted' id=obj.id %}" method="POST">
+                  {% csrf_token %}
+                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
+                </form></td>
+            </tr>
+          {% endfor %}
+          {% for obj in marc_documents %}
+            <tr>
+              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
+              <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceMARC }}</a></td>
+              <td>{{ obj.file_type }}</td>
+              <td>{{ obj.description }}</td>
+              <td><small>{{ obj.uploaded_at }}</small></td>
+              <td><form action="{% url 'marc-deleted' id=obj.id %}" method="POST">
                   {% csrf_token %}
                   <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
                 </form></td>

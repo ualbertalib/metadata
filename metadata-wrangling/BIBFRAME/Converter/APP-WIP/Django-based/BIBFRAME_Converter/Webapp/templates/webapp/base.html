@@ -8,12 +8,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-  	<body class = "body">
-    <div class="container-fluid" >
-      <h1 class="text-center">Linked Data Enrichment</h1>
-        <div class="navbar-header"> 
+  	<body class ="body">
+    <div class="container-fluid">
+    	<nav class="navbar sticky-top navbar-dark bg-primary">
+    		<a class="navbar-brand" href="{% url 'index' %}">
+    <img src="{% static 'Webapp/img/ual-logo.png' %}" width="200" height="30" class="d-inline-block align-top" alt="">
+  </a>
+      		<h1 class="text-center" style="color: #fff">Linked Data Enrichment</h1>
+		</nav> 
 
-        <div class="dropdown">
+        <div class="welcome">
+  <div class="inner cover" style="height: 100%; margin-top: 20%">
+  <div class="lead" style="margin-left: 25%; margin-right: 25%">
+  <h2 class="text-center">Welcome to University of Alberta Libraries' Linked Data Enrichment Application</h2>
+  <button class="btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5 rounded"  name='start' type="button">START</button>
+</div>
+  </div>
+</div>
 
           	{% block content %}
     		{% endblock %}
