@@ -2,7 +2,8 @@ from django.db import models
 
 class Document(models.Model):
     description = models.CharField(max_length=255, blank=True)
-    OID = models.CharField(max_length=25, blank=True)
+    OID = models.CharField(max_length=355, blank=True)
+    old_id = models.CharField(max_length=25, blank=True)
     name = models.CharField(max_length=255, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
     file_format = models.CharField(max_length=5, default='.xml',)

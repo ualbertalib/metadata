@@ -8,41 +8,64 @@ import os
 from .Code.enrich import main
 
 def index(request):
-    bib_documents = Bib_Document.objects.all()
-    bib_form = Bib_DocumentForm(request.POST, request.FILES)
-    marc_documents = Marc_Document.objects.all()
-    marc_form = Marc_DocumentForm(request.POST, request.FILES)
-    documents ={}
-    for bib in bib_documents:
-    	documents[bib.id] = [bib.document, bib.file_type, bib.description, bib.uploaded_at]
-    for marc in marc_documents:
-    	documents[marc.id] = [marc.document, marc.file_type, marc.description, marc.uploaded_at]
-    if len(request.FILES) > 0:
-    	uploaded_file = request.FILES['document']
-    	filename = uploaded_file.name
-    	file_ext = filename[-4:]
-    	if file_ext == ".xml":
-    		bib_folder = 'Webapp/source/BIBFRAME'
-    		if bib_form.is_valid():
-    			bib_form.save()
-
-    			return redirect('index')
-    	if file_ext == ".mrc":
-    		marc_folder = 'Webapp/source/MARC'
-    		if marc_form.is_valid():
-    			marc_form.save()
-    			return redirect('index')
-    return render(request, 'webapp/index.html', { 'documents': documents, 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'marc_form': marc_form, 'bib_form': bib_form, 'Del_DocumentForm': Del_DocumentForm })
+	docs = Document.objects.all()
+	bib_documents = Bib_Document.objects.all()
+	bib_form = Bib_DocumentForm(request.POST, request.FILES)
+	marc_documents = Marc_Document.objects.all()
+	marc_form = Marc_DocumentForm(request.POST, request.FILES)
+	for bib in bib_documents:
+		checksum = str(bib.id)+str("___")+str(bib.document)+str("___")+str(bib.uploaded_at)
+		if docs.filter(OID=checksum).exists():
+			pass
+		else:
+			addbib = Document(description=bib.description, 
+	    		OID=checksum, 
+	    		old_id= bib.id,
+	    		name=bib.document, 
+	    		file_type=bib.file_type,
+	    		uploaded_at=bib.uploaded_at,
+	    		file_format=bib.file_format)
+			addbib.save()
+	for mrc in marc_documents:
+		checksum = str(mrc.id)+str("___")+str(mrc.document)+str("___")+str(mrc.uploaded_at)
+		if docs.filter(OID=checksum).exists():
+			pass
+		else:
+			addDoc = Document(description=mrc.description, 
+	    		OID=checksum, 
+	    		old_id=mrc.id,
+	    		name=mrc.document, 
+	    		file_type=mrc.file_type,
+	    		uploaded_at=mrc.uploaded_at,
+	    		file_format=mrc.file_format)
+			addDoc.save()
+	if len(request.FILES) > 0:
+		uploaded_file = request.FILES['document']
+		filename = uploaded_file.name
+		file_ext = filename[-4:]
+		if file_ext == ".xml":
+			bib_folder = 'Webapp/source/BIBFRAME'
+			if bib_form.is_valid():
+				bib_form.save()
+				return redirect('index')
+		if file_ext == ".mrc":
+			marc_folder = 'Webapp/source/MARC'
+			if marc_form.is_valid():
+				marc_form.save()
+				return redirect('index')
+	return render(request, 'webapp/index.html', { 'docs': docs, 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'marc_form': marc_form, 'bib_form': bib_form, 'Del_DocumentForm': Del_DocumentForm })
 
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
 
-def deleteRecord(request, id =None, format=None):
+def deleteRecord(request, id =None, format=None, old_id=None):
 	print (request)
 	print (format)
 	folder = 'Webapp/source'
-	if format == "bib":
-		object = Bib_Document.objects.get(id=id)
+	doc = Document.objects.get(id=id)
+	doc.delete()
+	if format == ".xml":
+		object = Bib_Document.objects.get(id=old_id)
 		file = str(object.document)
 		object.delete()
 		file_path = os.path.join(folder, file)
@@ -51,8 +74,8 @@ def deleteRecord(request, id =None, format=None):
 				os.unlink(file_path)
 		except Exception as e:
 			print(e)
-	if format == "mrc":
-		object = Marc_Document.objects.get(id=id)
+	if format == ".mrc":
+		object = Marc_Document.objects.get(id=old_id)
 		file = str(object.document)
 		object.delete()
 		file_path = os.path.join(folder, file)

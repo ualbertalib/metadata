@@ -29,26 +29,8 @@
           <button class="btn btn-default btn-danger" type="submit">Upload Marc</button>
         </form>
       </div>
-      <table class="table table-hover" class="table table-bordered" style="width:100%">
-          <tr>
-            <th></th>
-            <th>Filename</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Uploaded at</th>
-            <th></th>
-          </tr>
-{% for i, j in documents.items %}
-      <tr>
-
-              {% for values in j %}
-                <td>{{ values }}</td>
-              {% endfor %}
-             
-      </tr>
-            {% endfor %}
-          </table>
-      {% if marc_documents or bib_documents %}
+      
+      {% if docs %}
         <br><br><hr>
         <h4>Uploaded files:</h4>
         <form action="{% url 'processing' %}" method="POST">
@@ -61,36 +43,20 @@
             <th>Uploaded at</th>
             <th></th>
           </tr>
-          {% if marc_documents %}
-          {% for obj in marc_documents %}
+          {% for obj in docs %}
             <tr>
               <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceMARC }}</a></td>
+              <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
               <td>{{ obj.file_type }}</td>
               <td>{{ obj.description }}</td>
               <td><small>{{ obj.uploaded_at }}</small></td>
-              <td><form action="{% url 'record-d' id=obj.id  format='mrc' %}" method="POST">
+              <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
                   {% csrf_token %}
                   <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
                 </form></td>
             </tr>
           {% endfor %}
-          {% endif %}
-          {% if bib_documents %}
-          {% for obj in bib_documents %}
-            <tr>
-              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td><a href="{{ obj.document.url }}">{{ obj.document.name|replaceBIB }}</a></td>
-              <td>{{ obj.file_type }}</td>
-              <td>{{ obj.description }}</td>
-              <td><small>{{ obj.uploaded_at }}</small></td>
-              <td><form action="{% url 'record-d' id=obj.id  format='bib' %}" method="POST">
-                  {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
-                </form></td>
-            </tr>
-          {% endfor %}
-          {% endif %}
+          
         </table>
         <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
         </form>
