@@ -32,6 +32,8 @@ class XML_BIBFRAME():
 
     def merger(self):
         master_file = str(self.master_file) + '.xml'
+        print (self.master_file)
+        print (master_file)
         output = os.path.join(self.processing, master_file)
         with open(output, "w+") as merged_file:
             merged_file.write('<root>')

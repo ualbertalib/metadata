@@ -123,10 +123,12 @@ def processingQueue(request):
 			except:
 				return redirect('processing_duplicate')
 				break
-	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
-
+	#return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
+	return processing(request, processing_docs)
 def processing(request, processing_docs):
-	print ("1")
+	for file in processing_docs:
+		filename = "Webapp/source/%s" %(file.name)
+		main (filename)
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
 
 def processing_duplicate(request):

@@ -15,13 +15,13 @@ import xml.etree.ElementTree as ETree
 import time
 from datetime import datetime
 
-def main():
+def main(file):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')    
     # delete files in the processing folder
     clear_processing()
     #convert .mrc to MARC/XML
-    Marc_XML = MARC_XML()
+    Marc_XML = MARC_XML(file)
     Marc_XML.convert_marc_xml()
     #BIBFRAME = BIB_builder()
     #BIBFRAME.merger()
@@ -37,7 +37,7 @@ def main():
         output = str(filename) + "-enhanced.xml" 
         clearLogs(log_file, filename)
         # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
-        apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF']
+        apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
