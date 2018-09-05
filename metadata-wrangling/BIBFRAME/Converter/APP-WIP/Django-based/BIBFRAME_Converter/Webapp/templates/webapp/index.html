@@ -42,19 +42,32 @@
             <th>Description</th>
             <th>Uploaded at</th>
             <th></th>
-          </tr>
           {% for obj in docs %}
-            <tr>
-              <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
-              <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
-              <td>{{ obj.file_type }}</td>
-              <td>{{ obj.description }}</td>
-              <td><small>{{ obj.uploaded_at }}</small></td>
-              <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
-                  {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document.url }}?')"/>
-                </form></td>
-            </tr>
+            {% if obj.OID == "thisisadummyobjectonlynumber123456" %}
+              <tr style="visibility: collapse;">
+                <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
+                <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.name }}?')"/>
+                  </form></td>
+              </tr>
+            {% else %}
+              <tr>
+                <td><input type="checkbox" name="file_selected" value="{{ obj.document.name }}"></td>
+                <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.name }}?')"/>
+                  </form></td>
+              </tr>
+            {% endif %}
           {% endfor %}
           
         </table>

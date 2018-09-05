@@ -13,6 +13,18 @@ def index(request):
 	bib_form = Bib_DocumentForm(request.POST, request.FILES)
 	marc_documents = Marc_Document.objects.all()
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
+	checksum="thisisadummyobjectonlynumber123456"
+	if docs.filter(OID=checksum).exists():
+		pass
+	else:
+		adddummy = Document(description="a dummy object", 
+		    		OID=checksum, 
+		    		old_id= 123,
+		    		name="dumy_object", 
+		    		file_type="dummy data",
+		    		uploaded_at="2014-09-04 23:34:40.834676",
+		    		file_format=".dum")
+		adddummy.save()
 	for bib in bib_documents:
 		checksum = str(bib.id)+str("___")+str(bib.document)+str("___")+str(bib.uploaded_at)
 		if docs.filter(OID=checksum).exists():
@@ -53,7 +65,7 @@ def index(request):
 			if marc_form.is_valid():
 				marc_form.save()
 				return redirect('index')
-	return render(request, 'webapp/index.html', { 'docs': docs, 'marc_documents': marc_documents, 'bib_documents': bib_documents, 'marc_form': marc_form, 'bib_form': bib_form, 'Del_DocumentForm': Del_DocumentForm })
+	return render(request, 'webapp/index.html', { 'docs': docs, 'marc_form': marc_form, 'bib_form': bib_form})
 
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
