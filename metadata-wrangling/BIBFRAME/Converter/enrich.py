@@ -34,6 +34,7 @@ def main():
         print ("processing " + filename)
         ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         log_file = str(filename) + "-error-logs"
+        print (log_file)
         output = str(filename) + "-enhanced.xml" 
         clearLogs(log_file, filename)
         # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory

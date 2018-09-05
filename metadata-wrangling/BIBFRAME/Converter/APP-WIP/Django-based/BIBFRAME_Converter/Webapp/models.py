@@ -31,5 +31,6 @@ class Processing(models.Model):
     file_format = models.CharField(max_length=5,default='.xml')
     file_type = models.CharField(max_length=155,default='BIBFRAME Data')
     start_time = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=50, default='not started')
     class Meta:
         unique_together = ["name", "uploaded_at", "file_type", "description"]

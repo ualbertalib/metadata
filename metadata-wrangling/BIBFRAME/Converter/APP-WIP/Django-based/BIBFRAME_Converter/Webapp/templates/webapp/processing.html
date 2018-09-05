@@ -12,6 +12,7 @@
 				<th>started at</th>
 				<th>File type</th>
 				<th>File format</th>
+				<th></th>
 			</tr>
 			{% for obj in processing_docs %}
             <tr>
@@ -23,7 +24,7 @@
               <td>{{ obj.file_format }}</td>
               <td><form action="{% url 'stop' id=obj.id %}" method="POST">
                   {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
+                  <input class="btn btn-default btn-danger" type="submit" value="Stop Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
                 </form></td>
             </tr>
           {% endfor %}

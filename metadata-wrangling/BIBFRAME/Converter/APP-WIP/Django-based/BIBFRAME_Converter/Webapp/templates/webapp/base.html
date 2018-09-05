@@ -5,6 +5,7 @@
     <title>Simple File Upload</title>
     {% load staticfiles %}
 	<link rel="stylesheet" href="{% static 'Webapp/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'Webapp/css/styles.css' %}" type = "text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
@@ -14,19 +15,12 @@
     		<a class="navbar-brand" href="{% url 'index' %}">
     <img src="{% static 'Webapp/img/ual-logo.png' %}" width="200" height="30" class="d-inline-block align-top" alt="">
   </a>
-      		<h1 class="text-center" style="color: #fff">Linked Data Enrichment</h1>
+      		<h1 class="text-center main-heading">Linked Data Enrichment</h1>
 		</nav> 
 
-        <div class="welcome">
-  <div class="inner cover" style="height: 100%; margin-top: 20%">
-  <div class="lead" style="margin-left: 25%; margin-right: 25%">
-  <h2 class="text-center">Welcome to University of Alberta Libraries' Linked Data Enrichment Application</h2>
-  <button class="btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5 rounded"  name='start' type="button">START</button>
-</div>
-  </div>
-</div>
-
+ 			
           	{% block content %}
+
     		{% endblock %}
     
   </body>

@@ -6,6 +6,7 @@ from Webapp.models import Bib_Document, Marc_Document, Processing, Document
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os
 from .Code.enrich import main
+from .Code.Utils import PrintException
 
 def index(request):
 	docs = Document.objects.all()
@@ -101,7 +102,7 @@ def deleteRecord(request, id =None, format=None, old_id=None):
 def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
-def processing(request):
+def processingQueue(request):
 	processing_docs = Processing.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
@@ -115,12 +116,17 @@ def processing(request):
 					name=str(object.document), 
 					uploaded_at=object.uploaded_at,
 					file_format=object.file_format,
-					file_type=object.file_type) 
+					file_type=object.file_type,
+					status="started")
 			try:
 				add_process.save()
 			except:
 				return redirect('processing_duplicate')
 				break
+	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
+
+def processing(request, processing_docs):
+	print ("1")
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
 
 def processing_duplicate(request):

@@ -1,6 +1,12 @@
 $(document).ready(function(){
 
 	$(function() {
+		$('.close').on('click', function() {
+			$('.alert').hide();	
+		});
+	});
+
+	$(function() {
 		$(".file-format").hide();
 		$(".bib_form").hide();
 		$(".marc_form").hide();

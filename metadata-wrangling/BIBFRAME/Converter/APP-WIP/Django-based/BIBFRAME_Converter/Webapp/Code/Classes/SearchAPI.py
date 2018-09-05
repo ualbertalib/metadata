@@ -30,8 +30,8 @@ class SearchAPI():
                 for records in viafP_result['searchRetrieveResponse']['records']:
                     viaf_id = records['record']['recordData']['viafID']['#text']
                     # there might more than one data record (in form of a list). If so, iterate over them to get the "name"
-                    if isinstance(records['record']['recordData']['v:mainHeadings']['data'], list):
-                        for text in records['record']['recordData']['v:mainHeadings']['data']:
+                    if isinstance(records['record']['recordData']['mainHeadings']['data'], list):
+                        for text in records['record']['recordData']['mainHeadings']['data']:
                             lcid = ''
                             # compare the "name" from the API to the name from the BIBFRAME. If the score is above the cut-off
                             # score then try and extract the coresponding LCID
@@ -57,16 +57,16 @@ class SearchAPI():
                                 self.scores['VFP']['lcid'][lcid].append(scoreVP)
                     else:
                         lcid = ''
-                        candidateVP = records['record']['recordData']['v:mainHeadings']['data']['text']
+                        candidateVP = records['record']['recordData']['mainHeadings']['data']['text']
                         scoreVP = fuzz.token_sort_ratio(candidateVP, self.name)
                         if scoreVP > self.th:
-                            if isinstance(records['record']['recordData']['v:mainHeadings']['data']['sources']['sid'], list):
-                                for sid in records['record']['recordData']['v:mainHeadings']['data']['sources']['sid']:
+                            if isinstance(records['record']['recordData']['mainHeadings']['data']['sources']['sid'], list):
+                                for sid in records['record']['recordData']['mainHeadings']['data']['sources']['sid']:
                                     if "LC" in sid:
                                         lcid = sid
                             else:
-                                if "LC" in records['record']['recordData']['v:mainHeadings']['data']['sources']['sid']:
-                                    lcid = records['record']['recordData']['v:mainHeadings']['data']['sources']['sid']
+                                if "LC" in records['record']['recordData']['mainHeadings']['data']['sources']['sid']:
+                                    lcid = records['record']['recordData']['mainHeadings']['data']['sources']['sid']
                             if lcid != '':
                                 self.scores['VFP'] = {}
                                 self.scores['VFP']['VIAFID'] = {}
@@ -93,8 +93,8 @@ class SearchAPI():
                 for recordsC in viafC_result['searchRetrieveResponse']['records']:
                     viaf_idC = recordsC['record']['recordData']['viafID']['#text']
                     # there might more than one data record (in form of a list). If so, iterate over them to get the "name"
-                    if isinstance(recordsC['record']['recordData']['v:mainHeadings']['data'], list):
-                        for textC in recordsC['record']['recordData']['v:mainHeadings']['data']:
+                    if isinstance(recordsC['record']['recordData']['mainHeadings']['data'], list):
+                        for textC in recordsC['record']['recordData']['mainHeadings']['data']:
                             lcidC = ''
                             # compare the "name" from the API to the name from the BIBFRAME. If the score is above the cut-off
                             # score then try and extract the coresponding LCID
@@ -120,16 +120,16 @@ class SearchAPI():
                                 self.scores['VFC']['lcid'][lcidC].append(scoreVC)
                     else:
                         lcidC = ''
-                        candidateVC = recordsC['record']['recordData']['v:mainHeadings']['data']['text']
+                        candidateVC = recordsC['record']['recordData']['mainHeadings']['data']['text']
                         scoreVC = fuzz.token_sort_ratio(candidateVC, self.name)
                         if scoreVC > self.th:
-                            if isinstance(recordsC['record']['recordData']['v:mainHeadings']['data']['sources']['sid'], list):
-                                for sidC in recordsC['record']['recordData']['v:mainHeadings']['data']['sources']['sid']:
+                            if isinstance(recordsC['record']['recordData']['mainHeadings']['data']['sources']['sid'], list):
+                                for sidC in recordsC['record']['recordData']['mainHeadings']['data']['sources']['sid']:
                                     if "LC" in sidC:
                                         lcidC = sidC
                             else:
-                                if "LC" in recordsC['record']['recordData']['v:mainHeadings']['data']['sources']['sid']:
-                                    lcidC = recordsC['record']['recordData']['v:mainHeadings']['data']['sources']['sid']
+                                if "LC" in recordsC['record']['recordData']['mainHeadings']['data']['sources']['sid']:
+                                    lcidC = recordsC['record']['recordData']['mainHeadings']['data']['sources']['sid']
                             if lcidC != '':
                                 self.scores['VFC'] = {}
                                 self.scores['VFC']['VIAFID'] = {}
