@@ -1,0 +1,15 @@
+{% extends 'webapp/base.html' %}
+
+
+{% block content %}
+<div class="container">
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+	  <strong>Success!</strong> The file was deleted.
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+  	<p><a href="{% url 'index' %}">Return to home</a></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'webapp/base.html' %}
+{% load replace %}
+{% block content %}
+
+{% include 'webapp/includes/welcome.html' %}
+
+<br>
+  <br>
+  <div class="file-format">
+    <h4 class= "text-center">Select your file type</h4>
+    <div class= "list-group list-group-flush">
+      <label class="list-group-item" id="marc_select">NARC <span class="badge badge-pill badge-danger">.mrc</span>
+        <input class="marc" type="radio" name="file_format">
+      </label>
+      <label class="list-group-item" id=bib_select>BIBFRAME <span class="badge badge-pill badge-danger">.xml</span>
+        <input class="bib" type="radio" name="file_format">
+      </label>
+      </div>
+      <div class="bib_form">
+        <div class="form_container">
+          <h4>BIBFRAME files upload -- Please make sure your file extension is ".xml"</h4><br>
+          <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{ bib_form.as_p }}
+            <button class="btn btn-default btn-danger" type="submit">Upload BIBFRAME</button>
+          </form>
+        </div>
+      </div>
+      <div class="marc_form">
+        <div class="form_container">
+          <h4>MARC files upload -- Please make sure your file extension is ".mrc"</h4>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{ marc_form.as_p }}
+          <button class="btn btn-default btn-danger" type="submit">Upload Marc</button>
+        </form>
+      </div>
+      </div>
+      
+      {% if docs %}
+        <br><hr class="divider">
+        <h4>Uploaded files:</h4>
+        {% ifequal docs|length 1 %}
+          <table class="table table-hover" class="table table-bordered" style="width:100%">
+            <tr>
+              <th></th>
+              <th>Filename</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Uploaded at</th>
+              <th></th>
+            </tr>
+            <tr> <td colspan="6" align="center">No file has been uploaded</td></tr>
+          {% else %}
+        <form action="{% url 'processingQueue' %}" method="POST">
+        <table class="table table-hover" class="table table-bordered" style="width:100%">
+          <tr>
+            <th></th>
+            <th>Filename</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Uploaded at</th>
+            <th></th>
+          {% for obj in docs %}
+            {% if obj.OID == "thisisadummyobjectonlynumber123456" %}
+              <tr class="dummy_object">
+                <td><input type="checkbox" name="file_selected" value="{{ obj.name }}"></td>
+                <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.name }}?')"/>
+                  </form></td>
+              </tr>
+            {% else %}
+              <tr>
+                <td><input type="checkbox" name="file_selected" value="{{ obj.name }}"></td>
+                <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format old_id=obj.old_id %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.name }}?')"/>
+                  </form></td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        {% endifequal %}
+          
+        </table>
+        <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
+        </form>
+    {% endif %}
+  </div>
+{% endblock %}

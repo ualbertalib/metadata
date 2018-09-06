@@ -12,7 +12,7 @@ def clean_up(l):
 
 def PrintException(log_file, error):
     log = 'results/%s/logs/log_file' %(log_file.replace('-error-logs', ''))
-    with open (log) as logs:
+    with open (log, "w+") as logs:
         exc_type, exc_obj, tb = sys.exc_info()
         f = tb.tb_frame
         lineno = tb.tb_lineno

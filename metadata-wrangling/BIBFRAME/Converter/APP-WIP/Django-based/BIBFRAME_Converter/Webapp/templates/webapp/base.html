@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple File Upload</title>
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'Webapp/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'Webapp/css/styles.css' %}" type = "text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  	<body class ="body">
+    <div class="container-fluid">
+    	<nav class="navbar sticky-top navbar-dark bg-primary">
+    		<a class="navbar-brand" href="{% url 'index' %}">
+    <img src="{% static 'Webapp/img/ual-logo.png' %}" width="200" height="30" class="d-inline-block align-top" alt="">
+  </a>
+      		<h1 class="text-center main-heading">Linked Data Enrichment</h1>
+		</nav> 
+
+ 			
+          	{% block content %}
+
+    		{% endblock %}
+    
+  </body>
+  <script type="text/javascript" src ="{% static 'Webapp/js/script.js' %}">
+  </script>
+</html>

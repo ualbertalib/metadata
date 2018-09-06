@@ -1,0 +1,46 @@
+{% extends 'webapp/base.html' %}
+{% load replace %}
+{% block content %}
+<h3>File processing</h3>
+{% if processing_docs %}
+
+		<table class="table table-hover">
+			<tr>
+				<th>Description</th>
+				<th>Filename</th>
+				<th>uploaded at</th>
+				<th>started at</th>
+				<th>File type</th>
+				<th>File format</th>
+				<th></th>
+			</tr>
+			{% for obj in processing_docs %}
+            <tr>
+              <td>{{ obj.description }}</td>
+              <td>{{ obj.name|replaceBIB|replaceMARC }}</a></td>
+              <td><small>{{ obj.uploaded_at }}</small></td>
+              <td><small>{{ obj.start_time }}</small></td>
+              <td>{{ obj.file_type }}</td>
+              <td>{{ obj.file_format }}</td>
+              <td><form action="{% url 'stop' id=obj.id %}" method="POST">
+                  {% csrf_token %}
+                  <input class="btn btn-default btn-danger" type="submit" value="Stop Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
+                </form></td>
+            </tr>
+          {% endfor %}
+        </table>
+<p><a href="{% url 'index' %}">Return to home</a></p>
+{% else %}
+	<table class="table table-hover">
+			<tr>
+				<th>Description</th>
+				<th>Filename</th>
+				<th>uploaded at</th>
+				<th>started at</th>
+				<th>File type</th>
+				<th>File format</th>
+			</tr>
+			<tr> <td colspan="6" align="center">There are no files being processed <a href="{% url 'index' %}">Add a file</a></td></tr>
+{% endif %}
+
+{% endblock %}

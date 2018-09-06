@@ -1,0 +1,9 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+  {% for doc in documents %}
+  	<p>Your file {{doc.name}} was uploaded</p>
+  {% endfor %}
+  <p><a href="{% url 'index' %}">Return to home</a></p>
+  }
+{% endblock %}
