@@ -20,6 +20,8 @@ from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_p
 def main(processing_files):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
+    db_update_obj = P_progress(pid=processing_files)
+    db_update_obj.save()
     file = "Webapp/source/%s" %(processing_files.name) 
     # delete files in the processing folder
     clear_processing()
@@ -44,6 +46,8 @@ def main(processing_files):
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
+        db_update_obj.state = "extracting names and title form BIBFRAME"
+        db_update_obj.save()
         bib_object = Bibframe(file, log_file)
         transformed = bib_object.convert_bibframe()
         names = bib_object.extract_names(transformed)[0]
@@ -54,11 +58,10 @@ def main(processing_files):
         print (str(all_names) + " names were extrected from " + filename)
         print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
         print (str(len(titles)) + " titles were extracted from " + filename)
-        db_update_obj = P_progress(pid=processing_files,
-            all_names=str(len(names)),
-            all_titles=str(len(titles)),
-            p_names=str(len(names) - corp_names),
-            c_names=str(corp_names))
+        db_update_obj.all_names = str(len(names))
+        db_update_obj.all_titles = str(len(titles))
+        db_update_obj.p_names = str(len(names) - corp_names)
+        db_update_obj.c_names=str(corp_names)
         db_update_obj.save()
         #dictionaries for storing URIs (names and titles) and stats
         enriched_names = {}
@@ -66,6 +69,8 @@ def main(processing_files):
         stats = {}
         print ("enriching names")
         # iterate over the name dictionary 
+        db_update_obj.state = "enriching names"
+        db_update_obj.save()
         for index, item in enumerate(names.keys()):
             db_update_obj.name_index = index
             db_update_obj.save()

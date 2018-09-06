@@ -24,9 +24,14 @@
               <td>{{ obj.file_format }}</td>
               <td><form action="{% url 'stop' id=obj.id %}" method="POST">
                   {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
+                  <input class="btn btn-default btn-danger" type="submit" value="Stop Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
                 </form></td>
             </tr>
+            {% if P_progress %}
+            	<tr>
+            		<td>this is a test</td>
+            	</tr>
+            {% endif %}
           {% endfor %}
         </table>
 <p><a href="{% url 'index' %}">Return to home</a></p>

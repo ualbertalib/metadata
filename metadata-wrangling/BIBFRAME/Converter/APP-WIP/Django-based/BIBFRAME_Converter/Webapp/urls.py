@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^stop/(?P<id>\d+)/$', views.stop, name='stop'),
     url(r'^deleted/$', views.deleted, name='deleted'),
     url(r'^processingQueue/$', views.processingQueue, name='processingQueue'),
-    #url(r'^processing/$', views.processing, name='processing'),
+    url(r'^progress/$', views.progress, name='progress'),
     url(r'^processing_duplicate/$', views.processing_duplicate, name='processing_duplicate'),
     url(r'^uploaded/(?P<id>\d+)/$', views.model_form_upload, name='model_form_upload')
 ]

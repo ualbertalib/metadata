@@ -37,8 +37,19 @@ class Processing(models.Model):
 
 class P_progress(models.Model):
     pid = models.ForeignKey(Processing, on_delete=models.CASCADE)
+    state = models.CharField(max_length=255, default="converting MARC to MARC/XML")
     all_names = models.CharField(max_length=25, blank=True)
     all_titles = models.CharField(max_length=25, blank=True)
     p_names = models.CharField(max_length=25, blank=True)
     c_names = models.CharField(max_length=25, blank=True)
     name_index = models.CharField(max_length=25, blank=True)
+
+    def as_json(self):
+        return dict(
+            pid=self.pid, 
+            state=self.state,
+            all_titles=self.all_titles, 
+            all_names=self.all_names,
+            p_names=self.p_names,
+            c_names=self.c_names,
+            name_index=self.name_index)

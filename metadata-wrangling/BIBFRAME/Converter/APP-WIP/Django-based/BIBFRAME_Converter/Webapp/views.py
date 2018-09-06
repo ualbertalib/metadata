@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
-from Webapp.models import Bib_Document, Marc_Document, Processing, Document
+from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os, signal
 from .Code.enrich import main
@@ -105,6 +106,7 @@ def deleted(request):
 
 def processingQueue(request):
 	processing_docs = Processing.objects.all()
+	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
 	if 'file_selected' in file_dict.keys():
@@ -128,14 +130,11 @@ def processingQueue(request):
 	# We want the program to wait on this thread before shutting down.
 	t.setDaemon(False)
 	t.start() 
-	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
-	#return processing(request, processing_docs)
+	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
-'''def processing(request, processing_docs):
-	for files in processing_docs:
-		object = Processing.objects.get(id=files.id)
-		main (object)
-	#return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})'''
+def progress(request):
+	update = [item.as_json() for item in P_progress.objects.all()]
+	return JsonResponse({'latest_progress_list':update})
 
 def processing(request, id=None):
 	object = Processing.objects.get(id=id)

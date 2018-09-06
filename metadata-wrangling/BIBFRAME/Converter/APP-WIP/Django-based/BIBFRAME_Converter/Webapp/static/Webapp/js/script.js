@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+	setInterval(function(){
+            $.getJSON('/progress/',
+                    function (data) {
+                        var json = data['latest_progress_list'];
+                        var tr;
+                         $('.table table-hover').html("");
+                        for (var i = 0; i < json.length; i++) {
+                            tr = $('<tr/>');
+                            tr.append("<td>" + json[i].date + "</td>");
+                            tr.append("<td>" + json[i].time + "</td>");
+                            tr.append("<td>" + json[i].temperature + "</td>");
+                            tr.append("<td>" + json[i].humidity + "</td>");
+                             $('.table table-hover').append(tr);
+
+                        }
+                    });
+       },2000);
+
 	$(function() {
 		$('.close').on('click', function() {
 			$('.alert').hide();	
