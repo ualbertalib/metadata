@@ -4,9 +4,10 @@ from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
 from Webapp.models import Bib_Document, Marc_Document, Processing, Document
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
-import os
+import os, signal
 from .Code.enrich import main
 from .Code.Utils import PrintException
+import threading
 
 def index(request):
 	docs = Document.objects.all()
@@ -123,13 +124,22 @@ def processingQueue(request):
 			except:
 				return redirect('processing_duplicate')
 				break
-	#return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
-	return processing(request, processing_docs)
-def processing(request, processing_docs):
-	for file in processing_docs:
-		filename = "Webapp/source/%s" %(file.name)
-		main (filename)
+	t = threading.Thread(target=main, args=[add_process])
+	# We want the program to wait on this thread before shutting down.
+	t.setDaemon(False)
+	t.start() 
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
+	#return processing(request, processing_docs)
+
+'''def processing(request, processing_docs):
+	for files in processing_docs:
+		object = Processing.objects.get(id=files.id)
+		main (object)
+	#return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})'''
+
+def processing(request, id=None):
+	object = Processing.objects.get(id=id)
+	return main (object)
 
 def processing_duplicate(request):
 	return render(request, 'webapp/processing_duplicate.html')
@@ -137,4 +147,6 @@ def processing_duplicate(request):
 def stop(request, id =None):
 	object = Processing.objects.get(id=id)
 	object.delete()
+	pid = os.getpid()
+	os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')

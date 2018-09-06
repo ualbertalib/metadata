@@ -34,3 +34,11 @@ class Processing(models.Model):
     status = models.CharField(max_length=50, default='not started')
     class Meta:
         unique_together = ["name", "uploaded_at", "file_type", "description"]
+
+class P_progress(models.Model):
+    pid = models.ForeignKey(Processing, on_delete=models.CASCADE)
+    all_names = models.CharField(max_length=25, blank=True)
+    all_titles = models.CharField(max_length=25, blank=True)
+    p_names = models.CharField(max_length=25, blank=True)
+    c_names = models.CharField(max_length=25, blank=True)
+    name_index = models.CharField(max_length=25, blank=True)

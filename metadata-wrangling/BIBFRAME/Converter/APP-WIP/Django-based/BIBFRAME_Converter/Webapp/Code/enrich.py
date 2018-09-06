@@ -15,9 +15,12 @@ import xml.etree.ElementTree as ETree
 import time
 from datetime import datetime
 
-def main(file):
+from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
+
+def main(processing_files):
     #proccess start time
-    tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')    
+    tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
+    file = "Webapp/source/%s" %(processing_files.name) 
     # delete files in the processing folder
     clear_processing()
     #convert .mrc to MARC/XML
@@ -51,6 +54,12 @@ def main(file):
         print (str(all_names) + " names were extrected from " + filename)
         print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
         print (str(len(titles)) + " titles were extracted from " + filename)
+        db_update_obj = P_progress(pid=processing_files,
+            all_names=str(len(names)),
+            all_titles=str(len(titles)),
+            p_names=str(len(names) - corp_names),
+            c_names=str(corp_names))
+        db_update_obj.save()
         #dictionaries for storing URIs (names and titles) and stats
         enriched_names = {}
         enriched_titles = {}
@@ -58,6 +67,8 @@ def main(file):
         print ("enriching names")
         # iterate over the name dictionary 
         for index, item in enumerate(names.keys()):
+            db_update_obj.name_index = index
+            db_update_obj.save()
             name = item.split('-_-_-')[0]
             print(index+1, name)
             enriched_names[item] = []
