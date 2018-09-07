@@ -40,10 +40,12 @@ class P_progress(models.Model):
     stage = models.CharField(max_length=255, default="1: converting MARC to MARC/XML")
     all_names = models.CharField(max_length=25, default="1")
     all_titles = models.CharField(max_length=25, default="1")
+    all_MARC = models.CharField(max_length=25, default="1")
     p_names = models.CharField(max_length=25, default="N/A")
     c_names = models.CharField(max_length=25, default="N/A")
     name_index = models.CharField(max_length=25, default="0")
     title_index = models.CharField(max_length=25, default="0")
+    M_to_B_index = models.CharField(max_length=25, default="0")
 
     def as_json(self):
     	pd = self.pid.id
@@ -56,5 +58,7 @@ class P_progress(models.Model):
             c_names=self.c_names,
             name_index=self.name_index,
             title_index=self.title_index,
+            M_to_B_index=self.M_to_B_index,
             name_percent="{0:.2f}".format(round((int(self.name_index)/int(self.all_names))*100,2)),
-            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)))
+            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)),
+            M_to_B_percent="{0:.2f}".format(round((int(self.M_to_B_index)/int(self.all_MARC))*100,2)))

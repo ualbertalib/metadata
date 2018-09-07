@@ -17,7 +17,7 @@ class MARC_XML():
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
 
-    def convert_marc_xml(self):
+    def convert_marc_xml(self, db_update_obj):
         # check if it is a marc file
         if self.source.endswith('.mrc') or self.source.endswith('.marc'):
             # for each .mrc file create a sub-folder based on timestamp to store converted MARC/XML files
@@ -44,6 +44,8 @@ class MARC_XML():
                         writer = XMLWriter(open(output + 'unknownTitle' + str(i) + '.xml','wb'))
                 marc_file.close()
             #convert MARC/XML to BIBFRAME
-            BIBFRAME.convert_to_BIBFRAME(i)
+            db_update_obj.stage = "2: converting MARC/XML to BIBFRAME"
+            db_update_obj.save()
+            BIBFRAME.convert_to_BIBFRAME(i, db_update_obj)
             # merge the BIBFRAME files into one (per the master MARC file) for ease of processing
             BIBFRAME.merger()

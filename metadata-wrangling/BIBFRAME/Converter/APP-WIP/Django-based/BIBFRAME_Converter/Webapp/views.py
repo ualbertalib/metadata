@@ -134,7 +134,6 @@ def processingQueue(request):
 
 def progress(request):
 	update = [item.as_json() for item in P_progress.objects.all()]
-	print (update)
 	return JsonResponse({'latest_progress_list':update})
 
 def processing(request, id=None):

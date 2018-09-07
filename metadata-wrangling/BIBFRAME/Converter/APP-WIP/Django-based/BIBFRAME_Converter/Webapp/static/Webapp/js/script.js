@@ -8,15 +8,18 @@ $(document).ready(function(){
                         var tr;
                         for (var i = 0; i < json.length; i++) {
                         	st = json[i].stage 
+                        	overall = '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: ' + json[i].M_to_B_percent/3 + '%" aria-valuenow="' + json[i].M_to_B_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: ' + json[i].name_percent/3 + '%" aria-valuenow="' + json[i].name_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: ' + json[i].title_percent/3 + '%" aria-valuenow="' + json[i].title_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> </div>' 
                             tr = "<td>" + json[i].process_ID + "</td>" +
                             "<td>" + json[i].all_names + "</td>" +
                             "<td>" + json[i].all_titles + "</td>" + 
                             "<td>" + json[i].p_names + "</td>" +
                             "<td>" + json[i].c_names + "</td>" +
+                            "<td>" + json[i].M_to_B_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: '+ json[i].M_to_B_percent +'%;" aria-valuenow="'+ json[i].M_to_B_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].M_to_B_percent +' </div> </div>' + "</td>" +
                             "<td>" + json[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].name_percent +'%;" aria-valuenow="'+ json[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].name_percent +' </div> </div>' + "</td>" +
-                            "<td>" + json[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].title_percent +'%;" aria-valuenow="'+ json[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].title_percent +' </div> </div>' + "</td>" 
+                            "<td>" + json[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: '+ json[i].title_percent +'%;" aria-valuenow="'+ json[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].title_percent +' </div> </div>' + "</td>" 
                              $('.progress_row').html(tr);
                              $('.progress_stage').html(st);
+                             $('.overall_progress').html(overall);
 
                         }
                     });
