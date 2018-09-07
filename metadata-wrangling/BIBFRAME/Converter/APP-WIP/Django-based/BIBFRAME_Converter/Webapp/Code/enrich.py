@@ -46,7 +46,7 @@ def main(processing_files):
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
-        db_update_obj.state = "extracting names and title form BIBFRAME"
+        db_update_obj.stage = "2: extracting names and title form BIBFRAME"
         db_update_obj.save()
         bib_object = Bibframe(file, log_file)
         transformed = bib_object.convert_bibframe()
@@ -69,10 +69,10 @@ def main(processing_files):
         stats = {}
         print ("enriching names")
         # iterate over the name dictionary 
-        db_update_obj.state = "enriching names"
+        db_update_obj.stage = "3: enriching names"
         db_update_obj.save()
         for index, item in enumerate(names.keys()):
-            db_update_obj.name_index = index
+            db_update_obj.name_index = index+1
             db_update_obj.save()
             name = item.split('-_-_-')[0]
             print(index+1, name)
@@ -92,7 +92,11 @@ def main(processing_files):
                     stats[api] = stats[api] + len(name_result)
         print ("enriching titles")
         # iterate over the title dictionary
+        db_update_obj.stage = "4: enriching titles"
+        db_update_obj.save()
         for index, title in enumerate(titles.keys()):
+            db_update_obj.title_index = index+1
+            db_update_obj.save()
             print(index+1, title)
             for authors in titles[title]['authors']:
                 author =  authors.split('-_-_-')[0]

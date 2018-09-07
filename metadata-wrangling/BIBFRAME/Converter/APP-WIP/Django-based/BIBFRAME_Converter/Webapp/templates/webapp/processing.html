@@ -13,6 +13,7 @@
 				<th>File type</th>
 				<th>File format</th>
 				<th></th>
+				<th></th>
 			</tr>
 			{% for obj in processing_docs %}
             <tr>
@@ -26,12 +27,9 @@
                   {% csrf_token %}
                   <input class="btn btn-default btn-danger" type="submit" value="Stop Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
                 </form></td>
+            	<td><button class="btn btn-default btn-danger" type="submit" name="view_progress">View progress</button></td>
             </tr>
-            {% if P_progress %}
-            	<tr>
-            		<td>this is a test</td>
-            	</tr>
-            {% endif %}
+            {% include 'webapp/includes/progress.html' %}			
           {% endfor %}
         </table>
 <p><a href="{% url 'index' %}">Return to home</a></p>
@@ -47,7 +45,6 @@
 			</tr>
 			<tr> <td colspan="6" align="center">There are no files being processed <a href="{% url 'index' %}">Add a file</a></td></tr>
 {% endif %}
-
 
 
 {% endblock %}

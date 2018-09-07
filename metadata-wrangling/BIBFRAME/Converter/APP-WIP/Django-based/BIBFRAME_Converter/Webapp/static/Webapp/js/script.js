@@ -4,19 +4,87 @@ $(document).ready(function(){
             $.getJSON('/progress/',
                     function (data) {
                         var json = data['latest_progress_list'];
+                        var st;
                         var tr;
-                         $('.table table-hover').html("");
                         for (var i = 0; i < json.length; i++) {
-                            tr = $('<tr/>');
-                            tr.append("<td>" + json[i].date + "</td>");
-                            tr.append("<td>" + json[i].time + "</td>");
-                            tr.append("<td>" + json[i].temperature + "</td>");
-                            tr.append("<td>" + json[i].humidity + "</td>");
-                             $('.table table-hover').append(tr);
+                        	st = json[i].stage 
+                            tr = "<td>" + json[i].process_ID + "</td>" +
+                            "<td>" + json[i].all_names + "</td>" +
+                            "<td>" + json[i].all_titles + "</td>" + 
+                            "<td>" + json[i].p_names + "</td>" +
+                            "<td>" + json[i].c_names + "</td>" +
+                            "<td>" + json[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].name_percent +'%;" aria-valuenow="'+ json[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].name_percent +' </div> </div>' + "</td>" +
+                            "<td>" + json[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].title_percent +'%;" aria-valuenow="'+ json[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].title_percent +' </div> </div>' + "</td>" 
+                             $('.progress_row').html(tr);
+                             $('.progress_stage').html(st);
 
                         }
                     });
-       },2000);
+       },1000);
+
+	function format ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Full name:</td>'+
+            '<td>'+d.name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extension number:</td>'+
+            '<td>'+d.extn+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extra info:</td>'+
+            '<td>And any further details here (images etc)...</td>'+
+        '</tr>'+
+    '</table>';
+	};
+
+
+	$(document).ready(function() {
+    var table = $('.table table-her').DataTable( {
+        "ajax": "../ajax/data/objects.txt",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "salary" }
+        ],
+        "order": [[1, 'asc']]
+    } );
+     
+    // Add event listener for opening and closing details
+    $('.le-hover').on('click', ']', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+	} );
+
+	$(function() {
+		$('button[name=view_progress]').on('click', function() {
+			$('.progress_head').toggle();
+			$('.progress_row').toggle();
+			$('.progress_stage').toggle();
+			$('.progress_stage_head').toggle();
+		});
+	});
 
 	$(function() {
 		$('.close').on('click', function() {
@@ -28,6 +96,10 @@ $(document).ready(function(){
 		$(".file-format").hide();
 		$(".bib_form").hide();
 		$(".marc_form").hide();
+		$('.progress_head').hide();
+		$('.progress_row').hide();
+		$('.progress_stage').hide();
+		$('.progress_stage_head').hide();
 	});
 
     $(function() {
