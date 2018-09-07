@@ -43,8 +43,9 @@ $(document).ready(function(){
 	$(function() {
 		$('button[objid]').on('click', function() {
 			var id = $(this).attr("objid");
-			$('.progress_head').toggle();
-			$('.progress_stage_head').toggle();
+			console.log(id);
+			$('.progress_head'+id).toggle();
+			$('.progress_stage_head'+id).toggle();
 			$('.progress_row'+id).toggle();
 			$('.progress_stage'+id).toggle();
 		});
@@ -60,8 +61,8 @@ $(document).ready(function(){
 		$(".file-format").hide();
 		$(".bib_form").hide();
 		$(".marc_form").hide();
-		$('.progress_head').hide();
-		$('.progress_stage_head').hide();
+		$(':regex(class, .*progress_head.*)').hide();
+		$(':regex(class, .*progress_stage_head.*)').hide();
 		$(':regex(class, .*progress_row.*)').hide();
 		$(':regex(class, .*progress_stage.*)').hide();
 	});
