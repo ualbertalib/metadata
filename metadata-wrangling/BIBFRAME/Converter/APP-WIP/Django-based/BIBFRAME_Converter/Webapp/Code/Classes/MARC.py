@@ -31,7 +31,7 @@ class MARC_XML():
             with open(self.source, "rb") as marc_file:
                 reader = MARCReader(marc_file, to_unicode=True, force_utf8=False, utf8_handling='ignore')
                 for i, record in enumerate(reader):
-                    print ("converting record number %s to XML" %(str(i)))
+                    #print ("converting record number %s to XML" %(str(i)))
                     if record.title():
                         ti = record.title()
                         ti = ti.replace("/", "")

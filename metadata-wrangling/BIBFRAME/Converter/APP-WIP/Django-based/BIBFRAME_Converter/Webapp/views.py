@@ -105,12 +105,12 @@ def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processingQueue(request):
-	processing_docs = Processing.objects.all()
 	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
 	if 'file_selected' in file_dict.keys():
 		for item in file_dict['file_selected']:
+			print (item)
 			try:
 				object = Marc_Document.objects.get(document=item)
 			except:
@@ -123,13 +123,20 @@ def processingQueue(request):
 					status="started")
 			try:
 				add_process.save()
+				t = threading.Thread(target=main, args=[add_process])
+				# We want the program to wait on this thread before shutting down.
+				t.setDaemon(True)
+				t.start()
+				print (threading.currentThread().getName())
+				if not t.isAlive():
+					print ("the process is not aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+					add_process.delete()
 			except:
 				return redirect('processing_duplicate')
 				break
-	t = threading.Thread(target=main, args=[add_process])
-	# We want the program to wait on this thread before shutting down.
-	t.setDaemon(False)
-	t.start() 
+	
+	processing_docs = Processing.objects.all()
+	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
 def progress(request):
@@ -147,5 +154,5 @@ def stop(request, id =None):
 	object = Processing.objects.get(id=id)
 	object.delete()
 	pid = os.getpid()
-	os.kill(pid, signal.SIGKILL)
+	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')

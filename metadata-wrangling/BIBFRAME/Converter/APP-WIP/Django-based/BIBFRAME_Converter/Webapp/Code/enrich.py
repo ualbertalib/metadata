@@ -42,7 +42,7 @@ def main(processing_files):
         output = str(filename) + "-enhanced.xml" 
         clearLogs(log_file, filename)
         # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
-        apis = ['search_api_LC', 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+        apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
@@ -75,7 +75,7 @@ def main(processing_files):
             db_update_obj.name_index = index+1
             db_update_obj.save()
             name = item.split('-_-_-')[0]
-            print(index+1, name)
+            #print(index+1, name)
             enriched_names[item] = []
             for api in apis:
                 #check if the stat for the API already exists
@@ -97,7 +97,7 @@ def main(processing_files):
         for index, title in enumerate(titles.keys()):
             db_update_obj.title_index = index+1
             db_update_obj.save()
-            print(index+1, title)
+            #print(index+1, title)
             for authors in titles[title]['authors']:
                 author =  authors.split('-_-_-')[0]
                 key = str(author) + "-_-_-" + str(title)
@@ -116,7 +116,7 @@ def main(processing_files):
         final_names = result_names_Object.mapping()
         result_title_Object = Results(title_result, titles, file, 'title', log_file)
         final_titles = result_title_Object.mapping()
-        eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+        #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
         stats['names-enriched'] = len(final_names)
         tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         #write back the URIs to the BIBFRAME file
@@ -126,7 +126,7 @@ def main(processing_files):
         tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
         file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-        write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+        #write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
         #removing temp-file.xml
         delete_temp()
         print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
@@ -137,7 +137,7 @@ def main(processing_files):
     print("walltime:", process_time)
 
 def write(final_names, final_titles, file, output, log_file, filename):
-    folder = 'results'
+    folder = 'Webapp/results'
     if not os.path.exists(folder):
         os.makedirs(folder)
     clear_files(filename)
@@ -151,7 +151,7 @@ def write(final_names, final_titles, file, output, log_file, filename):
     enhanched = ETree.parse(file)
     clear_TSV(filename)
     #writing extract names matching URIs into a TSV file
-    tsv_file = 'results/%s/TSVs/URIs-%s.tsv' %(filename, filename)
+    tsv_file = 'Webapp/results/%s/TSVs/URIs-%s.tsv' %(filename, filename)
     with open(tsv_file, "a") as tsv:
         tsv.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
         print ("writing enriched names")
@@ -201,11 +201,11 @@ def write(final_names, final_titles, file, output, log_file, filename):
             except:
                 print ("could not find identfier for " + title)
                 PrintException(log_file, name)
-    out = "results/%s/enhanced-files/%s" %(filename, output)
+    out = "Webapp/results/%s/enhanced-files/%s" %(filename, output)
     enhanched.write(out)
 
 def get_stat(final_names, names, final_titles, titles, file):
-    folder = 'results/%s/Diagrams' %(file)
+    folder = 'Webapp/results/%s/Diagrams' %(file)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, file)
@@ -313,9 +313,9 @@ def get_stat(final_names, names, final_titles, titles, file):
 
 def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
     file = filename + "-stats.tsv"
-    if not os.path.exists("results/%s/Stats" %(filename)):
-        os.makedirs("results/%s/Stats" %(filename))
-    file_path = os.path.join("results/%s/Stats" %(filename), file)
+    if not os.path.exists("Webapp/results/%s/Stats" %(filename)):
+        os.makedirs("Webapp/results/%s/Stats" %(filename))
+    file_path = os.path.join("Webapp/results/%s/Stats" %(filename), file)
     try:
         if os.path.isfile(file_path):
             os.unlink(file_path)

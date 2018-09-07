@@ -30,7 +30,7 @@ class XML_BIBFRAME():
             file = os.path.join(self.source, files)
             if os.path.isfile(file):
                 output = os.path.join(self.subfolder, '')
-                print ("Transforming record number %s of %s to BIBFRAME"  %(str(i+1), str(number_of_records)))
+                #print ("Transforming record number %s of %s to BIBFRAME"  %(str(i+1), str(number_of_records)))
                 dom = ET.parse(file)
                 transform = ET.XSLT(self.xslt)
                 newdom = transform(dom)

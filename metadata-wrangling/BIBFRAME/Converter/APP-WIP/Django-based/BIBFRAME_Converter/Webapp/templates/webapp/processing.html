@@ -27,12 +27,37 @@
                   {% csrf_token %}
                   <input class="btn btn-default btn-danger" type="submit" value="Stop Process" onclick="return confirm('Are you sure you want to stop processing {{ obj.name }}?')"/>
                 </form></td>
-            	<td><button class="btn btn-default btn-danger" type="submit" name="view_progress">Progress Details</button></td>
+            	<td><button class="btn btn-default btn-danger" type="submit" name="view_progress" objid="{{obj.id}}">Progress Details</button></td>
             </tr>
             <tr>
-            	<td class="overall_progress" colspan="8" align="center"></td>
+            	<td class="overall_progress{{obj.id}}" colspan="8" align="center"></td>
             </tr>
-            {% include 'webapp/includes/progress.html' %}			
+            <tr>
+				<td class="progress_stage_head" colspan="8" align="center"><h3>Currently at Stage</h3></td>
+			</tr>
+    		<tr>
+    			<td class="progress_stage{{obj.id}}" colspan="8" align="center"></td>
+    		</tr>
+			<tr class="progress_head">
+    			<th>Process ID</th>
+				<th>Names extracted</th>
+				<th>Titles extracted</th>
+				<th>Personal names</th>
+				<th>Corporate names</th>
+				<th>MARC to BIBFRAME conversion Progress</th>
+				<th>Name Enrichment Progress</th>
+				<th>Title Enrichment Progress</th>
+    		</tr>
+    		<tr class="progress_row{{obj.id}}">
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>			
           {% endfor %}
         </table>
 <p><a href="{% url 'index' %}">Return to home</a></p>
