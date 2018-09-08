@@ -1,4 +1,6 @@
 from django import template
+from Webapp.models import Processing
+from ..Code.enrich import main
 
 register = template.Library()
 
@@ -13,3 +15,8 @@ def replaceBIB(value):
 @register.filter
 def get_item(dictionary, key):
     return dictionary.get(key)
+
+@register.filter
+def process(id):
+	object = Processing.objects.get(id=id)
+	return main(object)

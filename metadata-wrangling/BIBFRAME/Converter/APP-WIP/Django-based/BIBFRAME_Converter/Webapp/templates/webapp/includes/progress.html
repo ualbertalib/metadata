@@ -1,0 +1,36 @@
+
+{% block content %}
+			
+            <tr>
+				<td class="progress_stage_head{{obj.id}}" colspan="8" align="center"><h3>Currently at Stage</h3></td>
+			</tr>
+    		<tr>
+    			<td class="progress_stage{{obj.id}}" colspan="8" align="center"></td>
+    		</tr>
+			<tr class="progress_head{{obj.id}}">
+    			<th>Process ID</th>
+				<th>Names extracted</th>
+				<th>Titles extracted</th>
+				<th>Personal names</th>
+				<th>Corporate names</th>
+				<th>MARC to BIBFRAME conversion Progress</th>
+				<th>Name Enrichment Progress</th>
+				<th>Title Enrichment Progress</th>
+    		</tr>
+    		<tr class="progress_row{{obj.id}}">
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td colspan="8" align="center">
+					<hr class="divider">
+				</td>
+			</tr>			
+
+{% endblock %}

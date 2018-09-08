@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
-from Webapp.models import Bib_Document, Marc_Document, Processing, Document
+from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
-import os
+import os, signal
 from .Code.enrich import main
 from .Code.Utils import PrintException
+import threading
+import shutil
 
 def index(request):
 	docs = Document.objects.all()
@@ -103,11 +106,12 @@ def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processingQueue(request):
-	processing_docs = Processing.objects.all()
+	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
 	if 'file_selected' in file_dict.keys():
 		for item in file_dict['file_selected']:
+			print (item)
 			try:
 				object = Marc_Document.objects.get(document=item)
 			except:
@@ -120,21 +124,47 @@ def processingQueue(request):
 					status="started")
 			try:
 				add_process.save()
+				t = threading.Thread(target=main, args=[add_process])
+				# We want the program to wait on this thread before shutting down.
+				t.setDaemon(True)
+				t.start()
+				print (threading.currentThread().getName())
+				if not t.isAlive():
+					print ("the process is not aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+					add_process.delete()
 			except:
 				return redirect('processing_duplicate')
 				break
-	#return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
-	return processing(request, processing_docs)
-def processing(request, processing_docs):
-	for file in processing_docs:
-		filename = "Webapp/source/%s" %(file.name)
-		main (filename)
-	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs})
+	
+	processing_docs = Processing.objects.all()
+	#for files in processing_docs:
+	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
+
+def progress(request):
+	update = [item.as_json() for item in P_progress.objects.all()]
+	return JsonResponse({'latest_progress_list':update})
+
+def processing(request, id=None):
+	object = Processing.objects.get(id=id)
+	return main (object)
 
 def processing_duplicate(request):
 	return render(request, 'webapp/processing_duplicate.html')
 
 def stop(request, id =None):
 	object = Processing.objects.get(id=id)
+	pid = object.id
+	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
+	master_file = files.master_file
+	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results%s' %(master_file)}
+	BIB_folder = 'Webapp/converted_BIBFRAME'
+	MARC_folder = 'Webapp/MARC_XML'
+	Processing_folder = 'Webapp/Processing'
+	results_folder = 'Webapp/results%s' %(master_file)
+	for folder in folders:
+		if os.path.isdir(folder):
+			shutil.rmtree(folder)
+	#pid = os.getpid()
+	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')
