@@ -22,6 +22,8 @@ class MARC_XML():
         if self.source.endswith('.mrc') or self.source.endswith('.marc'):
             # for each .mrc file create a sub-folder based on timestamp to store converted MARC/XML files
             subfolder_name = '%s_%s' %(self.source.replace("Webapp/source/MARC/", "").replace("Webapp/source/BIBFRAME/", "").split('.')[0], datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
+            db_update_obj.master_file = subfolder_name
+            db_update_obj.save()
             sufolder = os.path.join(self.folder, subfolder_name)
             if not os.path.exists(sufolder):
                 os.makedirs(sufolder)

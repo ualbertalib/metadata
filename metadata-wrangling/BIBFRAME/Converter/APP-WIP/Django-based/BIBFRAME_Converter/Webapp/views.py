@@ -9,6 +9,7 @@ import os, signal
 from .Code.enrich import main
 from .Code.Utils import PrintException
 import threading
+import shutil
 
 def index(request):
 	docs = Document.objects.all()
@@ -152,7 +153,18 @@ def processing_duplicate(request):
 
 def stop(request, id =None):
 	object = Processing.objects.get(id=id)
+	pid = object.id
+	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
-	pid = os.getpid()
+	master_file = files.master_file
+	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results%s' %(master_file)}
+	BIB_folder = 'Webapp/converted_BIBFRAME'
+	MARC_folder = 'Webapp/MARC_XML'
+	Processing_folder = 'Webapp/Processing'
+	results_folder = 'Webapp/results%s' %(master_file)
+	for folder in folders:
+		if os.path.isdir(folder):
+			shutil.rmtree(folder)
+	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')

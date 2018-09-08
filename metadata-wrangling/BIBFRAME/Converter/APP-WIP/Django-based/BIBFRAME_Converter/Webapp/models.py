@@ -46,6 +46,7 @@ class P_progress(models.Model):
     name_index = models.CharField(max_length=25, default="0")
     title_index = models.CharField(max_length=25, default="0")
     M_to_B_index = models.CharField(max_length=25, default="0")
+    master_file = models.CharField(max_length=255, blank=True)
 
     def as_json(self):
     	pd = self.pid.id
