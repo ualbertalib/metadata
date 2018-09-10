@@ -157,14 +157,17 @@ def stop(request, id =None):
 	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
 	master_file = files.master_file
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results%s' %(master_file)}
+	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
 	BIB_folder = 'Webapp/converted_BIBFRAME'
 	MARC_folder = 'Webapp/MARC_XML'
 	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results%s' %(master_file)
+	results_folder = 'Webapp/results'
 	for folder in folders:
-		if os.path.isdir(folder):
-			shutil.rmtree(folder)
+		master = "%s/%s" %(folder, master_file)
+		if os.path.isdir(master):
+			shutil.rmtree(master)
+		elif os.path.isfile(master):
+            os.unlink(master)
 	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')
