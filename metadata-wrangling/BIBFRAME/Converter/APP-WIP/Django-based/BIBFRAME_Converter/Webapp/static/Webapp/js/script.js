@@ -37,7 +37,7 @@ $(document).ready(function(){
                              $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).addClass("current");
                              $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).prevAll().addClass("done").removeClass("current");
                              if (st.indexOf("The process was completed in") >= 0) {
-                             	$('.progress_stage' + id + ' .progress-container .completed').html(st);
+                             	$('.progress_stage' + id + ' .progress-container .results').html(st).addClass("completed");
                              	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
                              	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
                              }
