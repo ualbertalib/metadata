@@ -9,7 +9,7 @@
   <div class="file-format">
     <h4 class= "text-center">Select your file type</h4>
     <div class= "list-group list-group-flush">
-      <label class="list-group-item" id="marc_select">NARC <span class="badge badge-pill badge-danger">.mrc</span>
+      <label class="list-group-item" id="marc_select">MARC <span class="badge badge-pill badge-danger">.mrc</span>
         <input class="marc" type="radio" name="file_format">
       </label>
       <label class="list-group-item" id=bib_select>BIBFRAME <span class="badge badge-pill badge-danger">.xml</span>
@@ -91,8 +91,59 @@
         {% endifequal %}
           
         </table>
-        <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
-        </form>
+        <br><hr class="divider">
+        <h4 class= "text-center">Select at least one search API</h4>
+        <div class="form_container">
+          <table class="table table-hover APIs">
+            <tr>
+              <td>
+                <input class="loc" type="checkbox" name="search-API-selector" value="search_api_LC">
+              </td>
+              <td>
+                <label id="LC">Library of Congress didyoumean API <span class="badge badge-pill badge-danger"><a href="#">View Query Template</a></span></label>
+              </td>
+          </tr>
+          <tr>
+            <td>
+                <input class="loc" type="checkbox" name="search-API-selector" value="search_api_LCS">
+            </td>
+            <td>
+              <label id="LC">Library of Congress Suggest API <span class="badge badge-pill badge-danger">View Query Template</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input class="viaf" type="checkbox" name="search-API-selector" value="search_api_VF">
+            </td>
+            <td>              
+              <label id=viaf>VIAF General API <span class="badge badge-pill badge-danger">View Query Template</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input class="search_api_VFP" type="checkbox" name="search-API-selector" value="search_api_VF">
+            </td>
+            <td>
+              <label id=viaf>VIAF Personal names API <span class="badge badge-pill badge-danger">View Query Template</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input class="search_api_VFC" type="checkbox" name="search-API-selector" value="search_api_VF">
+            </td>
+            <td>
+              <label id=viaf>VIAF Corporate names API <span class="badge badge-pill badge-danger">View Query Template</span>
+              </label>
+            </td>
+          </tr>
+          </table>
+        </div>
+          <br>
+            <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
+          </form>
     {% endif %}
 
   </div>

@@ -109,7 +109,8 @@ def processingQueue(request):
 	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
-	if 'file_selected' in file_dict.keys():
+	print (file_dict)
+	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
 		for item in file_dict['file_selected']:
 			print (item)
 			try:
@@ -124,7 +125,7 @@ def processingQueue(request):
 					status="started")
 			try:
 				add_process.save()
-				t = threading.Thread(target=main, args=[add_process])
+				t = threading.Thread(target=main, args=[add_process, file_dict['search-API-selector']])
 				# We want the program to wait on this thread before shutting down.
 				t.setDaemon(True)
 				t.start()
@@ -157,14 +158,17 @@ def stop(request, id =None):
 	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
 	master_file = files.master_file
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results%s' %(master_file)}
+	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
 	BIB_folder = 'Webapp/converted_BIBFRAME'
 	MARC_folder = 'Webapp/MARC_XML'
 	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results%s' %(master_file)
+	results_folder = 'Webapp/results'
 	for folder in folders:
-		if os.path.isdir(folder):
-			shutil.rmtree(folder)
+		master = "%s/%s" %(folder, master_file)
+		if os.path.isdir(master):
+			shutil.rmtree(master)
+		elif os.path.isfile(master):
+			os.unlink(master)
 	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')

@@ -37,7 +37,7 @@ class Processing(models.Model):
 
 class P_progress(models.Model):
     pid = models.ForeignKey(Processing, on_delete=models.CASCADE)
-    stage = models.CharField(max_length=255, default="1: converting MARC to MARC/XML")
+    stage = models.CharField(max_length=255, default="MARC_to_MARC-XML")
     all_names = models.CharField(max_length=25, default="1")
     all_titles = models.CharField(max_length=25, default="1")
     all_MARC = models.CharField(max_length=25, default="1")

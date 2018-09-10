@@ -51,3 +51,124 @@
 .progress {
 	height: 30px;
 }
+
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.progress-container {
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	min-width: 99%
+	margin: 0 ;
+}
+
+.wrapper {
+	display: table-cell;
+	height: 100px;
+	vertical-align: middle;
+}
+
+.progress-nav .stage {
+	font-size: 14px;
+	text-align: center;
+	color: #666;
+	cursor: default;
+	margin: 0 3px;
+	padding: 10px 10px 10px 30px;
+	min-width: 220px;
+	float: left;
+	position: relative;
+	background-color: #d9e3f7;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+  transition: background-color 0.2s ease;
+}
+
+.progress-nav .stage:after,
+.progress-nav .stage:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: -17px;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 17px solid #d9e3f7;	
+	z-index: 2;
+  transition: border-color 0.2s ease;
+}
+
+.progress-nav .stage:before {
+	right: auto;
+	left: 0;
+	border-left: 17px solid #fff;	
+	z-index: 0;
+}
+
+.progress-nav .stage:first-child:before {
+	border: none;
+}
+
+.progress-nav .stage:last-child:after {
+	border: none;
+}
+
+.progress-nav .stage:first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.progress-nav .stage span {
+	position: relative;
+}
+
+.progress-nav .stage.done span:before {
+	opacity: 1;
+	content: "✔";
+	position: absolute;
+	top: -2px;
+	left: -20px;
+}
+
+.progress-nav .stage.done {
+	background-color: #dff0d8;	
+}
+
+.progress-nav .stage.done:after {
+	border-left: 17px solid #dff0d8;	
+	z-index: 1000;
+}
+
+
+.progress-nav .stage.current {
+	color: #fff;
+	background-color: #007bff;
+}
+
+.progress-nav .stage.current:after {
+	border-left: 17px solid #007bff;	
+}
+
+.progress-container .completed {
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	background-color: #3c763d;
+	margin: 0 auto;
+	padding: 10px 10px 10px 10px;
+	width: 380px;
+	position: relative;
+}
+
+.APIs {
+	width: 80%;
+	margin: 0 auto;
+}

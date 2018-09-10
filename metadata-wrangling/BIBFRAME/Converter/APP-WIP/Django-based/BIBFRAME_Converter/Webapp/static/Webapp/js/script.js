@@ -33,8 +33,14 @@ $(document).ready(function(){
                             "<td>" + json[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].name_percent +'%;" aria-valuenow="'+ json[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].name_percent +' </div> </div>' + "</td>" +
                             "<td>" + json[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: '+ json[i].title_percent +'%;" aria-valuenow="'+ json[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].title_percent +' </div> </div>' + "</td>" 
                              $('.progress_row'+ id).html(tr);
-                             $('.progress_stage' + id).html(st);
                              $('.overall_progress' + id).html(overall);
+                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).addClass("current");
+                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).prevAll().addClass("done").removeClass("current");
+                             if (st.indexOf("The process was completed in") >= 0) {
+                             	$('.progress_stage' + id + ' .progress-container .results').html(st).addClass("completed");
+                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
+                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
+                             }
 
                         }
                     });
