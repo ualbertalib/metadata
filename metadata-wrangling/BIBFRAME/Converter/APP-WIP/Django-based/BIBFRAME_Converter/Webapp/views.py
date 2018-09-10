@@ -167,7 +167,7 @@ def stop(request, id =None):
 		if os.path.isdir(master):
 			shutil.rmtree(master)
 		elif os.path.isfile(master):
-            os.unlink(master)
+			os.unlink(master)
 	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')

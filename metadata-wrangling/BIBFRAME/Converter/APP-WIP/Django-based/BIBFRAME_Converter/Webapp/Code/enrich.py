@@ -46,7 +46,7 @@ def main(processing_files):
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
-        db_update_obj.stage = "3: extracting names and title form BIBFRAME"
+        db_update_obj.stage = "Extracting_names_and_titles"
         db_update_obj.save()
         bib_object = Bibframe(file, log_file)
         transformed = bib_object.convert_bibframe()
@@ -69,7 +69,7 @@ def main(processing_files):
         stats = {}
         print ("enriching names")
         # iterate over the name dictionary 
-        db_update_obj.stage = "4: enriching names"
+        db_update_obj.stage = "Enriching_names"
         db_update_obj.save()
         for index, item in enumerate(names.keys()):
             db_update_obj.name_index = index+1
@@ -92,7 +92,7 @@ def main(processing_files):
                     stats[api] = stats[api] + len(name_result)
         print ("enriching titles")
         # iterate over the title dictionary
-        db_update_obj.stage = "5: enriching titles"
+        db_update_obj.stage = "Enriching_titles"
         db_update_obj.save()
         for index, title in enumerate(titles.keys()):
             db_update_obj.title_index = index+1
@@ -106,7 +106,7 @@ def main(processing_files):
                 if title_result:
                     enriched_titles[key].append(title_result)
         # getting rid of unwanted things
-        db_update_obj.stage = "6: Optimization"
+        db_update_obj.stage = "Optimization"
         db_update_obj.save()
         name_results = clean_up(enriched_names)
         title_result = clean_up(enriched_titles)
@@ -120,7 +120,7 @@ def main(processing_files):
         stats['names-enriched'] = len(final_names)
         tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
         #write back the URIs to the BIBFRAME file
-        db_update_obj.stage = "7: Writing back to BIBFRAME"
+        db_update_obj.stage = "Writing_to_BIBFRAME"
         db_update_obj.save()
         write(final_names, final_titles, file, output, log_file, filename)
         tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
@@ -132,7 +132,7 @@ def main(processing_files):
         print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
     tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
-    db_update_obj.stage = "8: The process was completed in %s" %(process_time)
+    db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
 

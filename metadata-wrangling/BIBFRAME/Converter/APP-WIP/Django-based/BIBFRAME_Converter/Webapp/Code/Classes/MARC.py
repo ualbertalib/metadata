@@ -46,7 +46,7 @@ class MARC_XML():
                         writer = XMLWriter(open(output + 'unknownTitle' + str(i) + '.xml','wb'))
                 marc_file.close()
             #convert MARC/XML to BIBFRAME
-            db_update_obj.stage = "2: converting MARC/XML to BIBFRAME"
+            db_update_obj.stage = "MARC-XML_to_BIBFRAME"
             db_update_obj.save()
             BIBFRAME.convert_to_BIBFRAME(i, db_update_obj)
             # merge the BIBFRAME files into one (per the master MARC file) for ease of processing
