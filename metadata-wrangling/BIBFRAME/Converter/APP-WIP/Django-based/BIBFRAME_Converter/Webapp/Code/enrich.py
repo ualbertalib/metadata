@@ -17,7 +17,7 @@ from datetime import datetime
 
 from Webapp.models import Processing, P_progress
 
-def main(processing_files):
+def main(processing_files, apis):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
     db_update_obj = P_progress(pid=processing_files)
@@ -42,7 +42,7 @@ def main(processing_files):
         output = str(filename) + "-enhanced.xml" 
         clearLogs(log_file, filename)
         # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
-        apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+        #apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
         #this is needed for LC APIs
         query_type = "/authorities/names"
         # extracting names and titles from BIBFRAME
