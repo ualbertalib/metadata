@@ -6,7 +6,7 @@ from django.views.generic.edit import DeleteView
 from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os, signal
-from .Code.enrich import main
+from .Code.enrich import marc_process, bib_process
 from .Code.Utils import PrintException
 import threading
 import shutil
@@ -111,6 +111,7 @@ def processingQueue(request):
 	file_dict = dict(request.POST.lists())
 	print (file_dict)
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
+		Bib_files = []
 		for item in file_dict['file_selected']:
 			print (item)
 			try:
@@ -125,18 +126,23 @@ def processingQueue(request):
 					status="started")
 			try:
 				add_process.save()
-				t = threading.Thread(target=main, args=[add_process, file_dict['search-API-selector']])
-				# We want the program to wait on this thread before shutting down.
-				t.setDaemon(True)
-				t.start()
-				print (threading.currentThread().getName())
-				if not t.isAlive():
-					print ("the process is not aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-					add_process.delete()
+				if object.file_type == 'MARC Data':
+					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
+					# We want the program to wait on this thread before shutting down.
+					t.setDaemon(True)
+					t.start()
+					if not t.isAlive():
+						add_process.delete()
+				elif object.file_type == 'BIBFRAME Data':
+					Bib_files.append(add_process.id)
 			except:
 				return redirect('processing_duplicate')
 				break
-	
+		(Bib_files)
+		t = threading.Thread(target=bib_process, args=[Bib_files, file_dict['search-API-selector']])
+		# We want the program to wait on this thread before shutting down.
+		t.setDaemon(True)
+		t.start()
 	processing_docs = Processing.objects.all()
 	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})

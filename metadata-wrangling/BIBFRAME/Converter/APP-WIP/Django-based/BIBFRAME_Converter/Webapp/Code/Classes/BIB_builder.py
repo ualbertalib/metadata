@@ -6,7 +6,7 @@ from datetime import datetime
 class BIB_builder():
     def __init__(self):
         # folder to store BIBFRAME files
-        self.source = 'Webapp/source/BIBFRAME'
+        self.source = 'Webapp/Processing/BIBFRAME'
         # processing folder
         self.folder = 'Webapp/Processing'
         if not os.path.exists(self.folder):
@@ -27,3 +27,4 @@ class BIB_builder():
                             source_file.close()
                 merged_file.write('</root>')
                 merged_file.close()
+        return (output)
