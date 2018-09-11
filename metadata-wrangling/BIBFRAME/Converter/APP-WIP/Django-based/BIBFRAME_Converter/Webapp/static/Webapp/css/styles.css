@@ -1,7 +1,13 @@
- hr.divider { 
+ hr.divider-top { 
  	 height: 12px; 
  	 border: 0; 
  	 box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+ }
+
+ hr.divider-bottom {
+ 	height: 12px; 
+ 	border: 0; 
+ 	box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.5);	
  }
 
 .dummy_object {
@@ -171,4 +177,15 @@
 .APIs {
 	width: 80%;
 	margin: 0 auto;
+}
+
+.uploaded_files {
+	background: #eee;
+	margin-top: -23px;
+	margin-bottom: -61px;
+}
+
+.file-type-selector {
+	width: 50%;
+	margin-left: 10%;
 }

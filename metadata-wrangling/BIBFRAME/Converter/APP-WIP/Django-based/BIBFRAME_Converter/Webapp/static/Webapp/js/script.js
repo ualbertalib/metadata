@@ -105,4 +105,12 @@ $(document).ready(function(){
 	 $('#isAgeSelected').click(function() {
     $("#txtAge").toggle(this.checked);
 });
+
+	$('#myModal').on('shown.bs.modal', function () {
+  		$('#myInput').trigger('focus')
+})
+
+	$(window).on('load',function(){
+        $('#exampleModal').modal('hide');
+    });
 });

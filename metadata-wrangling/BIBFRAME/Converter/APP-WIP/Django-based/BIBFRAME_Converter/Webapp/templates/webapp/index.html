@@ -7,14 +7,16 @@
 <br>
   <br>
   <div class="file-format">
-    <h4 class= "text-center">Select your file type</h4>
-    <div class= "list-group list-group-flush">
-      <label class="list-group-item" id="marc_select">MARC <span class="badge badge-pill badge-danger">.mrc</span>
-        <input class="marc" type="radio" name="file_format">
+    <h4 class= "text-center">Select a file type to uplaod</h4>
+    <div class="file-type-selector">
+    <div class= "form-check form-check-inline">
+      <label class="form-check-label" id="marc_select">MARC <span class="badge badge-pill badge-danger">.mrc</span>
+        <input class="form-check-input marc" type="radio" name="file_format">
       </label>
-      <label class="list-group-item" id=bib_select>BIBFRAME <span class="badge badge-pill badge-danger">.xml</span>
-        <input class="bib" type="radio" name="file_format">
+      <label class="form-check-label" id=bib_select>BIBFRAME <span class="badge badge-pill badge-danger">.xml</span>
+        <input class="form-check-input bib" type="radio" name="file_format">
       </label>
+      </div>
       </div>
       <div class="bib_form">
         <div class="form_container">
@@ -38,7 +40,8 @@
       </div>
       
       {% if docs %}
-        <br><hr class="divider">
+        <br><hr class="divider-top">
+        <div class="uploaded_files">
         <h4>Uploaded files:</h4>
         {% ifequal docs|length 1 %}
           <table class="table table-hover" class="table table-bordered" style="width:100%">
@@ -91,60 +94,92 @@
         {% endifequal %}
           
         </table>
-        <br><hr class="divider">
+        </div>
+        <br><hr class="divider-bottom">
         <h4 class= "text-center">Select at least one search API</h4>
         <div class="form_container">
           <table class="table table-hover APIs">
             <tr>
               <td>
-                <input class="loc" type="checkbox" name="search-API-selector" value="search_api_LC">
+                <input class="search_api_LC" type="checkbox" name="search-API-selector" value="search_api_LC" checked>
               </td>
               <td>
-                <label id="LC">Library of Congress didyoumean API <span class="badge badge-pill badge-danger"><a href="#">View Query Template</a></span></label>
+                <label id="LC">Library of Congress didyoumean API </label>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#LCModal">
+                View Query Template
+                </button>
+                {% include 'webapp/includes/LCModal.html' %}
               </td>
           </tr>
           <tr>
             <td>
-                <input class="loc" type="checkbox" name="search-API-selector" value="search_api_LCS">
+                <input class="search_api_LCS" type="checkbox" name="search-API-selector" value="search_api_LCS">
             </td>
             <td>
-              <label id="LC">Library of Congress Suggest API <span class="badge badge-pill badge-danger">View Query Template</span>
-              </label>
+              <label id="LC">Library of Congress Suggest API </label>
             </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#LCSModal">
+                View Query Template
+                </button>
+                {% include 'webapp/includes/LCSModal.html' %}
+              </td>
           </tr>
           <tr>
             <td>
                 <input class="viaf" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>              
-              <label id=viaf>VIAF General API <span class="badge badge-pill badge-danger">View Query Template</span>
-              </label>
+              <label id=viaf>VIAF General API </label>
             </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#VFModal">
+                View Query Template
+                </button>
+                {% include 'webapp/includes/VFModal.html' %}
+              </td>
           </tr>
           <tr>
             <td>
                 <input class="search_api_VFP" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>
-              <label id=viaf>VIAF Personal names API <span class="badge badge-pill badge-danger">View Query Template</span>
-              </label>
+              <label id=viaf>VIAF Personal names API </label>
             </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#VFPModal">
+                View Query Template
+                </button>
+                {% include 'webapp/includes/VFPModal.html' %}
+              </td>
           </tr>
           <tr>
             <td>
                 <input class="search_api_VFC" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>
-              <label id=viaf>VIAF Corporate names API <span class="badge badge-pill badge-danger">View Query Template</span>
-              </label>
+              <label id=viaf>VIAF Corporate names API </label>
             </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#VFCModal">
+                View Query Template
+                </button>
+                {% include 'webapp/includes/VFCModal.html' %}
+              </td>
           </tr>
           </table>
         </div>
           <br>
-            <input class="btn btn-default btn-danger" type="submit" value="PROCESS"/>
+            <input class="btn btn-default btn-danger btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="PROCESS"/>
+          </form>
+          <form action="{% url 'processingQueue' %}" method="POST">
+            {% csrf_token %}
+            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Queue"/>
           </form>
     {% endif %}
 
   </div>
+
 {% endblock %}
