@@ -20,6 +20,7 @@ def index(request):
 	bib_form = Bib_DocumentForm(request.POST, request.FILES)
 	marc_documents = Marc_Document.objects.all()
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
+	processing_documents = Processing.objects.all()
 	checksum="thisisadummyobjectonlynumber123456"
 	if docs.filter(OID=checksum).exists():
 		pass
@@ -72,7 +73,7 @@ def index(request):
 			if marc_form.is_valid():
 				marc_form.save()
 				return redirect('index')
-	return render(request, 'webapp/index.html', { 'docs': docs, 'marc_form': marc_form, 'bib_form': bib_form})
+	return render(request, 'webapp/index.html', { 'docs': docs, 'processing_documents': processing_documents, 'marc_form': marc_form, 'bib_form': bib_form})
 
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')

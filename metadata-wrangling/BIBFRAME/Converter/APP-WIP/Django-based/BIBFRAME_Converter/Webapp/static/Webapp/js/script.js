@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	var selected = 0;
+
 	jQuery.expr[':'].regex = function(elem, index, match) {
     var matchParams = match[3].split(','),
         validLabels = /^(data|css):/,
@@ -139,5 +141,15 @@ $(document).ready(function(){
 	$(window).on('load',function(){
         $('#exampleModal').modal('hide');
     });
+
+	$('.bib_merge').tooltip({ boundary: 'window' })
+
+	$(function() {
+		$('.file_selector').on('click', function() {
+   			var check = $('.file_selector').find('input[type=checkbox]:checked').length;
+   			console.log(check);
+   		return false;
+		});
+	});
 
 });

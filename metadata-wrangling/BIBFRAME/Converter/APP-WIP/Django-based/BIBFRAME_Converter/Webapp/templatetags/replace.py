@@ -13,6 +13,10 @@ def replaceBIB(value):
     return value.replace("BIBFRAME/","")
 
 @register.filter
+def minus(value):
+    return value-1
+
+@register.filter
 def get_item(dictionary, key):
     return dictionary.get(key)
 

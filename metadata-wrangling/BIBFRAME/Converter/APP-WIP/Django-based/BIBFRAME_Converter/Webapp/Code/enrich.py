@@ -151,6 +151,8 @@ def bib_process(processing_files, apis, merge):
     filename = file.replace('.xml', '').replace('Webapp/source/BIBFRAME/', '').replace('Webapp/Processing/', '')
     filename = "%s-%s" %(filename, datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
     print ("processing " + filename)
+    db_update_obj.master_file = filename
+    db_update_obj.save()
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     log_file = str(filename) + "-error-logs"
     output = str(filename) + "-enhanced.xml" 

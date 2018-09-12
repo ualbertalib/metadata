@@ -41,8 +41,8 @@
       
       {% if docs %}
         <br><hr class="divider-top">
-        <div class="uploaded_files">
-        <h4>Uploaded files:</h4>
+
+        <h4>Uploaded files ({{ docs|length|minus }} files):</h4>
         {% ifequal docs|length 1 %}
           <table class="table table-hover" class="table table-bordered" style="width:100%">
             <tr>
@@ -79,7 +79,7 @@
               </tr>
             {% else %}
               <tr>
-                <td><input type="checkbox" name="file_selected" value="{{ obj.name }}"></td>
+                <td><input type="checkbox" class="file_selector" name="file_selected" value="{{ obj.name }}"></td>
                 <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
                 <td>{{ obj.file_type }}</td>
                 <td>{{ obj.description }}</td>
@@ -92,7 +92,7 @@
             {% endif %}
           {% endfor %}
           <tr>
-            <td><input type="checkbox" class="bib_merge" name="merge" value="merge">Merge BIBFRAME files for processing?</td>
+            <td colspan="6" align="center" style="background: #eef;"><input type="checkbox" class="bib_merge" name="merge" value="merge" title="Merging the files will help speed up the process and also will produce better stats and visuals"> Merge BIBFRAME files for processing?</td>
           </tr>
         {% endifequal %}
           
@@ -179,9 +179,9 @@
           </form>
           <form action="{% url 'processingQueue' %}" method="POST">
             {% csrf_token %}
-            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Queue"/>
+            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Queue ({{ processing_documents|length }} items)"/>
           </form>
-          </div>
+     
     {% endif %}
 
   </div>
