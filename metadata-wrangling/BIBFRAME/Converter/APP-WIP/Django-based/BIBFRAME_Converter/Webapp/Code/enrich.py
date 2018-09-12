@@ -136,23 +136,17 @@ def marc_process(processing_files, apis):
     db_update_obj.save()
     print("walltime:", process_time)
 
-def bib_process(processing_files, apis):
+def bib_process(processing_files, apis, merge):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')  
-    clear_processing()
-    if not os.path.exists('Webapp/Processing/BIBFRAME'):
-            os.makedirs('Webapp/Processing/BIBFRAME')
-    for item in processing_files: 
-        processing_obj = Processing.objects.get(id=item) 
-        oring_file = "Webapp/source/%s" %(processing_obj.name)
-        dest_file = "Webapp/Processing/%s" %(processing_obj.name)
-        db_update_obj = P_progress(pid=processing_obj)
-        db_update_obj.save()
-        copyfile(oring_file, dest_file)
-    file = "Webapp/source/%s" %(processing_obj.name) 
+    #clear_processing()
+    db_update_obj = P_progress(pid=processing_files)
+    db_update_obj.save()
+    if merge == True:
+        file = "Webapp/Processing/%s" %(processing_files.name) 
+    else:
+        file = "Webapp/source/%s" %(processing_files.name) 
     # delete files in the processing folder
-    BIBFRAME = BIB_builder()
-    file = BIBFRAME.merger()
     tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     filename = file.replace('.xml', '').replace('Webapp/source/BIBFRAME/', '').replace('Webapp/Processing/', '')
     filename = "%s-%s" %(filename, datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
@@ -169,9 +163,7 @@ def bib_process(processing_files, apis):
     bib_object = Bibframe(file, log_file)
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
-    print (names)
     titles = bib_object.extract_names(transformed)[1]
-    #getting corp names (for stat report)
     all_names = bib_object.extract_names(transformed)[2]
     corp_names = bib_object.extract_names(transformed)[3]
     print (str(all_names) + " names were extrected from " + filename)

@@ -113,4 +113,5 @@ $(document).ready(function(){
 	$(window).on('load',function(){
         $('#exampleModal').modal('hide');
     });
+
 });

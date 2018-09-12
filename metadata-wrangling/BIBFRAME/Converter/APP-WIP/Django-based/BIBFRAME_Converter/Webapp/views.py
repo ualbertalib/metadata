@@ -8,8 +8,11 @@ from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_Doc
 import os, signal
 from .Code.enrich import marc_process, bib_process
 from .Code.Utils import PrintException
+from .Code.Classes.BIB_builder import BIB_builder
 import threading
 import shutil
+import time
+from datetime import datetime
 
 def index(request):
 	docs = Document.objects.all()
@@ -109,11 +112,11 @@ def processingQueue(request):
 	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
-	print (file_dict)
+	merge = False
+	if 'merge' in file_dict.keys():
+		merge = True
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
-		Bib_files = []
 		for item in file_dict['file_selected']:
-			print (item)
 			try:
 				object = Marc_Document.objects.get(document=item)
 			except:
@@ -125,21 +128,40 @@ def processingQueue(request):
 					file_type=object.file_type,
 					status="started")
 			try:
-				add_process.save()
 				if object.file_type == 'MARC Data':
+					add_process.save()
 					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
 					# We want the program to wait on this thread before shutting down.
 					t.setDaemon(True)
 					t.start()
 					if not t.isAlive():
 						add_process.delete()
-				elif object.file_type == 'BIBFRAME Data':
-					Bib_files.append(add_process.id)
+				elif object.file_type == 'BIBFRAME Data' and merge == True:
+					if not os.path.exists('Webapp/Processing/BIBFRAME'):
+						os.makedirs('Webapp/Processing/BIBFRAME')
+					oring_file = "Webapp/source/%s" %(str(object.document))
+					dest_file = "Webapp/Processing/%s" %(str(object.document))
+					shutil.copyfile(oring_file, dest_file)
+				elif object.file_type == 'BIBFRAME Data' and merge == False:
+					add_process.save()
+					t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge])
+					# We want the program to wait on this thread before shutting down.
+					t.setDaemon(True)
+					t.start()
 			except:
 				return redirect('processing_duplicate')
 				break
-		(Bib_files)
-		t = threading.Thread(target=bib_process, args=[Bib_files, file_dict['search-API-selector']])
+	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys() and merge == True:
+		BIBFRAME = BIB_builder()
+		file = BIBFRAME.merger()
+		add_process = Processing(description="merged BIBFRAME file", 
+				name=str(file.replace('Webapp/Processing/', '')), 
+				uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
+				file_format='.xml',
+				file_type='BIBFRAME Data',
+				status="started")
+		add_process.save()
+		t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
 		# We want the program to wait on this thread before shutting down.
 		t.setDaemon(True)
 		t.start()
