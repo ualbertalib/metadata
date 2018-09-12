@@ -1,0 +1,26 @@
+
+
+{% block content %}
+
+<div class="modal fade" id="VFPModal" tabindex="-1" role="dialog" aria-labelledby="LCModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="VFPModalLabel">Query template for VIAF Personal names API</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>"https://viaf.org/viaf/search?query=local.personalNames+all+%22" + name + "%22&sortKeys=holdingscount&recordSchema=BriefVIAF&httpAccept=application/json"</p>
+
+        <p><strong>Example:</strong> https://viaf.org/viaf/search?query=local.personalNames+all+%22john%20smith%22&sortKeys= holdingscount&recordSchema=BriefVIAF&httpAccept=application/json</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

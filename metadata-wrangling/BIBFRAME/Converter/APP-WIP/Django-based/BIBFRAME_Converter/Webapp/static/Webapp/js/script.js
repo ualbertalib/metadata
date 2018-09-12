@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	var selected = 0;
+
 	jQuery.expr[':'].regex = function(elem, index, match) {
     var matchParams = match[3].split(','),
         validLabels = /^(data|css):/,
@@ -16,44 +18,72 @@ $(document).ready(function(){
 	setInterval(function(){
             $.getJSON('/progress/',
                     function (data) {
-                        var json = data['latest_progress_list'];
+                        var marc = data['latest_progress_marc'];
                         var st;
                         var tr;
                         var id;
-                        for (var i = 0; i < json.length; i++) {
-                        	st = json[i].stage 
-                        	id = json[i].process_ID
-                        	overall = '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: ' + json[i].M_to_B_percent/3 + '%" aria-valuenow="' + json[i].M_to_B_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: ' + json[i].name_percent/3 + '%" aria-valuenow="' + json[i].name_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: ' + json[i].title_percent/3 + '%" aria-valuenow="' + json[i].title_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> </div>' 
-                            tr = "<td>" + id + "</td>" +
-                            "<td>" + json[i].all_names + "</td>" +
-                            "<td>" + json[i].all_titles + "</td>" + 
-                            "<td>" + json[i].p_names + "</td>" +
-                            "<td>" + json[i].c_names + "</td>" +
-                            "<td>" + json[i].M_to_B_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: '+ json[i].M_to_B_percent +'%;" aria-valuenow="'+ json[i].M_to_B_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].M_to_B_percent +' </div> </div>' + "</td>" +
-                            "<td>" + json[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ json[i].name_percent +'%;" aria-valuenow="'+ json[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].name_percent +' </div> </div>' + "</td>" +
-                            "<td>" + json[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: '+ json[i].title_percent +'%;" aria-valuenow="'+ json[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ json[i].title_percent +' </div> </div>' + "</td>" 
-                             $('.progress_row'+ id).html(tr);
-                             $('.overall_progress' + id).html(overall);
-                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).addClass("current");
-                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).prevAll().addClass("done").removeClass("current");
-                             if (st.indexOf("The process was completed in") >= 0) {
-                             	$('.progress_stage' + id + ' .progress-container .results').html(st).addClass("completed");
-                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
-                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
-                             }
-
-                        }
-                    });
+                        var bib = data['latest_progress_bib'];
+                        var bst;
+                        var btr;
+                        var bid;
+                        for (var i = 0; i < marc.length; i++) {
+                        	if (marc[i] != null) {
+                        		console.log(marc[i]);
+	                        	st = marc[i].stage 
+	                        	id = marc[i].process_ID
+	                        	overall = '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: ' + marc[i].M_to_B_percent/3 + '%" aria-valuenow="' + marc[i].M_to_B_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: ' + marc[i].name_percent/3 + '%" aria-valuenow="' + marc[i].name_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: ' + marc[i].title_percent/3 + '%" aria-valuenow="' + marc[i].title_percent/3 + '" aria-valuemin="0" aria-valuemax="100"></div> </div>' 
+	                            tr = "<td>" + id + "</td>" +
+	                            "<td>" + marc[i].all_names + "</td>" +
+	                            "<td>" + marc[i].all_titles + "</td>" + 
+	                            "<td>" + marc[i].p_names + "</td>" +
+	                            "<td>" + marc[i].c_names + "</td>" +
+	                            "<td>" + marc[i].M_to_B_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: '+ marc[i].M_to_B_percent +'%;" aria-valuenow="'+ marc[i].M_to_B_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ marc[i].M_to_B_percent +' </div> </div>' + "</td>" +
+	                            "<td>" + marc[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ marc[i].name_percent +'%;" aria-valuenow="'+ marc[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ marc[i].name_percent +' </div> </div>' + "</td>" +
+	                            "<td>" + marc[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: '+ marc[i].title_percent +'%;" aria-valuenow="'+ marc[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ marc[i].title_percent +' </div> </div>' + "</td>" 
+	                             $('.progress_row'+ id).html(tr);
+	                             $('.overall_progress' + id).html(overall);
+	                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).addClass("current");
+	                             $('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .' + st).prevAll().addClass("done").removeClass("current");
+	                             if (st.indexOf("The process was completed in") >= 0) {
+	                             	$('.progress_stage' + id + ' .progress-container .results').html(st).addClass("completed");
+	                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
+	                             	$('.progress_stage' + id + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
+	                            };
+	                        };
+                         };
+                        for (var i = 0; i < bib.length; i++) {
+                        	if (bib[i] != null) {
+	                        	bst = bib[i].stage 
+	                        	bid = bib[i].process_ID
+	                        	boverall = '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: ' + bib[i].name_percent/2 + '%" aria-valuenow="' + bib[i].name_percent/2 + '" aria-valuemin="0" aria-valuemax="100"></div> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: ' + bib[i].title_percent/2 + '%" aria-valuenow="' + bib[i].title_percent/2 + '" aria-valuemin="0" aria-valuemax="100"></div> </div>' 
+	                            btr = "<td>" + bid + "</td>" +
+	                            "<td>" + bib[i].all_names + "</td>" +
+	                            "<td>" + bib[i].all_titles + "</td>" + 
+	                            "<td>" + bib[i].p_names + "</td>" +
+	                            "<td>" + bib[i].c_names + "</td>" +
+	                            "<td>" + bib[i].name_index  + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: '+ bib[i].name_percent +'%;" aria-valuenow="'+ bib[i].name_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ bib[i].name_percent +' </div> </div>' + "</td>" +
+	                            "<td>" + bib[i].title_index + '<div class="progress"> <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: '+ bib[i].title_percent +'%;" aria-valuenow="'+ bib[i].title_percent +'" aria-valuemin="0" aria-valuemax="100"> '+ bib[i].title_percent +' </div> </div>' + "</td>" 
+	                             $('.progress_row'+ bid).html(btr);
+	                             $('.overall_progress' + bid).html(boverall);
+	                             $('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .' + bst).addClass("current");
+	                             $('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .' + bst).prevAll().addClass("done").removeClass("current");
+	                             if (bst.indexOf("The process was completed in") >= 0) {
+	                             	$('.progress_stage' + bid + ' .progress-container .results').html(st).addClass("completed");
+	                             	$('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
+	                             	$('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
+	                            };
+                        	};
+	                    };
+                	}
+               	);
        },1000);
 
 	$(function() {
 		$('button[objid]').on('click', function() {
 			var id = $(this).attr("objid");
 			console.log(id);
-			$('.progress_head'+id).toggle();
-			$('.progress_stage_head'+id).toggle();
-			$('.progress_row'+id).toggle();
-			$('.progress_stage'+id).toggle();
+			$('.progress_table'+id).toggle();
+
 		});
 	});
 
@@ -67,10 +97,8 @@ $(document).ready(function(){
 		$(".file-format").hide();
 		$(".bib_form").hide();
 		$(".marc_form").hide();
-		$(':regex(class, .*progress_head.*)').hide();
-		$(':regex(class, .*progress_stage_head.*)').hide();
-		$(':regex(class, .*progress_row.*)').hide();
-		$(':regex(class, .*progress_stage.*)').hide();
+		$(':regex(class, .*progress_table.*)').hide();
+
 	});
 
     $(function() {
@@ -105,4 +133,23 @@ $(document).ready(function(){
 	 $('#isAgeSelected').click(function() {
     $("#txtAge").toggle(this.checked);
 });
+
+	$('#myModal').on('shown.bs.modal', function () {
+  		$('#myInput').trigger('focus')
+})
+
+	$(window).on('load',function(){
+        $('#exampleModal').modal('hide');
+    });
+
+	$('.bib_merge').tooltip({ boundary: 'window' })
+
+	$(function() {
+		$('.file_selector').on('click', function() {
+   			var check = $('.file_selector').find('input[type=checkbox]:checked').length;
+   			console.log(check);
+   		return false;
+		});
+	});
+
 });

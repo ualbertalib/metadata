@@ -48,18 +48,37 @@ class P_progress(models.Model):
     M_to_B_index = models.CharField(max_length=25, default="0")
     master_file = models.CharField(max_length=255, blank=True)
 
-    def as_json(self):
+    def as_marc(self):
     	pd = self.pid.id
-    	return dict(
-        	process_ID=pd,
-            stage=self.stage,
-            all_titles=self.all_titles, 
-            all_names=self.all_names,
-            p_names=self.p_names,
-            c_names=self.c_names,
-            name_index=self.name_index,
-            title_index=self.title_index,
-            M_to_B_index=self.M_to_B_index,
-            name_percent="{0:.2f}".format(round((int(self.name_index)/int(self.all_names))*100,2)),
-            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)),
-            M_to_B_percent="{0:.2f}".format(round((int(self.M_to_B_index)/int(self.all_MARC))*100,2)))
+    	itemType = self.pid.file_type
+    	if itemType == 'MARC Data':
+    		return dict(
+	        	process_ID=pd,
+	            stage=self.stage,
+	            all_titles=self.all_titles, 
+	            all_names=self.all_names,
+	            p_names=self.p_names,
+	            c_names=self.c_names,
+	            name_index=self.name_index,
+	            title_index=self.title_index,
+	            M_to_B_index=self.M_to_B_index,
+	            name_percent="{0:.2f}".format(round((int(self.name_index)/int(self.all_names))*100,2)),
+	            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)),
+	            M_to_B_percent="{0:.2f}".format(round((int(self.M_to_B_index)/int(self.all_MARC))*100,2)))
+    	
+
+    def as_bib(self):
+    	pd = self.pid.id
+    	itemType = self.pid.file_type
+    	if itemType == 'BIBFRAME Data':
+    		return dict(
+	        	process_ID=pd,
+	            stage=self.stage,
+	            all_titles=self.all_titles, 
+	            all_names=self.all_names,
+	            p_names=self.p_names,
+	            c_names=self.c_names,
+	            name_index=self.name_index,
+	            title_index=self.title_index,
+	            name_percent="{0:.2f}".format(round((int(self.name_index)/int(self.all_names))*100,2)),
+	            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)))

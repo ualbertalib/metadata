@@ -1,0 +1,26 @@
+
+
+{% block content %}
+
+<div class="modal fade" id="LCModal" tabindex="-1" role="dialog" aria-labelledby="LCModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LCModalLabel">Query template for Library of Congress didyoumean API</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>"http://id.loc.gov" + query_type + "/didyoumean/?label=" + name</p>
+
+        <p><strong>Example:</strong> http://id.loc.gov/authorities/names//didyoumean/?label=john%20smith</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -6,10 +6,13 @@ from django.views.generic.edit import DeleteView
 from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os, signal
-from .Code.enrich import main
+from .Code.enrich import marc_process, bib_process
 from .Code.Utils import PrintException
+from .Code.Classes.BIB_builder import BIB_builder
 import threading
 import shutil
+import time
+from datetime import datetime
 
 def index(request):
 	docs = Document.objects.all()
@@ -17,6 +20,7 @@ def index(request):
 	bib_form = Bib_DocumentForm(request.POST, request.FILES)
 	marc_documents = Marc_Document.objects.all()
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
+	processing_documents = Processing.objects.all()
 	checksum="thisisadummyobjectonlynumber123456"
 	if docs.filter(OID=checksum).exists():
 		pass
@@ -69,7 +73,7 @@ def index(request):
 			if marc_form.is_valid():
 				marc_form.save()
 				return redirect('index')
-	return render(request, 'webapp/index.html', { 'docs': docs, 'marc_form': marc_form, 'bib_form': bib_form})
+	return render(request, 'webapp/index.html', { 'docs': docs, 'processing_documents': processing_documents, 'marc_form': marc_form, 'bib_form': bib_form})
 
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
@@ -109,10 +113,11 @@ def processingQueue(request):
 	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
-	print (file_dict)
+	merge = False
+	if 'merge' in file_dict.keys():
+		merge = True
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
 		for item in file_dict['file_selected']:
-			print (item)
 			try:
 				object = Marc_Document.objects.get(document=item)
 			except:
@@ -124,26 +129,51 @@ def processingQueue(request):
 					file_type=object.file_type,
 					status="started")
 			try:
-				add_process.save()
-				t = threading.Thread(target=main, args=[add_process, file_dict['search-API-selector']])
-				# We want the program to wait on this thread before shutting down.
-				t.setDaemon(True)
-				t.start()
-				print (threading.currentThread().getName())
-				if not t.isAlive():
-					print ("the process is not aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-					add_process.delete()
+				if object.file_type == 'MARC Data':
+					add_process.save()
+					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
+					# We want the program to wait on this thread before shutting down.
+					t.setDaemon(True)
+					t.start()
+					if not t.isAlive():
+						add_process.delete()
+				elif object.file_type == 'BIBFRAME Data' and merge == True:
+					if not os.path.exists('Webapp/Processing/BIBFRAME'):
+						os.makedirs('Webapp/Processing/BIBFRAME')
+					oring_file = "Webapp/source/%s" %(str(object.document))
+					dest_file = "Webapp/Processing/%s" %(str(object.document))
+					shutil.copyfile(oring_file, dest_file)
+				elif object.file_type == 'BIBFRAME Data' and merge == False:
+					add_process.save()
+					t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge])
+					# We want the program to wait on this thread before shutting down.
+					t.setDaemon(True)
+					t.start()
 			except:
 				return redirect('processing_duplicate')
 				break
-	
+	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys() and merge == True:
+		BIBFRAME = BIB_builder()
+		file = BIBFRAME.merger()
+		add_process = Processing(description="merged BIBFRAME file", 
+				name=str(file.replace('Webapp/Processing/', '')), 
+				uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
+				file_format='.xml',
+				file_type='BIBFRAME Data',
+				status="started")
+		add_process.save()
+		t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
+		# We want the program to wait on this thread before shutting down.
+		t.setDaemon(True)
+		t.start()
 	processing_docs = Processing.objects.all()
 	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
 def progress(request):
-	update = [item.as_json() for item in P_progress.objects.all()]
-	return JsonResponse({'latest_progress_list':update})
+	update_marc = [item.as_marc() for item in P_progress.objects.all()]
+	update_bib = [item.as_bib() for item in P_progress.objects.all()]
+	return JsonResponse({'latest_progress_marc':update_marc, 'latest_progress_bib':update_bib})
 
 def processing(request, id=None):
 	object = Processing.objects.get(id=id)
