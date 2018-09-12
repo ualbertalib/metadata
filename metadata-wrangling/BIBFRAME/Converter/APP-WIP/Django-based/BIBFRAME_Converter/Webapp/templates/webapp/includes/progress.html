@@ -1,51 +1,18 @@
 
 {% block content %}
-			
-            <tr>
-				<td class="progress_stage_head{{obj.id}}" colspan="8" align="center"><h3>Processing Progress</h3></td>
-			</tr>
-    		<tr>
-    			<td class="progress_stage{{obj.id}}" colspan="8" align="center">
-    				<div class="progress-container"> 
-			            <div class="wrapper"> 
-			            	<div class="progress-nav">
-			                      <div class="stage MARC_to_MARC-XML current"><span>MARC to MARC/XML</span></div>
-			                      <div class="stage MARC-XML_to_BIBFRAME"><span>MARC/XML to BIBFRAME</span></div>
-			                      <div class="stage Extracting_names/titles"><span>Extracting names/titles</span></div>
-			                      <div class="stage Enriching_names"><span>Enriching names</span></div>
-			                      <div class="stage Enriching_titles"><span>Enriching titles</span></div>
-			                      <div class="stage Optimization"><span>Optimization</span></div>
-			                      <div class="stage Writing_to_BIBFRAME"><span>Writing to BIBFRAME</span></div>
-			                  </div>
-			            </div>
-			            <div class="stage results"><span></span></div>
-			        </div>
-    			</td>
-    		</tr>
-			<tr class="progress_head{{obj.id}}">
-    			<th>Process ID</th>
-				<th>Names extracted</th>
-				<th>Titles extracted</th>
-				<th>Personal names</th>
-				<th>Corporate names</th>
-				<th>MARC to BIBFRAME conversion Progress</th>
-				<th>Name Enrichment Progress</th>
-				<th>Title Enrichment Progress</th>
-    		</tr>
-    		<tr class="progress_row{{obj.id}}">
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-				<td>N/A</td>
-			</tr>
-			<tr>
-				<td colspan="8" align="center">
-					<hr class="divider">
-				</td>
-			</tr>			
-
+	<tr class="progress_table{{obj.id}}">
+		<td colspan="8" align="center">
+			<table class="table table-hover" style="background: #eee; width: 95%; margin: 0 auto;">
+		        <tr>
+					<td class="progress_stage_head{{obj.id}}" colspan="8" align="center"><h3>Processing Progress</h3></td>
+				</tr>
+				{% if obj.file_type == "MARC Data" %}
+					{% include 'webapp/includes/marc_progress.html' %}
+				{% endif %}
+				{% if obj.file_type == "BIBFRAME Data" %}
+					{% include 'webapp/includes/bib_progress.html' %}
+				{% endif %}	
+			</table>
+		</td>
+	</tr>
 {% endblock %}

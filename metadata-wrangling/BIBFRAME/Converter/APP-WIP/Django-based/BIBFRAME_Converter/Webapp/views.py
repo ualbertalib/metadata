@@ -170,8 +170,9 @@ def processingQueue(request):
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
 def progress(request):
-	update = [item.as_json() for item in P_progress.objects.all()]
-	return JsonResponse({'latest_progress_list':update})
+	update_marc = [item.as_marc() for item in P_progress.objects.all()]
+	update_bib = [item.as_bib() for item in P_progress.objects.all()]
+	return JsonResponse({'latest_progress_marc':update_marc, 'latest_progress_bib':update_bib})
 
 def processing(request, id=None):
 	object = Processing.objects.get(id=id)
