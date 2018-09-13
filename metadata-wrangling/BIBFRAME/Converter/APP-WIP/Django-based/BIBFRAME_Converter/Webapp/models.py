@@ -82,3 +82,24 @@ class P_progress(models.Model):
 	            title_index=self.title_index,
 	            name_percent="{0:.2f}".format(round((int(self.name_index)/int(self.all_names))*100,2)),
 	            title_percent="{0:.2f}".format(round((int(self.title_index)/int(self.all_titles))*100,2)))
+
+
+class Progress_archive(models.Model):
+	process_ID = models.CharField(max_length=255, blank=True)
+	description = models.CharField(max_length=255, blank=True)
+	name = models.CharField(max_length=255, blank=True)
+	uploaded_at = models.DateTimeField(auto_now_add=False)
+	file_format = models.CharField(max_length=5,default='.xml')
+	file_type = models.CharField(max_length=155,default='BIBFRAME Data')
+	start_time = models.DateTimeField(auto_now_add=True)
+	status = models.CharField(max_length=50, default='not started')
+	stage = models.CharField(max_length=255, default="MARC_to_MARC-XML")
+	all_names = models.CharField(max_length=25, default="1")
+	all_titles = models.CharField(max_length=25, default="1")
+	all_MARC = models.CharField(max_length=25, default="1")
+	p_names = models.CharField(max_length=25, default="N/A")
+	c_names = models.CharField(max_length=25, default="N/A")
+	name_index = models.CharField(max_length=25, default="100")
+	title_index = models.CharField(max_length=25, default="100")
+	M_to_B_index = models.CharField(max_length=25, default="100")
+	master_file = models.CharField(max_length=255, blank=True)

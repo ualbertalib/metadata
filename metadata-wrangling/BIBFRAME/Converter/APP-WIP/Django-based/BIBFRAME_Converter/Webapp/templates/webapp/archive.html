@@ -1,0 +1,52 @@
+{% extends 'webapp/base.html' %}
+{% load replace %}
+{% block content %}
+<h3>Processed Files</h3>
+{% if archives %}
+
+		<table class="table table-hover">
+			<tr>
+				<th>Description</th>
+				<th>Filename</th>
+				<th>uploaded at</th>
+				<th>started at</th>
+				<th>compeleted at</th>
+				<th>File type</th>
+				<th>File format</th>
+				<th></th>
+				<th></th>
+			</tr>
+			{% for obj in archives %}
+            <tr>
+              <td>{{ obj.description }}</td>
+              <td>{{ obj.name|replaceBIB|replaceMARC }}</a></td>
+              <td><small>{{ obj.uploaded_at }}</small></td>
+              <td><small>{{ obj.start_time }}</small></td>
+              <td><small>{{ obj.status }}</small></td>
+              <td>{{ obj.file_type }}</td>
+              <td>{{ obj.file_format }}</td>
+              <td><form action="{% url 'delete_archive' id=obj.id %}" method="POST">
+                  {% csrf_token %}
+                  <input class="btn btn-default btn-danger" type="submit" value="Remove" onclick="return confirm('Are you sure you want remove {{ obj.name }} from archives? All the processed files will be removed from disk!!!')"/>
+                </form></td>
+            	<td><button class="btn btn-default btn-danger" type="submit" name="view_progress" objid="{{obj.id}}">Details</button></td>
+            </tr>
+            {% include 'webapp/includes/archive_P.html' %}
+          {% endfor %}
+        </table>
+<p><a href="{% url 'index' %}">Return to home</a></p>
+{% else %}
+	<table class="table table-hover">
+			<tr>
+				<th>Description</th>
+				<th>Filename</th>
+				<th>uploaded at</th>
+				<th>started at</th>
+				<th>File type</th>
+				<th>File format</th>
+			</tr>
+			<tr> <td colspan="6" align="center">There are no processed files archive<a href="{% url 'index' %}">start a process</a></td></tr>
+{% endif %}
+
+
+{% endblock %}

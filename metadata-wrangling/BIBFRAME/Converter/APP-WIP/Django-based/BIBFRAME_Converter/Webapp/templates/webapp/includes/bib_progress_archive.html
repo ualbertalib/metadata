@@ -1,0 +1,41 @@
+
+
+
+{% block content %}
+
+	<tr>
+		<td class="progress_stage{{obj.id}}" colspan="8" align="center">
+			<div class="progress-container"> 
+	            <div class="wrapper"> 
+	            	<div class="progress-nav">
+	                      <div class="stage Extracting_names/titles done"><span>Extracting names/titles</span></div>
+	                      <div class="stage Enriching_names done"><span>Enriching names</span></div>
+	                      <div class="stage Enriching_titles done"><span>Enriching titles</span></div>
+	                      <div class="stage Optimization done"><span>Optimization</span></div>
+	                      <div class="stage Writing_to_BIBFRAME done"><span>Writing to BIBFRAME</span></div>
+	                  </div>
+	            </div>
+	            <div class="stage results completed"><span>{{ obj.stage }}</span></div>
+	        </div>
+		</td>
+	</tr>
+	<tr class="progress_head{{obj.id}}">
+		<th>Process ID</th>
+		<th>Names extracted</th>
+		<th>Titles extracted</th>
+		<th>Personal names</th>
+		<th>Corporate names</th>
+		<th>Names Enriched</th>
+		<th>Titles Enriched</th>
+	</tr>
+	<tr class="progress_row{{obj.id}}">
+		<td>{{ obj.process_ID }}</td>
+		<td>{{ obj.all_names }}</td>
+		<td>{{ obj.all_titles }}</td>
+		<td>{{ obj.p_names }}</td>
+		<td>{{ obj.c_names }}</td>
+		<td>{{ obj.name_index }}</td>
+		<td>{{ obj.title_index }}</td>
+	</tr>	
+
+{% endblock %}
