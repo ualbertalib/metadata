@@ -25,7 +25,7 @@
               <td><small>{{ obj.status }}</small></td>
               <td>{{ obj.file_type }}</td>
               <td>{{ obj.file_format }}</td>
-              <td><form action="{% url 'stop' id=obj.id %}" method="POST">
+              <td><form action="{% url 'delete_archive' id=obj.id %}" method="POST">
                   {% csrf_token %}
                   <input class="btn btn-default btn-danger" type="submit" value="Remove" onclick="return confirm('Are you sure you want remove {{ obj.name }} from archives? All the processed files will be removed from disk!!!')"/>
                 </form></td>
@@ -45,7 +45,7 @@
 				<th>File type</th>
 				<th>File format</th>
 			</tr>
-			<tr> <td colspan="6" align="center">There are no files being processed <a href="{% url 'index' %}">Add a file</a></td></tr>
+			<tr> <td colspan="6" align="center">There are no processed files archive<a href="{% url 'index' %}">start a process</a></td></tr>
 {% endif %}
 
 

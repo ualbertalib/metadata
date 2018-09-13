@@ -251,7 +251,8 @@ def bib_process(processing_files, apis, merge):
     add_to_archive(processing_files, db_update_obj)
 
 def add_to_archive(processing_files, db_update_obj):
-    archive=Progress_archive(description=processing_files.description,
+    archive=Progress_archive(process_ID = processing_files.id,
+        description=processing_files.description,
         name = processing_files.name,
         uploaded_at = processing_files.uploaded_at,
         file_format = processing_files.file_format,

@@ -204,3 +204,22 @@ def stop(request, id =None):
 def archive(request):
 	archives = Progress_archive.objects.all()
 	return render(request, 'webapp/archive.html', {'archives': archives})
+
+def delete_archive(request, id =None):
+	object = Progress_archive.objects.get(id=id)
+	master_file = object.master_file
+	object.delete()
+	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
+	BIB_folder = 'Webapp/converted_BIBFRAME'
+	MARC_folder = 'Webapp/MARC_XML'
+	Processing_folder = 'Webapp/Processing'
+	results_folder = 'Webapp/results'
+	for folder in folders:
+		master = "%s/%s" %(folder, master_file)
+		if os.path.isdir(master):
+			shutil.rmtree(master)
+		elif os.path.isfile(master):
+			os.unlink(master)
+	#pid = os.getpid()
+	#os.kill(pid, signal.SIGKILL)
+	return render(request, 'webapp/stop.html')
