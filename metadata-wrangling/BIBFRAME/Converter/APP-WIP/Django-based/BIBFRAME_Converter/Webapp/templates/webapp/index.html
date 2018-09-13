@@ -104,7 +104,7 @@
           <table class="table table-hover APIs">
             <tr>
               <td>
-                <input class="search_api_LC" type="checkbox" name="search-API-selector" value="search_api_LC" checked>
+                <input class="search_api_LC api_selected" type="checkbox" name="search-API-selector" value="search_api_LC">
               </td>
               <td>
                 <label id="LC">Library of Congress didyoumean API </label>
@@ -118,7 +118,7 @@
           </tr>
           <tr>
             <td>
-                <input class="search_api_LCS" type="checkbox" name="search-API-selector" value="search_api_LCS">
+                <input class="search_api_LCS api_selected" type="checkbox" name="search-API-selector" value="search_api_LCS">
             </td>
             <td>
               <label id="LC">Library of Congress Suggest API </label>
@@ -132,7 +132,7 @@
           </tr>
           <tr>
             <td>
-                <input class="viaf" type="checkbox" name="search-API-selector" value="search_api_VF">
+                <input class="viaf api_selected" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>              
               <label id=viaf>VIAF General API </label>
@@ -146,7 +146,7 @@
           </tr>
           <tr>
             <td>
-                <input class="search_api_VFP" type="checkbox" name="search-API-selector" value="search_api_VF">
+                <input class="search_api_VFP api_selected" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>
               <label id=viaf>VIAF Personal names API </label>
@@ -160,7 +160,7 @@
           </tr>
           <tr>
             <td>
-                <input class="search_api_VFC" type="checkbox" name="search-API-selector" value="search_api_VF">
+                <input class="search_api_VFC api_selected" type="checkbox" name="search-API-selector" value="search_api_VF">
             </td>
             <td>
               <label id=viaf>VIAF Corporate names API </label>
@@ -175,7 +175,7 @@
           </table>
         </div>
           <br>
-            <input class="btn btn-default btn-danger btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="PROCESS"/>
+            <button class="btn btn-default btn-danger btn-lg btn-block process_button" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit">PROCESS</button>
           </form>
           <form action="{% url 'processingQueue' %}" method="POST">
             {% csrf_token %}

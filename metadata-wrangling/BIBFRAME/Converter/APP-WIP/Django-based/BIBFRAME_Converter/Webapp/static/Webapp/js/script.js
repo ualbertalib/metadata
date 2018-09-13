@@ -98,6 +98,7 @@ $(document).ready(function(){
 		$(".bib_form").hide();
 		$(".marc_form").hide();
 		$(':regex(class, .*progress_table.*)').hide();
+		$('.process_button').prop('disabled', true).addClass('disabled')
 
 	});
 
@@ -142,14 +143,34 @@ $(document).ready(function(){
         $('#exampleModal').modal('hide');
     });
 
-	$('.bib_merge').tooltip({ boundary: 'window' })
+
 
 	$(function() {
-		$('.file_selector').on('click', function() {
-   			var check = $('.file_selector').find('input[type=checkbox]:checked').length;
-   			console.log(check);
-   		return false;
+		$('.file_selector').click(function() {
+			var n = $(".file_selector:checked").length;
+			var m = $(".api_selected:checked").length;
+			if (n > 0 && m > 0) {
+			$('.process_button').html("PROCESS (" + n + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+			} if (n < 1 || m < 1) {
+				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+			}
 		});
 	});
+
+	$(function() {
+		$('.api_selected').click(function() {
+			var n = $(".file_selector:checked").length;
+			var m = $(".api_selected:checked").length;
+			if (n > 0 && m > 0) {
+			$('.process_button').html("PROCESS (" + n + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+			} if (n < 1 || m <1) {
+				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+			}
+		});
+	});
+
+//	$(function() {
+//		$('.bib_merge').tooltip('toggle')
+//	});
 
 });
