@@ -1,0 +1,18 @@
+
+{% block content %}
+	<tr class="progress_table{{obj.id}}">
+		<td colspan="8" align="center">
+			<table class="table table-hover" style="background: #eee; width: 95%; margin: 0 auto;">
+		        <tr>
+					<td class="progress_stage_head{{obj.id}}" colspan="8" align="center"><h3>Processing Details</h3></td>
+				</tr>
+				{% if obj.file_type == "MARC Data" %}
+					{% include 'webapp/includes/marc_progress_archive.html' %}
+				{% endif %}
+				{% if obj.file_type == "BIBFRAME Data" %}
+					{% include 'webapp/includes/bib_progress_archive.html' %}
+				{% endif %}	
+			</table>
+		</td>
+	</tr>
+{% endblock %}

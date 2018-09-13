@@ -3,7 +3,7 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 from django.views.generic.edit import DeleteView
-from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress
+from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_progress, Progress_archive
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os, signal
 from .Code.enrich import marc_process, bib_process
@@ -79,8 +79,6 @@ def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
 
 def deleteRecord(request, id =None, format=None, old_id=None):
-	print (request)
-	print (format)
 	folder = 'Webapp/source'
 	doc = Document.objects.get(id=id)
 	doc.delete()
@@ -202,3 +200,7 @@ def stop(request, id =None):
 	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
 	return render(request, 'webapp/stop.html')
+
+def archive(request):
+	archives = Progress_archive.objects.all()
+	return render(request, 'webapp/archive.html', {'archives': archives})

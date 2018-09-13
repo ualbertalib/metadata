@@ -8,6 +8,7 @@ class Marc_DocumentForm(forms.ModelForm):
 		fields = ('description', 'document',)
 
 class Bib_DocumentForm(forms.ModelForm):
+	#document = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
 	class Meta:
 		model = Bib_Document
 		fields = ('description', 'document',)

@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ETree
 import time
 from datetime import datetime
 from shutil import copyfile
-from Webapp.models import Processing, P_progress
+from Webapp.models import Processing, P_progress, Progress_archive
 
 def marc_process(processing_files, apis):
     #proccess start time
@@ -248,6 +248,28 @@ def bib_process(processing_files, apis, merge):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
+    add_to_archive(processing_files, db_update_obj)
+
+def add_to_archive(processing_files, db_update_obj):
+    archive=Progress_archive(description=processing_files.description,
+        name = processing_files.name,
+        uploaded_at = processing_files.uploaded_at,
+        file_format = processing_files.file_format,
+        file_type = processing_files.file_type,
+        start_time = processing_files.start_time,
+        status = '%s' %(datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')),
+        stage = db_update_obj.stage,
+        all_names = db_update_obj.all_names,
+        all_titles = db_update_obj.all_titles,
+        all_MARC = db_update_obj.all_MARC,
+        p_names = db_update_obj.p_names,
+        c_names = db_update_obj.c_names,
+        name_index = db_update_obj.name_index,
+        title_index = db_update_obj.title_index,
+        M_to_B_index = db_update_obj.M_to_B_index,
+        master_file =db_update_obj.master_file)
+    archive.save()
+    processing_files.delete()
 
 def write(final_names, final_titles, file, output, log_file, filename):
     folder = 'Webapp/results'

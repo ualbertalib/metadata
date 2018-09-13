@@ -181,6 +181,10 @@
             {% csrf_token %}
             <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Queue ({{ processing_documents|length }} items)"/>
           </form>
+          <form action="{% url 'archive' %}" method="POST">
+            {% csrf_token %}
+            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Archive"/>
+          </form>
      
     {% endif %}
 
