@@ -50,4 +50,5 @@ class MARC_XML():
             db_update_obj.save()
             BIBFRAME.convert_to_BIBFRAME(i, db_update_obj)
             # merge the BIBFRAME files into one (per the master MARC file) for ease of processing
-            BIBFRAME.merger()
+            merged = BIBFRAME.merger()
+        return merged

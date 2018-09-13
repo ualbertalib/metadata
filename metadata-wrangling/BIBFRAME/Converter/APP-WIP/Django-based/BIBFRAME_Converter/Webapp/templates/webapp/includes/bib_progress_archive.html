@@ -15,7 +15,7 @@
 	                      <div class="stage Writing_to_BIBFRAME done"><span>Writing to BIBFRAME</span></div>
 	                  </div>
 	            </div>
-	            <div class="stage results"><span></span></div>
+	            <div class="stage results completed"><span>{{ obj.stage }}</span></div>
 	        </div>
 		</td>
 	</tr>
@@ -29,7 +29,7 @@
 		<th>Titles Enriched</th>
 	</tr>
 	<tr class="progress_row{{obj.id}}">
-		<td></td>
+		<td>{{ obj.process_ID }}</td>
 		<td>{{ obj.all_names }}</td>
 		<td>{{ obj.all_titles }}</td>
 		<td>{{ obj.p_names }}</td>

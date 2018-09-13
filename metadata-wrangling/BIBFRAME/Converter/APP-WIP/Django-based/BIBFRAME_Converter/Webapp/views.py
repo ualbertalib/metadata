@@ -7,7 +7,7 @@ from Webapp.models import Bib_Document, Marc_Document, Processing, Document, P_p
 from Webapp.forms import Bib_DocumentForm, Marc_DocumentForm, CheckForm, Del_DocumentForm
 import os, signal
 from .Code.enrich import marc_process, bib_process
-from .Code.Utils import PrintException
+from .Code.Utils import PrintException, clear_processing
 from .Code.Classes.BIB_builder import BIB_builder
 import threading
 import shutil
@@ -21,6 +21,7 @@ def index(request):
 	marc_documents = Marc_Document.objects.all()
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
 	processing_documents = Processing.objects.all()
+	processing_archive = Progress_archive.objects.all()
 	checksum="thisisadummyobjectonlynumber123456"
 	if docs.filter(OID=checksum).exists():
 		pass
@@ -73,7 +74,7 @@ def index(request):
 			if marc_form.is_valid():
 				marc_form.save()
 				return redirect('index')
-	return render(request, 'webapp/index.html', { 'docs': docs, 'processing_documents': processing_documents, 'marc_form': marc_form, 'bib_form': bib_form})
+	return render(request, 'webapp/index.html', { 'docs': docs, 'processing_documents': processing_documents, 'processing_archive': processing_archive, 'marc_form': marc_form, 'bib_form': bib_form})
 
 def model_form_upload(request):
     return render(request, 'webapp/model_form_upload.html')
@@ -153,6 +154,7 @@ def processingQueue(request):
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys() and merge == True:
 		BIBFRAME = BIB_builder()
 		file = BIBFRAME.merger()
+		clear_processing()
 		add_process = Processing(description="merged BIBFRAME file", 
 				name=str(file.replace('Webapp/Processing/', '')), 
 				uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
@@ -222,4 +224,4 @@ def delete_archive(request, id =None):
 			os.unlink(master)
 	#pid = os.getpid()
 	#os.kill(pid, signal.SIGKILL)
-	return render(request, 'webapp/stop.html')
+	return render(request, 'webapp/arc_del.html')

@@ -68,7 +68,7 @@ $(document).ready(function(){
 	                             $('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .' + bst).addClass("current");
 	                             $('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .' + bst).prevAll().addClass("done").removeClass("current");
 	                             if (bst.indexOf("The process was completed in") >= 0) {
-	                             	$('.progress_stage' + bid + ' .progress-container .results').html(st).addClass("completed");
+	                             	$('.progress_stage' + bid + ' .progress-container .results').html(bst).addClass("completed");
 	                             	$('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').prevAll().addClass("done").removeClass("current");
 	                             	$('.progress_stage' + bid + ' .progress-container .wrapper .progress-nav .Writing_to_BIBFRAME').addClass("done").removeClass("current");
 	                            };
