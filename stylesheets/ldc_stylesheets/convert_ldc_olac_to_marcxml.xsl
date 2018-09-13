@@ -28,54 +28,120 @@
 
   <xsl:template match="text()" />
   <xsl:template match="olac:olac">
+    <xsl:variable name="year" select="dc:date"/>
+    <xsl:variable name="ldcNum" select="dc:identifier[starts-with(., 'LDC')]"/>
     <marc:record>
-      <xsl:element name="marc:leader">
-        <xsl:variable name="type" select="dc:type"/>
-        <xsl:variable name="leader06">
+      <marc:leader>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>n</xsl:text>
+        <xsl:text>m</xsl:text>
+        <xsl:text>m</xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>a</xsl:text>
+        <xsl:text>2</xsl:text>
+        <xsl:text>2</xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>3</xsl:text>
+        <xsl:text>i</xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>4</xsl:text>
+        <xsl:text>5</xsl:text>
+        <xsl:text>0</xsl:text>
+        <xsl:text>0</xsl:text>
+      </marc:leader>
+      <marc:controlfield tag="006">
           <xsl:text>m</xsl:text>
-        </xsl:variable>
-        <xsl:variable name="leader07">
-          <xsl:choose>
-            <xsl:when test="$type='collection'">c</xsl:when>
-            <xsl:otherwise>m</xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>
-        <xsl:value-of select="concat('      ',$leader06,$leader07,'         3i     ')"/>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text>o</xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text>u</xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text> </xsl:text>
+      </marc:controlfield>
+      <marc:controlfield tag="007">
+          <xsl:text>c</xsl:text>
+          <xsl:text>u</xsl:text>
+          <xsl:text> </xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>u</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+          <xsl:text>|</xsl:text>
+      </marc:controlfield>
+      <xsl:element name="marc:controlfield">
+        <xsl:attribute name="tag">008</xsl:attribute>
+        <xsl:text>      </xsl:text>
+        <xsl:text>s</xsl:text>
+        <xsl:value-of select="$year"/>
+        <xsl:text>    </xsl:text>
+        <xsl:text>pau</xsl:text>
+        <xsl:text>    </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>  </xsl:text>
+        <xsl:text>u</xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>      </xsl:text>
+        <xsl:text>mul</xsl:text>
+        <xsl:text> </xsl:text>
+        <xsl:text>d</xsl:text>
       </xsl:element>
-      
-      <xsl:for-each select="dc:identifier">
-        <xsl:choose>
-          <xsl:when test="contains(., 'ISBN: ')">
-            <xsl:analyze-string select="substring-after(., 'ISBN: ')" regex="(\d)[-](\d{{5}})[-](\d{{3}})[-](\d)">
-              <xsl:matching-substring>
-                <marc:datafield tag="020" ind1=" " ind2=" ">
-                  <marc:subfield code="a">
-                    <xsl:value-of select="regex-group(1)"/>
-                    <xsl:value-of select="regex-group(2)"/>
-                    <xsl:value-of select="regex-group(3)"/>
-                    <xsl:value-of select="regex-group(4)"/>
-                  </marc:subfield>
-                </marc:datafield>
-              </xsl:matching-substring>
-            </xsl:analyze-string>
-          </xsl:when>
-          <xsl:when test="contains(., 'ISLRN: ')">
-            <marc:datafield tag="024" ind1="8" ind2=" ">
+
+      <xsl:for-each select="dc:identifier[contains(., 'ISBN: ')]">
+        <xsl:analyze-string select="substring-after(., 'ISBN: ')" regex="(\d)[-](\d{{5}})[-](\d{{3}})[-](\d)">
+          <xsl:matching-substring>
+            <marc:datafield tag="020" ind1=" " ind2=" ">
               <marc:subfield code="a">
-                <xsl:value-of select="." />
+                <xsl:value-of select="regex-group(1)"/>
+                <xsl:value-of select="regex-group(2)"/>
+                <xsl:value-of select="regex-group(3)"/>
+                <xsl:value-of select="regex-group(4)"/>
               </marc:subfield>
             </marc:datafield>
-          </xsl:when>
-          <xsl:otherwise>
-            <marc:datafield tag="500" ind1=" " ind2=" ">
-              <marc:subfield code="a">
-                <xsl:value-of select="." />
-              </marc:subfield>
-            </marc:datafield>
-          </xsl:otherwise>
-        </xsl:choose>
+          </xsl:matching-substring>
+        </xsl:analyze-string>        
       </xsl:for-each>
-      
+
+      <marc:datafield tag="024" ind1="8" ind2=" ">
+        <marc:subfield code="a">
+          <xsl:value-of select="$ldcNum" />
+        </marc:subfield>
+      </marc:datafield>
+
+      <xsl:for-each select="dc:identifier[contains(., 'ISLRN: ')]">
+        <marc:datafield tag="024" ind1="8" ind2=" ">
+          <marc:subfield code="a">
+            <xsl:value-of select="." />
+          </marc:subfield>
+        </marc:datafield>
+      </xsl:for-each>
+
       <marc:datafield tag="042" ind1=" " ind2=" ">
         <marc:subfield code="a">dc</marc:subfield>
       </marc:datafield>
@@ -93,19 +159,33 @@
       <xsl:for-each select="dc:publisher[contains(., 'Linguistic')]">
         <marc:datafield tag="264" ind1=" " ind2=" ">
           <marc:subfield code="a">
-            <xsl:text>[Philadelphia, Pennsylvania] :</xsl:text>
+            <xsl:text>[Philadelphia, Pennsylvania]: </xsl:text>
           </marc:subfield>
           <marc:subfield code="b">
             <xsl:text>Linguistic Data Consortium, </xsl:text>
           </marc:subfield>
           <marc:subfield code="c">
             <xsl:text>[</xsl:text>
-            <xsl:value-of select="../dc:date[1]" />
+            <xsl:value-of select="$year" />
             <xsl:text>]</xsl:text>
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
 
+      <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:value-of select="$ldcNum" />
+        </marc:subfield>
+      </marc:datafield>
+
+      <xsl:for-each select="dc:identifier[contains(., 'https:')]">
+        <marc:datafield tag="500" ind1=" " ind2=" ">
+          <marc:subfield code="a">
+            <xsl:value-of select="." />
+          </marc:subfield>
+        </marc:datafield>
+      </xsl:for-each>
+      
       <xsl:for-each select="dc:description">
         <marc:datafield tag="520" ind1=" " ind2=" ">
           <marc:subfield code="a">
@@ -160,7 +240,7 @@
       </xsl:for-each>
 
 <!-- dc:source Not used in OLAC metadata -->
-      
+<!--
       <xsl:for-each select="dc:source">
         <marc:datafield tag="786" ind1="0" ind2=" ">
           <marc:subfield code="n">
@@ -168,9 +248,9 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
-
+-->
 <!-- dc:relation not used in OLAC metadata -->
-      
+<!--
       <xsl:for-each select="dc:relation">
         <marc:datafield tag="787" ind1="0" ind2=" ">
           <marc:subfield code="n">
@@ -178,15 +258,9 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
-
+-->
     </marc:record>
 
   </xsl:template>
-
-<!-- There are no subjects in the OLAC metadata -->
-<!--subj_template Subject template removed-->
-
-<!-- There are no formatted name headings in the OLAC metadata -->
-<!--persname_template removed-->
   
 </xsl:stylesheet>
