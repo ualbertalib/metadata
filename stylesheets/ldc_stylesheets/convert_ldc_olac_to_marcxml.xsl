@@ -146,8 +146,6 @@
         <marc:subfield code="a">dc</marc:subfield>
       </marc:datafield>
       
-<!-- There are no dc:creator elements in OLAC metadata. for-each template removed -->
-
       <xsl:for-each select="dc:title[1]">
         <marc:datafield tag="245" ind1="0" ind2="0">
           <marc:subfield code="a">
@@ -171,6 +169,70 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+
+      <marc:datafield tag="336" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>computer dataset</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="b">
+          <xsl:text>cod</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="2">
+          <xsl:text>rdacontent</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
+
+      <xsl:for-each select="dc:type[@xsi:type='dcterms:DCMIType']">
+        <marc:datafield tag="336" ind1=" " ind2=" ">          
+          <marc:subfield code="a">
+            <xsl:choose>
+              <xsl:when test=".='Image'">still image</xsl:when>
+              <xsl:when test=".='MovingImage'">two-dimensional moving image</xsl:when>
+              <xsl:when test=".='Software'">computer program</xsl:when>
+              <xsl:when test=".='Sound'">spoken word</xsl:when>
+              <xsl:when test=".='StillImage'">still image</xsl:when>
+              <xsl:when test=".='Text'">text</xsl:when>
+            </xsl:choose>            
+          </marc:subfield>
+          <marc:subfield code="b">
+            <xsl:choose>
+              <xsl:when test=".='Image'">sti</xsl:when>
+              <xsl:when test=".='MovingImage'">tdi</xsl:when>
+              <xsl:when test=".='Software'">cop</xsl:when>
+              <xsl:when test=".='Sound'">spw</xsl:when>
+              <xsl:when test=".='StillImage'">sti</xsl:when>
+              <xsl:when test=".='Text'">txt</xsl:when>
+            </xsl:choose>
+          </marc:subfield>
+          <marc:subfield code="2">
+            <xsl:text>rdacontent</xsl:text>
+          </marc:subfield>
+        </marc:datafield>        
+      </xsl:for-each>
+
+      <marc:datafield tag="337" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>computer</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="b">
+          <xsl:text>c</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="2">
+          <xsl:text>rdamedia</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
+
+      <marc:datafield tag="338" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>unspecified</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="b">
+          <xsl:text>zu</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="2">
+          <xsl:text>rdacarrier</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
 
       <marc:datafield tag="500" ind1=" " ind2=" ">
         <marc:subfield code="a">
@@ -223,9 +285,16 @@
       <xsl:for-each select="dc:type[@xsi:type='dcterms:DCMIType']">
         <marc:datafield tag="655" ind1="7" ind2=" ">
           <marc:subfield code="a">
-            <xsl:value-of select="."/>
+            <xsl:choose>
+              <xsl:when test=".='Image'">Pictures</xsl:when>
+              <xsl:when test=".='MovingImage'">Video recordings</xsl:when>
+              <xsl:when test=".='Software'">computer program</xsl:when>
+              <xsl:when test=".='Sound'">Sound recordings</xsl:when>
+              <xsl:when test=".='StillImage'">Pictures</xsl:when>
+              <xsl:when test=".='Text'">Excerpts</xsl:when>
+            </xsl:choose>            
           </marc:subfield>
-          <marc:subfield code="2">DCMI Type</marc:subfield>
+          <marc:subfield code="2">lcgft</marc:subfield>
         </marc:datafield>
       </xsl:for-each>
 
