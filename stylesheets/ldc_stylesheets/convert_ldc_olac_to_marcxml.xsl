@@ -92,13 +92,16 @@
 
       <xsl:for-each select="dc:publisher[contains(., 'Linguistic')]">
         <marc:datafield tag="264" ind1=" " ind2=" ">
+          <marc:subfield code="a">
+            <xsl:text>[Philadelphia] :</xsl:text>
+          </marc:subfield>
           <marc:subfield code="b">
-            <xsl:value-of select="."/>
-            <xsl:text>, </xsl:text>
+            <xsl:text>Linguistic Data Consortium, </xsl:text>
           </marc:subfield>
           <marc:subfield code="c">
+            <xsl:text>[</xsl:text>
             <xsl:value-of select="../dc:date[1]" />
-            <xsl:text>.</xsl:text>
+            <xsl:text>]</xsl:text>
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
