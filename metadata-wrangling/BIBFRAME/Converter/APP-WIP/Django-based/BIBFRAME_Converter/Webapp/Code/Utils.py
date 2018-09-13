@@ -65,7 +65,7 @@ def delete_temp():
         print(e)
 
 def clear_processing():
-    folder = 'Webapp/Processing'
+    folder = 'Webapp/Processing/BIBFRAME'
     if not os.path.exists(folder):
         os.makedirs(folder)
     else:

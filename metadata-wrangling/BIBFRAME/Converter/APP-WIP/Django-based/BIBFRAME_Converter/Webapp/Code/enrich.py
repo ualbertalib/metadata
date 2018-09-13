@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ETree
 import time
 from datetime import datetime
 from shutil import copyfile
-from Webapp.models import Processing, P_progress
+from Webapp.models import Processing, P_progress, Progress_archive
 
 def marc_process(processing_files, apis):
     #proccess start time
@@ -27,114 +27,112 @@ def marc_process(processing_files, apis):
     clear_processing()
     #convert .mrc to MARC/XML
     Marc_XML = MARC_XML(file)
-    Marc_XML.convert_marc_xml(db_update_obj)
+    files = Marc_XML.convert_marc_xml(db_update_obj)
     #BIBFRAME = BIB_builder()
     #BIBFRAME.merger()
-    folder = 'Webapp/Processing'
-    #iterate over BIBFRAME files
-    for files in os.listdir(folder):
-        tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        file = os.path.join(folder, files)
-        filename = files.replace('.xml', '')
-        print ("processing " + filename)
-        ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        log_file = str(filename) + "-error-logs"
-        output = str(filename) + "-enhanced.xml" 
-        clearLogs(log_file, filename)
-        # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
-        #apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
-        #this is needed for LC APIs
-        query_type = "/authorities/names"
-        # extracting names and titles from BIBFRAME
-        db_update_obj.stage = "Extracting_names_and_titles"
+    tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    file = os.path.join('', files)
+    filename = files.replace('.xml', '').replace('Webapp/Processing/', '')
+    print ("processing " + filename)
+    ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    log_file = str(filename) + "-error-logs"
+    output = str(filename) + "-enhanced.xml" 
+    clearLogs(log_file, filename)
+    # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
+    #apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
+    #this is needed for LC APIs
+    query_type = "/authorities/names"
+    # extracting names and titles from BIBFRAME
+    db_update_obj.stage = "Extracting_names_and_titles"
+    db_update_obj.save()
+    bib_object = Bibframe(file, log_file)
+    transformed = bib_object.convert_bibframe()
+    names = bib_object.extract_names(transformed)[0]
+    titles = bib_object.extract_names(transformed)[1]
+    #getting corp names (for stat report)
+    all_names = bib_object.extract_names(transformed)[2]
+    corp_names = bib_object.extract_names(transformed)[3]
+    print (str(all_names) + " names were extrected from " + filename)
+    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
+    print (str(len(titles)) + " titles were extracted from " + filename)
+    db_update_obj.all_names = str(len(names))
+    db_update_obj.all_titles = str(len(titles))
+    db_update_obj.p_names = str(len(names) - corp_names)
+    db_update_obj.c_names=str(corp_names)
+    db_update_obj.save()
+    #dictionaries for storing URIs (names and titles) and stats
+    enriched_names = {}
+    enriched_titles = {}
+    stats = {}
+    print ("enriching names")
+    # iterate over the name dictionary 
+    db_update_obj.stage = "Enriching_names"
+    db_update_obj.save()
+    for index, item in enumerate(names.keys()):
+        db_update_obj.name_index = index+1
         db_update_obj.save()
-        bib_object = Bibframe(file, log_file)
-        transformed = bib_object.convert_bibframe()
-        names = bib_object.extract_names(transformed)[0]
-        titles = bib_object.extract_names(transformed)[1]
-        #getting corp names (for stat report)
-        all_names = bib_object.extract_names(transformed)[2]
-        corp_names = bib_object.extract_names(transformed)[3]
-        print (str(all_names) + " names were extrected from " + filename)
-        print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
-        print (str(len(titles)) + " titles were extracted from " + filename)
-        db_update_obj.all_names = str(len(names))
-        db_update_obj.all_titles = str(len(titles))
-        db_update_obj.p_names = str(len(names) - corp_names)
-        db_update_obj.c_names=str(corp_names)
+        name = item.split('-_-_-')[0]
+        #print(index+1, name)
+        enriched_names[item] = []
+        for api in apis:
+            #check if the stat for the API already exists
+            if api in stats.keys():
+                pass
+            else:
+                stats[api] = 0
+            # getting the API method
+            name_result = APIFactory().get_API(name, query_type, api, log_file)
+            # if the results are not empty, append to "enriched_names" dictionary the result using the api name as key
+            if name_result:
+                enriched_names[item].append(name_result)
+                # add number of results to be used latter in stats report
+                stats[api] = stats[api] + len(name_result)
+    print ("enriching titles")
+    # iterate over the title dictionary
+    db_update_obj.stage = "Enriching_titles"
+    db_update_obj.save()
+    for index, title in enumerate(titles.keys()):
+        db_update_obj.title_index = index+1
         db_update_obj.save()
-        #dictionaries for storing URIs (names and titles) and stats
-        enriched_names = {}
-        enriched_titles = {}
-        stats = {}
-        print ("enriching names")
-        # iterate over the name dictionary 
-        db_update_obj.stage = "Enriching_names"
-        db_update_obj.save()
-        for index, item in enumerate(names.keys()):
-            db_update_obj.name_index = index+1
-            db_update_obj.save()
-            name = item.split('-_-_-')[0]
-            #print(index+1, name)
-            enriched_names[item] = []
-            for api in apis:
-                #check if the stat for the API already exists
-                if api in stats.keys():
-                    pass
-                else:
-                    stats[api] = 0
-                # getting the API method
-                name_result = APIFactory().get_API(name, query_type, api, log_file)
-                # if the results are not empty, append to "enriched_names" dictionary the result using the api name as key
-                if name_result:
-                    enriched_names[item].append(name_result)
-                    # add number of results to be used latter in stats report
-                    stats[api] = stats[api] + len(name_result)
-        print ("enriching titles")
-        # iterate over the title dictionary
-        db_update_obj.stage = "Enriching_titles"
-        db_update_obj.save()
-        for index, title in enumerate(titles.keys()):
-            db_update_obj.title_index = index+1
-            db_update_obj.save()
-            #print(index+1, title)
-            for authors in titles[title]['authors']:
-                author =  authors.split('-_-_-')[0]
-                key = str(author) + "-_-_-" + str(title)
-                enriched_titles[key] = []
-                title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
-                if title_result:
-                    enriched_titles[key].append(title_result)
-        # getting rid of unwanted things
-        db_update_obj.stage = "Optimization"
-        db_update_obj.save()
-        name_results = clean_up(enriched_names)
-        title_result = clean_up(enriched_titles)
-        # get the best URI each API (highest score) and storing it in final_names and final_titles
-        result_names_Object = Results(name_results, names, file, 'name', log_file)
-        result_names_Object.maximizer()
-        final_names = result_names_Object.mapping()
-        result_title_Object = Results(title_result, titles, file, 'title', log_file)
-        final_titles = result_title_Object.mapping()
-        eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-        stats['names-enriched'] = len(final_names)
-        tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        #write back the URIs to the BIBFRAME file
-        db_update_obj.stage = "Writing_to_BIBFRAME"
-        db_update_obj.save()
-        write(final_names, final_titles, file, output, log_file, filename)
-        tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-        write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
-        file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-        write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
-        #removing temp-file.xml
-        delete_temp()
-        print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
+        #print(index+1, title)
+        for authors in titles[title]['authors']:
+            author =  authors.split('-_-_-')[0]
+            key = str(author) + "-_-_-" + str(title)
+            enriched_titles[key] = []
+            title_result = APIFactory().get_API(author, title, 'search_OCLC', log_file)
+            if title_result:
+                enriched_titles[key].append(title_result)
+    # getting rid of unwanted things
+    db_update_obj.stage = "Optimization"
+    db_update_obj.save()
+    name_results = clean_up(enriched_names)
+    title_result = clean_up(enriched_titles)
+    # get the best URI each API (highest score) and storing it in final_names and final_titles
+    result_names_Object = Results(name_results, names, file, 'name', log_file)
+    result_names_Object.maximizer()
+    final_names = result_names_Object.mapping()
+    result_title_Object = Results(title_result, titles, file, 'title', log_file)
+    final_titles = result_title_Object.mapping()
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
+    tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    #write back the URIs to the BIBFRAME file
+    db_update_obj.stage = "Writing_to_BIBFRAME"
+    db_update_obj.save()
+    write(final_names, final_titles, file, output, log_file, filename)
+    tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
+    file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    #removing temp-file.xml
+    delete_temp()
+    print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
     tpf = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     process_time = datetime.strptime(tpf, '%H:%M:%S') - datetime.strptime(tps, '%H:%M:%S')
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
+    add_to_archive(processing_files, db_update_obj)
 
 def bib_process(processing_files, apis, merge):
     #proccess start time
@@ -248,6 +246,30 @@ def bib_process(processing_files, apis, merge):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
+    add_to_archive(processing_files, db_update_obj)
+
+def add_to_archive(processing_files, db_update_obj):
+    archive=Progress_archive(process_ID = processing_files.id,
+        description=processing_files.description,
+        name = processing_files.name,
+        uploaded_at = processing_files.uploaded_at,
+        file_format = processing_files.file_format,
+        file_type = processing_files.file_type,
+        start_time = processing_files.start_time,
+        status = '%s' %(datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')),
+        stage = db_update_obj.stage,
+        all_names = db_update_obj.all_names,
+        all_titles = db_update_obj.all_titles,
+        all_MARC = db_update_obj.all_MARC,
+        p_names = db_update_obj.p_names,
+        c_names = db_update_obj.c_names,
+        name_index = db_update_obj.name_index,
+        title_index = db_update_obj.title_index,
+        M_to_B_index = db_update_obj.M_to_B_index,
+        master_file =db_update_obj.master_file)
+    archive.save()
+    time.sleep(30)
+    processing_files.delete()
 
 def write(final_names, final_titles, file, output, log_file, filename):
     folder = 'Webapp/results'
@@ -375,14 +397,14 @@ def get_stat(final_names, names, final_titles, titles, file):
             orientation='portrait')
         plt.clf()
         stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
-    colors = ['red', 'green']
-    labels = ['LC-IDs', 'VIAF-IDs']
-    x_multi = [LC_Score, VIAF_Score]
-    plt.hist(x_multi, 10, normed=1, histtype='bar', color=colors, label=labels)
-    plt.legend(prop={'size': 10})
-    plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
-    plt.savefig(file_path, facecolor='w', edgecolor='w',
-        orientation='portrait')
+    #colors = ['red', 'green']
+    #labels = ['LC-IDs', 'VIAF-IDs']
+    #x_multi = [LC_Score, VIAF_Score]
+    #plt.hist(x_multi, 10, normed=1, histtype='bar', color=colors, label=labels)
+    #plt.legend(prop={'size': 10})
+    #plt.suptitle('Matching Score distribution (' + file + ')', fontsize=12)
+    #plt.savefig(file_path, facecolor='w', edgecolor='w',
+     #   orientation='portrait')
     for i in final_titles.keys():
         if 'work_id' in final_titles[i]['scores']:
             work_id_Score.append(final_titles[i]['scores']['work_id'][1])

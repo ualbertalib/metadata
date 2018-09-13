@@ -53,3 +53,4 @@ class XML_BIBFRAME():
                     source.close()
             merged_file.write('</root>')
             merged_file.close()
+        return output
