@@ -256,6 +256,7 @@ def add_to_archive(processing_files, db_update_obj):
         file_format = processing_files.file_format,
         file_type = processing_files.file_type,
         start_time = processing_files.start_time,
+        apis = processing_files.apis,
         status = '%s' %(datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')),
         stage = db_update_obj.stage,
         all_names = db_update_obj.all_names,

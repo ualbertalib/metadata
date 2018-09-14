@@ -22,6 +22,8 @@ def index(request):
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
 	processing_documents = Processing.objects.all()
 	processing_archive = Progress_archive.objects.all()
+	# creating a dummy document to fill the first row of document table (uploaded files)
+	# without this the "PROCESS" button would not work
 	checksum="thisisadummyobjectonlynumber123456"
 	if docs.filter(OID=checksum).exists():
 		pass
@@ -113,9 +115,15 @@ def processingQueue(request):
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
 	merge = False
+	apis = ''
 	if 'merge' in file_dict.keys():
 		merge = True
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
+		for n, api in enumerate(file_dict['search-API-selector']):
+			if (n+1) < len(file_dict['search-API-selector']):
+				apis = apis + '%s_-_' %(api)
+			else:
+				apis = apis + api
 		for item in file_dict['file_selected']:
 			try:
 				object = Marc_Document.objects.get(document=item)
@@ -126,6 +134,7 @@ def processingQueue(request):
 					uploaded_at=object.uploaded_at,
 					file_format=object.file_format,
 					file_type=object.file_type,
+					apis=apis,
 					status="started")
 			try:
 				if object.file_type == 'MARC Data':
@@ -151,21 +160,22 @@ def processingQueue(request):
 			except:
 				return redirect('processing_duplicate')
 				break
-	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys() and merge == True:
-		BIBFRAME = BIB_builder()
-		file = BIBFRAME.merger()
-		clear_processing()
-		add_process = Processing(description="merged BIBFRAME file", 
-				name=str(file.replace('Webapp/Processing/', '')), 
-				uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
-				file_format='.xml',
-				file_type='BIBFRAME Data',
-				status="started")
-		add_process.save()
-		t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
-		# We want the program to wait on this thread before shutting down.
-		t.setDaemon(True)
-		t.start()
+		if  merge == True:
+			BIBFRAME = BIB_builder()
+			file = BIBFRAME.merger()
+			clear_processing()
+			add_process = Processing(description="merged BIBFRAME file", 
+					name=str(file.replace('Webapp/Processing/', '')), 
+					uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
+					file_format='.xml',
+					file_type='BIBFRAME Data',
+					apis=apis,
+					status="started")
+			add_process.save()
+			t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
+			# We want the program to wait on this thread before shutting down.
+			t.setDaemon(True)
+			t.start()
 	processing_docs = Processing.objects.all()
 	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})

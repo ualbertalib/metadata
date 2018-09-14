@@ -10,6 +10,7 @@
 				<th>Filename</th>
 				<th>uploaded at</th>
 				<th>started at</th>
+				<th>APIs</th>
 				<th>File type</th>
 				<th>File format</th>
 				<th></th>
@@ -21,6 +22,7 @@
               <td>{{ obj.name|replaceBIB|replaceMARC }}</a></td>
               <td><small>{{ obj.uploaded_at }}</small></td>
               <td><small>{{ obj.start_time }}</small></td>
+              <td><small>{{ obj.apis|get_apis }}</small></td>
               <td>{{ obj.file_type }}</td>
               <td>{{ obj.file_format }}</td>
               <td><form action="{% url 'stop' id=obj.id %}" method="POST">
@@ -30,7 +32,7 @@
             	<td><button class="btn btn-default btn-danger" type="submit" name="view_progress" objid="{{obj.id}}">Progress Details</button></td>
             </tr>
             <tr>
-            	<td class="overall_progress{{obj.id}}" colspan="8" align="center"></td>
+            	<td class="overall_progress{{obj.id}}" colspan="9" align="center"></td>
             </tr>
             {% include 'webapp/includes/progress.html' %}
           {% endfor %}

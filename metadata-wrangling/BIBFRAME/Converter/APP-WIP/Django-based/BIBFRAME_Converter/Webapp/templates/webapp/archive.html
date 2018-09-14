@@ -10,6 +10,7 @@
 				<th>Filename</th>
 				<th>uploaded at</th>
 				<th>started at</th>
+				<th>APIs</th>
 				<th>compeleted at</th>
 				<th>File type</th>
 				<th>File format</th>
@@ -22,6 +23,7 @@
               <td>{{ obj.name|replaceBIB|replaceMARC }}</a></td>
               <td><small>{{ obj.uploaded_at }}</small></td>
               <td><small>{{ obj.start_time }}</small></td>
+              <td><small>{{ obj.apis|get_apis }}</small></td>
               <td><small>{{ obj.status }}</small></td>
               <td>{{ obj.file_type }}</td>
               <td>{{ obj.file_format }}</td>
