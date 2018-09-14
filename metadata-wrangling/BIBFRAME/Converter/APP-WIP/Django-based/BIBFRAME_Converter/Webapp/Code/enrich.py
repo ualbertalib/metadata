@@ -23,24 +23,17 @@ def marc_process(processing_files, apis):
     db_update_obj = P_progress(pid=processing_files)
     db_update_obj.save()
     file = "Webapp/source/%s" %(processing_files.name) 
-    # delete files in the processing folder
-    clear_processing()
     #convert .mrc to MARC/XML
     Marc_XML = MARC_XML(file)
     files = Marc_XML.convert_marc_xml(db_update_obj)
-    #BIBFRAME = BIB_builder()
-    #BIBFRAME.merger()
     tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     file = os.path.join('', files)
-    filename = files.replace('.xml', '').replace('Webapp/Processing/', '')
+    filename = files.replace('.xml', '').replace('Webapp/Files/Processing/', '')
     print ("processing " + filename)
     ts = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     log_file = str(filename) + "-error-logs"
     output = str(filename) + "-enhanced.xml" 
     clearLogs(log_file, filename)
-    # all the APIs that will be searched - for a new API, add a new method to SearchAPI class and call it with adding a staticmethod to APIFactory
-    #apis = ['search_api_LC']#, 'search_api_LCS', 'search_api_VF', 'search_api_VFP', 'search_api_VFC']
-    #this is needed for LC APIs
     query_type = "/authorities/names"
     # extracting names and titles from BIBFRAME
     db_update_obj.stage = "Extracting_names_and_titles"
@@ -141,12 +134,12 @@ def bib_process(processing_files, apis, merge):
     db_update_obj = P_progress(pid=processing_files)
     db_update_obj.save()
     if merge == True:
-        file = "Webapp/Processing/%s" %(processing_files.name) 
+        file = "Webapp/Files/Processing/%s" %(processing_files.name) 
     else:
         file = "Webapp/source/%s" %(processing_files.name) 
     # delete files in the processing folder
     tfs = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
-    filename = file.replace('.xml', '').replace('Webapp/source/BIBFRAME/', '').replace('Webapp/Processing/', '')
+    filename = file.replace('.xml', '').replace('Webapp/source/BIBFRAME/', '').replace('Webapp/Files/Processing/', '')
     filename = "%s-%s" %(filename, datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
     print ("processing " + filename)
     db_update_obj.master_file = filename
@@ -273,7 +266,7 @@ def add_to_archive(processing_files, db_update_obj):
     processing_files.delete()
 
 def write(final_names, final_titles, file, output, log_file, filename):
-    folder = 'Webapp/results'
+    folder = 'Webapp/Files/results'
     if not os.path.exists(folder):
         os.makedirs(folder)
     clear_files(filename)
@@ -287,7 +280,7 @@ def write(final_names, final_titles, file, output, log_file, filename):
     enhanched = ETree.parse(file)
     clear_TSV(filename)
     #writing extract names matching URIs into a TSV file
-    tsv_file = 'Webapp/results/%s/TSVs/URIs-%s.tsv' %(filename, filename)
+    tsv_file = 'Webapp/Files/results/%s/TSVs/URIs-%s.tsv' %(filename, filename)
     with open(tsv_file, "a") as tsv:
         tsv.write("ingest key" + "\t" + "viaf ID" + "\t" + "LC ID" + "\n") 
         print ("writing enriched names")
@@ -337,11 +330,11 @@ def write(final_names, final_titles, file, output, log_file, filename):
             except:
                 print ("could not find identfier for " + title)
                 PrintException(log_file, name)
-    out = "Webapp/results/%s/enhanced-files/%s" %(filename, output)
+    out = "Webapp/Files/results/%s/enhanced-files/%s" %(filename, output)
     enhanched.write(out)
 
 def get_stat(final_names, names, final_titles, titles, file):
-    folder = 'Webapp/results/%s/Diagrams' %(file)
+    folder = 'Webapp/Files/results/%s/Diagrams' %(file)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, file)
@@ -449,9 +442,9 @@ def get_stat(final_names, names, final_titles, titles, file):
 
 def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
     file = filename + "-stats.tsv"
-    if not os.path.exists("Webapp/results/%s/Stats" %(filename)):
-        os.makedirs("Webapp/results/%s/Stats" %(filename))
-    file_path = os.path.join("Webapp/results/%s/Stats" %(filename), file)
+    if not os.path.exists("Webapp/Files/results/%s/Stats" %(filename)):
+        os.makedirs("Webapp/Files/results/%s/Stats" %(filename))
+    file_path = os.path.join("Webapp/Files/results/%s/Stats" %(filename), file)
     try:
         if os.path.isfile(file_path):
             os.unlink(file_path)

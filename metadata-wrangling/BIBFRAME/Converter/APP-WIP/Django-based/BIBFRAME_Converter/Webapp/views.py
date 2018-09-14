@@ -146,10 +146,10 @@ def processingQueue(request):
 					if not t.isAlive():
 						add_process.delete()
 				elif object.file_type == 'BIBFRAME Data' and merge == True:
-					if not os.path.exists('Webapp/Processing/BIBFRAME'):
-						os.makedirs('Webapp/Processing/BIBFRAME')
+					if not os.path.exists('Webapp/Files/Processing/BIBFRAME'):
+						os.makedirs('Webapp/Files/Processing/BIBFRAME')
 					oring_file = "Webapp/source/%s" %(str(object.document))
-					dest_file = "Webapp/Processing/%s" %(str(object.document))
+					dest_file = "Webapp/Files/Processing/%s" %(str(object.document))
 					shutil.copyfile(oring_file, dest_file)
 				elif object.file_type == 'BIBFRAME Data' and merge == False:
 					add_process.save()
@@ -165,7 +165,7 @@ def processingQueue(request):
 			file = BIBFRAME.merger()
 			clear_processing()
 			add_process = Processing(description="merged BIBFRAME file", 
-					name=str(file.replace('Webapp/Processing/', '')), 
+					name=str(file.replace('Webapp/Files/Processing/', '')), 
 					uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
 					file_format='.xml',
 					file_type='BIBFRAME Data',
@@ -198,11 +198,11 @@ def stop(request, id =None):
 	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
 	master_file = files.master_file
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
-	BIB_folder = 'Webapp/converted_BIBFRAME'
-	MARC_folder = 'Webapp/MARC_XML'
-	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results'
+	folders ={'Webapp/Files/converted_BIBFRAME', 'Webapp/Files/MARC_XML', 'Webapp/Files/Processing', 'Webapp/Files/results'}
+	BIB_folder = 'Webapp/Files/converted_BIBFRAME'
+	MARC_folder = 'Webapp/Files/MARC_XML'
+	Processing_folder = 'Webapp/Files/Processing'
+	results_folder = 'Webapp/Files/results'
 	for folder in folders:
 		master = "%s/%s" %(folder, master_file)
 		if os.path.isdir(master):
@@ -221,11 +221,11 @@ def delete_archive(request, id =None):
 	object = Progress_archive.objects.get(id=id)
 	master_file = object.master_file
 	object.delete()
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
-	BIB_folder = 'Webapp/converted_BIBFRAME'
-	MARC_folder = 'Webapp/MARC_XML'
-	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results'
+	folders ={'Webapp/Files/converted_BIBFRAME', 'Webapp/Files/MARC_XML', 'Webapp/Files/Processing', 'Webapp/Files/results'}
+	BIB_folder = 'Webapp/Files/converted_BIBFRAME'
+	MARC_folder = 'Webapp/Files/MARC_XML'
+	Processing_folder = 'Webapp/Files/Processing'
+	results_folder = 'Webapp/Files/results'
 	for folder in folders:
 		master = "%s/%s" %(folder, master_file)
 		if os.path.isdir(master):
