@@ -247,21 +247,17 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
-      
+
+      <marc:datafield tag="506" ind1="1" ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>Available to University of Alberta users only.</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
+
       <xsl:for-each select="dc:description">
         <marc:datafield tag="520" ind1=" " ind2=" ">
           <marc:subfield code="a">
             <xsl:value-of select="normalize-space(.)"/>
-          </marc:subfield>
-        </marc:datafield>
-      </xsl:for-each>
-
-<!-- I don't think any of the license information is relevant to the end user. -->
-
-      <xsl:for-each select="dc:rights">
-        <marc:datafield tag="540" ind1=" " ind2=" ">
-          <marc:subfield code="a">
-            <xsl:value-of select="."/>
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
@@ -275,12 +271,6 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
-
-<!-- For 690: Local Subject Access Fields. But OLAC lacks dc:subject. subj_template removed -->
-
-<!-- dc:coverage Not used in OLAC metadata -->
-
-<!-- dc:type values used in OLAC: Image, MovingImage, Sound, Text -->
 
       <xsl:for-each select="dc:type[@xsi:type='dcterms:DCMIType']">
         <marc:datafield tag="655" ind1="7" ind2=" ">
@@ -298,8 +288,6 @@
         </marc:datafield>
       </xsl:for-each>
 
-<!-- All creators are captured in dc:contributor elements. Most names are in reversed order -->
-
       <xsl:for-each select="dc:contributor">
         <marc:datafield tag="700" ind1="1" ind2="0">
           <marc:subfield code="a">
@@ -307,29 +295,26 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+      
+      <marc:datafield tag="856" ind1="4" ind2="0">
+        <marc:subfield code="3">
+          <xsl:text>University of Alberta Access (Request Form)</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="u">
+          <xsl:text>https://docs.google.com/forms/d/e/1FAIpQLSd4VsEYOWoubQww-01W7IV2qDaAr4ctBJUhrJvfyN0GwoMuFQ/viewform</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
 
-<!-- dc:source Not used in OLAC metadata -->
-<!--
-      <xsl:for-each select="dc:source">
-        <marc:datafield tag="786" ind1="0" ind2=" ">
-          <marc:subfield code="n">
-            <xsl:value-of select="."/>
-          </marc:subfield>
-        </marc:datafield>
-      </xsl:for-each>
--->
-<!-- dc:relation not used in OLAC metadata -->
-<!--
-      <xsl:for-each select="dc:relation">
-        <marc:datafield tag="787" ind1="0" ind2=" ">
-          <marc:subfield code="n">
-            <xsl:value-of select="."/>
-          </marc:subfield>
-        </marc:datafield>
-      </xsl:for-each>
--->
+      <marc:datafield tag="856" ind1="4" ind2="2">
+        <marc:subfield code="3">
+          <xsl:text>Dataset documentation</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="u">
+          <xsl:text>https://catalog.ldc.upenn.edu/</xsl:text>
+          <xsl:value-of select="$ldcNum"/>
+        </marc:subfield>
+      </marc:datafield>
+
     </marc:record>
-
   </xsl:template>
-  
 </xsl:stylesheet>
