@@ -22,6 +22,8 @@ def index(request):
 	marc_form = Marc_DocumentForm(request.POST, request.FILES)
 	processing_documents = Processing.objects.all()
 	processing_archive = Progress_archive.objects.all()
+	# creating a dummy document to fill the first row of document table (uploaded files)
+	# without this the "PROCESS" button would not work
 	checksum="thisisadummyobjectonlynumber123456"
 	if docs.filter(OID=checksum).exists():
 		pass
@@ -113,9 +115,15 @@ def processingQueue(request):
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
 	merge = False
+	apis = ''
 	if 'merge' in file_dict.keys():
 		merge = True
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
+		for n, api in enumerate(file_dict['search-API-selector']):
+			if (n+1) < len(file_dict['search-API-selector']):
+				apis = apis + '%s_-_' %(api)
+			else:
+				apis = apis + api
 		for item in file_dict['file_selected']:
 			try:
 				object = Marc_Document.objects.get(document=item)
@@ -126,6 +134,7 @@ def processingQueue(request):
 					uploaded_at=object.uploaded_at,
 					file_format=object.file_format,
 					file_type=object.file_type,
+					apis=apis,
 					status="started")
 			try:
 				if object.file_type == 'MARC Data':
@@ -137,10 +146,10 @@ def processingQueue(request):
 					if not t.isAlive():
 						add_process.delete()
 				elif object.file_type == 'BIBFRAME Data' and merge == True:
-					if not os.path.exists('Webapp/Processing/BIBFRAME'):
-						os.makedirs('Webapp/Processing/BIBFRAME')
+					if not os.path.exists('Webapp/Files/Processing/BIBFRAME'):
+						os.makedirs('Webapp/Files/Processing/BIBFRAME')
 					oring_file = "Webapp/source/%s" %(str(object.document))
-					dest_file = "Webapp/Processing/%s" %(str(object.document))
+					dest_file = "Webapp/Files/Processing/%s" %(str(object.document))
 					shutil.copyfile(oring_file, dest_file)
 				elif object.file_type == 'BIBFRAME Data' and merge == False:
 					add_process.save()
@@ -151,21 +160,22 @@ def processingQueue(request):
 			except:
 				return redirect('processing_duplicate')
 				break
-	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys() and merge == True:
-		BIBFRAME = BIB_builder()
-		file = BIBFRAME.merger()
-		clear_processing()
-		add_process = Processing(description="merged BIBFRAME file", 
-				name=str(file.replace('Webapp/Processing/', '')), 
-				uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
-				file_format='.xml',
-				file_type='BIBFRAME Data',
-				status="started")
-		add_process.save()
-		t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
-		# We want the program to wait on this thread before shutting down.
-		t.setDaemon(True)
-		t.start()
+		if  merge == True:
+			BIBFRAME = BIB_builder()
+			file = BIBFRAME.merger()
+			clear_processing()
+			add_process = Processing(description="merged BIBFRAME file", 
+					name=str(file.replace('Webapp/Files/Processing/', '')), 
+					uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
+					file_format='.xml',
+					file_type='BIBFRAME Data',
+					apis=apis,
+					status="started")
+			add_process.save()
+			t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
+			# We want the program to wait on this thread before shutting down.
+			t.setDaemon(True)
+			t.start()
 	processing_docs = Processing.objects.all()
 	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
@@ -188,11 +198,11 @@ def stop(request, id =None):
 	files = P_progress.objects.get(pid_id=pid)
 	object.delete()
 	master_file = files.master_file
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
-	BIB_folder = 'Webapp/converted_BIBFRAME'
-	MARC_folder = 'Webapp/MARC_XML'
-	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results'
+	folders ={'Webapp/Files/converted_BIBFRAME', 'Webapp/Files/MARC_XML', 'Webapp/Files/Processing', 'Webapp/Files/results'}
+	BIB_folder = 'Webapp/Files/converted_BIBFRAME'
+	MARC_folder = 'Webapp/Files/MARC_XML'
+	Processing_folder = 'Webapp/Files/Processing'
+	results_folder = 'Webapp/Files/results'
 	for folder in folders:
 		master = "%s/%s" %(folder, master_file)
 		if os.path.isdir(master):
@@ -211,11 +221,11 @@ def delete_archive(request, id =None):
 	object = Progress_archive.objects.get(id=id)
 	master_file = object.master_file
 	object.delete()
-	folders ={'Webapp/converted_BIBFRAME', 'Webapp/MARC_XML', 'Webapp/Processing', 'Webapp/results'}
-	BIB_folder = 'Webapp/converted_BIBFRAME'
-	MARC_folder = 'Webapp/MARC_XML'
-	Processing_folder = 'Webapp/Processing'
-	results_folder = 'Webapp/results'
+	folders ={'Webapp/Files/converted_BIBFRAME', 'Webapp/Files/MARC_XML', 'Webapp/Files/Processing', 'Webapp/Files/results'}
+	BIB_folder = 'Webapp/Files/converted_BIBFRAME'
+	MARC_folder = 'Webapp/Files/MARC_XML'
+	Processing_folder = 'Webapp/Files/Processing'
+	results_folder = 'Webapp/Files/results'
 	for folder in folders:
 		master = "%s/%s" %(folder, master_file)
 		if os.path.isdir(master):

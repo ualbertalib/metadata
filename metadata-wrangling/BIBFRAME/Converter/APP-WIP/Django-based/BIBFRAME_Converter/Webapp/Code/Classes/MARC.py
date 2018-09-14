@@ -13,7 +13,7 @@ class MARC_XML():
         print (cwd)
         self.source = file
         # folder to store MARC/XML files
-        self.folder = 'Webapp/MARC_XML'
+        self.folder = 'Webapp/Files/MARC_XML'
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
 
