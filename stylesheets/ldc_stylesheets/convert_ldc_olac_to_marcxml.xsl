@@ -38,6 +38,7 @@
         <xsl:with-param name="lang" select="dc:language[1]/@olac:code"/>
       </xsl:call-template>
     </xsl:variable>
+    
     <marc:record>
       <marc:leader>
         <xsl:text> </xsl:text>
@@ -120,6 +121,8 @@
         <xsl:text> </xsl:text>
         <xsl:text>d</xsl:text>
       </xsl:element>
+      
+      <!-- Removes dashes from ISBN -->
 
       <xsl:for-each select="dc:identifier[contains(., 'ISBN: ')]">
         <xsl:analyze-string select="substring-after(., 'ISBN: ')"
@@ -150,6 +153,8 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+      
+      <!-- chooses whether to insert an 041 field, depending on the number of languages. When 'yes', inserts two 041 fields to record derived marc codes and original iso 639-3 values  -->
 
       <xsl:choose>
         <xsl:when test="$langCount = 1 and $langEng = false()">
@@ -217,6 +222,8 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+      
+      <!-- primary 336 field -->
 
       <marc:datafield tag="336" ind1=" " ind2=" ">
         <marc:subfield code="a">
@@ -229,6 +236,8 @@
           <xsl:text>rdacontent</xsl:text>
         </marc:subfield>
       </marc:datafield>
+      
+      <!-- additional 336 fields based on one or more DCMIType values -->
 
       <xsl:for-each select="dc:type[@xsi:type = 'dcterms:DCMIType']">
         <marc:datafield tag="336" ind1=" " ind2=" ">
@@ -281,12 +290,16 @@
           <xsl:text>rdacarrier</xsl:text>
         </marc:subfield>
       </marc:datafield>
+      
+      <!-- ldc number must be visible to users so they can use it to request data access -->
 
       <marc:datafield tag="500" ind1=" " ind2=" ">
         <marc:subfield code="a">
           <xsl:value-of select="$ldcNum"/>
         </marc:subfield>
       </marc:datafield>
+      
+      <!-- redundant inclusion of link to ldc catalog with additional dataset information and links to documentation, because of local surpression of 856/42 field in discovery system -->
 
       <xsl:for-each select="dc:identifier[contains(., 'https:')]">
         <marc:datafield tag="500" ind1=" " ind2=" ">
@@ -301,11 +314,29 @@
           <xsl:text>Available to University of Alberta users only.</xsl:text>
         </marc:subfield>
       </marc:datafield>
+      
+      <!-- elements removed from dc:description source include the '*Introduction* ' label, ' *Samples* ' content, *Copying and distribution*, '*Updates* ' content, '*Additional Licensing Instructions* ' content  -->
 
       <xsl:for-each select="dc:description">
+        <xsl:if test="contains(., '*Samples* ')">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
+            <marc:subfield code="a">
+              <xsl:text>Data samples are available on the LDC website.</xsl:text>
+            </marc:subfield>
+          </marc:datafield>          
+        </xsl:if>
+        <xsl:if test="contains(., '*Samples * ')">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
+            <marc:subfield code="a">
+              <xsl:text>Data samples are available on the LDC website.</xsl:text>
+            </marc:subfield>
+          </marc:datafield>          
+        </xsl:if>
         <marc:datafield tag="520" ind1=" " ind2=" ">
           <marc:subfield code="a">
-            <xsl:value-of select="normalize-space(.)"/>
+            <xsl:call-template name="editDesc">
+              <xsl:with-param name="desc" select="normalize-space(.)"/>
+            </xsl:call-template>
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
@@ -403,6 +434,55 @@
         </marc:subfield>
       </marc:datafield>
     </marc:record>
+  </xsl:template>
+  
+  <xsl:template name="editDesc">
+    <xsl:param name="desc"/>
+    <xsl:choose>
+      <xsl:when test="contains($desc, '*Introduction* ')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-after($desc, '*Introduction* ')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Introduction * ')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-after($desc, '*Introduction * ')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Additional Licensing Instructions')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Additional Licensing Instructions')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Updates*')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Updates*')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Updates *')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Updates *')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Samples*')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Samples*')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Samples *')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Samples *')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*Copying and Distribution*')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Copying and Distribution*')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+         <xsl:value-of select="$desc"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>
