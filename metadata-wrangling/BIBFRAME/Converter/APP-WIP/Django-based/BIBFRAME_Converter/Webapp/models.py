@@ -25,12 +25,13 @@ class Bib_Document(models.Model):
 
 
 class Processing(models.Model):
-    description = models.CharField(max_length=255, blank=True)
-    name = models.CharField(max_length=255, blank=True)
+    description = models.CharField(max_length=355, blank=True)
+    name = models.CharField(max_length=355, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=False)
     file_format = models.CharField(max_length=5,default='.xml')
     file_type = models.CharField(max_length=155,default='BIBFRAME Data')
     start_time = models.DateTimeField(auto_now_add=True)
+    apis = models.CharField(max_length=355,blank=True)
     status = models.CharField(max_length=50, default='not started')
     class Meta:
         unique_together = ["name", "uploaded_at", "file_type", "description"]
@@ -92,6 +93,7 @@ class Progress_archive(models.Model):
 	file_format = models.CharField(max_length=5,default='.xml')
 	file_type = models.CharField(max_length=155,default='BIBFRAME Data')
 	start_time = models.DateTimeField(auto_now_add=True)
+	apis = models.CharField(max_length=50, blank=True)
 	status = models.CharField(max_length=50, default='not started')
 	stage = models.CharField(max_length=255, default="MARC_to_MARC-XML")
 	all_names = models.CharField(max_length=25, default="1")

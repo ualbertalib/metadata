@@ -6,10 +6,10 @@ from Webapp.models import Processing, P_progress
 
 class XML_BIBFRAME():
     def __init__(self, master_file):
-        self.folder = 'Webapp/converted_BIBFRAME'
+        self.folder = 'Webapp//Files/converted_BIBFRAME'
         self.master_file = master_file
-        self.source = 'Webapp/MARC_XML/%s' %(self.master_file)
-        self.processing = 'Webapp/Processing'
+        self.source = 'Webapp/Files/MARC_XML/%s' %(self.master_file)
+        self.processing = 'Webapp/Files/Processing'
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
         if not os.path.exists(self.processing):

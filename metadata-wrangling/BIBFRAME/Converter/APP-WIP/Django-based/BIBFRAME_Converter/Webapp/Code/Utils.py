@@ -11,7 +11,7 @@ def clean_up(l):
     return l
 
 def PrintException(log_file, error):
-    log = 'Webapp/results/%s/logs/log_file' %(log_file.replace('-error-logs', ''))
+    log = 'Webapp/Files/results/%s/logs/log_file' %(log_file.replace('-error-logs', ''))
     with open (log, "w+") as logs:
         exc_type, exc_obj, tb = sys.exc_info()
         f = tb.tb_frame
@@ -24,7 +24,7 @@ def PrintException(log_file, error):
         logs.write("\n")
 
 def clearLogs(log_file, filename):
-    folder = 'Webapp/results/%s/logs' %(filename)
+    folder = 'Webapp/Files/results/%s/logs' %(filename)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, log_file)
@@ -35,7 +35,7 @@ def clearLogs(log_file, filename):
         print(e)
 
 def clear_files(output):
-    folder = 'Webapp/results/%s/enhanced-files' %(output)
+    folder = 'Webapp/Files/results/%s/enhanced-files' %(output)
     if not os.path.exists(folder):
         os.makedirs(folder)
     file_path = os.path.join(folder, output)
@@ -46,7 +46,7 @@ def clear_files(output):
         print(e)
 
 def clear_TSV(filename):
-    folder = 'Webapp/results/%s/TSVs' %(filename)
+    folder = 'Webapp/Files/results/%s/TSVs' %(filename)
     file = 'URIs-' + filename + '.tsv'
     if not os.path.exists(folder):
         os.makedirs(folder)
@@ -65,7 +65,7 @@ def delete_temp():
         print(e)
 
 def clear_processing():
-    folder = 'Webapp/Processing/BIBFRAME'
+    folder = 'Webapp/Files/Processing/BIBFRAME'
     if not os.path.exists(folder):
         os.makedirs(folder)
     else:
