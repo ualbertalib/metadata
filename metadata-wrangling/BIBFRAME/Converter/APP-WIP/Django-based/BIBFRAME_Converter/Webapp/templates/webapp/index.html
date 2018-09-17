@@ -80,7 +80,12 @@
             {% else %}
               <tr>
                 <td><input type="checkbox" class="file_selector" name="file_selected" value="{{ obj.name }}"></td>
-                <td>{{ obj.name|replaceMARC|replaceBIB }}</td>
+                <td>
+                  {{ obj.name|replaceMARC|replaceBIB }} 
+                  {% if obj|inProcess %}
+                  <span style="color: red"> Processing - PID: ({{ obj|inProcess }})</span>
+                  {% endif %}
+                </td>
                 <td>{{ obj.file_type }}</td>
                 <td>{{ obj.description }}</td>
                 <td><small>{{ obj.uploaded_at }}</small></td>
