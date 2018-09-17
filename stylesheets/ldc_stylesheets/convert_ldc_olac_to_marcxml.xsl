@@ -318,20 +318,6 @@
       <!-- elements removed from dc:description source include the '*Introduction* ' label, ' *Samples* ' content, *Copying and distribution*, '*Updates* ' content, '*Additional Licensing Instructions* ' content  -->
 
       <xsl:for-each select="dc:description">
-        <xsl:if test="contains(., '*Samples* ')">
-          <marc:datafield tag="500" ind1=" " ind2=" ">
-            <marc:subfield code="a">
-              <xsl:text>Data samples are available on the LDC website.</xsl:text>
-            </marc:subfield>
-          </marc:datafield>          
-        </xsl:if>
-        <xsl:if test="contains(., '*Samples * ')">
-          <marc:datafield tag="500" ind1=" " ind2=" ">
-            <marc:subfield code="a">
-              <xsl:text>Data samples are available on the LDC website.</xsl:text>
-            </marc:subfield>
-          </marc:datafield>          
-        </xsl:if>
         <marc:datafield tag="520" ind1=" " ind2=" ">
           <marc:subfield code="a">
             <xsl:call-template name="editDesc">
@@ -339,6 +325,20 @@
             </xsl:call-template>
           </marc:subfield>
         </marc:datafield>
+        <xsl:if test="contains(., '*Samples* ')">
+          <marc:datafield tag="520" ind1=" " ind2=" ">
+            <marc:subfield code="a">
+              <xsl:text>Data samples are available on the LDC website.</xsl:text>
+            </marc:subfield>
+          </marc:datafield>          
+        </xsl:if>
+        <xsl:if test="contains(., '*Samples * ')">
+          <marc:datafield tag="520" ind1=" " ind2=" ">
+            <marc:subfield code="a">
+              <xsl:text>Data samples are available on the LDC website.</xsl:text>
+            </marc:subfield>
+          </marc:datafield>          
+        </xsl:if>
       </xsl:for-each>
 
       <xsl:choose>
@@ -480,7 +480,7 @@
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
-         <xsl:value-of select="$desc"/>
+         <xsl:value-of select="normalize-space($desc)"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
