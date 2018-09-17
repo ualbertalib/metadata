@@ -400,6 +400,18 @@
             <xsl:when test="$lang='zxx'">
                 <xsl:text>zxx</xsl:text>
             </xsl:when>
+            <!-- code match -->
+            <xsl:when test="$lang='ceb'">
+                <xsl:text>ceb</xsl:text>
+            </xsl:when>
+            <!-- ISO 239-2/B synonym -->
+            <xsl:when test="$lang='slk'">
+                <xsl:text>slo</xsl:text>
+            </xsl:when>
+            <!-- Undetermined -->
+            <xsl:otherwise>
+                <xsl:text>und</xsl:text>                    
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
