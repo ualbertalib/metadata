@@ -141,8 +141,7 @@ def processingQueue(request):
 			try:
 				if object.file_type == 'MARC Data':
 					add_process.save()
-					merge = True
-					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector'], merge])
+					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
 					# We want the program to wait on this thread before shutting down.
 					t.setDaemon(True)
 					t.start()

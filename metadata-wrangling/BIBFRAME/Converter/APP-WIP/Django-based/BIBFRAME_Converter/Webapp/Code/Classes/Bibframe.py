@@ -3,6 +3,7 @@ from ..Utils import PrintException
 
 class Bibframe():
     def __init__(self, file, log_file, merge):
+        print (file, merge)
         if merge == True:
             self.xslt = ET.parse("Webapp/Code/xslt/names_OCLC.xsl")
         else:

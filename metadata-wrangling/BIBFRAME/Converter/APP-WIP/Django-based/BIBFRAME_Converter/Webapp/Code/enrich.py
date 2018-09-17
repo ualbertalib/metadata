@@ -17,7 +17,7 @@ from datetime import datetime
 from shutil import copyfile
 from Webapp.models import Processing, P_progress, Progress_archive
 
-def marc_process(processing_files, apis, merge):
+def marc_process(processing_files, apis):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
     db_update_obj = P_progress(pid=processing_files)
@@ -38,7 +38,8 @@ def marc_process(processing_files, apis, merge):
     # extracting names and titles from BIBFRAME
     db_update_obj.stage = "Extracting_names_and_titles"
     db_update_obj.save()
-    bib_object = Bibframe(file, log_file, merge)
+    mergecheck = True
+    bib_object = Bibframe(file, log_file, mergecheck)
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
@@ -220,7 +221,7 @@ def bib_process(processing_files, apis, merge):
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
     stats['names-enriched'] = len(final_names)
     tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #write back the URIs to the BIBFRAME file
@@ -230,7 +231,7 @@ def bib_process(processing_files, apis, merge):
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-    #write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
     #removing temp-file.xml
     delete_temp()
     print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
