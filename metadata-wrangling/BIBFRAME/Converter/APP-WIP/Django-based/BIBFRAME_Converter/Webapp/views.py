@@ -65,13 +65,14 @@ def index(request):
 	if len(request.FILES) > 0:
 		uploaded_file = request.FILES['document']
 		filename = uploaded_file.name
-		file_ext = filename[-4:]
+		file_ext = os.path.splitext(filename)[1]
+		print (file_ext)
 		if file_ext == ".xml":
 			bib_folder = 'Webapp/source/BIBFRAME'
 			if bib_form.is_valid():
 				bib_form.save()
 				return redirect('index')
-		if file_ext == ".mrc":
+		if file_ext == ".mrc"or file_ext == '.marc':
 			marc_folder = 'Webapp/source/MARC'
 			if marc_form.is_valid():
 				marc_form.save()
@@ -135,6 +136,7 @@ def processingQueue(request):
 					file_format=object.file_format,
 					file_type=object.file_type,
 					apis=apis,
+					files=str(object.document),
 					status="started")
 			try:
 				if object.file_type == 'MARC Data':
@@ -165,11 +167,12 @@ def processingQueue(request):
 			file = BIBFRAME.merger()
 			clear_processing()
 			add_process = Processing(description="merged BIBFRAME file", 
-					name=str(file.replace('Webapp/Files/Processing/', '')), 
+					name=str(file[0].replace('Webapp/Files/Processing/', '')), 
 					uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
 					file_format='.xml',
 					file_type='BIBFRAME Data',
 					apis=apis,
+					files=file[1],
 					status="started")
 			add_process.save()
 			t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
