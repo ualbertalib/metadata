@@ -42,7 +42,21 @@ def get_apis(value):
     		AP = item
     return (AP)
 
-
+@register.filter
+def inProcess(obj):
+	for docs in Processing.objects.all():
+		if '--__--__--' in docs.files:
+			file = docs.files.split('--__--__--')
+			for n, item in enumerate(file):
+				if n == 0:
+					pass
+				else:
+					if obj.name.replace('BIBFRAME/', '') == item:
+						return (docs.id)
+		else:
+			if obj.name == docs.files:
+				return (docs.id)
+	return False
 
 '''@register.filter
 def process(id):

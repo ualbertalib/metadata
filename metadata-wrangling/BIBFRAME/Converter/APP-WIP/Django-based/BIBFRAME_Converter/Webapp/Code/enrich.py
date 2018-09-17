@@ -17,7 +17,7 @@ from datetime import datetime
 from shutil import copyfile
 from Webapp.models import Processing, P_progress, Progress_archive
 
-def marc_process(processing_files, apis):
+def marc_process(processing_files, apis, merge):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
     db_update_obj = P_progress(pid=processing_files)
@@ -38,7 +38,7 @@ def marc_process(processing_files, apis):
     # extracting names and titles from BIBFRAME
     db_update_obj.stage = "Extracting_names_and_titles"
     db_update_obj.save()
-    bib_object = Bibframe(file, log_file)
+    bib_object = Bibframe(file, log_file, merge)
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
@@ -153,7 +153,7 @@ def bib_process(processing_files, apis, merge):
     # extracting names and titles from BIBFRAME
     db_update_obj.stage = "Extracting_names_and_titles"
     db_update_obj.save()
-    bib_object = Bibframe(file, log_file)
+    bib_object = Bibframe(file, log_file, merge)
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
