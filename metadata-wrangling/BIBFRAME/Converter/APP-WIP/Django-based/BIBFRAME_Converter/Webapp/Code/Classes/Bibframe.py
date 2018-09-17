@@ -2,8 +2,11 @@ import lxml.etree as ET
 from ..Utils import PrintException
 
 class Bibframe():
-    def __init__(self, file, log_file):
-        self.xslt = ET.parse("Webapp/Code/xslt/names_OCLC.xsl")
+    def __init__(self, file, log_file, merge):
+        if merge == True:
+            self.xslt = ET.parse("Webapp/Code/xslt/names_OCLC.xsl")
+        else:
+            self.xslt = ET.parse("Webapp/Code/xslt/names_OCLC_single.xsl")
         self.transform = ET.XSLT(self.xslt)
         self.doc = ET.parse(file)
         self.log_file = log_file
