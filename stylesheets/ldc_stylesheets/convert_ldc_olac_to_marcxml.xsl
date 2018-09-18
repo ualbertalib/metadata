@@ -474,6 +474,16 @@
           <xsl:with-param name="desc" select="substring-before($desc, '*Samples *')"/>
         </xsl:call-template>
       </xsl:when>
+      <xsl:when test="contains($desc, '*Sample*')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*Sample*')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($desc, '*samples*')">
+        <xsl:call-template name="editDesc">
+          <xsl:with-param name="desc" select="substring-before($desc, '*samples*')"/>
+        </xsl:call-template>
+      </xsl:when>
       <xsl:when test="contains($desc, '*Copying and Distribution*')">
         <xsl:call-template name="editDesc">
           <xsl:with-param name="desc" select="substring-before($desc, '*Copying and Distribution*')"/>
