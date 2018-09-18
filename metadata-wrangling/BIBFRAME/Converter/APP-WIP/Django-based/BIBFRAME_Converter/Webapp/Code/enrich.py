@@ -117,7 +117,7 @@ def marc_process(processing_files, apis):
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time, db_update_obj)
     #removing temp-file.xml
     delete_temp()
     print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
@@ -126,7 +126,7 @@ def marc_process(processing_files, apis):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
-    add_to_archive(processing_files, db_update_obj)
+    add_to_archive(processing_files, db_update_obj, len(final_names), len(final_titles))
 
 def bib_process(processing_files, apis, merge):
     #proccess start time
@@ -231,7 +231,7 @@ def bib_process(processing_files, apis, merge):
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time, db_update_obj)
     #removing temp-file.xml
     delete_temp()
     print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
@@ -240,9 +240,9 @@ def bib_process(processing_files, apis, merge):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
-    add_to_archive(processing_files, db_update_obj)
+    add_to_archive(processing_files, db_update_obj, len(final_names), len(final_titles))
 
-def add_to_archive(processing_files, db_update_obj):
+def add_to_archive(processing_files, db_update_obj, final_names, final_titles):
     archive=Progress_archive(process_ID = processing_files.id,
         description=processing_files.description,
         name = processing_files.name,
@@ -258,8 +258,8 @@ def add_to_archive(processing_files, db_update_obj):
         all_MARC = db_update_obj.all_MARC,
         p_names = db_update_obj.p_names,
         c_names = db_update_obj.c_names,
-        name_index = db_update_obj.name_index,
-        title_index = db_update_obj.title_index,
+        name_index = final_names,
+        title_index = final_titles,
         M_to_B_index = db_update_obj.M_to_B_index,
         master_file =db_update_obj.master_file)
     archive.save()
@@ -441,7 +441,7 @@ def get_stat(final_names, names, final_titles, titles, file):
         stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
 
-def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
+def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time, db_update_obj):
     file = filename + "-stats.tsv"
     if not os.path.exists("Webapp/Files/results/%s/Stats" %(filename)):
         os.makedirs("Webapp/Files/results/%s/Stats" %(filename))
@@ -457,6 +457,9 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
         stat.write(str(titles) + " titles were extracted from " + filename + "\n\n")
         stat.write("API searched" +"\t" + "hits" + "\t" + "hit_rate" +"\n")
         for i in stats.keys():
+            setattr(db_update_obj, i, str(stats[i]))
+            db_update_obj.save()
+            print (i, db_update_obj.search_api_VF)
             stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
         stat.write("\n" + "\n")
         if 'LC' in eff.keys():

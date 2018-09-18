@@ -49,6 +49,11 @@ class P_progress(models.Model):
     title_index = models.CharField(max_length=25, default="0")
     M_to_B_index = models.CharField(max_length=25, default="0")
     master_file = models.CharField(max_length=255, blank=True)
+    search_api_LC = models.CharField(max_length=255, blank=True)
+    search_api_LCS = models.CharField(max_length=255, blank=True)
+    search_api_VF = models.CharField(max_length=255, blank=True)
+    search_api_VFP = models.CharField(max_length=255, blank=True)
+    search_api_VFC = models.CharField(max_length=255, blank=True)
 
     def as_marc(self):
     	pd = self.pid.id
@@ -106,3 +111,8 @@ class Progress_archive(models.Model):
 	title_index = models.CharField(max_length=25, default="100")
 	M_to_B_index = models.CharField(max_length=25, default="100")
 	master_file = models.CharField(max_length=255, blank=True)
+	search_api_LC = models.CharField(max_length=255, blank=True)
+	search_api_LCS = models.CharField(max_length=255, blank=True)
+	search_api_VF = models.CharField(max_length=255, blank=True)
+	search_api_VFP = models.CharField(max_length=255, blank=True)
+	search_api_VFC = models.CharField(max_length=255, blank=True)
