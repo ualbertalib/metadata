@@ -36,10 +36,10 @@
             {% include 'webapp/includes/archive_P.html' %}
           {% endfor %}
           <tr>
-          	<td colspan="8">
+          	<td colspan="10">
           		<form action="{% url 'delete_archive_all' %}" method="POST">
                   {% csrf_token %}
-                  <input class="btn btn-default btn-danger" type="submit" value="Remove All" onclick="return confirm('Are you sure you want remove all items from archives? All the processed files will be removed from disk!!!')"/>
+                  <input class="btn btn-default btn-danger btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Remove All" onclick="return confirm('Are you sure you want remove all items from archives? All the processed files will be removed from disk!!!')"/>
                 </form>
           	</td>
           </tr>

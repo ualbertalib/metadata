@@ -107,13 +107,13 @@ def marc_process(processing_files, apis):
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-    stats['names-enriched'] = len(final_names)
     tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #write back the URIs to the BIBFRAME file
     db_update_obj.stage = "Writing_to_BIBFRAME"
     db_update_obj.save()
     write(final_names, final_titles, file, output, log_file, filename)
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
@@ -221,13 +221,13 @@ def bib_process(processing_files, apis, merge):
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-    stats['names-enriched'] = len(final_names)
     tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #write back the URIs to the BIBFRAME file
     db_update_obj.stage = "Writing_to_BIBFRAME"
     db_update_obj.save()
     write(final_names, final_titles, file, output, log_file, filename)
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')

@@ -76,9 +76,3 @@ def clear_processing():
                     os.unlink(file_path)
             except Exception as e:
                 print(e)
-
-def logit(info, log_f):
-    log = 'Webapp/Files/results/%s/logs/logs' %(log_f.replace('-logs', ''))
-    with open (log, "a+") as logss:
-        logss.write(info)
-        logss.write("\n")

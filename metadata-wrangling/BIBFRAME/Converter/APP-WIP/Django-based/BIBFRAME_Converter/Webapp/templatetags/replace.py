@@ -21,6 +21,10 @@ def get_item(dictionary, key):
     return dictionary.get(key)
 
 @register.filter
+def replacedot(value):
+	return value.replace('.', '')
+
+@register.filter
 def get_apis(value):
     apis = []
     AP = ''
