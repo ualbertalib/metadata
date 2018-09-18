@@ -46,9 +46,9 @@ def marc_process(processing_files, apis):
     #getting corp names (for stat report)
     all_names = bib_object.extract_names(transformed)[2]
     corp_names = bib_object.extract_names(transformed)[3]
-    print (str(all_names) + " names were extrected from " + filename)
-    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
-    print (str(len(titles)) + " titles were extracted from " + filename)
+    print(str(all_names) + " names were extrected from " + filename)
+    print(str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
+    print(str(len(titles)) + " titles were extracted from " + filename)
     db_update_obj.all_names = str(len(names))
     db_update_obj.all_titles = str(len(titles))
     db_update_obj.p_names = str(len(names) - corp_names)

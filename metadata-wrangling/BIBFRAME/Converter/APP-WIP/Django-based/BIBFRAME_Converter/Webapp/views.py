@@ -142,9 +142,9 @@ def processingQueue(request):
 				if object.file_type == 'MARC Data':
 					add_process.save()
 					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
-					# We want the program to wait on this thread before shutting down.
 					t.setDaemon(True)
 					t.start()
+					print (threading.currentThread().getName())
 					if not t.isAlive():
 						add_process.delete()
 				elif object.file_type == 'BIBFRAME Data' and merge == True:
@@ -156,7 +156,6 @@ def processingQueue(request):
 				elif object.file_type == 'BIBFRAME Data' and merge == False:
 					add_process.save()
 					t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge])
-					# We want the program to wait on this thread before shutting down.
 					t.setDaemon(True)
 					t.start()
 			except:
@@ -176,11 +175,9 @@ def processingQueue(request):
 					status="started")
 			add_process.save()
 			t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
-			# We want the program to wait on this thread before shutting down.
 			t.setDaemon(True)
 			t.start()
 	processing_docs = Processing.objects.all()
-	#for files in processing_docs:
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
 def progress(request):
@@ -235,6 +232,21 @@ def delete_archive(request, id =None):
 			shutil.rmtree(master)
 		elif os.path.isfile(master):
 			os.unlink(master)
-	#pid = os.getpid()
-	#os.kill(pid, signal.SIGKILL)
+	return render(request, 'webapp/arc_del.html')
+
+def delete_archive_all(request):
+	for object in Progress_archive.objects.all():
+		master_file = object.master_file
+		object.delete()
+		folders ={'Webapp/Files/converted_BIBFRAME', 'Webapp/Files/MARC_XML', 'Webapp/Files/Processing', 'Webapp/Files/results'}
+		BIB_folder = 'Webapp/Files/converted_BIBFRAME'
+		MARC_folder = 'Webapp/Files/MARC_XML'
+		Processing_folder = 'Webapp/Files/Processing'
+		results_folder = 'Webapp/Files/results'
+		for folder in folders:
+			master = "%s/%s" %(folder, master_file)
+			if os.path.isdir(master):
+				shutil.rmtree(master)
+			elif os.path.isfile(master):
+				os.unlink(master)
 	return render(request, 'webapp/arc_del.html')
