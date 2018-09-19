@@ -62,6 +62,10 @@ def inProcess(obj):
 				return (docs.id)
 	return False
 
+@register.filter
+def get_perc(value, args):
+	return ("{0:.2f}".format(round((int(value)/int(args))*100,2)))
+
 '''@register.filter
 def process(id):
 	object = Processing.objects.get(id=id)
