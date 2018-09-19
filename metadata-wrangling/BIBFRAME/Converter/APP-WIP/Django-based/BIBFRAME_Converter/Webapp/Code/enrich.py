@@ -261,7 +261,12 @@ def add_to_archive(processing_files, db_update_obj, final_names, final_titles):
         name_index = final_names,
         title_index = final_titles,
         M_to_B_index = db_update_obj.M_to_B_index,
-        master_file =db_update_obj.master_file)
+        master_file = db_update_obj.master_file,
+        search_api_LC = db_update_obj.search_api_LC,
+        search_api_LCS = db_update_obj.search_api_LCS,
+        search_api_VF = db_update_obj.search_api_VF,
+        search_api_VFP = db_update_obj.search_api_VFP,
+        search_api_VFC = db_update_obj.search_api_VFC)
     archive.save()
     time.sleep(30)
     processing_files.delete()
@@ -459,7 +464,6 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
         for i in stats.keys():
             setattr(db_update_obj, i, str(stats[i]))
             db_update_obj.save()
-            print (i, db_update_obj.search_api_VF)
             stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
         stat.write("\n" + "\n")
         if 'LC' in eff.keys():
