@@ -152,7 +152,8 @@ $(document).ready(function(){
 			var xml = $(".file_selector-xml:checked").length;
 			var m = $(".api_selected:checked").length;
 			if($('.bib_merge').is(':checked')) {
-				t = mrc + 1;
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
 				if (t > 0 && 5 > t && m > 0) {
 					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
 				} if (t < 1 || 4 < t || m < 1) {
@@ -177,11 +178,39 @@ $(document).ready(function(){
 			var xml = $(".file_selector-xml:checked").length;
 			var m = $(".api_selected:checked").length;
 			if($('.bib_merge').is(':checked')) {
-				t = mrc + 1;
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
 				if (t > 0 && 5 > t && m > 0) {
 					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
 				} if (t < 1 || 4 < t || m < 1) {
 				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				}
+			} else {
+				var t = xml + mrc;
+				if (t > 0 && 5 > t && m > 0) {
+				$('.process_button').html("PROCESS (" + t + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t > 4) {
+					alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
+				} if (t < 1 || 4 < t || m < 1) {
+					$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				}
+			};
+		});
+	});
+
+	$(function() {
+		$('.bib_merge').click(function() {
+			var mrc = $(".file_selector-mrc:checked").length;
+			var xml = $(".file_selector-xml:checked").length;
+			var m = $(".api_selected:checked").length;
+			if($('.bib_merge').is(':checked')) {
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
+				if (t > 0 && 5 > t && m > 0) {
+					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t < 1 || 4 < t ) {
+				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
 				}
 			} else {
 				var t = xml + mrc;
