@@ -79,7 +79,7 @@
               </tr>
             {% else %}
               <tr>
-                <td><input type="checkbox" class="file_selector" name="file_selected" value="{{ obj.name }}"></td>
+                <td><input type="checkbox" class="file_selector-{{obj.file_format|replacedot}}" fileType="{{obj.file_format|replacedot}}" name="file_selected" value="{{ obj.name }}"></td>
                 <td>
                   {{ obj.name|replaceMARC|replaceBIB }} 
                   {% if obj|inProcess %}

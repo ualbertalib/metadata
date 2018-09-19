@@ -146,26 +146,82 @@ $(document).ready(function(){
 
 
 	$(function() {
-		$('.file_selector').click(function() {
-			var n = $(".file_selector:checked").length;
+		$(':regex(class, .*file_selector.*)').click(function() {
+			//var type = $(this).attr("fileType");
+			var mrc = $(".file_selector-mrc:checked").length;
+			var xml = $(".file_selector-xml:checked").length;
 			var m = $(".api_selected:checked").length;
-			if (n > 0 && m > 0) {
-			$('.process_button').html("PROCESS (" + n + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
-			} if (n < 1 || m < 1) {
+			if($('.bib_merge').is(':checked')) {
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
+				if (t > 0 && 5 > t && m > 0) {
+					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t < 1 || 4 < t || m < 1) {
 				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
-			}
+				}
+			} else {
+				var t = xml + mrc;
+				if (t > 0 && 5 > t && m > 0) {
+				$('.process_button').html("PROCESS (" + t + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t > 4) {
+					alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
+				} if (t < 1 || 4 < t || m < 1) {
+					$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				}
+			};
 		});
 	});
 
 	$(function() {
 		$('.api_selected').click(function() {
-			var n = $(".file_selector:checked").length;
+			var mrc = $(".file_selector-mrc:checked").length;
+			var xml = $(".file_selector-xml:checked").length;
 			var m = $(".api_selected:checked").length;
-			if (n > 0 && m > 0) {
-			$('.process_button').html("PROCESS (" + n + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
-			} if (n < 1 || m <1) {
+			if($('.bib_merge').is(':checked')) {
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
+				if (t > 0 && 5 > t && m > 0) {
+					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t < 1 || 4 < t || m < 1) {
 				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
-			}
+				}
+			} else {
+				var t = xml + mrc;
+				if (t > 0 && 5 > t && m > 0) {
+				$('.process_button').html("PROCESS (" + t + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t > 4) {
+					alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
+				} if (t < 1 || 4 < t || m < 1) {
+					$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				}
+			};
+		});
+	});
+
+	$(function() {
+		$('.bib_merge').click(function() {
+			var mrc = $(".file_selector-mrc:checked").length;
+			var xml = $(".file_selector-xml:checked").length;
+			var m = $(".api_selected:checked").length;
+			if($('.bib_merge').is(':checked')) {
+				if (xml > 0) {var t = mrc + 1;}
+				else {var t = mrc}
+				if (t > 0 && 5 > t && m > 0) {
+					$('.process_button').html("PROCESS (" + t + " Items [merging " + xml + " files] with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t < 1 || 4 < t ) {
+				$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
+				}
+			} else {
+				var t = xml + mrc;
+				if (t > 0 && 5 > t && m > 0) {
+				$('.process_button').html("PROCESS (" + t + " Items with " + m + " APIs)").prop('disabled', false).removeClass('disabled')
+				} if (t > 4) {
+					alert("Maximum number of processes in limited to 4. If you are processing BIBFRAME data, check the 'Merge BIBFRAME files for processing' checkbox to merge selected BIBFRAME files as one (one process for all BIBFRAMEs)")
+				} if (t < 1 || 4 < t || m < 1) {
+					$('.process_button').html("PROCESS").prop('disabled', true).addClass('disabled')
+				}
+			};
 		});
 	});
 

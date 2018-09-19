@@ -17,7 +17,7 @@ from datetime import datetime
 from shutil import copyfile
 from Webapp.models import Processing, P_progress, Progress_archive
 
-def marc_process(processing_files, apis, merge):
+def marc_process(processing_files, apis):
     #proccess start time
     tps = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')   
     db_update_obj = P_progress(pid=processing_files)
@@ -38,16 +38,17 @@ def marc_process(processing_files, apis, merge):
     # extracting names and titles from BIBFRAME
     db_update_obj.stage = "Extracting_names_and_titles"
     db_update_obj.save()
-    bib_object = Bibframe(file, log_file, merge)
+    mergecheck = True
+    bib_object = Bibframe(file, log_file, mergecheck)
     transformed = bib_object.convert_bibframe()
     names = bib_object.extract_names(transformed)[0]
     titles = bib_object.extract_names(transformed)[1]
     #getting corp names (for stat report)
     all_names = bib_object.extract_names(transformed)[2]
     corp_names = bib_object.extract_names(transformed)[3]
-    print (str(all_names) + " names were extrected from " + filename)
-    print (str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
-    print (str(len(titles)) + " titles were extracted from " + filename)
+    print(str(all_names) + " names were extrected from " + filename)
+    print(str(len(names)) + " unique names were extracted from " + filename + " --- " + str(len(names) - corp_names) + " Personal names and " + str(corp_names) + " Corporate names")
+    print(str(len(titles)) + " titles were extracted from " + filename)
     db_update_obj.all_names = str(len(names))
     db_update_obj.all_titles = str(len(titles))
     db_update_obj.p_names = str(len(names) - corp_names)
@@ -106,17 +107,17 @@ def marc_process(processing_files, apis, merge):
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-    stats['names-enriched'] = len(final_names)
     tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #write back the URIs to the BIBFRAME file
     db_update_obj.stage = "Writing_to_BIBFRAME"
     db_update_obj.save()
     write(final_names, final_titles, file, output, log_file, filename)
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time, db_update_obj)
     #removing temp-file.xml
     delete_temp()
     print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
@@ -125,7 +126,7 @@ def marc_process(processing_files, apis, merge):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
-    add_to_archive(processing_files, db_update_obj)
+    add_to_archive(processing_files, db_update_obj, len(final_names), len(final_titles))
 
 def bib_process(processing_files, apis, merge):
     #proccess start time
@@ -220,17 +221,17 @@ def bib_process(processing_files, apis, merge):
     final_names = result_names_Object.mapping()
     result_title_Object = Results(title_result, titles, file, 'title', log_file)
     final_titles = result_title_Object.mapping()
-    #eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
-    stats['names-enriched'] = len(final_names)
     tff = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     #write back the URIs to the BIBFRAME file
     db_update_obj.stage = "Writing_to_BIBFRAME"
     db_update_obj.save()
     write(final_names, final_titles, file, output, log_file, filename)
+    eff = get_stat(final_names, len(names), final_titles, len(titles), filename)
+    stats['names-enriched'] = len(final_names)
     tfw = datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
     write_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tff, '%H:%M:%S')
     file_process_time = datetime.strptime(tfw, '%H:%M:%S') - datetime.strptime(tfs, '%H:%M:%S')
-    #write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time)
+    write_stats(eff, stats, filename, len(titles), len(names), all_names, corp_names, file_process_time, write_time, db_update_obj)
     #removing temp-file.xml
     delete_temp()
     print(filename + " processed in: ", file_process_time, " --- writing process :", write_time)
@@ -239,9 +240,9 @@ def bib_process(processing_files, apis, merge):
     db_update_obj.stage = "The process was completed in %s" %(process_time)
     db_update_obj.save()
     print("walltime:", process_time)
-    add_to_archive(processing_files, db_update_obj)
+    add_to_archive(processing_files, db_update_obj, len(final_names), len(final_titles))
 
-def add_to_archive(processing_files, db_update_obj):
+def add_to_archive(processing_files, db_update_obj, final_names, final_titles):
     archive=Progress_archive(process_ID = processing_files.id,
         description=processing_files.description,
         name = processing_files.name,
@@ -257,10 +258,15 @@ def add_to_archive(processing_files, db_update_obj):
         all_MARC = db_update_obj.all_MARC,
         p_names = db_update_obj.p_names,
         c_names = db_update_obj.c_names,
-        name_index = db_update_obj.name_index,
-        title_index = db_update_obj.title_index,
+        name_index = final_names,
+        title_index = final_titles,
         M_to_B_index = db_update_obj.M_to_B_index,
-        master_file =db_update_obj.master_file)
+        master_file = db_update_obj.master_file,
+        search_api_LC = db_update_obj.search_api_LC,
+        search_api_LCS = db_update_obj.search_api_LCS,
+        search_api_VF = db_update_obj.search_api_VF,
+        search_api_VFP = db_update_obj.search_api_VFP,
+        search_api_VFC = db_update_obj.search_api_VFC)
     archive.save()
     time.sleep(30)
     processing_files.delete()
@@ -440,7 +446,7 @@ def get_stat(final_names, names, final_titles, titles, file):
         stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
 
-def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time):
+def write_stats(eff, stats, filename, titles, names, all_names, corp_names, process_time, write_time, db_update_obj):
     file = filename + "-stats.tsv"
     if not os.path.exists("Webapp/Files/results/%s/Stats" %(filename)):
         os.makedirs("Webapp/Files/results/%s/Stats" %(filename))
@@ -456,6 +462,8 @@ def write_stats(eff, stats, filename, titles, names, all_names, corp_names, proc
         stat.write(str(titles) + " titles were extracted from " + filename + "\n\n")
         stat.write("API searched" +"\t" + "hits" + "\t" + "hit_rate" +"\n")
         for i in stats.keys():
+            setattr(db_update_obj, i, str(stats[i]))
+            db_update_obj.save()
             stat.write(i + "\t" + str(stats[i]) + "\t" + str((int(stats[i])/names)*100) + "\n")
         stat.write("\n" + "\n")
         if 'LC' in eff.keys():

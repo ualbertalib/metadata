@@ -21,6 +21,10 @@ def get_item(dictionary, key):
     return dictionary.get(key)
 
 @register.filter
+def replacedot(value):
+	return value.replace('.', '')
+
+@register.filter
 def get_apis(value):
     apis = []
     AP = ''
@@ -57,6 +61,10 @@ def inProcess(obj):
 			if obj.name == docs.files:
 				return (docs.id)
 	return False
+
+@register.filter
+def get_perc(value, args):
+	return ("{0:.2f}".format(round((int(value)/int(args))*100,2)))
 
 '''@register.filter
 def process(id):

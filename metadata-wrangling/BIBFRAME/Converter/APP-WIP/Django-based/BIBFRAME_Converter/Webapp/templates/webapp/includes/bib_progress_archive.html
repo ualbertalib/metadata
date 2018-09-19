@@ -1,6 +1,5 @@
 
-
-
+{% load replace %}
 {% block content %}
 
 	<tr>
@@ -34,7 +33,46 @@
 		<td>{{ obj.all_titles }}</td>
 		<td>{{ obj.p_names }}</td>
 		<td>{{ obj.c_names }}</td>
-		<td>{{ obj.name_index }}</td>
+		<td>{{ obj.name_index }}   
+			<button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#process{{ obj.process_ID }}" style="margin-left: 10%;">
+                API details
+                </button>
+            <div class="modal fade {{ obj.process_ID }}" id="process{{ obj.process_ID }}" tabindex="-1" role="dialog" aria-labelledby="{{ obj.process_ID }}Label" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="{{ obj.process_ID }}Label">Naems enriched by APIs</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+					<table>
+						<tr>
+							<th>LC (didyoumean)</th>
+							<th>LC (Suggest)</th>
+							<th>VIAF</th>
+							<th>VIAF Personal</th>
+							<th>VIAF Corporate</th>
+						</tr>
+						<tr>
+							<td>{{obj.search_api_LC}} ({{ obj.search_api_LC|get_perc:obj.all_names }}%)</td>
+							<td>{{obj.search_api_LCS}} 
+									({{ obj.search_api_LCS|get_perc:obj.all_names }}%)
+							</td>
+							<td>{{obj.search_api_VF}} ({{ obj.search_api_VF|get_perc:obj.all_names }}%)</td>
+							<td>{{obj.search_api_VFP}} ({{ obj.search_api_VFP|get_perc:obj.all_names }}%)</td>
+							<td>{{obj.search_api_VFC}} ({{ obj.search_api_VFC|get_perc:obj.all_names }}%)</td>
+						</tr>
+					</table>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</td>
 		<td>{{ obj.title_index }}</td>
 	</tr>	
 
