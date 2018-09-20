@@ -374,12 +374,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             LC_Var = 'N/A'
             LC_Std = 'N/A'
-        plt.hist(LC_Score)
-        plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
-        plt.grid()
-        plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
-            orientation='portrait')
-        plt.clf()
+        #plt.hist(LC_Score)
+        #plt.suptitle('Matching Score distribution for LC-IDs (' + file + ')', fontsize=12)
+        #plt.grid()
+        #plt.savefig(file_path+"-LC", facecolor='w', edgecolor='w',
+         #   orientation='portrait')
+        #plt.clf()
         stat['LC'] = [LC, LC_Avg, LC_Median, LC_Var, LC_Std, (LC/names)*100]
     if len(VIAF_Score) > 0:
         VIAF_Avg = statistics.mean(VIAF_Score)
@@ -390,12 +390,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             VIAF_Var = 'N/A'
             VIAF_Std = 'N/A'
-        plt.hist(VIAF_Score)
-        plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
-        plt.grid()
-        plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
-            orientation='portrait')
-        plt.clf()
+        #plt.hist(VIAF_Score)
+        #plt.suptitle('Matching Score distribution for VIAF-IDs (' + file + ')', fontsize=12)
+        #plt.grid()
+        #plt.savefig(file_path+"-VIAF", facecolor='w', edgecolor='w',
+         #   orientation='portrait')
+        #plt.clf()
         stat['VIAF'] = [VIAF, VIAF_Avg, VIAF_Median, VIAF_Var, VIAF_Std, (VIAF/names)*100]
     #colors = ['red', 'green']
     #labels = ['LC-IDs', 'VIAF-IDs']
@@ -421,12 +421,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             oclcid_Var = 'N/A'
             oclcid_Std = 'N/A'
-        plt.hist(work_id_Score)
-        plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
-        plt.grid()
-        plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
-            orientation='portrait')
-        plt.clf()
+        #plt.hist(work_id_Score)
+        #plt.suptitle('Matching Score distribution for OCLC Work IDs (' + file + ')', fontsize=12)
+        #plt.grid()
+        #plt.savefig(file_path+"-work_ID", facecolor='w', edgecolor='w',
+         #   orientation='portrait')
+        #plt.clf()
     if len(work_id_Score) > 0:
         work_id_Avg = statistics.mean(work_id_Score)
         work_id_Median = statistics.median(work_id_Score)
@@ -436,12 +436,12 @@ def get_stat(final_names, names, final_titles, titles, file):
         else:
             work_id_Var = 'N/A'
             work_id_Std = 'N/A'
-        plt.hist(oclcid_Score)
-        plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
-        plt.grid()
-        plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
-            orientation='portrait')
-        plt.clf()
+        #plt.hist(oclcid_Score)
+        #plt.suptitle('Matching Score distribution for OCLC IDs (' + file + ')', fontsize=12)
+        #plt.grid()
+        #plt.savefig(file_path+"-oclc_id", facecolor='w', edgecolor='w',
+         #   orientation='portrait')
+        #plt.clf()
         stat['work_id'] = [work_id, work_id_Avg, work_id_Median, work_id_Var, work_id_Std, (work_id/titles)*100]
         stat['oclcid'] = [oclcid, oclcid_Avg, oclcid_Median, oclcid_Var, oclcid_Std, (oclcid/titles)*100]
     return (stat)
