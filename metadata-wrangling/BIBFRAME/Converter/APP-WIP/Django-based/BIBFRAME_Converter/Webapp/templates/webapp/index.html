@@ -180,7 +180,11 @@
           </table>
         </div>
           <br><hr>
+          {% ifequal processing_documents|length 4 %}
+            <button class="btn btn-default btn-danger btn-lg btn-block overload" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" disabled>processing limit reached</button>
+          {% else %}
             <button class="btn btn-default btn-danger btn-lg btn-block process_button" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit">PROCESS</button>
+          {% endifequal %}
           </form>
           <form action="{% url 'processingQueue' %}" method="POST">
             {% csrf_token %}
