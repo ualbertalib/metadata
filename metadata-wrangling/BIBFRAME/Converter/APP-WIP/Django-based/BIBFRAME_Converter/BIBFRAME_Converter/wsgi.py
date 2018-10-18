@@ -1,3 +1,5 @@
+ #!/home/ubuntu/anaconda3/bin/python
+
 """
 WSGI config for BIBFRAME_Converter project.
 
@@ -8,6 +10,7 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os
+import django
 
 from django.core.wsgi import get_wsgi_application
 
