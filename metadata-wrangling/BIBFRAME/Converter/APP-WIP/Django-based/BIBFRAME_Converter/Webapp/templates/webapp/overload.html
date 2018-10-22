@@ -1,0 +1,12 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+
+<div class="container">
+ <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>ERROR!</strong> You have reached the processing limit!!! Wait for the current processes to finish or cancel one.
+  </div>
+  <p><a href="{% url 'index' %}">Return to home</a></p>
+</div>
+
+{% endblock %}
