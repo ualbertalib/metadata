@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^delete_archive/(?P<id>\d+)/$', views.delete_archive, name='delete_archive'),
     url(r'^delete_archive_all/$', views.delete_archive_all, name='delete_archive_all'),
     url(r'^progress/$', views.progress, name='progress'),
+    url(r'^overload/$', views.overload, name='overload'),
     url(r'^processing_duplicate/$', views.processing_duplicate, name='processing_duplicate'),
     url(r'^uploaded/(?P<id>\d+)/$', views.model_form_upload, name='model_form_upload')
 ]

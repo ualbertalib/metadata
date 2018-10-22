@@ -112,6 +112,7 @@ def deleted(request):
 	return render(request, 'webapp/deleted.html')
 
 def processingQueue(request):
+	overload = Processing.objects.all()
 	progress = P_progress.objects.all()
 	form = CheckForm(request.POST or None)
 	file_dict = dict(request.POST.lists())
@@ -120,63 +121,67 @@ def processingQueue(request):
 	if 'merge' in file_dict.keys():
 		merge = True
 	if 'file_selected' in file_dict.keys() and 'search-API-selector' in file_dict.keys():
-		for n, api in enumerate(file_dict['search-API-selector']):
-			if (n+1) < len(file_dict['search-API-selector']):
-				apis = apis + '%s_-_' %(api)
-			else:
-				apis = apis + api
-		for item in file_dict['file_selected']:
-			try:
-				object = Marc_Document.objects.get(document=item)
-			except:
-				object = Bib_Document.objects.get(document=item)
-			add_process = Processing(description=object.description, 
-					name=str(object.document), 
-					uploaded_at=object.uploaded_at,
-					file_format=object.file_format,
-					file_type=object.file_type,
-					apis=apis,
-					files=str(object.document),
-					status="started")
-			try:
-				if object.file_type == 'MARC Data':
-					add_process.save()
-					t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
-					t.setDaemon(True)
-					t.start()
-					print (threading.currentThread().getName())
-					if not t.isAlive():
-						add_process.delete()
-				elif object.file_type == 'BIBFRAME Data' and merge == True:
-					if not os.path.exists('Webapp/Files/Processing/BIBFRAME'):
-						os.makedirs('Webapp/Files/Processing/BIBFRAME')
-					oring_file = "Webapp/source/%s" %(str(object.document))
-					dest_file = "Webapp/Files/Processing/%s" %(str(object.document))
-					shutil.copyfile(oring_file, dest_file)
-				elif object.file_type == 'BIBFRAME Data' and merge == False:
-					add_process.save()
-					t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge])
-					t.setDaemon(True)
-					t.start()
-			except:
-				return redirect('processing_duplicate')
-				break
-		if  merge == True:
-			BIBFRAME = BIB_builder()
-			file = BIBFRAME.merger()
-			clear_processing()
-			add_process = Processing(description="merged BIBFRAME file", 
-					name=str(file[0].replace('Webapp/Files/Processing/', '')), 
-					uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
-					file_format='.xml',
-					file_type='BIBFRAME Data',
-					apis=apis,
-					files=file[1],
-					status="started")
-			add_process.save()
-			t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
-			t.setDaemon(True)
-			t.start()
+		olcheck = len(overload) + len(file_dict["file_selected"])
+		if olcheck > 4:
+			return redirect('overload')
+		else:
+			for n, api in enumerate(file_dict['search-API-selector']):
+				if (n+1) < len(file_dict['search-API-selector']):
+					apis = apis + '%s_-_' %(api)
+				else:
+					apis = apis + api
+			for item in file_dict['file_selected']:
+				try:
+					object = Marc_Document.objects.get(document=item)
+				except:
+					object = Bib_Document.objects.get(document=item)
+				add_process = Processing(description=object.description, 
+						name=str(object.document), 
+						uploaded_at=object.uploaded_at,
+						file_format=object.file_format,
+						file_type=object.file_type,
+						apis=apis,
+						files=str(object.document),
+						status="started")
+				try:
+					if object.file_type == 'MARC Data':
+						add_process.save()
+						t = threading.Thread(target=marc_process, args=[add_process, file_dict['search-API-selector']])
+						t.setDaemon(True)
+						t.start()
+						print (threading.currentThread().getName())
+						if not t.isAlive():
+							add_process.delete()
+					elif object.file_type == 'BIBFRAME Data' and merge == True:
+						if not os.path.exists('Webapp/Files/Processing/BIBFRAME'):
+							os.makedirs('Webapp/Files/Processing/BIBFRAME')
+						oring_file = "Webapp/source/%s" %(str(object.document))
+						dest_file = "Webapp/Files/Processing/%s" %(str(object.document))
+						shutil.copyfile(oring_file, dest_file)
+					elif object.file_type == 'BIBFRAME Data' and merge == False:
+						add_process.save()
+						t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge])
+						t.setDaemon(True)
+						t.start()
+				except:
+					return redirect('processing_duplicate')
+					break
+			if  merge == True:
+				BIBFRAME = BIB_builder()
+				file = BIBFRAME.merger()
+				clear_processing()
+				add_process = Processing(description="merged BIBFRAME file", 
+						name=str(file[0].replace('Webapp/Files/Processing/', '')), 
+						uploaded_at=datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
+						file_format='.xml',
+						file_type='BIBFRAME Data',
+						apis=apis,
+						files=file[1],
+						status="started")
+				add_process.save()
+				t = threading.Thread(target=bib_process, args=[add_process, file_dict['search-API-selector'], merge] )
+				t.setDaemon(True)
+				t.start()
 	processing_docs = Processing.objects.all()
 	return render(request, 'webapp/processing.html', {'processing_docs': processing_docs, 'P_progress': P_progress})
 
@@ -184,6 +189,9 @@ def progress(request):
 	update_marc = [item.as_marc() for item in P_progress.objects.all()]
 	update_bib = [item.as_bib() for item in P_progress.objects.all()]
 	return JsonResponse({'latest_progress_marc':update_marc, 'latest_progress_bib':update_bib})
+
+def overload(request):
+	return render(request, 'webapp/overload.html')
 
 def processing(request, id=None):
 	object = Processing.objects.get(id=id)
