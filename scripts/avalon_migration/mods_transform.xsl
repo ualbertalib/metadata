@@ -13,9 +13,20 @@
    
    
    <xsl:template match="@*|node()">
-         <xsl:copy>
-            <xsl:apply-templates select="@*|node()"/>
-         </xsl:copy>
+      <xsl:copy>
+         <xsl:apply-templates select="@*|node()"/>
+      </xsl:copy>
+   </xsl:template>
+   
+   <xsl:template match="*:mods">
+      <xsl:copy>
+         <xsl:apply-templates select="@*|node()"/>
+         <xsl:if test="//*:recordIdentifier[matches(.,concat($conHallList,'|',$UALLicensedList,'|',$sandboxList))]">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:call-template name="addLicense"/>
+            <xsl:text>&#xa;</xsl:text>
+         </xsl:if>
+      </xsl:copy>
    </xsl:template>
    
    <xsl:template match="//*:namePart">
@@ -36,15 +47,26 @@
       </xsl:copy>
    </xsl:template>
    
+   <xsl:template name="addLicense">
+      <xsl:element name="accessCondition" namespace="http://www.loc.gov/mods/v3">
+         <xsl:attribute name="type">use and reproduction</xsl:attribute>
+      <xsl:choose>
+         <xsl:when test="//*:recordIdentifier[matches(.,$conHallList)]">
+            <xsl:text>This audiovisual content is being provided solely for educational use and research, pursuant to exceptions in the Canadian Copyright Act. Further reproduction or distribution or other use may require additional permissions.</xsl:text>
+         </xsl:when>
+         <xsl:when test="//*:recordIdentifier[matches(.,$UALLicensedList)]">
+            <xsl:text>University of Alberta Libraries license for educational use and research.</xsl:text>
+         </xsl:when>
+         <xsl:when test="//*:recordIdentifier[matches(.,$sandboxList)]">
+            <xsl:text>Dummy License Text</xsl:text>
+         </xsl:when>
+      </xsl:choose>
+      </xsl:element>
+   </xsl:template>
    
    <xsl:template match="//*:accessCondition">
       <xsl:call-template name="licenseCleanup"/>            
    </xsl:template>
-   
-   <xsl:template match="//*:accessCondition[@type='use and reproduction' and text()='Attribution-NonCommercial 4.0 International']" priority="3"/> <!-- added separately for priority -->
-   <xsl:template match="recordIdentifier[@source='Fedora' and contains(.,'$conhallitems')]" priority="3">
-      
-   </xsl:template> <!-- added separately for priority -->
    
    <xsl:template match="//*:physicalDescription[not(*)]"/>
    

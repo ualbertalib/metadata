@@ -19,6 +19,10 @@ echo "Getting list of Avalon records"
 echo -n "Enter password:"
 read -s pass
 echo
+
+#./prep_fixes.sh
+
+
 ##### Use lines below when getting foxml #####
 # python3 ./get_query.py
 # python3 ./get_list.py
@@ -28,10 +32,13 @@ echo
 
 ##### Use when getting mods records #####
 echo "Getting list of Avalon media objects"
-wget -O 'MediaObject_pids.txt' 'http://avalon.library.ualberta.ca:8080/solr/avalon/select?q=has_model_ssim%3Ainfo%3Afedora%2Fafmodel%3AMediaObject&rows=1000000&fl=id&wt=csv&indent=true'
+wget -O 'MediaObject_pids.txt' 'http://uatsrv01.library.ualberta.ca:3603/solr/development/select?fl=id&indent=on&q=has_model_ssim:%22MediaObject%22&rows=30000&wt=csv'
+sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%SOMEBASEURL\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt >MediaObject_urls.txt
+#\{((..)(..)(..)(..).)$
+#$2/$3/$4/$5/{$1}/descMetadata
 
 echo "Getting Avalon mods records"
-xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O 'original_mods/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/datastreams/descMetadata/content' < MediaObject_pids.txt
+xargs -i -n 1 curl --limit-rate 45k --raw -o 'original_mods/#1.xml' < MediaObject_urls.txt
 
 
 echo "Transforming records"
@@ -39,7 +46,7 @@ echo "Transforming records"
 # cd ~/metadata
 rm original_mods/id.xml
 rm original_mods/.gitignore
-java -jar saxon9he.jar -s:original_mods -o:transformed/ -xsl:mods_transform.xsl
+java -jar saxon9he.jar -s:original_mods -o:transformed -xsl:mods_transform.xsl
 echo "*
 !.gitignore" > original_mods/.gitignore
 echo "Transformation successful"
