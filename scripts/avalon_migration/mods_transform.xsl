@@ -25,7 +25,7 @@
             <xsl:text>&#xa;</xsl:text>
             <xsl:call-template name="addLicense"/>
             <xsl:text>&#xa;</xsl:text>
-         </xsl:if>
+         </xsl:if>         
       </xsl:copy>
    </xsl:template>
    
@@ -74,6 +74,18 @@
    <xsl:template match="//*:note[matches(.,'(content is being provided solely for educational use and research)|(terms of use)','i')]" priority="5">
       <xsl:call-template name="noteCleanup"/>
    </xsl:template>
+   
+  <xsl:template match="//*:recordInfo">
+     <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+        <!-- comment following element out if creating package post-migration -->
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:element name="recordIdentifier" namespace="http://www.loc.gov/mods/v3">
+           <xsl:attribute name="source">Fedora4</xsl:attribute>
+           <xsl:text>AVALON6NOID</xsl:text>
+        </xsl:element>
+     </xsl:copy>
+  </xsl:template>
    
    
    <!--<xsl:template match="//*:genre">
