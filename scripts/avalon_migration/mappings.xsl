@@ -8,23 +8,26 @@
         <xsl:element name="accessCondition" namespace="http://www.loc.gov/mods/v3">
             <xsl:attribute name="type">use and reproduction</xsl:attribute>
             <xsl:choose>
-                <xsl:when test="contains(.,'Attribution_4.0_International')">
+                <xsl:when test="matches(.,'Attribution.4.0.International')">
                     <xsl:text>http://creativecommons.org/licenses/by/4.0/</xsl:text>
                 </xsl:when>
-                <xsl:when test="matches(.,'Attribution-NonCommercial_4\.0_International')">
+                <xsl:when test="matches(.,'Attribution-NonCommercial.4.0.International')">
                     <xsl:text>http://creativecommons.org/licenses/by-nc/4.0/</xsl:text>
                 </xsl:when>
-                <xsl:when test="contains(.,'Attribution-NonCommercial-NoDerivs_4.0_International')">
+                <xsl:when test="matches(.,'Attribution-NonCommercial-NoDerivs.4.0.International')">
                     <xsl:text>http://creativecommons.org/licenses/by-nc-nd/4.0/</xsl:text>
                 </xsl:when>
-                <xsl:when test="contains(.,'Attribution-NonCommercial-ShareAlike_4.0_International')">
+                <xsl:when test="matches(.,'Attribution-NonCommercial-ShareAlike.4.0.International')">
                     <xsl:text>http://creativecommons.org/licenses/by-nc-sa/4.0/</xsl:text>
                 </xsl:when>
-                <xsl:when test="contains(.,'Attribution-ShareAlike_4.0_International')">
+                <xsl:when test="matches(.,'Attribution-ShareAlike.4.0.International')">
                     <xsl:text>http://creativecommons.org/licenses/by-sa/4.0/</xsl:text>
                 </xsl:when>
-                <xsl:when test="contains(.,'Attribution-Non-Commercial-No Derivatives 3.0 Unported')">
+                <xsl:when test="matches(.,'Attribution-Non-Commercial-No.Derivatives.3.0.Unported')">
                     <xsl:text>http://creativecommons.org/licenses/by-nc-nd/3.0/</xsl:text>
+                </xsl:when>
+                <xsl:when test="matches(.,'Attribution.NoDerivs.4.0.International')">
+                    <xsl:text>https://creativecommons.org/licenses/by-nd/4.0/</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="normalize-space()"/>
