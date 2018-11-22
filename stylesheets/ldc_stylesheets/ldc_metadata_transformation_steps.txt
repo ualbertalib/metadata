@@ -6,12 +6,12 @@ input file
 (stylesheet)
 => output file
 
-1.
+1. Extract LDC OLAC records from OLAC source
 olac_source_olacdc.xml
 (extract_ldc_olac_from_source_v2.xsl)
 => olac_ldc_extract_olacdc.xml
 
-2.
+2. Convert LDC OLAC records to MARCXML
 olac_ldc_extract_olacdc.xml
 [or alternate file name]
 (convert_ldc_olac_to_marcxml.xsl)
@@ -20,18 +20,18 @@ olac_ldc_extract_olacdc.xml
 (lang_650_spoken.xsl)
 => olac_ldc_extract_marcxml.xml
 
-3.[to add 650s from UAL LDC MARC records]
+3.[onetime] Add 650s from UAL LDC MARC records
 olac_ldc_extract_marcxml.xml
 ual_ldc_marc_650s_corrected_marcxml.xml
 (combine_ldc_marcxml_with_650.xsl)
 => combined_olac_ual_ldc_marcxml.xml
 
-4.[for HTML format]
+4. Derive HTML formatted MARC
 olac_ldc_extract_marcxml.xml
 (MARC21slim2English_revised.xsl)
 => combined_olac_ual_ldc_marc_html.html
 
-5.[for MARC format]
+5. Derive MARC format records
 combined_olac_ual_ldc_marcxml.xml
 (MarcEdit tool)
 => combined_olac_ual_ldc_marc.mrc
