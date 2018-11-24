@@ -37,7 +37,7 @@
     <xsl:variable name="langCount" select="count(dc:language)"/>
     <xsl:variable name="langEng" select="boolean(dc:language[@olac:code='eng'])"/>
     <xsl:variable name="spoken"
-      select="boolean(dc:type[@xsi:type = 'dcterms:DCMIType'][Sound] or dc:type[@xsi:type = 'dcterms:DCMIType'][MovingImage])"/>
+      select="boolean(dc:type[@xsi:type='dcterms:DCMIType'][text()='Sound'] or dc:type[@xsi:type='dcterms:DCMIType'][text()='MovingImage'])"/>
     <xsl:variable name="lang008">
       <xsl:call-template name="lang041">
         <xsl:with-param name="langISO" select="normalize-space(string(dc:language[1]/@olac:code))">
@@ -248,22 +248,22 @@
         <marc:datafield tag="336" ind1=" " ind2=" ">
           <marc:subfield code="a">
             <xsl:choose>
-              <xsl:when test=". = 'Image'">still image</xsl:when>
-              <xsl:when test=". = 'MovingImage'">two-dimensional moving image</xsl:when>
-              <xsl:when test=". = 'Software'">computer program</xsl:when>
-              <xsl:when test=". = 'Sound'">spoken word</xsl:when>
-              <xsl:when test=". = 'StillImage'">still image</xsl:when>
-              <xsl:when test=". = 'Text'">text</xsl:when>
+              <xsl:when test=".='Image'">still image</xsl:when>
+              <xsl:when test=".='MovingImage'">two-dimensional moving image</xsl:when>
+              <xsl:when test=".='Software'">computer program</xsl:when>
+              <xsl:when test=".='Sound'">spoken word</xsl:when>
+              <xsl:when test=".='StillImage'">still image</xsl:when>
+              <xsl:when test=".='Text'">text</xsl:when>
             </xsl:choose>
           </marc:subfield>
           <marc:subfield code="b">
             <xsl:choose>
-              <xsl:when test=". = 'Image'">sti</xsl:when>
-              <xsl:when test=". = 'MovingImage'">tdi</xsl:when>
-              <xsl:when test=". = 'Software'">cop</xsl:when>
-              <xsl:when test=". = 'Sound'">spw</xsl:when>
-              <xsl:when test=". = 'StillImage'">sti</xsl:when>
-              <xsl:when test=". = 'Text'">txt</xsl:when>
+              <xsl:when test=".='Image'">sti</xsl:when>
+              <xsl:when test=".='MovingImage'">tdi</xsl:when>
+              <xsl:when test=".='Software'">cop</xsl:when>
+              <xsl:when test=".='Sound'">spw</xsl:when>
+              <xsl:when test=".='StillImage'">sti</xsl:when>
+              <xsl:when test=".='Text'">txt</xsl:when>
             </xsl:choose>
           </marc:subfield>
           <marc:subfield code="2">
@@ -518,8 +518,7 @@
       </xsl:when>
       <xsl:when test="contains($desc, '*Copying and Distribution*')">
         <xsl:call-template name="editDesc">
-          <xsl:with-param name="desc" select="substring-before($desc, '*Copying and Distribution*')"
-          />
+          <xsl:with-param name="desc" select="substring-before($desc, '*Copying and Distribution*')"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
