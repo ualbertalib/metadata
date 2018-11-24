@@ -6,746 +6,746 @@
     xmlns:olac="http://www.language-archives.org/OLAC/1.1/"
     exclude-result-prefixes="xs dc"
     version="2.0">
-    <xsl:template name="langMarc">
-        <xsl:param name="lang"/>
+    <xsl:template name="lang041">
+        <xsl:param name="langISO"/>
         <xsl:choose>
-            <xsl:when test="$lang='als'">
+            <xsl:when test="$langISO='als'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Tosk Albanian -->
                 <!-- marc: Albanian -->
-                <xsl:call-template name="marc041alb"/>
+                <xsl:call-template name="lang041alb"/>
             </xsl:when>
-            <xsl:when test="$lang='sqi'">
+            <xsl:when test="$langISO='sqi'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Albanian -->
                 <!-- marc: Albanian -->
-                <xsl:call-template name="marc041alb"/>
+                <xsl:call-template name="lang041alb"/>
             </xsl:when>
-            <xsl:when test="$lang='amh'">
+            <xsl:when test="$langISO='amh'">
                 <!-- code match -->
                 <!-- iso 639-3: Amharic -->
                 <!-- marc: Amharic -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">amh</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">amh</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='abv'">
+            <xsl:when test="$langISO='abv'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Baharna Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='acm'">
+            <xsl:when test="$langISO='acm'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Mesopotamian Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='afb'">
+            <xsl:when test="$langISO='afb'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Gulf Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='apc'">
+            <xsl:when test="$langISO='apc'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: North Levantine Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='ara'">
+            <xsl:when test="$langISO='ara'">
                 <!-- code match -->
                 <!-- iso 639-3: Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='arb'">
+            <xsl:when test="$langISO='arb'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Standard Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='ary'">
+            <xsl:when test="$langISO='ary'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Moroccan Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='arz'">
+            <xsl:when test="$langISO='arz'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Egyptian Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='ayp'">
+            <xsl:when test="$langISO='ayp'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: North Mesopotamian Arabic -->
                 <!-- marc: Arabic -->
-                <xsl:call-template name="marc041ara"/>
+                <xsl:call-template name="lang041ara"/>
             </xsl:when>
-            <xsl:when test="$lang='asm'">
+            <xsl:when test="$langISO='asm'">
                 <!-- code match -->
                 <!-- iso 639-3: Assamese -->
                 <!-- marc: Assamese -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">asm</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">asm</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='jgo'">
+            <xsl:when test="$langISO='jgo'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Ngomba -->
                 <!-- marc: Bamileke languages -->
-                <xsl:call-template name="marc041bai"/>
+                <xsl:call-template name="lang041bai"/>
             </xsl:when>
-            <xsl:when test="$lang='ybb'">
+            <xsl:when test="$langISO='ybb'">
                 <!-- match based on label, marc assigned collective code -->
                 <!-- iso 639-3: Yemba -->
                 <!-- marc: Yemba -->
-                <xsl:call-template name="marc041bai"/>
+                <xsl:call-template name="lang041bai"/>
             </xsl:when>
-            <xsl:when test="$lang='bam'">
+            <xsl:when test="$langISO='bam'">
                 <!-- code match -->
                 <!-- iso 639-3: Bambara -->
                 <!-- marc: Bambara -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">bam</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">bam</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='eus'">
+            <xsl:when test="$langISO='eus'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Basque -->
                 <!-- marc: Basque -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">baq</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">baq</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ben'">
+            <xsl:when test="$langISO='ben'">
                 <!-- code match -->
                 <!-- iso 639-3: Bengali -->
                 <!-- marc: Bengali -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ben</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ben</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='bos'">
+            <xsl:when test="$langISO='bos'">
                 <!-- code match -->
                 <!-- iso 639-3: Bosnian -->
                 <!-- marc: Bosnian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">bos</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">bos</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='bul'">
+            <xsl:when test="$langISO='bul'">
                 <!-- code match -->
                 <!-- iso 639-3: Bulgarian -->
                 <!-- marc: Bulgarian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">bul</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">bul</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='cat'">
+            <xsl:when test="$langISO='cat'">
                 <!-- code match -->
                 <!-- iso 639-3: Catalan -->
                 <!-- marc: Catalan -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">cat</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">cat</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ceb'">
+            <xsl:when test="$langISO='ceb'">
                 <!-- code match -->
                 <!-- iso 639-3: Cebuano -->
                 <!-- marc: Cebuano -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ceb</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ceb</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='cmn'">
+            <xsl:when test="$langISO='cmn'">
                 <!-- marc preferred term ('use'), based on label match -->
                 <!-- iso 639-3: Mandarin Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='lzh'">
+            <xsl:when test="$langISO='lzh'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Literary Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='nan'">
+            <xsl:when test="$langISO='nan'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Min Nan Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='wuu'">
+            <xsl:when test="$langISO='wuu'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Wu Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='yue'">
+            <xsl:when test="$langISO='yue'">
                 <!-- marc preferred term ('use'), based on label match -->
                 <!-- iso 639-3: Yue Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='zho'">
+            <xsl:when test="$langISO='zho'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Chinese -->
                 <!-- marc: Chinese -->
-                <xsl:call-template name="marc041chi"/>
+                <xsl:call-template name="lang041chi"/>
             </xsl:when>
-            <xsl:when test="$lang='gul'">
+            <xsl:when test="$langISO='gul'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Sea Island Creole English -->
                 <!-- marc: Sea Islands Creole -->
-                <xsl:call-template name="marc041cpe"/>
+                <xsl:call-template name="lang041cpe"/>
             </xsl:when>
-            <xsl:when test="$lang='trf'">
+            <xsl:when test="$langISO='trf'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Trinidadian Creole English -->
                 <!-- marc: Sea Islands Creole -->
-                <xsl:call-template name="marc041cpe"/>
+                <xsl:call-template name="lang041cpe"/>
             </xsl:when>
-            <xsl:when test="$lang='ces'">
+            <xsl:when test="$langISO='ces'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Czech -->
                 <!-- marc: Czech -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">cze</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">cze</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='dan'">
+            <xsl:when test="$langISO='dan'">
                 <!-- code match -->
                 <!-- iso 639-3: Danish -->
                 <!-- marc: Danish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">dan</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">dan</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='kmj'">
+            <xsl:when test="$langISO='kmj'">
                 <!-- marc assigned collective code for Malto (best fit based on label) -->
                 <!-- iso 639-3: Kumarbhag Paharia -->
                 <!-- marc: Dravidian (Other) -->
-                <xsl:call-template name="marc041dra"/>
+                <xsl:call-template name="lang041dra"/>
             </xsl:when>
-            <xsl:when test="$lang='mjt'">
+            <xsl:when test="$langISO='mjt'">
                 <!-- marc assigned collective code for Malto (best fit based on label) -->
                 <!-- iso 639-3: Sauria Paharia -->
                 <!-- marc: Dravidian (Other) -->
-                <xsl:call-template name="marc041dra"/>
+                <xsl:call-template name="lang041dra"/>
             </xsl:when>
-            <xsl:when test="$lang='mkb'">
+            <xsl:when test="$langISO='mkb'">
                 <!-- marc assigned collective code for Malto (best fit based on label) -->
                 <!-- iso 639-3: Mal Paharia -->
                 <!-- marc: Dravidian (Other) -->
-                <xsl:call-template name="marc041dra"/>
+                <xsl:call-template name="lang041dra"/>
             </xsl:when>
-            <xsl:when test="$lang='nld'">
+            <xsl:when test="$langISO='nld'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Dutch -->
                 <!-- marc: Dutch -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">dut</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">dut</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='eng'">
+            <xsl:when test="$langISO='eng'">
                 <!-- code match -->
                 <!-- iso 639-3: English -->
                 <!-- marc: English -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">eng</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">eng</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='est'">
+            <xsl:when test="$langISO='est'">
                 <!-- code match -->
                 <!-- iso 639-3: Estonian -->
                 <!-- marc: Estonian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">est</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">est</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='fra'">
+            <xsl:when test="$langISO='fra'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: French -->
                 <!-- marc: French -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">fre</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">fre</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='kat'">
+            <xsl:when test="$langISO='kat'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Georgian -->
                 <!-- marc: Georgian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">geo</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">geo</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='deu'">
+            <xsl:when test="$langISO='deu'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: German -->
                 <!-- marc: German -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ger</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ger</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='gla'">
+            <xsl:when test="$langISO='gla'">
                 <!-- code match -->
                 <!-- iso 639-3: Scottish Gaelic -->
                 <!-- marc: Scottish Gaelic -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">gla</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">gla</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ell'">
+            <xsl:when test="$langISO='ell'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Modern Greek (1453-) -->
                 <!-- marc: Greek, Modern (1453-) -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">gre</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">gre</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='hat'">
+            <xsl:when test="$langISO='hat'">
                 <!-- code match, though labels differ -->
                 <!-- iso 639-3: Haitian -->
                 <!-- marc: Haitian French Creole -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">hat</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">hat</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='hau'">
+            <xsl:when test="$langISO='hau'">
                 <!-- code match -->
                 <!-- iso 639-3: Hausa -->
                 <!-- marc: Hausa -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">hau</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">hau</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='hin'">
+            <xsl:when test="$langISO='hin'">
                 <!-- code match -->
                 <!-- iso 639-3: Hindi -->
                 <!-- marc: Hindi -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">hin</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">hin</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='hrv'">
+            <xsl:when test="$langISO='hrv'">
                 <!-- code match -->
                 <!-- iso 639-3: Croatian -->
                 <!-- marc: Croatian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">hrv</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">hrv</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='hun'">
+            <xsl:when test="$langISO='hun'">
                 <!-- code match -->
                 <!-- iso 639-3: Hungarian -->
                 <!-- marc: Hungarian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">hun</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">hun</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ind'">
+            <xsl:when test="$langISO='ind'">
                 <!-- code match -->
                 <!-- iso 639-3: Indonesian -->
                 <!-- marc: Indonesian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ind</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ind</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ita'">
+            <xsl:when test="$langISO='ita'">
                 <!-- code match -->
                 <!-- iso 639-3: Italian -->
                 <!-- marc: Italian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ita</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ita</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='jpn'">
+            <xsl:when test="$langISO='jpn'">
                 <!-- code match -->
                 <!-- iso 639-3: Japanese -->
                 <!-- marc: Japanese -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">jpn</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">jpn</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='khm'">
+            <xsl:when test="$langISO='khm'">
                 <!-- code match, though labels differ -->
                 <!-- iso 639-3: Central Khmer -->
                 <!-- marc: Khmer -->
-                <xsl:call-template name="marc041khm"/>
+                <xsl:call-template name="lang041khm"/>
             </xsl:when>
-            <xsl:when test="$lang='kxm'">
+            <xsl:when test="$langISO='kxm'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Northern Khmer -->
                 <!-- marc: Northern Khmer -->
-                <xsl:call-template name="marc041khm"/>
+                <xsl:call-template name="lang041khm"/>
             </xsl:when>
-            <xsl:when test="$lang='kor'">
+            <xsl:when test="$langISO='kor'">
                 <!-- code match -->
                 <!-- iso 639-3: Korean -->
                 <!-- marc: Korean -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">kor</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">kor</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='kmr'">
+            <xsl:when test="$langISO='kmr'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Northern Kurdish -->
                 <!-- marc: Kurdish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">kur</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">kur</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='pnb'">
+            <xsl:when test="$langISO='pnb'">
                 <!-- marc preferred term ('use'), based on label match -->
                 <!-- iso 639-3: Western Panjabi -->
                 <!-- marc: Lahndā -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">lah</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">lah</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='lao'">
+            <xsl:when test="$langISO='lao'">
                 <!-- code match -->
                 <!-- iso 639-3: Lao -->
                 <!-- marc: Lao -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">lao</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">lao</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='lat'">
+            <xsl:when test="$langISO='lat'">
                 <!-- code match -->
                 <!-- iso 639-3: Latin -->
                 <!-- marc: Latin -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">lat</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">lat</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='lit'">
+            <xsl:when test="$langISO='lit'">
                 <!-- code match -->
                 <!-- iso 639-3: Lithuanian -->
                 <!-- marc: Lithuanian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">lit</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">lit</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='emk'">
+            <xsl:when test="$langISO='emk'">
                 <!-- marc preferred term ('use'), based on label match -->
                 <!-- iso 639-3: Eastern Maninkakan -->
                 <!-- marc: Mandingo -->
-                <xsl:call-template name="marc041man"/>
+                <xsl:call-template name="lang041man"/>
             </xsl:when>
-            <xsl:when test="$lang='mxx'">
+            <xsl:when test="$langISO='mxx'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Mahou -->
                 <!-- marc: Mandingo -->
-                <xsl:call-template name="marc041man"/>
+                <xsl:call-template name="lang041man"/>
             </xsl:when>
-            <xsl:when test="$lang='zsm'">
+            <xsl:when test="$langISO='zsm'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Standard Malay -->
                 <!-- marc: Malay -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">may</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">may</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='nno'">
+            <xsl:when test="$langISO='nno'">
                 <!-- code match -->
                 <!-- iso 639-3: Norwegian Nynorsk -->
                 <!-- marc: Norwegian (Nynorsk) -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">nno</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">nno</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='nob'">
+            <xsl:when test="$langISO='nob'">
                 <!-- code match -->
                 <!-- iso 639-3: Norwegian Bokmål -->
                 <!-- marc: Norwegian (Bokmål) -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">nob</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">nob</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='nor'">
+            <xsl:when test="$langISO='nor'">
                 <!-- code match -->
                 <!-- iso 639-3: Norwegian -->
                 <!-- marc: Norwegian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">nor</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">nor</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='pan'">
+            <xsl:when test="$langISO='pan'">
                 <!-- code match -->
                 <!-- iso 639-3: Panjabi -->
                 <!-- marc: Panjabi -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">pan</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">pan</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='fas'">
+            <xsl:when test="$langISO='fas'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Persian -->
                 <!-- marc: Persian -->
-                <xsl:call-template name="marc041per"/>
+                <xsl:call-template name="lang041per"/>
             </xsl:when>
-            <xsl:when test="$lang='pes'">
+            <xsl:when test="$langISO='pes'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Iranian Persian -->
                 <!-- marc: Persian -->
-                <xsl:call-template name="marc041per"/>
+                <xsl:call-template name="lang041per"/>
             </xsl:when>
-            <xsl:when test="$lang='prs'">
+            <xsl:when test="$langISO='prs'">
                 <!-- match based on label, marc assigned collective code -->
                 <!-- iso 639-3: Dari -->
                 <!-- marc: Dari -->
-                <xsl:call-template name="marc041per"/>
+                <xsl:call-template name="lang041per"/>
             </xsl:when>
-            <xsl:when test="$lang='pol'">
+            <xsl:when test="$langISO='pol'">
                 <!-- code match -->
                 <!-- iso 639-3: Polish -->
                 <!-- marc: Polish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">pol</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">pol</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='por'">
+            <xsl:when test="$langISO='por'">
                 <!-- code match -->
                 <!-- iso 639-3: Portuguese -->
                 <!-- marc: Portuguese -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">por</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">por</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='pus'">
+            <xsl:when test="$langISO='pus'">
                 <!-- code match -->
                 <!-- iso 639-3: Pushto -->
                 <!-- marc: Pushto -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">pus</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">pus</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ron'">
+            <xsl:when test="$langISO='ron'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Romanian -->
                 <!-- marc: Romanian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">rum</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">rum</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='rus'">
+            <xsl:when test="$langISO='rus'">
                 <!-- code match -->
                 <!-- iso 639-3: Russian -->
                 <!-- marc: Russian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">rus</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">rus</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='san'">
+            <xsl:when test="$langISO='san'">
                 <!-- code match -->
                 <!-- iso 639-3: Sanskrit -->
                 <!-- marc: Sanskrit -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">san</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">san</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ajp'">
+            <xsl:when test="$langISO='ajp'">
                 <!-- best fit based on label, marc assigned collective code -->
                 <!-- iso 639-3: South Levantine Arabic -->
                 <!-- marc: South Arabic -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">sem</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">sem</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='slk'">
+            <xsl:when test="$langISO='slk'">
                 <!-- ISO 239-2/B synonym -->
                 <!-- iso 639-3: Slovak -->
                 <!-- marc: Slovak -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">slo</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">slo</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='slv'">
+            <xsl:when test="$langISO='slv'">
                 <!-- code match -->
                 <!-- iso 639-3: Slovenian -->
                 <!-- marc: Slovenian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">slv</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">slv</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='som'">
+            <xsl:when test="$langISO='som'">
                 <!-- code match -->
                 <!-- iso 639-3: Somali -->
                 <!-- marc: Somali -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">som</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">som</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='spa'">
+            <xsl:when test="$langISO='spa'">
                 <!-- code match -->
                 <!-- iso 639-3: Spanish -->
                 <!-- marc: Spanish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">spa</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">spa</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='srp'">
+            <xsl:when test="$langISO='srp'">
                 <!-- code match -->
                 <!-- iso 639-3: Serbian -->
                 <!-- marc: Serbian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">srp</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">srp</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='swa'">
+            <xsl:when test="$langISO='swa'">
                 <!-- code match -->
                 <!-- iso 639-3: Swahili -->
                 <!-- marc: Swahili -->
-                <xsl:call-template name="marc041swa"/>
+                <xsl:call-template name="lang041swa"/>
             </xsl:when>
-            <xsl:when test="$lang='swc'">
+            <xsl:when test="$langISO='swc'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Congo Swahili -->
                 <!-- marc: Swahili -->
-                <xsl:call-template name="marc041swa"/>
+                <xsl:call-template name="lang041swa"/>
             </xsl:when>
-            <xsl:when test="$lang='swh'">
+            <xsl:when test="$langISO='swh'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Swahili (individual language) -->
                 <!-- marc: Swahili -->
-                <xsl:call-template name="marc041swa"/>
+                <xsl:call-template name="lang041swa"/>
             </xsl:when>
-            <xsl:when test="$lang='swe'">
+            <xsl:when test="$langISO='swe'">
                 <!-- code match -->
                 <!-- iso 639-3: Swedish -->
                 <!-- marc: Swedish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">swe</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">swe</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tam'">
+            <xsl:when test="$langISO='tam'">
                 <!-- code match -->
                 <!-- iso 639-3: Tamil -->
                 <!-- marc: Tamil -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tam</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tam</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tgl'">
+            <xsl:when test="$langISO='tgl'">
                 <!-- code match -->
                 <!-- iso 639-3: Tagalog -->
                 <!-- marc: Tagalog -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tgl</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tgl</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tha'">
+            <xsl:when test="$langISO='tha'">
                 <!-- code match -->
                 <!-- iso 639-3: Thai -->
                 <!-- marc: Thai -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tha</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tha</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tir'">
+            <xsl:when test="$langISO='tir'">
                 <!-- code match -->
                 <!-- iso 639-3: Tigrinya -->
                 <!-- marc: Tigrinya -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tir</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tir</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tpi'">
+            <xsl:when test="$langISO='tpi'">
                 <!-- code match -->
                 <!-- iso 639-3: Tok Pisin -->
                 <!-- marc: Tok Pisin -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tpi</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tpi</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='tur'">
+            <xsl:when test="$langISO='tur'">
                 <!-- code match -->
                 <!-- iso 639-3: Turkish -->
                 <!-- marc: Turkish -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">tur</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">tur</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='ukr'">
+            <xsl:when test="$langISO='ukr'">
                 <!-- code match -->
                 <!-- iso 639-3: Ukrainian -->
                 <!-- marc: Ukrainian -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">ukr</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">ukr</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='urd'">
+            <xsl:when test="$langISO='urd'">
                 <!-- code match -->
                 <!-- iso 639-3: Urdu -->
                 <!-- marc: Urdu -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">urd</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">urd</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='uzb'">
+            <xsl:when test="$langISO='uzb'">
                 <!-- code match -->
                 <!-- iso 639-3: Uzbek -->
                 <!-- marc: Uzbek -->
-                <xsl:call-template name="marc041uzb"/>
+                <xsl:call-template name="lang041uzb"/>
             </xsl:when>
-            <xsl:when test="$lang='uzn'">
+            <xsl:when test="$langISO='uzn'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Northern Uzbek -->
                 <!-- marc: Uzbek -->
-                <xsl:call-template name="marc041uzb"/>
+                <xsl:call-template name="lang041uzb"/>
             </xsl:when>
-            <xsl:when test="$lang='vie'">
+            <xsl:when test="$langISO='vie'">
                 <!-- code match -->
                 <!-- iso 639-3: Vietnamese -->
                 <!-- marc: Vietnamese -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">vie</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">vie</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='luq'">
+            <xsl:when test="$langISO='luq'">
                 <!-- best fit based on label -->
                 <!-- iso 639-3: Lucumi -->
                 <!-- marc: Yoruba -->
-                <xsl:call-template name="marc041yor"/>
+                <xsl:call-template name="lang041yor"/>
             </xsl:when>
-            <xsl:when test="$lang='yor'">
+            <xsl:when test="$langISO='yor'">
                 <!-- code match -->
                 <!-- iso 639-3: Yoruba -->
                 <!-- marc: Yoruba -->
-                <xsl:call-template name="marc041yor"/>
+                <xsl:call-template name="lang041yor"/>
             </xsl:when>
-            <xsl:when test="$lang='zul'">
+            <xsl:when test="$langISO='zul'">
                 <!-- code match -->
                 <!-- iso 639-3: Zulu -->
                 <!-- marc: Zulu -->
-                <xsl:call-template name="marc041">
-                    <xsl:with-param name="langMarc">zul</xsl:with-param>
+                <xsl:call-template name="lang041default">
+                    <xsl:with-param name="langMARC">zul</xsl:with-param>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$lang='zxx'">
+            <xsl:when test="$langISO='zxx'">
                 <!-- code match, though labels differ -->
                 <!-- iso 639-3: Vervet Monkey Calls -->
                 <!-- marc: No linguistic content -->
-                <xsl:call-template name="marc041zxx"/>
+                <xsl:call-template name="lang041zxx"/>
             </xsl:when>
-            <xsl:when test="$lang='zxx'">
+            <xsl:when test="$langISO='zxx'">
                 <!-- code match -->
                 <!-- iso 639-3: No linguistic content -->
                 <!-- marc: No linguistic content -->
-                <xsl:call-template name="marc041zxx"/>
+                <xsl:call-template name="lang041zxx"/>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041">
-        <xsl:param name="langMarc"/>
+    <xsl:template name="lang041default">
+        <xsl:param name="langMARC"/>
         <marc:subfield code="a">
-            <xsl:value-of select="$langMarc"/>
+            <xsl:value-of select="$langMARC"/>
         </marc:subfield>
     </xsl:template>
-    <xsl:template name="marc041alb">
+    <xsl:template name="lang041alb">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'als'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'sqi'"/>
@@ -756,7 +756,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041ara">
+    <xsl:template name="lang041ara">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'abv'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'acm'"/>
@@ -774,7 +774,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041bai">
+    <xsl:template name="lang041bai">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'jgo'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'ybb'"/>
@@ -785,7 +785,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041chi">
+    <xsl:template name="lang041chi">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'cmn'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'lzh'"/>
@@ -800,7 +800,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041cpe">
+    <xsl:template name="lang041cpe">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'gul'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'trf'"/>
@@ -811,7 +811,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041dra">
+    <xsl:template name="lang041dra">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'kmj'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'mjt'"/>
@@ -823,7 +823,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041khm">
+    <xsl:template name="lang041khm">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'khm'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'kxm'"/>
@@ -834,7 +834,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041man">
+    <xsl:template name="lang041man">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'emk'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'mxx'"/>
@@ -845,7 +845,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041per">
+    <xsl:template name="lang041per">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'fas'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'pes'"/>
@@ -857,7 +857,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041swa">
+    <xsl:template name="lang041swa">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'swa'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'swc'"/>
@@ -869,7 +869,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041uzb">
+    <xsl:template name="lang041uzb">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'uzb'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'uzn'"/>
@@ -880,7 +880,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041yor">
+    <xsl:template name="lang041yor">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'luq'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'yor'"/>
@@ -891,7 +891,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="marc041zxx">
+    <xsl:template name="lang041zxx">
         <xsl:choose>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'zxx'"/>
             <xsl:otherwise>

@@ -10,8 +10,9 @@
   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
   exclude-result-prefixes="dc dcterms oai_dc">
 
-  <xsl:import href="lang_marc.xsl"/>
+  <xsl:import href="lang_041.xsl"/>
   <xsl:import href="lang_650_basic.xsl"/>
+  <xsl:import href="lang_650_spoken.xsl"/>
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <xsl:template match="/">
@@ -38,8 +39,8 @@
     <xsl:variable name="spoken"
       select="boolean(dc:type[@xsi:type = 'dcterms:DCMIType'][Sound] or dc:type[@xsi:type = 'dcterms:DCMIType'][MovingImage])"/>
     <xsl:variable name="lang008">
-      <xsl:call-template name="langMarc">
-        <xsl:with-param name="lang" select="normalize-space(string(dc:language[1]/@olac:code))">
+      <xsl:call-template name="lang041">
+        <xsl:with-param name="langISO" select="normalize-space(string(dc:language[1]/@olac:code))">
         </xsl:with-param>
       </xsl:call-template>      
     </xsl:variable>
@@ -164,8 +165,8 @@
         <xsl:when test="$langCount = 1 and $langEng = false()">
           <marc:datafield tag="041" ind1="0" ind2=" ">
             <xsl:for-each select="dc:language/@olac:code">
-              <xsl:call-template name="langMarc">
-                <xsl:with-param name="lang" select="."/>
+              <xsl:call-template name="lang041">
+                <xsl:with-param name="langISO" select="."/>
               </xsl:call-template>
             </xsl:for-each>
             <marc:subfield code="b">eng</marc:subfield>
@@ -181,8 +182,8 @@
         <xsl:when test="$langCount > 1">
           <marc:datafield tag="041" ind1="0" ind2=" ">
             <xsl:for-each select="dc:language/@olac:code">
-              <xsl:call-template name="langMarc">
-                <xsl:with-param name="lang" select="."/>
+              <xsl:call-template name="lang041">
+                <xsl:with-param name="langISO" select="."/>
               </xsl:call-template>
             </xsl:for-each>
             <marc:subfield code="b">eng</marc:subfield>
@@ -411,12 +412,12 @@
       </xsl:choose>
 
       <xsl:for-each select="dc:language/@olac:code">
-        <xsl:call-template name="lang650">
-          <xsl:with-param name="lang" select="."/>
+        <xsl:call-template name="lang650basic">
+          <xsl:with-param name="langISO" select="."/>
         </xsl:call-template>
         <xsl:if test="$spoken = true()">
-          <xsl:call-template name="lang650">
-            <xsl:with-param name="lang" select="."/>
+          <xsl:call-template name="lang650spoken">
+            <xsl:with-param name="langISO" select="."/>
           </xsl:call-template>
         </xsl:if>
       </xsl:for-each>
