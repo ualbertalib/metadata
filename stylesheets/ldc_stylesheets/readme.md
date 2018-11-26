@@ -15,7 +15,7 @@ olac_source_olacdc.xml\
 olac_ldc_extract_olacdc.xml\
 [or alternate file name]\
 (convert_ldc_olac_to_marcxml.xsl)\
-(lang_marc.xsl)\
+(lang_041.xsl)\
 (lang_650_basic.xsl)\
 (lang_650_spoken.xsl)\
 => olac_ldc_extract_marcxml.xml
