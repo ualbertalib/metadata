@@ -7,6 +7,7 @@
     exclude-result-prefixes="xs dc"
     version="2.0">
     <xsl:template name="lang041">
+        <!-- The mappings in this stylesheet are maintained in a table at https://docs.google.com/spreadsheets/d/1pJ7QJTH-6qaxAjAlQxVO9cMNgyAmCgUtK8LFAgy7jZ0/edit?usp=sharing -->
         <xsl:param name="langISO"/>
         <xsl:choose>
             <xsl:when test="$langISO='als'">
