@@ -7,7 +7,7 @@
     <xsl:output indent="yes"/>
     <xsl:strip-space elements="*"/>
     <xsl:template match="marc:collection">
-        <xsl:element name="ldcMetadata">
+        <xsl:element name="collection">
             <xsl:namespace name="marc">http://www.loc.gov/MARC21/slim</xsl:namespace>
             <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
             <xsl:apply-templates select="marc:record"/>
