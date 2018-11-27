@@ -6,7 +6,7 @@
     version="2.0">
     <xsl:output indent="yes"></xsl:output>
     <xsl:strip-space elements="*"/>
-    <xsl:variable name="ldc650" select="document('../../metadata-wrangling/ldc_metadata/ual_ldc_marc_650s_corrected_marcxml.xml')"/>
+    <xsl:variable name="ldc650" select="document('../../metadata-wrangling/ldc_metadata/ual_ldc_marc_650s_deduped_marcxml.xml')"/>
     
     <xsl:template match="marc:collection">
         <xsl:copy>
