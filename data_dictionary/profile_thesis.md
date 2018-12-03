@@ -416,8 +416,6 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * https://github.com/ualbertalib/metadata/tree/master/data_dictionary/jupiter_ontology.md#dctermsabstract  
   * display:  
     * true  
-  * displayLabel:  
-    * abstract  
   * indexAs:  
     * http://purl.org/dc/terms/description  
   * onForm:  
