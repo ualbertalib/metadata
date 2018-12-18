@@ -6,7 +6,7 @@
     version="2.0">
     <xsl:output indent="yes"></xsl:output>
     <xsl:strip-space elements="*"/>
-    <xsl:variable name="ldc650" select="document('../../metadata-wrangling/ldc_metadata/ual_ldc_marc_650s_corrected_marcxml.xml')"/>
+    <xsl:variable name="ual650s" select="document('../../metadata-wrangling/ldc_metadata/ual_ldc_marc_650s_deduped_marcxml.xml')"/>
     
     <xsl:template match="marc:collection">
         <xsl:copy>
@@ -20,8 +20,9 @@
             <xsl:copy-of select="marc:leader"/>
             <xsl:copy-of select="marc:controlfield"/>
             <xsl:copy-of select="marc:datafield[number(@tag)&lt;650]"/>
-            <xsl:if test="$ldc650/collection/marc:record/marc:datafield[@tag='490']/marc:subfield[@code='v']=$ldcNum">
-                <xsl:copy-of select="$ldc650/collection/marc:record[marc:datafield[@tag='490']/marc:subfield[@code='v']=$ldcNum]/marc:datafield[@tag='650']"/>
+            <xsl:copy-of select="marc:datafield[number(@tag)=650]"/>
+            <xsl:if test="$ual650s/collection/marc:record/marc:datafield[@tag='490']/marc:subfield[@code='v']=$ldcNum">
+                <xsl:copy-of select="$ual650s/collection/marc:record[marc:datafield[@tag='490']/marc:subfield[@code='v']=$ldcNum]/marc:datafield[@tag='650']"/>
             </xsl:if>
             <xsl:copy-of select="marc:datafield[number(@tag)&gt;650]"/>
         </marc:record>
