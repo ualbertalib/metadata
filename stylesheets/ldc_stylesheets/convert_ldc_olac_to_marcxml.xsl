@@ -154,17 +154,6 @@
       </marc:datafield>
 
       <xsl:for-each select="dc:identifier[contains(., 'ISLRN: ')]">
-        <marc:datafield tag="024" ind1="8" ind2=" ">
-          <marc:subfield code="a">
-            <xsl:value-of select="."/>
-          </marc:subfield>
-          <marc:subfield code="q">
-            <xsl:text>ISLRN</xsl:text>
-          </marc:subfield>
-        </marc:datafield>
-      </xsl:for-each>
-      
-      <xsl:for-each select="dc:identifier[contains(., 'ISLRN: ')]">
         <xsl:analyze-string select="substring-after(., 'ISLRN: ')"
           regex="(\w{{3}})[-](\w{{3}})[-](\w{{3}})[-](\w{{3}})[-](\w)">
           <xsl:matching-substring>
