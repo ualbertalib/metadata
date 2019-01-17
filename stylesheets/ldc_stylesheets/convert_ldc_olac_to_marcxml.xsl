@@ -71,6 +71,9 @@
         <xsl:text>0</xsl:text>
         <xsl:text>0</xsl:text>
       </marc:leader>
+      <marc:controlfield tag="001">
+        <xsl:value-of select="$ldcNum"/>
+      </marc:controlfield>
       <marc:controlfield tag="006">
         <xsl:text>m</xsl:text>
         <xsl:text> </xsl:text>
@@ -107,8 +110,7 @@
         <xsl:text>|</xsl:text>
         <xsl:text>|</xsl:text>
       </marc:controlfield>
-      <xsl:element name="marc:controlfield">
-        <xsl:attribute name="tag">008</xsl:attribute>
+      <marc:controlfield tag="008">
         <xsl:text>      </xsl:text>
         <xsl:text>s</xsl:text>
         <xsl:value-of select="$year"/>
@@ -125,13 +127,13 @@
         <xsl:value-of select="$lang008"/>
         <xsl:text> </xsl:text>
         <xsl:text>d</xsl:text>
-      </xsl:element>
+      </marc:controlfield>
 
       <!-- Removes dashes from ISBN -->
 
       <xsl:for-each select="dc:identifier[contains(., 'ISBN: ')]">
         <xsl:analyze-string select="substring-after(., 'ISBN: ')"
-          regex="(\d)[-](\d{{5}})[-](\d{{3}})[-](\d)">
+          regex="(\w)[-](\w{{5}})[-](\w{{3}})[-](\w)">
           <xsl:matching-substring>
             <marc:datafield tag="020" ind1=" " ind2=" ">
               <marc:subfield code="a">
@@ -156,9 +158,50 @@
           <marc:subfield code="a">
             <xsl:value-of select="."/>
           </marc:subfield>
+          <marc:subfield code="q">
+            <xsl:text>ISLRN</xsl:text>
+          </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+      
+      <xsl:for-each select="dc:identifier[contains(., 'ISLRN: ')]">
+        <xsl:analyze-string select="substring-after(., 'ISLRN: ')"
+          regex="(\w{{3}})[-](\w{{3}})[-](\w{{3}})[-](\w{{3}})[-](\w)">
+          <xsl:matching-substring>
+            <marc:datafield tag="024" ind1="8" ind2=" ">
+              <marc:subfield code="a">
+                <xsl:value-of select="regex-group(1)"/>
+                <xsl:value-of select="regex-group(2)"/>
+                <xsl:value-of select="regex-group(3)"/>
+                <xsl:value-of select="regex-group(4)"/>
+                <xsl:value-of select="regex-group(5)"/>
+              </marc:subfield>
+              <marc:subfield code="q">
+                <xsl:text>ISLRN</xsl:text>
+              </marc:subfield>
+            </marc:datafield>
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:for-each>
 
+      <marc:datafield tag="040" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>AEU</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="b">
+          <xsl:text>eng</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="e">
+          <xsl:text>rda</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="c">
+          <xsl:text>AEU</xsl:text>
+        </marc:subfield>
+        <marc:subfield code="d">
+          <xsl:text>AEU</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
+      
       <!-- chooses whether to insert an 041 field, depending on the number of languages. When 'yes', inserts two 041 fields to record derived marc codes and original iso 639-3 values  -->
 
       <xsl:choose>
@@ -213,7 +256,7 @@
       </xsl:for-each>
 
       <xsl:for-each select="dc:publisher[contains(., 'Linguistic')]">
-        <marc:datafield tag="264" ind1=" " ind2=" ">
+        <marc:datafield tag="264" ind1=" " ind2="1">
           <marc:subfield code="a">
             <xsl:text>[Philadelphia, Pennsylvania]: </xsl:text>
           </marc:subfield>
@@ -227,6 +270,12 @@
           </marc:subfield>
         </marc:datafield>
       </xsl:for-each>
+
+      <marc:datafield tag="300" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+          <xsl:text>1 online resource.</xsl:text>
+        </marc:subfield>
+      </marc:datafield>
 
       <!-- primary 336 field -->
 
@@ -300,23 +349,14 @@
 
       <marc:datafield tag="500" ind1=" " ind2=" ">
         <marc:subfield code="a">
+          <xsl:text>LDC number: </xsl:text>
           <xsl:value-of select="$ldcNum"/>
         </marc:subfield>
       </marc:datafield>
 
-      <!-- redundant inclusion of link to ldc catalog with additional dataset information and links to documentation, because of local surpression of 856/42 field in discovery system -->
-
-      <xsl:for-each select="dc:identifier[contains(., 'https:')]">
-        <marc:datafield tag="500" ind1=" " ind2=" ">
-          <marc:subfield code="a">
-            <xsl:value-of select="."/>
-          </marc:subfield>
-        </marc:datafield>
-      </xsl:for-each>
-
       <marc:datafield tag="506" ind1="1" ind2=" ">
         <marc:subfield code="a">
-          <xsl:text>Available to University of Alberta users only.</xsl:text>
+          <xsl:text>Access restricted to authorized users and institutions.</xsl:text>
         </marc:subfield>
       </marc:datafield>
 
@@ -331,28 +371,28 @@
           </marc:subfield>
         </marc:datafield>
         <xsl:if test="contains(., '*Samples* ')">
-          <marc:datafield tag="520" ind1=" " ind2=" ">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
             <marc:subfield code="a">
               <xsl:text>Data samples are available on the LDC website.</xsl:text>
             </marc:subfield>
           </marc:datafield>
         </xsl:if>
         <xsl:if test="contains(., '*Samples * ')">
-          <marc:datafield tag="520" ind1=" " ind2=" ">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
             <marc:subfield code="a">
               <xsl:text>Data samples are available on the LDC website.</xsl:text>
             </marc:subfield>
           </marc:datafield>
         </xsl:if>
         <xsl:if test="contains(., '*Sample* ')">
-          <marc:datafield tag="520" ind1=" " ind2=" ">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
             <marc:subfield code="a">
               <xsl:text>Data samples are available on the LDC website.</xsl:text>
             </marc:subfield>
           </marc:datafield>
         </xsl:if>
         <xsl:if test="contains(., '*samples* ')">
-          <marc:datafield tag="520" ind1=" " ind2=" ">
+          <marc:datafield tag="500" ind1=" " ind2=" ">
             <marc:subfield code="a">
               <xsl:text>Data samples are available on the LDC website.</xsl:text>
             </marc:subfield>
@@ -423,15 +463,15 @@
       </xsl:for-each>
 
       <xsl:for-each select="dc:type[@xsi:type = 'dcterms:DCMIType']">
-        <marc:datafield tag="655" ind1="7" ind2=" ">
+        <marc:datafield tag="655" ind1=" " ind2="7">
           <marc:subfield code="a">
             <xsl:choose>
-              <xsl:when test=". = 'Image'">Pictures</xsl:when>
-              <xsl:when test=". = 'MovingImage'">Video recordings</xsl:when>
-              <xsl:when test=". = 'Software'">computer program</xsl:when>
-              <xsl:when test=". = 'Sound'">Sound recordings</xsl:when>
-              <xsl:when test=". = 'StillImage'">Pictures</xsl:when>
-              <xsl:when test=". = 'Text'">Excerpts</xsl:when>
+              <xsl:when test=". = 'Image'">Pictures.</xsl:when>
+              <xsl:when test=". = 'MovingImage'">Video recordings.</xsl:when>
+              <xsl:when test=". = 'Software'">computer program.</xsl:when>
+              <xsl:when test=". = 'Sound'">Sound recordings.</xsl:when>
+              <xsl:when test=". = 'StillImage'">Pictures.</xsl:when>
+              <xsl:when test=". = 'Text'">Excerpts.</xsl:when>
             </xsl:choose>
           </marc:subfield>
           <marc:subfield code="2">lcgft</marc:subfield>
@@ -439,7 +479,7 @@
       </xsl:for-each>
 
       <xsl:for-each select="dc:contributor">
-        <marc:datafield tag="700" ind1="1" ind2="0">
+        <marc:datafield tag="700" ind1="1" ind2=" ">
           <marc:subfield code="a">
             <xsl:value-of select="."/>
           </marc:subfield>
@@ -448,11 +488,14 @@
 
       <marc:datafield tag="856" ind1="4" ind2="0">
         <marc:subfield code="3">
-          <xsl:text>University of Alberta Access (Request Form)</xsl:text>
+          <xsl:text>University of Alberta Access</xsl:text>
         </marc:subfield>
         <marc:subfield code="u">
           <xsl:text>https://docs.google.com/forms/d/e/1FAIpQLSd4VsEYOWoubQww-01W7IV2qDaAr4ctBJUhrJvfyN0GwoMuFQ/viewform</xsl:text>
         </marc:subfield>
+        <marc:subfield code="z">
+          <xsl:text>Request Form</xsl:text>
+        </marc:subfield>        
       </marc:datafield>
 
       <marc:datafield tag="856" ind1="4" ind2="2">
