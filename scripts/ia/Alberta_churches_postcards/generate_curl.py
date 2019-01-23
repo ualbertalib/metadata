@@ -20,7 +20,7 @@ for i, file in enumerate(listdir(folder)):
 	print (creator)
 	if creator != '':
 		values['creator'] = creator
-	values['location'] = items[5]+ ';' + items[6]+ ';' + items[7]
+	values['coverage'] = items[5]+ ';' + items[6]+ ';' + items[7]
 	values['extent'] = items[8]
 	if 'description::' in items[13]:
 		values['description'] = items[13].split('description::')[1].split('_--_--_')[0]
@@ -41,7 +41,7 @@ for i, file in enumerate(listdir(folder)):
 			n = note.split('::')
 			if len(n) > 1:
 				if n[1] != 'N/A' and n[1] != ',':
-					values['notes'] += '[%s]: %s' %(n[0], n[1])
+					values['notes'] += '[%s]: %s  ' %(n[0], n[1])
 	#print (values)
 	#location --header 'x-amz-auto-make-bucket:1' --header 'Authorization: LOW C9khuFEwAKAj5Y5X:8s5NsWQzx1wTKfAd' --header 'x-archive-meta-type:postcards' --upload-file PC015175.xml http://s3.us.archive.org/testing_metadata_upload_8/PC015175.xml --upload-file PC015175.jp2 http://s3.us.archive.org/testing_metadata_upload_8/PC015175.jp2 --upload-file PC015175_verso.jp2 http://s3.us.archive.org/testing_metadata_upload_8/PC015175_verso.jp2
 	IA_id = 'prairiechurchesa01posttester_%s' %(i)
