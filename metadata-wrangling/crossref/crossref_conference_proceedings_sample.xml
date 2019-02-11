@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" version="4.3.6" xsi:schemaLocation="http://www.crossref.org/schema/4.3.6 https://www.crossref.org/schemas/crossref4.3.6.xsd">
+  <head>
+    <doi_batch_id>_1539804925</doi_batch_id>
+    <timestamp>1539804925</timestamp>
+    <depositor>
+      <depositor_name>University of Alberta Libraries</depositor_name>
+      <email_address>ojshelp@ualberta.ca</email_address>
+    </depositor>
+    <registrant>University of Alberta Learning Services</registrant>
+  </head>
+  <body>
+    <!-- example of a paper with only the required elements -->
+    <conference>
+      <event_metadata>
+        <conference_name>The Name of the Conference</conference_name>
+      </event_metadata>
+      <proceedings_metadata>
+        <proceedings_title>The Title of the Proceedings</proceedings_title>
+        <publisher>
+          <publisher_name>The Name of the Publisher</publisher_name>
+        </publisher>
+        <publication_date>
+          <year>2018</year>
+        </publication_date>
+        <isbn>978-3-16-148410-0</isbn>
+      </proceedings_metadata>
+      <conference_paper>
+        <titles>
+          <title>Sources of Evidence to Inform Scholarly Communication Librarianship</title>
+        </titles>
+        <doi_data>
+          <doi>10.18438/eblip29468</doi>
+          <resource>https://journals.library.ualberta.ca/eblip/index.php/EBLIP/article/view/29468</resource>
+        </doi_data>
+      </conference_paper>
+    </conference>    
+    <!-- example of a paper with more complete event metadata and elements that correspond to expected output from OJS export  -->
+    <conference>
+      <event_metadata>
+        <conference_name>Conference Name</conference_name>
+        <conference_acronym>CNAB</conference_acronym>
+        <!-- <conference_sponsor> can be repeated, as necessary -->
+        <conference_sponsor>Conference Sponsor 1</conference_sponsor>
+        <conference_sponsor>Conference Sponsor 2</conference_sponsor>
+        <conference_number>34</conference_number>
+        <conference_location>Edmonton, Alberta</conference_location>
+        <conference_date start_month="09" start_year="2018" start_day="18" end_year="2018" end_month="09" end_day="20">Sept. 18-20, 2018</conference_date>
+      </event_metadata>
+      <!-- there are two options for this element. <proceedings_series_metadata> is the other. We'll have to take a closer look at the proceedings to make sure we've picked the right one. -->
+      <proceedings_metadata>
+        <proceedings_title>Title of the Proceedings</proceedings_title>
+        <proceedings_subject>Subject of the Proceedings</proceedings_subject>
+        <publisher>
+          <publisher_name>Name of the Publisher</publisher_name>
+        </publisher>
+        <publication_date>
+          <month>09</month>
+          <day>20</day>
+          <year>2018</year>
+        </publication_date>
+        <isbn>978-3-16-148410-0</isbn>
+      </proceedings_metadata>
+      <conference_paper>
+        <!-- Note that the required order is different here: the <contributors> element must come before <titles> (Who knows why) -->
+        <contributors>
+          <person_name contributor_role="author" sequence="first">
+            <given_name>Allyson</given_name>
+            <surname>Mower</surname>
+            <ORCID>https://orcid.org/0000-0002-4078-8088</ORCID>
+          </person_name>
+        </contributors>
+        <titles>
+          <title>Sources of Evidence to Inform Scholarly Communication Librarianship</title>
+        </titles>
+        <jats:abstract>
+          <jats:p>Pretty, pretty, pretty good</jats:p>
+        </jats:abstract>
+        <!-- <publication_date> is required for the <proceedings_metadata> element, but optional here. If the date were to be the same, it could be given again here, or not. -->
+        <publication_date>
+          <month>09</month>
+          <day>20</day>
+          <year>2018</year>
+        </publication_date>
+        <pages>
+          <first_page>94</first_page>
+          <last_page>96</last_page>
+        </pages>
+        <ai:program xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" name="AccessIndicators">
+          <ai:license_ref>http://creativecommons.org/licenses/by-nc-sa/4.0</ai:license_ref>
+        </ai:program>
+        <doi_data>
+          <doi>10.18438/eblip29468</doi>
+          <resource>https://journals.library.ualberta.ca/eblip/index.php/EBLIP/article/view/29468</resource>
+          <collection property="crawler-based">
+            <item crawler="iParadigms">
+              <resource>https://journals.library.ualberta.ca/eblip/index.php/EBLIP/article/download/29463/21925</resource>
+            </item>
+          </collection>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="text/html">https://journals.library.ualberta.ca/eblip/index.php/EBLIP/article/download/29463/21894</resource>
+            </item>
+            <item>
+              <resource mime_type="application/pdf">https://journals.library.ualberta.ca/eblip/index.php/EBLIP/article/download/29463/21925</resource>
+            </item>
+          </collection>
+        </doi_data>
+      </conference_paper>
+    </conference>
+  </body>
+</doi_batch>
