@@ -30,7 +30,8 @@
     
     <xsl:template name="full_title" match="cr:full_title">
         <xsl:element name="conference_name" namespace="http://www.crossref.org/schema/4.3.6">
-            <xsl:apply-templates select="@*|text()"/>
+            <xsl:apply-templates select="@*"/>
+            <xsl:value-of select="replace(.,': Extended Abstracts','')"/>
         </xsl:element>
     </xsl:template>
     
@@ -42,7 +43,7 @@
     
     <xsl:template name="proc_meta">
         <xsl:element name="proceedings_title" namespace="http://www.crossref.org/schema/4.3.6">
-            <xsl:value-of select="concat(../cr:journal_metadata//cr:full_title,' ',descendant::cr:year,'. Vol. ',descendant::cr:volume,', No. ',cr:issue)"/>
+            <xsl:value-of select="concat(replace(../cr:journal_metadata//cr:full_title,':',''),': ',descendant::cr:year)"/>
         </xsl:element>
         <xsl:element name="publisher" namespace="http://www.crossref.org/schema/4.3.6">
             <xsl:element name="publisher_name" namespace="http://www.crossref.org/schema/4.3.6">
