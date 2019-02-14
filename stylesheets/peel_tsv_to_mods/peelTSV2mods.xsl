@@ -12,7 +12,7 @@
 
     <!-- location of the tsv/csv file -->
     <xsl:param name="doc"
-        select="'file:///home/mparedes/local-peel.git/Calgary-Stampede-Postcard-metadata-Stampede-Postcards.tsv'"/>
+        select="'file:///home/danydvd/Downloads/Postcard_metadata.tsv'"/>
 
     <xsl:function name="fn:rows" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
