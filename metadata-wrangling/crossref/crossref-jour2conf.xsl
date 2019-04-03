@@ -87,6 +87,18 @@
                 <xsl:when test="$vol='1'">
                     <xsl:text>978-1-55195-416-5</xsl:text>
                 </xsl:when>
+                <xsl:when test="$vol='8'">
+                    <xsl:text>978-1-55195-422-6</xsl:text>
+                </xsl:when>
+                <xsl:when test="$vol='9'">
+                    <xsl:text>978-1-55195-423-3</xsl:text>
+                </xsl:when>
+                <xsl:when test="$vol='10'">
+                    <xsl:text>978-1-55195-421-9</xsl:text>
+                </xsl:when>
+                <xsl:when test="$vol='11'">
+                    <xsl:text>978-1-55195-425-7</xsl:text>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>00000000-X</xsl:text>
                 </xsl:otherwise>

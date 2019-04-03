@@ -32,8 +32,8 @@ echo
 
 ##### Use when getting mods records post-migration #####
 echo "Getting list of Avalon media objects"
-wget -O 'MediaObject_pids.txt' 'http://uatsrv01.library.ualberta.ca:3603/solr/development/select?fl=id&indent=on&q=has_model_ssim:%22MediaObject%22&rows=30000&wt=csv'
-sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%SOMEBASEURL\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt >MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
+# wget -O 'MediaObject_pids.txt' 'http://uatsrv01.library.ualberta.ca:3603/solr/development/select?fl=id&indent=on&q=has_model_ssim:%22MediaObject%22&rows=30000&wt=csv'
+# sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%SOMEBASEURL\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt >MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
 #$2/$3/$4/$5/{$1}/descMetadata
 
 ##### Use when getting mods records pre-migration #####
