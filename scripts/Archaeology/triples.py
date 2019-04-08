@@ -8,39 +8,72 @@ from datetime import datetime
 from rdflib import Graph, URIRef, Literal
 from os import listdir, getcwd, chdir, makedirs
 from os.path import isfile, join, exists
-from archFinal_triples import main as csv_gen
+from archFinal2 import main as csv_gen
 
 def main():
+	files = []
+	che = {}
 	csv_file = 'batchArchaelogy-%s.csv' %(datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
 	csv_gen(csv_file)
 	itemType = 'http://purl.org/ontology/bibo/Image'
+	language = 'No linguistic content'
 	visibility = 'http://terms.library.ualberta.ca/public'
-	collection = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/44/55/8t/46/44558t46k'
-	base = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/'
-	contributor1 = 'Bryan, Alan L., Dr.'
-	contributor2 = 'Gruhn, Dr. Ruth'
-	#create a dict for creators from ImageData
-	creators = get_creator()
+	collection = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/bc/f5/86/ac/bcf586ac-ab61-49e1-839f-b9f517839e9e'
+	community = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat/01/7b/59/83/017b5983-6bca-47d1-9760-0435ed3aedd8'
+	base = 'http://uat.library.ualberta.ca:8080/fcrepo/rest/uat'
+	default_contributor1 = 'Dr. Bryan, Alan L'
+	default_contributor2 = 'Dr. Gruhn, Ruth'
+	default_creator = 'University of Alberta, Department of Anthropology'
+	default_rights = 'u"\u00A9" University of Alberta, Department of Anthropology'
+
 	uuids = get_Jupiter_UUIDs()
 	with open(csv_file, newline='') as csvfile:
 		reader = csv.DictReader(csvfile)
 		for row in reader:
-			creator = ''
+			spatial = ''
+			temporal = ''
+			contributor = ''
+			maker = ''
+			dateCreated = ''
+			description = ''
+			title = ''
+			subject = ''
 			uu_id = generate_uuid(uuids)
 			file = row['fileName']
+			#check for duplicates
+			if file not in files:
+				files.append(file)
+			else:
+				if file not in che.keys():
+					che[file] = 1
+				else:
+					che[file] += 1
 			# extract a 4-digit year from filename
-			sort_year = get_sortYear(file)
+			dateCreated = row['dateCreated']
+			if dateCreated != '':
+				sort_year = get_sortYear(dateCreated)
+			else:
+				sort_year = get_sortYear(file)
+				dateCreated = sort_year
 			description = row['description']
 			title = row['title']
 			subject = row['subject'].split('|')
-			dateCreated = row['dateCreated']
-			rights = row['rights'].replace('© ', '')
-			language = row['language']
-			spatial = row['spatial'].split('|')
-			if file in creators.keys():
-				creator = creators[file]
+			if row['rights'] != '':
+				rights = row['rights']
 			else:
+				rights = default_rights
+			if row['contributor'] != '':
+				contributor = row['contributor'].split(';')
+			if row['maker'] != '' and row['maker'] != 'unknown':
+				maker = row['maker']
+			if row['spatial'] != '':
+				spatial = row['spatial'].split('|')
+			if row['temporal'] != '|':
+				temporal = row['temporal'].split('|')
+			if row['creator'] != '':
 				creator = row['creator'].replace('© ', '')
+			else:
+				creator = default_creator
 
 			s = URIRef('%s/%s/%s/%s/%s/%s' %(base, uu_id[0:2], uu_id[2:4], uu_id[4:6], uu_id[6:8], uu_id))
 			#create a Graph for the item
@@ -62,26 +95,31 @@ def main():
 			for sub in subject:
 				filename.add((s, URIRef('http://purl.org/dc/elements/1.1/subject'), Literal(sub)))
 			for spat in spatial:
-				filename.add((s, URIRef('http://purl.org/dc/terms/spatial'), Literal(spat)))
-			filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(contributor1)))
-			filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(contributor2)))
+				if len(spat) > 0:
+					filename.add((s, URIRef('http://purl.org/dc/terms/spatial'), Literal(spat)))
+			for temp in temporal:
+				if len(temp) > 0:
+					filename.add((s, URIRef('http://purl.org/dc/terms/temporal'), Literal(temp)))
+			#filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(default_contributor1)))
+			#filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(default_contributor2)))
+			if contributor != '':
+				for con in contributor:
+					filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(con)))
+			if maker != '' and maker not in contributor:
+				filename.add((s, URIRef('http://purl.org/dc/elements/1.1/contributor'), Literal(maker)))
 			filename.add((s, URIRef('info:fedora/fedora-system:def/model#hasModel'), Literal('IRItem')))
 			filename.add((s, URIRef('http://purl.org/ontology/bibo/owner'), Literal('eraadmi@ualberta.ca')))
-			if sort_year != None:
+			if dateCreated != '':
 				filename.add((s, URIRef('http://terms.library.ualberta.ca/sortYear'), Literal(sort_year)))
-				filename.add((s, URIRef('http://purl.org/dc/terms/created'), Literal(sort_year)))
-			elif dateCreated != '':
-				sort_year = get_sortYear(dateCreated)
 				filename.add((s, URIRef('http://purl.org/dc/terms/created'), Literal(dateCreated)))
-				filename.add((s, URIRef('http://terms.library.ualberta.ca/sortYear'), Literal(sort_year)))
 			if creator != '':
 				filename.add((s, URIRef('http://purl.org/dc/elements/1.1/creator'), Literal(creator)))
 			folder = 'triples'
 			output = "%s/%s.nt" %(folder, file)
-			print (output)
 			if not exists(folder):
 				makedirs(folder)
 			filename.serialize(destination=output, format='nt')
+	print (len(che))
 
 def get_Jupiter_UUIDs():
 	#query Jupiter solr for all UUIDs (community, collection, Item and thesis)
@@ -96,7 +134,7 @@ def get_Jupiter_UUIDs():
 
 		return (uuids)
 	except:
-		print ('error')
+		print ('error getting Jupiter UUIDs from solr')
 
 def generate_uuid(uuids):
 	#if the UUID exists in Jupiter, generate a new one
@@ -107,7 +145,7 @@ def generate_uuid(uuids):
 		else:
 			generate_uuid(uuids)
 	except:
-		print ('error')
+		print ('error generating UUID')
 
 def get_sortYear(filename):
 	sortYear = re.search('\d{4}$', filename)
@@ -117,44 +155,6 @@ def get_sortYear(filename):
 		sortYear = re.search('\d{4}$', filename.split('-')[0])
 		if sortYear:
 			return (sortYear.group(0))
-
-def get_creator():
-	imageData = {}
-	with open ('output.txt', 'r') as f: 
-		metadata = f.readline()
-		for line in f:
-			if 'Image:' in line:
-				image = resolveNames(line, 'imageData')
-			if 'Byline[2,80]' in line:
-				temp = re.sub("\\n","",re.sub("(^.\s+)","",line, re.MULTILINE))
-				imageData[image]= re.sub('Byline\[2,80\]: ','',temp)
-	return (imageData)
-
-def resolveNames(objectName,Type):
-    match = ''
-    flag = 'T'
-    #strips, cases, and removes path & extension from filename 
-    objectName = objectName.lower().strip()
-    objectName = re.search('(.+/{1}|(^))(.+)\.tif',objectName).group(3)
-    #converts all names from inconsistent use of dashes and period delimiters to a consistant use of dash delimiters
-    objectName = re.sub('([.]+)','-',objectName)
-    #strips any trailing underscores
-    if objectName.endswith('_'): objectName = objectName.rstrip('_')
-    #catch-all regex for resolving object names according to 11 existing name variations. If names were passed directly, 
-    #we would not be able to treat file names as unique identifiers for use in the database. With an updated mimsy 
-    #database, new failed mimsy matches will require adjustments or additions to this regex. Consider it the botteneck in 
-    #the script.
-    resolvedObjectName = re.search('(^[-.0-9]+[_]?[0-9]?)$|(^[-.0-9]{12}[_|rl]*)$|(^[-.0-9]{12}[ab]*_d)$|(^[-.0-9]+[-_a-z]*)_[vs][0-9][0-9]*|(^[-+0-9]{12}_\w)[_\W]|(.+lot)|(^[0-9][0-9]?-[0-9][0-9]?$)|(589-[-0-9]{7}_\D)|(2011_1_1)production_3years_aug93|(.+[.]pdf)|(^(2005|2011).+)|(^[-.0-9]+[_]?[\D]?[_]?[\D])[\D]*$|^[-0-9]_and.*',objectName)
-    #tests that the regex resolved the name for one of the 11 known matches and passes the match on, otherwise throws a 
-    #message
-    if resolvedObjectName:
-        flag = 'F'
-        for i in range(1,14):
-            if resolvedObjectName.group(i) is not None: 
-                flag = 'T'
-                match = resolvedObjectName.group(i)
-    if flag == 'F': print(objectName)
-    return match
 
 if __name__ == "__main__":
 	main()
