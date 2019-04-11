@@ -9,7 +9,7 @@
         <xsl:choose>
             <xsl:when test="$langISO = 'als'">
                 <!-- ISO 639-3 label: Tosk Albanian -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage, ISO 639-2/B synonym -->
                 <!-- marc code: alb -->
                 <!-- marc label: Albanian -->
                 <!-- lcsh: Albanian language -->
@@ -35,7 +35,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'abv'">
                 <!-- ISO 639-3 label: Baharna Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -43,7 +43,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'acm'">
                 <!-- ISO 639-3 label: Mesopotamian Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -51,7 +51,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'afb'">
                 <!-- ISO 639-3 label: Gulf Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -59,7 +59,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'apc'">
                 <!-- ISO 639-3 label: North Levantine Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -75,7 +75,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'arb'">
                 <!-- ISO 639-3 label: Standard Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -83,7 +83,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'ary'">
                 <!-- ISO 639-3 label: Moroccan Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -91,7 +91,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'arz'">
                 <!-- ISO 639-3 label: Egyptian Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -99,7 +99,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'ayp'">
                 <!-- ISO 639-3 label: North Mesopotamian Arabic -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: ara -->
                 <!-- marc label: Arabic -->
                 <!-- lcsh: Arabic language -->
@@ -188,7 +188,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'yue'">
                 <!-- ISO 639-3 label: Yue Chinese -->
-                <!-- marc preferred term ('use'), based on label match -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: chi -->
                 <!-- marc label: Chinese -->
                 <!-- lcsh: Cantonese dialects -->
@@ -229,7 +229,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'lzh'">
                 <!-- ISO 639-3 label: Literary Chinese -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: chi -->
                 <!-- marc label: Chinese -->
                 <!-- lcsh: Chinese language -->
@@ -299,7 +299,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'prs'">
                 <!-- ISO 639-3 label: Dari -->
-                <!-- match based on label, marc assigned collective code -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym; also, MARC language name Dari assigned to collective code per -->
                 <!-- marc code: per -->
                 <!-- marc label: Dari -->
                 <!-- lcsh: Dari language -->
@@ -494,7 +494,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'kmr'">
                 <!-- ISO 639-3 label: Northern Kurdish -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: kur -->
                 <!-- marc label: Kurdish -->
                 <!-- lcsh: Kurdish language -->
@@ -504,7 +504,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'pnb'">
                 <!-- ISO 639-3 label: Western Panjabi -->
-                <!-- marc preferred term ('use'), based on label match -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: lah -->
                 <!-- marc label: Lahndā -->
                 <!-- lcsh: Lahndā language -->
@@ -544,7 +544,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'zsm'">
                 <!-- ISO 639-3 label: Standard Malay -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: may -->
                 <!-- marc label: Malay -->
                 <!-- lcsh: Malay language -->
@@ -554,7 +554,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'cmn'">
                 <!-- ISO 639-3 label: Mandarin Chinese -->
-                <!-- marc preferred term ('use'), based on label match -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: chi -->
                 <!-- marc label: Chinese -->
                 <!-- lcsh: Mandarin dialects -->
@@ -575,7 +575,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'emk'">
                 <!-- ISO 639-3 label: Eastern Maninkakan -->
-                <!-- marc preferred term ('use'), based on label match -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: man -->
                 <!-- marc label: Mandingo -->
                 <!-- lcsh: Mandingo language -->
@@ -656,7 +656,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'pes'">
                 <!-- ISO 639-3 label: Iranian Persian -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: per -->
                 <!-- marc label: Persian -->
                 <!-- lcsh: Persian language -->
@@ -790,17 +790,15 @@
             </xsl:when>
             <xsl:when test="$langISO = 'ajp'">
                 <!-- ISO 639-3 label: South Levantine Arabic -->
-                <!-- best fit based on label, marc assigned collective code -->
-                <!-- marc code: sem -->
-                <!-- marc label: South Arabic -->
-                <!-- lcsh: South Arabic language -->
-                <xsl:call-template name="lang650spokenDefault">
-                    <xsl:with-param name="langLCSHroot">South Arabic</xsl:with-param>
-                </xsl:call-template>
+                <!-- match with macrolanguage -->
+                <!-- marc code: ara -->
+                <!-- marc label: Arabic -->
+                <!-- lcsh: Arabic language -->
+                <xsl:call-template name="lang650spokenAra"/>
             </xsl:when>
             <xsl:when test="$langISO = 'nan'">
                 <!-- ISO 639-3 label: Min Nan Chinese -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: chi -->
                 <!-- marc label: Chinese -->
                 <!-- lcsh: Southern Min dialects -->
@@ -839,7 +837,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'swc'">
                 <!-- ISO 639-3 label: Congo Swahili -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: swa -->
                 <!-- marc label: Swahili -->
                 <!-- lcsh: Swahili language -->
@@ -847,7 +845,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'swh'">
                 <!-- ISO 639-3 label: Swahili (individual language) -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: swa -->
                 <!-- marc label: Swahili -->
                 <!-- lcsh: Swahili language -->
@@ -953,7 +951,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'uzn'">
                 <!-- ISO 639-3 label: Northern Uzbek -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage -->
                 <!-- marc code: uzb -->
                 <!-- marc label: Uzbek -->
                 <!-- lcsh: Uzbek language -->
@@ -971,7 +969,7 @@
             </xsl:when>
             <xsl:when test="$langISO = 'wuu'">
                 <!-- ISO 639-3 label: Wu Chinese -->
-                <!-- best fit based on label -->
+                <!-- match with macrolanguage; ISO 639-2/B synonym -->
                 <!-- marc code: chi -->
                 <!-- marc label: Chinese -->
                 <!-- lcsh: Wu dialects -->
@@ -1076,6 +1074,7 @@
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'abv'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'acm'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'afb'"/>
+            <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'ajp'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'apc'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'ara'"/>
             <xsl:when test="../preceding-sibling::dc:language/@olac:code = 'arb'"/>
