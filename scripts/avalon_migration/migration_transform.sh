@@ -23,27 +23,31 @@ echo
 #./prep_fixes.sh
 
 
-##### Use lines below when getting foxml #####
+##### Use lines below when getting foxml and other fedora 3 objects #####
 # python3 ./get_query.py
 # python3 ./get_list.py
 # echo "Getting Avalon records"
-# xargs -I wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
+##### Foxml #####
+xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
+##### SectionsMetadata #####
+xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_sectionsMetadata/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/datastreams/sectionsMetadata/content' < MediaObject_pids.txt
 
 
 ##### Use when getting mods records post-migration #####
 echo "Getting list of Avalon media objects"
-# wget -O 'MediaObject_pids.txt' 'http://uatsrv01.library.ualberta.ca:3603/solr/development/select?fl=id&indent=on&q=has_model_ssim:%22MediaObject%22&rows=30000&wt=csv'
-# sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%SOMEBASEURL\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt >MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
+wget -O 'MediaObject_pids.txt' 'http://avalon.library.ualberta.ca:8080/solr/avalon/select?q=has_model_ssim%3Ainfo%3Afedora%2Fafmodel%3AMediaObject&rows=10000&fl=id&wt=csv&indent=true'
+sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%http:\/\/avalon6-test.library.ualberta.ca:8984\/fedora\/rest\/staging\/\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt > MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
+#http://avalon6-test.library.ualberta.ca:8984/fedora/rest/staging/8s/45/q8/76/8s45q876k/descMetadata
 #$2/$3/$4/$5/{$1}/descMetadata
 
 ##### Use when getting mods records pre-migration #####
-wget -O 'MediaObject_pids.txt' 'http://avalon.library.ualberta.ca:8080/solr/avalon/select?q=has_model_ssim%3A%22info%3Afedora%2Fafmodel%3AMediaObject%22&rows=1000000&fl=id&wt=csv&indent=true'
-sed 's%\(.*\)$%http:\/\/avalon.library.ualberta.ca:8080\/fedora\/objects\/\{\1\}\/datastreams\/descMetadata\/content%g' <MediaObject_pids.txt >MediaObject_urls.txt
+# wget -O 'MediaObject_pids.txt' 'http://avalon.library.ualberta.ca:8080/solr/avalon/select?q=has_model_ssim%3A%22info%3Afedora%2Fafmodel%3AMediaObject%22&rows=1000000&fl=id&wt=csv&indent=true'
+# sed 's%\(.*\)$%http:\/\/avalon.library.ualberta.ca:8080\/fedora\/objects\/\{\1\}\/datastreams\/descMetadata\/content%g' <MediaObject_pids.txt >MediaObject_urls.txt
 
 
 
 echo "Getting Avalon mods records"
-xargs -n 1 curl --limit-rate 45k --raw -o 'original_mods/#1.xml' < MediaObject_urls.txt
+xargs -n 1 curl --limit-rate 45k --raw -u fedoraAdmin:$pass -o 'original_mods/#1.xml' < MediaObject_urls.txt
 
 
 echo "Transforming records"
@@ -66,4 +70,4 @@ name="-avalon-mods.zip"
 filename=$date$name
 #zip folder with today's date
 zip -r migration_packages/$filename transformed
-echo "Transformation complete, files compressed into migration_packages/" $filename
+echo "Transformation complete, files compressed into migration_packages/"$filename
