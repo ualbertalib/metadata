@@ -1,27 +1,51 @@
 import re
-from os import listdir, getcwd, chdir, makedirs
+import io
+from os import listdir, getcwd, chdir, makedirs, unlink
 from os.path import isfile, join, exists
 import pymarc
 import json
 import time
 from datetime import datetime
 import requests
+import docxpy
 from extract import get_files
 from rdflib import Graph, URIRef, Literal
-from config import degree_level, thesisLevel, Jupiter_predicates, institution, mypath, fedora, collection, PrintException
+from config import degree_level, thesisLevel, Jupiter_predicates, institution, mypath, abstracts, fedora, collection, PrintException
 import uuid
 
 work_dir = getcwd() 
 #download files that are not in Jupiter (and have catkey) form Ineternet Archives
-get_files(work_dir)
+#get_files(work_dir)
 chdir(work_dir)
 
 def main():
+	c = 0
 	output = []
 	data = {}
 	mapp = []
+	abs = {}
+	delete_abstracts_report('no-abstract.csv')
 	uuids = get_Jupiter_UUIDs()
 	departments = get_department()
+	#for abstract_txt in [f for f in listdir(abstracts) if isfile(join(abstracts, f))]:
+	for abstract_txt in listdir(abstracts):
+		file = abstract_txt.replace('.txt', '').replace('.docx', '')
+		if abstract_txt.endswith('.txt'):
+			with io.open("Abstracts/%s" %(abstract_txt), "rb") as abstract_file: 
+				text = ''
+				for line in abstract_file:
+					if line != '':
+						try:
+							text += str(line.decode("utf-8")) + ' '
+						except:
+							text += str(line) + ' '
+				text = text.replace("\\r\\n", "").replace("\r\n", "")
+				abstract_file.close()
+		# some files are .docx
+		else:
+			text = docxpy.process("Abstracts/%s" %(abstract_txt))
+		if file not in abs.keys():
+			abs[file] = text
 	for filename in [f for f in listdir(mypath) if isfile(join(mypath, f))]:
 		try:
 			with open(join(mypath, filename), 'rb') as xml:
@@ -53,14 +77,17 @@ def main():
 					dat = get_unicorn(record, data, filename)
 					dat = get_level(record, data, filename)
 					if len(dat[filename]['degree']) == 0:
-						dat = get_degree(record, data, filename, dep, departments)
-			#print (data)
+						dat = get_degree(record, data, filename, dep, departments) 
+					da = get_abstract(data, filename, abs, c)
+					c = da[1]
+					dat = da[0]
+			#print (c)
 		except:
 			PrintException()
 	#create triples and write to file
 	for item in dat.keys():
 		try:
-			#generate a random UUID
+			#generate a random UUID (does not exists in ERA)
 			uu_id = generate_uuid(uuids)
 			s = URIRef('%s/%s/%s/%s/%s/%s' %(fedora, uu_id[0:2], uu_id[2:4], uu_id[4:6], uu_id[6:8], uu_id))
 			filename = s[0:10]
@@ -84,7 +111,7 @@ def main():
 					filename.add((s, p, o))
 				elif isinstance(dat[item][key], dict):
 					for k in dat[item][key].keys():
-						o = Literal(dat[item][key][k])
+						o = Literal(dat[item][key][k][0])
 						filename.add((s, p, o))
 				#add Model
 				filename.add((s, URIRef('info:fedora/fedora-system:def/model#hasModel'), Literal('IRThesis')))
@@ -97,7 +124,7 @@ def main():
 				#add license triple
 				filename.add((s, URIRef('http://purl.org/dc/elements/1.1/rights'), Literal('This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law.')))
 				#add Internet Archives ID
-				filename.add((s, URIRef('http://terms.library.ualberta.ca/internetarchive'), Literal(download_link)))
+				filename.add((s, URIRef('http://www.w3.org/2002/07/owl#sameAs'), URIRef(download_link)))
 			folder = 'triples'
 			output = "%s/%s.nt" %(folder, item)
 			if not exists(folder):
@@ -198,6 +225,7 @@ def get_date(record, data, filename):
 									sortYear = re.search('\d{4}$', date.split('-')[0])
 									data[filename]['sortYear'].append(sortYear.group(0))
 		except:
+			print (filename)
 			PrintException()
 	return(data)
 
@@ -295,6 +323,19 @@ def get_notes(record, data, filename):
 			PrintException()
 	return(data)
 
+def get_abstract(data, filename, abs, c):
+	try:
+		if filename in abs.keys():
+			c+=1
+			data[filename]['abstract'].append(abs[filename])
+		else:
+			with open('no-abstract.csv', 'a') as no_abs:
+				no_abs.write(filename + '\t' + data[filename]['title'][0] + '\t' + data[filename]['dissertant'][0] + '\n')
+				no_abs.close()
+		return (data, c)
+	except:
+		PrintException()
+
 def get_Jupiter_UUIDs():
 	#query Jupiter solr for all UUIDs (community, collection, Item and thesis)
 	try:
@@ -338,5 +379,10 @@ def get_department():
 	except:
 		PrintException()
 
+def delete_abstracts_report(file):
+	if isfile(file):
+		unlink(file)
+
 if __name__ == "__main__":
 	main()
+

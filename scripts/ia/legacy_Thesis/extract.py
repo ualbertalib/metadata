@@ -44,6 +44,7 @@ def search_IA():
 	json_data = json.loads(json_str)
 	print ('%s items of %s are already downloaded -- Skipping metadata search for these items' %(len(json_data), len(search)))
 	IA_IDs = {}
+	No_CatKey = []
 	for i, result in enumerate(search):
 	    itemid = result['identifier']
 	    if itemid in json_data.keys():
@@ -60,11 +61,16 @@ def search_IA():
 		    	r = requests.get(q).json()
 		    	if 'result' in r.keys():
 		    		IA_IDs[r['result']] = itemid
+		    	else:
+		    		No_CatKey.append(itemid)
 		    else:
 		    	IA_IDs[r['result']] = itemid
 	#write to file
 	with open('IA_IDs.json', 'w') as IA:
 		json.dump(IA_IDs, IA)
+	#items in IA that does not have CatKey/CallNumber are ignored in this proce
+	with open('No_CatKey.json', 'w') as No_Cat:
+		json.dump(No_CatKey, No_Cat)
 	return(IA_IDs)
 
 def generate_overlap_list(ERA_IDs, IA_IDs):
@@ -112,3 +118,4 @@ def download(IA_only, file_type, work_dir):
 			
 if __name__ == "__main__":
 	get_files()
+

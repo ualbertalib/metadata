@@ -24,6 +24,8 @@ thesisLevel = [{"uri": "http://purl.org/spar/fabio/BachelorsThesis",
 
 Jupiter_predicates = [{"uri": "http://purl.org/dc/terms/title",
 	"mapping": ["title"]},
+	{"uri": "http://purl.org/dc/terms/abstract",
+	"mapping": ["abstract"]},
 	{"uri": "http://terms.library.ualberta.ca/graduationDate",
 	"mapping": ["graduation_date"]},
 	{"uri": "http://terms.library.ualberta.ca/dissertant",
@@ -50,13 +52,14 @@ institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
 
 file_type = [
 	'_marc.xml',
-	'_meta.mrc',
-	'_djvu.txt',
-	'.pdf'
+#	'_meta.mrc',
+#	'_djvu.txt',
+#	'.pdf'
 	]
 sparql = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"
 IA_access = {'s3': {'access': 'C9khuFEwAKAj5Y5X', 'secret': '8s5NsWQzx1wTKfAd'}}
 mypath = "/home/danydvd/git/remote/metadata/scripts/ia/legacy_Thesis/files/xml/"
+abstracts = "/home/danydvd/git/remote/metadata/scripts/ia/legacy_Thesis/Abstracts/"
 fedora = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod"
 collection = "http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/44/55/8t/41/44558t416"
 
@@ -68,3 +71,4 @@ def PrintException():
 	linecache.checkcache(filename)
 	line = linecache.getline(filename, lineno, f.f_globals)
 	print("EXCEPTION IN (%s, LINE %s '%s'): %s" % (filename, lineno, line.strip(), exc_obj))
+
