@@ -1,9 +1,15 @@
 import lxml.etree as ET
+from datetime import datetime as T
 from os import listdir
+from internetarchive import upload, configure
+
+# insert IA "usernme", "password" here
+configure('digitization.IAscript@ualberta.ca', 'Z%wp*z6P5GpN')
 
 folder = 'Meta'
 xslt = ET.parse("get_fields.xsl")
 for i, file in enumerate(listdir(folder)):
+	item_id = 'prairiechurchespostcards_%s' %(i+2)
 	creator = ''
 	transform = ET.XSLT(xslt)
 	doc = ET.parse(folder + '/' + file)
@@ -31,6 +37,7 @@ for i, file in enumerate(listdir(folder)):
 	values['subject'] = items[12]
 	values['sponsor'] = 'University of Alberta Libraries'
 	values['contributor'] = 'University of Alberta Libraries'
+	values['collection'] = 'albertapostcards'
 	note_item = items[13].replace(values['description'], '').replace('description::', '').replace('public_', '').split('_--_--_')
 	if len(note_item) > 0:
 		values['notes'] = ''
@@ -42,17 +49,12 @@ for i, file in enumerate(listdir(folder)):
 			if len(n) > 1:
 				if n[1] != 'N/A' and n[1] != ',':
 					values['notes'] += '[%s]: %s  ' %(n[0], n[1])
-	#print (values)
-	#location --header 'x-amz-auto-make-bucket:1' --header 'Authorization: LOW C9khuFEwAKAj5Y5X:8s5NsWQzx1wTKfAd' --header 'x-archive-meta-type:postcards' --upload-file PC015175.xml http://s3.us.archive.org/testing_metadata_upload_8/PC015175.xml --upload-file PC015175.jp2 http://s3.us.archive.org/testing_metadata_upload_8/PC015175.jp2 --upload-file PC015175_verso.jp2 http://s3.us.archive.org/testing_metadata_upload_8/PC015175_verso.jp2
-	IA_id = 'prairiechurchespostcards_%s' %(i)
-	curl_base = 'curl --location --header "x-amz-auto-make-bucket:1" --header "Authorization: LOW XthjYw2HKdBmyc69:CvpatzSWX3hO0vKY"'
-	#	JRFefruXR3TBohmx:W4vQLN8UXPNI3EPZ"'
-	image = image_verso = "--upload-file %s.jpg http://s3.us.archive.org/%s/%s.jpg" %(values['Call_number'], IA_id, values['Call_number']) 
-	image_verso = "--upload-file %s_verso.jpg http://s3.us.archive.org/%s/%s_verso.jpg" %(values['Call_number'], IA_id, values['Call_number']) 
-	metadata = "--upload-file %s.xml http://s3.us.archive.org/%s/%s.xml" %(values['Call_number'], IA_id, values['Call_number'])
-	col_info = '--header "x-archive-meta01-collection:albertapostcards"'
-	meta_header = ''
-	for key in values.keys():
-		meta_header += '--header "x-archive-meta-%s:%s" ' %(key, values[key])
-	curl = '%s %s %s %s %s %s' %(curl_base, col_info, meta_header, metadata, image, image_verso)
-	print (curl)
+
+	file_upload = []
+	image = file.replace('.xml', '')
+	print ('uploading %s %s' %(item_id, file))
+	file_upload.append('%s/%s' %(folder, file))
+	file_upload.append('All/%s.jpg' %(image))
+	file_upload.append('All/%s_verso.jpg' %(image))
+	r = upload(item_id, files=file_upload, metadata=values)
+	print (r[0].status_code)
