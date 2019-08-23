@@ -1,10 +1,10 @@
 import lxml.etree as ET
 from datetime import datetime as T
 from os import listdir
-from internetarchive import upload, configure
+from internetarchive import upload, configure, get_item
 
 # insert IA "usernme", "password" here
-configure('digitization.IAscript@ualberta.ca', 'Z%wp*z6P5GpN')
+configure('username', 'pasword')
 
 folder = 'Meta'
 xslt = ET.parse("get_fields.xsl")
@@ -16,9 +16,12 @@ for i, file in enumerate(listdir(folder)):
 	transformed = transform(doc)
 	values = {}
 	items = str(transformed).split('\t')
-	values['Call_number'] = items[0]
+	values['Call number'] = items[0]
 	values['title'] = items[1]
-	values['mediatype'] = items[2]
+	if items[2] == 'still image':
+		values['mediatype'] = 'image'
+	else:
+		values['mediatype'] = items[2]
 	if items[3] != 'N/A' and items[4] != 'N/A':
 		creator = items[3] + ':' + items[4]
 	elif items[3] != 'N/A' and items[4] == 'N/A':
@@ -26,7 +29,10 @@ for i, file in enumerate(listdir(folder)):
 	print (creator)
 	if creator != '':
 		values['creator'] = creator
-	values['coverage'] = items[5]+ ';' + items[6]+ ';' + items[7]
+	if items[7] == "Medicine":
+		values['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + "Medicine Hat"
+	else:
+		values['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + items[7].replace(',','')
 	values['extent'] = items[8]
 	if 'description::' in items[13]:
 		values['description'] = items[13].split('description::')[1].split('_--_--_')[0]
@@ -56,5 +62,7 @@ for i, file in enumerate(listdir(folder)):
 	file_upload.append('%s/%s' %(folder, file))
 	file_upload.append('All/%s.jpg' %(image))
 	file_upload.append('All/%s_verso.jpg' %(image))
-	r = upload(item_id, files=file_upload, metadata=values)
-	print (r[0].status_code)
+	item = get_item(item_id)
+	r = item.modify_metadata(values)
+	#r = upload(item_id, files=file_upload, metadata=values)
+	print (r.status_code)
