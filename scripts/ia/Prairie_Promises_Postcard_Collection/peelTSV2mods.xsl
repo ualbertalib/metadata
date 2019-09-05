@@ -12,7 +12,7 @@
 
     <!-- location of the tsv/csv file -->
     <xsl:param name="doc"
-        select="'../../../../local-do-not-merge/local-peel.git/sc_metadata.tsv'"/>
+        select="'sc_metadata.tsv'"/>
 
     <xsl:function name="fn:rows" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
@@ -33,7 +33,7 @@
                 <root>
                     <xsl:for-each select="$lines[position() &gt; 1]">
                         <xsl:variable name="lineItems" select="fn:rows(.)" as="xs:string+"/>
-                        <xsl:element name="mods:mods" xmlns="http://www.loc.gov/mods/v3">
+                        <xsl:element name="mods:mods">
 
 
                             <xsl:for-each select="$cell">
@@ -44,8 +44,7 @@
                                 <xsl:if test="$lineItems[$pos] != ''">
                                     <xsl:choose>
                                         <xsl:when test="$cellValue = 'Title'">
-                                            <xsl:element name="titleInfo"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="titleInfo">
                                                 <!-- this attribute should be maaped to the language field -->
                                                 <xsl:attribute name="lang">
                                                   <xsl:value-of
@@ -55,12 +54,10 @@
                                                   <xsl:value-of select="$lineItems[$pos]"/>
                                                 </xsl:element>
                                             </xsl:element>
-                                            <xsl:element name="typeOfResource"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="typeOfResource">
                                                 <xsl:text>still image</xsl:text>
                                             </xsl:element>
-                                            <xsl:element name="genre"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="genre">
                                                 <xsl:attribute name="authority"
                                                   >gmgpc</xsl:attribute>
                                                 <xsl:text>postcards</xsl:text>
@@ -68,8 +65,7 @@
                                         </xsl:when>
                                         <!-- a new field is to be created in the csv template that can be mapped to this element -->
                                         <xsl:when test="$cellValue = 'Language'">
-                                            <xsl:element name="language"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="language">
                                                 <xsl:element name="languageTerm">
                                                   <xsl:attribute name="type">text</xsl:attribute>
                                                   <xsl:value-of select="$lineItems[$pos]"/>
@@ -77,8 +73,7 @@
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Name'">
-                                            <xsl:element name="name"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="name">
                                                 <xsl:choose>
                                                   <xsl:when
                                                   test="contains($lineItems[$pos + 1], 'Publisher') or contains($lineItems[$pos + 1], 'publisher')">
@@ -103,9 +98,8 @@
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Place'">
                                             <xsl:variable name="location"
-                                                select="tokenize(replace($lineItems[$pos], '^ +,', ''), '\s')"/>
-                                            <xsl:element name="subject"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                                select="tokenize(replace($lineItems[$pos], '^ +,', ''), ',')"/>
+                                            <xsl:element name="subject">
                                                 <xsl:element name="hierarchicalGeographic">
                                                   <xsl:element name="country">
                                                   <xsl:value-of select="replace($location[1], ',', '')"/>
@@ -120,8 +114,7 @@
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Extent'">
-                                            <xsl:element name="physicalDescription"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="physicalDescription">
                                                 <xsl:element name="extent">
                                                   <xsl:value-of select="$lineItems[$pos]"/>
                                                 </xsl:element>
@@ -132,8 +125,7 @@
                                                   select="tokenize($lineItems[$pos], ';')"/>
                                                 <xsl:for-each select="$topic">
                                                     <xsl:variable name="sub" select="replace(. , '\]', '')"/>
-                                                   <xsl:element name="subject"
-                                                        xmlns="http://www.loc.gov/mods/v3">
+                                                   <xsl:element name="subject">
                                                   <xsl:element name="topic">
                                                       <xsl:value-of select="normalize-space(replace($sub , '\[', ''))"/>
                                                   </xsl:element>
@@ -142,8 +134,7 @@
                                             
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Date_Issued'">
-                                            <xsl:element name="originInfo"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="originInfo">
                                                 <xsl:element name="issuance">
                                                   <xsl:text>monographic</xsl:text>
                                                 </xsl:element>
@@ -173,71 +164,62 @@
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'To'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type">public_to</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Description'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_description</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'From'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_from</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Address'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_address</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Message'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_message</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Postmark_Date'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_postmark_date</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'On_Back'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_on_back</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'On_Front'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_on_front</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'General_Note'">
-                                            <xsl:element name="note"
-                                                xmlns="http://www.loc.gov/mods/v3">
+                                            <xsl:element name="note">
                                                 <xsl:attribute name="type"
                                                   >public_other</xsl:attribute>
                                                 <xsl:value-of select="$lineItems[$pos]"/>
@@ -269,7 +251,7 @@
                                                 <xsl:text>.html</xsl:text>
                                             </xsl:element>
                                         </xsl:element>
-                                        <xsl:element name="relatedItem" xmlns="http://www.loc.gov/mods/v3">
+                                        <xsl:element name="relatedItem">
                                             <xsl:attribute name="type">constituent</xsl:attribute>
                                             <xsl:attribute name="ID">0</xsl:attribute>
                                             <xsl:element name="location">
@@ -309,7 +291,7 @@
                                                 </xsl:element>
                                             </xsl:element>
                                         </xsl:element>
-                                        <xsl:element name="relatedItem" xmlns="http://www.loc.gov/mods/v3">
+                                        <xsl:element name="relatedItem">
                                             <xsl:attribute name="type">constituent</xsl:attribute>
                                             <xsl:attribute name="ID">verso</xsl:attribute>
                                             <xsl:element name="location">
