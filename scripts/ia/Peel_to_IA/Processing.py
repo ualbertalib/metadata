@@ -18,6 +18,7 @@ class processing_obj():
 			self.processing_alto = '%s/processing/extracted_alto' %(self.path)
 			self.processing_mets = '%s/processing/extracted_mets' %(self.path)
 			self.get_feilds_xsl = 'xslt/get_fields.xsl'
+			self.get_mods_xsl = 'xslt/get_mods.xsl'
 			self.article_xsl = 'xslt/IA-headlines.xsl'
 			self.uploaded = 'uploaded'
 			self.issues = 'problematic_issues'
@@ -56,11 +57,13 @@ class images(processing_obj):
 			PrintException()
 
 class metadata(processing_obj):
-	def __init__(self, item):
+	def __init__(self, item, code):
 		try:
 			super().__init__(item)
 			self.alt = tarfile.open("%s/1.tar" %(self.alto))
 			self.met = tarfile.open("%s/1.tar" %(self.mets))
+			self.code = code
+			self.processing_mods = '/home/danydvd/git/remote/peel/metadata/Q/%s.xml' %(self.code)
 			self.metadata = {}
 			self.articles = ''
 		except:
@@ -91,15 +94,27 @@ class metadata(processing_obj):
 		except:
 			PrintException()
 
-	def get_mets_data(self):
+	def get_mods(self):
 		try: 
-			mods_fields = ET.parse(self.get_feilds_xsl)
-			get_mods = ET.XSLT(mods_fields)
+			mods = ET.parse(self.get_mods_xsl)
+			get_mods = ET.XSLT(mods)
+			mod = ET.parse('%s' %(self.processing_mods))
+			transformed_mods = get_mods(mod)
+			print (transformed_mods)
+			mods_fields = str(transformed_mods).split('\t')
+			return (mods_fields)
+		except:
+			PrintException()
+
+	def get_mets_data(self, mods):
+		try: 
+			mets_fields = ET.parse(self.get_feilds_xsl)
+			get_mets = ET.XSLT(mets_fields)
 			print ("Getting metadata for %s from issue level METS" %(self.path))
-			for mods in os.listdir('%s' %(self.processing_mets)):
-				if 'issue' in mods:
-					doc = ET.parse('%s/%s' %(self.processing_mets, mods))
-					transformed = get_mods(doc)
+			for mets in os.listdir('%s' %(self.processing_mets)):
+				if 'issue' in mets:
+					doc = ET.parse('%s/%s' %(self.processing_mets, mets))
+					transformed = get_mets(doc)
 
 					# populating metada dict
 					items = str(transformed).split('\t')
@@ -135,13 +150,13 @@ class metadata(processing_obj):
 					self.metadata['collection'] = 'ualberta_testing'
 
 
-				elif 'article' in mods:
+				elif 'article' in mets:
 					print ("Getting article headings for %s from article level METS" %(self.path))
-					item_id = mods.split('.')[0].replace('_article', '')
-					mets = ET.parse('%s/%s' %(self.processing_mets, mods))
+					item_id = mets.split('.')[0].replace('_article', '')
+					mets_art = ET.parse('%s/%s' %(self.processing_mets, mets))
 					get_article_headings = ET.parse(self.article_xsl)
 					get_art_headings = ET.XSLT(get_article_headings)
-					art_headings = get_art_headings(mets)
+					art_headings = get_art_headings(mets_art)
 
 					for line in str(art_headings).split('\n'):
 						self.articles += "%s \n"  %(line)
