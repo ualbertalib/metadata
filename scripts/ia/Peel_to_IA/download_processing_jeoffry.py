@@ -24,7 +24,7 @@ except:
 try:
 	print("Connecting the database")
 	#mySQLconnection = mysql.connector.connect(host='127.0.0.1',database='peel_blitz',user='root',password='alberta')
-	mySQLconnection = mysql.connector.connect(host='mysql.library.ualberta.ca',database='peel_blitz',user='peel',password='ZjW_6g0Y')
+	mySQLconnection = mysql.connector.connect(host='mysql.library.ualberta.ca',database='peel_blitz',user='peel',password='password')
 	#sql_select_Query = "select * from newspapers where newspaper='{}' and noid is not NULL and year between {} and {}".format(code, start_year, end_year)
 	sql_select_Query = "select * from newspapers where newspaper='{}' and year=1919 and month=5 and day=28 and noid is not NULL".format(code)
 	print(sql_select_Query)
@@ -47,8 +47,9 @@ try:
 			path = 'temp/%s' %(dir)
 			print ('%s strat processing %s' %(index+1, path))
 			make_process_folder(path)
-			metadata_obj = metadata(path)
+			metadata_obj = metadata(path, code)
 			metadata_obj.untar_mets_alto()
+			top_mods = metadata_obj.get_mods()
 			metadata_process = metadata_obj.get_mets_data()
 			item_id = metadata_process[0]
 			meta = metadata_process[1]
