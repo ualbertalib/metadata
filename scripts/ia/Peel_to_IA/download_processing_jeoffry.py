@@ -50,7 +50,7 @@ try:
 			metadata_obj = metadata(path, code)
 			metadata_obj.untar_mets_alto()
 			top_mods = metadata_obj.get_mods()
-			metadata_process = metadata_obj.get_mets_data()
+			metadata_process = metadata_obj.get_mets_data(top_mods)
 			item_id = metadata_process[0]
 			meta = metadata_process[1]
 			image_obj = images(path, item_id)

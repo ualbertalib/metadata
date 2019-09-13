@@ -3,9 +3,13 @@ import lxml.etree as ET
 from datetime import datetime as T
 from internetarchive import upload, configure
 from Util import PrintException
+from Passwords import passwords
+
+passwd = passwords['IA_digi'][1]
+user = passwords['IA_digi'][0]
 
 # insert IA "usernme", "password" here
-configure('username', 'password')
+configure(user, passwd)
 
 class processing_obj():
 	def __init__(self, item):
@@ -63,7 +67,7 @@ class metadata(processing_obj):
 			self.alt = tarfile.open("%s/1.tar" %(self.alto))
 			self.met = tarfile.open("%s/1.tar" %(self.mets))
 			self.code = code
-			self.processing_mods = '/home/danydvd/git/remote/peel/metadata/Q/%s.xml' %(self.code)
+			self.processing_mods = 'Modified_Q/%s.xml' %(self.code)
 			self.metadata = {}
 			self.articles = ''
 		except:
@@ -99,6 +103,7 @@ class metadata(processing_obj):
 			mods = ET.parse(self.get_mods_xsl)
 			get_mods = ET.XSLT(mods)
 			mod = ET.parse('%s' %(self.processing_mods))
+			print (mod)
 			transformed_mods = get_mods(mod)
 			print (transformed_mods)
 			mods_fields = str(transformed_mods).split('\t')
@@ -140,13 +145,42 @@ class metadata(processing_obj):
 						self.metadata['date'] = date
 					# passing the xsl result as discription will cuase the script to fial
 					#metadata['description'] = art_headings
-					self.metadata['mediatype'] = 'texts'
-					self.metadata['publisher'] = 'Charles A. Clark, Sr.'
-					self.metadata['coverage'] = 'Canada; Alberta; Vulcan'
-					self.metadata['extent'] = 'v. : ill. ; 40 cm.'
-					self.metadata['issuance'] = 'continuing'
+					# populatiing MODS metadata
+					if len(mods[1]) > 1:
+						self.metadata['subject'] = mods[1]
+					if len(mods[2]) > 1:
+						self.metadata['mediatype'] = mods[2]
+					if mods[3] != 'N/A' and mods[4] != 'N/A':
+						creator = mods[3] + ':' + mods[4]
+					elif mods[3] != 'N/A' and mods[4] == 'N/A':
+						creator = mods[3]
+					if len(creator) > 1:
+						self.metadata['creator'] = creator
+					if len(items[5]) > 1:
+						self.metadata['coverage'] = items[5].replace(',','') 
+						if len(items[6]) > 1:
+							self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','')
+							if len(items[7]) > 1:
+								self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + items[7].replace(',','')
+					if len(mods[8]) > 1:
+						self.metadata['extent'] = mods[8]
+					if len(mods[9]) > 1:
+						self.metadata['publisher'] = mods[9]
+					if len(mods[10]) > 1:	
+						self.metadata['issuance'] = mods[10]
 					self.metadata['genre'] = 'Newspaper'
-					self.metadata['note'] = 'Weekly'
+					note_item = mods[14].split('_--_--_')
+					if len(note_item) > 0:
+						self.metadata['notes'] = ''
+					for note in note_item:
+						if note == '':
+							pass
+						else:
+							n = note.split('::')
+							if len(n) > 1:
+								if n[1] != 'public' and n[1] != ',':
+									self.metadata['notes'] += '[%s]: %s  ' %(n[0], n[1])
+					#self.metadata['note'] = 'Weekly'
 					self.metadata['collection'] = 'ualberta_testing'
 
 
@@ -186,7 +220,7 @@ class file_uplaod(processing_obj):
 			file_upload.append('%s/%s_images.tar' %(self.processing_folder, self.item_id))
 			# select a folder and upload all files in that folder
 			# if uploading JP2 files, METS/ALTO files will also be uploaded
-			for folder in [self.processing_alto, self.processing_alto]:
+			for folder in [self.processing_alto, self.processing_mets]:
 				for file in os.listdir(folder):
 					file_upload.append('%s/%s' %(folder, file))
 
