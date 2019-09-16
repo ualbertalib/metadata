@@ -103,15 +103,13 @@ class metadata(processing_obj):
 			mods = ET.parse(self.get_mods_xsl)
 			get_mods = ET.XSLT(mods)
 			mod = ET.parse('%s' %(self.processing_mods))
-			print (mod)
 			transformed_mods = get_mods(mod)
-			print (transformed_mods)
 			mods_fields = str(transformed_mods).split('\t')
 			return (mods_fields)
 		except:
 			PrintException()
 
-	def get_mets_data(self, mods):
+	def get_mets_data(self):
 		try: 
 			mets_fields = ET.parse(self.get_feilds_xsl)
 			get_mets = ET.XSLT(mets_fields)
@@ -120,70 +118,7 @@ class metadata(processing_obj):
 				if 'issue' in mets:
 					doc = ET.parse('%s/%s' %(self.processing_mets, mets))
 					transformed = get_mets(doc)
-
-					# populating metada dict
 					items = str(transformed).split('\t')
-					self.metadata['title'] = items[0]
-					if items[1] == 'en':
-						self.metadata['language'] = 'English'
-					elif items[1] == 'fr':
-						self.metadata['language'] = 'French'
-					else:
-						self.metadata['language'] = items[1]
-					if items[2]:
-						year = None
-						year = re.search('^\d{4}$', items[2])
-						if not year:
-							year = items[2].split('.')[2]
-						month = items[2].split('.')[1]
-						day = items[2].split('.')[0]
-						date = '%s-%s-%s' %(year, month, day)
-						self.metadata['date'] = date
-					else:
-						temp_date = mods.split('.')[0].replace('_issue', '').replace('VA_', '')
-						date = '%s-%s-%s' %(str(temp_date)[0:3], str(temp_date)[4:5], str(temp_date)[6:7])
-						self.metadata['date'] = date
-					# passing the xsl result as discription will cuase the script to fial
-					#metadata['description'] = art_headings
-					# populatiing MODS metadata
-					if len(mods[1]) > 1:
-						self.metadata['subject'] = mods[1]
-					if len(mods[2]) > 1:
-						self.metadata['mediatype'] = mods[2]
-					if mods[3] != 'N/A' and mods[4] != 'N/A':
-						creator = mods[3] + ':' + mods[4]
-					elif mods[3] != 'N/A' and mods[4] == 'N/A':
-						creator = mods[3]
-					if len(creator) > 1:
-						self.metadata['creator'] = creator
-					if len(items[5]) > 1:
-						self.metadata['coverage'] = items[5].replace(',','') 
-						if len(items[6]) > 1:
-							self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','')
-							if len(items[7]) > 1:
-								self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + items[7].replace(',','')
-					if len(mods[8]) > 1:
-						self.metadata['extent'] = mods[8]
-					if len(mods[9]) > 1:
-						self.metadata['publisher'] = mods[9]
-					if len(mods[10]) > 1:	
-						self.metadata['issuance'] = mods[10]
-					self.metadata['genre'] = 'Newspaper'
-					note_item = mods[14].split('_--_--_')
-					if len(note_item) > 0:
-						self.metadata['notes'] = ''
-					for note in note_item:
-						if note == '':
-							pass
-						else:
-							n = note.split('::')
-							if len(n) > 1:
-								if n[1] != 'public' and n[1] != ',':
-									self.metadata['notes'] += '[%s]: %s  ' %(n[0], n[1])
-					#self.metadata['note'] = 'Weekly'
-					self.metadata['collection'] = 'ualberta_testing'
-
-
 				elif 'article' in mets:
 					print ("Getting article headings for %s from article level METS" %(self.path))
 					item_id = mets.split('.')[0].replace('_article', '')
@@ -192,16 +127,85 @@ class metadata(processing_obj):
 					get_art_headings = ET.XSLT(get_article_headings)
 					art_headings = get_art_headings(mets_art)
 
-					for line in str(art_headings).split('\n'):
-						self.articles += "%s \n"  %(line)
-						self.metadata['description'] = self.articles
-
-					with open('%s/%s_article_headings.txt' %(self.processing_folder, item_id), 'w') as article_file:
-						article_file.write(str(art_headings))
-
-			return (item_id, self.metadata)
+			return (item_id, items, art_headings)
 		except:
 			PrintException()
+
+					
+
+
+	def make_IA_metadata(self, items, mods, art_headings, item_id):
+		try:
+			self.metadata['title'] = items[0]
+			if items[1] == 'en':
+				self.metadata['language'] = 'English'
+			elif items[1] == 'fr':
+				self.metadata['language'] = 'French'
+			else:
+				self.metadata['language'] = items[1]
+			if items[2]:
+				year = None
+				year = re.search('^\d{4}$', items[2])
+				if not year:
+					year = items[2].split('.')[2]
+				month = items[2].split('.')[1]
+				day = items[2].split('.')[0]
+				date = '%s-%s-%s' %(year, month, day)
+				self.metadata['date'] = date
+			else:
+				temp_date = mods.split('.')[0].replace('_issue', '').replace('VA_', '')
+				date = '%s-%s-%s' %(str(temp_date)[0:3], str(temp_date)[4:5], str(temp_date)[6:7])
+				self.metadata['date'] = date
+			self.metadata['collection'] = 'ualberta_testing'
+			# passing the xsl result as discription will cuase the script to fial
+			#metadata['description'] = art_headings
+			for line in str(art_headings).split('\n'):
+				self.articles += "%s \n"  %(line)
+				self.metadata['description'] = self.articles
+
+			with open('%s/%s_article_headings.txt' %(self.processing_folder, item_id), 'w') as article_file:
+				article_file.write(str(art_headings))
+			# populatiing MODS metadata
+			if mods != None:
+				if len(mods[1]) > 1:
+					self.metadata['subject'] = mods[1]
+				if len(mods[2]) > 1:
+					self.metadata['mediatype'] = mods[2]
+				if mods[3] != 'N/A' and mods[4] != 'N/A':
+					creator = mods[3] + ':' + mods[4]
+				elif mods[3] != 'N/A' and mods[4] == 'N/A':
+					creator = mods[3]
+				if len(creator) > 1:
+					self.metadata['creator'] = creator
+				if len(items[5]) > 1:
+					self.metadata['coverage'] = items[5].replace(',','') 
+					if len(items[6]) > 1:
+						self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','')
+						if len(items[7]) > 1:
+							self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + items[7].replace(',','')
+				if len(mods[8]) > 1:
+					self.metadata['extent'] = mods[8]
+				if len(mods[9]) > 1:
+					self.metadata['publisher'] = mods[9]
+				if len(mods[10]) > 1:	
+					self.metadata['issuance'] = mods[10]
+				self.metadata['genre'] = 'Newspaper'
+				note_item = mods[14].split('_--_--_')
+				if len(note_item) > 0:
+					self.metadata['notes'] = ''
+				for note in note_item:
+					if note == '':
+						pass
+					else:
+						n = note.split('::')
+						print (n)
+						if len(n) > 1:
+							if n[0] == 'public' and n[1] != ',':
+								self.metadata['notes'] += '[%s]: %s  ' %(n[0], n[1])
+			#self.metadata['note'] = 'Weekly'
+			return (self.metadata)
+		except:
+			PrintException()		
 
 class file_uplaod(processing_obj):
 	def __init__(self, item, item_id, metadata, log):

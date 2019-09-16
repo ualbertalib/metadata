@@ -50,12 +50,14 @@ try:
 			metadata_obj = metadata(path, code)
 			metadata_obj.untar_mets_alto()
 			top_mods = metadata_obj.get_mods()
-			metadata_process = metadata_obj.get_mets_data(top_mods)
-			item_id = metadata_process[0]
-			meta = metadata_process[1]
+			mets_data = metadata_obj.get_mets_data()
+			item_id = mets_data[0]
+			mets = mets_data[1]
+			art = mets_data[2]
+			metadata = make_IA_metadata (mets, top_mods, art, item_id) 
 			image_obj = images(path, item_id)
 			image = image_obj.generate_tar()
-			uplaod_obj = file_uplaod(path, item_id, meta, log)
+			uplaod_obj = file_uplaod(path, item_id, metadata, log)
 			uplaod = uplaod_obj.upload_to_IA()
 			print ('Upload finish, updating database record')
 		    # update database

@@ -1182,3 +1182,10 @@ EXCEPTION IN (test.py, LINE 19 'item_id = metadata_process[0]'): 'NoneType' obje
 EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 105 'mod = ET.parse('%s' %(self.processing_mods))'): Error reading file 'Q/VCA.xml': failed to load external entity "Q/VCA.xml"
 EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 149 'if len(mods[1]) > 1:'): 'NoneType' object is not subscriptable
 EXCEPTION IN (test.py, LINE 19 'item_id = metadata_process[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (test.py, LINE 22 'metadata = make_IA_metadata (mets_data, top_mods, art)'): name 'make_IA_metadata' is not defined
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 148 'year = re.search('^\d{4}$', items[2])'): cannot use a string pattern on a bytes-like object
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 149 'year = re.search('^\d{4}$', items[2])'): cannot use a string pattern on a bytes-like object
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 149 'year = re.search('^\d{4}$', items[2])'): cannot use a string pattern on a bytes-like object
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 166 'with open('%s/%s_article_headings.txt' %(self.processing_folder, item_id), 'w') as article_file:'): name 'item_id' is not defined
+EXCEPTION IN (test.py, LINE 22 'metadata = metadata_obj.make_IA_metadata(mets, top_mods, art)'): make_IA_metadata() missing 1 required positional argument: 'item_id'
+EXCEPTION IN (test.py, LINE 22 'metadata = metadata_obj.make_IA_metadata(mets, top_mods, art)'): make_IA_metadata() missing 1 required positional argument: 'item_id'
