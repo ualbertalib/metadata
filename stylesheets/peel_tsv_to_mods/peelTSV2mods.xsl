@@ -12,7 +12,7 @@
 
     <!-- location of the tsv/csv file -->
     <xsl:param name="doc"
-        select="'../../../../local-do-not-merge/local-peel.git/sc_metadata.tsv'"/>
+        select="'../../../../local-do-not-merge/local-peel.git/Labour_Postcard_metadata.tsv'"/>
 
     <xsl:function name="fn:rows" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
