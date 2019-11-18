@@ -135,14 +135,7 @@ class metadata(processing_obj):
 
 	def make_IA_metadata(self, items, mods, art_headings, item_id):
 		try:
-			self.metadata['title'] = items[0]
-			if items[1] == 'en':
-				self.metadata['language'] = 'English'
-			elif items[1] == 'fr':
-				self.metadata['language'] = 'French'
-			else:
-				self.metadata['language'] = items[1]
-			if items[2]:
+			if items[0]:
 				year = None
 				year = re.search('^\d{4}$', items[2])
 				if not year:
@@ -167,6 +160,7 @@ class metadata(processing_obj):
 			# populatiing MODS metadata
 			if mods != None:
 				if len(mods[1]) > 1:
+					self.metadata['title'] = mods[0]
 					self.metadata['subject'] = mods[1]
 				if len(mods[2]) > 1:
 					self.metadata['mediatype'] = mods[2]
@@ -188,6 +182,13 @@ class metadata(processing_obj):
 					self.metadata['publisher'] = mods[9]
 				if len(mods[10]) > 1:	
 					self.metadata['issuance'] = mods[10]
+				if len(mods[12]) > 1:
+					if mods[12] == 'en':
+						self.metadata['language'] = 'English'
+					elif mods[12] == 'fr':
+						self.metadata['language'] = 'French'
+					else:
+						self.metadata['language'] = mods[12]
 				self.metadata['genre'] = 'Newspaper'
 				note_item = mods[14].split('_--_--_')
 				if len(note_item) > 0:
