@@ -160,7 +160,7 @@ class metadata(processing_obj):
 			# populatiing MODS metadata
 			if mods != None:
 				if len(mods[1]) > 1:
-					self.metadata['title'] = mods[0]
+					self.metadata['title'] = mods[1]
 					self.metadata['subject'] = mods[1]
 				if len(mods[2]) > 1:
 					self.metadata['mediatype'] = mods[2]

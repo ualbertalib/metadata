@@ -19,11 +19,11 @@ with open('upload-log.txt', 'a') as log:
 				mets = mets_data[1]
 				art = mets_data[2]
 				metadata = metadata_obj.make_IA_metadata(mets, top_mods, art, item_id) 
-				print (item_id)
-				image_obj = images(path, item_id)
-				image = image_obj.generate_tar()
-				uplaod_obj = file_uplaod(path, item_id, metadata, log)
-				uplaod = uplaod_obj.upload_to_IA()
+				print (metadata)
+				#image_obj = images(path, item_id)
+				#image = image_obj.generate_tar()
+				#uplaod_obj = file_uplaod(path, item_id, metadata, log)
+				#uplaod = uplaod_obj.upload_to_IA()
 				print ('----------------------------------------------------------')
 			else:
 				break
