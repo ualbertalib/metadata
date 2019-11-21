@@ -1189,3 +1189,39 @@ EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing
 EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 166 'with open('%s/%s_article_headings.txt' %(self.processing_folder, item_id), 'w') as article_file:'): name 'item_id' is not defined
 EXCEPTION IN (test.py, LINE 22 'metadata = metadata_obj.make_IA_metadata(mets, top_mods, art)'): make_IA_metadata() missing 1 required positional argument: 'item_id'
 EXCEPTION IN (test.py, LINE 22 'metadata = metadata_obj.make_IA_metadata(mets, top_mods, art)'): make_IA_metadata() missing 1 required positional argument: 'item_id'
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 67 'self.alt = tarfile.open("%s/1.tar" %(self.alto))'): [Errno 2] No such file or directory: 'Vulcan/dig60n7/alto/1.tar'
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 105 'mod = ET.parse('%s' %(self.processing_mods))'): 'metadata' object has no attribute 'processing_mods'
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 117 'for mets in os.listdir('%s' %(self.processing_mets)):'): [Errno 2] No such file or directory: 'Vulcan/dig60n7/processing/extracted_mets'
+EXCEPTION IN (test.py, LINE 19 'item_id = mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 117 'for mets in os.listdir('%s' %(self.processing_mets)):'): [Errno 2] No such file or directory: 'Vulcan/dig6nx7/processing/extracted_mets'
+EXCEPTION IN (test.py, LINE 19 'item_id = mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 117 'for mets in os.listdir('%s' %(self.processing_mets)):'): [Errno 2] No such file or directory: 'Vulcan/dig6nx7/processing/extracted_mets'
+EXCEPTION IN (test.py, LINE 19 'item_id = mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Processing.py, LINE 117 'for mets in os.listdir('%s' %(self.processing_mets)):'): [Errno 2] No such file or directory: 'Vulcan/dig6nx7/processing/extracted_mets'
+EXCEPTION IN (test.py, LINE 19 'item_id = mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 140 'year = re.search('^\d{4}$', items[2])'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 140 'year = re.search('^\d{4}$', items[2])'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 140 'year = re.search('^\d{4}$', items[2])'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 140 'year = re.search('^\d{4}$', items[2])'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 140 'year = re.search('^\d{4}$', items[2])'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 142 'year = items[0].split('.')[2]'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 143 'year = items[0].split('.')[2]'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 143 'year = items[0].split('.')[2]'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 174 'if len(items[5]) > 1:'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 142 'if not year and '.' in year:'): argument of type 'NoneType' is not iterable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 144 'month = items[0].split('.')[1]'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 147 'self.metadata['date'] = date'): local variable 'date' referenced before assignment
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 174 'if len(items[5]) > 1:'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 175 'self.metadata['coverage'] = items[5].replace(',','')'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 177 'self.metadata['coverage'] = mods[5].replace(',','') + ';' + items[6].replace(',','')'): list index out of range
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 124 'art_headings = get_art_headings(mets_art)'): Failed to evaluate the expression of variable 'page'.
+EXCEPTION IN (test.py, LINE 18 'item_id = code + '_' + mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 124 'art_headings = get_art_headings(mets_art)'): Failed to evaluate the expression of variable 'page'.
+EXCEPTION IN (test.py, LINE 18 'item_id = code + '_' + mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 124 'art_headings = get_art_headings(mets_art)'): Failed to evaluate the expression of variable 'pages'.
+EXCEPTION IN (test.py, LINE 18 'item_id = code + '_' + mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 124 'art_headings = get_art_headings(mets_art)'): XPath evaluation returned no result.
+EXCEPTION IN (test.py, LINE 18 'item_id = code + '_' + mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 124 'art_headings = get_art_headings(mets_art)'): XPath evaluation returned no result.
+EXCEPTION IN (test.py, LINE 18 'item_id = code + '_' + mets_data[0]'): 'NoneType' object is not subscriptable
+EXCEPTION IN (/home/danydvd/git/remote/metadata/scripts/ia/Peel_to_IA/Leg_processeing.py, LINE 56 'for file in os.listdir('%s/extracted_images' %(self.processing_folder)):'): [Errno 2] No such file or directory: 'Vulcan/dig6nx7/processing/extracted_images'

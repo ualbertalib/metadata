@@ -23,7 +23,7 @@ class processing_obj():
 			self.processing_mets = '%s/processing/extracted_mets' %(self.path)
 			self.get_feilds_xsl = 'xslt/get_fields_leg.xsl'
 			self.get_mods_xsl = 'xslt/get_mods.xsl'
-			self.article_xsl = 'xslt/IA-headlines.xsl'
+			self.article_xsl = 'xslt/get_head_leg.xsl'
 			self.uploaded = 'uploaded'
 			self.issues = 'problematic_issues'
 		except:
@@ -46,7 +46,7 @@ class images(processing_obj):
 		try: 
 			print ("Extracting %s images" %(self.item_id))
 			for member in self.tf.getmembers():
-			    if 'VA' in member.name:
+			    if 'jp2' in member.name:
 			    	member.name = os.path.basename(member.name)
 			    	if member.name.split('.')[1] == 'jp2':
 			    		self.tf.extract(member, path='%s/extracted_images/' %(self.processing_folder))
@@ -80,7 +80,7 @@ class metadata(processing_obj):
 		try:
 			print ("Extracting %s ALTO files" %(self.path))
 			for member in self.alt.getmembers():
-			    if 'VA' in member.name:
+			    if 'xml' in member.name:
 			    	member.name = os.path.basename(member.name)
 			    	if member.name.split('.')[1] == 'xml':
 			    		self.alt.extract(member, path='%s/extracted_alto/' %(self.processing_folder))
@@ -89,7 +89,7 @@ class metadata(processing_obj):
 
 			print ("Extracting %s METS files" %(self.path))
 			for member in self.met.getmembers():
-			    if 'VA' in member.name:
+			    if 'xml' in member.name:
 			    	member.name = os.path.basename(member.name)
 			    	if member.name.split('.')[1] == 'xml':
 			    		self.met.extract(member, path='%s/extracted_mets/' %(self.processing_folder))
@@ -117,7 +117,7 @@ class metadata(processing_obj):
 			for mets in os.listdir('%s' %(self.processing_mets)):
 				if 'article' in mets:
 					print ("Getting article headings for %s from article level METS" %(self.path))
-					item_id = mets.split('.')[0].replace('_article', '')
+					item_id = mets.split('.')[0].replace('articles_', '')
 					mets_art = ET.parse('%s/%s' %(self.processing_mets, mets))
 					get_article_headings = ET.parse(self.article_xsl)
 					get_art_headings = ET.XSLT(get_article_headings)
@@ -137,22 +137,22 @@ class metadata(processing_obj):
 		try:
 			if items[0]:
 				year = None
-				year = re.search('^\d{4}$', items[2])
-				if not year:
-					year = items[2].split('.')[2]
-				month = items[2].split('.')[1]
-				day = items[2].split('.')[0]
-				date = '%s-%s-%s' %(year, month, day)
-				self.metadata['date'] = date
+				year = re.search('^\d{4}$', items[0])
+				if not year and '.' in items[0]:
+					year = items[0].split('.')[2]
+					month = items[0].split('.')[1]
+					day = items[0].split('.')[0]
+					date = '%s-%s-%s' %(year, month, day)
+					self.metadata['date'] = date
 			else:
-				temp_date = mods.split('.')[0].replace('_issue', '').replace('VA_', '')
+				temp_date = mods.split('.')[0].replace('_issue', '').replace('articles_', '')
 				date = '%s-%s-%s' %(str(temp_date)[0:3], str(temp_date)[4:5], str(temp_date)[6:7])
 				self.metadata['date'] = date
 			self.metadata['collection'] = 'ualberta_testing'
 			# passing the xsl result as discription will cuase the script to fial
 			#metadata['description'] = art_headings
 			for line in str(art_headings).split('\n'):
-				self.articles += "%s \n"  %(line)
+				self.articles += "%s \n"  %(line.replace('pageModsBib', ''))
 				self.metadata['description'] = self.articles
 
 			with open('%s/%s_article_headings.txt' %(self.processing_folder, item_id), 'w') as article_file:
@@ -170,12 +170,12 @@ class metadata(processing_obj):
 					creator = mods[3]
 				if len(creator) > 1:
 					self.metadata['creator'] = creator
-				if len(items[5]) > 1:
-					self.metadata['coverage'] = items[5].replace(',','') 
-					if len(items[6]) > 1:
-						self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','')
-						if len(items[7]) > 1:
-							self.metadata['coverage'] = items[5].replace(',','') + ';' + items[6].replace(',','') + ';' + items[7].replace(',','')
+				if len(mods[5]) > 1:
+					self.metadata['coverage'] = mods[5].replace(',','') 
+					if len(mods[6]) > 1:
+						self.metadata['coverage'] = mods[5].replace(',','') + ';' + mods[6].replace(',','')
+						if len(mods[7]) > 1:
+							self.metadata['coverage'] = mods[5].replace(',','') + ';' + mods[6].replace(',','') + ';' + mods[7].replace(',','')
 				if len(mods[8]) > 1:
 					self.metadata['extent'] = mods[8]
 				if len(mods[9]) > 1:
