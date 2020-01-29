@@ -1,0 +1,74 @@
+@prefix ns1: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns10: <http://pcdm.org/models#> .
+@prefix ns11: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns2: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns3: <http://terms.library.ualberta.ca/> .
+@prefix ns4: <http://purl.org/dc/elements/1.1/> .
+@prefix ns5: <info:fedora/fedora-system:def/model#> .
+@prefix ns6: <http://purl.org/ontology/bibo/> .
+@prefix ns7: <http://ontoware.org/swrc/ontology#> .
+@prefix ns8: <http://purl.org/dc/terms/> .
+@prefix ns9: <http://www.iana.org/assignments/relation/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/b2/00/0a6ab200-addb-4896-8049-f0d932445153> a ns1:Container,
+        ns1:Resource,
+        ns10:Object,
+        ns6:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns1:created "2018-03-07T06:27:02.347000+00:00"^^xsd:dateTime ;
+    ns1:createdBy "bypassAdmin" ;
+    ns1:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns1:lastModified "2018-04-08T01:16:52.030000+00:00"^^xsd:dateTime ;
+    ns1:lastModifiedBy "bypassAdmin" ;
+    ns1:writable true ;
+    ns7:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns10:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/ca/c1/7d/8f/cac17d8f-560b-4bab-9f0a-54dd89b6ae85> ;
+    ns10:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns11:doi "doi:10.7939/R34S4J" ;
+    ns4:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns4:subject "Gender",
+        "Identity",
+        "Online Learning",
+        "Power",
+        "Subjectivity" ;
+    ns8:abstract """ABSTRACT
+
+Advances in computer technology have created powerful opportunities for learners to engage with others, producing very different contexts for learning, and for negotiating our very way of being. Yet, engagement in these virtual learning environments also raises many questions around how our (re)positioning within the discourses available to us, structures our understanding of self, our social reality, and our subjectivities. In this study I embarked upon a poststructural critique of the experiences of six women enrolled in a graduate online learning program to explore how subject positions and subjectivities are produced, the possible enactments of self within this context, and the ways in which these women resisted or adhered to the dominant discourses in their individual identifications. My investigation identified four discourses that influenced the ways in which their subjectivities were shaped, including  discourses of difference; competence; gender; and connection, conflict, and control.""" ;
+    ns8:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns8:dateAccepted "2012-12-11T11:38:30Z" ;
+    ns8:dateSubmitted "2012-12-11T09:51:49Z" ;
+    ns8:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns8:title "\"Identity\" Constructions in Online Learning Events: Gender, Subjectivities, and the Productive Effects of Power" ;
+    ns6:degree "Doctor of Philosophy" ;
+    ns6:owner 1 ;
+    ns3:commiteeMember "Adams, Catherine (Secondary Education)",
+        "Grace, Andre (Educational Policy Studies)",
+        "Sammel, Ali (School of Education and Professional Studies, Griffith University)",
+        "Spencer, Brenda (Educational Policy Studies)" ;
+    ns3:department "Department of Educational Policy Studies" ;
+    ns3:departmentList "[\"Department of Educational Policy Studies\"]" ;
+    ns3:depositor "lawlor@hotlinkwireless.com" ;
+    ns3:dissertant "Lawlor, Carmen G" ;
+    ns3:fedora3Handle "http://hdl.handle.net/10402/era.29467" ;
+    ns3:fedora3UUID "uuid:e117c10f-1260-4d18-897f-53ca9ea19db7" ;
+    ns3:graduationDate "2013-06" ;
+    ns3:hydraNoid "76537260n" ;
+    ns3:ingestBatch "q811kk91d" ;
+    ns3:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns3:recordCreatedInJupiter "2018-03-07T06:27:01.943Z" ;
+    ns3:sortYear 2013 ;
+    ns3:specialization "Adult Education" ;
+    ns3:supervisor "Haughey, Margaret (Vice President Academic, Athabasca University)",
+        "Wallace, Janice (Educational Policy Studies)" ;
+    ns3:supervisorList "[\"Wallace, Janice (Educational Policy Studies)\",\"Haughey, Margaret (Vice President Academic, Athabasca University)\"]" ;
+    ns3:thesisLevel "Doctoral" ;
+    ns2:dateIngested "2018-03-07T06:27:01.943Z" ;
+    ns9:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/b2/00/0a6ab200-addb-4896-8049-f0d932445153/list_source#g53816200> ;
+    ns9:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/b2/00/0a6ab200-addb-4896-8049-f0d932445153/list_source#g53816200> ;
+    ns5:hasModel "IRThesis" .
+

@@ -1,0 +1,109 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block content %}
+<div class="overlay">
+    <div class="load_img">
+        <img src="{% static 'website/gif/source.gif' %}">
+    </div>
+</div>
+<div style="min-height: 800px;">
+	{% if error == 'none' %}
+		<div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <p style="text-align: justify;">User was added!</p>
+        </div>
+    {% elif error == 'institution_key' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">Invalid Institution Key!</p>
+        </div>
+    {% elif error == 'user' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">A user with this email address already exists!</p>
+        </div>
+    {% elif error == 'password' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">Passwords do not match!</p>
+        </div>
+	{% endif %}
+  
+  	<div class="profile_container">
+	  	<form action="{% url 'reg_user' %}" method="post">  
+		  	<div class="form-row">
+		  		<div class="form-group col-md-6">
+		    		<label for="institution_selection"><strong>Institution: </strong></label>
+					<select class="form-control" id="inst_selector" name="inst_selector">
+				  		<option></option>
+						{% for institution in institutions %}
+							<option value="{{institution}}">{{institution}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				{% if error == 'institution_key' %}
+					<div class="form-group col-md-5">
+		      			<label for="inst_code"><strong>Institution Key: </strong></label>
+		     			<input type="text" name="inst_code" id="inst_code" class="form-control" placeholder="Institution Key"  style="background: pink;" required>
+		    		</div>
+				{% else %}
+					<div class="form-group col-md-5">
+		      			<label for="inst_code"><strong>Institution Key: </strong></label>
+		     			<input type="text" name="inst_code" id="inst_code" class="form-control" placeholder="Institution Key" required>
+		    		</div>
+	    		{% endif %}
+	    		<div class="form-group col-md-1">
+	      			<label class="passCheck"></label>
+	      			<h6 class="passCheck" id="inst_codeCheck"></h6>
+	    		</div>
+			</div>
+	  		<div class="form-row">
+	    		<div class="form-group col-md-6">
+	      			<label for="first_name"><strong>First Name: </strong></label>
+	     			<input type="text" name="first_name" id="first_name" class="form-control" placeholder="First name" required>
+	    		</div>
+	    		<div class="form-group col-md-6">
+	      			<label for="last_name"><strong>Last Name: </strong></label>
+	      			<input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last name" required>
+	    		</div>    
+	  		</div>
+
+			<div class="form-row">
+				{% if error == 'user' %}
+		    		<div class="form-group col-md-5">
+			  			<label for="email"><strong>Email: </strong></label>
+			  			<input type="email" id="email" name="email" class="form-control" placeholder="john.doe@example.com" style="background: pink;" required onchange="userCheck()">
+					</div>
+				{% else %}
+					<div class="form-group col-md-5">
+			  			<label for="email"><strong>Email: </strong></label>
+			  			<input type="email" id="email" name="email" class="form-control" placeholder="john.doe@example.com" required onchange="userCheck()">
+					</div>
+				{% endif %}
+				<div class="form-group col-md-2">
+	      			<label class="passCheck"></label>
+	      			<h6 class="passCheck" id="user"></h6><span id="data_response"></span>
+	    		</div>
+	    	</div>
+	  		<div class="form-row">
+	    		<div class="form-group col-md-5">
+	      			<label for="Password">Password</label>
+	      			<input type="password" class="form-control" id="Password" name="Password" placeholder="Password" required>
+	    		</div>
+	    		<div class="form-group col-md-5">
+	      			<label for="Password_conf">Cofirm Password</label>
+	      			<input type="password" class="form-control" id="Password_conf" name="Password_conf" placeholder="Password" onchange="PassMatch()" required>
+	    		</div>
+	    		<div class="form-group col-md-2">
+	      			<label class="passCheck"></label>
+	      			<h2 class="passCheck" id="passCheck"></h2>
+	    		</div>
+	  		</div>
+	  		{% csrf_token %}
+	  		<br>
+	  		<button type="submit" id="register" class="btn btn-primary" disabled>Register</button>
+		</form>
+		
+	</div>
+</div>
+{% endblock %}

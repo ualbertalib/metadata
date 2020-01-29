@@ -1,0 +1,11 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<div class="main-body">
+ <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Processing of {{stoped}} was terminated and processed files were removed.
+  </div>
+  <p><a href="{% url 'thesisSubmission' %}">Return to processing page</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns10: <http://ontoware.org/swrc/ontology#> .
+@prefix ns11: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns2: <http://pcdm.org/models#> .
+@prefix ns3: <http://terms.library.ualberta.ca/> .
+@prefix ns4: <http://purl.org/ontology/bibo/> .
+@prefix ns5: <info:fedora/fedora-system:def/model#> .
+@prefix ns6: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns7: <http://purl.org/dc/elements/1.1/> .
+@prefix ns8: <http://www.iana.org/assignments/relation/> .
+@prefix ns9: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/4c/dd/0a5b4cdd-01cf-412e-a8f6-d84fec7cb7d7> a ns6:Container,
+        ns6:Resource,
+        ns2:Object,
+        ns4:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns6:created "2018-03-07T12:56:15.393000+00:00"^^xsd:dateTime ;
+    ns6:createdBy "bypassAdmin" ;
+    ns6:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns6:lastModified "2018-04-17T22:41:55.226000+00:00"^^xsd:dateTime ;
+    ns6:lastModifiedBy "bypassAdmin" ;
+    ns6:writable true ;
+    ns10:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns2:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0f/88/9b/a9/0f889ba9-7b9a-495a-979e-85daf2d165b9> ;
+    ns2:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns11:doi "doi:10.7939/R33N20V5Q" ;
+    ns7:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns1:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns1:dateAccepted "1998" ;
+    ns1:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns1:title "Subdivision schemes, biorthogonal wavelets and image compression" ;
+    ns4:degree "Doctor of Philosophy" ;
+    ns4:owner 1 ;
+    ns3:department "Department of Mathematical Sciences" ;
+    ns3:departmentList "[\"Department of Mathematical Sciences\"]" ;
+    ns3:depositor "era@ualberta.ca" ;
+    ns3:dissertant "Han, Bin." ;
+    ns3:fedora3Handle "http://hdl.handle.net/10402/era.4694" ;
+    ns3:fedora3UUID "uuid:76908245-8440-4529-8fa1-437a142dc207" ;
+    ns3:graduationDate "1998" ;
+    ns3:hydraNoid "gm80hx38n" ;
+    ns3:ingestBatch "76537332p" ;
+    ns3:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns3:proquest "NQ34774" ;
+    ns3:recordCreatedInJupiter "2018-03-07T12:56:15.092Z" ;
+    ns3:sortYear 1998 ;
+    ns3:thesisLevel "Doctoral" ;
+    ns3:unicorn "2254235" ;
+    ns9:dateIngested "2018-03-07T12:56:15.092Z" ;
+    ns8:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/4c/dd/0a5b4cdd-01cf-412e-a8f6-d84fec7cb7d7/list_source#g53415220> ;
+    ns8:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/4c/dd/0a5b4cdd-01cf-412e-a8f6-d84fec7cb7d7/list_source#g53415220> ;
+    ns5:hasModel "IRThesis" .
+

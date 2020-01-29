@@ -1,0 +1,156 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block content %}
+<div class="overlay">
+    <div class="load_img">
+        <img src="{% static 'website/gif/source.gif' %}">
+    </div>
+</div>
+<div class="main-body">
+  
+  <div class="profile_container">
+  	{% if error == 'none' %}
+		<div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <p style="text-align: justify;">Password was updated!</p>
+        </div>
+    {% elif error == 'pass_match' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">Passwords do not match!</p>
+        </div>
+    {% elif error == 'old_pass' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">The current password value does not match our records!</p>
+        </div>
+    {% elif error == 'updated' %}
+    	<div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">The user information was updated</p>
+        </div>
+    {% elif error == 'institution_key' %}
+    	<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p style="text-align: justify;">Invalid Institution Key!</p>
+        </div>
+	{% endif %}
+
+	<h2>{{user.last_name}} {{user.first_name}} </h2>
+	<br>
+	<form action="{% url 'update_user' %}" method="POST">
+		<button type="reset" class="profie_edit btn btn-primary">Edit Profile</button>
+		<button type="reset" class="profie_edit_cancel btn btn-primary">Cancel</button>
+		<button type="submit" class="profie_edit_save btn btn-danger">Save</button>
+		<br><br>
+		<table class="table table-hover" class="table table-bordered" style="width:100%">
+			<tr>
+				<td width="25%"><strong>User name: </strong></td>
+				<td>{{user.username}}<input type="password" name="user_name" value="{{user.username}}" hidden></td>
+			</tr>
+			<tr>
+				<td><strong>Last Name: </strong></td>
+				<td><user class="current_profile">{{user.last_name}}</user> 
+					<input class="last_name_edit" placeholder="{{user.last_name}}" name="last_name_edit" required></input></td>
+			</tr>
+			<tr>
+				<td><strong>First Name: </strong></td>
+				<td><user class="current_profile">{{user.first_name}}</user>
+					<input class="last_name_edit" placeholder="{{user.first_name}}" name="first_name_edit" required>
+			</tr>
+			<tr>
+				<td><strong>Email: </strong></td>
+				<td>{{user.email}}</td>
+			</tr>
+			<tr>
+				<td><strong>Registered on: </strong></td>
+				<td>{{user.date_joined}}</td>
+			</tr>
+			<tr>
+				<td><strong>Institution(s): </strong></td>
+				<td><user class="current_profile">{% for g in user.groups.all %}
+					{{g}}
+					{% endfor %}</user>
+					<div class="form-row inst_edit">
+		  		<div class="form-group col-md-6">
+					<select class="form-control" id="inst_selector" name="inst_selector">
+				  		<option></option>
+						{% for institution in institutions %}
+							<option value="{{institution}}">{{institution}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				{% if error == 'institution_key' %}
+					<div class="form-group col-md-5">
+		     			<input type="text" name="inst_code" id="inst_code" class="form-control" placeholder="Institution Key"  style="background: pink;" required>
+		    		</div>
+				{% else %}
+					<div class="form-group col-md-5">
+		     			<input type="text" name="inst_code" id="inst_code" class="form-control" placeholder="Institution Key" required>
+		    		</div>
+	    		{% endif %}
+	    		</td>
+			</tr>
+			<tr>
+				<td><strong>Last login on: </strong></td>
+				<td>{{user.last_login}}</td>
+			</tr>
+		</table>
+		{% csrf_token %}
+	</form>
+	<br><br>
+	<h2 class="user_files_t"><span class="user_files_col">&#10133</span>Uplaoded files in Canlink</h2>
+	<div class="user_files">
+		<table class="table table-hover" class="table table-bordered" style="width:100%">
+			<tr>
+				<th>#</th>
+				<th>Filename</th>
+				<th>Description</th>
+				<th>Uploaded at</th>
+				<th>Type</th>
+			</tr>
+			{% for document in documents %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					{% for doc in document %}
+					<td>
+						{{ doc }}
+					</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<hr>
+	<h2 class="passChange"><span class="passChange_col">&#10133</span>Password Change Form</h2>
+	<div class="pass_change">
+		<form action="{% url 'change_password' %}" method="POST">
+			<div class="form-row">
+	    		<div class="form-group col-md-5">
+	      			<label for="Current_Password">Current Password</label>
+	      			<input type="password" class="form-control" id="Current_Password" name="Current_Password" placeholder="Password" required>
+	      			<input type="password" class="form-control" id="Current_Password" name="user_name" placeholder="Password" hidden value="{{user.username}}">
+	    		</div>
+	    	</div>
+	    	<div class="form-row">
+	    		<div class="form-group col-md-5">
+	      			<label for="Password">Password</label>
+	      			<input type="password" class="form-control" id="Password" name="Password" placeholder="Password" required>
+	    		</div>
+	    		<div class="form-group col-md-5">
+	      			<label for="Password_conf">Cofirm Password</label>
+	      			<input type="password" class="form-control" id="Password_conf" name="Password_conf" placeholder="Password" onchange="PassMatch()" required>
+	    		</div>
+	    		<div class="form-group col-md-2">
+	      			<label class="passCheck"></label>
+	      			<h2 class="passCheck" id="passCheck"></h2>
+	    		</div>
+	  		</div>
+	  		{% csrf_token %}
+			<button type="submit" id="passChange" class="btn btn-primary">Change Password</button>
+		</form>
+	</div>
+	
+</div>
+</div>
+{% endblock %}

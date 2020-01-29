@@ -1,0 +1,33 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://rdfs.org/ns/void#> .
+@prefix ns3: <http://id.loc.gov/vocabulary/relators/> .
+@prefix ns4: <http://purl.org/ontology/bibo/> .
+@prefix ns5: <http://www.w3.org/ns/prov#> .
+@prefix ns6: <http://sparql.cwrc.ca/ontologies/genre#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://canlink.library.ualberta.ca/thesis/c264a265759363745376b7b8d751af1e> a ns4:thesis,
+        <http://purl.org/vocab/frbr/core#Expression>,
+        <http://purl.org/vocab/frbr/core#Work>,
+        <http://schema.org/creativeWork> ;
+    ns3:aut <http://canlink.library.ualberta.ca/person/c83688c03816ea89526ad4d012efe464> ;
+    ns3:pbl <http://dbpedia.org/resource/Université_de_Montréal> ;
+    ns1:creator <http://canlink.library.ualberta.ca/person/c83688c03816ea89526ad4d012efe464> ;
+    ns1:issued "2004-01-01"^^xsd:gYear ;
+    ns1:language <http://id.loc.gov/vocabulary/languages/spa> ;
+    ns1:publisher <http://canlink.library.ualberta.ca/institution/Université_de_Montréal> ;
+    ns1:subject <http://canlink.library.ualberta.ca/subject/1b62fd62b993e4b2bc19564796495bdc>,
+        <http://canlink.library.ualberta.ca/subject/248081ecb337c85ec8e4330e6099625a>,
+        <http://canlink.library.ualberta.ca/subject/5b1c3d3c1151d0871c5d6c976f6c3dd0>,
+        <http://canlink.library.ualberta.ca/subject/66c8f9d69c52b671e50799b291879db6>,
+        <http://canlink.library.ualberta.ca/subject/bbd66af14bb51d5a481af62ed64bee5b>,
+        <http://canlink.library.ualberta.ca/subject/c78aa14c32bc3ef0bbbce9aa3fee7c7f> ;
+    ns1:title "Población y sociedad en un real de minas de la frontera norte Novohispana : San Luis Potosí, de finales del siglo XVI a 1810" ;
+    ns4:degree <http://purl.org/ontology/bibo/degrees/phd> ;
+    ns2:inDataset <http://canlink.library.ualberta.ca/void/canlinkmaindataset> ;
+    ns6:hasGenre ns6:genreScholarship ;
+    ns5:wasGeneratedBy <http://canlink.library.ualberta.ca/runtime/a8b6045d6b21e1540c782bd0e389345d> .
+

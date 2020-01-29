@@ -1,0 +1,39 @@
+{% extends 'website/base.html' %}
+{% load utils %}
+{% load static %}
+{% block content %}
+<div class="search_container">
+    {% if query %}
+        {% if results %}
+            <div class="overlay">
+                <div class="load_img">
+                    <img src="{% static 'website/gif/source.gif' %}">
+                </div>
+            </div>
+            <br>
+            <h3 ><strong>Results for</strong> "<span style="color: gray;">{{ query }}</span>"</h3>
+            <hr>
+                
+            <div class="row">
+                
+                <table class="table table-hover" class="table table-bordered" style="width:100%">
+                    
+                {% for obj in results %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td><a href="{% url 'get_csh' id=obj.0 %}">{{ obj.1 }}</a>
+                            
+                        </td>
+                    </tr>
+                {% endfor %}
+                </table>
+            {% else %}
+                <br><br><br><br>
+                <h5 class="text-center">Your query "{{ query }}" did not match any results in the dataset</h5>
+           {% endif %}
+        {% endif %}
+    </div>
+    </div>
+</div>
+
+{% endblock %}

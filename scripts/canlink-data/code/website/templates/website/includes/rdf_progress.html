@@ -1,0 +1,28 @@
+
+{% block content %}
+
+	<tr>
+		<td class="progress_stage{{obj.id}}" colspan="8" align="center">
+			<div class="progress-container"> 
+	            <div class="wrapper"> 
+	            	<div class="progress-nav">
+	            		  <div class="stage parsing_RDF current"><span>parsing RDF</span></div>
+	                      <div class="stage Generating_URIs_for_items_in_GRAPH"><span>Generating URIs for items in GRAPH</span></div>
+	                      <div class="stage adding_URIs_to_GRAPH"><span>adding URIs to GRAPH</span></div>
+	                      <div class="stage Writing_to_File"><span>Writing to File</span></div>
+	                  </div>
+	            </div>
+	            <div class="stage results"><span></span></div>
+	        </div>
+		</td>
+	</tr>
+	<tr class="progress_head{{obj.id}}">
+		<th>Process ID</th>
+		<th>MARC to BIBFRAME conversion Progress</th>
+	</tr>
+	<tr class="progress_row{{obj.id}}">
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
+
+{% endblock %}

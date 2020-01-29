@@ -1,0 +1,63 @@
+@prefix ns1: <http://terms.library.ualberta.ca/> .
+@prefix ns10: <http://purl.org/ontology/bibo/> .
+@prefix ns11: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns2: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns3: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix ns5: <http://purl.org/dc/elements/1.1/> .
+@prefix ns6: <http://www.iana.org/assignments/relation/> .
+@prefix ns7: <http://ontoware.org/swrc/ontology#> .
+@prefix ns8: <http://pcdm.org/models#> .
+@prefix ns9: <info:fedora/fedora-system:def/model#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6b/9d/22/0a6b9d22-beeb-4275-bd81-499d743f9bf8> a ns3:Container,
+        ns3:Resource,
+        ns8:Object,
+        ns10:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns3:created "2018-03-12T02:43:44.845000+00:00"^^xsd:dateTime ;
+    ns3:createdBy "bypassAdmin" ;
+    ns3:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns3:lastModified "2018-04-07T19:49:05.831000+00:00"^^xsd:dateTime ;
+    ns3:lastModifiedBy "bypassAdmin" ;
+    ns3:writable true ;
+    ns7:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns8:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/71/4b/bc/1a/714bbc1a-5fc7-482d-be2a-b34a98d004f7> ;
+    ns8:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns2:doi "doi:10.7939/R3SJ1B23C" ;
+    ns5:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns5:subject "History--Methodology",
+        "History--Study and teaching (Secondary)",
+        "Social sciences and history--Study and teaching (Secondary)",
+        "Social sciences--Study and teaching (Secondary)" ;
+    ns4:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns4:dateAccepted "1974" ;
+    ns4:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns4:title "A preliminary development of an approach to teaching the historical process to secondary school students through a case study" ;
+    ns10:degree "Master of Education" ;
+    ns10:owner 1 ;
+    ns1:department "Department of Secondary Education" ;
+    ns1:departmentList "[\"Department of Secondary Education\"]" ;
+    ns1:depositor "riedlber@ualberta.ca" ;
+    ns1:dissertant "Carson, Terrance R." ;
+    ns1:fedora3Handle "http://hdl.handle.net/10402/era.13939" ;
+    ns1:fedora3UUID "uuid:ad5347ff-0fc1-4ff0-a6db-9f6b1d08d239" ;
+    ns1:graduationDate "1974" ;
+    ns1:hydraNoid "td96k5036" ;
+    ns1:ingestBatch "9593tx37c" ;
+    ns1:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns1:proquest "MK21779" ;
+    ns1:recordCreatedInJupiter "2018-03-12T02:43:44.571Z" ;
+    ns1:sortYear 1974 ;
+    ns1:thesisLevel "Master's" ;
+    ns1:unicorn "919142" ;
+    ns11:dateIngested "2018-03-12T02:43:44.571Z" ;
+    ns6:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6b/9d/22/0a6b9d22-beeb-4275-bd81-499d743f9bf8/list_source#g44303300> ;
+    ns6:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6b/9d/22/0a6b9d22-beeb-4275-bd81-499d743f9bf8/list_source#g44303300> ;
+    ns9:hasModel "IRThesis" .
+

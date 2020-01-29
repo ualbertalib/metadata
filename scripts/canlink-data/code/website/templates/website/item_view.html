@@ -1,0 +1,136 @@
+{% extends 'website/index.html' %}
+{% load utils %}
+{% load static %}
+{% block content %}
+
+    <div class="main-body">
+    <div class="container-fluid">
+        <div class="row">
+            {% if title != '' %}
+                <h3 class="item_title">{{ title }}</h3>
+            {% else %}
+                <h3 class="item_title">{{ item }}</h3>
+            {% endif %}
+            <br>
+            {% if results %}
+                <div class="item_logo">
+                    {% if institution != '' %}
+                        <img src="{% static institution|get_image %}" alt="no_logo" width="90%" height="90%">
+                    {% else %}
+                        <img src="{% static 'website/img/no_logo.jpeg' %}" alt="no_logo" width="90%" height="90%">
+                    {% endif %}   
+                </div>
+                <div class="file_download">
+                    <h4>Download Metadata</h4>
+                    <form action="{% url 'download' %}" method="post" class="form-inline" style="height: 100%">    
+                        <select class="search_type btn btn-secondary" name="format" id="format">
+                              <option value="n3">.n3</option>
+                              <option value="nt">.nt</option>
+                              <option value="json-ld">JSON-LD</option>
+                              <option value="pretty-xml">RDF/XML</option>
+                        </select>
+                        <input class="searchbox-area " id="item" type="text" name="item" value="{{item}}" hidden>
+                        {% csrf_token %}
+                        <button class="search-button-top btn btn-warning" type="submit">
+                            Download
+                        </button>
+                    </form>
+                </div>
+                <table class="item_view table table-hover" style="width:100%">
+                {% for obj in results %}
+                    <tr>
+                    {% for value in obj %}
+                    {% if forloop.counter == 1 %}
+                        {% if "canlink.library.ualberta.ca" in value or "http://purl.org/ontology/bibo/degrees" in value %}
+                        <td><a href="{% url 'getitem' id=value %}">{{ value }}</a></td>
+                        {% elif "http://" in value %}
+                        <td><a href="{{value}}" target="_blank">{{ value|get_ns }}</a></td>
+                        {% else %}
+                        <td>{{ value }}</td>
+                        {% endif %}
+                    {% else %}
+                        <td>
+                        {% for values in value %}
+                        {% if "http://canlink.library.ualberta.ca/subject" in values or "http://purl.org/ontology/bibo/degrees" in values %}
+                        <p><a href="{% url 'getitem' id=values %}">{{ values|get_subject_degree }}</a></p>
+                        {% elif "http://canlink.library.ualberta.ca/person" in values %}
+                        <p><a href="{% url 'getitem' id=values %}">{{ values|get_full_name }}</a></p>
+                        {% elif "http://canlink.library.ualberta.ca" in values %}
+                        <p><a href="{% url 'getitem' id=values %}">{{ values|get_ns }}</a></p>
+                        {% elif "http://" in values %}
+                        <p><a href="{{values}}" target="_blank">{{ values|get_ns }}</a></p>
+                        {% else %}
+                        <p>{{ values }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                    {% endif %}
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table>
+            {% endif %}
+            {% if works %}
+            <br>
+            <h2 class="itemViewToggle item_view"><span class="passChange_col">&#10133</span>Works of <strong>{{ item|get_full_name }}</strong> in CanLink</h2>
+            <div class="item_view_toggle">
+            <table class="table table-hover" style="width:100%">
+                <tr>
+                  <th>Role</th>
+                  <th>Work</th>
+                </tr>
+                {% for work in works %}
+                    <tr>
+                        {% if "http://canlink.library.ualberta.ca" in work.0 %}
+                            <td><a href="{% url 'getitem' id=work.0 %}">{{ work.0 }}</a></td>
+                        {% elif "http://" in work.0 %}
+                            <td><a href="{{work.0}}" target="_blank">{{ work.0 }}</a></td>
+                        {% else %}
+                            <td>{{ work.0 }}</td>
+                        {% endif %}
+                        {% if "http://canlink.library.ualberta.ca" in work.1 %}
+                            <td><a href="{% url 'getitem' id=work.1 %}">{{ work.2 }}</a></td>
+                        {% elif "http://" in work %}
+                            <td><a href="{{work.1}}" target="_blank">{{ work.2 }}</a></td>
+                        {% else %}
+                            <td>{{ work.2 }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+            {% endif %}
+            {% if subjects %}
+            <br>
+            <h2 class="itemViewToggle item_view"><span class="passChange_col">&#10133</span>Works that uses <strong>{{ item|get_subject_degree }}</strong> as subejct in CanLink</h2>
+            <div class="item_view_toggle">
+            <table class="table table-hover" style="width:100%">
+                <tr>
+                    <th>#</th>
+                    <th>Work</th>
+                    <th></th>
+                </tr>
+                {% for subject in subjects %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>
+                            <img src="{% static subject.5|get_image %}" alt="no_logo" width="100" height="100">
+                        </td>
+                        <td><a href="{% url 'getitem' id=subject.0 %}">{{ subject.1 }}</a>
+                            <br>
+                            <strong>Date:</strong> {{ subject.2 }}
+                            <br>
+                            <strong>Author:</strong> <a href="{% url 'getitem' id=subject.3 %}">{{ subject.4 }}</a>
+                            <br>
+                            <strong>Institution:</strong> <a href="{{ subject.5 }}" target="_blank">{{ subject|get_pub_name }}</a> 
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'website/index.html' %}
+{% load utils %}
+{% load static %}
+{% block content %}
+
+    <div class="main-body">
+    <div class="container-fluid">
+        <div class="row">
+            <br>
+            {% if results %}
+            <h1 class="item_view">{{label}}</h1>
+
+                <table class="item_view table table-hover" style="width:100%">
+                {% for obj in results %}
+                    <tr>
+                    {% for value in obj %}
+                        {% if "http://canlink" in value %}
+                        <td><a href="{% url 'get_csh' id=value %}">{{ value|get_ns }}</a></td>
+                        {% elif "http://" in value %}
+                        <td><a href="{{value}}" target="_blank">{{ value|get_ns }}</a></td>
+                        {% else %}
+                        <td>{{ value }}</td>
+                        {% endif %}
+                        <td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table>
+                {% if related %}
+                	<h2 class="itemViewToggle item_view"><span class="passChange_col">&#10133</span>Related Terms</h2>
+            		<div class="item_view_toggle">	
+                		<table class="table table-hover" style="width:100%">
+                	{% for obj in related %}
+	                    <tr>
+	                       <td><a href="{% url 'get_csh' id=obj.0 %}">{{ obj.1 }}</a></td>
+	                    </tr>
+	                {% endfor %}
+	                	</table>
+	                </div>
+                </table>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
