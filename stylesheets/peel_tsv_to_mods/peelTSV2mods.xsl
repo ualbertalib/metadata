@@ -12,7 +12,7 @@
 
     <!-- location of the tsv/csv file -->
     <xsl:param name="doc"
-        select="'file:///home/danydvd/Downloads/Postcard_metadata.tsv'"/>
+        select="'../../../../local-do-not-merge/local-peel.git/Labour_Postcard_metadata.tsv'"/>
 
     <xsl:function name="fn:rows" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
@@ -108,10 +108,10 @@
                                                 xmlns="http://www.loc.gov/mods/v3">
                                                 <xsl:element name="hierarchicalGeographic">
                                                   <xsl:element name="country">
-                                                  <xsl:value-of select="$location[1]"/>
+                                                  <xsl:value-of select="replace($location[1], ',', '')"/>
                                                   </xsl:element>
                                                   <xsl:element name="province">
-                                                  <xsl:value-of select="$location[2]"/>
+                                                      <xsl:value-of select="replace($location[2], ',', '')"/>
                                                   </xsl:element>
                                                   <xsl:element name="city">
                                                   <xsl:value-of select="$location[3]"/>
@@ -128,16 +128,18 @@
                                             </xsl:element>
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Subject'">
-                                            <xsl:element name="subject"
-                                                xmlns="http://www.loc.gov/mods/v3">
                                                 <xsl:variable name="topic"
                                                   select="tokenize($lineItems[$pos], ';')"/>
                                                 <xsl:for-each select="$topic">
+                                                    <xsl:variable name="sub" select="replace(. , '\]', '')"/>
+                                                   <xsl:element name="subject"
+                                                        xmlns="http://www.loc.gov/mods/v3">
                                                   <xsl:element name="topic">
-                                                  <xsl:value-of select="."/>
+                                                      <xsl:value-of select="normalize-space(replace($sub , '\[', ''))"/>
                                                   </xsl:element>
+                                                   </xsl:element>
                                                 </xsl:for-each>
-                                            </xsl:element>
+                                            
                                         </xsl:when>
                                         <xsl:when test="$cellValue = 'Date_Issued'">
                                             <xsl:element name="originInfo"
