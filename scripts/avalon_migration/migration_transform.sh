@@ -28,15 +28,18 @@ echo
 # python3 ./get_list.py
 # echo "Getting Avalon records"
 ##### Foxml #####
-xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
+# xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_foxml/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/objectXML' < avalon_pids.txt
 ##### SectionsMetadata #####
-xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_sectionsMetadata/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/datastreams/sectionsMetadata/content' < MediaObject_pids.txt
+# xargs -i wget --limit-rate=45k --wait=10 --random-wait --remote-encoding=utf-8 --user fedoraAdmin --password $pass -O './original_sectionsMetadata/{}.xml' 'http://avalon.library.ualberta.ca:8080/fedora/objects/{}/datastreams/sectionsMetadata/content' < MediaObject_pids.txt
 
 
 ##### Use when getting mods records post-migration #####
 echo "Getting list of Avalon media objects"
-wget -O 'MediaObject_pids.txt' 'http://avalon.library.ualberta.ca:8080/solr/avalon/select?q=has_model_ssim%3Ainfo%3Afedora%2Fafmodel%3AMediaObject&rows=10000&fl=id&wt=csv&indent=true'
-sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%http:\/\/avalon6-test.library.ualberta.ca:8984\/fedora\/rest\/staging\/\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt > MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
+wget -O 'MediaObject_pids.txt' 'http://avalon6.library.ualberta.ca:8983/solr/avalon/select?fl=id&indent=on&q=has_model_ssim:%22MediaObject%22&rows=90000&wt=csv'
+sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%http:\/\/avalon6.library.ualberta.ca:8984\/fedora\/rest\/production\/\2\/\3\/\4\/\5\/\{\1\}\/descMetadata%g' <MediaObject_pids.txt > MediaObject_urls.txt
+
+#to get migrated datastream (preservation)
+#sed 's%\(\(..\)\(..\)\(..\)\(..\).\)$%http:\/\/avalon6.library.ualberta.ca:8984\/fedora\/rest\/production\/\2\/\3\/\4\/\5\/\{\1\}\/descMetadata\/fcr:versions\/Migration%g' <MediaObject_pids.txt > MediaObject_urls.txt ##\{((..)(..)(..)(..).)$
 #http://avalon6-test.library.ualberta.ca:8984/fedora/rest/staging/8s/45/q8/76/8s45q876k/descMetadata
 #$2/$3/$4/$5/{$1}/descMetadata
 
