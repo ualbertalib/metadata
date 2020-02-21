@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
+<?xml-model href="tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Sample Document Title</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>University of Alberta Library, Sir Samuel Steele Collection</p>
+            </publicationStmt>
+            <sourceDesc sameAs="http://www.cwrc.ca">
+                <p>Created by University of Alberta staff from digitized materials in the <ref target="https://steele.library.ualberta.ca/">Sir Samuel Steele Collection</ref> unless otherwise noted.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="letter">
+                <head>
+                    <title>Sample Letter Title</title>
+                </head>
+                <opener>
+                    <note type="setting">
+                        <p>Some opening note describing the writing location.</p>
+                    </note>
+                    <dateline>
+                        <date>Some date (set date value in attribute).</date>
+                    </dateline>
+                    <salute>Some salutation, e.g. "Dearest <persName sameAs="https://www.wikidata.org/wiki/Q435487">Miquel</persName>"</salute>
+                </opener>
+                <p>Sample letter content</p>
+                <closer>
+                    <salute>Some closing salutation, e.g. "With love..."</salute>
+                    <signed>
+                        <persName sameAs="https://www.wikidata.org/wiki/Q33760">Sender name
+                            and/or signature.</persName>
+                    </signed>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
