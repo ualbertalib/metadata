@@ -782,15 +782,17 @@ p {
     margin-bottom : 0.5em;
 }
 pb {
-	display: block;
-    background-color: #333333;
+	display: block;	
+    background-color: #dddddd;    
+	content: "Page "attr(n)" begins";
+	margin-top:1em;
+	margin-bottom:1em;
 }
-pb:before {
+/*pb:before {
 	content: '\00a0';
 	box-shadow: 5px 1em 0px 1px #000;
 }
 pb:after {
-	content: attr(n);
 	box-shadow: 5em 1em 0px 1px #000;
 	text-indent: 30px;
 }
@@ -800,7 +802,7 @@ pb:before, pb:after {
     width: 35%;
     position: relative;
     left: 10%;
-}/*
+}*//*
 
 pb:after {
     content : attr(n);
