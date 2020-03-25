@@ -1,0 +1,27 @@
+{% block content %}
+
+	<tr>
+		<td class="progress_stage{{obj.id}}" colspan="8" align="center">
+			<div class="progress-container"> 
+	            <div class="wrapper"> 
+	            	<div class="progress-nav">
+	            		  <div class="stage parsing_RDF done"><span>parsing RDF</span></div>
+	                      <div class="stage Generating_URIs_for_items_in_GRAPH done"><span>Generating URIs for items in GRAPH</span></div>
+	                      <div class="stage adding_URIs_to_GRAPH done"><span>adding URIs to GRAPH</span></div>
+	                      <div class="stage Writing_to_File done"><span>Writing to File</span></div>
+	                  </div>
+	            </div>
+	            <div class="stage results completed"><span>{{ obj.stage }}</span></div>
+	        </div>
+		</td>
+	</tr>
+	<tr class="progress_head{{obj.id}}">
+		<th>Process ID</th>
+		<th>Records processed</th>
+	</tr>
+	<tr class="progress_row{{obj.id}}">
+		<td>{{ obj.process_ID }}</td>
+		<td>{{ obj.rdf_index }}</td>
+	</tr>
+
+{% endblock %}

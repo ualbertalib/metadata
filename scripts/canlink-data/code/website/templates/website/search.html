@@ -1,0 +1,300 @@
+{% extends 'website/base.html' %}
+{% load utils %}
+{% load static %}
+{% block content %}
+<div class="search_container">
+    {% if query %}
+        {% if results %}
+            <div class="overlay">
+                <div class="load_img">
+                    <img src="{% static 'website/gif/source.gif' %}">
+                </div>
+            </div>
+            <br>
+            <h3 ><strong>Results for</strong> "<span style="color: gray;">{{ query }}</span>"</h3>
+            <hr>
+            <div class="row mt-3">
+            <div class="col-md-3 col-sm-2 d-none d-md-block">
+                {% with facet=degree_filters %}
+                {% if f_subjects %}
+                    <div class="search_filter_wrapper">
+                        <h4 class="search_filter_title">Subject/Keyword</h4>
+                        <table class="table table-hover" class="table table-bordered" style="width:100%">
+                            {% for facets in f_subjects %}
+                                {% if forloop.counter < 6 %}
+                                    <tr>
+                                        {% if facets.0 in subject_filters %}
+                                            <td class="facet"><strong>{{facets.0}}</strong></td>
+                                            <td class="facet_count"><a class="btn btn-outline-secondary btn-sm" href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=rm?f={{f}}" onclick="loading()">&#10005;</a></td>
+                                        {% else %}     
+                                        <td class="facet"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=subject?f={{f}}" onclick="loading()">{{facets.0}}</a></td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% else %}
+                                    <tr class="More_sub_facet facet">
+                                        <td><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=subject?f={{f}}" onclick="loading()">{{facets.0}}</td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if forloop.last %}
+                                    {% if f_subjects|length > 5 %}
+                                        <tr class="sub_facets_row">
+                                            <td colspan="2"><button class="sub_facets btn btn-outline-secondary" href="#">Show More</button></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+                <br>
+                {% if f_degree %}
+                <div class="search_filter_wrapper">
+                    <h4 class="search_filter_title">Thesis Degree</h4>
+                        <table class="table table-hover" class="table table-bordered" style="width:100%">
+                            {% for facets in f_degree %}
+                                {% if forloop.counter < 6 %}
+                                    <tr>
+                                        {% if facets.0 in degree_filters %}
+                                            <td class="facet"><strong>{{facets.0}}</strong>
+                                            </td>
+                                            <td class="facet_count"><a class="btn btn-outline-secondary btn-sm" href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=rm?f={{f}}" onclick="loading()">&#10005;</a></td>
+                                        {% else %}     
+                                        <td class="facet"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=degree?f={{f}}" onclick="loading()">{{facets.0}}</a></td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% else %}
+                                    <tr class="More_deg_facet facet">
+                                        <td><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=degree?f={{f}}" onclick="loading()">{{facets.0}}</td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if forloop.last %}
+                                    {% if f_degree|length > 5 %}
+                                        <tr class="deg_facets_row">
+                                            <td colspan="2"><button class="deg_facets btn btn-outline-secondary" href="#">Show More</button></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                </div>
+                {% endif %}
+                <br>
+                {% if f_creators %}
+                <div class="search_filter_wrapper">
+                    <h4 class="search_filter_title">Creator/Author</h4>
+                        <table class="table table-hover" class="table table-bordered" style="width:100%">
+                            {% for facets in f_creators %}
+                                {% if forloop.counter < 6 %}
+                                    <tr>
+                                        {% if facets.0 in creator_filters %}
+                                            <td class="facet"><strong>{{facets.0}}</strong>
+                                            </td>
+                                            <td class="facet_count"><a class="btn btn-outline-secondary btn-sm" href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=rm?f={{f}}" onclick="loading()">&#10005;</a></td>
+                                        {% else %}     
+                                            <td class="facet"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=creator?f={{f}}" onclick="loading()">{{facets.0}}</a></td>
+                                            <td class="facet_count"> {{facets.1}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% else %}
+                                    <tr class="More_cre_facet facet">
+                                        <td><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=creator?f={{f}}" onclick="loading()">{{facets.0}}</td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if forloop.last %}
+                                    {% if f_creators|length > 5 %}
+                                        <tr class="cre_facets_row">
+                                            <td colspan="2"><button class="cre_facets btn btn-outline-secondary" href="#">Show More</button></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+                <br>
+                {% if f_lang %}
+                <div class="search_filter_wrapper">
+                    <h4 class="search_filter_title">Languages</h4>
+                        <table class="table table-hover" class="table table-bordered" style="width:100%">
+                            {% for facets in f_lang %}
+                                {% if forloop.counter < 6 %}
+                                    <tr>
+                                        {% if facets.0 in lang_filters %}
+                                            <td class="facet"><strong>{{facets.0|remove_url}}</strong>
+                                            </td>
+                                            <td class="facet_count"><a class="btn btn-outline-secondary btn-sm" href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=rm?f={{f}}" onclick="loading()">&#10005;</a></td>
+                                        {% else %}     
+                                            <td class="facet"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=lang?f={{f}}" onclick="loading()">{{facets.0|remove_url}}</a></td>
+                                            <td class="facet_count"> {{facets.1}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% else %}
+                                    <tr class="More_lang_facet facet">
+                                        <td><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=lang?f={{f}}" onclick="loading()">{{facets.0|remove_url}}</td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if forloop.last %}
+                                    {% if f_lang|length > 5 %}
+                                        <tr class="lang_facets_row">
+                                            <td colspan="2"><button class="lang_facets btn btn-outline-secondary" href="#">Show More</button></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+                <br>
+                {% if f_inst %}
+                <div class="search_filter_wrapper">
+                    <h4 class="search_filter_title">Institutions</h4>
+                        <table class="table table-hover" class="table table-bordered" style="width:100%">
+                            {% for facets in f_inst %}
+                                {% if forloop.counter < 6 %}
+                                    <tr>
+                                        {% if facets.0 in inst_filters %}
+                                            <td class="facet"><strong>{{facets.0|remove_url}}</strong>
+                                            </td>
+                                            <td class="facet_count"><a class="btn btn-outline-secondary btn-sm" href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=rm?f={{f}}" onclick="loading()">&#10005;</a></td>
+                                        {% else %}     
+                                            <td class="facet"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=institution?f={{f}}" onclick="loading()">{{facets.0|remove_url}}</a></td>
+                                            <td class="facet_count"> {{facets.1}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% else %}
+                                    <tr class="More_inst_facet facet">
+                                        <td><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet={{facets.0}}?facet_type=institution?f={{f}}" onclick="loading()">{{facets.0|remove_url}}</td>
+                                        <td class="facet_count"> {{facets.1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if forloop.last %}
+                                    {% if f_inst|length > 5 %}
+                                        <tr class="inst_facets_row">
+                                            <td colspan="2"><button class="lang_facets btn btn-outline-secondary" href="#">Show More</button></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-9 col-sm-10">
+                <div class="pagination">
+                    <span class="step-links">
+                    {% if results.has_other_pages %}
+                        <ul class="pagination">
+                        {% if results.has_previous %}
+                            {% if f != '' %}
+                                <li class="inactive-f"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" onclick="loading()">First</a></li> 
+                                <li class="inactive"><a href="?page={{ results.previous_page_number }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" onclick="loading()">&laquo;</a></li>
+                            {% else %}
+                                <li class="inactive-f"><a href="?page=1?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}" onclick="loading()">First</a></li> 
+                                <li class="inactive"><a href="?page={{ results.previous_page_number }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}" onclick="loading()">&laquo;</a></li>
+                            {% endif %}
+                        {% else %}
+                            <li class="inactive disabled"><span>&laquo;</span></li>
+                        {% endif %}
+                        {% for i in page_range %}
+                              {% if results.number == i %}
+                                <li class="active"><span>{{ i }}<span class="sr-only">(current)</span></span></li>
+                              {% else %}
+                              {% if f != '' %}
+                                <li class="inactive"><a href="?page={{ i }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" onclick="loading()">{{ i }}</a></li>
+                              {% else %}
+                                <li class="inactive"><a href="?page={{ i }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}" onclick="loading()">{{ i }}</a></li>
+                              {% endif %}
+                              {% endif %}
+                        {% endfor %}
+                        {% if results.has_next %}
+                            {% if f != '' %}
+                                <li class="inactive"><a href="?page={{ results.paginator.next_page_number }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" onclick="loading()">&raquo;</a></li>
+                                <li class="inactive-f"><a href="?page={{ results.paginator.num_pages }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" onclick="loading()">Last</a></li>
+                            {% else %}
+                                <li class="inactive"><a href="?page={{ results.paginator.next_page_number }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}" onclick="loading()">&raquo;</a></li>
+                                <li class="inactive-f"><a href="?page={{ results.paginator.num_pages }}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}" onclick="loading()">Last</a></li>
+                            {% endif %}
+                        {% else %}
+                        <li class="inactive disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                      </ul>
+                    {% endif %}
+                    </span>
+                    <div class="result_counter">
+                        {% if results|length < docs_len %}
+                            {% if results.has_next %}
+                                <p> {{results.number|result_range_start:results_limit}} - {{results.number|result_range_end:results_limit}} of {{docs_len}}</p>
+                            {% else %}
+                                <p> {{results.number|result_range_start:results_limit}} - {{docs_len}} of {{docs_len}}</p>
+                            {% endif %}
+                        {% else %}
+                            <p> {{results.number|result_range_start:results_limit}} - {{docs_len}} of {{docs_len}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="results_sort">
+                        <label>Sort: </label>
+                        <select class="btn btn-outline-secondary" onChange="window.location.href=this.value">
+                            <option value="" selected disabled>{{solr_sort|translate}}</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so=Relevance?facet=?facet_type=page?f={{f}}">Relevance</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so=tia?facet=?facet_type=page?f={{f}}">Title (A-Z)</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so=tiz?facet=?facet_type=page?f={{f}}">Title (Z-A)</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so=dd?facet=?facet_type=page?f={{f}}">Date (Desc)</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so=da?facet=?facet_type=page?f={{f}}">Date (Asc)</option>
+                        </select>   
+                    </div>
+                    <div class="results_per_page">
+                        <label>Results per page: </label>
+                        <select class="btn btn-outline-secondary" onChange="window.location.href=this.value">
+                            <option value="" selected disabled>{{results_limit}}</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{10}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">10</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{25}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">25</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{50}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">50</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{75}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">75</option>
+                            <option value="?page={{results.number}}?q={{query}}?search_type={{search_type}}?l={{100}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">100</option>
+                        </select>   
+                    </div>
+                </div>
+                <table class="table table-hover" class="table table-bordered" style="width:100%">
+                    
+                {% with arg=results_limit|concat:results.number %}
+                {% for obj in results %}
+                    <tr>
+                        <td>{{ forloop.counter|multi:arg }}</td>
+                        <td>
+                            <img src="{% static obj.5|get_image %}" alt="no_logo" width="100" height="100">
+                        </td>
+                        <td><a href="{% url 'getitem' id=obj.0 %}">{{ obj.1 }}</a>
+                            <br>
+                            <strong>Date:</strong> {{ obj.2 }}
+                            <br>
+                            <strong>Author:</strong> <a href="{% url 'getitem' id=obj.4 %}">{{ obj.3 }}</a>
+                            <br>
+                            <strong>Institution:</strong> <a href="{{ obj.5 }}" target="_blank">{{ obj|get_pub_name }}</a>
+                            <br>
+                            <strong>Abstract:</strong> <p class="abstract_text abstract-{{forloop.counter}}">{{ obj.6|get_abstract_blob }} 
+                                {% if obj.6|test_abstract_len == False %}
+                                <span class="full_abstract"><button class="read_more btn btn-warning" objid={{forloop.counter}}>show more</button></span> {% endif %}</p>
+                                
+                            <p class="abstract abstract_text abstract-full-{{forloop.counter}}">{{ obj.6 }} <span class="full_abstract"><button class="read_less btn btn-warning" objid={{forloop.counter}}>show less</button></span></p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                {% endwith %}
+                </table>
+            {% endwith %}
+            {% else %}
+                <br><br><br><br>
+                <h5 class="text-center">Your query "{{ query }}" did not match any results in the dataset</h5>
+           {% endif %}
+        {% endif %}
+    </div>
+    </div>
+</div>
+
+{% endblock %}

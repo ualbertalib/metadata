@@ -1,0 +1,70 @@
+@prefix ns1: <http://ontoware.org/swrc/ontology#> .
+@prefix ns10: <info:fedora/fedora-system:def/model#> .
+@prefix ns11: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns12: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns2: <http://purl.org/dc/elements/1.1/> .
+@prefix ns3: <http://terms.library.ualberta.ca/> .
+@prefix ns4: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns5: <http://purl.org/dc/terms/> .
+@prefix ns6: <http://www.iana.org/assignments/relation/> .
+@prefix ns7: <http://purl.org/ontology/bibo/> .
+@prefix ns8: <http://pcdm.org/models#> .
+@prefix ns9: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5d/07/9a/0a5d079a-2b67-4b7a-b7f6-c76c684ac8c5> a ns4:Container,
+        ns4:Resource,
+        ns8:Object,
+        ns7:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns4:created "2018-03-12T04:23:46.441000+00:00"^^xsd:dateTime ;
+    ns4:createdBy "bypassAdmin" ;
+    ns4:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns4:lastModified "2018-04-06T23:12:14.378000+00:00"^^xsd:dateTime ;
+    ns4:lastModifiedBy "bypassAdmin" ;
+    ns4:writable true ;
+    ns1:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns8:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/c0/43/fa/6e/c043fa6e-7db3-4434-badc-da08fe201229> ;
+    ns8:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns9:doi "doi:10.7939/R38K7579D" ;
+    ns11:embargoHistory "An expired embargo was deactivated on 2015-11-22T08:32:18.303Z.  Its release date was 2015-11-15T07:00:00.000Z.  Visibility during embargo was restricted and intended visibility after embargo was open" ;
+    ns2:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns2:subject "Adhesion",
+        "MEMS",
+        "Surface Acoustic Waves" ;
+    ns5:abstract "This research investigates the use of a SU-8/AlN/Si SAW sensor for evaluating the adhesion of SU-8 thin films. A theoretical model is developed to plot the wave dispersion profile for the SU-8/AlN/Si configuration. A spring interface model is utilized to represent the SU-8/AlN interface using a series of massless springs with stiffness K (N/m^3). The value of the interface spring stiffness K is changed to represent different levels of SU-8 adhesion. The wave dispersion profiles for the intermediate adhesion levels are plotted using the theoretical model. The change in wave velocity due to the change in adhesion of the SU-8 thin film is evaluated. The sensitivities of different configurations of the SU-8/AlN/Si SAW sensors are investigated. Four SAW sensor designs are selected to evaluate the adhesion of the SU-8 thin film. The four SAW sensors operate in the frequency range of 84-208MHz. A process flow for fabricating the SAW sensors at the University of Alberta micro-and nanofabrication facility “nanofab” is developed. The fabricated sensors are packaged using wire bonding to allow measurement of their frequency responses using a Vector Network Analyzer.  For each of the four SAW sensor designs two sensor configurations will be developed. In one configuration the SU-8 film will be patterned on top of a thin gold film on the surface of the AlN/Si layers and in the second configuration the gold film will be coated with an Omnicoat layer prior to patterning the SU-8 film. Omnicoat is an adhesion promoter that is widely used to improve the adhesion of SU-8 to gold. The frequency responses from both sensor configurations are measured for each of the four SAW sensor designs and the frequency shift is evaluated. The frequency shift illustrates the change in adhesion of the SU-8 film with and without omnicoat. The phase velocity values also shift to a higher value for the sensor configurations without omnicoat. As the adhesion of the SU-8 film drops in the absence of omnicoat the stresses transferred to the SU-8 layer drop and accordingly the wave propagation is concentrated in the AlN/Si layers, which have a higher wave velocity than SU-8. However, in the presence of omnicoat the adhesion of the SU-8 layer improves and the surface acoustic wave propagates in the SU-8 layer, which leads to a drop in the phase velocity.   The theoretical model is used to find the equivalent interface spring stiffness values for the two cases of SU-8 adhesion i.e. with and without omnicoat. This is accomplished by curve fitting the dispersion curves to the phase velocity values for from both sensor configurations. The equivalent interface spring stiffness values are found to be 8.0992 x10^9 N/m^3 and 7.9492x10^9 N/m3 for the SAW sensors with omnicoat and without omnicoat, respectively. These values indicate that when omnicoat is used as an adhesion promoter for SU-8 the interface spring stiffness increases due to the improved adhesion. However, without omnicoat the adhesion of the SU-8 layer drops, which corresponds to the lower interface spring stiffness value." ;
+    ns5:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns5:dateAccepted "2015-09-30T09:57:02Z" ;
+    ns5:dateSubmitted "2015-09-29T12:56:38Z" ;
+    ns5:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns5:title "Theoretical and Experimental Investigation on the Use of Surface Acoustic Wave Sensors for Evaluating the Adhesion of SU-8 Thin Films" ;
+    ns7:degree "Doctor of Philosophy" ;
+    ns7:owner 1 ;
+    ns3:commiteeMember "Antar, Yahia (Royal Military College, Electrical and Computer Engineering)",
+        "Duke, Kajsa (Mechanical Engineering)",
+        "Lou, Edmond (Electrical and Computer Engineering)",
+        "Moussa, Walied (Mechanical Engineering)",
+        "Zuo, Ming (Mechanical Engineering)" ;
+    ns3:department "Department of Mechanical Engineering" ;
+    ns3:departmentList "[\"Department of Mechanical Engineering\"]" ;
+    ns3:depositor "elgowini@ualberta.ca" ;
+    ns3:dissertant "EL Gowini, Mohamed MT" ;
+    ns3:fedora3Handle "http://hdl.handle.net/10402/era.42340" ;
+    ns3:fedora3UUID "uuid:b20b0187-7132-40e1-b94b-f3d79164675f" ;
+    ns3:graduationDate "2015-11" ;
+    ns3:hydraNoid "c7s75dc526" ;
+    ns3:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns3:recordCreatedInJupiter "2018-03-12T04:23:46.151Z" ;
+    ns3:sortYear 2015 ;
+    ns3:supervisor "Moussa, Walied (Mechanical Engineering)" ;
+    ns3:supervisorList "[\"Moussa, Walied (Mechanical Engineering)\"]" ;
+    ns3:thesisLevel "Doctoral" ;
+    ns12:dateIngested "2018-03-12T04:23:46.151Z" ;
+    ns6:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5d/07/9a/0a5d079a-2b67-4b7a-b7f6-c76c684ac8c5/list_source#g66874340> ;
+    ns6:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5d/07/9a/0a5d079a-2b67-4b7a-b7f6-c76c684ac8c5/list_source#g66874340> ;
+    ns10:hasModel "IRThesis" .
+

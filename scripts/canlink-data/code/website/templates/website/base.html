@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CLDI - Testing Website</title>
+        <meta charset="utf-8" /> {% load staticfiles %} 
+        <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'website/css/styles.css' %}" type = "text/css"/>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'website/img/favicon.ico' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'website/js/scripts.js' %}"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary">
+            <div class="main-head">
+                <h1 class="main-heading"><a href="{% url 'main' %}" style="color: #FFF">CANLINK</a></h1>
+            </div>
+            <div class="searchbox">
+                <div class="serach-container" style="height: 100%">
+                    <form action="{% url 'search' %}" method="post" class="form-inline" style="height: 100%">    
+                        <select class="search_type btn btn-secondary" name="search_type" id="sreach_type">
+                              <option value="All" selected>All</option>
+                              <option value="Title">Title</option>
+                              <option value="Author">Author</option>
+                              <option value="Date">Date</option>
+                              <option value="Subject">Subject</option>
+                              <option value="Abstract">Abstract</option>
+                        </select>
+                        {% if query %}
+                            <input class="searchbox-area " id="search" type="text" name="search" placeholder="  {{ query }}" aria-label="Search" value="">
+                        {% else %}
+                            <input class="searchbox-area " id="search" type="text" name="search" placeholder="  Search CanLink Datasets" aria-label="Search" value="">
+                        {% endif %}
+                        {% csrf_token %}
+                        <button class="search-button-top btn btn-warning" type="submit" onclick="loading()">
+                            <svg width="15px" height="15px" >
+                                <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+                            </svg> Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="main-links">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'upload' file='none' status='init' %}">Submit Thesis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'csh_search' %}">CSH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://206.167.181.124:7200/" target="_blank">SPAQL Server</a>
+                    </li>
+                    {% if user.is_authenticated %}
+
+
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ user.get_username }}
+                      </button>
+                      <div class="dropdown-menu" style="left: -50%">
+                        <a class="dropdown-item" style="cursor: text;" href="#">Logged in as: <strong>{{ user.get_username }}</strong></a>
+                        <a class="dropdown-item" href="{% url 'profile' username=user.get_username error='init' %}">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'logout' %}?next={{request.path}}?page={{i}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}">Log out</a>
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary">
+                        <a href="{% url 'login' %}?next={{request.path}}?page={{i}}?q={{query}}?search_type={{search_type}}?l={{results_limit}}?so={{solr_sort}}?facet=?facet_type=page?f={{f}}" class="login_button">Login</a>
+                      </button>
+                    </div>                        
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <div class="main-body">
+            {% block content %}
+
+            {% endblock %}
+            <br><br><br>
+            <nav class="footer navbar sticky-bottom navbar-expand-sm navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">CANLINK</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://twitter.com/canlink2017">Twitter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://canlink.library.ualberta.ca/faq-en.html" target="_blank">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://canlink.library.ualberta.ca/faq-fr.html" target="_blank">FAQs (fr)</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

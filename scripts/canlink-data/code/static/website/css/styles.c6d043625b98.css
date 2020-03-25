@@ -1,0 +1,94 @@
+body{
+    background-color: #F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#mainTitle{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1.6px;
+    padding-top: 20px;
+    color: #000021;
+}
+
+#heading{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: -0.50px;
+    margin-top: 10px;
+    color: #000021;
+}
+#pasteArea{
+    height: 70vh;
+    margin-top: 50px;
+}
+#pasteAreaSubmitButton{
+    font-size: 17px;
+    font-weight: 300;
+    color: white;
+    border: 0;
+    margin-top: 30px;
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    background: #000021;
+    border-radius: 100px;
+    outline: none !important;
+}
+@font-face {
+    font-family: noto;
+    src: url("../fonts/NotoSans-Regular.28ffc9e17c88.ttf");
+}
+
+textarea{
+    width: 100%;
+    height: 66vh;
+    border: 0;
+    font-family: 'noto';
+    font-size: 12px;
+}
+textarea:focus {
+    /*Change the border on focus - add shadow*/
+    outline: none !important;
+    border:0px solid #F2F2F2;
+    box-shadow: 0 10px 50px 3px #D8D8D8;
+}
+.file_error, .file_submission{
+    width: 100%;
+    height: 25px;
+    transition: box-shadow 0.3s ease-out;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+}
+/*.file_error:hover, .file_warning:hover, .file_thesis:hover{
+    box-shadow: 0 1px 10px 1px #D8D8D8;
+    transition: box-shadow 0.1s ease-in-out;
+}*/
+.file_error_message, .file_submission_message{
+    color: #000021;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.file_error{
+    background-color: #FFDDDD;
+    border-left: 15px solid #FF3838;
+
+}
+.file_submission{
+    background-color: #C0FFD5;
+    border-left: 15px solid #1DCC57;
+}
+#submissions{
+    margin-top: 40px;
+}
+hr{
+    border-color: #E1E1E1;
+}
+
+#errors, #warnings, #submissions{
+    /*keep all the error messages parts hidden at the beginning use display:block whenever the response comes back from the server*/
+    display: none;
+}
+

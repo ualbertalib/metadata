@@ -1,0 +1,66 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns10: <http://www.iana.org/assignments/relation/> .
+@prefix ns11: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns2: <http://purl.org/dc/elements/1.1/> .
+@prefix ns3: <http://terms.library.ualberta.ca/> .
+@prefix ns4: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns5: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns6: <http://ontoware.org/swrc/ontology#> .
+@prefix ns7: <info:fedora/fedora-system:def/model#> .
+@prefix ns8: <http://purl.org/ontology/bibo/> .
+@prefix ns9: <http://pcdm.org/models#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/16/65/0a5b1665-4aae-496e-9176-82f70b4fc115> a ns4:Container,
+        ns4:Resource,
+        ns9:Object,
+        ns8:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns4:created "2018-03-12T20:22:57.241000+00:00"^^xsd:dateTime ;
+    ns4:createdBy "bypassAdmin" ;
+    ns4:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns4:lastModified "2018-04-06T21:08:28.593000+00:00"^^xsd:dateTime ;
+    ns4:lastModifiedBy "bypassAdmin" ;
+    ns4:writable true ;
+    ns6:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns9:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/90/c8/bf/70/90c8bf70-3e3c-42a7-abdc-0886087e5220> ;
+    ns9:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns11:doi "doi:10.7939/R3C53F606" ;
+    ns2:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns2:subject "Wollstonecraft, Mary, 1759-1797--Criticism and interpretation",
+        "Wollstonecraft, Mary, 1759-1797--Mary, a fiction",
+        "Wollstonecraft, Mary, 1759-1797--Original stories",
+        "Wollstonecraft, Mary, 1759-1797--Philosophy",
+        "Wollstonecraft, Mary, 1759-1797--Political and social views",
+        "Wollstonecraft, Mary, 1759-1797--Thoughts on the education of daughters",
+        "Women--Education" ;
+    ns1:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns1:dateAccepted "1981" ;
+    ns1:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns1:title "The early works of Mary Wollstonecraft: an analysis of the importance of Thoughts on the Education of Daughters, Mary, a Fiction, and Original Stories to the evolution of Wollstonecraft's educational, political, and moral philosophy" ;
+    ns8:degree "Master of Education" ;
+    ns8:owner 1 ;
+    ns3:department "Department of Educational Foundations" ;
+    ns3:departmentList "[\"Department of Educational Foundations\"]" ;
+    ns3:depositor "era@ualberta.ca" ;
+    ns3:dissertant "Kersteen, Wendy Lynn" ;
+    ns3:fedora3Handle "http://hdl.handle.net/10402/era.13728" ;
+    ns3:fedora3UUID "uuid:b1a743cf-3353-4546-b111-e0a308e77eb9" ;
+    ns3:graduationDate "1981" ;
+    ns3:hydraNoid "bc386m58p" ;
+    ns3:ingestBatch "2v23vw98g" ;
+    ns3:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns3:proquest "MK51518" ;
+    ns3:recordCreatedInJupiter "2018-03-12T20:22:56.931Z" ;
+    ns3:sortYear 1981 ;
+    ns3:thesisLevel "Master's" ;
+    ns3:unicorn "904827" ;
+    ns5:dateIngested "2018-03-12T20:22:56.931Z" ;
+    ns10:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/16/65/0a5b1665-4aae-496e-9176-82f70b4fc115/list_source#g83294540> ;
+    ns10:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/5b/16/65/0a5b1665-4aae-496e-9176-82f70b4fc115/list_source#g83294540> ;
+    ns7:hasModel "IRThesis" .
+

@@ -1,0 +1,30 @@
+
+{% block content %}
+
+	<tr>
+		<td class="progress_stage{{obj.id}}" colspan="8" align="center">
+			<div class="progress-container"> 
+	            <div class="wrapper"> 
+	            	<div class="progress-nav">
+	            		  <div class="stage Encoding_MARC current"><span>Encoding MARC</span></div>
+	                      <div class="stage Enriching_MARC_records"><span>Enriching MARC records</span></div>
+	                      <div class="stage Generating_RDF"><span>Generating RDF</span></div>
+	                      <div class="stage Loading_RDF_statements"><span>Loading RDF statements</span></div>
+	                  </div>
+	            </div>
+	            <div class="stage results"><span></span></div>
+	        </div>
+		</td>
+	</tr>
+	<tr class="progress_head{{obj.id}}">
+		<th>Process ID</th>
+		<th>Enriching MARC records</th>
+		<th>Generating RDF</th>
+	</tr>
+	<tr class="progress_row{{obj.id}}">
+		<td>N/A</td>
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
+
+{% endblock %}

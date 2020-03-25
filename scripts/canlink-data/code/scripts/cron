@@ -1,0 +1,3 @@
+curl http://localhost:8983/solr/Canlink/update -H "Content-Type: application/json" -T "test.json" -X POST
+
+curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=Canlink"

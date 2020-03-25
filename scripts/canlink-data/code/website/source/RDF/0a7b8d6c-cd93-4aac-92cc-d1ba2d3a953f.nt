@@ -1,0 +1,65 @@
+@prefix ns1: <http://purl.org/ontology/bibo/> .
+@prefix ns10: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns11: <http://ontoware.org/swrc/ontology#> .
+@prefix ns2: <http://terms.library.ualberta.ca/> .
+@prefix ns3: <info:fedora/fedora-system:def/model#> .
+@prefix ns4: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns5: <http://www.iana.org/assignments/relation/> .
+@prefix ns6: <http://purl.org/dc/terms/> .
+@prefix ns7: <http://purl.org/dc/elements/1.1/> .
+@prefix ns8: <http://pcdm.org/models#> .
+@prefix ns9: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7b/8d/6c/0a7b8d6c-cd93-4aac-92cc-d1ba2d3a953f> a ns4:Container,
+        ns4:Resource,
+        ns8:Object,
+        ns1:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns4:created "2018-03-12T07:26:47.602000+00:00"^^xsd:dateTime ;
+    ns4:createdBy "bypassAdmin" ;
+    ns4:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns4:lastModified "2018-04-06T21:45:36.749000+00:00"^^xsd:dateTime ;
+    ns4:lastModifiedBy "bypassAdmin" ;
+    ns4:writable true ;
+    ns11:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns8:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/30/aa/b2/f7/30aab2f7-ed12-43b1-aeaf-ec7c9f437046> ;
+    ns8:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns10:doi "doi:10.7939/R31J97D7R" ;
+    ns7:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns7:subject "Cree Indians--Education",
+        "Cree Indians--Government relations",
+        "Indians of North America--Canada--Education",
+        "Indians of North America--Canada--Government relations",
+        "Indians, Treatment of--Canada",
+        "Joseph Bighead Reserve (Sask.)" ;
+    ns6:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns6:dateAccepted "1991" ;
+    ns6:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns6:title "Indian education: resistance to internal colonialism" ;
+    ns1:degree "Doctor of Philosophy" ;
+    ns1:owner 1 ;
+    ns2:department "Department of Educational Foundations" ;
+    ns2:departmentList "[\"Department of Educational Foundations\"]" ;
+    ns2:depositor "era@ualberta.ca" ;
+    ns2:dissertant "Devrome, Robert J." ;
+    ns2:fedora3Handle "http://hdl.handle.net/10402/era.12095" ;
+    ns2:fedora3UUID "uuid:9f3ebdf2-ebdc-479c-b910-ad37e2e67a0d" ;
+    ns2:graduationDate "1991" ;
+    ns2:hydraNoid "c821gn10v" ;
+    ns2:ingestBatch "mw22v7557" ;
+    ns2:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns2:proquest "NN69928" ;
+    ns2:recordCreatedInJupiter "2018-03-12T07:26:47.258Z" ;
+    ns2:sortYear 1991 ;
+    ns2:thesisLevel "Doctoral" ;
+    ns2:unicorn "792187" ;
+    ns9:dateIngested "2018-03-12T07:26:47.258Z" ;
+    ns5:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7b/8d/6c/0a7b8d6c-cd93-4aac-92cc-d1ba2d3a953f/list_source#g61782120> ;
+    ns5:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7b/8d/6c/0a7b8d6c-cd93-4aac-92cc-d1ba2d3a953f/list_source#g61782120> ;
+    ns3:hasModel "IRThesis" .
+

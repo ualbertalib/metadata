@@ -1,0 +1,61 @@
+@prefix ns1: <http://www.iana.org/assignments/relation/> .
+@prefix ns10: <http://purl.org/ontology/bibo/> .
+@prefix ns11: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns2: <http://pcdm.org/models#> .
+@prefix ns3: <http://terms.library.ualberta.ca/> .
+@prefix ns4: <http://purl.org/dc/elements/1.1/> .
+@prefix ns5: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns6: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns7: <http://purl.org/dc/terms/> .
+@prefix ns8: <http://ontoware.org/swrc/ontology#> .
+@prefix ns9: <info:fedora/fedora-system:def/model#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/53/29/0a6a5329-aa58-400d-b3fa-b61ef9354ebc> a ns6:Container,
+        ns6:Resource,
+        ns2:Object,
+        ns10:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns6:created "2018-03-10T23:33:45.394000+00:00"^^xsd:dateTime ;
+    ns6:createdBy "bypassAdmin" ;
+    ns6:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns6:lastModified "2018-04-07T23:24:21.425000+00:00"^^xsd:dateTime ;
+    ns6:lastModifiedBy "bypassAdmin" ;
+    ns6:writable true ;
+    ns8:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns2:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/c9/42/da/fd/c942dafd-59f4-4b0c-bbc3-20344ab29eea> ;
+    ns2:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns5:doi "doi:10.7939/R3BN9XC9C" ;
+    ns4:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns4:subject "Adult education--Alberta--Edmonton",
+        "English language--Study and teaching--Alberta--Edmonton--Foreign speakers" ;
+    ns7:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns7:dateAccepted "1989" ;
+    ns7:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns7:title "A descriptive study of adult ESL programs in Edmonton" ;
+    ns10:degree "Master of Education" ;
+    ns10:owner 1 ;
+    ns3:department "Department of Adult, Career, and Technology Education" ;
+    ns3:departmentList "[\"Department of Adult, Career, and Technology Education\"]" ;
+    ns3:depositor "era@ualberta.ca" ;
+    ns3:dissertant "Hodgson, Margaret." ;
+    ns3:fedora3Handle "http://hdl.handle.net/10402/era.11275" ;
+    ns3:fedora3UUID "uuid:7a31e1d3-4996-4b83-9884-c69a3d672af6" ;
+    ns3:graduationDate "1989" ;
+    ns3:hydraNoid "nv935488j" ;
+    ns3:ingestBatch "9c67wq153" ;
+    ns3:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns3:proquest "ML55654" ;
+    ns3:recordCreatedInJupiter "2018-03-10T23:33:45.109Z" ;
+    ns3:sortYear 1989 ;
+    ns3:thesisLevel "Master's" ;
+    ns3:unicorn "652687" ;
+    ns11:dateIngested "2018-03-10T23:33:45.109Z" ;
+    ns1:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/53/29/0a6a5329-aa58-400d-b3fa-b61ef9354ebc/list_source#g61467440> ;
+    ns1:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/6a/53/29/0a6a5329-aa58-400d-b3fa-b61ef9354ebc/list_source#g61467440> ;
+    ns9:hasModel "IRThesis" .
+

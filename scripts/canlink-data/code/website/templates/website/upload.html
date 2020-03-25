@@ -1,0 +1,208 @@
+{% extends 'website/base.html' %}
+{% load utils %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="main-body">
+	{% if del_file != 'none' and status == 'deleted' %}
+		<div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <p style="text-align: justify;">{{del_file}} was deleted</p>
+        </div>
+    {% elif del_file == 'files' and status == 'success' %}
+		<div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <p style="text-align: justify;">Upload complete!</p>
+        </div>
+    {% elif del_file == 'files' and status == 'duplicated_process' %}
+		<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <strong>ERROR!</strong> The selected files is already being processed. Please select another file.
+        </div>
+    {% elif del_file == 'files' and status == 'overload' %}
+		<div class="alert alert-danger alert-dismissible" style="width: 90%; margin-left: 3%;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             <strong>ERROR!</strong> Maximum processing limit!
+        </div>
+    {% endif %}
+	<br>
+	<h4 class= "text-center">Select a file type to uplaod</h4>
+
+    <h2 class="fileuploadform"><span class="fileuploadform_col">&#10133</span>Upload a file</h2>
+	<div class="file_uplaod_form">
+	    <div class="form_container">
+	    <form method="post" enctype="multipart/form-data">
+	      {% csrf_token %}
+	        {{ UploadFileForm.as_p }}
+	        <label style="float: right">
+				<input id="lacCheckbox" type="checkbox" value="">This is an LAC upload</input>
+            </label>
+	      <button class="btn btn-default btn-danger" type="submit">Upload File(s)</button>
+	    </form>
+	  </div>
+	</div>
+	<h2 class="filepasteform"><span class="filepasteform_col">&#10133</span>Paste your file content</h2>
+	<div class="file_paste_form">
+	    <div class="form_container">
+                <span id="heading">PASTE MARC RECORDS</span>
+                <textarea id="paste_records" class="paste_records" name="paste_records"></textarea>
+                <form method="post" id="upload_form" enctype="multipart/form-data">
+                </form>
+                <button id="pasteAreaSubmitButton" class="btn btn-default btn-danger" type="submit">
+                    <span id="pasteAreaSubmitButtonText">Process</span>
+                    <div id="pasteAreaSubmitButtonLoading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active center-block" style="display: none"></div>
+                </button>
+            </div>
+	</div>
+
+
+    {% if docs or csv_docs or rdf_docs %}
+    <br><hr class="divider-top">
+    <h4>Uploaded files
+    	{% if docs %}
+    	<pe class="marc_data">
+    		{{ docs|length|minus }} MARC
+    	</pe>
+    	{% endif %}
+    	{% if csv_docs %}
+    	<pe class="csv_data">
+    		{{csv_docs|length }} Tabular
+    	</pe>
+    	{% endif %}
+    	{% if rdf_docs %}
+    	<pe class="rdf_data">
+    		{{rdf_docs|length }} RDF
+    	</pe>
+    	{% endif %}
+   </h4>
+   {% endif %}
+	{% if docs %}
+        {% ifequal docs|length 1 %}
+          <table class="table table-hover" class="table table-bordered" style="width:100%">
+            <tr>
+              <th></th>
+              <th>Filename</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Uploaded at</th>
+              <th></th>
+            </tr>
+            <tr> <td colspan="6" align="center">No file has been uploaded</td></tr>
+          {% else %}
+        <form action="{% url 'thesisSubmission' %}" method="POST">
+        <table class="table table-hover" class="table table-bordered" style="width:100%">
+          <tr>
+            <th></th>
+            <th>Filename</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Uploader</th>
+            <th>Uploader Institution</th>
+            <th>Uploaded at</th>
+            <th></th>
+          {% for obj in docs %}
+          {% if obj.description == "thisisadummyobjectonlynumber123456" %}
+              <tr class="dummy_object">
+                <td><input type="checkbox" name="file_selected" value="{{ obj.name }}"></td>
+                <td>{{ obj.document|replaceFolder }}</td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.name }}?')"/>
+                  </form></td>
+              </tr>
+            {% else %}
+              <tr class="marc_rows">
+                <td><input type="checkbox" class="file_selector" fileType="{{obj.file_format}}" name="file_selected" value="{{ obj.document }}"></td>
+                <td>{{ obj.document|replaceFolder }}
+                	{% if obj|inProcess %}
+                  <span style="color: red"> Processing - PID: ({{ obj|inProcess }})</span>
+                  {% endif %}
+                </td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td>{{ obj.uploader.last_name }}, {{ obj.uploader.first_name }}</td>
+                <td>{% for g in obj.uploader.groups.all %}
+					{{g}}
+				{% endfor %}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document }}?')"/>
+                  </form></td>
+              </tr>
+              {% endif %}
+          {% endfor %}
+
+        {% endifequal %}
+        {% if csv_docs %}
+        	{% for obj in csv_docs %}
+        		<tr class="csv_rows">
+                <td><input type="checkbox" class="file_selector" fileType="{{obj.file_format}}" name="file_selected" value="{{ obj.document }}"></td>
+                <td>{{ obj.document|replaceFolder }}
+                	{% if obj|inProcess %}
+                  <span style="color: red"> Processing - PID: ({{ obj|inProcess }})</span>
+                  {% endif %}
+                </td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td>{{ obj.uploader.last_name }}, {{ obj.uploader.first_name }}</td>
+                <td>{% for g in obj.uploader.groups.all %}
+					{{g}}
+				{% endfor %}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document }}?')"/>
+                  </form></td>
+              </tr>
+        	{% endfor %}
+        {% endif %}
+        {% if rdf_docs %}
+        	{% for obj in rdf_docs %}
+        		<tr class='rdf_rows'>
+                <td><input type="checkbox" class="file_selector" fileType="{{obj.file_format}}" name="file_selected" value="{{ obj.document }}"></td>
+                <td>{{ obj.document|replaceFolder }}
+                	{% if obj|inProcess %}
+                  <span style="color: red"> Processing - PID: ({{ obj|inProcess }})</span>
+                  {% endif %}
+                </td>
+                <td>{{ obj.file_type }}</td>
+                <td>{{ obj.description }}</td>
+                <td>{{ obj.uploader.last_name }}, {{ obj.uploader.first_name }}</td>
+                <td>{% for g in obj.uploader.groups.all %}
+					{{g}}
+				{% endfor %}</td>
+                <td><small>{{ obj.uploaded_at }}</small></td>
+                <td><form action="{% url 'record-d' id=obj.id  format=obj.file_format %}" method="POST">
+                    {% csrf_token %}
+                    <input class="btn btn-default btn-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete {{ obj.document }}?')"/>
+                  </form></td>
+              </tr>
+        	{% endfor %}
+        {% endif %}          
+        </table>
+        {% ifequal processing_docs|length 4 %}
+            <button class="btn btn-default btn-danger btn-lg btn-block overload" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" disabled>processing limit reached</button>
+          {% else %}
+            <button class="btn btn-default btn-danger btn-lg btn-block process_button" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit">PROCESS</button>
+          {% endifequal %}
+        </form>
+        <form action="{% url 'thesisSubmission' %}" method="POST">
+            {% csrf_token %}
+            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Queue"/>
+          </form>
+          <form action="{% url 'archive' %}" method="POST">
+            {% csrf_token %}
+            <input class="btn btn-default btn-secondary btn-lg btn-block" style="width: 50%; margin: 0 auto; margin-bottom: 10px;" type="submit" value="Visit Processing Archive ({{ processing_archive|length }} items)"/>
+          </form>
+     </div>
+    {% endif %}
+    {% else %}
+    	<p>Please <a href="{% url 'login' %}">log in </a>to CanLink for uplaoding/processing your files</p>
+    	<p>Don't have an account? <a href="{% url 'login' %}">Register</p>
+   {% endif %}
+{% endblock %}

@@ -42,12 +42,15 @@ def search_IA():
 	json_file = open('IA_only.json')
 	json_str = json_file.read()
 	json_data = json.loads(json_str)
+	IAids = open('checked.json')
+	IAIDS = IAids.read()
+	IAs = json.loads(IAIDS)
 	print ('%s items of %s are already downloaded -- Skipping metadata search for these items' %(len(json_data), len(search)))
 	IA_IDs = {}
 	No_CatKey = []
 	for i, result in enumerate(search):
 	    itemid = result['identifier']
-	    if itemid in json_data.keys():
+	    if itemid in json_data.keys() or itemid in IAs.keys():
 	    	print ('skipping metadata search for %s' %(itemid))
 	    	IA_IDs[json_data[itemid]] = itemid
 	    else:
@@ -76,7 +79,9 @@ def search_IA():
 def generate_overlap_list(ERA_IDs, IA_IDs):
 	overlaps = {}
 	IA_only = {}
+	Download_check = {}
 	for id in IA_IDs.keys():
+		Download_check[IA_IDs[id]] = id
 		if id in ERA_IDs.keys():
 			overlaps[id] = {}
 			overlaps[id]['IA_key'] = IA_IDs[id]
@@ -89,6 +94,8 @@ def generate_overlap_list(ERA_IDs, IA_IDs):
 
 	with open('IA_only.json', 'w') as IAonly:
 		json.dump(IA_only, IAonly)
+	with open('checked.json', 'w') as checked:
+		json.dump(Download_check, checked)
 
 	print ('There are %s thesis that are only in Internet Archives -- %s thesis are in IA and Triplestore' %(len(IA_only), len(overlaps)))
 	return (IA_only)

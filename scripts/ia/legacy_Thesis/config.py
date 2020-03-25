@@ -52,11 +52,11 @@ institution = [{"uri": "http://id.loc.gov/authorities/names/n79058482",
 
 file_type = [
 	'_marc.xml',
-#	'_meta.mrc',
-#	'_djvu.txt',
-#	'.pdf'
+	'_meta.mrc',
+	'_djvu.txt',
+	'.pdf'
 	]
-sparql = "http://206.167.181.124:9999/blazegraph/namespace/gillingham_20180222/sparql"
+sparql = "http://206.167.181.124:7200/repositories/old_era"
 IA_access = {'s3': {'access': 'C9khuFEwAKAj5Y5X', 'secret': '8s5NsWQzx1wTKfAd'}}
 mypath = "/home/danydvd/git/remote/metadata/scripts/ia/legacy_Thesis/files/xml/"
 abstracts = "/home/danydvd/git/remote/metadata/scripts/ia/legacy_Thesis/Abstracts/"

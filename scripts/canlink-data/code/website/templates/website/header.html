@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CLDI - Testing Website</title>
+    <basehref="http://canlink.library.ualberta.ca/submission/">
+        <meta charset="utf-8" /> {% load static %}
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="../static/website/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../static/website/css/fonts.css" type="text/css" />
+        <link rel="stylesheet" href="../static/website/css/styles.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token" content="{% csrf_token %}">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="../static/website/js/scripts.js"></script>
+        <script src="../static/website/js/jquery.ui.widget.js"></script>
+        <script src="../static/website/js/jquery.iframe-transport.js"></script>
+        <script src="../static/website/js/jquery.fileupload.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- title -->
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 text-center center-block" id="mainTitle"> Insert Title Here </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <!-- paste area -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" id="pasteArea">
+                <span id="heading">PASTE MARC RECORDS</span>
+                <textarea id="records" name="records"></textarea>
+                <form method="post" id="upload_form" enctype="multipart/form-data">
+                    <label class="btn btn-default btn-file" id="upload_button" style="color: #000021; border-radius: 0px; border-color: white; background-color: white;">
+                        <span id="upload_button_text">Upload MARC File</span>
+                        <input type="file" id="records_upload" style="display: none;" onchange="uploadedFile()">
+                    </label>
+                    <label style="float: right">
+                        <input id="lacCheckbox" type="checkbox" value="">This is an LAC upload</input>
+                    </label>
+                </form>
+                <!-- <button
+                        id="pasteAreaSubmitButton" 
+                        class="g-recaptcha center-block"
+                        data-sitekey="6LdPqSUUAAAAAELhARQQcRdQtPZAT60CTNYXXMPC"
+                        data-callback="submitForm">
+                        <span id="pasteAreaSubmitButtonText">Submit</span>
+                        <div id="pasteAreaSubmitButtonLoading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active center-block" style="display: none"></div>
+                    </button> -->
+                <button id="pasteAreaSubmitButton" class="center-block" onclick="submitForm()">
+                    <span id="pasteAreaSubmitButtonText">Submit</span>
+                    <div id="pasteAreaSubmitButtonLoading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active center-block" style="display: none"></div>
+                </button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</body>
+<script>
+function uploadedFile() {
+    var file_path = document.getElementById("records_upload").value;
+    if (file_path != "") {
+        var upload_text = file_path.substring(file_path.lastIndexOf("\\") + 1);
+        if (upload_text.length > 20) {
+            upload_text = upload_text.substring(0, 20) + "...";
+        }
+        upload_text = upload_text + " uploaded";
+
+        document.getElementById("upload_button_text").innerHTML = upload_text;
+    } else {
+        alert("file removed");
+    }
+}
+</script>
+
+</html>

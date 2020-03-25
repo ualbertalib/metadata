@@ -1,0 +1,76 @@
+@prefix ns1: <http://purl.org/dc/elements/1.1/> .
+@prefix ns10: <http://ontoware.org/swrc/ontology#> .
+@prefix ns11: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns12: <http://pcdm.org/models#> .
+@prefix ns2: <http://terms.library.ualberta.ca/> .
+@prefix ns3: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix ns5: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns6: <http://www.iana.org/assignments/relation/> .
+@prefix ns7: <http://projecthydra.org/ns/auth/acl#> .
+@prefix ns8: <info:fedora/fedora-system:def/model#> .
+@prefix ns9: <http://purl.org/ontology/bibo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/db/5c/09/68/db5c0968-f5b2-4124-8555-d4d792b26dcb> a ns3:Container,
+        ns3:Resource,
+        ns12:Object,
+        ns9:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns3:created "2018-03-10T11:59:40.023000+00:00"^^xsd:dateTime ;
+    ns3:createdBy "bypassAdmin" ;
+    ns3:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns3:lastModified "2018-04-07T23:44:06.518000+00:00"^^xsd:dateTime ;
+    ns3:lastModifiedBy "bypassAdmin" ;
+    ns3:writable true ;
+    ns10:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns12:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/91/ad/14/aa/91ad14aa-3c25-44c4-afdc-67d88ec881eb> ;
+    ns12:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns11:doi "doi:10.7939/R3GH3H" ;
+    ns7:embargoHistory "An expired embargo was deactivated on 2014-11-15T08:10:40.227Z.  Its release date was 2014-11-15T07:00:00.000Z.  Visibility during embargo was restricted and intended visibility after embargo was open" ;
+    ns1:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns1:subject "Batch",
+        "Bioreactor",
+        "CLSM",
+        "FBBR",
+        "OSPW",
+        "Ozone",
+        "PCR-DGGE",
+        "Pyrosequencing",
+        "QPCR" ;
+    ns4:abstract "The oil sands process-affected water (OSPW) generated from bitumen extraction of oil sands by industries in Northern Alberta, Canada, is a great environmental concern because of the OSPW toxicity in the environment. This toxicity has been attributed to a group of alicyclic and aliphatic compounds containing carboxyl radicals known as naphthenic acids (NAs). Thus, appropriate OSPW treatment approaches are urgently needed to permit the safe discharge of treated OSPW to the receiving environment. By realizing the above need, the current study treats oil sands process-affected water (OSPW) using engineered granular activated carbon (GAC) biofilm reactors by applying different modes of operation (continuous, semicontinuous and batch) for both raw and ozonated OSPW treatments. After 120 days of continuous operation of a GAC fluidized bed biofilm reactor (FBBR), it was shown that the GAC-FBBR process (adsorption and biodegradation) removed more than 86% of classical NAs from raw OSPW. Generally, ozonation is known to be effective in the removal of NAs from raw OSPW. Using a combined 80 mg/L utilized ozone dose followed by GAC-FBBR treatment of ozonated OSPW resulted in the removal of > 99% of classical NAs. In addition, the overall removal of the acid extractable organic-fraction (AEF) and chemical oxygen demand (COD) were 88% and 62%, respectively from this combined process. Further analysis of the microbial community using polymerase chain reaction (PCR) - denatured gradient gel electrophoresis (DGGE) from both raw and ozonated OSPW and their respective GAC-FBBR biofilms showed that there was reduced diversity of the microbial structure in the GAC biofilm with the majority of the bacteria being carbon degraders. Further study investigated the synergistic removal of NAs (classical and oxidized) and toxicity from a simultaneous GAC adsorption and biodegradation treatment of raw and ozonated OSPW (20 mg/L utilized ozone dose). At a GAC dose of 0.4 g GAC/L OSPW, this process removed 93% and 96% of classical NAs, and 74% and 77% of oxidized NAs from raw and ozonated OSPW, respectively. As well, this process reduced the toxicity of both raw and ozonated OSPW. There was higher removal of COD, AEF and NAs from the simultaneous GAC adsorption and biodegradation treatment of OSPW compared to the biodegradation or adsorption only treatments which indicated the enhanced bioregeneration in the GAC biofilm process. The lower utilized ozone dose used in these experiments (as compared with 80 mg/L previously) had little impact on the removal of both classical and oxidized NAs in the raw OSPW as compared to the 80 mg/L utilized ozone dose used in previous experiments. The analysis of the microbial community using PCR-DGGE cannot reveal the comprehensive and complete characterization of microbial community in OSPW. Therefore, a high throughput 454-pyrosequencing was performed for analyzing the microbial community in the GAC biofilm, where biofilm was allowed to form in another set of experiments using a semicontinuous process (batch process with continuous change of OSPW). Frequent observations of the biofilm growth (every six days) on the GAC surface was performed using a confocal laser scanning microscope, real time PCR, and heterotrophic plate count with results showing an effective growth of biofilm. The dominant microbial composition in the GAC biofilm was Proteobacteria and further analysis of Proteobacteria revealed that the GAC biofilm was rich with carbon degrading orders of bacteria namely Myxococcales, Pseudomonadales, and Burkholderiales. The GAC biofilm microbial community was able to remove over 66% of NAs in the ozonated OSPW treatment after a short contact time. Overall the study demonstrated an effective removal of NAs (classical and oxidized) and toxicity from OSPW, which indicated that the GAC biofilm treatment approach is a promising technology for OSPW remediation. " ;
+    ns4:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns4:dateAccepted "2014-08-20T10:55:05Z" ;
+    ns4:dateSubmitted "2014-08-19T16:13:11Z" ;
+    ns4:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns4:title "Combined Adsorption and Biodegradation Processes for Oil Sands Process-Affected Water Treatment" ;
+    ns9:degree "Doctor of Philosophy" ;
+    ns9:owner 1 ;
+    ns2:commiteeMember "Liu, Jinxia (Civil Engineering, McGill University)",
+        "Perez-Estrada, Leonidas (Civil and Environmental Engineering)",
+        "She, Yuntong (Civil and Environmental Engineering)" ;
+    ns2:department "Department of Civil and Environmental Engineering" ;
+    ns2:departmentList "[\"Department of Civil and Environmental Engineering\"]" ;
+    ns2:depositor "msislam@ualberta.ca" ;
+    ns2:dissertant "Islam, Md. S" ;
+    ns2:fedora3Handle "http://hdl.handle.net/10402/era.39355" ;
+    ns2:fedora3UUID "uuid:5f0e294a-2ec7-4b72-b657-27fe7d2ef33f" ;
+    ns2:graduationDate "2014-11" ;
+    ns2:hydraNoid "pc289j709" ;
+    ns2:ingestBatch "q524jp338" ;
+    ns2:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns2:recordCreatedInJupiter "2018-03-10T11:59:39.615Z" ;
+    ns2:sortYear 2014 ;
+    ns2:specialization "Environmental Engineering" ;
+    ns2:supervisor "Gamal El-Din, Mohamed (Civil and Environmental Engineering)",
+        "Liu, Yang (Civil and Environmental Engineering)" ;
+    ns2:supervisorList "[\"Liu, Yang (Civil and Environmental Engineering)\",\"Gamal El-Din, Mohamed (Civil and Environmental Engineering)\"]" ;
+    ns2:thesisLevel "Doctoral" ;
+    ns5:dateIngested "2018-03-10T11:59:39.615Z" ;
+    ns6:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/db/5c/09/68/db5c0968-f5b2-4124-8555-d4d792b26dcb/list_source#g67703700> ;
+    ns6:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/db/5c/09/68/db5c0968-f5b2-4124-8555-d4d792b26dcb/list_source#g67703700> ;
+    ns8:hasModel "IRThesis" .

@@ -1,0 +1,63 @@
+@prefix ns1: <http://terms.library.ualberta.ca/> .
+@prefix ns10: <http://pcdm.org/models#> .
+@prefix ns11: <info:fedora/fedora-system:def/model#> .
+@prefix ns2: <http://www.iana.org/assignments/relation/> .
+@prefix ns3: <http://purl.org/ontology/bibo/> .
+@prefix ns4: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix ns5: <http://purl.org/dc/terms/> .
+@prefix ns6: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns7: <http://purl.org/dc/elements/1.1/> .
+@prefix ns8: <http://ontoware.org/swrc/ontology#> .
+@prefix ns9: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7a/94/bd/0a7a94bd-d575-4bc5-b091-69d7adc8b17a> a ns6:Container,
+        ns6:Resource,
+        ns10:Object,
+        ns3:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns6:created "2018-03-11T14:00:51.054000+00:00"^^xsd:dateTime ;
+    ns6:createdBy "bypassAdmin" ;
+    ns6:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns6:lastModified "2018-04-07T22:57:50.050000+00:00"^^xsd:dateTime ;
+    ns6:lastModifiedBy "bypassAdmin" ;
+    ns6:writable true ;
+    ns8:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns10:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/c8/74/ff/93/c874ff93-9a30-4771-9161-1773ccc7d51f> ;
+    ns10:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns9:doi "doi:10.7939/R3VX06D6P" ;
+    ns7:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns7:subject "Oil sands--Alberta--Athabasca Tar Sands",
+        "Petroleum--Geology--Alberta",
+        "Saline Creek Tunnel (Alta.)",
+        "Tunnels--Design and construction" ;
+    ns5:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns5:dateAccepted "1977" ;
+    ns5:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns5:title "Geological aspects of Saline Creek Tunnel" ;
+    ns3:degree "Master of Engineering" ;
+    ns3:owner 1 ;
+    ns1:department "Department of Civil Engineering" ;
+    ns1:departmentList "[\"Department of Civil Engineering\"]" ;
+    ns1:depositor "riedlber@ualberta.ca" ;
+    ns1:dissertant "Rogers, Gary." ;
+    ns1:fedora3Handle "http://hdl.handle.net/10402/era.28943" ;
+    ns1:fedora3UUID "uuid:aabdc5ff-d519-4120-9f13-5aa0760431f7" ;
+    ns1:graduationDate "1977" ;
+    ns1:hydraNoid "wh246v43p" ;
+    ns1:ingestBatch "0k225d45b" ;
+    ns1:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns1:proquest "2029695" ;
+    ns1:recordCreatedInJupiter "2018-03-11T14:00:50.767Z" ;
+    ns1:sortYear 1977 ;
+    ns1:thesisLevel "Master's" ;
+    ns1:unicorn "2029695" ;
+    ns4:dateIngested "2018-03-11T14:00:50.767Z" ;
+    ns2:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7a/94/bd/0a7a94bd-d575-4bc5-b091-69d7adc8b17a/list_source#g60417060> ;
+    ns2:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/7a/94/bd/0a7a94bd-d575-4bc5-b091-69d7adc8b17a/list_source#g60417060> ;
+    ns11:hasModel "IRThesis" .
+

@@ -1,0 +1,134 @@
+{% extends 'website/base.html' %}
+{% load utils %}
+{% load static %}
+{% block content %}
+        <!-- title -->
+        <div class="main-body" style="">
+
+            <div style="float: right; ">
+                <a class="twitter-timeline" href="https://twitter.com/CANLINK2017?ref_src=twsrc%5Etfw" data-width="350"
+                data-height="700">Tweets by CANLINK2017</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div style="width: 80%">
+            <div id="map"></div>
+            <script>
+                var map;
+                var markers = [];
+
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 4,
+                      center: {lat: 50, lng: -100}
+                    });
+
+                    // Load GeoJSON.
+                    map.data.loadGeoJson("{% static 'website/google.json' %}");
+
+                    // Add some style.
+                    map.data.setStyle(function(feature) {
+                      return ({
+                        fillColor: feature.getProperty('items'),
+                        strokeWeight: 1
+                      });
+                    });
+
+                    // Set click event for each feature.
+                    map.data.addListener('click', function(event) {
+                        latt = event.feature.getProperty('lat')
+                        lngg = event.feature.getProperty('lng')
+                        url = event.feature.getProperty('url')
+                        s_link = event.feature.getProperty('search_link')
+                        ttitle = event.feature.getProperty('name')
+                        items = event.feature.getProperty('items');
+                        var string = '<div id="content"><h6><a href="' + url + '" target="_blank">' + ttitle + '</a></h6><p><b>Items in this dataset:</b> ' + items + ' (<a href="{% url "search" %}' + s_link + '" onclick="loading()">view</a>)</p></div>' 
+                        var mark = new google.maps.Marker({
+                          position: {lat: latt, lng: lngg},
+                          map: map,
+                          title: ttitle,
+                        });
+                        markers.push(mark);
+                        var infowindow = new google.maps.InfoWindow({
+                            content: string
+                        });
+                        infowindow.open(map, mark)
+                        //sleep(10000).then(() => { 
+                            //setMapOnAll(null);
+                            //markers = [];
+                        //})
+                    });
+                }
+              
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbj7-CZFftrz6lK1iNxlb-zQnJdw35HVY&callback=initMap">
+            </script>
+            <br>
+            <div class="alert alert-success alert-dismissible" style="width: 90%; margin-left: 3%;">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <p style="text-align: justify;">Can Link - a linked data project for Canadian theses is a proof of concept project of the Digital Projects Working Group of the Canadian Linked Data Initiative. Its goal is to increase the discoverability of Canadian theses and dissertations by leveraging the power of linked data to surface unexpected connections and relationships. Participating institutions are: University of British Columbia, University of Alberta, Library and Archives Canada/Bibliothèque et Archives Canada, Queens University, University of Toronto, McGill University, Université de Montréal, Memorial University of Newfoundland.</p>
+                <h3 class="text-center">As of {{time}} MST there are {{num_of_thesis}} theses in the dataset</h3>
+            </div>
+            <div class="grid-container">
+                {% for i in docs %}
+                <div class="grid-item">
+                    <div class="inner_grid">
+                        <div class="inst_logo">
+                            <img src="{% static i|get_image %}" alt="no_logo" width="100" height="100">
+                        </div>
+                        <div class="inst_info">
+
+                                <a href="{{ i.1 }}" target="_blank">{{ i.2 }}</a>
+                                <br>
+
+                                 Dataset size: {{ i.3 }}
+
+                        
+                        </div>
+                        <div>
+                             <form action="{% url 'search' %}" method="post" class="form-inline" style="height: 100%">
+                                {% csrf_token %}
+                                <input id="search_type" name="search_type" value="institution" hidden>
+                                <input id="search" name="search" value="{{i.0}}" hidden>
+                                <button class="col_button" type="submit" onclick="loading()">Explore</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="overlay">
+                <div class="load_img">
+                    <img src="{% static 'website/gif/source.gif' %}">
+                </div>
+            </div>
+<!--            
+                <table class="table table-hover" class="table table-bordered" style="width:30%">
+                    <tr>
+                        <th>#</th>
+                        <th>Resource</th>
+                    </tr>
+                    {% load static %}
+                    {% for i in docs %}
+                        <tr height="90px">
+                            <td width="80px"><img src="{% static i|get_image %}" alt="no_logo" width="75" height="75"></td>
+                            <td>
+                                {% for j in i %}
+                                    {% if forloop.counter == 1 %}
+                                        <a href="{{ j }}" target="_blank">{{ j|get_name }}</a>
+                                        <br>
+                                    {% else %}
+                                         Dataset size: {{ j }}
+                                    {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            -->
+            </div>
+
+            <br>
+            
+        </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+@prefix ns1: <http://terms.library.ualberta.ca/> .
+@prefix ns10: <http://ontoware.org/swrc/ontology#> .
+@prefix ns11: <info:fedora/fedora-system:def/model#> .
+@prefix ns2: <http://purl.org/dc/elements/1.1/> .
+@prefix ns3: <http://www.iana.org/assignments/relation/> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix ns5: <http://prismstandard.org/namespaces/basic/3.0/> .
+@prefix ns6: <http://pcdm.org/models#> .
+@prefix ns7: <http://purl.org/ontology/bibo/> .
+@prefix ns8: <http://fedora.info/definitions/v4/repository#> .
+@prefix ns9: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/4e/75/de/0a4e75de-7453-4d7b-b0d2-7a626cb46d9a> a ns8:Container,
+        ns8:Resource,
+        ns6:Object,
+        ns7:Thesis,
+        <http://www.w3.org/ns/ldp#Container>,
+        <http://www.w3.org/ns/ldp#RDFSource> ;
+    ns8:created "2018-03-15T16:35:53.525000+00:00"^^xsd:dateTime ;
+    ns8:createdBy "bypassAdmin" ;
+    ns8:hasParent <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod> ;
+    ns8:lastModified "2018-04-06T17:31:46.984000+00:00"^^xsd:dateTime ;
+    ns8:lastModifiedBy "bypassAdmin" ;
+    ns8:writable true ;
+    ns10:institution "http://id.loc.gov/authorities/names/n79058482" ;
+    ns6:hasMember <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/db/8a/75/8b/db8a758b-e2e3-4e11-8da8-b725dc5e5b1d> ;
+    ns6:memberOf <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/f4/2f/3d/a6/f42f3da6-00c3-4581-b785-63725c33c7ce> ;
+    ns5:doi "doi:10.7939/R3GX41" ;
+    ns2:rights "This thesis is made available by the University of Alberta Libraries with permission of the copyright owner solely for non-commercial purposes. This thesis, or any portion thereof, may not otherwise be copied or reproduced without the written consent of the copyright owner, except to the extent permitted by Canadian copyright law." ;
+    ns2:subject "Assistant principal",
+        "Identity",
+        "Negotiating discourses" ;
+    ns4:abstract "The question that this study addressed was how Catholic educators from diverse experiential backgrounds negotiate personally persuasive and authoritative discourses in fashioning their identities as assistant principals. The inquiry is framed by poststructuralist perspectives on identity and uses as a methodology an ethnographic interview approach in an effort to understand the transition from teacher to assistant principal. Interviews with three first-year assistant principals in two Catholic school districts in a Western Canadian province formed part of the data. To obtain the school district’s perspectives, I also interviewed district-level personnel who were responsible for leadership formation. Documents from the Ministry of Education that included the newly developed provincial standards for principals as well as documents from the two school districts were also analyzed. The research findings reveal that beginning assistant principals negotiate their identities as educational leaders when they assume a role and that the expectations of the role existed before their arrival. These expectations are the authoritative discourses that shape the educational leader within the school district and that are negotiated with the personally persuasive discourses of the leader. The tensions that new assistant principals in the study negotiated were conflicting discourses of leadership and the dissonance between the challenges and affirmations regarding participants’ deeply held values and the traditional institutional demands on administrators and between the role expectations and the autonomous decision making of leaders. The implications of emphasizing questions of identity in leadership development shift the thinking on the assistant principal beyond the organizational structure of the role. School districts must better attend to the development of the identity of their educational leaders by restructuring leadership training programs and ensuring the effectiveness of mentoring programs. New assistant principals must themselves address the differences between role and identity and direct attention to the importance of developing and strengthening their identities as educational leaders." ;
+    ns4:accessRights "http://terms.library.ualberta.ca/public" ;
+    ns4:dateAccepted "2011-01-06T23:11:03Z" ;
+    ns4:dateSubmitted "2010-12-24T20:07:36Z" ;
+    ns4:language "http://id.loc.gov/vocabulary/iso639-2/eng" ;
+    ns4:title "Becoming an assistant principal: negotiating identities between teaching and educational leadership" ;
+    ns7:degree "Doctor of Education" ;
+    ns7:owner 1 ;
+    ns1:commiteeMember "Conrad, Diane (Secondary Education)",
+        "Foster, Rosemary (Educational Policy Studies)",
+        "Paul, Jim (Associate Dean, International Education, University of Calgary)",
+        "Wallace, Janice (Educational Policy Studies)" ;
+    ns1:department "Department of Secondary Education" ;
+    ns1:departmentList "[\"Department of Secondary Education\"]" ;
+    ns1:depositor "era@ualberta.ca" ;
+    ns1:dissertant "Gibeau, Monique A." ;
+    ns1:fedora3Handle "http://hdl.handle.net/10048/1688" ;
+    ns1:fedora3UUID "uuid:368238cb-4711-438d-bb66-244bd3c0c74f" ;
+    ns1:graduationDate "2011-06" ;
+    ns1:hydraNoid "m039k511n" ;
+    ns1:ingestBatch "v118rd860" ;
+    ns1:path "db9a4e71-f809-4385-a274-048f28eb6814/f42f3da6-00c3-4581-b785-63725c33c7ce" ;
+    ns1:recordCreatedInJupiter "2018-03-15T16:35:53.168Z" ;
+    ns1:sortYear 2011 ;
+    ns1:supervisor "Carson, Terrance (Secondary Education)" ;
+    ns1:supervisorList "[\"Carson, Terrance (Secondary Education)\"]" ;
+    ns1:thesisLevel "Doctoral" ;
+    ns9:dateIngested "2018-03-15T16:35:53.168Z" ;
+    ns3:first <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/4e/75/de/0a4e75de-7453-4d7b-b0d2-7a626cb46d9a/list_source#g46811420> ;
+    ns3:last <http://mycombe.library.ualberta.ca:8080/fedora/rest/prod/0a/4e/75/de/0a4e75de-7453-4d7b-b0d2-7a626cb46d9a/list_source#g46811420> ;
+    ns11:hasModel "IRThesis" .
+

@@ -1,0 +1,19 @@
+
+{% block content %}
+
+	<tr class="progress_table{{obj.id}}">
+		<td colspan="10" align="center">
+			<table class="table table-hover" style="background: #eee; width: 96%; margin: 0 auto;">
+		        <tr>
+					<td class="progress_stage_head{{obj.id}}" colspan="8" align="center"><h3>Processing Details</h3></td>
+				</tr>
+				{% if obj.file_type == "MARC_Data" %}
+					{% include 'website/includes/marc_progress.html' %}
+				{% endif %}
+				{% if obj.file_type == "RDF_Data" %}
+					{% include 'website/includes/rdf_progress_archive.html' %}
+				{% endif %}
+			</table>
+		</td>
+	</tr>
+{% endblock %}
