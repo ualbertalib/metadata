@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:mods="http://www.loc.gov/mods/v3"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xpath-default-namespace="http://www.loc.gov/mods/v3"
-    exclude-result-prefixes="xs"
+    xmlns="http://www.loc.gov/mods/v3"
+    xmlns:mods="http://www.loc.gov/mods/v3"
     version="2.0">
     
     <xsl:output indent="yes" media-type="xml" omit-xml-declaration="yes"/>
-    
+
     <xsl:template match="mods:mods">
-        <xsl:value-of select="//identifier"/>
+        <xsl:value-of select="//mods:identifier"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//title"/>
+        <xsl:value-of select="//mods:titleInfo/mods:nonSort"/>
+        <xsl:value-of select="//mods:title"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//typeOfResource"/>
+        <xsl:value-of select="//mods:typeOfResource"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//namePart"/>
+        <xsl:value-of select="//mods:namePart"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//roleTerm"/>
+        <xsl:value-of select="//mods:roleTerm"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//country"/>
+        <xsl:value-of select="//mods:country"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//province"/>
+        <xsl:value-of select="//mods:province"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//city"/>
+        <xsl:value-of select="//mods:city"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//extent"/>
+        <xsl:value-of select="//mods:extent"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//publisher"/>
+        <xsl:value-of select="//mods:publisher"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//issuance"/>
+        <xsl:value-of select="//mods:issuance"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//dateIssued"/>
+        <xsl:value-of select="//mods:dateIssued"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//languageTerm"/>
+        <xsl:value-of select="//mods:languageTerm"/>
         <xsl:text>&#09;</xsl:text>
-        <xsl:for-each select="//topic">
+        <xsl:for-each select="//mods:topic">
             <xsl:value-of select="."/><xsl:text>_--_--_</xsl:text>
         </xsl:for-each>
         <xsl:text>&#09;</xsl:text>
-        <xsl:for-each select="//note">
+        <xsl:for-each select="//mods:note">
             <xsl:value-of select="@type"/><xsl:text>::</xsl:text><xsl:value-of select="."/><xsl:text>_--_--_</xsl:text>            
         </xsl:for-each>
         <xsl:text>&#09;</xsl:text>
-        <xsl:value-of select="//nonSort"/>
-        
+        <xsl:value-of select="//mods:nonSort"/>
+        <xsl:text>&#09;</xsl:text>
+        <xsl:value-of select="//mods:genre"/>
         <xsl:text>&#xa;</xsl:text>
     </xsl:template>
-    
 </xsl:stylesheet>
