@@ -1,0 +1,28 @@
+# oaicurlUT ()
+# very hacky attempt to get U of T OAI data.
+# com_1807_9944 is the OAI set for faculty of graduate studies theses
+# 23,985 was the number of items in the set on July 7, 2020
+
+token=100
+
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=com_1807_9944" > tspace_theses_oai_dc.xml
+
+bleep ()
+{
+req="https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&resumptionToken=oai_dc///com_1807_9944/$token"
+
+curl $req >> tspace_theses_oai_dc.xml
+
+token=$(($token + 100))
+
+echo $token
+echo $req
+
+if [[ $token -lt 24000 ]]; then
+bleep
+else
+echo "done"
+fi
+}
+
+bleep

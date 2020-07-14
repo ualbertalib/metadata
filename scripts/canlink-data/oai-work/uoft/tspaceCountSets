@@ -1,0 +1,13 @@
+# tspaceListSets ()
+# very hacky attempt to get U of T OAI data.
+# com_1807_9944 is the OAI set for faculty of graduate studies theses
+# 23,985 was the number of items in the set on July 7, 2020
+
+
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_10445" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_18032" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_96987" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_96988" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_9945" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1807_9947" >> tspaceSetsCount_2020-07-10.xml
+curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=com_1807_96986" >> tspaceSetsCount_2020-07-10.xml
