@@ -1,0 +1,28 @@
+# oaicurlUBC ()
+# very hacky attempt to get UBC OAI data.
+# com_242-9_2 is the OAI set for faculty of graduate studies theses
+# 47770 was the number of items in the set on July 7, 2020
+
+token=100
+
+curl "http://circle.library.ubc.ca/oai/request?verb=ListRecords&metadataPrefix=oai_etdms&set=com_2429_2" > ubc_theses_oai_etdms.xml
+
+bleep ()
+{
+req="http://circle.library.ubc.ca/oai/request?verb=ListRecords&resumptionToken=oai_etdms///com_2429_2/$token"
+
+curl $req >> ubc_theses_oai_etdms.xml
+
+token=$(($token + 100))
+
+echo $token
+echo $req
+
+if [[ $token -lt 47800 ]]; then
+bleep
+else
+echo "done"
+fi
+}
+
+bleep
