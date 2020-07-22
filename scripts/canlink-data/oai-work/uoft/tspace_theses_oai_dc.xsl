@@ -85,9 +85,7 @@
             <xsl:if test=".[text()]">
                 <!-- the first two when clauses eliminates dc:description elements that state the name of the granting institution or that contain only a date value, respectively -->
                 <xsl:choose>
-                    <xsl:when test="matches(., '^[g][r][a][n][t][o][r]')">
-                        <xsl:text>grantor-fail</xsl:text>
-                    </xsl:when>
+                    <xsl:when test="matches(., '^[g][r][a][n][t][o][r]')"/>                    
                     <xsl:when test="matches(., '^\d\d\d\d[-]')"/>                                                            
                     <xsl:when test="string-length(.) lt 10">
                         <bibo:degree>
