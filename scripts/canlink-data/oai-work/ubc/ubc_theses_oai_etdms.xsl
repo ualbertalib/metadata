@@ -54,6 +54,9 @@
                         <bibo:degree>
                             <xsl:value-of select="etdms:degree/etdms:level"/>
                         </bibo:degree>
+                        <dc:contributor>
+                            <xsl:value-of select="etdms:degree/etdms:discipline"/>                            
+                        </dc:contributor>                        
                         <dcterms:publisher>
                             <xsl:attribute name="rdf:resource">http://dbpedia.org/resource/University_of_British_Columbia</xsl:attribute>
                         </dcterms:publisher>

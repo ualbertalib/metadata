@@ -1,0 +1,30 @@
+# curlOAIqueens ()
+# com_1974_196 is the OAI set for faculty of graduate studies theses
+# 6,757 was the number of items in the set on July 24, 2020
+# https://qspace.library.queensu.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=com_1974_196
+# uketd_dc oai_dc etdms* qdc rdf 
+# etdms has everything oai_dc has in graspable elements
+
+token=100
+
+curl "https://qspace.library.queensu.ca/oai/request?verb=ListRecords&metadataPrefix=etdms&set=com_1974_196" > queens_theses_oai_etdms_0.xml
+
+beep ()
+{
+req="https://qspace.library.queensu.ca/oai/request?verb=ListRecords&resumptionToken=etdms///com_1974_196/$token"
+
+curl $req > queens_theses_oai_etdms_$token.xml
+
+token=$(($token + 100))
+
+echo $token
+echo $req
+
+if [[ $token -lt 6800 ]]; then
+beep
+else
+echo "done"
+fi
+}
+
+beep

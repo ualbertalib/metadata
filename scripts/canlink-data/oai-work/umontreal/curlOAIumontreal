@@ -1,0 +1,31 @@
+# curlOAIumontreal ()
+# col_1866_2621 is the OAI set for faculty of Thèses et mémoires électroniques de l’Université de Montréal
+# 16,458 was the number of items in the set on July 24, 2020
+# http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1866_2621
+# uketd_dc oai_dc etdms* qdc rdf 
+# etdms has everything oai_dc has in graspable elements. +dc:contributor role attribute / +.pdf url / +degree name +degree level (numeric value) +discipline (department)
+
+token=100
+
+curl "http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&metadataPrefix=etdms&set=col_1866_2621" > umontreal_theses_etdms_0.xml
+
+beep ()
+{
+req="http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&resumptionToken=etdms///col_1866_2621/$token"
+
+curl $req > umontreal_theses_etdms_$token.xml
+
+token=$(($token + 100))
+
+echo $token
+echo $req
+
+if [[ $token -lt 16500 ]]; then
+beep
+else
+echo "done"
+fi
+}
+
+beep
+
