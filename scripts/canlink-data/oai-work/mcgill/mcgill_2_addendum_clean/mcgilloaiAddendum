@@ -1,0 +1,25 @@
+#mcgilloaiAddendum ()
+# this script makes individual oai calls for resources that were excluded from the main set of oai calls, because the server would not return oai_etdms for a given resumption token for some unknown reason. There were six resumption tokens where this was the case, and so 150 individual resources (25 in each response), which are listed below. I was able to make oai_dc calls for those resumption tokens, however, and from those get the resource identifiers below and am able to request them individually.
+# The following identifiers (from below) did not return etdms even on an individual call: 3x816q939 6m311s498 028710712 bg257h98w qv33s063d rn301449t sx61dq323 v118rh51h, so I will have to request oai_dc and map from them somehow.
+
+identifiers="x633f436h w0892f06n 6m311s480 p8418r363 z029p776n kp78gk559 7p88ck78v 6969z395p cc08hj624 4m90dz447 6969z396z 9s161930k xw42nb984 gm80hz65r h989r6228 0k225f26b j6731706c rj430773n k0698b792 0r967675s q811kn73w qv33s063d sx61dq323 rn301449t bg257h98w v405sd58p 6m311s498 2n49t5252 5x21tj52k ff365827d v118rh51h 1544bs544 s4655k59f 2j62s7969 bc386n69d fj236535b np193c978 bv73c366t w9505356c qr46r4160 bn9999741 vh53wz95n 5x21tj53v zk51vm06g gb19f914z fj236536m b2773z72q 5d86p3427 br86b650p qr46r4178 g158bn07r d217qt61x tb09j898j qj72pc023 1z40kx49b 5h73q077k 1z40kx503 n009w594p kk91fq58t h989r685j 3484zm45n pk02cf52g 2f75rc640 pv63g382z 3484zm46x 028710712 t435gh50t 9306t2970 cn69m761t 6969z457g z316q525m cn69m7623 w3763b538 ff365874s ft848v133 bk128f70n 8g84mr15w 7m01bq25j db78tg78v 8g84mr165 m039k887m 5x21tk176 2227mt60w xd07gx452 1c18dk309 47429f155 g158bn12m h989r692z z316q529q xd07gx46b nc580r34d hx11xj54w st74cv40r pn89db163 3197xq398 6m311t15n w6634722h ng451n366 3b591c83r qf85nf87z gx41mn99k qj72pc40h 9g54xn83p fn107321f qr46r5166 6395wc68f v118rj60p kd17cz41d 8336h5784 6108vg65d 7m01bq672 0r967771w 9z9034154 d791sm379 v979v674s v118rj627 bg257j826 cc08hk744 h415pf70d g732df13c zc77sv155 cr56n5308 9k41zj73p qn59q849h tb09j942w dn39x279h 9z903099b wh246s951 37720j22x q811kj984 3b591889s 3x816q939 w0892d411 c247dt16t 1c18dj75f 5h73pz65d fq977z322 7h149s23j k0698c801 xg94ht93x hx11xj181 02871141j c247dw85n cf95jf192 1z40kv72q pg15bg711 dz010t58v gm80j011t td96k607h kp78gm130"
+
+oaicall ()
+{
+identifierslength=${#identifiers}
+echo $identifierslength
+
+if [[ $identifierslength -gt 10 ]]; then
+identifier=${identifiers%% *} 
+identifiers=${identifiers#* }
+curl "https://escholarship.mcgill.ca/catalog/oai?verb=GetRecord&metadataPrefix=oai_etdms&identifier=oai:escholarship.mcgill.ca:$identifier" >> mcgill_oai_etdms_$identifier.xml
+
+oaicall
+
+else
+identifier=$identifiers
+curl "https://escholarship.mcgill.ca/catalog/oai?verb=GetRecord&metadataPrefix=oai_etdms&identifier=oai:escholarship.mcgill.ca:$identifier" >> mcgill_oai_etdms_$identifier.xml
+fi
+}
+
+oaicall

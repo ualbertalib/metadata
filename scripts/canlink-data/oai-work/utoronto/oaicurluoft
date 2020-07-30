@@ -1,12 +1,13 @@
 # oaicurlUT ()
 # com_1807_9944 is the OAI set for faculty of graduate studies theses
+# this script can be run in segments. Set an upper limit for a given segment by changing the value after -lt on the 'if' line to n+1, where n is the last token you wish to use. For segments after the first, comment out the first curl, change the initial value for the token variable to the token number you wish to resume with, and set a new token upper limit. I may improve this script later by implementing positional variables.
 # 23,985 was the number of items in the set on July 7, 2020
 
 token=100
 
 curl "https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=com_1807_9944" > tspace_theses_oai_dc_0.xml
 
-beeep ()
+beep ()
 {
 req="https://tspace.library.utoronto.ca/oai/request?verb=ListRecords&resumptionToken=oai_dc///com_1807_9944/$token"
 

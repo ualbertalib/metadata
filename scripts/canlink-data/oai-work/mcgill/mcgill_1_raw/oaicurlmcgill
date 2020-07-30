@@ -1,0 +1,27 @@
+# oaicurlmcgill ()
+# this script can be run in segments. Set an upper limit for a given segment by changing the value after -lt on the 'if' line to n+1, where n is the last token you wish to use. For segments after the first, comment out the first curl, change the initial value for the token variable to the token number you wish to resume with, and set a new token upper limit. I may improve this script later by implementing positional variables.
+# 47,894 was the number of items in the set on July 22, 2020
+
+token=36025
+
+# curl "https://escholarship.mcgill.ca/catalog/oai?verb=ListRecords&metadataPrefix=oai_etdms&set=Collection:theses" > mcgill_theses_oai_etdms_0.xml
+
+beep ()
+{
+req="https://escholarship.mcgill.ca/catalog/oai?verb=ListRecords&resumptionToken=oai_etdms.s(Collection:theses).f(2019-10-16T06:03:34Z).u(2020-07-23T18:55:55Z).t(47894):$token"
+
+curl $req > mcgill_theses_oai_etdms_$token.xml
+
+token=$(($token + 25))
+
+echo $token
+echo $req
+
+if [[ $token -lt 47900 ]]; then
+beep
+else
+echo "done"
+fi
+}
+
+beep
