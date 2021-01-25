@@ -22,10 +22,10 @@
         <xsl:text>&#9;</xsl:text>
         <xsl:text>IDnumber</xsl:text>
         <xsl:text>&#xa;</xsl:text>
-        <xsl:for-each select="collection('/home/mariana/Downloads/Gale_test?select=*.xml;recurse=yes')//*:manuscript">
+        <xsl:for-each select="collection('/home/mariana/Downloads/gale_maps_valid?select=*.xml;recurse=yes')//*:manuscript">
             <xsl:apply-templates select="//*:geoBoundary/*" mode="subjects"/>
             <xsl:text>&#9;</xsl:text>
-            <xsl:apply-templates select="//*:geoBoundary"/>
+            <xsl:apply-templates select="//*:geoBoundary/*" mode="coverage"/>
             <xsl:text>&#9;</xsl:text>
             <xsl:apply-templates select="//*:para"/>
             <xsl:text>&#9;</xsl:text>
@@ -47,17 +47,22 @@
         <xsl:call-template name="separator"/>
     </xsl:template>
     
-    <xsl:template match="*:geoBoundary">
+    <xsl:template match="//*:geoBoundary/*" mode="coverage">
+        <xsl:value-of select="concat(normalize-space(.),'|',@latitude,',',@longitude)"/>
+        <xsl:call-template name="separator"/>
+    </xsl:template>
+    
+    <!--<xsl:template match="*:geoBoundary">
         <xsl:variable name="position">
             <xsl:value-of select="position()"/>
         </xsl:variable>
-        <!--<xsl:value-of select="text()"/>-->
+        <!-\-<xsl:value-of select="text()"/>-\->
         <xsl:value-of select="concat('Geoboundary ',$position, ': ')"/>
         <xsl:apply-templates select="descendant::*" mode="geoboundaries"/>
-    </xsl:template>
+    </xsl:template>-->
     
     
-    <xsl:template match="//*:geoBoundary/*" mode="geoboundaries">
+    <!--<xsl:template match="//*:geoBoundary/*" mode="geoboundaries">
         <xsl:choose>
             <xsl:when test="self::*:northwestPoint">
                 <xsl:text>Northwest Point: </xsl:text>
@@ -76,12 +81,12 @@
                 <xsl:call-template name="value"/>
             </xsl:when>
         </xsl:choose>
-        <!--<xsl:value-of select="normalize-space(.)"/>-->
-        <!--<xsl:text>. Coordinates: </xsl:text>
+        <!-\-<xsl:value-of select="normalize-space(.)"/>-\->
+        <!-\-<xsl:text>. Coordinates: </xsl:text>
         <xsl:value-of select="*:northwestPoint/@latitude"/>
         <xsl:text>:</xsl:text>
-        <xsl:value-of select="*:northwestPoint/@longitude"/>-->
-    </xsl:template>
+        <xsl:value-of select="*:northwestPoint/@longitude"/>-\->
+    </xsl:template>-->
 
     
     <!--<xsl:template match="//*:southeastPoint/@longitude">
@@ -116,11 +121,11 @@
     
     <xsl:template name="separator">
         <xsl:if test="position() != last()">
-            <xsl:text> | </xsl:text>
+            <xsl:text>|</xsl:text>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template name="value">
+    <!--<xsl:template name="value">
         <xsl:value-of select="normalize-space(.)"/>
         <xsl:value-of select="concat(' (',./@latitude, ':', ./@longitude, ')')"/>
         <xsl:choose>
@@ -131,6 +136,6 @@
                 <xsl:text>.</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
 
 </xsl:stylesheet>
