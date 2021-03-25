@@ -32,7 +32,7 @@
     
     <!-- replace xsi:schemaLocation attribute --> 
     <!--<xsl:template match="@xsi:schemaLocation"> 
-         <xsl:attribute name="xsi:schemaLocation">http://www.loc.gov/standards/mods/v3/mods-3-6.xsd</xsl:attribute> 
+         <xsl:attribute name="xsi:schemaLocation">http://www.loc.gov/standards/mods/v3/mods-3-7.xsd</xsl:attribute> 
      </xsl:template>--> 
     
     <xsl:template match="*:mods"> 
@@ -41,8 +41,13 @@
             <xsl:namespace name="xsi">http://www.w3.org/2001/XMLSchema-instance</xsl:namespace>
             <xsl:namespace name="xlink">http://www.w3.org/1999/xlink</xsl:namespace>
             <xsl:namespace name="peel">http://peel.library.ualberta.ca/mods-extensions</xsl:namespace>
-            <xsl:attribute name="xsi:schemaLocation">http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd</xsl:attribute> 
-            <xsl:attribute name="version">3.6</xsl:attribute> 
+            <xsl:attribute name="xsi:schemaLocation">http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd</xsl:attribute> 
+            <xsl:attribute name="version">3.7</xsl:attribute> 
+            <xsl:if test="not(*:typeOfResource)">
+                <xsl:element name="mods:typeOfResource" namespace="http://www.loc.gov/mods/v3">
+                    <xsl:text>text</xsl:text>
+                </xsl:element>
+            </xsl:if>
             <xsl:apply-templates select="node()"/>
             <!--<xsl:call-template name="localnodes">
                  <xsl:with-param name="name"/>
@@ -85,6 +90,33 @@
             <xsl:apply-templates select="*:scale"/>
             <xsl:apply-templates select="*:coordinates"/>
         </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="//*:note/@type">
+        <xsl:choose>            
+            <xsl:when test="matches(.,'pubilc$|publc$')">
+                <xsl:attribute name="type">public</xsl:attribute>                
+            </xsl:when>
+            <xsl:when test="matches(.,'catlevel:brief')">
+                <xsl:attribute name="type">local:catlevel</xsl:attribute>
+                <xsl:text>brief</xsl:text>
+            </xsl:when>
+            <xsl:when test="matches(.,'local: frbr')">
+                <xsl:attribute name="type">local:frbr</xsl:attribute>
+            </xsl:when>
+            <xsl:when test="matches(.,'local: mountable|localLmountable')">
+                <xsl:attribute name="type">local:mountable</xsl:attribute>
+            </xsl:when>
+            <xsl:when test="matches(.,'local:oai-set|^oaiset$')">
+                <xsl:attribute name="type">local:oaiset</xsl:attribute>
+            </xsl:when>
+            <xsl:when test="matches(.,'\.local|lccal|loca$|local\.|^local:$|locla|looal|spatial')">
+                <xsl:attribute name="type">local</xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     
@@ -144,7 +176,7 @@
     </xsl:template>
     <!-- Remove local: nodes after replacement -->
     <xsl:template match="//*:place/@peel:qualifier"/>
-    <xsl:template match="//@type[matches(.,'local:')]"/>
+    <!--CHECK<xsl:template match="//@type[matches(.,'local:')]"/>-->
     <!-- Remove extensions namespace -->
     <xsl:template match="//*[@peel:qualifier]">
         <xsl:element name="{local-name()}" namespace="http://www.loc.gov/mods/v3">
@@ -174,7 +206,7 @@
  -->
     <xsl:template match="//*:relatedItem/@ID[matches(.,'^\d+$')]">
         <xsl:attribute name="ID">
-            <xsl:value-of select="concat('p',.)"/>
+            <xsl:value-of select="concat('P',.)"/>
         </xsl:attribute>
     </xsl:template>
     
