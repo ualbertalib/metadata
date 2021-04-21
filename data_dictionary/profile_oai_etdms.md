@@ -26,6 +26,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **swrc:** http://ontoware.org/swrc/ontology#  
 **ual:** http://terms.library.ualberta.ca/  
 **ualdate:** http://terms.library.ualberta.ca/date/  
+**ualgraduationdate:** http://terms.library.ualberta.ca/date/graduationdate
 **ualid:** http://terms.library.ualberta.ca/id/  
 **ualids:** http://terms.library.ualberta.ca/identifiers/  
 **ualrole:** http://terms.library.ualberta.ca/role/  
@@ -65,7 +66,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsalternative) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/alternativeTitle  
-  * [dateAccepted](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdateaccepted) is expressed in OAI as:  
+  * [graduationdate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#graduationDate) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/date  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdescription) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
