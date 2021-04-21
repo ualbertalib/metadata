@@ -66,7 +66,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
     * http://www.ndltd.org/standards/metadata/etdms/1.0/subject  
   * [alternative](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsalternative) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/alternativeTitle  
-  * [graduationdate](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#graduationDate) is expressed in OAI as:  
+  * [graduationdate](https://github.com/ualbertalib/metadata/blob/master/data_dictionary/profile_thesis.md#ualgraduationdate) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/date  
   * [description](https://github.com/ualbertalib/metadata/tree/master/data_dictionary/profile_oai_etdms.md#dctermsdescription) is expressed in OAI as:  
     * http://www.ndltd.org/standards/metadata/etdms/1.0/description  
