@@ -26,7 +26,7 @@ The Jupiter Data Dictionary is a collection of living documents. Below you will 
 **swrc:** http://ontoware.org/swrc/ontology#  
 **ual:** http://terms.library.ualberta.ca/  
 **ualdate:** http://terms.library.ualberta.ca/date/  
-**ualgraduationdate:** http://terms.library.ualberta.ca/date/graduationdate
+**ualgraduationdate:** http://terms.library.ualberta.ca/date/graduationdate  
 **ualid:** http://terms.library.ualberta.ca/id/  
 **ualids:** http://terms.library.ualberta.ca/identifiers/  
 **ualrole:** http://terms.library.ualberta.ca/role/  
