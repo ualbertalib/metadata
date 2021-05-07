@@ -1,0 +1,10 @@
+# curlOAImemorialResume ()
+# This script executes OAI requests to Memorial University Research Repository other than the initial request.
+# The first request can be executed with the script curlOAImemorial ().
+# The resumption token includes escaped characters. Note that the escaped string is the correct token value, even though the same characters (= and &) are not escaped in the rest of the OAI call string.
+# The script will need to be called with a value for $token.
+# For reference, the value of the first token is "metadataPrefix%3Detd-ms%26offset%3D904%26set%3D74797065733D746865736973"
+
+request="https://research.library.mun.ca/cgi/oai2?verb=ListRecords&resumptionToken=$token"
+
+curl $request > memorial_theses_etdms_$token.xml

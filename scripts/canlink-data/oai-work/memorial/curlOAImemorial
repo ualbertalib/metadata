@@ -1,31 +1,16 @@
 # curlOAImemorial ()
-# col_1866_2621 is the OAI set for faculty of Thèses et mémoires électroniques de l’Université de Montréal
-# 16,458 was the number of items in the set on July 24, 2020
-# http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_1866_2621
-# uketd_dc oai_dc etdms* qdc rdf 
-# etdms has everything oai_dc has in graspable elements. +dc:contributor role attribute / +.pdf url / +degree name +degree level (numeric value) +discipline (department)
+# This script executes the first OAI request to Memorial University Research Repository.
+# curlOAImemorialResume () will execute subsequent requests that require a resumption token.
+# 74797065733D746865736973 is the identifier for the "Thesis" OAI set for Memorial University.
+# Available formats: etd-ms mets oai_bibl oai_dc rdf
+# oai_bibl may be a flavour of oai_dc, but the records are empty.
+# None of the formats include subject values (the subject element etd-ms is empty), although lcsh subjects and geo_location metadata are embedded in <meta> tags for the eprints html landing pages.
+# Comparing creator values in etd-ms to oai_dc: etd-ms has an authorized name (with dates on the end), while oai_dc has a plain form. Both forms are found in the embedded <meta> tags.
+# Supervisor information is not apparent in any of the metadata formats.
+# Conclusion: etd-ms has slightly richer metadata. Additional elements such as subject can be sourced from embedded metadata in the html pages of Memorial University Research Repository.
 
-token=100
+request="https://research.library.mun.ca/cgi/oai2?verb=ListRecords&metadataPrefix=etd-ms&set=74797065733D746865736973"
 
-curl "http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&metadataPrefix=etdms&set=col_1866_2621" > umontreal_theses_etdms_0.xml
+curl $request > memorial_theses_etdms_1.xml
 
-beep ()
-{
-req="http://papyrus.bib.umontreal.ca/oai/request?verb=ListRecords&resumptionToken=etdms///col_1866_2621/$token"
-
-curl $req > umontreal_theses_etdms_$token.xml
-
-token=$(($token + 100))
-
-echo $token
-echo $req
-
-if [[ $token -lt 16500 ]]; then
-beep
-else
-echo "done"
-fi
-}
-
-beep
 
