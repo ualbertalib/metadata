@@ -59,7 +59,7 @@
                             <xsl:if test="position() = 1">
                                 <xsl:call-template name="description"/>
                             </xsl:if>
-                        </xsl:for-each>                           
+                        </xsl:for-each>
                         <schema:inSupportOf>
                             <xsl:value-of select="etdms:degree/etdms:name"/>
                         </schema:inSupportOf>
