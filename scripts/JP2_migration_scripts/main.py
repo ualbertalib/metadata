@@ -1,6 +1,7 @@
 import os, csv, rdflib, uuid, pickle, difflib, hashlib
 import lxml.etree as ET
 from config import data_links, namespaces, vocab
+from rdflib.namespace import RDFS
 
 
 with open("{0}/subjects.pickle".format(data_links['recon']), "rb") as handle:
@@ -275,7 +276,7 @@ class recon():
 			return (match_csh)
 		else:
 			return None
-			
+
 	def subject(self):
 		match_subject = difflib.get_close_matches(self.object, lcsh.keys(), n=1, cutoff=0.90)
 		match_csh = difflib.get_close_matches(self.object, csh.keys(), n=1, cutoff=0.90)
@@ -288,16 +289,17 @@ class recon():
 
 
 class rdf():
-	def __init__(self, mods, mets, code):
+	def __init__(self, mods, mets, code, flag):
 		self.mods = mods
 		self.mets = mets
 		self.code = code
+		self.flag = flag
 		self.graph = rdflib.Graph()
 
 	def add_mets_triples(self):
 		mets_field = str(self.mets).split('\t')
 		if mets_field[2] != '':
-			sub = rdflib.URIRef('http://peel.library.ualberta.ca/newspapers/{0}/{1}'.format(mets_field[2].replace('-', '/'), self.code))
+			sub = rdflib.URIRef('http://peel.library.ualberta.ca/newspapers/{0}/{1}'.format(self.code, mets_field[2].replace('-', '/') ))
 			predicate = rdflib.URIRef(namespaces['dcterms'] + 'dateIssued')
 			object = rdflib.Literal(mets_field[2])
 			self.graph.add((sub, predicate, object))
@@ -321,9 +323,11 @@ class rdf():
 					if recon_object:
 						object = rdflib.URIRef(recon_object)
 					else:
-						object = rdflib.URIRef('http://peel.library.ualberta.ca/subjects/{0}'.format(str(hashlib.md5(self.mods[data].encode("utf-8")))))
-				if metadata_field in vocab.keys():
+						object = rdflib.URIRef('http://peel.library.ualberta.ca/subjects/{0}'.format(str(hashlib.md5(self.mods[data].encode("utf-8")).hexdigest())))
+					self.graph.add((object, rdflib.URIRef(RDFS.label), rdflib.Literal(self.mods[data])))
+				elif metadata_field in vocab.keys():
 					object = rdflib.URIRef(vocab[metadata_field][self.mods[data]])
+					self.graph.add((object, rdflib.URIRef(RDFS.label), rdflib.Literal(self.mods[data].capitalize())))
 				elif 'http://' in self.mods[data]:
 					object = rdflib.URIRef(self.mods[data])
 				else:
@@ -332,7 +336,8 @@ class rdf():
 				self.graph.add((subject, predicate, object))
 		#self.graph.add((subject, rdflib.URIRef(namespaces['dcterms'] + 'isPartOf'),rdflib.URIRef('http://peel.library.ualberta.ca/newspapers/{0}'.format(self.code))))
 		self.graph.add((subject, rdflib.URIRef(namespaces['edm'] + 'rights'),rdflib.URIRef('https://creativecommons.org/share-your-work/public-domain/pdm/')))
-		#self.add_mets_triples(subject)
+		if self.flag:
+			self.graph.serialize('{0}.nt'.format(self.code), format="nt")
 		
 
 ### main controller ###
@@ -341,12 +346,15 @@ code = ['ACN']
 #get data from blitz
 b = blitz_database('newspapers').get_blitz_data()
 for item in code:
+	mets = None
+	flag  = True 
 	a = mods_processing(item).mods_metadata()
 	subject = rdflib.URIRef('http://peel.library.ualberta.ca/newspapers/{0}'.format(item))
-	e = rdf(a, subject, item).add_mods_triples()
+	e = rdf(a, mets, item, flag).add_mods_triples(subject)
+	flag  = False 
 	for i in b[item].keys():
 		c = mets_processing(i).mets_metadata()
-		d = rdf(a, c, item).add_mets_triples()
+		d = rdf(a, c, item, flag).add_mets_triples()
 
 
 '''import time
