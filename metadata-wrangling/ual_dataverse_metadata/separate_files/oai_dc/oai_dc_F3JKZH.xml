@@ -1,0 +1,18 @@
+<oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"><dc:title>Data for In-silico widefield microscopy</dc:title><dc:identifier>https://doi.org/10.7939/DVN/F3JKZH</dc:identifier><dc:creator>Mahajan, Subhamoy</dc:creator><dc:publisher>UAL Dataverse</dc:publisher><dc:description>The molecular simulation data used to calculate in-silico widefield microscopy is provided here. The codes used to calculate the microscopy images are available in https://github.com/subhamoymahajan/in-silico-microscopy . This dataset can be used to test and compare future in-silico micorscopy algorithms or reproduce the images published in [cite]. &#xd;
+&lt;p>&#xd;
+&lt;p>&#xd;
+1. The files dp[i].gro and dpi.gro are obtained from a Martini Coarse-grained molecular dynamics simulation. DOI: https://doi.org/10.1021/acs.jpcb.9b07031. Specifically, the data provided for the system containing 27 12-base pair DNAs and 270 ~600Da polyethylenimine (PEI) molecules in Martini polarizable water and 150 mM KCl. The PEI is modelled using https://doi.org/10.1002/jcc.25747. The all-atom DNA model was created by https://doi.org/10.1016/j.bpj.2011.04.045. The coarse-grained DNA was generated using martinize.py from http://cgmartini.nl. (https://doi.org/10.1021/acs.jctc.5b00286)&#xd;
+&#xd;
+&lt;p>&#xd;
+a) dp[i].gro&#xd;
+The files dp[i].gro have reduced data, containing only DNAs and PEIs. Each DNA and PEI contains 154 and 13 beads respectively. The charge of the DNA and PEI are -22 and +3 respectively. The atom names in the DNA are BB1, BB2, BB3, SC1, SC2, and SC3. The atom names in PEI are QPri, Pri, Sec, and Ter. The number [i] represents the timestep of the simulation. The simulation time (scaled by 4, as required by Martini) is 0.2*[i] ns. This is not the same as the time stored in each .gro file.&#xd;
+&lt;p>&#xd;
+b) dpi.gro&#xd;
+The file dpi.gro is not stored in reduced data format and has all DNAs, PEIs, water and ions. This structure is stored at 3 microseconds. Chloride ions are named CL-, Sodium or potassium ions (identical in Martini) are named NA+, and water beads are named W, WP, and WM.&#xd;
+&lt;p>&#xd;
+&lt;p>&#xd;
+2. cell.gro&#xd;
+This file is not part of any simulation. It is created for the sole purpose of generating an in-silico microscopy image. It contains a model nucleus formed of 12-base pair DNA (same as dp[i].gro), DNA-PEI nanoparticles that model transfected nanoparticles (same as dp[i].gro). The atom names in the nuclear DNA begin are VB1, VB2, VB3, VC1, VC2, VC3. The atom names of DNAs and PEIs in the nanoparticle are same as dp[i].gro. The DNA and PEI described in dp[i].gro is used.</dc:description><dc:subject>Chemistry</dc:subject><dc:subject>Engineering</dc:subject><dc:subject>Physics</dc:subject><dc:subject>in-silico microscopy</dc:subject><dc:subject>molecular dynamics</dc:subject><dc:subject>polyethylenimine</dc:subject><dc:subject>model cell</dc:subject><dc:subject>microscopy</dc:subject><dc:subject>widefield</dc:subject><dc:language>English</dc:language><dc:contributor>Mahajan, Subhamoy</dc:contributor><dc:type>coarse-grained structure</dc:type><dc:type>Gromacs structure file format</dc:type><dc:source>PEI-DNA aggregation: https://doi.org/10.1021/acs.jpcb.9b07031&#xd;
+All-atom DNA:  https://doi.org/10.1016/j.bpj.2011.04.045&#xd;
+Coarse-graining DNA:  http://cgmartini.nl. , https://doi.org/10.1021/acs.jctc.5b00286&#xd;
+Coarse-graining PEI:  https://doi.org/10.1002/jcc.25747</dc:source></oai_dc:dc>
