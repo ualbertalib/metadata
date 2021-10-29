@@ -1,0 +1,8 @@
+# dataverse_export_json
+# XML formats:  dcterms ddi Datacite oai_ddi oai_dc oai_datacite
+# JSON formats: dataverse_json OAI_ORE schema.org
+
+while read -r line; do
+    curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=oai_datacite&persistentId=$line" >> ual_dataverse_oai_datacite.xml
+    echo "Text read from file: $line"
+done < ual_dataverse_DOIs.txt

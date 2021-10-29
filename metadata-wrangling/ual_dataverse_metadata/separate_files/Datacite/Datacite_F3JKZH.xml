@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd"
+          xmlns="http://datacite.org/schema/kernel-4"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <identifier identifierType="DOI">10.7939/DVN/F3JKZH</identifier>
+    <creators><creator><creatorName>Mahajan, Subhamoy</creatorName><affiliation>(University of Alberta)</affiliation></creator></creators>
+    <titles>
+        <title>Data for In-silico widefield microscopy</title>
+    </titles>
+    <publisher>UAL Dataverse</publisher>
+    <publicationYear>2021</publicationYear>
+    <resourceType resourceTypeGeneral="Dataset"/>
+    
+    <descriptions>
+        <description descriptionType="Abstract">The molecular simulation data used to calculate in-silico widefield microscopy is provided here. The codes used to calculate the microscopy images are available in https://github.com/subhamoymahajan/in-silico-microscopy . This dataset can be used to test and compare future in-silico micorscopy algorithms or reproduce the images published in [cite].   1. The files dp[i].gro and dpi.gro are obtained from a Martini Coarse-grained molecular dynamics simulation. DOI: https://doi.org/10.1021/acs.jpcb.9b07031. Specifically, the data provided for the system containing 27 12-base pair DNAs and 270 ~600Da polyethylenimine (PEI) molecules in Martini polarizable water and 150 mM KCl. The PEI is modelled using https://doi.org/10.1002/jcc.25747. The all-atom DNA model was created by https://doi.org/10.1016/j.bpj.2011.04.045. The coarse-grained DNA was generated using martinize.py from http://cgmartini.nl. (https://doi.org/10.1021/acs.jctc.5b00286)  a) dp[i].gro The files dp[i].gro have reduced data, containing only DNAs and PEIs. Each DNA and PEI contains 154 and 13 beads respectively. The charge of the DNA and PEI are -22 and +3 respectively. The atom names in the DNA are BB1, BB2, BB3, SC1, SC2, and SC3. The atom names in PEI are QPri, Pri, Sec, and Ter. The number [i] represents the timestep of the simulation. The simulation time (scaled by 4, as required by Martini) is 0.2*[i] ns. This is not the same as the time stored in each .gro file.  b) dpi.gro The file dpi.gro is not stored in reduced data format and has all DNAs, PEIs, water and ions. This structure is stored at 3 microseconds. Chloride ions are named CL-, Sodium or potassium ions (identical in Martini) are named NA+, and water beads are named W, WP, and WM.   2. cell.gro This file is not part of any simulation. It is created for the sole purpose of generating an in-silico microscopy image. It contains a model nucleus formed of 12-base pair DNA (same as dp[i].gro), DNA-PEI nanoparticles that model transfected nanoparticles (same as dp[i].gro). The atom names in the nuclear DNA begin are VB1, VB2, VB3, VC1, VC2, VC3. The atom names of DNAs and PEIs in the nanoparticle are same as dp[i].gro. The DNA and PEI described in dp[i].gro is used.</description>
+    </descriptions>
+    <contributors><contributor contributorType="ContactPerson"><contributorName>Tang, Tian</contributorName><affiliation>(University of Alberta)</affiliation></contributor><contributor contributorType="Producer"><contributorName>Mahajan, Subhamoy</contributorName><affiliation>(University of Alberta)</affiliation></contributor></contributors>
+</resource>
