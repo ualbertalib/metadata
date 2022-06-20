@@ -1,0 +1,24 @@
+# dataverse_export_sep
+# XML formats:  dcterms ddi Datacite oai_ddi oai_dc oai_datacite
+# JSON formats: dataverse_json OAI_ORE schema.org
+
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=dcterms&persistentId=doi:10.7939/DVN/OINUZU" > dcterms_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=ddi&persistentId=doi:10.7939/DVN/OINUZU" > ddi_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=Datacite&persistentId=doi:10.7939/DVN/OINUZU" > Datacite_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=oai_ddi&persistentId=doi:10.7939/DVN/OINUZU" > oai_ddi_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=oai_dc&persistentId=doi:10.7939/DVN/OINUZU" > oai_dc_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=oai_datacite&persistentId=doi:10.7939/DVN/OINUZU" > oai_datacite_OINUZU.xml
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=dataverse_json&persistentId=doi:10.7939/DVN/OINUZU" > dataverse_json_OINUZU.json
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=OAI_ORE&persistentId=doi:10.7939/DVN/OINUZU" > OAI_ORE_OINUZU.json
+
+curl "https://dataverse.library.ualberta.ca/api/datasets/export?exporter=schema.org&persistentId=doi:10.7939/DVN/OINUZU" > schema_org_OINUZU.json
+
+done
