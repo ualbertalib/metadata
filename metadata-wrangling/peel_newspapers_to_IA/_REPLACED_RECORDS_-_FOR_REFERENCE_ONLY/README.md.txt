@@ -1,0 +1,3 @@
+# README
+
+The files in this directory are for reference purposes only. They are the set of Peel newspaper records that are being replaced in the phase of the Peel2IA project where the issue runs of certain newspaper titles will be "split" between several new XML records that represent bibliographically distinct titles. The canonical set of MODS records for the Peel2IA project can be found in the directory `peel-metadata/metadata/Q_complete`. 2022-11-17.
