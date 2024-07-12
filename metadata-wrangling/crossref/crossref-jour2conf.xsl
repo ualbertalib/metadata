@@ -5,9 +5,7 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
-    <xsl:output indent="yes" method="xml"/>
-    <!--<xsl:include href="crossref-jour2conf-isbns.xsl"/>-->
-    
+    <xsl:output indent="yes" method="xml"/>    
     
     <xsl:template match="@*|node()">
         <xsl:copy>
@@ -51,7 +49,7 @@
             </xsl:element>
         </xsl:element>
         <xsl:apply-templates select="@*|descendant::cr:publication_date"/>
-        <xsl:call-template name="isbn"></xsl:call-template>
+        <xsl:call-template name="isbn"/>
     </xsl:template>
     
     <xsl:template match="cr:journal_article">
@@ -65,7 +63,13 @@
             <xsl:value-of select="../cr:journal_issue//cr:volume"/>
         </xsl:variable>
         <xsl:element name="isbn" namespace="http://www.crossref.org/schema/4.3.6">
-            <xsl:choose>
+
+            <!-- specify ISBNs to be used -->
+            <xsl:text>978-1-55195-516-2</xsl:text>
+            
+            <!-- when using a large number of ISBNs, use template below to apply ISBNs to be used for each volume
+                
+                <xsl:choose>
                 <xsl:when test="$vol='7'">
                     <xsl:text>978-1-55195-420-2</xsl:text>
                 </xsl:when>
@@ -102,7 +106,7 @@
                 <xsl:otherwise>
                     <xsl:text>00000000-X</xsl:text>
                 </xsl:otherwise>
-            </xsl:choose>
+            </xsl:choose>-->
         </xsl:element>
     </xsl:template>
     
