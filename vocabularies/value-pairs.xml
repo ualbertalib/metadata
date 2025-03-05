@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-value-pairs SYSTEM "submission-forms.dtd">
+<form-value-pairs>
+    <value-pairs value-pairs-name="common_license_types" dc-term="rights_license">
+        <pair>
+            <displayed-value>Without License</displayed-value>
+            <stored-value></stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution (CC-BY)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution, No Derivative Works (CC-BY-ND)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by-nd/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution, Share-alike (CC-BY-SA)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by-sa/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution, Non-commercial (CC-BY-NC)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by-nc/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution, Non-commercial, No Derivative Works (CC-BY-NC-ND)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by-nc-nd/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Attribution, Non-commercial, Share-alike (CC-BY-NC-SA)</displayed-value>
+            <stored-value>https://creativecommons.org/licenses/by-nc-sa/4.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>CC0 1.0 Universal</displayed-value>
+            <stored-value>https://creativecommons.org/publicdomain/zero/1.0/</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Public Domain Mark 1.0</displayed-value>
+            <stored-value>https://creativecommons.org/publicdomain/mark/1.0/</stored-value>
+        </pair>            
+    </value-pairs>
+    
+    <value-pairs value-pairs-name="common_types" dc-term="type">
+        <pair>
+            <displayed-value>Journal Article (Draft-Submitted)</displayed-value>
+            <!--http://purl.org/ontology/bibo/Article http://purl.org/ontology/bibo/status#draft http://vivoweb.org/ontology/core#submitted-->
+            <stored-value>http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_b1a7d7d4d402bcce http://purl.org/coar/version/c_71e4c1898caa6e32</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Journal Article (Published)</displayed-value>
+            <!--http://purl.org/ontology/bibo/Article http://purl.org/ontology/bibo/status#published-->
+            <stored-value>http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_970fb48d4fbd8a85</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Book</displayed-value>
+            <!--http://purl.org/ontology/bibo/Book-->
+            <stored-value>http://purl.org/coar/resource_type/c_2f33</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Book Part</displayed-value>
+            <!--                <stored-value>http://purl.org/ontology/bibo/Chapter-->
+            <stored-value>http://purl.org/coar/resource_type/c_3248</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Image</displayed-value>
+            <!--http://purl.org/ontology/bibo/Image-->
+            <stored-value>http://purl.org/coar/resource_type/c_c513</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Report</displayed-value>
+            <!--http://purl.org/ontology/bibo/Report-->
+            <stored-value>http://purl.org/coar/resource_type/c_93fc</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Other</displayed-value><!-- Research Material -->
+            <!--http://terms.library.ualberta.ca/researchMaterial-->
+            <stored-value>http://purl.org/coar/resource_type/c_1843</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Conference/Workshop Presentation</displayed-value>
+            <!--http://vivoweb.org/ontology/core#Presentation-->
+            <stored-value>http://purl.org/coar/resource_type/R60J-J5BD</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Conference/Workshop Poster</displayed-value>
+            <!--http://vivoweb.org/ontology/core#ConferencePoster-->
+            <stored-value>http://purl.org/coar/resource_type/c_6670</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Dataset</displayed-value>
+            <!--http://vivoweb.org/ontology/core#Dataset-->
+            <stored-value>http://purl.org/coar/resource_type/c_ddb1</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Review</displayed-value>
+            <!--http://vivoweb.org/ontology/core#Review-->
+            <stored-value>http://purl.org/coar/resource_type/c_efa0</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Learning Object</displayed-value>
+            <!--http://terms.library.ualberta.ca/learningObject-->
+            <stored-value>http://purl.org/coar/resource_type/c_e059</stored-value>
+        </pair>        
+    </value-pairs>
+    
+    <!-- UAL language order: 
+             "en", "fr", "es", "zh", "de", "it", "ru", "uk", "ja", "No linguistic content", "other"
+          -->
+    <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
+        <pair>
+            <displayed-value>English</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/eng-->
+            <stored-value>en</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>French</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/fre-->
+            <stored-value>fr</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Spanish</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/spa-->
+            <stored-value>es</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Chinese</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/zho-->
+            <stored-value>zh</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>German</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/ger-->
+            <stored-value>de</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Italian</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/ita-->
+            <stored-value>it</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Russian</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/rus-->
+            <stored-value>ru</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Ukrainian</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/ukr-->
+            <stored-value>uk</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Japanese</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/jpn-->
+            <stored-value>ja</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>No linguistic content</displayed-value>
+            <!--http://id.loc.gov/vocabulary/iso639-2/zxx-->
+            <stored-value>No linguistic content</stored-value>
+        </pair>
+        <pair>
+            <displayed-value>Other</displayed-value>
+            <!--http://terms.library.ualberta.ca/other-->
+            <stored-value>other</stored-value>
+        </pair>
+    </value-pairs>
+    
+</form-value-pairs>
