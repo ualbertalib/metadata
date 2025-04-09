@@ -289,7 +289,7 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
-                    <dc-qualifier>license</dc-qualifier>
+                    <dc-qualifier>uri</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>License</label>
                     <input-type value-pairs-name="common_license_types">dropdown</input-type>
@@ -306,21 +306,8 @@
                     <label>Rights Text or License URL</label>
                     <input-type>textarea</input-type>
                     <hint>Copy/paste the URL or license text.</hint>
-                    <required/>
                 </field>
             </row>
-            <!--<row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>abstract</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Abstract</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter the abstract of the item.</hint>
-                    <required></required>
-                </field>
-            </row>-->
             <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -334,34 +321,186 @@
                 </field>
             </row>-->
         </form>
+        
+        
+        
 
-        <!--<form name="traditionalpagethree">
+        <!-- Form definition for UAL thesis submission process. -->
+        <form name="thesispageone">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier/>
+                    <repeatable>false</repeatable>
+                    <label>Type</label>
+                    <input-type value-pairs-name="thesis_type">dropdown</input-type>
+                    <hint></hint>
+                    <required></required>
+                    <readonly>readonly</readonly>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier/>
+                    <repeatable>false</repeatable>
+                    <label>Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the main title of the thesis.</hint>
+                    <required>A main title for this thesis is required.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Alternate Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter a secondary/translated title, if appropriate.</hint>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier>iso</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Language</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Enter one or multiple languages.</hint>
+                    <!--<hint>Select the language of the main content of the item. If the language does not appear in the
+                        list, please select 'Other'. If the content does not really have a language (for example, if it
+                        is a dataset or an image) please select 'N/A'.
+                    </hint>-->
+                    <!--<required>Enter one or multiple languages.</required>-->
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Author / Creator</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter author/creator. Example: Family Name, Given Names (if appropriate).</hint>
+                    <required>Enter author/creator. Example: Family Name, Given Names (if appropriate).</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier/>
+                    <!-- An input-type of tag MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>Subjects/Keywords</label>
+                    <input-type>tag</input-type>
+                    <hint>Enter one or multiple subject/keywords that describe the thesis. These are the words that would be used when someone searches for your thesis.</hint>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Abstract</label>
+                    <input-type>textarea</input-type>
+                    <hint>Enter description or abstract.</hint>
+                    <required>Enter description or abstract.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>ual</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>graduation</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Graduation Date</label>
+                    <input-type>date</input-type>
+                    <hint>Year is required. Select June for Spring convocation and November for Fall convocation.</hint>
+                    <required>Year is required. Select term if known.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>ual</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>graduation</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Graduation Date</label>
+                    <input-type value-pairs-name="thesis_graduation_term">qualdrop_value</input-type>
+                    <hint>E.g. "Spring 2024". Year is required. Select Spring or Fall convocation if known.</hint>
+                    <required>Year is required. Select term if known.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Date Issued</label>
+                    <input-type>date</input-type>
+                    <hint>Year is required. Month and Day are optional and can be left as is.</hint>
+                    <required>You must enter at least the year of creation or issuance.</required>
+                </field>                
+            </row>            
+        </form>
+        
+        <!--<form name="thesispagetwo">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>submitted</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Date Submitted</label>
+                    <input-type>date</input-type>
+                    <hint></hint>
+                </field>                
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dcterms</dc-schema>
+                    <dc-element>dateAccepted</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Rights Text or License URL</label>
-                    <input-type>textarea</input-type>
-                    <hint>I am required to use or link to another license</hint>
-                    <required></required>
+                    <label>Date Accepted</label>
+                    <input-type>date</input-type>
+                    <hint></hint>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
-                    <dc-qualifier>license</dc-qualifier>
+                    <dc-qualifier>uri</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>License</label>
                     <input-type value-pairs-name="common_license_types">dropdown</input-type>
                     <hint>Select the license of the resource.</hint>
-                    <required></required>
+                    <required>Select the license of the resource.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier/>
+                    <repeatable>false</repeatable>
+                    <label>Rights Text or License URL</label>
+                    <input-type>textarea</input-type>
+                    <hint>Copy/paste the URL or license text.</hint>
                 </field>
             </row>
         </form>-->
-
+        
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
@@ -424,7 +563,7 @@
                     <input-type>date</input-type>
                     <hint>Please give the date of previous publication or public distribution. You
                         can leave out the day and/or month if they aren't applicable. </hint>
-                    <required>You must enter at least the year.</required>
+                    <required>You must enter at least the year of issuance.</required>
                 </field>
 
                 <field>
@@ -1490,10 +1629,10 @@
     <!-- Regular item license, item specific value pairs -->
 
     <form-value-pairs>
-        <value-pairs value-pairs-name="common_license_types" dc-term="rights_license">
+        <value-pairs value-pairs-name="common_license_types" dc-term="rights_uri">
             <pair>
                 <displayed-value>I am required to use or link to another license.</displayed-value>
-                <stored-value/>
+                <stored-value>Rights url or text provided by user.</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution (CC-BY)</displayed-value>
@@ -1713,7 +1852,25 @@
                 <stored-value>Other</stored-value>
             </pair>-->
         </value-pairs>
-
+        
+        <value-pairs value-pairs-name="thesis_type" dc-term="type">
+            <pair>
+                <displayed-value>Thesis</displayed-value>
+                <stored-value>http://purl.org/coar/resource_type/c_46ec</stored-value>
+            </pair>
+        </value-pairs>
+        
+        <value-pairs value-pairs-name="thesis_graduation_term" dc-term="date_graduation">
+            <pair>
+                <displayed-value>Spring</displayed-value>
+                <stored-value>Spring</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Fall</displayed-value>
+                <stored-value>Fall</stored-value>
+            </pair>
+        </value-pairs>
+        
         <!-- UAL language order: 
              "en", "fr", "es", "zh", "de", "it", "ru", "uk", "ja", "No linguistic content", "other"
           -->
