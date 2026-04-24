@@ -1635,6 +1635,17 @@
             <required>Enter description or abstract.</required>
         </field>
     </row>
+        <row>
+        <field>
+            <dc-schema>dc</dc-schema>
+            <dc-element>relation</dc-element>
+            <dc-qualifier></dc-qualifier>
+            <repeatable>true</repeatable>
+            <label>Link to Related Item</label>
+            <input-type>onebox</input-type>
+            <hint>Must be a url. Example: http://www.ualberta.ca.</hint>
+        </field>
+    </row>
     <row>
         <field>
             <dc-schema>ual</dc-schema>
@@ -1643,7 +1654,7 @@
             <repeatable>false</repeatable>
             <label>Graduation Date</label>
             <input-type>onebox</input-type>
-            <hint>E.g. "Spring 2024". Year is required. Enter Spring or Fall convocation if known.</hint>
+            <hint>E.g. "Spring 2024". Year is required. Enter "Winter", "Spring", or "Fall" convocation if known.</hint>
             <required>Graduation Year is required. Enter term if known.</required>
         </field>
     </row>
