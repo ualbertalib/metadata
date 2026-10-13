@@ -449,35 +449,19 @@
         <xsl:element name="resourceType">
             <xsl:attribute name="resourceTypeGeneral">
                 <xsl:choose>
-                    <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_b1a7d7d4d402bcce http://purl.org/coar/version/c_71e4c1898caa6e32' or 
-                                    string(text())='http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_970fb48d4fbd8a85' or
-                                    string(text())='http://purl.org/coar/version/c_970fb48d4fbd8a85' or
-                                    string(text())='http://purl.org/coar/resource_type/c_2f33' or
-                                    string(text())='http://purl.org/coar/resource_type/c_3248' or
-                                    string(text())='http://purl.org/coar/resource_type/c_93fc' or
-                                    string(text())='http://purl.org/coar/resource_type/c_efa0'">Text</xsl:when>
-                    <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_ddb1'">Dataset</xsl:when>
-                    <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_c513'">Image</xsl:when>
-                    <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_46ec'">Dissertation</xsl:when>
+                    <xsl:when test="string(text())='Journal Article (Draft-Submitted)' or 
+                                    string(text())='Journal Article (Published)' or
+                                    string(text())='Book' or
+                                    string(text())='Book Part' or
+                                    string(text())='Report' or
+                                    string(text())='Review'">Text</xsl:when>
+                    <xsl:when test="string(text())='Dataset'">Dataset</xsl:when>
+                    <xsl:when test="string(text())='Image'">Image</xsl:when>
+                    <xsl:when test="string(text())='Thesis'">Dissertation</xsl:when>
                     <xsl:otherwise>Other</xsl:otherwise>
                 </xsl:choose>
             </xsl:attribute>
-            <xsl:choose>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_b1a7d7d4d402bcce http://purl.org/coar/version/c_71e4c1898caa6e32'">Journal Article (Draft-Submitted)</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_6501 http://purl.org/coar/version/c_970fb48d4fbd8a85'">Journal Article (Published)</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_2f33'">Book</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_3248'">Book Part</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_c513'">Image</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_93fc'">Report</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_1843'">Other</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/R60J-J5BD'">Conference/Workshop Presentation</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_6670'">Conference/Workshop Poster</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_ddb1'">Dataset</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_efa0'">Review</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_e059'">Learning Object</xsl:when>
-                <xsl:when test="string(text())='http://purl.org/coar/resource_type/c_46ec'">Thesis</xsl:when>
-                <xsl:otherwise>Other</xsl:otherwise>
-            </xsl:choose>
+            <xsl:value-of select="." />
         </xsl:element>
     </xsl:template>
   
