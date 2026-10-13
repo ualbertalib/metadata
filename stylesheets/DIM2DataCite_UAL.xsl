@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- ** This file is managed by Chef! Any local changes will be overwritten. ** -->
-
 <!--
     Document   : DIM2DataCite.xsl
     Created on : January 23, 2013, 1:26 PM
@@ -33,7 +31,7 @@
          so the output will be e.g. xml:lang="en-GB", xml:lang="de-CH". -->
     
     <!-- We need the prefix to determine DOIs that were minted by ourself. -->
-    <xsl:param name="prefix">10.7939/</xsl:param>
+    <xsl:param name="prefix">10.80243/dspace-</xsl:param>
     <!-- The content of the following parameter will be used as element publisher. -->
     <xsl:param name="publisher">University of Alberta Library</xsl:param>
     <!-- The content of the following variable will be used as element contributor with contributorType hostingInstitution. -->
@@ -43,7 +41,7 @@
     <!-- Metadata-field to retrieve DOI from items -->
     <xsl:param name="mdSchema">dc</xsl:param>
     <xsl:param name="mdElement">identifier</xsl:param>
-    <xsl:param name="mdQualifier">doi</xsl:param>
+    <xsl:param name="mdQualifier">uri</xsl:param>
 
     <xsl:output method="xml" indent="yes" encoding="utf-8" />
 
@@ -139,8 +137,7 @@
             <publicationYear>
                 <xsl:choose>
                     <xsl:when test="//dspace:field[@mdschema='dc' and @element='date' and @qualifier='issued']">
-                        <!--<xsl:value-of select="substring(//dspace:field[@mdschema='dc' and @element='date' and @qualifier='issued'], 1, 4)" />-->
-                        <xsl:value-of select="replace(//dspace:field[@mdschema='dc' and @element='date' and @qualifier='issued'],'.*(\d{4}).*','$1')" />
+                        <xsl:value-of select="substring(//dspace:field[@mdschema='dc' and @element='date' and @qualifier='issued'], 1, 4)" />
                     </xsl:when>
                     <xsl:when test="//dspace:field[@mdschema='dc' and @element='date' and @qualifier='available']">
                         <xsl:value-of select="substring(//dspace:field[@mdschema='dc' and @element='date' and @qualifier='available'], 1, 4)" />
@@ -432,19 +429,16 @@
         Transforming the language flags according to IETF BCP 47 or ISO 639-1
     -->
     <xsl:template match="//dspace:field[@mdschema='dc' and @element='language' and (@qualifier='iso' or @qualifier='rfc3066')][1]">
+        <xsl:element name="language">
             <xsl:choose>
-                <xsl:when test="contains(string(text()), 'No linguistic content')"/>
                 <xsl:when test="contains(string(text()), '_')">
-                    <xsl:element name="language">
-                        <xsl:value-of select="translate(string(text()), '_', '-')"/>
-                    </xsl:element>
+                    <xsl:value-of select="translate(string(text()), '_', '-')"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:element name="language">
-                        <xsl:value-of select="string(text())"/>
-                    </xsl:element>
+                    <xsl:value-of select="string(text())"/>
                 </xsl:otherwise>
             </xsl:choose>
+        </xsl:element>
     </xsl:template>
 
     <!--
